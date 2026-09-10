@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site, path } from '../lib/site';
+import modules from '../data/modules.json';
+import categories from '../data/categories.json';
+
+const pathname = path();
+const origin = Astro.site!.origin;
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.brand,
+    alternateName: site.tagline,
+    url: new URL(pathname, Astro.site).href,
+    description: site.description,
+    inLanguage: site.locale,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: `${site.brand} — ${site.tagline}`,
+    description: site.description,
+    url: new URL(pathname, Astro.site).href,
+    provider: { '@type': 'Person', name: site.author },
+    isAccessibleForFree: true,
+    inLanguage: site.locale,
+    numberOfCredits: modules.length,
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'online',
+      courseWorkload: 'PT2H',
+    },
+    syllabusSections: modules.map((m, i) => ({
+      '@type': 'Syllabus',
+      position: i + 1,
+      name: m.name,
+      description: m.blurb,
+      url: new URL(path('modules', m.slug), Astro.site).href,
+    })),
+  },
+];
+---
+<BaseLayout
+  title={`${site.brand} — ${site.tagline}`}
+  description={site.description}
+  pathname={pathname}
+  structuredData={structuredData}
+>
+  <div class="page-wrap">
+    <h1>{site.tagline}</h1>
+    <p class="lede">{site.description}</p>
+
+    <h2>Topics</h2>
+    <ul class="topic-chips">
+      {categories.map((c) => (
+        <li><a href={path('topics', c.id)}>{c.label}</a></li>
+      ))}
+    </ul>
+
+    <h2>All 50 modules</h2>
+    <ol class="module-list">
+      {modules.map((m) => (
+        <li class="module-list-item">
+          <a href={path('modules', m.slug)}>
+            <span class="module-list-num">{String(m.id).padStart(2, '0')}</span>
+            <span class="module-list-name">{m.name}</span>
+            <span class="module-list-blurb">{m.blurb}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</BaseLayout>

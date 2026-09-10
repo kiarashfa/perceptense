@@ -1,0 +1,202 @@
+[
+ {
+  "slug": "weight-and-mass",
+  "url": "http://localhost:4400/modules/01-weight.html"
+ },
+ {
+  "slug": "the-human-body",
+  "url": "http://localhost:4400/modules/02-biology.html"
+ },
+ {
+  "slug": "geography-and-distance",
+  "url": "http://localhost:4400/modules/03-geography.html"
+ },
+ {
+  "slug": "nutrition-and-food-labels",
+  "url": "http://localhost:4400/modules/04-food.html"
+ },
+ {
+  "slug": "money-and-economy",
+  "url": "http://localhost:4400/modules/05-money.html"
+ },
+ {
+  "slug": "big-infrastructure",
+  "url": "http://localhost:4400/modules/06-infrastructure.html"
+ },
+ {
+  "slug": "time-and-scale",
+  "url": "http://localhost:4400/modules/07-time.html"
+ },
+ {
+  "slug": "speed-and-duration",
+  "url": "http://localhost:4400/modules/08-speed.html"
+ },
+ {
+  "slug": "size-and-scale",
+  "url": "http://localhost:4400/modules/09-size.html"
+ },
+ {
+  "slug": "history-anchors",
+  "url": "http://localhost:4400/modules/10-history.html"
+ },
+ {
+  "slug": "temperature",
+  "url": "http://localhost:4400/modules/11-temperature.html"
+ },
+ {
+  "slug": "probability-and-risk",
+  "url": "http://localhost:4400/modules/12-probability.html"
+ },
+ {
+  "slug": "percentages-and-ratios",
+  "url": "http://localhost:4400/modules/13-percentages.html"
+ },
+ {
+  "slug": "materials",
+  "url": "http://localhost:4400/modules/14-materials.html"
+ },
+ {
+  "slug": "chemistry",
+  "url": "http://localhost:4400/modules/15-chemistry.html"
+ },
+ {
+  "slug": "engineering-rules-of-thumb",
+  "url": "http://localhost:4400/modules/16-engineering.html"
+ },
+ {
+  "slug": "politics",
+  "url": "http://localhost:4400/modules/17-politics.html"
+ },
+ {
+  "slug": "diplomacy",
+  "url": "http://localhost:4400/modules/18-diplomacy.html"
+ },
+ {
+  "slug": "culinary-arts",
+  "url": "http://localhost:4400/modules/19-culinary.html"
+ },
+ {
+  "slug": "drinks",
+  "url": "http://localhost:4400/modules/20-drinks.html"
+ },
+ {
+  "slug": "fashion",
+  "url": "http://localhost:4400/modules/21-fashion.html"
+ },
+ {
+  "slug": "sleep",
+  "url": "http://localhost:4400/modules/22-sleep.html"
+ },
+ {
+  "slug": "sex-gender-and-orientation",
+  "url": "http://localhost:4400/modules/23-sex.html"
+ },
+ {
+  "slug": "fitness-and-exercise",
+  "url": "http://localhost:4400/modules/24-fitness.html"
+ },
+ {
+  "slug": "weather",
+  "url": "http://localhost:4400/modules/25-weather.html"
+ },
+ {
+  "slug": "space-and-the-solar-system",
+  "url": "http://localhost:4400/modules/26-space.html"
+ },
+ {
+  "slug": "psychology",
+  "url": "http://localhost:4400/modules/27-psychology.html"
+ },
+ {
+  "slug": "philosophy",
+  "url": "http://localhost:4400/modules/28-philosophy.html"
+ },
+ {
+  "slug": "world-population-and-demographics",
+  "url": "http://localhost:4400/modules/29-demographics.html"
+ },
+ {
+  "slug": "art",
+  "url": "http://localhost:4400/modules/30-art.html"
+ },
+ {
+  "slug": "literature",
+  "url": "http://localhost:4400/modules/31-literature.html"
+ },
+ {
+  "slug": "painting",
+  "url": "http://localhost:4400/modules/32-painting.html"
+ },
+ {
+  "slug": "music",
+  "url": "http://localhost:4400/modules/33-music.html"
+ },
+ {
+  "slug": "cinema",
+  "url": "http://localhost:4400/modules/34-cinema.html"
+ },
+ {
+  "slug": "game",
+  "url": "http://localhost:4400/modules/35-game.html"
+ },
+ {
+  "slug": "management",
+  "url": "http://localhost:4400/modules/36-management.html"
+ },
+ {
+  "slug": "technology",
+  "url": "http://localhost:4400/modules/37-technology.html"
+ },
+ {
+  "slug": "crypto",
+  "url": "http://localhost:4400/modules/38-crypto.html"
+ },
+ {
+  "slug": "law-and-legal-systems",
+  "url": "http://localhost:4400/modules/39-law.html"
+ },
+ {
+  "slug": "language",
+  "url": "http://localhost:4400/modules/40-language.html"
+ },
+ {
+  "slug": "sports",
+  "url": "http://localhost:4400/modules/41-sports.html"
+ },
+ {
+  "slug": "animals",
+  "url": "http://localhost:4400/modules/42-animals.html"
+ },
+ {
+  "slug": "physics",
+  "url": "http://localhost:4400/modules/43-physics.html"
+ },
+ {
+  "slug": "media",
+  "url": "http://localhost:4400/modules/44-media.html"
+ },
+ {
+  "slug": "religions",
+  "url": "http://localhost:4400/modules/45-religions.html"
+ },
+ {
+  "slug": "fear",
+  "url": "http://localhost:4400/modules/46-fear.html"
+ },
+ {
+  "slug": "logic",
+  "url": "http://localhost:4400/modules/47-logic.html"
+ },
+ {
+  "slug": "fire",
+  "url": "http://localhost:4400/modules/48-fire.html"
+ },
+ {
+  "slug": "health-and-medicine",
+  "url": "http://localhost:4400/modules/49-health.html"
+ },
+ {
+  "slug": "ecosystems-climate-and-sustainability",
+  "url": "http://localhost:4400/modules/50-ecosystems.html"
+ }
+]

@@ -1,0 +1,32 @@
+{
+  "name": "perceptense",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "Have a Sense About Everything — a free, self-directed course of interactive modules.",
+  "license": "SEE LICENSE IN LICENSE",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run data && npm run css && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "data": "python tools/build_data.py",
+    "port": "python tools/port.py",
+    "css": "node tools/build-styles.mjs",
+    "verify": "npm run verify:drift && npm run verify:handlers && npm run verify:crawl",
+    "verify:drift": "python tools/verify_drift.py",
+    "verify:handlers": "python tools/verify_handlers.py",
+    "verify:crawl": "python tools/verify_crawl.py",
+    "verify:visual": "node tools/visual/geometry.mjs",
+    "shots": "node tools/visual/shoot.mjs"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.2",
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.56.1",
+    "pngjs": "^7.0.0",
+    "postcss": "^8.5.6",
+    "postcss-selector-parser": "^7.1.0",
+    "typescript": "^5.9.3"
+  }
+}

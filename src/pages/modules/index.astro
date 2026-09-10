@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site, path, pageTitle } from '../../lib/site';
+import modules from '../../data/modules.json';
+import categories from '../../data/categories.json';
+
+const pathname = path('modules');
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `All modules | ${site.brand}`,
+    url: new URL(pathname, Astro.site).href,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: modules.length,
+      itemListElement: modules.map((m, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: m.name,
+        url: new URL(path('modules', m.slug), Astro.site).href,
+      })),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: site.brand, item: new URL(path(), Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: 'All modules', item: new URL(pathname, Astro.site).href },
+    ],
+  },
+];
+---
+<BaseLayout
+  title={pageTitle('All 50 modules')}
+  description="Every Perceptense module in order, from weight and mass through to ecosystems, climate and sustainability."
+  pathname={pathname}
+  structuredData={structuredData}
+>
+  <nav class="crumbs" aria-label="Breadcrumb" slot="before-main">
+    <ol>
+      <li><a href={path()}>Home</a></li>
+      <li aria-current="page">All modules</li>
+    </ol>
+  </nav>
+
+  <div class="page-wrap">
+    <h1>All 50 modules</h1>
+    <p class="lede">The full course in order. Each module stands on its own.</p>
+
+    <ol class="module-list">
+      {modules.map((m) => {
+        const cat = categories.find((c) => c.id === m.category)!;
+        return (
+          <li class="module-list-item">
+            <a href={path('modules', m.slug)}>
+              <span class="module-list-num">{String(m.id).padStart(2, '0')}</span>
+              <span class="module-list-name">{m.name}</span>
+              <span class="module-list-blurb">{m.blurb}</span>
+            </a>
+            <a class="module-list-tag" href={path('topics', cat.id)}>{cat.label}</a>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</BaseLayout>

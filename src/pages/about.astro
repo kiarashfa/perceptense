@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site, path, pageTitle } from '../lib/site';
+
+const pathname = path('about');
+---
+<BaseLayout
+  title={pageTitle('About')}
+  description={`About ${site.brand} — ${site.description}`.slice(0, 165)}
+  pathname={pathname}
+>
+  <div class="page-wrap">
+    <h1>About</h1>
+  </div>
+</BaseLayout>

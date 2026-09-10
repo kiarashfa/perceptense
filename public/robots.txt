@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kiarashfa.github.io/perceptense/sitemap-index.xml

@@ -19,3 +19,7 @@ CLAUDE.md
 Thumbs.db
 .vscode/
 .idea/
+
+# generated from src/styles/modules-src by the css step
+src/styles/modules/
+public/styles/

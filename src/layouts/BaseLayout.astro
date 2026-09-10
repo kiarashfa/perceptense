@@ -1,0 +1,97 @@
+---
+import { site, base, path } from '../lib/site';
+import ThemeScript from '../components/ThemeScript.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { sharedCssHash } from '../lib/assets';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Site-root-relative pathname for this page, e.g. "/perceptense/modules/x/". */
+  pathname: string;
+  ogType?: 'website' | 'article';
+  /** Structured data objects; each is emitted as its own ld+json script. */
+  structuredData?: unknown[];
+  bodyClass?: string;
+  moduleId?: number;
+}
+
+const {
+  title,
+  description,
+  pathname,
+  ogType = 'website',
+  structuredData = [],
+  bodyClass,
+  moduleId,
+} = Astro.props;
+
+const canonical = new URL(pathname, Astro.site).href;
+const analyticsId = import.meta.env.PUBLIC_GA_ID;
+---
+<!doctype html>
+<html lang={site.locale} data-theme="auto" data-module={moduleId ? String(moduleId) : undefined}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <ThemeScript />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="author" content={site.author} />
+
+    <meta property="og:site_name" content={site.brand} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/x-icon" href={`${base}/assets/favicons/favicon.ico`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}/assets/favicons/favicon-32x32.png`} />
+    <link rel="icon" type="image/png" sizes="16x16" href={`${base}/assets/favicons/favicon-16x16.png`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${base}/assets/favicons/apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}/assets/favicons/site.webmanifest`} />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Linked rather than imported so it precedes every bundled module
+         stylesheet; module rules are written to win ties against it. -->
+    <link rel="stylesheet" href={`${base}/styles/shared.css?v=${sharedCssHash}`} />
+
+    {structuredData.map((data) => (
+      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))}
+
+    {analyticsId && (
+      <>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`}></script>
+        <script is:inline define:vars={{ analyticsId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { window.dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', analyticsId);
+        </script>
+      </>
+    )}
+  </head>
+
+  <body class={bodyClass}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader />
+    <slot name="before-main" />
+    <main id="main">
+      <slot />
+    </main>
+    <slot name="after-main" />
+    <SiteFooter />
+  </body>
+</html>

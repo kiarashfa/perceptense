@@ -1,0 +1,44 @@
+---
+import { path } from '../lib/site';
+import modules from '../data/modules.json';
+
+interface Props {
+  module: { id: number; category: string };
+  category: { id: string; label: string };
+  limit?: number;
+}
+
+const { module: current, category, limit = 6 } = Astro.props;
+
+/**
+ * Same-topic modules first, then neighbours by position, so every module links
+ * out even when its topic is small. Generated from the data rather than
+ * hand-written, so titles and links cannot drift apart.
+ */
+const sameTopic = modules.filter((m) => m.category === category.id && m.id !== current.id);
+const index = modules.findIndex((m) => m.id === current.id);
+const neighbours = [modules[index - 1], modules[index + 1], modules[index - 2], modules[index + 2]]
+  .filter((m): m is (typeof modules)[number] => Boolean(m) && m.id !== current.id);
+
+const seen = new Set<number>();
+const related = [...sameTopic, ...neighbours]
+  .filter((m) => !seen.has(m.id) && seen.add(m.id))
+  .slice(0, limit);
+---
+{related.length > 0 && (
+  <aside class="related" aria-labelledby="related-heading">
+    <h2 id="related-heading" class="related-heading">
+      More in <a href={path('topics', category.id)}>{category.label}</a>
+    </h2>
+    <ul class="related-grid">
+      {related.map((m) => (
+        <li class="related-item">
+          <a href={path('modules', m.slug)}>
+            <span class="related-name">{m.name}</span>
+            <span class="related-blurb">{m.blurb}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}

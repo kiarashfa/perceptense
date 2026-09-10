@@ -1,0 +1,202 @@
+[
+ {
+  "slug": "weight-and-mass",
+  "url": "http://localhost:4399/perceptense/modules/weight-and-mass/"
+ },
+ {
+  "slug": "the-human-body",
+  "url": "http://localhost:4399/perceptense/modules/the-human-body/"
+ },
+ {
+  "slug": "geography-and-distance",
+  "url": "http://localhost:4399/perceptense/modules/geography-and-distance/"
+ },
+ {
+  "slug": "nutrition-and-food-labels",
+  "url": "http://localhost:4399/perceptense/modules/nutrition-and-food-labels/"
+ },
+ {
+  "slug": "money-and-economy",
+  "url": "http://localhost:4399/perceptense/modules/money-and-economy/"
+ },
+ {
+  "slug": "big-infrastructure",
+  "url": "http://localhost:4399/perceptense/modules/big-infrastructure/"
+ },
+ {
+  "slug": "time-and-scale",
+  "url": "http://localhost:4399/perceptense/modules/time-and-scale/"
+ },
+ {
+  "slug": "speed-and-duration",
+  "url": "http://localhost:4399/perceptense/modules/speed-and-duration/"
+ },
+ {
+  "slug": "size-and-scale",
+  "url": "http://localhost:4399/perceptense/modules/size-and-scale/"
+ },
+ {
+  "slug": "history-anchors",
+  "url": "http://localhost:4399/perceptense/modules/history-anchors/"
+ },
+ {
+  "slug": "temperature",
+  "url": "http://localhost:4399/perceptense/modules/temperature/"
+ },
+ {
+  "slug": "probability-and-risk",
+  "url": "http://localhost:4399/perceptense/modules/probability-and-risk/"
+ },
+ {
+  "slug": "percentages-and-ratios",
+  "url": "http://localhost:4399/perceptense/modules/percentages-and-ratios/"
+ },
+ {
+  "slug": "materials",
+  "url": "http://localhost:4399/perceptense/modules/materials/"
+ },
+ {
+  "slug": "chemistry",
+  "url": "http://localhost:4399/perceptense/modules/chemistry/"
+ },
+ {
+  "slug": "engineering-rules-of-thumb",
+  "url": "http://localhost:4399/perceptense/modules/engineering-rules-of-thumb/"
+ },
+ {
+  "slug": "politics",
+  "url": "http://localhost:4399/perceptense/modules/politics/"
+ },
+ {
+  "slug": "diplomacy",
+  "url": "http://localhost:4399/perceptense/modules/diplomacy/"
+ },
+ {
+  "slug": "culinary-arts",
+  "url": "http://localhost:4399/perceptense/modules/culinary-arts/"
+ },
+ {
+  "slug": "drinks",
+  "url": "http://localhost:4399/perceptense/modules/drinks/"
+ },
+ {
+  "slug": "fashion",
+  "url": "http://localhost:4399/perceptense/modules/fashion/"
+ },
+ {
+  "slug": "sleep",
+  "url": "http://localhost:4399/perceptense/modules/sleep/"
+ },
+ {
+  "slug": "sex-gender-and-orientation",
+  "url": "http://localhost:4399/perceptense/modules/sex-gender-and-orientation/"
+ },
+ {
+  "slug": "fitness-and-exercise",
+  "url": "http://localhost:4399/perceptense/modules/fitness-and-exercise/"
+ },
+ {
+  "slug": "weather",
+  "url": "http://localhost:4399/perceptense/modules/weather/"
+ },
+ {
+  "slug": "space-and-the-solar-system",
+  "url": "http://localhost:4399/perceptense/modules/space-and-the-solar-system/"
+ },
+ {
+  "slug": "psychology",
+  "url": "http://localhost:4399/perceptense/modules/psychology/"
+ },
+ {
+  "slug": "philosophy",
+  "url": "http://localhost:4399/perceptense/modules/philosophy/"
+ },
+ {
+  "slug": "world-population-and-demographics",
+  "url": "http://localhost:4399/perceptense/modules/world-population-and-demographics/"
+ },
+ {
+  "slug": "art",
+  "url": "http://localhost:4399/perceptense/modules/art/"
+ },
+ {
+  "slug": "literature",
+  "url": "http://localhost:4399/perceptense/modules/literature/"
+ },
+ {
+  "slug": "painting",
+  "url": "http://localhost:4399/perceptense/modules/painting/"
+ },
+ {
+  "slug": "music",
+  "url": "http://localhost:4399/perceptense/modules/music/"
+ },
+ {
+  "slug": "cinema",
+  "url": "http://localhost:4399/perceptense/modules/cinema/"
+ },
+ {
+  "slug": "game",
+  "url": "http://localhost:4399/perceptense/modules/game/"
+ },
+ {
+  "slug": "management",
+  "url": "http://localhost:4399/perceptense/modules/management/"
+ },
+ {
+  "slug": "technology",
+  "url": "http://localhost:4399/perceptense/modules/technology/"
+ },
+ {
+  "slug": "crypto",
+  "url": "http://localhost:4399/perceptense/modules/crypto/"
+ },
+ {
+  "slug": "law-and-legal-systems",
+  "url": "http://localhost:4399/perceptense/modules/law-and-legal-systems/"
+ },
+ {
+  "slug": "language",
+  "url": "http://localhost:4399/perceptense/modules/language/"
+ },
+ {
+  "slug": "sports",
+  "url": "http://localhost:4399/perceptense/modules/sports/"
+ },
+ {
+  "slug": "animals",
+  "url": "http://localhost:4399/perceptense/modules/animals/"
+ },
+ {
+  "slug": "physics",
+  "url": "http://localhost:4399/perceptense/modules/physics/"
+ },
+ {
+  "slug": "media",
+  "url": "http://localhost:4399/perceptense/modules/media/"
+ },
+ {
+  "slug": "religions",
+  "url": "http://localhost:4399/perceptense/modules/religions/"
+ },
+ {
+  "slug": "fear",
+  "url": "http://localhost:4399/perceptense/modules/fear/"
+ },
+ {
+  "slug": "logic",
+  "url": "http://localhost:4399/perceptense/modules/logic/"
+ },
+ {
+  "slug": "fire",
+  "url": "http://localhost:4399/perceptense/modules/fire/"
+ },
+ {
+  "slug": "health-and-medicine",
+  "url": "http://localhost:4399/perceptense/modules/health-and-medicine/"
+ },
+ {
+  "slug": "ecosystems-climate-and-sustainability",
+  "url": "http://localhost:4399/perceptense/modules/ecosystems-climate-and-sustainability/"
+ }
+]

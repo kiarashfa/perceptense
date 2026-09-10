@@ -1,0 +1,19 @@
+---
+/**
+ * Applies the saved theme before first paint.
+ *
+ * Must stay `is:inline` and must sit in <head> ahead of any stylesheet: a
+ * bundled or deferred script would run after the first paint and the page would
+ * flash the wrong theme.
+ */
+---
+<script is:inline>
+  (function () {
+    try {
+      var saved = localStorage.getItem('perceptense-theme');
+      document.documentElement.setAttribute('data-theme', saved || 'auto');
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'auto');
+    }
+  })();
+</script>

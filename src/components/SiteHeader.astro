@@ -1,0 +1,71 @@
+---
+import { site, base, path } from '../lib/site';
+
+const current = Astro.url.pathname;
+const isCurrent = (href: string) => current === href;
+---
+<header class="site-head">
+  <a class="site-brand" href={path()} aria-label={`${site.brand} home`}>{site.brand}</a>
+
+  <nav class="site-nav" aria-label="Main">
+    <a href={path('modules')} aria-current={isCurrent(path('modules')) ? 'page' : undefined}>
+      All modules
+    </a>
+    <a href={path('topics')} aria-current={isCurrent(path('topics')) ? 'page' : undefined}>
+      Topics
+    </a>
+    <a href={path('about')} aria-current={isCurrent(path('about')) ? 'page' : undefined}>
+      About
+    </a>
+  </nav>
+
+  <button
+    type="button"
+    class="theme-toggle"
+    id="themeToggle"
+    title="Toggle dark and light mode"
+    aria-label="Toggle dark and light mode"
+  >
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+  </button>
+</header>
+
+<script>
+  const KEY = 'perceptense-theme';
+  const root = document.documentElement;
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const resolved = () =>
+    root.getAttribute('data-theme') === 'auto'
+      ? (media.matches ? 'dark' : 'light')
+      : root.getAttribute('data-theme');
+
+  const sync = () => root.setAttribute('data-resolved-theme', resolved() ?? 'light');
+
+  document.getElementById('themeToggle')?.addEventListener('click', () => {
+    const next = resolved() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem(KEY, next);
+    } catch {
+      /* storage unavailable; the choice simply does not persist */
+    }
+    sync();
+  });
+
+  media.addEventListener('change', () => {
+    if (root.getAttribute('data-theme') === 'auto') sync();
+  });
+  sync();
+</script>
