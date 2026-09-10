@@ -3,12 +3,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { site, path, pageTitle } from '../lib/site';
 
 const pathname = path('about');
+const url = new URL(pathname, Astro.site).href;
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: `About ${site.brand}`,
+    url,
+    description: site.description,
+    inLanguage: site.locale,
+    about: {
+      '@type': 'Course',
+      name: `${site.brand} — ${site.tagline}`,
+      url: new URL(path(), Astro.site).href,
+      provider: { '@type': 'Person', name: site.author },
+    },
+    author: { '@type': 'Person', name: site.author },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: site.brand, item: new URL(path(), Astro.site).href },
+      { '@type': 'ListItem', position: 2, name: 'About', item: url },
+    ],
+  },
+];
 ---
 <BaseLayout
-  title={pageTitle('About')}
-  description={`About ${site.brand} — ${site.description}`.slice(0, 165)}
+  title={pageTitle('About', 'why this course exists')}
+  description={`${site.brand} is ${site.description[0].toLowerCase()}${site.description.slice(1)}`.slice(0, 170)}
   pathname={pathname}
+  structuredData={structuredData}
 >
+  <nav class="crumbs" aria-label="Breadcrumb" slot="before-main">
+    <ol>
+      <li><a href={path()}>Home</a></li>
+      <li aria-current="page">About</li>
+    </ol>
+  </nav>
+
   <div class="page-wrap">
     <h1>About</h1>
   </div>

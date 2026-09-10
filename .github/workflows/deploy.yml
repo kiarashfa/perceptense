@@ -1,0 +1,72 @@
+name: Deploy
+
+# Manual for now. Add the `push` trigger below once the site is ready to
+# replace what GitHub Pages currently serves from the branch root:
+#
+#   push:
+#     branches: [main]
+#
+# Deployment also requires Settings -> Pages -> Source set to "GitHub Actions".
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deployment finish rather than cancelling it midway.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          pip install -r tools/requirements.txt
+
+      - name: Build
+        run: npm run build
+        env:
+          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
+
+      - name: Verify
+        run: |
+          python tools/verify_drift.py
+          python tools/verify_handlers.py
+          python tools/verify_crawl.py
+          python tools/verify_seo.py
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          pip install -r tools/requirements.txt
+
+      - name: Build
+        run: npm run build
+
+      - name: Content is unchanged
+        run: python tools/verify_drift.py
+
+      - name: Inline handlers resolve
+        run: python tools/verify_handlers.py
+
+      - name: Every page is reachable and links are sound
+        run: python tools/verify_crawl.py
+
+      - name: Metadata and structured data are complete
+        run: python tools/verify_seo.py
