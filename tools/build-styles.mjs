@@ -18,7 +18,12 @@ import postcss from 'postcss';
 import selectorParser from 'postcss-selector-parser';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
-const SHARED_SRC = path.join(ROOT, 'src/styles/shared.css');
+// Concatenated in this order into one linked stylesheet: the design system
+// first, then the site chrome that builds on its tokens.
+const SHARED_PARTS = [
+  path.join(ROOT, 'src/styles/shared.css'),
+  path.join(ROOT, 'src/styles/chrome.css'),
+];
 const SHARED_OUT = path.join(ROOT, 'public/styles/shared.css');
 const IN_DIR = path.join(ROOT, 'src/styles/modules-src');
 const OUT_DIR = path.join(ROOT, 'src/styles/modules');
@@ -97,7 +102,7 @@ const plugin = (ns) => ({
 });
 
 // --- 1. publish the shared stylesheet ---
-const shared = fs.readFileSync(SHARED_SRC, 'utf8');
+const shared = SHARED_PARTS.map((f) => fs.readFileSync(f, 'utf8')).join('\n\n');
 fs.mkdirSync(path.dirname(SHARED_OUT), { recursive: true });
 fs.writeFileSync(SHARED_OUT, shared, 'utf8');
 const sharedHash = crypto.createHash('sha256').update(shared).digest('hex').slice(0, 8);

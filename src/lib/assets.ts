@@ -1,4 +1,5 @@
 import sharedCss from '../styles/shared.css?raw';
+import chromeCss from '../styles/chrome.css?raw';
 
 /**
  * Short content hash used as a cache-busting query on the shared stylesheet.
@@ -18,4 +19,4 @@ function fnv1a(input: string): string {
   return hash.toString(16).padStart(8, '0');
 }
 
-export const sharedCssHash = fnv1a(sharedCss);
+export const sharedCssHash = fnv1a(sharedCss + chromeCss);
