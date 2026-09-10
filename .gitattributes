@@ -1,0 +1,7 @@
+# Store and check out text as LF so content is byte-identical on every platform.
+* text=auto eol=lf
+
+*.png  binary
+*.ico  binary
+*.jpg  binary
+*.webp binary
