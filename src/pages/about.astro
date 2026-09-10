@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site, path, pageTitle } from '../lib/site';
+import modules from '../data/modules.json';
+import categories from '../data/categories.json';
+import '../styles/about.css';
 
 const pathname = path('about');
 const url = new URL(pathname, Astro.site).href;
@@ -13,13 +16,13 @@ const structuredData = [
     url,
     description: site.description,
     inLanguage: site.locale,
+    author: { '@type': 'Person', name: site.author },
     about: {
       '@type': 'Course',
       name: `${site.brand} — ${site.tagline}`,
       url: new URL(path(), Astro.site).href,
       provider: { '@type': 'Person', name: site.author },
     },
-    author: { '@type': 'Person', name: site.author },
   },
   {
     '@context': 'https://schema.org',
@@ -31,10 +34,12 @@ const structuredData = [
   },
 ];
 ---
+
 <BaseLayout
   title={pageTitle('About', 'why this course exists')}
   description={`${site.brand} is ${site.description[0].toLowerCase()}${site.description.slice(1)}`.slice(0, 170)}
   pathname={pathname}
+  bodyClass="about"
   structuredData={structuredData}
 >
   <nav class="crumbs" aria-label="Breadcrumb" slot="before-main">
@@ -44,7 +49,764 @@ const structuredData = [
     </ol>
   </nav>
 
-  <div class="page-wrap">
-    <h1>About</h1>
+
+
+  <div class="about-wrap">
+
+    <!-- ========== HERO ========== -->
+    <div class="hero">
+      <!-- Big interactive name + subtitle -->
+      <div class="etym" id="etym">
+        <h1 class="etym-word" aria-label="Perceptense, blend of perception and sense" title="Click to split">
+          <span class="etym-piece etym-left">Percept<span class="add">ion</span></span><span class="etym-plus">+</span><span class="etym-piece etym-right"><span class="add">s</span>ense</span>
+        </h1>
+        <div class="etym-note">
+          <b>Perception</b> meets <b>sense</b>.
+        </div>
+      </div>
+      <p class="hero-sub">A course for building real intuition.</p>
+    </div>
+
+    <!-- ========== SECTION 1: THE IDEA / TRY IT ========== -->
+    <div class="section">
+      <div class="section-overtitle">The idea</div>
+      <h2 class="section-title">Facts are easy. <em style="font-style: italic; color: var(--color-text-secondary);">Sense</em> is hard.</h2>
+      <p class="section-lede">You know a marathon is long and Picasso was important. But <em>how</em> long? Important compared to whom? <b style="color: var(--color-text-primary); font-weight: 500;">Perceptense</b> covers the things you should have a feel for: weight and distance, but also art, history, technology, wellness, and the everyday systems around you. Here's the kind of question a module might open with.</p>
+
+      <div class="tot">
+        <div class="tot-stage" id="totStage">
+          <div class="tot-tag" id="totTag">Module 01 &middot; <b>Weight &amp; Mass</b></div>
+          <div class="tot-prompt" id="totPrompt">Which is heavier?</div>
+          <div class="tot-opts">
+            <button class="tot-opt" id="totOptA" data-side="a" type="button">A blue whale's tongue</button>
+            <span class="tot-vs">vs</span>
+            <button class="tot-opt" id="totOptB" data-side="b" type="button">An adult African elephant</button>
+          </div>
+          <div class="tot-fact" id="totFact"></div>
+        </div>
+        <div class="tot-dots" id="totDots"></div>
+      </div>
+    </div>
+
+    <!-- ========== SECTION 2: HOW A MODULE WORKS ========== -->
+    <div class="section">
+      <div class="section-overtitle">How a module works</div>
+      <h2 class="section-title">A small toolkit, mixed differently.</h2>
+      <p class="section-lede">Every module reaches for the same set of ingredients. Click each one to see a working example.</p>
+
+      <div class="anat">
+        <div class="anat-tabs" role="tablist">
+          <button class="anat-tab active" data-panel="anchors" type="button"><i class="fa-solid fa-anchor"></i>Anchors</button>
+          <button class="anat-tab" data-panel="calc" type="button"><i class="fa-solid fa-calculator"></i>Calculators</button>
+          <button class="anat-tab" data-panel="compare" type="button"><i class="fa-solid fa-arrows-left-right-to-line"></i>Visual scale</button>
+          <button class="anat-tab" data-panel="games" type="button"><i class="fa-solid fa-gamepad"></i>Games</button>
+          <button class="anat-tab" data-panel="anim" type="button"><i class="fa-solid fa-wave-square"></i>Animations</button>
+          <button class="anat-tab" data-panel="qa" type="button"><i class="fa-solid fa-comments"></i>Q&amp;A reveals</button>
+        </div>
+
+        <!-- Anchors -->
+        <div class="anat-panel active" data-panel="anchors">
+          <p class="anat-desc"><b>Anchors</b> are real-world reference points your brain can latch onto. Once you know a few solid ones, every other number snaps into place by comparison.</p>
+          <div>
+            <div class="anat-anchor-row">
+              <span class="anat-anchor-pill p-amber">1 second</span>
+              <span style="font-size: 13px; color: var(--color-text-primary);">A heartbeat. Roughly one full breath in or out.</span>
+            </div>
+            <div class="anat-anchor-row">
+              <span class="anat-anchor-pill p-green">1 minute</span>
+              <span style="font-size: 13px; color: var(--color-text-primary);">Boiling an egg for a soft yolk. A single song chorus.</span>
+            </div>
+            <div class="anat-anchor-row">
+              <span class="anat-anchor-pill p-blue">1 hour</span>
+              <span style="font-size: 13px; color: var(--color-text-primary);">A lecture. A short film. About 3,600 heartbeats.</span>
+            </div>
+            <div class="anat-anchor-row">
+              <span class="anat-anchor-pill p-purple">1 day</span>
+              <span style="font-size: 13px; color: var(--color-text-primary);">Earth turns once. You sleep for &asymp; a third of it.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="anat-panel" data-panel="calc">
+          <p class="anat-desc"><b>Calculators</b> let you plug in your own numbers. The point isn't the math &mdash; it's seeing how the answer changes when you tweak the inputs.</p>
+          <div class="calc-mini">
+            <div class="calc-field">
+              <label for="calcPrice">Original price ($)</label>
+              <input type="number" id="calcPrice" value="120" min="0" step="1">
+            </div>
+            <div class="calc-field">
+              <label for="calcDisc">Discount (%)</label>
+              <input type="number" id="calcDisc" value="25" min="0" max="100" step="1">
+            </div>
+            <div class="calc-result" id="calcOut">
+              You save <b id="calcSave">$30.00</b> &mdash; final price <b id="calcFinal">$90.00</b>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Compare bars -->
+        <div class="anat-panel" data-panel="compare">
+          <p class="anat-desc"><b>Visual scale</b> turns abstract numbers into things you can <em>see</em>. Bars, maps, and side-by-side layouts make orders of magnitude obvious instead of theoretical.</p>
+          <div id="anatBars">
+            <div class="anat-bar-row">
+              <span class="anat-bl">Mouse heart</span>
+              <span class="anat-bb" style="background: #FAEEDA; width: 8%;"><span class="anat-bv">600 bpm</span></span>
+            </div>
+            <div class="anat-bar-row">
+              <span class="anat-bl">Hummingbird</span>
+              <span class="anat-bb" style="background: #FAECE7; width: 18%;"><span class="anat-bv">1,200 bpm</span></span>
+            </div>
+            <div class="anat-bar-row">
+              <span class="anat-bl">Human (rest)</span>
+              <span class="anat-bb" style="background: #EAF3DE; width: 1.2%;"><span class="anat-bv">70 bpm</span></span>
+            </div>
+            <div class="anat-bar-row">
+              <span class="anat-bl">Blue whale</span>
+              <span class="anat-bb" style="background: #E6F1FB; width: 0.2%;"><span class="anat-bv">8 bpm</span></span>
+            </div>
+          </div>
+          <p style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 8px; line-height: 1.5;">Heart rate vs. body size. The smaller the animal, the harder its heart works.</p>
+        </div>
+
+        <!-- Q&A -->
+        <div class="anat-panel" data-panel="qa">
+          <p class="anat-desc"><b>Q&amp;A reveals</b> are quick estimation prompts. Form a guess in your head, then tap to see what's actually true. The gap between guess and truth is where intuition gets built.</p>
+          <div class="qa anat-qa">
+            <p class="qa-q">If you stacked every person alive today head-to-toe, how tall would the stack be?</p>
+            <button class="qa-btn" data-anat-qa type="button">Reveal answer</button>
+            <div class="qa-ans">
+              About <b>13.7 million km</b> &mdash; tall enough to wrap around Earth's equator <b>340 times</b>, or reach the Moon <b>35 times</b> over.
+            </div>
+          </div>
+          <div class="qa anat-qa" style="margin-bottom: 0;">
+            <p class="qa-q">How many seconds are in a human lifetime (80 years)?</p>
+            <button class="qa-btn" data-anat-qa type="button">Reveal answer</button>
+            <div class="qa-ans">
+              About <b>2.5 billion seconds</b>. We typically think in years, but per-second it's a strikingly finite number.
+            </div>
+          </div>
+        </div>
+
+        <!-- Games: Monty Hall -->
+        <div class="anat-panel" data-panel="games">
+          <p class="anat-desc"><b>Interactive games</b> turn classic puzzles into something you can actually play. The Monty Hall problem only really clicks once you've felt the math by tapping a few times &mdash; switching wins <b>~2/3</b> of the time.</p>
+          <div class="monty-step" id="montyStep">Pick a door. There's a <b>car</b> behind one, goats behind the other two.</div>
+          <div class="monty-doors" id="montyDoors">
+            <button class="monty-door" data-door="0" type="button"><i class="fa-solid fa-door-closed"></i><span>Door 1</span></button>
+            <button class="monty-door" data-door="1" type="button"><i class="fa-solid fa-door-closed"></i><span>Door 2</span></button>
+            <button class="monty-door" data-door="2" type="button"><i class="fa-solid fa-door-closed"></i><span>Door 3</span></button>
+          </div>
+          <div class="monty-stats">
+            <div class="monty-stat">
+              <div class="monty-stat-label">Stayed</div>
+              <div class="monty-stat-val"><span id="montyStayWin">0</span>/<span id="montyStayTot">0</span> <small id="montyStayPct">&mdash;</small></div>
+            </div>
+            <div class="monty-stat">
+              <div class="monty-stat-label">Switched</div>
+              <div class="monty-stat-val"><span id="montySwiWin">0</span>/<span id="montySwiTot">0</span> <small id="montySwiPct">&mdash;</small></div>
+            </div>
+          </div>
+          <button class="try-btn" id="montyReset" type="button">Reset stats</button>
+        </div>
+
+        <!-- Animations: wave interference -->
+        <div class="anat-panel" data-panel="anim">
+          <p class="anat-desc"><b>Animations</b> show what static text can't. A wave isn't a number &mdash; it's something that moves. Modules use small live visuals to make ideas like interference, orbits, and feedback loops feel concrete.</p>
+          <div class="anim-stage">
+            <svg class="anim-svg" viewBox="0 0 320 140" aria-hidden="true">
+              <!-- Source A rings -->
+              <g>
+                <circle cx="110" cy="70" r="0" fill="none" stroke="#4E99A3" stroke-width="1.2">
+                  <animate attributeName="r" from="0" to="90" dur="2.4s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.7" to="0" dur="2.4s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" from="1.4" to="0.3" dur="2.4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="110" cy="70" r="0" fill="none" stroke="#4E99A3" stroke-width="1.2">
+                  <animate attributeName="r" from="0" to="90" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.7" to="0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" from="1.4" to="0.3" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="110" cy="70" r="0" fill="none" stroke="#4E99A3" stroke-width="1.2">
+                  <animate attributeName="r" from="0" to="90" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.7" to="0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" from="1.4" to="0.3" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="110" cy="70" r="3.5" fill="#4E99A3"/>
+              </g>
+              <!-- Source B rings -->
+              <g>
+                <circle cx="210" cy="70" r="0" fill="none" stroke="#4E99A3" stroke-width="1.2">
+                  <animate attributeName="r" from="0" to="90" dur="2.4s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.7" to="0" dur="2.4s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" from="1.4" to="0.3" dur="2.4s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="210" cy="70" r="0" fill="none" stroke="#4E99A3" stroke-width="1.2">
+                  <animate attributeName="r" from="0" to="90" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.7" to="0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" from="1.4" to="0.3" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="210" cy="70" r="0" fill="none" stroke="#4E99A3" stroke-width="1.2">
+                  <animate attributeName="r" from="0" to="90" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.7" to="0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" from="1.4" to="0.3" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="210" cy="70" r="3.5" fill="#4E99A3"/>
+              </g>
+              <text x="110" y="125" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="IBM Plex Sans, system-ui, sans-serif">source A</text>
+              <text x="210" y="125" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="IBM Plex Sans, system-ui, sans-serif">source B</text>
+            </svg>
+          </div>
+          <p style="font-size: 11px; color: var(--color-text-tertiary); margin-top: 8px; line-height: 1.5; text-align: center;">Two-source wave interference, simplified. Where the rings meet in step, the wave reinforces; where they meet out of step, they cancel &mdash; the heart of the double-slit experiment in Module 43.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== SECTION 3: BY THE NUMBERS ========== -->
+    <div class="section">
+      <div class="section-overtitle">By the numbers</div>
+      <h2 class="section-title">The course, in its own units.</h2>
+
+      <div class="stats-shell">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num" data-count={modules.length}>0</div>
+            <div class="stat-label">Modules, each self-contained and standalone.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count={categories.length}>0</div>
+            <div class="stat-label">Categories: from numbers and scale to mind and meaning.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="150">0</div>
+            <div class="stat-label">Interactive elements: calculators, games, animations, reveals.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" data-count="560">0</div>
+            <div class="stat-label">Questions designed to provoke estimation, not memorisation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== SECTION 4: AUTHOR ========== -->
+    <div class="section">
+      <div class="section-overtitle">Who made this</div>
+      <h2 class="section-title">Hi... I'm Kia!</h2>
+
+      <div class="author-card">
+        <div class="author-header">
+          <img class="author-avatar" src="https://raw.githubusercontent.com/kiarashfa/website/main/assets/imgs/MyPic.png" alt="Kiarash Farajzadehahary">
+          <div>
+            <div class="author-name">Kiarash Farajzadehahary</div>
+            <div class="author-role">Scientist &middot; developer &middot; designer &middot; curious engineer</div>
+          </div>
+        </div>
+
+        <p class="author-bio">
+          I built Perceptense because I kept catching myself <b>nodding along</b> at numbers I didn't really understand, gigatons of CO<sub>2</sub>, light-years, basis points, GDP. The internet is great at facts and bad at <b>feel</b>. This is my attempt at a small antidote: short, playful modules you can poke at, instead of long articles you skim.
+        </p>
+        <p class="author-bio">
+          Everything here is hand-built, single-file HTML, and free forever. If a module clicks for you, or breaks, I'd love to hear about it.
+        </p>
+
+        <div class="author-aftermatter">
+          <div class="curious-row" aria-live="polite">
+            <span class="curious-label">Currently curious about</span>
+            <span class="curious-chip" id="curiousChip">
+              <i class="fa-solid fa-leaf"></i>
+              <span id="curiousText">how trees move water 100 m straight up</span>
+            </span>
+          </div>
+
+          <div class="author-links">
+            <a class="author-link" href="https://kiarashfa.github.io/website/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>Personal site</a>
+            <a class="author-link" href="mailto:mymail@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+            <a class="author-link" href="https://github.com/kiarashfa" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+          </div>
+
+          <p class="support-note">Perceptense is free — no ads, no paywalls, just curiosity; if a module left you a little sharper than it found you, a coffee helps keep the next one coming.</p>
+          <div class="author-links">
+            <a class="author-link author-link--support" href="https://www.paypal.com/donate/?hosted_button_id=S3BD5XFBMMWSJ" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></svg>Donate · PayPal</a>
+            <a class="author-link author-link--support" href="https://www.buymeacoffee.com/kiarashfa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.2-1.756.205-.656.004-1.31-.025-1.966-.022-.699.004-1.556-.06-2.095-.58-.475-.458-.54-1.174-.605-1.793l-.731-7.013-.322-3.094c-.037-.351-.286-.695-.678-.678-.336.015-.718.3-.678.679l.228 2.185.949 9.112c.147 1.344 1.174 2.068 2.446 2.272.742.12 1.503.144 2.257.156.966.016 1.942.053 2.892-.122 1.408-.258 2.465-1.198 2.616-2.657.34-3.332.683-6.663 1.024-9.995l.215-2.087a.484.484 0 01.39-.426c.402-.078.787-.212 1.074-.518.455-.488.546-1.124.385-1.766zm-1.478.772c-.145.137-.363.201-.578.233-2.416.359-4.866.54-7.308.46-1.748-.06-3.477-.254-5.207-.498-.17-.024-.353-.055-.47-.18-.22-.236-.111-.71-.054-.995.052-.26.152-.609.463-.646.484-.057 1.046.148 1.526.22.577.088 1.156.159 1.737.212 2.48.226 5.002.19 7.472-.14.45-.06.899-.13 1.345-.21.399-.072.84-.206 1.08.206.166.281.188.657.162.974a.544.544 0 01-.169.364zm-6.159 3.9c-.862.37-1.84.788-3.109.788a5.884 5.884 0 01-1.569-.217l.877 9.004c.065.78.717 1.38 1.5 1.38 0 0 1.243.065 1.658.065.447 0 1.786-.065 1.786-.065.783 0 1.434-.6 1.499-1.38l.94-9.95a3.996 3.996 0 00-1.322-.238c-.826 0-1.491.284-2.26.613z"/></svg>Buy Me a Coffee</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== CTA ========== -->
+    <div class="cta-card">
+      <div class="cta-title">Ready to build some intuition?</div>
+      <div class="cta-sub">Pick any module. They're standalone &mdash; no order, no prerequisites, no scoreboard.</div>
+      <div class="cta-actions">
+        <a class="cta-primary" href="/perceptense/modules/weight-and-mass/">Start with Module 01 <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="cta-secondary" href="/perceptense/">Browse all 50</a>
+      </div>
+    </div>
+
   </div>
+
+  <!-- ========== SCRIPTS ========== -->
+  
+
+  
+  
 </BaseLayout>
+
+<script is:inline>
+
+    /* ------- ETYMOLOGY SPLIT ------- */
+    (function () {
+      var etym = document.getElementById('etym');
+      if (!etym) return;
+      var word = etym.querySelector('.etym-word');
+
+      // Autoplay: open shortly after load, hold, then collapse.
+      // After this, the user can click to toggle freely.
+      var SHOW_DELAY = 700;    // wait a beat after page settles
+      var HOLD_MS    = 2400;   // how long to stay split
+
+      var autoplayDone = false;
+      var hasInteracted = false;
+
+      word.addEventListener('click', function () {
+        hasInteracted = true;
+        etym.classList.toggle('open');
+      });
+
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          if (hasInteracted) return;
+          etym.classList.add('open');
+          setTimeout(function () {
+            if (hasInteracted) return;
+            etym.classList.remove('open');
+            autoplayDone = true;
+          }, HOLD_MS);
+        }, SHOW_DELAY);
+      });
+    })();
+
+    /* ------- THIS-OR-THAT QUIZ ------- */
+    (function () {
+      var stage = document.getElementById('totStage');
+      if (!stage) return;
+      var tagEl    = document.getElementById('totTag');
+      var promptEl = document.getElementById('totPrompt');
+      var optAEl   = document.getElementById('totOptA');
+      var optBEl   = document.getElementById('totOptB');
+      var factEl   = document.getElementById('totFact');
+      var dotsEl   = document.getElementById('totDots');
+
+      var QS = [
+        { mod: '01', cat: 'Weight &amp; Mass',
+          q: 'Which is heavier?',
+          a: 'A puffy white cloud', b: 'A medium-sized elephant',
+          ans: 'a',
+          fact: '<b>The cloud.</b> A cumulus cloud can hold about <b>500 tonnes</b> of water — roughly <b>100 elephants</b>.' },
+      
+        { mod: '03', cat: 'Geography &amp; Distance',
+          q: 'Which has more land area?',
+          a: 'Russia', b: 'The continent of Africa',
+          ans: 'b',
+          fact: '<b>Africa.</b> About <b>30.4M km\u00b2</b>, compared with Russia\u2019s <b>17.1M km\u00b2</b>.' },
+      
+        { mod: '04', cat: 'Nutrition',
+          q: 'Which has more sugar per 100 g?',
+          a: 'A pint of strawberry ice cream', b: 'A bottle of ketchup',
+          ans: 'b',
+          fact: '<b>Ketchup.</b> Around <b>22 g</b> sugar per 100 g, slightly more than strawberry ice cream.' },
+      
+        { mod: '12', cat: 'Probability &amp; Risk',
+          q: 'In a room of 23 random people, what are the odds two share a birthday?',
+          a: 'About 6%', b: 'About 50%',
+          ans: 'b',
+          fact: '<b>About 50%.</b> With 23 people, there are <b>253 possible pairs</b> to match birthdays.' },
+      
+        { mod: '11', cat: 'Temperature',
+          q: 'Which is hotter?',
+          a: 'The surface of the Sun', b: 'A lightning bolt',
+          ans: 'b',
+          fact: '<b>Lightning.</b> Its channel can reach <b>~30,000 K</b>; the Sun\u2019s surface is <b>~5,800 K</b>.' }
+      ];
+
+      var REVEAL_MS_RIGHT = 1700; // user got it — quick reset
+      var REVEAL_MS_WRONG = 2950; // give a bit longer to read the explanation
+
+      function buildDots() {
+        dotsEl.innerHTML = '';
+        QS.forEach(function () {
+          var d = document.createElement('span');
+          d.className = 'tot-dot';
+          dotsEl.appendChild(d);
+        });
+      }
+
+      function updateDots(i, filling, fillMs) {
+        Array.from(dotsEl.children).forEach(function (d, j) {
+          d.classList.remove('current', 'done', 'filling');
+          if (j < i) d.classList.add('done');
+          else if (j === i) {
+            d.classList.add('current');
+            if (filling) {
+              d.style.transition = 'none';
+              // Force reflow:
+              // eslint-disable-next-line no-unused-expressions
+              d.offsetHeight;
+              d.style.setProperty('--fill-dur', ((fillMs || 4000) / 1000) + 's');
+              requestAnimationFrame(function () {
+                d.classList.add('filling');
+              });
+            }
+          }
+        });
+      }
+
+      var idx = 0;
+      var answered = false;
+      var autoTimer = null;
+
+      function paint() {
+        var Q = QS[idx];
+        tagEl.innerHTML = 'Module ' + Q.mod + ' &middot; <b>' + Q.cat + '</b>';
+        promptEl.textContent = Q.q;
+        optAEl.innerHTML = Q.a;
+        optBEl.innerHTML = Q.b;
+        optAEl.classList.remove('right', 'wrong', 'faded');
+        optBEl.classList.remove('right', 'wrong', 'faded');
+        optAEl.disabled = false;
+        optBEl.disabled = false;
+        factEl.classList.remove('show');
+        factEl.innerHTML = '';
+        answered = false;
+        updateDots(idx, false);
+      }
+
+      function scheduleAdvance(ms) {
+        clearTimeout(autoTimer);
+        updateDots(idx, true, ms);
+        autoTimer = setTimeout(function () {
+          swapTo((idx + 1) % QS.length);
+        }, ms);
+      }
+
+      function pick(side) {
+        if (answered) return;
+        answered = true;
+        var Q = QS[idx];
+        var correct = side === Q.ans;
+        var pickedEl = side === 'a' ? optAEl : optBEl;
+        var otherEl  = side === 'a' ? optBEl : optAEl;
+        var truthEl  = Q.ans === 'a' ? optAEl : optBEl;
+        optAEl.disabled = true;
+        optBEl.disabled = true;
+        if (correct) {
+          pickedEl.classList.add('right');
+          otherEl.classList.add('faded');
+        } else {
+          pickedEl.classList.add('wrong');
+          truthEl.classList.add('right');
+        }
+        factEl.innerHTML = Q.fact;
+        requestAnimationFrame(function () { factEl.classList.add('show'); });
+        scheduleAdvance(correct ? REVEAL_MS_RIGHT : REVEAL_MS_WRONG);
+      }
+
+      function swapTo(newIdx) {
+        clearTimeout(autoTimer);
+        stage.classList.add('swap-out');
+        setTimeout(function () {
+          idx = newIdx;
+          paint();
+          stage.classList.remove('swap-out');
+          stage.classList.add('swap-in');
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              stage.classList.remove('swap-in');
+            });
+          });
+        }, 450);
+      }
+
+      optAEl.addEventListener('click', function () { pick('a'); });
+      optBEl.addEventListener('click', function () { pick('b'); });
+
+      // Allow clicking dots to jump
+      buildDots();
+      Array.from(dotsEl.children).forEach(function (d, j) {
+        d.style.cursor = 'pointer';
+        d.addEventListener('click', function () {
+          if (j === idx) return;
+          swapTo(j);
+        });
+      });
+
+      paint();
+    })();
+
+    /* ------- ANATOMY TABS ------- */
+    (function () {
+      var tabs = document.querySelectorAll('.anat-tab');
+      var panels = document.querySelectorAll('.anat-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var key = tab.dataset.panel;
+          tabs.forEach(function (t) { t.classList.toggle('active', t === tab); });
+          panels.forEach(function (p) { p.classList.toggle('active', p.dataset.panel === key); });
+          // Re-animate bars when compare panel is shown
+          if (key === 'compare') {
+            var bars = document.querySelectorAll('#anatBars .anat-bb');
+            bars.forEach(function (b) {
+              var w = b.style.width;
+              b.style.width = '0%';
+              requestAnimationFrame(function () {
+                requestAnimationFrame(function () { b.style.width = w; });
+              });
+            });
+          }
+        });
+      });
+
+      // Anatomy bar widths: convert to relative (max heart rate = 1200 = 100%)
+      var maxBpm = 1200;
+      var bars = document.querySelectorAll('#anatBars .anat-bb');
+      var bpms = [600, 1200, 70, 8];
+      bars.forEach(function (b, i) {
+        b.style.width = (bpms[i] / maxBpm * 100) + '%';
+      });
+
+      // QA reveal inside anatomy
+      document.querySelectorAll('[data-anat-qa]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var ans = btn.parentElement.querySelector('.qa-ans');
+          if (!ans) return;
+          var show = !ans.classList.contains('show');
+          ans.classList.toggle('show', show);
+          btn.textContent = show ? 'Hide answer' : 'Reveal answer';
+        });
+      });
+
+      // Calc mini
+      var price = document.getElementById('calcPrice');
+      var disc = document.getElementById('calcDisc');
+      var saveOut = document.getElementById('calcSave');
+      var finalOut = document.getElementById('calcFinal');
+      function fmt(n) { return '$' + n.toFixed(2); }
+      function recalc() {
+        var p = Math.max(0, parseFloat(price.value) || 0);
+        var d = Math.max(0, Math.min(100, parseFloat(disc.value) || 0));
+        var save = p * (d / 100);
+        var fin = p - save;
+        saveOut.textContent = fmt(save);
+        finalOut.textContent = fmt(fin);
+      }
+      if (price && disc) {
+        price.addEventListener('input', recalc);
+        disc.addEventListener('input', recalc);
+        recalc();
+      }
+    })();
+
+    /* ------- STAT COUNTERS ------- */
+    (function () {
+      var stats = document.querySelectorAll('.stat-num[data-count]');
+      var animated = new WeakSet();
+
+      function animate(el) {
+        if (animated.has(el)) return;
+        animated.add(el);
+        var target = parseFloat(el.dataset.count);
+        var start = performance.now();
+        // Long, slow-tail duration so users can watch larger counts climb
+        var dur = 1800 + Math.min(1400, target * 1.8);
+        function tick(now) {
+          var p = Math.min(1, (now - start) / dur);
+          // easeOutQuint — strong slow tail near the end
+          var e = 1 - Math.pow(1 - p, 5);
+          var val = Math.round(target * e);
+          el.textContent = val.toString();
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) animate(entry.target);
+          });
+        }, { threshold: 0.3 });
+        stats.forEach(function (s) { io.observe(s); });
+      } else {
+        stats.forEach(animate);
+      }
+    })();
+
+    /* ------- CURIOUS CHIP ROTATOR ------- */
+    (function () {
+      var chip = document.getElementById('curiousChip');
+      var text = document.getElementById('curiousText');
+      if (!chip || !text) return;
+      var icon = chip.querySelector('i');
+      var items = [
+        { i: 'fa-solid fa-leaf',        t: 'how trees move water 100 m straight up' },
+        { i: 'fa-solid fa-moon',        t: 'why we still don\u2019t know why we sleep' },
+        { i: 'fa-solid fa-microchip',   t: 'whether transistors will get any smaller' },
+        { i: 'fa-solid fa-bread-slice', t: 'the chemistry of a great sourdough crust' },
+        { i: 'fa-solid fa-clock',       t: 'why time feels faster as you age' },
+        { i: 'fa-solid fa-shrimp',      t: 'how mantis shrimp see 12 colour channels' },
+        { i: 'fa-solid fa-book',        t: 'what \u201creading speed\u201d actually measures' }
+      ];
+      var idx = 0;
+      function next() {
+        chip.classList.add('fade');
+        setTimeout(function () {
+          idx = (idx + 1) % items.length;
+          icon.className = items[idx].i;
+          text.textContent = items[idx].t;
+          chip.classList.remove('fade');
+        }, 380);
+      }
+      // Rotate on click + on a 4s timer
+      chip.addEventListener('click', next);
+      setInterval(next, 4200);
+    })();
+
+    /* ------- QUIZ ------- */
+    /* (removed: this-or-that replaces the legacy multi-choice quiz) */
+
+    /* ------- MONTY HALL ------- */
+    (function () {
+      var doorsEl = document.getElementById('montyDoors');
+      if (!doorsEl) return;
+      var stepEl   = document.getElementById('montyStep');
+      var doors    = Array.from(doorsEl.querySelectorAll('.monty-door'));
+      var resetBtn = document.getElementById('montyReset');
+
+      var stats = { stayWin: 0, stayTot: 0, swiWin: 0, swiTot: 0 };
+      var state = 'pick'; // 'pick' -> 'choose' -> 'done'
+      var car = -1, picked = -1, opened = -1;
+
+      function updateStats() {
+        document.getElementById('montyStayWin').textContent = stats.stayWin;
+        document.getElementById('montyStayTot').textContent = stats.stayTot;
+        document.getElementById('montySwiWin').textContent = stats.swiWin;
+        document.getElementById('montySwiTot').textContent = stats.swiTot;
+        document.getElementById('montyStayPct').innerHTML = stats.stayTot
+          ? Math.round(100 * stats.stayWin / stats.stayTot) + '%'
+          : '&mdash;';
+        document.getElementById('montySwiPct').innerHTML = stats.swiTot
+          ? Math.round(100 * stats.swiWin / stats.swiTot) + '%'
+          : '&mdash;';
+      }
+
+      function resetRound() {
+        state = 'pick';
+        car = Math.floor(Math.random() * 3);
+        picked = -1; opened = -1;
+        doors.forEach(function (d) {
+          d.disabled = false;
+          d.className = 'monty-door';
+          var icon = d.querySelector('i');
+          icon.className = 'fa-solid fa-door-closed';
+          d.querySelector('span').textContent = 'Door ' + (parseInt(d.dataset.door) + 1);
+        });
+        stepEl.innerHTML = 'Pick a door. There\u2019s a <b>car</b> behind one, goats behind the other two.';
+      }
+
+      function openGoat() {
+        // Open a door that is not picked and not the car
+        var candidates = [0, 1, 2].filter(function (i) { return i !== picked && i !== car; });
+        opened = candidates[Math.floor(Math.random() * candidates.length)];
+        var d = doors[opened];
+        d.classList.add('opened');
+        d.disabled = true;
+        d.querySelector('i').className = 'fa-solid fa-shoe-prints';
+        d.querySelector('span').textContent = 'Goat';
+        var remaining = [0, 1, 2].filter(function (i) { return i !== picked && i !== opened; })[0];
+        stepEl.innerHTML = 'A goat is behind <b>Door ' + (opened + 1) + '</b>. Stick with <b>Door ' + (picked + 1) + '</b>, or switch to <b>Door ' + (remaining + 1) + '</b>?';
+      }
+
+      function reveal(finalChoice, wasSwitch) {
+        state = 'done';
+        doors.forEach(function (d, i) {
+          d.disabled = true;
+          if (i === car) {
+            d.querySelector('i').className = 'fa-solid fa-car';
+            d.querySelector('span').textContent = 'Car';
+            if (i === finalChoice) d.classList.add('win');
+            else d.classList.add('opened');
+          } else if (!d.classList.contains('opened')) {
+            d.querySelector('i').className = 'fa-solid fa-shoe-prints';
+            d.querySelector('span').textContent = 'Goat';
+            if (i === finalChoice) d.classList.add('lose');
+            else d.classList.add('opened');
+          }
+        });
+        var won = finalChoice === car;
+        if (wasSwitch) {
+          stats.swiTot++; if (won) stats.swiWin++;
+        } else {
+          stats.stayTot++; if (won) stats.stayWin++;
+        }
+        updateStats();
+        stepEl.innerHTML = (won ? '<b>You won the car.</b> ' : '<b>Goat.</b> ') +
+          'You ' + (wasSwitch ? 'switched' : 'stayed') +
+          '. Tap any door to play again.';
+      }
+
+      doors.forEach(function (d) {
+        d.addEventListener('click', function () {
+          var i = parseInt(d.dataset.door, 10);
+          if (state === 'pick') {
+            picked = i;
+            d.classList.add('picked');
+            state = 'choose';
+            openGoat();
+          } else if (state === 'choose') {
+            // Can only click picked (stay) or the remaining unopened (switch)
+            if (i === opened) return;
+            var wasSwitch = i !== picked;
+            reveal(i, wasSwitch);
+          } else {
+            // done — reset and start a new round; this click becomes the new pick
+            resetRound();
+            picked = i;
+            doors[i].classList.add('picked');
+            state = 'choose';
+            openGoat();
+          }
+        });
+      });
+
+      resetBtn.addEventListener('click', function () {
+        stats = { stayWin: 0, stayTot: 0, swiWin: 0, swiTot: 0 };
+        updateStats();
+        resetRound();
+      });
+
+      resetRound();
+      updateStats();
+    })();
+  
+</script>
+
+<script is:inline>
+
+    // swap "info" button for a home button
+    (function () {
+      var topbar = document.querySelector('.topbar-right');
+      if (!topbar) return;
+      var aboutLink = topbar.querySelector('a[href$="about.html"]');
+      if (!aboutLink) return;
+      aboutLink.setAttribute('href', 'index.html');
+      aboutLink.setAttribute('title', 'All modules');
+      aboutLink.setAttribute('aria-label', 'All modules');
+      aboutLink.innerHTML =
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+        'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>' +
+        '<polyline points="9 22 9 12 15 12 15 22"/></svg>';
+    })();
+  
+</script>
