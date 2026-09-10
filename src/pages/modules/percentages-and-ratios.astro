@@ -94,17 +94,17 @@ const mod = modules.find((m) => m.id === 13)!;
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-b-the-5-tricks-used-to-mislead-with-percentages">Part B · the 5 tricks used to mislead with percentages</h2>
 
-    <div class="trick-card">
+    <div class="content-card">
       <div class="trick-header">
         <span class="trick-name">Trick 1 · the moving baseline</span>
-        <span class="trick-badge trick-badge-style">very common</span>
+        <span class="trick-badge p-red">very common</span>
       </div>
       <div class="sub2">
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">What they say</p>
           <p class="sub-val">"Prices fell 20% then rose 25% — we're back to normal!"</p>
         </div>
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">What's actually true</p>
           <p class="sub-val">You are NOT back to normal.</p>
           <p class="sub-note">Start at 100. −20% = 80. Then +25% of 80 = +20. 80 + 20 = 100? Yes — but that's why they chose 25%, not 20%. Try −20% then +20%: 100 → 80 → 96. Still 4% below start.</p>
@@ -115,18 +115,18 @@ const mod = modules.find((m) => m.id === 13)!;
       </div>
     </div>
 
-    <div class="trick-card">
+    <div class="content-card">
       <div class="trick-header">
         <span class="trick-name">Trick 2 · cherry-picking the timeframe</span>
-        <span class="trick-badge trick-badge-style-2">very common</span>
+        <span class="trick-badge p-amber">very common</span>
       </div>
       <div class="sub2">
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">Politician A says</p>
           <p class="sub-val">"Crime is down 15% since we took office 2 years ago."</p>
           <p class="sub-note">True — but starts from a 20-year high.</p>
         </div>
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">Politician B says</p>
           <p class="sub-val">"Crime is up 40% over the last decade."</p>
           <p class="sub-note">Also true — measured over a longer window that includes the spike.</p>
@@ -137,18 +137,18 @@ const mod = modules.find((m) => m.id === 13)!;
       </div>
     </div>
 
-    <div class="trick-card">
+    <div class="content-card">
       <div class="trick-header">
         <span class="trick-name">Trick 3 · the average that hides everything</span>
-        <span class="trick-badge trick-badge-style-3">everywhere</span>
+        <span class="trick-badge p-purple">everywhere</span>
       </div>
       <div class="sub2">
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">Mean (average)</p>
           <p class="sub-val">5 people earn: €10k, €20k, €30k, €40k, €400k → mean = €100k</p>
           <p class="sub-note">The mean is €100k, but 4 out of 5 people earn below it. One outlier destroyed the average.</p>
         </div>
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">Median (middle value)</p>
           <p class="sub-val">Same 5 people → median = €30k</p>
           <p class="sub-note">The median is far more representative of "typical." For income, house prices, and wealth, always prefer the median.</p>
@@ -159,17 +159,17 @@ const mod = modules.find((m) => m.id === 13)!;
       </div>
     </div>
 
-    <div class="trick-card">
+    <div class="content-card">
       <div class="trick-header">
         <span class="trick-name">Trick 4 · percent of what?</span>
-        <span class="trick-badge trick-badge-style-4">sneaky</span>
+        <span class="trick-badge p-teal">sneaky</span>
       </div>
       <div class="sub2">
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">What they say</p>
           <p class="sub-val">"We increased the education budget by 5%."</p>
         </div>
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">What you need to know</p>
           <p class="sub-val">5% of the education budget — or 5% of GDP? Or 5% of last year's budget? Each gives wildly different numbers.</p>
           <p class="sub-note">5% of a €1B budget = €50M. 5% of GDP (say €1T) = €50B. Same percentage, 1,000× different reality.</p>
@@ -180,17 +180,17 @@ const mod = modules.find((m) => m.id === 13)!;
       </div>
     </div>
 
-    <div class="trick-card">
+    <div class="content-card">
       <div class="trick-header">
         <span class="trick-name">Trick 5 · small sample sizes</span>
         <span class="trick-badge trick-badge-style-5">in headlines daily</span>
       </div>
       <div class="sub2">
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">Headline says</p>
           <p class="sub-val">"100% increase in rare disease cases in our town!"</p>
         </div>
-        <div class="sub-box">
+        <div class="sub-card">
           <p class="sub-label">Reality</p>
           <p class="sub-val">Last year: 1 case. This year: 2 cases. That is a 100% increase — from 1 to 2.</p>
           <p class="sub-note">With tiny counts, random variation produces huge percentage swings that mean nothing.</p>
@@ -233,32 +233,32 @@ const mod = modules.find((m) => m.id === 13)!;
     <!-- mental-math shortcut cards -->
     <div class="mm-grid">
       <div class="mm-card">
-        <div class="mm-title">Find 10%</div>
+        <div class="mini-card-title">Find 10%</div>
         <div class="mm-rule">Move decimal left 1</div>
         <div class="mm-ex">10% of €340 → €34.0<br>Then scale: 5% = half, 20% = double</div>
       </div>
       <div class="mm-card">
-        <div class="mm-title">Find 1%</div>
+        <div class="mini-card-title">Find 1%</div>
         <div class="mm-rule">Move decimal left 2</div>
         <div class="mm-ex">1% of €4,200 → €42<br>Build any % from there: 7% = 7×42 = €294</div>
       </div>
       <div class="mm-card">
-        <div class="mm-title">Flip trick</div>
+        <div class="mini-card-title">Flip trick</div>
         <div class="mm-rule">A% of B = B% of A</div>
         <div class="mm-ex">8% of 25 = 25% of 8 = 2<br>Easier to take 25% of 8 than 8% of 25</div>
       </div>
       <div class="mm-card">
-        <div class="mm-title">Tip shortcut</div>
+        <div class="mini-card-title">Tip shortcut</div>
         <div class="mm-rule">15% = 10% + half</div>
         <div class="mm-ex">Meal: €47 → 10% = €4.70, half = €2.35<br>15% tip = €7.05 ≈ €7</div>
       </div>
       <div class="mm-card">
-        <div class="mm-title">VAT check</div>
+        <div class="mini-card-title">VAT check</div>
         <div class="mm-rule">20% of X = X ÷ 5</div>
         <div class="mm-ex">€180 ÷ 5 = €36 VAT<br>Total = €180 + €36 = €216</div>
       </div>
       <div class="mm-card">
-        <div class="mm-title">Quick discount</div>
+        <div class="mini-card-title">Quick discount</div>
         <div class="mm-rule">30% off = pay 70%</div>
         <div class="mm-ex">€85 × 0.7 = €59.50<br>Think "what fraction stays", not "what's removed"</div>
       </div>

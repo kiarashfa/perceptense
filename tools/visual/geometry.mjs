@@ -104,6 +104,10 @@ await browser.close();
 console.log(`modules compared      : ${A.length}`);
 console.log(`geometrically clean   : ${clean}`);
 console.log(`with divergences      : ${report.length}   (tolerance ${TOL}px)\n`);
+if (report.length) {
+  console.log('divergent: ' + report.map((r) => r.slug).join(' '));
+  console.log();
+}
 for (const r of report.slice(0, 12)) {
   console.log(`  ${r.slug}${r.note ? '  [' + r.note + ']' : ''}`);
   for (const x of (r.roots || []).slice(0, 4)) {

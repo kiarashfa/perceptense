@@ -165,7 +165,6 @@
     .stat-line { display: flex; align-items: flex-start; gap: 9px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
     .stat-line:last-child { border-bottom: 0; }
     .stat-num { min-width: 58px; color: var(--accent); font-size: 18px; font-weight: 600; line-height: 1.2; }
-    .stat-copy { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
 
     /* ── Diagram card ── */
     .diagram-card {

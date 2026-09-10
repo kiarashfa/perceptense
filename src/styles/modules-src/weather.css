@@ -156,11 +156,6 @@
       color: var(--color-text-primary);
       margin-bottom: 2px;
     }
-    .calc-result-note {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      line-height: 1.5;
-    }
 
     /* ── Pressure scale ── */
     .pressure-scale {
@@ -459,31 +454,6 @@
 
 .cval-style {
   font-size:14px;
-}
-
-.cloud-badge-style {
-  background:#E6F1FB;
-  color:#0C447C;
-}
-
-.cloud-badge-style-2 {
-  background:#E1F5EE;
-  color:#085041;
-}
-
-.cloud-badge-style-3 {
-  background:#FAEEDA;
-  color:#633806;
-}
-
-.cloud-badge-style-4 {
-  background:#FCEBEB;
-  color:#791F1F;
-}
-
-.cloud-badge-style-5 {
-  background:#FAECE7;
-  color:#712B13;
 }
 
 .comfort-seg-style {

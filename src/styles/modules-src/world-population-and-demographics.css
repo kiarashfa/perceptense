@@ -3,14 +3,12 @@
     .timeline-row { display: flex; align-items: center; gap: 0; margin-bottom: 4px; }
     .tl-label { font-size: 12px; color: var(--color-text-secondary); width: 120px; flex-shrink: 0; text-align: right; padding-right: 10px; }
     .tl-bar { height: 18px; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; }
-    .tl-val { font-size: 11px; font-weight: 500; white-space: nowrap; }
 
     /* Region population chart */
     .region-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .region-label { font-size: 12px; color: var(--color-text-secondary); width: 110px; flex-shrink: 0; text-align: right; }
     .region-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 20px; overflow: hidden; position: relative; }
     .region-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; transition: width 0.6s ease; }
-    .region-pct { font-size: 11px; font-weight: 500; white-space: nowrap; }
 
     /* Dot grid */
     .dot-grid { display: flex; flex-wrap: wrap; gap: 3px; padding: 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); }
@@ -25,7 +23,6 @@
 
     /* Fertility explorer */
     .fertil-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 10px; }
-    .fertil-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
     .fertil-country { font-size: 11px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
     .fertil-rate { font-size: 18px; font-weight: 500; }
     .fertil-label { font-size: 10px; color: var(--color-text-secondary); }
@@ -35,7 +32,6 @@
     .life-label { font-size: 12px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; text-align: right; }
     .life-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 20px; overflow: hidden; }
     .life-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; }
-    .life-val { font-size: 11px; font-weight: 500; white-space: nowrap; }
 
     /* Urbanisation donut placeholder — pure CSS */
     .donut-wrap { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
@@ -69,7 +65,6 @@
     .mc-label { font-size: 12px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; }
     .mc-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 18px; overflow: hidden; }
     .mc-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; }
-    .mc-val { font-size: 11px; font-weight: 500; white-space: nowrap; }
 
     /* Explorer tab buttons */
     .tab-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
@@ -306,13 +301,6 @@
 .region-fill-style-17 {
   width:8.6%;
   background:#C0DD97;
-}
-
-.demographics-label-4 {
-  font-size:13px;
-  font-weight:500;
-  margin-bottom:4px;
-  color:var(--color-text-primary);
 }
 
 .demographics-text-4 {
@@ -611,13 +599,6 @@
   width:125%;
   max-width:100%;
   background:#173404;
-}
-
-.demographics-label-5 {
-  font-size:13px;
-  font-weight:500;
-  margin-bottom:8px;
-  color:var(--color-text-primary);
 }
 
 .country-a {

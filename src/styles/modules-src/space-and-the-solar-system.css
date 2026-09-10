@@ -68,7 +68,6 @@
     }
     .tl-body { flex: 1; min-width: 0; }
     .tl-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
-    .tl-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
 
     /* ── SpaceX launcher cards ── */
     .launcher-grid {
@@ -924,7 +923,6 @@
 }
 .neighbor-body { flex: 1; min-width: 0; }
 .neighbor-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
-.neighbor-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
 
 /* ── Black hole anatomy layers ── */
 .bh-layer {

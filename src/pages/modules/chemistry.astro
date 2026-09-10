@@ -165,16 +165,16 @@ const mod = modules.find((m) => m.id === 15)!;
     <div class="content-panel">
       <div class="panel-title-spaced">The three intermolecular forces — ranked by strength</div>
       <div class="bonds-grid bonds-grid-style">
-        <div class="bond-card">
-          <div class="bond-title text-red-900">① Hydrogen bonds</div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title text-red-900">① Hydrogen bonds</div>
           <p class="bond-desc">N–H, O–H, or F–H near a lone pair on N/O/F. Strength: ~20 kJ/mol. Makes water liquid at room temperature. Holds DNA strands together. Determines protein folding.</p>
         </div>
-        <div class="bond-card">
-          <div class="bond-title text-amber-900">② Dipole–dipole</div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title text-amber-900">② Dipole–dipole</div>
           <p class="bond-desc">Between any two polar molecules. Strength: ~5–15 kJ/mol. Why acetone (a ketone) has a higher boiling point than a similar-sized alkane.</p>
         </div>
-        <div class="bond-card">
-          <div class="bond-title text-stone-800">③ London dispersion</div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title text-stone-800">③ London dispersion</div>
           <p class="bond-desc">Exists between ALL molecules — polar or not. Caused by fleeting electron imbalances. Weak per molecule (~1–5 kJ/mol) but adds up: gecko feet stick to glass via millions of these forces.</p>
         </div>
       </div>
@@ -235,130 +235,130 @@ const mod = modules.find((m) => m.id === 15)!;
       </svg>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Alkane (no functional group)</span>
         <span class="fg-formula text-stone-800">C–C–C (sp³)</span>
         <span class="fg-badge fg-badge-style">the simplest carbon chain</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">Only C–H and C–C single bonds. Fully saturated.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Nonpolar. Doesn't dissolve in water.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Methane (natural gas), butane (lighter fuel), octane (petrol), paraffin wax, candles</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">Only C–H and C–C single bonds. Fully saturated.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Nonpolar. Doesn't dissolve in water.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Methane (natural gas), butane (lighter fuel), octane (petrol), paraffin wax, candles</p></div>
       </div>
-      <p class="fg-note">The "boring" molecules — chemically unreactive (hence "inert") but excellent fuels because burning them releases a lot of energy. The length of the chain determines the state: methane (1C) = gas, octane (8C) = liquid, paraffin (20+ C) = solid wax.</p>
+      <p class="cnote">The "boring" molecules — chemically unreactive (hence "inert") but excellent fuels because burning them releases a lot of energy. The length of the chain determines the state: methane (1C) = gas, octane (8C) = liquid, paraffin (20+ C) = solid wax.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Alcohol</span>
         <span class="fg-formula text-green-900">–OH</span>
-        <span class="fg-badge fg-badge-style-2">hydroxyl group</span>
+        <span class="fg-badge p-teal">hydroxyl group</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">–OH group attached to carbon. The oxygen pulls electrons, making the group polar.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Short-chain alcohols fully mix with water. Longer chains become less soluble.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Methanol (toxic, fuel), ethanol (drinking alcohol, antiseptic), isopropanol (rubbing alcohol), glycerol (in soap, food)</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">–OH group attached to carbon. The oxygen pulls electrons, making the group polar.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Short-chain alcohols fully mix with water. Longer chains become less soluble.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Methanol (toxic, fuel), ethanol (drinking alcohol, antiseptic), isopropanol (rubbing alcohol), glycerol (in soap, food)</p></div>
       </div>
-      <p class="fg-note">The –OH group forms hydrogen bonds with water — which is why ethanol and water mix completely. Ethanol is polar enough to dissolve in water but also has a nonpolar carbon chain — so it can dissolve some oils too. This dual nature makes it a versatile solvent (perfumes, cleaning agents). The difference between drinkable and poisonous alcohol is a single carbon: ethanol (C₂) is metabolised to acetaldehyde then to acetic acid (harmless); methanol (C₁) is metabolised to formaldehyde — toxic and fatal even in small doses.</p>
+      <p class="cnote">The –OH group forms hydrogen bonds with water — which is why ethanol and water mix completely. Ethanol is polar enough to dissolve in water but also has a nonpolar carbon chain — so it can dissolve some oils too. This dual nature makes it a versatile solvent (perfumes, cleaning agents). The difference between drinkable and poisonous alcohol is a single carbon: ethanol (C₂) is metabolised to acetaldehyde then to acetic acid (harmless); methanol (C₁) is metabolised to formaldehyde — toxic and fatal even in small doses.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Aldehyde</span>
         <span class="fg-formula text-amber-900">–CHO (R–C(=O)–H)</span>
-        <span class="fg-badge fg-badge-style-3">carbonyl at chain end</span>
+        <span class="fg-badge p-amber">carbonyl at chain end</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">C=O double bond at the END of a carbon chain, with an H attached.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. The C=O is strongly polarised. Mix with water at short chain lengths.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Formaldehyde (preservative, disinfectant), acetaldehyde (wine hangover compound), benzaldehyde (almond smell), vanillin (vanilla flavour), cinnamaldehyde (cinnamon)</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">C=O double bond at the END of a carbon chain, with an H attached.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. The C=O is strongly polarised. Mix with water at short chain lengths.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Formaldehyde (preservative, disinfectant), acetaldehyde (wine hangover compound), benzaldehyde (almond smell), vanillin (vanilla flavour), cinnamaldehyde (cinnamon)</p></div>
       </div>
-      <p class="fg-note">Aldehydes are often responsible for strong, distinctive smells. Many flavour compounds (vanilla, cinnamon, almond) are aldehydes. The smell of fresh-cut grass is partly due to short-chain aldehydes. Formaldehyde — the simplest aldehyde — is toxic and used in preservation (embalming fluid). Alcohol oxidises to aldehyde: when you drink ethanol, your liver converts it to acetaldehyde — the molecule largely responsible for the hangover.</p>
+      <p class="cnote">Aldehydes are often responsible for strong, distinctive smells. Many flavour compounds (vanilla, cinnamon, almond) are aldehydes. The smell of fresh-cut grass is partly due to short-chain aldehydes. Formaldehyde — the simplest aldehyde — is toxic and used in preservation (embalming fluid). Alcohol oxidises to aldehyde: when you drink ethanol, your liver converts it to acetaldehyde — the molecule largely responsible for the hangover.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Ketone</span>
         <span class="fg-formula text-amber-900">R–C(=O)–R'</span>
-        <span class="fg-badge fg-badge-style-3">carbonyl in the middle</span>
+        <span class="fg-badge p-amber">carbonyl in the middle</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">C=O double bond in the MIDDLE of a chain, flanked by two carbon groups.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Excellent solvents — dissolve both polar and many nonpolar compounds.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Acetone (nail polish remover, solvent), butanone (MEK, industrial solvent), cyclohexanone (in nylon production)</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">C=O double bond in the MIDDLE of a chain, flanked by two carbon groups.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Excellent solvents — dissolve both polar and many nonpolar compounds.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Acetone (nail polish remover, solvent), butanone (MEK, industrial solvent), cyclohexanone (in nylon production)</p></div>
       </div>
-      <p class="fg-note">Ketones are superb solvents because their polarity is intermediate — they dissolve many things water won't. Acetone (nail polish remover) is the simplest ketone, miscible with water but also dissolves plastics, paints, and oils. The body produces ketones (like acetoacetate) when burning fat instead of glucose — this is the basis of the "keto diet." Breath smelling of nail polish remover can indicate diabetic ketoacidosis — a medical emergency.</p>
+      <p class="cnote">Ketones are superb solvents because their polarity is intermediate — they dissolve many things water won't. Acetone (nail polish remover) is the simplest ketone, miscible with water but also dissolves plastics, paints, and oils. The body produces ketones (like acetoacetate) when burning fat instead of glucose — this is the basis of the "keto diet." Breath smelling of nail polish remover can indicate diabetic ketoacidosis — a medical emergency.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Carboxylic acid</span>
         <span class="fg-formula text-red-900">–COOH</span>
-        <span class="fg-badge fg-badge-style-4">the classic organic acid</span>
+        <span class="fg-badge p-red">the classic organic acid</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">Contains both C=O and –OH. The –OH proton can be released → makes it acidic.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Strongly polar. Dissolves in water and can form strong hydrogen bonds — hence high boiling points and distinctive sharp smells.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Acetic acid (vinegar), citric acid (lemons), lactic acid (sore muscles, yogurt), formic acid (ant stings), fatty acids (in fats and oils)</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">Contains both C=O and –OH. The –OH proton can be released → makes it acidic.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Strongly polar. Dissolves in water and can form strong hydrogen bonds — hence high boiling points and distinctive sharp smells.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Acetic acid (vinegar), citric acid (lemons), lactic acid (sore muscles, yogurt), formic acid (ant stings), fatty acids (in fats and oils)</p></div>
       </div>
-      <p class="fg-note">The sharp smell of vinegar is pure acetic acid (ethanoic acid). The soreness you feel after intense exercise comes partly from lactic acid accumulating in muscle. Long-chain carboxylic acids are called fatty acids — the building blocks of fats and oils. When you react a carboxylic acid with an alcohol, you get an ester (see below) — which is how many flavours and fragrances are made.</p>
+      <p class="cnote">The sharp smell of vinegar is pure acetic acid (ethanoic acid). The soreness you feel after intense exercise comes partly from lactic acid accumulating in muscle. Long-chain carboxylic acids are called fatty acids — the building blocks of fats and oils. When you react a carboxylic acid with an alcohol, you get an ester (see below) — which is how many flavours and fragrances are made.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Ester</span>
         <span class="fg-formula text-indigo-900">–COO– (R–CO–O–R')</span>
-        <span class="fg-badge fg-badge-style-5">acid + alcohol → ester + water</span>
+        <span class="fg-badge p-purple">acid + alcohol → ester + water</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">Formed by reacting a carboxylic acid with an alcohol, releasing water. The –OH and –COOH combine.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Moderately polar but less than acids/alcohols. Many are volatile liquids with fruity or floral smells.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Ethyl acetate (nail polish remover, solvent), isoamyl acetate (banana smell), ethyl butyrate (pineapple smell), fats and oils (glycerol + fatty acid esters)</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">Formed by reacting a carboxylic acid with an alcohol, releasing water. The –OH and –COOH combine.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Moderately polar but less than acids/alcohols. Many are volatile liquids with fruity or floral smells.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Ethyl acetate (nail polish remover, solvent), isoamyl acetate (banana smell), ethyl butyrate (pineapple smell), fats and oils (glycerol + fatty acid esters)</p></div>
       </div>
-      <p class="fg-note">Esters are responsible for most fruit and flower smells. "Artificial banana" flavour is almost pure isoamyl acetate — a single ester molecule. All fats and vegetable oils are triglycerides: three fatty acid chains attached to a glycerol backbone via ester bonds. When you digest fat, enzymes break those ester bonds. Polyester fabric is also an ester polymer — long chains of ester-linked monomers.</p>
+      <p class="cnote">Esters are responsible for most fruit and flower smells. "Artificial banana" flavour is almost pure isoamyl acetate — a single ester molecule. All fats and vegetable oils are triglycerides: three fatty acid chains attached to a glycerol backbone via ester bonds. When you digest fat, enzymes break those ester bonds. Polyester fabric is also an ester polymer — long chains of ester-linked monomers.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Amine</span>
         <span class="fg-formula text-green-800">–NH₂ (or –NHR, –NR₂)</span>
-        <span class="fg-badge fg-badge-style-6">nitrogen-containing — basic, often smelly</span>
+        <span class="fg-badge p-green">nitrogen-containing — basic, often smelly</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">Contains nitrogen. The lone pair on N can accept a proton → makes amines basic (opposite of acids).</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Short-chain amines are water-soluble. Most have strong, unpleasant fishy or decaying smells.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Putrescine and cadaverine (smell of decay and rotting meat), trimethylamine (fishy smell), adrenaline, dopamine, serotonin, amino acids</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">Contains nitrogen. The lone pair on N can accept a proton → makes amines basic (opposite of acids).</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Short-chain amines are water-soluble. Most have strong, unpleasant fishy or decaying smells.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Putrescine and cadaverine (smell of decay and rotting meat), trimethylamine (fishy smell), adrenaline, dopamine, serotonin, amino acids</p></div>
       </div>
-      <p class="fg-note">Amines are biochemically critical — all amino acids contain an amine group, and neurotransmitters (dopamine, serotonin, adrenaline) are amines. The fishy smell of old fish is trimethylamine — an amine produced as bacteria break down proteins. Lemon juice on fish works because the citric acid (an acid) reacts with the amine (a base), neutralising it and reducing the smell. This is real chemistry on your plate.</p>
+      <p class="cnote">Amines are biochemically critical — all amino acids contain an amine group, and neurotransmitters (dopamine, serotonin, adrenaline) are amines. The fishy smell of old fish is trimethylamine — an amine produced as bacteria break down proteins. Lemon juice on fish works because the citric acid (an acid) reacts with the amine (a base), neutralising it and reducing the smell. This is real chemistry on your plate.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Ether</span>
         <span class="fg-formula text-green-900">R–O–R'</span>
-        <span class="fg-badge fg-badge-style-2">oxygen bridge between two carbons</span>
+        <span class="fg-badge p-teal">oxygen bridge between two carbons</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">An oxygen atom bonded to two carbon groups. No O–H bond, so can't form hydrogen bonds as a donor.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Moderately polar but far less than alcohols. Mostly insoluble in water. Dissolves many organic compounds.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">Diethyl ether (historical anaesthetic, highly flammable), tetrahydrofuran (THF, common lab solvent), methyl tert-butyl ether (MTBE, fuel additive)</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">An oxygen atom bonded to two carbon groups. No O–H bond, so can't form hydrogen bonds as a donor.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Moderately polar but far less than alcohols. Mostly insoluble in water. Dissolves many organic compounds.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">Diethyl ether (historical anaesthetic, highly flammable), tetrahydrofuran (THF, common lab solvent), methyl tert-butyl ether (MTBE, fuel additive)</p></div>
       </div>
-      <p class="fg-note">Diethyl ether was the first widely used surgical anaesthetic (1846). Its pleasant smell and rapid onset made it transformative for surgery — though highly flammable. THF is one of the most common solvents in organic chemistry labs — it dissolves almost everything. Note: "ether" in everyday speech often refers to diethyl ether specifically, but chemically it names any R–O–R structure.</p>
+      <p class="cnote">Diethyl ether was the first widely used surgical anaesthetic (1846). Its pleasant smell and rapid onset made it transformative for surgery — though highly flammable. THF is one of the most common solvents in organic chemistry labs — it dissolves almost everything. Note: "ether" in everyday speech often refers to diethyl ether specifically, but chemically it names any R–O–R structure.</p>
     </div>
 
-    <div class="fg-card">
+    <div class="content-card">
       <div class="fg-header">
         <span class="fg-name">Amide</span>
         <span class="fg-formula text-orange-900">–CO–NH–</span>
-        <span class="fg-badge fg-badge-style-7">the peptide bond — life's connector</span>
+        <span class="fg-badge p-coral">the peptide bond — life's connector</span>
       </div>
       <div class="fg-grid">
-        <div class="fg-sub"><p class="fg-sl">Key feature</p><p class="fg-sv">A C=O next to a nitrogen. The peptide bonds linking amino acids into proteins are amide bonds.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Strong hydrogen bonding — hence proteins fold into complex 3D shapes via amide H-bonds.</p></div>
-        <div class="fg-sub"><p class="fg-sl">Real examples</p><p class="fg-sv">All proteins (peptide bonds = amide bonds), nylon (polyamide), paracetamol (acetaminophen), asparagine, glutamine</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Key feature</p><p class="fg-sv">A C=O next to a nitrogen. The peptide bonds linking amino acids into proteins are amide bonds.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Polarity</p><p class="fg-sv">Polar. Strong hydrogen bonding — hence proteins fold into complex 3D shapes via amide H-bonds.</p></div>
+        <div class="sub-card-compact"><p class="fg-sl">Real examples</p><p class="fg-sv">All proteins (peptide bonds = amide bonds), nylon (polyamide), paracetamol (acetaminophen), asparagine, glutamine</p></div>
       </div>
-      <p class="fg-note">Every protein in your body — muscle, enzymes, hair, antibodies — is built from amino acids joined by amide (peptide) bonds. Nylon is a synthetic polyamide: long chains of amide-linked monomers that mimic the structural properties of proteins. Paracetamol contains an amide group, which is why it behaves differently from aspirin (which is an ester). The amide bond is exceptionally stable — which is why proteins can persist for thousands of years in fossils.</p>
+      <p class="cnote">Every protein in your body — muscle, enzymes, hair, antibodies — is built from amino acids joined by amide (peptide) bonds. Nylon is a synthetic polyamide: long chains of amide-linked monomers that mimic the structural properties of proteins. Paracetamol contains an amide group, which is why it behaves differently from aspirin (which is an ester). The amide bond is exceptionally stable — which is why proteins can persist for thousands of years in fossils.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════════

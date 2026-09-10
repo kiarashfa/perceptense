@@ -12,12 +12,6 @@
       gap: 10px;
       margin-bottom: 1rem;
     }
-    .teaser-card {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-    }
     .teaser-part {
       font-size: 10px;
       font-weight: 500;
@@ -364,7 +358,6 @@
     }
     .calc-field { display: flex; flex-direction: column; gap: 4px; }
     .calc-field label { font-size: 12px; color: var(--color-text-secondary); }
-    .calc-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 3px; }
     .calc-output {
       background: var(--color-background-secondary);
       border-radius: var(--border-radius-md);

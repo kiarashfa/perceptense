@@ -54,12 +54,6 @@
 
     /* ── Game explorer ── */
     .game-btn-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
-    .game-display {
-      background:var(--color-background-primary);
-      border:0.5px solid var(--color-border-tertiary);
-      border-radius:var(--border-radius-lg);
-      padding:13px 15px; margin-bottom:1rem;
-    }
 
     /* ── Elements of game design grid ── */
     .elem-grid {

@@ -6,10 +6,8 @@
 .fg-formula { font-size: 13px; font-family: monospace; font-weight: 500; }
 .fg-badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
 .fg-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-bottom: 8px; }
-.fg-sub { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
 .fg-sl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
 .fg-sv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
-.fg-note { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
 
 /* Mobile: collapse 3-col grids to 1-col */
 @media (max-width: 520px) {
@@ -34,7 +32,6 @@
 
 /* --- Bond type cards --- */
 .bond-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
-.bond-title { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
 .bond-desc { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
 
 /* --- Reaction explorer --- */
@@ -217,36 +214,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 .fg-badge-style {
   background:#F1EFE8;
   color:#444441;
-}
-
-.fg-badge-style-2 {
-  background:#E1F5EE;
-  color:#085041;
-}
-
-.fg-badge-style-3 {
-  background:#FAEEDA;
-  color:#633806;
-}
-
-.fg-badge-style-4 {
-  background:#FCEBEB;
-  color:#791F1F;
-}
-
-.fg-badge-style-5 {
-  background:#EEEDFE;
-  color:#3C3489;
-}
-
-.fg-badge-style-6 {
-  background:#EAF3DE;
-  color:#27500A;
-}
-
-.fg-badge-style-7 {
-  background:#FAECE7;
-  color:#712B13;
 }
 
 .showmol-control {

@@ -5,10 +5,8 @@
 .sname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
 .sbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
 .ssub { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-bottom: 8px; }
-.sbox { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
 .sl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
 .sv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
-.snote { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
 
 /* ── Sauce tree ── */
 .sauce-tree {
@@ -94,7 +92,6 @@
 .knife-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 1rem; }
 .knife-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
 .knife-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 3px; }
-.knife-use { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
 .knife-tip { font-size: 11px; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 4px 8px; margin-top: 6px; display: inline-block; }
 
 /* ── Flavour wheel ── */
@@ -118,7 +115,6 @@
 .wine-row { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
 .wine-row:last-child { border-bottom: none; }
 .wine-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
-.wine-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
 .wine-sub { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
 
 /* ── Flavour balance interactive ── */
@@ -231,26 +227,6 @@
   color:rgba(255,255,255,0.9);
 }
 
-.meat-badge-style {
-  background:#FAECE7;
-  color:#712B13;
-}
-
-.meat-badge-style-2 {
-  background:#FAEEDA;
-  color:#633806;
-}
-
-.meat-badge-style-3 {
-  background:#EAF3DE;
-  color:#27500A;
-}
-
-.meat-badge-style-4 {
-  background:#E6F1FB;
-  color:#0C447C;
-}
-
 .culinary-panel-2 {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
@@ -274,16 +250,6 @@
   letter-spacing:0.08em;
   color:var(--color-text-tertiary);
   margin-bottom:6px;
-}
-
-.sbadge-style {
-  background:#E1F5EE;
-  color:#085041;
-}
-
-.sbadge-style-2 {
-  background:#FCEBEB;
-  color:#791F1F;
 }
 
 .culinary-grid-2 {

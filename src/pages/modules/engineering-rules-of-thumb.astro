@@ -44,7 +44,7 @@ const mod = modules.find((m) => m.id === 16)!;
 
     <!-- Fast/Cheap/Good triangle SVG -->
     <div class="svg-wrap u-mb-lg">
-      <div class="svg-title">The project management triangle — you can only fully optimise two</div>
+      <div class="panel-title">The project management triangle — you can only fully optimise two</div>
       <svg class="engineering-media" viewBox="0 0 580 260" xmlns="http://www.w3.org/2000/svg">
   	<polygon points="290,50 90,210 490,210" fill="none" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
   
@@ -80,23 +80,23 @@ const mod = modules.find((m) => m.id === 16)!;
          ============================================================ -->
     <h2 class="sec" id="part-b-the-thumb-rules-every-engineer-uses">Part B · the thumb rules every engineer uses</h2>
 
-    <div class="rule-card">
+    <div class="content-card">
       <div class="rh">
         <span class="rname">Safety factor</span>
         <span class="rval text-blue-900">Design load × 2–10</span>
-        <span class="rbadge rbadge-style">the most important rule</span>
+        <span class="rbadge p-blue">the most important rule</span>
       </div>
       <div class="rsub">
-        <div class="rbox"><p class="rl">What it means</p><p class="rv">Build it stronger than the maximum expected load by a multiplier.</p></div>
-        <div class="rbox"><p class="rl">Typical factors</p><p class="rv">Buildings: ×2–3. Bridges: ×4. Aircraft: ×1.5 (weight-critical ultimate). Pressure vessels: ×4. Elevators: ×10.</p></div>
-        <div class="rbox"><p class="rl">Why not just ×1?</p><p class="rv">Materials vary, loads are uncertain, manufacturing isn't perfect, and failures are catastrophic.</p></div>
+        <div class="sub-card-compact"><p class="rl">What it means</p><p class="rv">Build it stronger than the maximum expected load by a multiplier.</p></div>
+        <div class="sub-card-compact"><p class="rl">Typical factors</p><p class="rv">Buildings: ×2–3. Bridges: ×4. Aircraft: ×1.5 (weight-critical ultimate). Pressure vessels: ×4. Elevators: ×10.</p></div>
+        <div class="sub-card-compact"><p class="rl">Why not just ×1?</p><p class="rv">Materials vary, loads are uncertain, manufacturing isn't perfect, and failures are catastrophic.</p></div>
       </div>
-      <p class="rnote">An elevator cable rated for 1,000 kg is actually strong enough to hold 10,000 kg. This is why buildings don't collapse from one extra person, why bridges don't fail when a lorry hits a pothole, and why planes don't break apart in turbulence. The safety factor quietly saves millions of lives daily.</p>
+      <p class="muted-copy-tight">An elevator cable rated for 1,000 kg is actually strong enough to hold 10,000 kg. This is why buildings don't collapse from one extra person, why bridges don't fail when a lorry hits a pothole, and why planes don't break apart in turbulence. The safety factor quietly saves millions of lives daily.</p>
     </div>
 
     <!-- Safety factor visual scale -->
     <div class="svg-wrap u-mb-md">
-      <div class="svg-title">Safety factors across engineering domains</div>
+      <div class="panel-title">Safety factors across engineering domains</div>
       <div class="engineering-spacing">
         <div class="scale-row">
           <div class="scale-label">Aircraft (ultimate)</div>
@@ -126,87 +126,87 @@ const mod = modules.find((m) => m.id === 16)!;
       <div class="engineering-text-2">Higher = more consequence of failure and/or more uncertainty in loads. Aircraft keep the factor low because weight cost is so extreme.</div>
     </div>
 
-    <div class="rule-card">
+    <div class="content-card">
       <div class="rh">
         <span class="rname">The 80/20 rule (Pareto principle)</span>
         <span class="rval text-green-800">80% of problems come from 20% of causes</span>
-        <span class="rbadge rbadge-style-2">prioritisation tool</span>
+        <span class="rbadge p-green">prioritisation tool</span>
       </div>
       <div class="rsub">
-        <div class="rbox"><p class="rl">In practice</p><p class="rv">80% of bugs come from 20% of the code. 80% of heat loss from 20% of the building envelope. 80% of failures from 20% of components.</p></div>
-        <div class="rbox"><p class="rl">Action</p><p class="rv">Find the 20% first. Fixing it gives 4× more return than spreading effort equally.</p></div>
-        <div class="rbox"><p class="rl">Also true:</p><p class="rv">The last 20% of performance improvement costs 80% of the effort. "Good enough" is often the right engineering answer.</p></div>
+        <div class="sub-card-compact"><p class="rl">In practice</p><p class="rv">80% of bugs come from 20% of the code. 80% of heat loss from 20% of the building envelope. 80% of failures from 20% of components.</p></div>
+        <div class="sub-card-compact"><p class="rl">Action</p><p class="rv">Find the 20% first. Fixing it gives 4× more return than spreading effort equally.</p></div>
+        <div class="sub-card-compact"><p class="rl">Also true:</p><p class="rv">The last 20% of performance improvement costs 80% of the effort. "Good enough" is often the right engineering answer.</p></div>
       </div>
-      <p class="rnote">Vilfredo Pareto noticed in 1896 that 80% of land in Italy was owned by 20% of the population — and the ratio kept appearing in unrelated systems. Engineers use it to decide what to fix first, what to optimise, and when to stop. A bridge optimised for the last 5% of strength costs twice as much for 5% gain.</p>
+      <p class="muted-copy-tight">Vilfredo Pareto noticed in 1896 that 80% of land in Italy was owned by 20% of the population — and the ratio kept appearing in unrelated systems. Engineers use it to decide what to fix first, what to optimise, and when to stop. A bridge optimised for the last 5% of strength costs twice as much for 5% gain.</p>
     </div>
 
-    <div class="rule-card">
+    <div class="content-card">
       <div class="rh">
         <span class="rname">Order-of-magnitude estimation (Fermi estimation)</span>
         <span class="rval text-amber-900">±1 order of magnitude is "good enough"</span>
-        <span class="rbadge rbadge-style-3">back-of-envelope</span>
+        <span class="rbadge p-amber">back-of-envelope</span>
       </div>
       <div class="rsub">
-        <div class="rbox"><p class="rl">What it is</p><p class="rv">A quick estimate using round numbers that gets you within 10× of the real answer, done in your head in minutes.</p></div>
-        <div class="rbox"><p class="rl">Classic example</p><p class="rv">"How many piano tuners in Chicago?" Fermi: population ÷ pianos per family × tuning frequency ÷ hours per tuner ≈ 125. Actual: ~150.</p></div>
-        <div class="rbox"><p class="rl">Engineering use</p><p class="rv">Before spending a week calculating: "Is this even in the right ballpark?" If your estimate says it needs 10× more power than available, don't detail-design it.</p></div>
+        <div class="sub-card-compact"><p class="rl">What it is</p><p class="rv">A quick estimate using round numbers that gets you within 10× of the real answer, done in your head in minutes.</p></div>
+        <div class="sub-card-compact"><p class="rl">Classic example</p><p class="rv">"How many piano tuners in Chicago?" Fermi: population ÷ pianos per family × tuning frequency ÷ hours per tuner ≈ 125. Actual: ~150.</p></div>
+        <div class="sub-card-compact"><p class="rl">Engineering use</p><p class="rv">Before spending a week calculating: "Is this even in the right ballpark?" If your estimate says it needs 10× more power than available, don't detail-design it.</p></div>
       </div>
-      <p class="rnote">Enrico Fermi famously estimated the yield of the first nuclear bomb test by dropping scraps of paper and watching how far they moved in the blast wave — getting within a factor of 2 of the measured result. Engineers use this constantly: the first answer should come in minutes, not days. Only if it looks promising do you do the full calculation.</p>
+      <p class="muted-copy-tight">Enrico Fermi famously estimated the yield of the first nuclear bomb test by dropping scraps of paper and watching how far they moved in the blast wave — getting within a factor of 2 of the measured result. Engineers use this constantly: the first answer should come in minutes, not days. Only if it looks promising do you do the full calculation.</p>
     </div>
 
-    <div class="rule-card">
+    <div class="content-card">
       <div class="rh">
         <span class="rname">Tolerance and fit</span>
         <span class="rval text-orange-900">nominal ± tolerance</span>
-        <span class="rbadge rbadge-style-4">manufacturing reality</span>
+        <span class="rbadge p-coral">manufacturing reality</span>
       </div>
       <div class="rsub">
-        <div class="rbox"><p class="rl">What it means</p><p class="rv">Nothing is made perfectly. A "10 mm" rod is actually 9.95–10.05 mm. The ±0.05 mm is the tolerance.</p></div>
-        <div class="rbox"><p class="rl">Clearance vs interference fit</p><p class="rv">Clearance: shaft is smaller than hole (moves freely — bearings). Interference: shaft is larger (press-fit — never comes apart). Transition: could be either.</p></div>
-        <div class="rbox"><p class="rl">Why it matters</p><p class="rv">A jet engine has thousands of parts with tolerances of ±0.005 mm. Stack tolerances wrong and parts don't fit, jam, or vibrate to destruction.</p></div>
+        <div class="sub-card-compact"><p class="rl">What it means</p><p class="rv">Nothing is made perfectly. A "10 mm" rod is actually 9.95–10.05 mm. The ±0.05 mm is the tolerance.</p></div>
+        <div class="sub-card-compact"><p class="rl">Clearance vs interference fit</p><p class="rv">Clearance: shaft is smaller than hole (moves freely — bearings). Interference: shaft is larger (press-fit — never comes apart). Transition: could be either.</p></div>
+        <div class="sub-card-compact"><p class="rl">Why it matters</p><p class="rv">A jet engine has thousands of parts with tolerances of ±0.005 mm. Stack tolerances wrong and parts don't fit, jam, or vibrate to destruction.</p></div>
       </div>
-      <p class="rnote">Tight tolerances cost money — exponentially. A part machined to ±1 mm costs €5. The same part to ±0.1 mm costs €50. To ±0.01 mm costs €500. The engineering discipline is: use the loosest tolerance that still works. Over-specifying tolerances is one of the most common and expensive rookie engineering mistakes.</p>
+      <p class="muted-copy-tight">Tight tolerances cost money — exponentially. A part machined to ±1 mm costs €5. The same part to ±0.1 mm costs €50. To ±0.01 mm costs €500. The engineering discipline is: use the loosest tolerance that still works. Over-specifying tolerances is one of the most common and expensive rookie engineering mistakes.</p>
     </div>
 
     <!-- Tolerance cost chart -->
     <div class="svg-wrap u-mb-md">
-      <div class="svg-title">Tolerance vs cost — exponential relationship</div>
+      <div class="panel-title">Tolerance vs cost — exponential relationship</div>
       <div class="engineering-spacing">
-        <div class="tol-row"><div class="tol-label">±1 mm</div><div class="tol-bar tol-bar-style"><span class="tol-val text-green-800">€5</span></div><div class="engineering-text-3">Manual lathe, rough cut</div></div>
-        <div class="tol-row"><div class="tol-label">±0.1 mm</div><div class="tol-bar tol-bar-style-2"><span class="tol-val text-blue-900">€50</span></div><div class="engineering-text-3">CNC mill, standard</div></div>
-        <div class="tol-row"><div class="tol-label">±0.01 mm</div><div class="tol-bar tol-bar-style-3"><span class="tol-val text-amber-900">€500</span></div><div class="engineering-text-3">Precision grinding, temp control</div></div>
-        <div class="tol-row"><div class="tol-label">±0.001 mm</div><div class="tol-bar tol-bar-style-4"><span class="tol-val text-orange-900">€5,000+</span></div><div class="engineering-text-3">Lapping, clean room, optical check</div></div>
-        <div class="tol-row"><div class="tol-label">±0.0001 mm</div><div class="tol-bar scale-bar-inner-style-6"><span class="tol-val text-red-900">€50,000+</span></div><div class="engineering-text-3">Semiconductor fab, interferometry</div></div>
+        <div class="tol-row"><div class="tol-label">±1 mm</div><div class="tol-bar tol-bar-style"><span class="bv text-green-800">€5</span></div><div class="engineering-text-3">Manual lathe, rough cut</div></div>
+        <div class="tol-row"><div class="tol-label">±0.1 mm</div><div class="tol-bar tol-bar-style-2"><span class="bv text-blue-900">€50</span></div><div class="engineering-text-3">CNC mill, standard</div></div>
+        <div class="tol-row"><div class="tol-label">±0.01 mm</div><div class="tol-bar tol-bar-style-3"><span class="bv text-amber-900">€500</span></div><div class="engineering-text-3">Precision grinding, temp control</div></div>
+        <div class="tol-row"><div class="tol-label">±0.001 mm</div><div class="tol-bar tol-bar-style-4"><span class="bv text-orange-900">€5,000+</span></div><div class="engineering-text-3">Lapping, clean room, optical check</div></div>
+        <div class="tol-row"><div class="tol-label">±0.0001 mm</div><div class="tol-bar scale-bar-inner-style-6"><span class="bv text-red-900">€50,000+</span></div><div class="engineering-text-3">Semiconductor fab, interferometry</div></div>
       </div>
       <div class="engineering-text-2">Each 10× tighter tolerance ≈ 10× higher cost. The question is always: does the function actually require this precision?</div>
     </div>
 
-    <div class="rule-card">
+    <div class="content-card">
       <div class="rh">
         <span class="rname">The 10× cost rule of error correction</span>
         <span class="rval text-indigo-900">fix it early, or pay 10× later</span>
-        <span class="rbadge rbadge-style-5">project management</span>
+        <span class="rbadge p-purple">project management</span>
       </div>
       <div class="rsub">
-        <div class="rbox"><p class="rl">The rule</p><p class="rv">A design error caught at the drawing stage costs €1 to fix. At prototype: €10. In production: €100. After delivery: €1,000+.</p></div>
-        <div class="rbox"><p class="rl">Why</p><p class="rv">As a project progresses, more decisions have been built on top of the error. Fixing the foundation means rebuilding the house.</p></div>
-        <div class="rbox"><p class="rl">Applies to software too</p><p class="rv">A bug found in code review: 1 hour to fix. Found in testing: 1 day. Found in production: 1 week + reputation cost.</p></div>
+        <div class="sub-card-compact"><p class="rl">The rule</p><p class="rv">A design error caught at the drawing stage costs €1 to fix. At prototype: €10. In production: €100. After delivery: €1,000+.</p></div>
+        <div class="sub-card-compact"><p class="rl">Why</p><p class="rv">As a project progresses, more decisions have been built on top of the error. Fixing the foundation means rebuilding the house.</p></div>
+        <div class="sub-card-compact"><p class="rl">Applies to software too</p><p class="rv">A bug found in code review: 1 hour to fix. Found in testing: 1 day. Found in production: 1 week + reputation cost.</p></div>
       </div>
-      <p class="rnote">This is why engineering reviews, design audits, prototypes, and testing exist. The money spent catching errors early is always cheaper than correcting them later. The Boeing 737 MAX disasters were partly attributed to software changes late in the design process that weren't subjected to the same scrutiny as the original design.</p>
+      <p class="muted-copy-tight">This is why engineering reviews, design audits, prototypes, and testing exist. The money spent catching errors early is always cheaper than correcting them later. The Boeing 737 MAX disasters were partly attributed to software changes late in the design process that weren't subjected to the same scrutiny as the original design.</p>
     </div>
 
-    <div class="rule-card">
+    <div class="content-card">
       <div class="rh">
         <span class="rname">Redundancy</span>
         <span class="rval text-green-900">N+1 for reliability, N+2 for safety-critical</span>
-        <span class="rbadge rbadge-style-6">failure tolerance</span>
+        <span class="rbadge p-teal">failure tolerance</span>
       </div>
       <div class="rsub">
-        <div class="rbox"><p class="rl">What it means</p><p class="rv">Have one more than you need. If you need 1 pump, install 2. If you need 2 engines, use 4.</p></div>
-        <div class="rbox"><p class="rl">Examples</p><p class="rv">Commercial aircraft: 2+ engines, 3+ hydraulic systems, 4+ flight computers. Nuclear plants: multiple coolant loops. Data centres: dual power, UPS, generators.</p></div>
-        <div class="rbox"><p class="rl">The maths</p><p class="rv">If each component fails with probability p, two independent components both fail with probability p². If p=0.01, two units: 0.0001 (100× safer).</p></div>
+        <div class="sub-card-compact"><p class="rl">What it means</p><p class="rv">Have one more than you need. If you need 1 pump, install 2. If you need 2 engines, use 4.</p></div>
+        <div class="sub-card-compact"><p class="rl">Examples</p><p class="rv">Commercial aircraft: 2+ engines, 3+ hydraulic systems, 4+ flight computers. Nuclear plants: multiple coolant loops. Data centres: dual power, UPS, generators.</p></div>
+        <div class="sub-card-compact"><p class="rl">The maths</p><p class="rv">If each component fails with probability p, two independent components both fail with probability p². If p=0.01, two units: 0.0001 (100× safer).</p></div>
       </div>
-      <p class="rnote">A single-engine aircraft failing means a forced landing. A twin-engine commercial plane losing one engine continues to destination safely. This is why critical infrastructure is never designed to exactly minimum requirements — always with capacity to survive failures. RAID storage, dual power supplies, backup generators, emergency brakes — all redundancy.</p>
+      <p class="muted-copy-tight">A single-engine aircraft failing means a forced landing. A twin-engine commercial plane losing one engine continues to destination safely. This is why critical infrastructure is never designed to exactly minimum requirements — always with capacity to survive failures. RAID storage, dual power supplies, backup generators, emergency brakes — all redundancy.</p>
     </div>
 
     <!-- ============================================================
@@ -286,7 +286,7 @@ const mod = modules.find((m) => m.id === 16)!;
 
     <!-- Precision vs Accuracy SVG -->
     <div class="svg-wrap u-mb-lg">
-      <div class="svg-title">Precision vs accuracy — four scenarios</div>
+      <div class="panel-title">Precision vs accuracy — four scenarios</div>
       <svg class="engineering-media" viewBox="0 0 580 160" xmlns="http://www.w3.org/2000/svg">
         <!-- Target 1: Low accuracy, low precision -->
         <circle cx="80"  cy="80" r="48" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
@@ -462,7 +462,7 @@ const mod = modules.find((m) => m.id === 16)!;
 
     <!-- Failure causes pie chart SVG -->
     <div class="svg-wrap u-mb-lg">
-      <div class="svg-title">Engineering failure root causes — historical analysis across industries</div>
+      <div class="panel-title">Engineering failure root causes — historical analysis across industries</div>
       <svg class="engineering-media" viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg">
         <!-- Pie chart (manually calculated segments at cx=100,cy=90,r=75) -->
         <!-- Data: Human/org error 35%, Design flaw 25%, Material failure 15%, Maintenance 13%, External/overload 12% -->

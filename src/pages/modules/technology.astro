@@ -37,7 +37,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- Technology waves explorer -->
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Each wave — what it actually changed</div>
-      <div class="explorer-btn-row" id="waveButtons">
+      <div class="button-row-compact" id="waveButtons">
         <button onclick="showWave('tools',this)">Tools</button>
         <button onclick="showWave('agriculture',this)">Agriculture</button>
         <button onclick="showWave('industry',this)">Industry</button>
@@ -68,7 +68,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Moore's Law — transistors, limits, and what comes next</div>
       <div class="muted-copy" style="margin-bottom:12px;">In 1965, Gordon Moore noticed that the number of transistors on a chip was doubling roughly every two years, and predicted this would continue. It held for 50 years. A 1971 Intel 4004 had 2,300 transistors; a 2023 Apple M2 Ultra has 134 billion — a 58-million-fold increase. But physics is catching up: transistors are now measured in nanometres, with TSMC's 3nm process meaning gate lengths are just a handful of silicon atoms wide. The law is slowing, but chipmakers have responded with 3D stacking, chiplets, and specialised silicon (GPUs, TPUs).</div>
-      <div class="slider-wrap" style="margin-bottom:0;">
+      <div class="content-panel" style="margin-bottom:0;">
         <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Drag to explore: transistor count doublings since 1971</label>
         <input type="range" id="moore-slider" min="0" max="25" value="10" oninput="updateMoore(this.value)">
         <div class="slider-end-labels"><span>1971 (4004)</span><span>2025 (M-series)</span></div>
@@ -125,7 +125,7 @@ const mod = modules.find((m) => m.id === 37)!;
         </svg>
       </div>
       <!-- Latency perspective slider -->
-      <div class="slider-wrap" style="margin-bottom:0;">
+      <div class="content-panel" style="margin-bottom:0;">
         <div class="slider-top">
           <label style="font-size:12px; color:var(--color-text-secondary);">Latency perspective — drag to feel how fast or slow different delays are to a CPU</label>
           <div class="slider-output"><span id="latencyValue">100</span> ns</div>
@@ -140,7 +140,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">The semiconductor industry — chips, geopolitics, and nm nodes</div>
       <div class="muted-copy" style="margin-bottom:12px;">Making a modern chip requires depositing dozens of atomic-thin layers onto a silicon wafer using extreme ultraviolet (EUV) light — a technology that only one company in the world, ASML of the Netherlands, can build. TSMC in Taiwan manufactures chips for Apple, NVIDIA, AMD, and most of the world's electronics industry. This concentration makes chip supply chains extraordinarily fragile and geopolitically sensitive.</div>
-      <div class="explorer-btn-row" id="semi-btns"></div>
+      <div class="button-row-compact" id="semi-btns"></div>
       <div class="explorer-panel" id="semi-panel"><div class="ep-body" style="color:var(--color-text-tertiary);">Select a topic above.</div></div>
     </div>
 
@@ -240,7 +240,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Cybersecurity fundamentals — how attacks and defences work</div>
       <div class="muted-copy" style="margin-bottom:12px;">Most security failures are not dramatic technical exploits — they're human failures. The 2020 SolarWinds attack, which compromised US government systems for months, began by compromising a software update. The 2016 Bangladesh Bank heist ($81 million stolen) used phishing emails. Encryption is foundational: HTTPS wraps every web transaction in TLS, using public-key cryptography so two parties who've never met can establish a shared secret in milliseconds.</div>
-      <div class="explorer-btn-row" id="sec-btns"></div>
+      <div class="button-row-compact" id="sec-btns"></div>
       <div class="explorer-panel" id="sec-panel"><div class="ep-body" style="color:var(--color-text-tertiary);">Select an attack or defence type above.</div></div>
     </div>
 
@@ -285,7 +285,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Privacy, surveillance, and what your data actually reveals</div>
       <div class="muted-copy" style="margin-bottom:12px;">Surveillance capitalism (Shoshana Zuboff's term) is the business model of extracting behavioural data, predicting future behaviour, and selling those predictions to advertisers. Metadata — who you call, when, for how long, from where — can reveal more than message content: a 2014 Stanford study showed that phone metadata alone could identify medical conditions, legal issues, and religious affiliations with high accuracy. Anonymisation is far weaker than assumed: a 2019 Nature study showed 99.98% of Americans could be re-identified from just 15 demographic attributes in "anonymous" datasets.</div>
-      <div class="calc-wrap" style="margin-bottom:10px;">
+      <div class="content-panel" style="margin-bottom:10px;">
         <div style="font-size:12px; color:var(--color-text-secondary); margin-bottom:8px; font-weight:500;">Metadata exposure calculator</div>
         <div class="calc-row">
           <div class="calc-field">
@@ -324,7 +324,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Machine learning — how computers learn from data</div>
       <div class="muted-copy" style="margin-bottom:12px;">Traditional programming is explicit: a programmer writes rules. Machine learning inverts this: the system is given labelled examples and learns the rules itself. In supervised learning, a model is trained on input-output pairs. In unsupervised learning, the model finds structure without labels. Reinforcement learning trains an agent to maximise reward through trial and error — the method behind AlphaGo. The quality and size of training data matters enormously: a model trained on biased data will produce biased outputs.</div>
-      <div class="slider-wrap" style="margin-bottom:0;">
+      <div class="content-panel" style="margin-bottom:0;">
         <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Training data scale — explore how data size affects model capability</label>
         <input type="range" id="ml-slider" min="1" max="10" value="4" oninput="updateMLSlider(this.value)">
         <div class="slider-end-labels"><span>1,000 examples</span><span>1 trillion tokens</span></div>
@@ -412,7 +412,7 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="panel-title">Large language models — how ChatGPT and Claude actually work</div>
       <div class="muted-copy" style="margin-bottom:12px;">Large language models are neural networks trained on vast text corpora to predict the next token (roughly a word-fragment) in a sequence. The transformer architecture (introduced in the 2017 paper "Attention Is All You Need") uses a mechanism called "attention" to weigh the relevance of every other token in a sequence when predicting the next one. Pre-training on internet-scale text teaches grammar, facts, reasoning patterns, and coding; fine-tuning and RLHF (reinforcement learning from human feedback) then shapes the model's behaviour. The key misconception: LLMs don't "know" things the way humans do — they're extremely powerful interpolation engines over statistical patterns in text.</div>
       <!-- Token context window slider -->
-      <div class="slider-wrap" style="margin-bottom:10px;">
+      <div class="content-panel" style="margin-bottom:10px;">
         <div class="slider-top">
           <div style="font-size:12px; color:var(--color-text-secondary);">Transformer context window — how much text can the model see at once?</div>
           <div class="slider-output"><span id="tokenValue">8,000</span> tokens</div>
@@ -467,7 +467,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Quantum computing — superposition, entanglement, and the hype-reality gap</div>
       <div class="muted-copy" style="margin-bottom:12px;">A classical bit is either 0 or 1. A qubit can exist in a superposition of both simultaneously until measured. Quantum algorithms (Shor's for factoring, Grover's for search) exploit quantum interference to amplify correct answers. Shor's algorithm could break RSA encryption in polynomial time. The practical reality: today's best machines have ~100-1,000 physical qubits but require extensive error-correction because qubits are extremely fragile. A cryptographically relevant quantum computer likely needs millions of logical qubits. Quantum computers will not make spreadsheets or websites faster — the real near-term value is chemistry, materials science, and optimisation research.</div>
-      <div class="slider-wrap" style="margin-bottom:0;">
+      <div class="content-panel" style="margin-bottom:0;">
         <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Qubit count scale — explore progress from today toward cryptographic relevance</label>
         <input type="range" id="qubit-slider" min="1" max="8" value="3" oninput="updateQubit(this.value)">
         <div class="slider-end-labels"><span>50 qubits (2019)</span><span>4,000,000 qubits (needed)</span></div>

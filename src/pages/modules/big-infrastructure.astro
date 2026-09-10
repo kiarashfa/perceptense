@@ -38,32 +38,32 @@ const mod = modules.find((m) => m.id === 6)!;
     <div class="card u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Golden Gate Bridge — what goes into the cost</div>
       <div class="u-display-grid u-gridcols-auto-fit-200px-1fr u-gap-15px">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <div class="vslabel">Span length</div>
           <div class="vsval">1,280 m</div>
           <div class="vsnote">Main span. Total bridge: 2.7 km.</div>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <div class="vslabel">Tower height</div>
           <div class="vsval">227 m</div>
           <div class="vsnote">Above water. About ⅔ the height of the Eiffel Tower (330 m).</div>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <div class="vslabel">Main cable diameter</div>
           <div class="vsval">92 cm</div>
           <div class="vsnote">Each cable has 27,572 individual wires inside.</div>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <div class="vslabel">Steel used</div>
           <div class="vsval">~75,000 t</div>
           <div class="vsnote">~83,000 US tons. About 53,000 cars' worth of steel.</div>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <div class="vslabel">Original cost (1937)</div>
           <div class="vsval">$35 million</div>
           <div class="vsnote">~$1.5B in today's money.</div>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <div class="vslabel">Built in</div>
           <div class="vsval">4 years</div>
           <div class="vsnote">1933–1937. 11 workers died. Up to 4,000 at peak; ~1,400 daily average.</div>
@@ -78,7 +78,7 @@ const mod = modules.find((m) => m.id === 6)!;
     <div class="card u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Bridge types — how they work and what they cost</div>
       <div class="u-fs-11px text-secondary u-mb-md">The bridge type chosen is largely determined by the span required. Each type has a natural range.</div>
-      <div class="bridge-tab-row">
+      <div class="button-row-compact">
         <button class="bridge-tab active" onclick="switchBridge('beam')">Beam</button>
         <button class="bridge-tab" onclick="switchBridge('arch')">Arch</button>
         <button class="bridge-tab" onclick="switchBridge('cable')">Cable-stayed</button>
@@ -113,9 +113,9 @@ const mod = modules.find((m) => m.id === 6)!;
           </svg>
         </div>
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Typical span</p><p class="vsval">30–150 m</p><p class="vsnote">Short to medium crossings.</p></div>
-          <div class="vsub"><p class="vslabel">Cost (per span)</p><p class="vsval">$5–50M</p><p class="vsnote">Simplest and cheapest type.</p></div>
-          <div class="vsub"><p class="vslabel">How it works</p><p class="vsval">Horizontal beams</p><p class="vsnote">Load transfers vertically through piers to ground.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Typical span</p><p class="vsval">30–150 m</p><p class="vsnote">Short to medium crossings.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Cost (per span)</p><p class="vsval">$5–50M</p><p class="vsnote">Simplest and cheapest type.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">How it works</p><p class="vsval">Horizontal beams</p><p class="vsnote">Load transfers vertically through piers to ground.</p></div>
         </div>
         <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">The workhorse of bridge engineering. Most highway overpasses and railway viaducts are beam bridges. The load goes straight down through piers — simple and economical. The limiting factor is that longer spans require deeper beams, which become impractical beyond ~150 m.</p>
       </div>
@@ -147,9 +147,9 @@ const mod = modules.find((m) => m.id === 6)!;
           </svg>
         </div>
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Typical span</p><p class="vsval">100–550 m</p><p class="vsnote">Sydney Harbour: 503 m.</p></div>
-          <div class="vsub"><p class="vslabel">Cost</p><p class="vsval">$200M–2B</p><p class="vsnote">More complex than beam, less than suspension.</p></div>
-          <div class="vsub"><p class="vslabel">How it works</p><p class="vsval">Arch in compression</p><p class="vsnote">The arch pushes outward; abutments resist that thrust.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Typical span</p><p class="vsval">100–550 m</p><p class="vsnote">Sydney Harbour: 503 m.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Cost</p><p class="vsval">$200M–2B</p><p class="vsnote">More complex than beam, less than suspension.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">How it works</p><p class="vsval">Arch in compression</p><p class="vsnote">The arch pushes outward; abutments resist that thrust.</p></div>
         </div>
         <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">Arches work entirely in compression — a force that stone and concrete handle beautifully. The key challenge is the horizontal thrust that pushes outward at both ends; the abutments must anchor into very solid ground. This is why arch bridges are only feasible when the geology is cooperative. The Sydney Harbour Bridge (1932) at 503 m was the world's widest long-span bridge for decades.</p>
       </div>
@@ -185,9 +185,9 @@ const mod = modules.find((m) => m.id === 6)!;
           </svg>
         </div>
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Typical span</p><p class="vsval">200–1,100 m</p><p class="vsnote">Russky Bridge (Vladivostok): 1,104 m.</p></div>
-          <div class="vsub"><p class="vslabel">Cost</p><p class="vsval">$500M–3B</p><p class="vsnote">Modern favourite for 400–800 m spans.</p></div>
-          <div class="vsub"><p class="vslabel">How it works</p><p class="vsval">Cables direct to tower</p><p class="vsnote">Cables run straight from tower to deck — no main cable.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Typical span</p><p class="vsval">200–1,100 m</p><p class="vsnote">Russky Bridge (Vladivostok): 1,104 m.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Cost</p><p class="vsval">$500M–3B</p><p class="vsnote">Modern favourite for 400–800 m spans.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">How it works</p><p class="vsval">Cables direct to tower</p><p class="vsnote">Cables run straight from tower to deck — no main cable.</p></div>
         </div>
         <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">Cable-stayed bridges have largely replaced suspension bridges for spans up to about 1,000 m. The cables run directly from the pylons to the deck, making the system stiffer and easier to build (no complex spinning of main cables). They're faster to construct, use less steel, and are aerodynamically more predictable. The Millau Viaduct in France (the world's tallest bridge at 343 m) is a cable-stayed design.</p>
       </div>
@@ -236,9 +236,9 @@ const mod = modules.find((m) => m.id === 6)!;
           </svg>
         </div>
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Typical span</p><p class="vsval">500–2,000+ m</p><p class="vsnote">Akashi Kaikyō (Japan): 1,991 m — world record.</p></div>
-          <div class="vsub"><p class="vslabel">Cost</p><p class="vsval">$1–5B+</p><p class="vsnote">Most expensive per metre for very long spans.</p></div>
-          <div class="vsub"><p class="vslabel">How it works</p><p class="vsval">Main cable + hangers</p><p class="vsnote">Deck hangs from vertical hangers off the catenary main cable.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Typical span</p><p class="vsval">500–2,000+ m</p><p class="vsnote">Akashi Kaikyō (Japan): 1,991 m — world record.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Cost</p><p class="vsval">$1–5B+</p><p class="vsnote">Most expensive per metre for very long spans.</p></div>
+          <div class="sub-card-compact"><p class="vslabel">How it works</p><p class="vsval">Main cable + hangers</p><p class="vsnote">Deck hangs from vertical hangers off the catenary main cable.</p></div>
         </div>
         <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">Suspension bridges are the only viable option beyond ~1,000 m. The main cables form a catenary curve between towers and are anchored into massive concrete blocks onshore. The deck hangs from vertical hangers. The trade-off: flexibility. The Tacoma Narrows Bridge famously collapsed in 1940 because of aerodynamic resonance — modern suspension bridges have streamlined aerodynamic decks to prevent this. The Akashi Kaikyō (Japan, 1998) holds the world record at 1,991 m and had to be stretched 1 m during the 1995 Kobe earthquake — the main spans shifted while under construction.</p>
       </div>
@@ -251,19 +251,19 @@ const mod = modules.find((m) => m.id === 6)!;
 
       <div class="span-scale-item">
         <span class="span-scale-name">Akashi Kaikyō<br><em class="u-font-style-normal u-fs-10px text-tertiary">Suspension · Japan</em></span>
-        <div class="span-scale-bar u-w-100-pct u-bg-hex-0f6e56"><span class="span-scale-val u-text-hex-fff">1,991 m</span></div>
+        <div class="span-scale-bar u-w-100-pct u-bg-hex-0f6e56"><span class="bv u-text-hex-fff">1,991 m</span></div>
       </div>
       <div class="span-scale-item">
         <span class="span-scale-name">Russky Bridge<br><em class="u-font-style-normal u-fs-10px text-tertiary">Cable-stayed · Russia</em></span>
-        <div class="span-scale-bar u-w-55-pct u-bg-hex-1d9e75"><span class="span-scale-val u-text-hex-fff">1,104 m</span></div>
+        <div class="span-scale-bar u-w-55-pct u-bg-hex-1d9e75"><span class="bv u-text-hex-fff">1,104 m</span></div>
       </div>
       <div class="span-scale-item">
         <span class="span-scale-name">New River Gorge<br><em class="u-font-style-normal u-fs-10px text-tertiary">Arch · USA</em></span>
-        <div class="span-scale-bar u-w-26-pct u-bg-hex-5dcaa5"><span class="span-scale-val u-text-hex-04342c">518 m</span></div>
+        <div class="span-scale-bar u-w-26-pct u-bg-hex-5dcaa5"><span class="bv u-text-hex-04342c">518 m</span></div>
       </div>
       <div class="span-scale-item">
         <span class="span-scale-name">Shibanpo Bridge<br><em class="u-font-style-normal u-fs-10px text-tertiary">Beam · China</em></span>
-        <div class="span-scale-bar u-w-15-pct u-bg-hex-9fe1cb"><span class="span-scale-val u-text-hex-04342c">330 m</span></div>
+        <div class="span-scale-bar u-w-15-pct u-bg-hex-9fe1cb"><span class="bv u-text-hex-04342c">330 m</span></div>
       </div>
       <p class="u-fs-11px text-secondary u-m-8px-0-0 u-lh-1-5">Bridge type determines maximum span. No beam bridge could cross the Strait of Messina (3 km) — only a suspension bridge could. That's why bridge type isn't an aesthetic choice; it's an engineering necessity dictated by the gap to be crossed.</p>
     </div>
@@ -274,23 +274,23 @@ const mod = modules.find((m) => m.id === 6)!;
     ════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-b-how-much-can-each-vehicle-carry">Part B · how much can each vehicle carry?</h2>
 
-    <div class="vehicle-card">
+    <div class="content-card">
       <div class="vh">
         <span class="vname">Car (standard 4-door)</span>
         <span class="vtag u-bg-hex-e6f1fb u-text-hex-0c447c">lightest</span>
       </div>
       <div class="vrow">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Passenger capacity</p>
           <p class="vsval">4–5 people</p>
           <p class="vsnote">~300–400 kg of people</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Cargo/boot load</p>
           <p class="vsval">~400–500 kg</p>
           <p class="vsnote">Legal payload. Don't confuse with boot volume (litres).</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Total vehicle weight</p>
           <p class="vsval">~1,400 kg</p>
           <p class="vsnote">The car itself, empty. Payload adds on top.</p>
@@ -298,23 +298,23 @@ const mod = modules.find((m) => m.id === 6)!;
       </div>
     </div>
 
-    <div class="vehicle-card">
+    <div class="content-card">
       <div class="vh">
         <span class="vname">Van / light commercial</span>
         <span class="vtag u-bg-hex-eaf3de u-text-hex-27500a">everyday freight</span>
       </div>
       <div class="vrow">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Payload (small van)</p>
           <p class="vsval">~800 kg</p>
           <p class="vsnote">Transit-size van. Good for pallets, furniture.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Payload (large van)</p>
           <p class="vsval">~1,200 kg</p>
           <p class="vsnote">Luton / Sprinter. Used by most delivery companies.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Load volume</p>
           <p class="vsval">8–14 m³</p>
           <p class="vsnote">Roughly fits a small apartment's contents.</p>
@@ -322,23 +322,23 @@ const mod = modules.find((m) => m.id === 6)!;
       </div>
     </div>
 
-    <div class="vehicle-card">
+    <div class="content-card">
       <div class="vh">
         <span class="vname">Truck / articulated lorry (HGV)</span>
         <span class="vtag u-bg-hex-faeeda u-text-hex-633806">road freight workhorse</span>
       </div>
       <div class="vrow">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Maximum legal payload</p>
           <p class="vsval">~24–26 tonnes</p>
           <p class="vsnote">EU road limit. About 17–18 family cars' worth of weight.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Gross vehicle weight</p>
           <p class="vsval">~44 tonnes total</p>
           <p class="vsnote">Truck (18t) + trailer (26t payload).</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Load volume</p>
           <p class="vsval">~82–100 m³</p>
           <p class="vsnote">Standard 13.6m trailer. Fits ~26 standard pallets.</p>
@@ -346,23 +346,23 @@ const mod = modules.find((m) => m.id === 6)!;
       </div>
     </div>
 
-    <div class="vehicle-card">
+    <div class="content-card">
       <div class="vh">
         <span class="vname">Cargo aircraft (Boeing 747-400F)</span>
         <span class="vtag u-bg-hex-eeedfe u-text-hex-3c3489">fast but expensive</span>
       </div>
       <div class="vrow">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Payload capacity</p>
           <p class="vsval">~103 tonnes</p>
           <p class="vsnote">About 4 fully loaded HGV trucks — in one aircraft.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Range (loaded)</p>
           <p class="vsval">~8,000 km</p>
           <p class="vsnote">Europe to Asia nonstop, roughly.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Cost per tonne-km</p>
           <p class="vsval">~$4–8</p>
           <p class="vsnote">~50–100× more expensive than sea freight per tonne.</p>
@@ -370,23 +370,23 @@ const mod = modules.find((m) => m.id === 6)!;
       </div>
     </div>
 
-    <div class="vehicle-card">
+    <div class="content-card">
       <div class="vh">
         <span class="vname">Container ship (large — Ever Ace class)</span>
         <span class="vtag u-bg-hex-faece7 u-text-hex-712b13">the real workhorse of global trade</span>
       </div>
       <div class="vrow">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Container capacity</p>
           <p class="vsval">~24,000 TEU</p>
           <p class="vsnote">TEU = 1 standard 20-foot container. That's 24,000 of them.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Maximum cargo weight</p>
           <p class="vsval">~165,000–185,000 t</p>
           <p class="vsnote">About 7,700 loaded HGV trucks — on one ship.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Ship's own weight (empty)</p>
           <p class="vsval">~55,000 tonnes</p>
           <p class="vsnote">The ship weighs ~55,000 t before loading a single container.</p>
@@ -402,12 +402,12 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What fits in one standard 20-foot container (1 TEU)?</div>
       <div class="u-fs-11px text-secondary u-mb-md">Internal dimensions: 5.9 m × 2.35 m × 2.39 m ≈ 33 m³. Max payload: ~21 tonnes.</div>
       <div class="u-display-grid u-gridcols-auto-fit-200px-1fr u-gap-14px">
-        <div class="vsub"><p class="vslabel">Cars</p><p class="vsval">~4–5</p><p class="vsnote">Volume-limited, not weight.</p></div>
-        <div class="vsub"><p class="vslabel">Flat-screen TVs (55″)</p><p class="vsval">~600–700</p><p class="vsnote">Weight far below the limit.</p></div>
-        <div class="vsub"><p class="vslabel">Trainers (shoes)</p><p class="vsval">~20,000 pairs</p><p class="vsnote">Typical export load from SE Asia.</p></div>
-        <div class="vsub"><p class="vslabel">Bananas</p><p class="vsval">~21 tonnes</p><p class="vsnote">Weight-limited. Banana ships use refrigerated reefers.</p></div>
-        <div class="vsub"><p class="vslabel">Books</p><p class="vsval">~12 tonnes</p><p class="vsnote">~10,000 average paperbacks per tonne.</p></div>
-        <div class="vsub"><p class="vslabel">Cotton T-shirts</p><p class="vsval">~40,000</p><p class="vsnote">Volume-limited; very light per unit.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Cars</p><p class="vsval">~4–5</p><p class="vsnote">Volume-limited, not weight.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Flat-screen TVs (55″)</p><p class="vsval">~600–700</p><p class="vsnote">Weight far below the limit.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Trainers (shoes)</p><p class="vsval">~20,000 pairs</p><p class="vsnote">Typical export load from SE Asia.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Bananas</p><p class="vsval">~21 tonnes</p><p class="vsnote">Weight-limited. Banana ships use refrigerated reefers.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Books</p><p class="vsval">~12 tonnes</p><p class="vsnote">~10,000 average paperbacks per tonne.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Cotton T-shirts</p><p class="vsval">~40,000</p><p class="vsnote">Volume-limited; very light per unit.</p></div>
       </div>
       <p class="u-fs-11px text-secondary u-m-8px-0-0 u-lh-1-5">The genius of containerisation (standardised in the 1950s–60s by Malcolm McLean) is that the same box moves from factory to ship to train to truck with no reloading. Before containers, unloading a ship in port took days and required hundreds of dockers. A modern container port unloads the same ship in 24–36 hours with a handful of crane operators.</p>
     </div>
@@ -432,7 +432,7 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Freight cost calculator</div>
       <div class="u-fs-11px text-secondary u-mb-md">Rough estimates only — actual rates vary by route, fuel prices, and market conditions.</div>
 
-      <div class="calc-mode-row">
+      <div class="button-row-compact">
         <button class="calc-mode-btn active" onclick="setMode('sea')">🚢 Sea</button>
         <button class="calc-mode-btn" onclick="setMode('air')">✈️ Air</button>
         <button class="calc-mode-btn" onclick="setMode('road')">🚛 Road</button>
@@ -440,11 +440,11 @@ const mod = modules.find((m) => m.id === 6)!;
 
       <div class="calc-grid">
         <div>
-          <div class="calc-label">Cargo weight (tonnes)</div>
+          <div class="detail-label-spaced">Cargo weight (tonnes)</div>
           <input type="number" id="calc-weight" value="10" min="0.1" max="200000" step="0.1" oninput="calcFreight()">
         </div>
         <div>
-          <div class="calc-label">Distance (km)</div>
+          <div class="detail-label-spaced">Distance (km)</div>
           <input type="number" id="calc-dist" value="10000" min="1" max="40000" oninput="calcFreight()">
         </div>
       </div>
@@ -548,12 +548,12 @@ const mod = modules.find((m) => m.id === 6)!;
       </div>
 
       <div class="u-display-grid u-gridcols-auto-fit-200px-1fr u-gap-14px u-mb-sm">
-        <div class="vsub"><p class="vslabel">Dam height</p><p class="vsval">181 m</p><p class="vsnote">Taller than the Eiffel Tower's observation deck.</p></div>
-        <div class="vsub"><p class="vslabel">Width</p><p class="vsval">2,335 m</p><p class="vsnote">Over 2 km across the Yangtze gorge.</p></div>
-        <div class="vsub"><p class="vslabel">Reservoir length</p><p class="vsval">~660 km</p><p class="vsnote">Roughly London to Edinburgh in length.</p></div>
-        <div class="vsub"><p class="vslabel">Power output</p><p class="vsval">22,500 MW</p><p class="vsnote">World's largest power station of any kind.</p></div>
-        <div class="vsub"><p class="vslabel">Concrete used</p><p class="vsval">28 million m³</p><p class="vsnote">~10× the Hoover Dam.</p></div>
-        <div class="vsub"><p class="vslabel">Cost</p><p class="vsval">~$37B</p><p class="vsnote">1.4 million people relocated to build it.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Dam height</p><p class="vsval">181 m</p><p class="vsnote">Taller than the Eiffel Tower's observation deck.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Width</p><p class="vsval">2,335 m</p><p class="vsnote">Over 2 km across the Yangtze gorge.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Reservoir length</p><p class="vsval">~660 km</p><p class="vsnote">Roughly London to Edinburgh in length.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Power output</p><p class="vsval">22,500 MW</p><p class="vsnote">World's largest power station of any kind.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Concrete used</p><p class="vsval">28 million m³</p><p class="vsnote">~10× the Hoover Dam.</p></div>
+        <div class="sub-card-compact"><p class="vslabel">Cost</p><p class="vsval">~$37B</p><p class="vsnote">1.4 million people relocated to build it.</p></div>
       </div>
       <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">The Three Gorges Dam is the single largest piece of engineering by energy output in human history. Its reservoir holds so much water that geophysicists calculated it slightly slows Earth's rotation — by about 0.06 microseconds per day. That's how much mass it holds in one place.</p>
     </div>
@@ -561,15 +561,15 @@ const mod = modules.find((m) => m.id === 6)!;
     <div class="card u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Dam types — gravity, arch, and earthfill</div>
       <div class="u-display-grid u-gridcols-auto-fit-150px-1fr u-gap-sm">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Gravity dam</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Resists water pressure purely through its own weight. Enormous amounts of concrete. The Hoover Dam is a special variant called an arch-gravity dam — it's curved to push some load into the canyon walls. Cost-effective for wide valleys.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Arch dam</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Thin curved wall that transfers water pressure sideways into the valley walls — like an arch bridge on its side. Uses far less concrete than a gravity dam. Only viable in narrow valleys with extremely hard rock. The 285 m Jinping-I in China is the world's tallest arch dam.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Earthfill / rockfill dam</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">The most common type worldwide. A compacted mound of earth, rock, and clay with a watertight core. Nurek Dam in Tajikistan (300 m) is the world's tallest earthfill dam. Cheap to build but can't have water flowing over the top — overtoppling causes catastrophic failure.</p>
         </div>
@@ -585,52 +585,52 @@ const mod = modules.find((m) => m.id === 6)!;
     <div class="card u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Record-holders — the extremes of what humans have built</div>
       <div class="rec-grid">
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Longest bridge (total)</p>
           <p class="rec-title">Danyang–Kunshan Grand Viaduct</p>
           <p class="rec-val">164 km — high-speed rail, China (2011). Shanghai–Beijing line.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Longest bridge main span</p>
           <p class="rec-title">Akashi Kaikyō Bridge</p>
           <p class="rec-val">1,991 m — suspension, Japan (1998).</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Tallest bridge</p>
           <p class="rec-title">Millau Viaduct</p>
           <p class="rec-val">343 m above the Tarn valley floor — cable-stayed, France (2004).</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Longest road tunnel</p>
           <p class="rec-title">Lærdal Tunnel</p>
           <p class="rec-val">24.5 km — Norway (2000). Includes rest caverns with coloured lighting.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Longest undersea tunnel</p>
           <p class="rec-title">Seikan Tunnel</p>
           <p class="rec-val">53.9 km — Japan (1988). 23 km undersea. Channel Tunnel is 38 km undersea.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Tallest dam</p>
           <p class="rec-title">Jinping-I Dam</p>
           <p class="rec-val">305 m — arch dam, China (2013). Taller than the Eiffel Tower.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Largest power station</p>
           <p class="rec-title">Three Gorges Dam</p>
           <p class="rec-val">22,500 MW — China (2012 at full capacity). Hydroelectric.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Deepest mine</p>
           <p class="rec-title">Mponeng Gold Mine</p>
           <p class="rec-val">~4 km deep — South Africa. Rock temperature reaches 60°C without cooling.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Longest railway</p>
           <p class="rec-title">Trans-Siberian Railway</p>
           <p class="rec-val">9,289 km — Moscow to Vladivostok. 7 time zones. ~6 days non-stop.</p>
         </div>
-        <div class="rec-card">
+        <div class="sub-card-roomy">
           <p class="rec-cat">Busiest container port</p>
           <p class="rec-title">Port of Shanghai</p>
           <p class="rec-val">~49 million TEU/year (2023). Handles ~1 container every 0.6 seconds.</p>
@@ -692,15 +692,15 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-mt-md">
         <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Why does this keep happening?</div>
         <div class="u-display-grid u-gridcols-auto-fit-150px-1fr u-gap-sm">
-          <div class="vsub">
+          <div class="sub-card-compact">
             <p class="vslabel">Optimism bias</p>
             <p class="vsnote u-fs-12px u-lh-1-6 u-mt-4px">Planners systematically underestimate costs and overestimate benefits to get projects approved. Researcher Bent Flyvbjerg found that 9 out of 10 large infrastructure projects go over budget.</p>
           </div>
-          <div class="vsub">
+          <div class="sub-card-compact">
             <p class="vslabel">Unknown unknowns</p>
             <p class="vsnote u-fs-12px u-lh-1-6 u-mt-4px">You can't fully survey underground conditions until you dig. Unexpected geology — rock faults, groundwater, archaeological remains — is the most common cause of delay and cost escalation in tunnels and foundations.</p>
           </div>
-          <div class="vsub">
+          <div class="sub-card-compact">
             <p class="vslabel">Scope creep + politics</p>
             <p class="vsnote u-fs-12px u-lh-1-6 u-mt-4px">Projects that begin construction are politically almost impossible to cancel, regardless of cost growth. This creates perverse incentives: underestimate to start, then expand once underway.</p>
           </div>
@@ -734,7 +734,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">1</div>
           <div class="hub-name-col"><div class="hub-name">Hartsfield–Jackson</div><div class="hub-city">Atlanta, USA · ATL</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-100-pct u-bg-hex-0c447c"><span class="hub-bar-val u-text-hex-fff">104.7M</span></div>
+            <div class="hub-bar u-w-100-pct u-bg-hex-0c447c"><span class="bv u-text-hex-fff">104.7M</span></div>
           </div>
         </div>
         <!-- DXB -->
@@ -742,7 +742,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">2</div>
           <div class="hub-name-col"><div class="hub-name">Dubai International</div><div class="hub-city">Dubai, UAE · DXB</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-85-pct u-bg-hex-1463a5"><span class="hub-bar-val u-text-hex-fff">86.9M</span></div>
+            <div class="hub-bar u-w-85-pct u-bg-hex-1463a5"><span class="bv u-text-hex-fff">86.9M</span></div>
           </div>
         </div>
         <!-- DFW -->
@@ -750,7 +750,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">3</div>
           <div class="hub-name-col"><div class="hub-name">Dallas/Fort Worth</div><div class="hub-city">Texas, USA · DFW</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-80-pct u-bg-hex-1d79c7"><span class="hub-bar-val u-text-hex-fff">81.8M</span></div>
+            <div class="hub-bar u-w-80-pct u-bg-hex-1d79c7"><span class="bv u-text-hex-fff">81.8M</span></div>
           </div>
         </div>
         <!-- ORD -->
@@ -758,7 +758,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">4</div>
           <div class="hub-name-col"><div class="hub-name">Chicago O'Hare</div><div class="hub-city">Illinois, USA · ORD</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-77-pct u-bg-hex-3393df"><span class="hub-bar-val u-text-hex-fff">77.9M</span></div>
+            <div class="hub-bar u-w-77-pct u-bg-hex-3393df"><span class="bv u-text-hex-fff">77.9M</span></div>
           </div>
         </div>
         <!-- LHR -->
@@ -766,7 +766,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">5</div>
           <div class="hub-name-col"><div class="hub-name">London Heathrow</div><div class="hub-city">UK · LHR</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-76-pct u-bg-hex-3393df"><span class="hub-bar-val u-text-hex-fff">79.2M</span></div>
+            <div class="hub-bar u-w-76-pct u-bg-hex-3393df"><span class="bv u-text-hex-fff">79.2M</span></div>
           </div>
         </div>
         <!-- DEL -->
@@ -774,7 +774,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">6</div>
           <div class="hub-name-col"><div class="hub-name">Indira Gandhi Int'l</div><div class="hub-city">Delhi, India · DEL</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-72-pct u-bg-hex-52a9ea"><span class="hub-bar-val u-text-hex-fff">72.2M</span></div>
+            <div class="hub-bar u-w-72-pct u-bg-hex-52a9ea"><span class="bv u-text-hex-fff">72.2M</span></div>
           </div>
         </div>
         <!-- CDG -->
@@ -782,7 +782,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">7</div>
           <div class="hub-name-col"><div class="hub-name">Paris Charles de Gaulle</div><div class="hub-city">France · CDG</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-67-pct u-bg-hex-52a9ea"><span class="hub-bar-val u-text-hex-fff">67.4M</span></div>
+            <div class="hub-bar u-w-67-pct u-bg-hex-52a9ea"><span class="bv u-text-hex-fff">67.4M</span></div>
           </div>
         </div>
         <!-- IST -->
@@ -790,7 +790,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">8</div>
           <div class="hub-name-col"><div class="hub-name">Istanbul Airport</div><div class="hub-city">Turkey · IST</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-64-pct u-bg-hex-6dbff5"><span class="hub-bar-val u-text-hex-fff">64.3M</span></div>
+            <div class="hub-bar u-w-64-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">64.3M</span></div>
           </div>
         </div>
         <!-- DEN -->
@@ -798,7 +798,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">9</div>
           <div class="hub-name-col"><div class="hub-name">Denver International</div><div class="hub-city">Colorado, USA · DEN</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-62-pct u-bg-hex-6dbff5"><span class="hub-bar-val u-text-hex-fff">64.1M</span></div>
+            <div class="hub-bar u-w-62-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">64.1M</span></div>
           </div>
         </div>
         <!-- CAN -->
@@ -806,7 +806,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">10</div>
           <div class="hub-name-col"><div class="hub-name">Guangzhou Baiyun</div><div class="hub-city">China · CAN</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-61-pct u-bg-hex-6dbff5"><span class="hub-bar-val u-text-hex-fff">63.0M</span></div>
+            <div class="hub-bar u-w-61-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">63.0M</span></div>
           </div>
         </div>
 
@@ -814,12 +814,12 @@ const mod = modules.find((m) => m.id === 6)!;
         <div class="u-mt-14px u-bt-0-5px-solid-border-tertiary u-pt-12px">
           <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">Spotlight: Hartsfield–Jackson Atlanta (ATL) — the world's busiest</div>
           <div class="u-display-grid u-gridcols-auto-fit-120px-1fr u-gap-sm u-mb-sm">
-            <div class="vsub"><p class="vslabel">Daily passengers</p><p class="vsval">~287,000</p><p class="vsnote">About the entire population of Newcastle boarding planes every day.</p></div>
-            <div class="vsub"><p class="vslabel">Daily flights</p><p class="vsval">~2,700</p><p class="vsnote">One takeoff or landing every ~32 seconds.</p></div>
-            <div class="vsub"><p class="vslabel">Runways</p><p class="vsval">5</p><p class="vsnote">Two pairs of parallel runways + 1 dedicated to smaller aircraft.</p></div>
-            <div class="vsub"><p class="vslabel">Terminal length</p><p class="vsval">~2.4 km</p><p class="vsnote">Underground trains connect the concourses.</p></div>
-            <div class="vsub"><p class="vslabel">Employees on-site</p><p class="vsval">~63,000</p><p class="vsnote">Larger than many cities' entire workforces.</p></div>
-            <div class="vsub"><p class="vslabel">Airlines served</p><p class="vsval">~150</p><p class="vsnote">Primary hub for Delta Air Lines (~75% of traffic).</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Daily passengers</p><p class="vsval">~287,000</p><p class="vsnote">About the entire population of Newcastle boarding planes every day.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Daily flights</p><p class="vsval">~2,700</p><p class="vsnote">One takeoff or landing every ~32 seconds.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Runways</p><p class="vsval">5</p><p class="vsnote">Two pairs of parallel runways + 1 dedicated to smaller aircraft.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Terminal length</p><p class="vsval">~2.4 km</p><p class="vsnote">Underground trains connect the concourses.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Employees on-site</p><p class="vsval">~63,000</p><p class="vsnote">Larger than many cities' entire workforces.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Airlines served</p><p class="vsval">~150</p><p class="vsnote">Primary hub for Delta Air Lines (~75% of traffic).</p></div>
           </div>
           <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">ATL has been the world's busiest airport almost continuously since 1998. Its dominance comes from geography (equidistant from the US East Coast and Midwest) and Delta's "hub-and-spoke" model, where virtually every Delta domestic flight connects through Atlanta. The practical consequence: if you're flying anywhere in the eastern USA, there's a good chance you're connecting through ATL whether you intended to or not.</p>
         </div>
@@ -892,7 +892,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">1</div>
           <div class="hub-name-col"><div class="hub-name">Shinjuku Station</div><div class="hub-city">Tokyo, Japan</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-100-pct u-bg-hex-27500a"><span class="hub-bar-val u-text-hex-fff">3.5M / day</span></div>
+            <div class="hub-bar u-w-100-pct u-bg-hex-27500a"><span class="bv u-text-hex-fff">3.5M / day</span></div>
           </div>
         </div>
         <!-- Umeda/Osaka -->
@@ -900,7 +900,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">2</div>
           <div class="hub-name-col"><div class="hub-name">Umeda / Osaka</div><div class="hub-city">Osaka, Japan</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-71-pct u-bg-hex-3d7a15"><span class="hub-bar-val u-text-hex-fff">2.5M / day</span></div>
+            <div class="hub-bar u-w-71-pct u-bg-hex-3d7a15"><span class="bv u-text-hex-fff">2.5M / day</span></div>
           </div>
         </div>
         <!-- Ikebukuro -->
@@ -908,7 +908,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">3</div>
           <div class="hub-name-col"><div class="hub-name">Ikebukuro Station</div><div class="hub-city">Tokyo, Japan</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-69-pct u-bg-hex-3d7a15"><span class="hub-bar-val u-text-hex-fff">2.4M / day</span></div>
+            <div class="hub-bar u-w-69-pct u-bg-hex-3d7a15"><span class="bv u-text-hex-fff">2.4M / day</span></div>
           </div>
         </div>
         <!-- Shibuya -->
@@ -916,7 +916,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">4</div>
           <div class="hub-name-col"><div class="hub-name">Shibuya Station</div><div class="hub-city">Tokyo, Japan</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-63-pct u-bg-hex-57a825"><span class="hub-bar-val u-text-hex-fff">2.2M / day</span></div>
+            <div class="hub-bar u-w-63-pct u-bg-hex-57a825"><span class="bv u-text-hex-fff">2.2M / day</span></div>
           </div>
         </div>
         <!-- Beijing South -->
@@ -924,7 +924,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">5</div>
           <div class="hub-name-col"><div class="hub-name">Beijing South</div><div class="hub-city">Beijing, China</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-57-pct u-bg-hex-57a825"><span class="hub-bar-val u-text-hex-fff">2.0M / day</span></div>
+            <div class="hub-bar u-w-57-pct u-bg-hex-57a825"><span class="bv u-text-hex-fff">2.0M / day</span></div>
           </div>
         </div>
         <!-- Xinzheng -->
@@ -932,7 +932,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">6</div>
           <div class="hub-name-col"><div class="hub-name">Guangzhou South</div><div class="hub-city">Guangzhou, China</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-51-pct u-bg-hex-72c040"><span class="hub-bar-val u-text-hex-fff">1.8M / day</span></div>
+            <div class="hub-bar u-w-51-pct u-bg-hex-72c040"><span class="bv u-text-hex-fff">1.8M / day</span></div>
           </div>
         </div>
         <!-- Moscow Kazansky -->
@@ -940,7 +940,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">7</div>
           <div class="hub-name-col"><div class="hub-name">Moscow Kursky / Central</div><div class="hub-city">Moscow, Russia</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-43-pct u-bg-hex-72c040"><span class="hub-bar-val u-text-hex-fff">1.5M / day</span></div>
+            <div class="hub-bar u-w-43-pct u-bg-hex-72c040"><span class="bv u-text-hex-fff">1.5M / day</span></div>
           </div>
         </div>
         <!-- Paris Nord -->
@@ -948,7 +948,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">8</div>
           <div class="hub-name-col"><div class="hub-name">Paris Gare du Nord</div><div class="hub-city">Paris, France</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-37-pct u-bg-hex-9fe168"><span class="hub-bar-val u-text-hex-27500a">1.3M / day</span></div>
+            <div class="hub-bar u-w-37-pct u-bg-hex-9fe168"><span class="bv u-text-hex-27500a">1.3M / day</span></div>
           </div>
         </div>
         <!-- Grand Central -->
@@ -956,7 +956,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">9</div>
           <div class="hub-name-col"><div class="hub-name">Grand Central Terminal</div><div class="hub-city">New York, USA</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-29-pct u-bg-hex-9fe168"><span class="hub-bar-val u-text-hex-27500a">750K / day</span></div>
+            <div class="hub-bar u-w-29-pct u-bg-hex-9fe168"><span class="bv u-text-hex-27500a">750K / day</span></div>
           </div>
         </div>
         <!-- Waterloo -->
@@ -964,7 +964,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">10</div>
           <div class="hub-name-col"><div class="hub-name">London Waterloo</div><div class="hub-city">London, UK</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-26-pct u-bg-hex-c3f08e"><span class="hub-bar-val u-text-hex-27500a">650K / day</span></div>
+            <div class="hub-bar u-w-26-pct u-bg-hex-c3f08e"><span class="bv u-text-hex-27500a">650K / day</span></div>
           </div>
         </div>
 
@@ -972,12 +972,12 @@ const mod = modules.find((m) => m.id === 6)!;
         <div class="u-mt-14px u-bt-0-5px-solid-border-tertiary u-pt-12px">
           <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">Spotlight: Shinjuku Station — the world's busiest station by a wide margin</div>
           <div class="u-display-grid u-gridcols-auto-fit-120px-1fr u-gap-sm u-mb-sm">
-            <div class="vsub"><p class="vslabel">Daily passengers</p><p class="vsval">~3.5 million</p><p class="vsnote">More than the entire population of Chicago passing through daily.</p></div>
-            <div class="vsub"><p class="vslabel">Train lines served</p><p class="vsval">12 lines</p><p class="vsnote">JR, Tokyo Metro, Toei, Odakyu, Keio, Seibu — plus long-distance.</p></div>
-            <div class="vsub"><p class="vslabel">Exits</p><p class="vsval">200+</p><p class="vsnote">Guinness World Record for most exits of any station.</p></div>
-            <div class="vsub"><p class="vslabel">Underground floor area</p><p class="vsval">~10 km² network</p><p class="vsnote">The underground corridors are so complex a tourist map is essential.</p></div>
-            <div class="vsub"><p class="vslabel">Daily trains through</p><p class="vsval">~3,000</p><p class="vsnote">JR East alone operates ~1,500 train services per day through Shinjuku.</p></div>
-            <div class="vsub"><p class="vslabel">Retail on-site</p><p class="vsval">~200 shops</p><p class="vsnote">The station is also a major shopping destination, not just a transit hub.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Daily passengers</p><p class="vsval">~3.5 million</p><p class="vsnote">More than the entire population of Chicago passing through daily.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Train lines served</p><p class="vsval">12 lines</p><p class="vsnote">JR, Tokyo Metro, Toei, Odakyu, Keio, Seibu — plus long-distance.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Exits</p><p class="vsval">200+</p><p class="vsnote">Guinness World Record for most exits of any station.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Underground floor area</p><p class="vsval">~10 km² network</p><p class="vsnote">The underground corridors are so complex a tourist map is essential.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Daily trains through</p><p class="vsval">~3,000</p><p class="vsnote">JR East alone operates ~1,500 train services per day through Shinjuku.</p></div>
+            <div class="sub-card-compact"><p class="vslabel">Retail on-site</p><p class="vsval">~200 shops</p><p class="vsnote">The station is also a major shopping destination, not just a transit hub.</p></div>
           </div>
           <p class="u-fs-12px text-secondary u-m-0 u-lh-1-6">Shinjuku is in a different category from everything else on this list. Its 3.5 million daily figure is not a typo — it's more than the combined daily total of all five London terminus stations. The reason is Japan's uniquely dense commuter rail network, where a single station serves as the convergence point for 12 separate rail lines serving Tokyo's western suburbs. At peak hour, a train arrives or departs every 30–40 seconds on multiple platforms simultaneously.</p>
         </div>
@@ -1055,15 +1055,15 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What is architecture? Purpose, beauty, and function</div>
       <div class="u-fs-11px text-secondary u-mb-md">Architecture is the art and science of designing buildings that satisfy three interlocking demands at once.</div>
       <div class="u-display-grid u-gridcols-auto-fit-150px-1fr u-gap-sm u-mb-sm">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Firmitas — Strength</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">A building must stand up, bear loads, resist weather, and last. Structural engineering is the backbone of every building, from a mud hut to a skyscraper.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Utilitas — Usefulness</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Buildings exist to be used. A hospital must allow rapid patient movement. A school must support concentration. A home must accommodate the rhythms of daily life. Function is non-negotiable.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Venustas — Beauty</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Buildings shape the world people inhabit every day. A beautiful building lifts the spirit; an ugly one grinds it down. The Vitruvian triad (from Roman architect Vitruvius, 1st century BC) remains the best summary of architecture's challenge.</p>
         </div>
@@ -1079,32 +1079,32 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-11px text-secondary u-mb-md">The history of architecture is largely the history of available materials. Each new material unlocked forms previously impossible.</div>
 
       <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Stone</p>
           <p class="vsval u-fs-13px">Compression only</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Strong in compression, weak in tension. Enables thick walls, arches, and domes but not wide open floor plans. The limit: you can't span more than ~10 m with stone beams before they crack.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Cast iron / steel</p>
           <p class="vsval u-fs-13px">The skyscraper enabler</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Steel handles both compression and tension. The moment steel frames arrived (1880s Chicago), buildings could go up instead of out. The Eiffel Tower (1889) was pure iron; the Empire State Building (1931) is pure steel. Steel is also why curtain-wall glass facades exist.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Reinforced concrete</p>
           <p class="vsval u-fs-13px">The 20th century's material</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Concrete is cheap and fire-resistant but brittle. Steel rebar embedded inside takes the tension load. Together they allow cantilevered slabs, thin shells, and the brutalist slabs that define post-war cities. ~70% of all structures worldwide use reinforced concrete.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Glass</p>
           <p class="vsval u-fs-13px">Transparency and light</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Modern glass is laminated, tempered, and coated to reflect heat. Triple-glazed curtain walls are now better insulated than many solid walls. The Crystal Palace (1851) first showed glass could be a structural material, not just a filler.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Mass timber (CLT)</p>
           <p class="vsval u-fs-13px">The low-carbon future</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Cross-laminated timber (CLT) is as strong as concrete per unit weight and sequesters carbon rather than emitting it. 18-storey wooden skyscrapers now exist. It is the fastest-growing structural material in Europe.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Bamboo</p>
           <p class="vsval u-fs-13px">Tensile strength of steel</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">In tensile strength per kg, bamboo rivals steel. It grows to full height in 3–5 years (vs. 30–60 for timber). Already the dominant structural material in parts of South and Southeast Asia, and a serious contender for sustainable global construction.</p>
@@ -1126,7 +1126,7 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Architectural styles through history</div>
       <div class="u-fs-11px text-secondary u-mb-md">Each era's dominant style reflects its available materials, cultural priorities, and structural knowledge. Click a period to explore.</div>
 
-      <div class="arch-style-tab-row">
+      <div class="button-row-compact">
         <button class="arch-style-tab active" onclick="switchArchStyle('classical', this)">Classical</button>
         <button class="arch-style-tab" onclick="switchArchStyle('gothic', this)">Gothic</button>
         <button class="arch-style-tab" onclick="switchArchStyle('renaissance', this)">Renaissance</button>
@@ -1137,54 +1137,54 @@ const mod = modules.find((m) => m.id === 6)!;
 
       <div class="arch-style-panel active" id="asp-classical">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~600 BC – 400 AD</p></div>
-          <div class="vsub"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Stone and marble</p></div>
-          <div class="vsub"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Columns, symmetry, proportion</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~600 BC – 400 AD</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Stone and marble</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Columns, symmetry, proportion</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Greek and Roman architecture established the column orders (Doric, Ionic, Corinthian) and the principle that buildings should express mathematical ratios visible to the human eye. The Parthenon (448 BC) has deliberately curved columns and a slightly curved floor to counteract optical distortion. Roman architects added the arch and concrete, enabling the Pantheon's 43.3 m dome (still the world's largest unreinforced concrete dome). Classical architecture has been revived repeatedly: in the Renaissance, in 19th-century civic buildings, and in Washington DC's federal architecture.</p>
       </div>
 
       <div class="arch-style-panel" id="asp-gothic">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1100 – 1500 AD</p></div>
-          <div class="vsub"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Cut stone with flying buttresses</p></div>
-          <div class="vsub"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Pointed arches, height, light</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1100 – 1500 AD</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Cut stone with flying buttresses</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Pointed arches, height, light</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Gothic architecture was an engineering revolution disguised as a spiritual one. The flying buttress transferred the outward thrust of stone vaulted ceilings to external piers, freeing the walls to become thin screens of glass. Notre-Dame de Paris has walls that are mostly window. The tallest Gothic cathedral, Ulm Minster (161 m), held the record for the world's tallest structure from 1890 until surpassed by the Eiffel Tower. The pointed arch was itself a structural innovation: it directs more load downward than outward, enabling much taller vaulted ceilings from narrower columns.</p>
       </div>
 
       <div class="arch-style-panel" id="asp-renaissance">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1400 – 1600 AD</p></div>
-          <div class="vsub"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Stone, brick, classical orders</p></div>
-          <div class="vsub"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Symmetry, domes, harmony</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1400 – 1600 AD</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Stone, brick, classical orders</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Symmetry, domes, harmony</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">The Renaissance rediscovered classical Greco-Roman principles and applied them to a Christian world. Brunelleschi's dome for Florence Cathedral (1436) was the engineering marvel of its age: a double-shell brick dome built without a traditional wooden centering frame, at 44.7 m internal diameter. St. Peter's Basilica in Rome took 120 years to build (1506-1626) and involved Michelangelo, Raphael, and Bernini. The Renaissance codified perspective drawing, which fundamentally changed how architects designed and communicated buildings.</p>
       </div>
 
       <div class="arch-style-panel" id="asp-modernism">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1900 – 1970s</p></div>
-          <div class="vsub"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Steel, glass, reinforced concrete</p></div>
-          <div class="vsub"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Function over ornament, open plans</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1900 – 1970s</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Steel, glass, reinforced concrete</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Function over ornament, open plans</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Modernism rejected historical ornament and declared "form follows function." Adolf Loos called ornament a crime in 1908. Le Corbusier described a house as "a machine for living in." The International Style (glass curtain walls, flat roofs, open floor plans) came to define corporate and civic architecture worldwide. The Lever House in New York (1952), Mies van der Rohe's Seagram Building (1958), and the glass-box towers of every city centre are all its children. Its social ambitions were often unrealised: the mass-produced high-rises built for the poor frequently became some of the worst housing in the world.</p>
       </div>
 
       <div class="arch-style-panel" id="asp-brutalism">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1950 – 1980s</p></div>
-          <div class="vsub"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Raw exposed concrete (beton brut)</p></div>
-          <div class="vsub"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Massive forms, honest materials</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Era</p><p class="vsval u-fs-13px">~1950 – 1980s</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Raw exposed concrete (beton brut)</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Massive forms, honest materials</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Brutalism (from the French "beton brut" meaning raw concrete, not from "brutal") was a post-war attempt at honest architecture: show the structure, don't hide it. Concrete was left unfinished, mechanical systems were exposed, and mass was celebrated. The National Theatre in London (Lasdun, 1976), the Barbican in London, and the Boston City Hall are famous examples. Brutalism was controversial from the start and became associated with urban decay when budget cuts meant buildings weren't maintained. Today it is undergoing serious critical reappraisal as architects and the public recognise its sculptural power.</p>
       </div>
 
       <div class="arch-style-panel" id="asp-contemporary">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Era</p><p class="vsval u-fs-13px">1990s – present</p></div>
-          <div class="vsub"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Parametric steel, glass, CLT, composites</p></div>
-          <div class="vsub"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Computation, sustainability, individuality</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Era</p><p class="vsval u-fs-13px">1990s – present</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key material</p><p class="vsval u-fs-13px">Parametric steel, glass, CLT, composites</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Defining features</p><p class="vsval u-fs-13px">Computation, sustainability, individuality</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Contemporary architecture is defined less by a single style than by the availability of computational design tools. Software like parametric modelling allows shapes that would have been unbuildable 40 years ago: Zaha Hadid's fluid curves, the twisted steel of the Turning Torso in Malmo, the biomimetic skin of the Gherkin in London. Meanwhile sustainability has become a genuine design driver, not just a marketing claim. The most ambitious buildings today generate more energy than they consume, reuse rainwater, and are designed to be dismantled and recycled at end of life.</p>
       </div>
@@ -1199,37 +1199,37 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="bldg-icon">🗼</div>
           <p class="bldg-name">Eiffel Tower</p>
           <p class="bldg-loc">Paris, France · 1889 · 330 m</p>
-          <p class="bldg-lesson">Lesson: A structure that looks delicate can be structurally brilliant. The tower weighs only 7,300 tonnes despite its height because its open lattice distributes load efficiently. Wind pressure on its solid equivalent would be ~4× greater. It was meant to be temporary and was nearly demolished in 1909.</p>
+          <p class="cnote">Lesson: A structure that looks delicate can be structurally brilliant. The tower weighs only 7,300 tonnes despite its height because its open lattice distributes load efficiently. Wind pressure on its solid equivalent would be ~4× greater. It was meant to be temporary and was nearly demolished in 1909.</p>
         </div>
         <div class="bldg-card">
           <div class="bldg-icon">🕌</div>
           <p class="bldg-name">Taj Mahal</p>
           <p class="bldg-loc">Agra, India · 1653 · 73 m</p>
-          <p class="bldg-lesson">Lesson: Architecture as an act of grief. Built by Mughal emperor Shah Jahan as a mausoleum for his wife. It took 22 years and 20,000 workers. The optical illusion is deliberate: the four minarets lean slightly outward so that in the event of an earthquake they fall away from the central dome, not onto it.</p>
+          <p class="cnote">Lesson: Architecture as an act of grief. Built by Mughal emperor Shah Jahan as a mausoleum for his wife. It took 22 years and 20,000 workers. The optical illusion is deliberate: the four minarets lean slightly outward so that in the event of an earthquake they fall away from the central dome, not onto it.</p>
         </div>
         <div class="bldg-card">
           <div class="bldg-icon">🏙</div>
           <p class="bldg-name">Burj Khalifa</p>
           <p class="bldg-loc">Dubai, UAE · 2010 · 828 m</p>
-          <p class="bldg-lesson">Lesson: Wind is the primary engineering challenge above 300 m, not gravity. The Burj's spiralling, Y-shaped floor plan was designed in a wind tunnel to "confuse" the wind and prevent coherent vortex shedding that could cause the building to sway dangerously. Its 163 occupied floors sit on a foundation pile cluster drilled 50 m into bedrock.</p>
+          <p class="cnote">Lesson: Wind is the primary engineering challenge above 300 m, not gravity. The Burj's spiralling, Y-shaped floor plan was designed in a wind tunnel to "confuse" the wind and prevent coherent vortex shedding that could cause the building to sway dangerously. Its 163 occupied floors sit on a foundation pile cluster drilled 50 m into bedrock.</p>
         </div>
         <div class="bldg-card">
           <div class="bldg-icon">🎭</div>
           <p class="bldg-name">Sydney Opera House</p>
           <p class="bldg-loc">Sydney, Australia · 1973</p>
-          <p class="bldg-lesson">Lesson: Architecture can create a national identity. The shell "sails" were structurally unbuildable as originally conceived; Danish architect Jorn Utzon solved the geometry by realising all shells could be cut from the same sphere. The project ran 10 years late and 14× over budget. Utzon walked off the project in 1966 and never saw the finished building. It is now a UNESCO World Heritage Site.</p>
+          <p class="cnote">Lesson: Architecture can create a national identity. The shell "sails" were structurally unbuildable as originally conceived; Danish architect Jorn Utzon solved the geometry by realising all shells could be cut from the same sphere. The project ran 10 years late and 14× over budget. Utzon walked off the project in 1966 and never saw the finished building. It is now a UNESCO World Heritage Site.</p>
         </div>
         <div class="bldg-card">
           <div class="bldg-icon">🏛</div>
           <p class="bldg-name">Pantheon, Rome</p>
           <p class="bldg-loc">Rome, Italy · 128 AD · 43 m dome</p>
-          <p class="bldg-lesson">Lesson: The Romans understood concrete better than we gave them credit for. The Pantheon's unreinforced concrete dome has stood for nearly 1,900 years. The concrete gets lighter as it rises (pumice aggregate near the top) and the coffered ceiling reduces mass while maintaining strength. The oculus at the top is not a structural weakness but a compression ring.</p>
+          <p class="cnote">Lesson: The Romans understood concrete better than we gave them credit for. The Pantheon's unreinforced concrete dome has stood for nearly 1,900 years. The concrete gets lighter as it rises (pumice aggregate near the top) and the coffered ceiling reduces mass while maintaining strength. The oculus at the top is not a structural weakness but a compression ring.</p>
         </div>
         <div class="bldg-card">
           <div class="bldg-icon">🌿</div>
           <p class="bldg-name">Bosco Verticale</p>
           <p class="bldg-loc">Milan, Italy · 2014 · 111 m</p>
-          <p class="bldg-lesson">Lesson: Plants can be structural architecture. The two towers host 900 trees, 5,000 shrubs, and 11,000 plants. The cantilevered concrete balconies are designed to hold the soil load equivalent to 6 extra floors. The vegetation reduces urban heat island effect, provides insulation, and absorbs ~30,000 kg of CO2 per year. It became the template for "biophilic" skyscraper design worldwide.</p>
+          <p class="cnote">Lesson: Plants can be structural architecture. The two towers host 900 trees, 5,000 shrubs, and 11,000 plants. The cantilevered concrete balconies are designed to hold the soil load equivalent to 6 extra floors. The vegetation reduces urban heat island effect, provides insulation, and absorbs ~30,000 kg of CO2 per year. It became the template for "biophilic" skyscraper design worldwide.</p>
         </div>
       </div>
     </div>
@@ -1286,27 +1286,27 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-11px text-secondary u-mb-md">Buildings account for ~40% of global energy use and ~38% of global CO2 emissions. This is architecture's defining challenge for the 21st century.</div>
 
       <div class="u-display-grid u-gridcols-auto-fit-200px-1fr u-gap-sm u-mb-md">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Passive design</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Orientation, shading, thermal mass, and natural ventilation to minimise energy demand before any active system is needed. A well-designed passive house needs ~90% less heating energy than a standard building.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Net-zero buildings</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Generate as much energy as they consume over a year, typically via rooftop solar. The Edge in Amsterdam (2014) generates more energy than it uses and was once called the world's most sustainable office building.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Adaptive reuse</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Converting existing buildings (warehouses, churches, offices) for new uses rather than demolishing and rebuilding. The Tate Modern in London (converted from Bankside Power Station, 2000) is the most visited modern art gallery in the world and a textbook example of adaptive reuse done well.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Mass timber</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">CLT buildings store carbon in the structure itself. An 8-storey CLT building sequesters roughly 1,800 tonnes of CO2 compared to the ~1,200 tonnes emitted by an equivalent concrete structure. Net saving: ~3,000 tonnes. This is why mass timber is growing at ~20% per year.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Biophilic design</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Incorporating living plants, water features, natural materials, and daylight into building interiors. Evidence shows reduced stress, lower blood pressure, and faster recovery in biophilic environments. Amazon's Spheres in Seattle (three glass domes full of 40,000 plants) is the highest-profile example.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Circular buildings</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Designed from the outset for disassembly and material recovery. Bolted connections rather than welded; removable facades; a "material passport" documenting every component. Still rare, but growing rapidly as carbon accounting forces construction to account for embodied carbon.</p>
         </div>
@@ -1355,22 +1355,22 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-11px text-secondary u-mb-md">Urban planning is the process of designing and managing how land is used, how people move, and how services are distributed across a city or region. It operates at scales from a single street to an entire metropolitan area.</div>
 
       <div class="u-display-grid u-gridcols-auto-fit-200px-1fr u-gap-sm u-mb-md">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Land use planning</p>
           <p class="vsval u-fs-13px">Where things go</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Zoning laws decide which activities are permitted in which areas: residential, commercial, industrial, agricultural, mixed-use. Bad zoning separates people from jobs and services, forcing car dependency.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Transportation planning</p>
           <p class="vsval u-fs-13px">How people move</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">The single biggest factor in how livable a city feels. Streets consume 25–35% of urban land area in most cities. How that space is allocated between cars, transit, cycling, and pedestrians determines the city's character.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Housing policy</p>
           <p class="vsval u-fs-13px">Who can live where</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Density restrictions, building height limits, and affordability requirements shape whether a city can house its workforce. Cities with very restrictive zoning (San Francisco, London) have severe affordability crises as supply cannot meet demand.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel">Public space</p>
           <p class="vsval u-fs-13px">Where life happens</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Parks, plazas, markets, and streets are where civic life takes place. Cities in the top "liveability" rankings (Vienna, Copenhagen, Melbourne) all invest heavily in high-quality public space accessible to all income levels.</p>
@@ -1388,15 +1388,15 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-11px text-secondary u-mb-md">Cities take two fundamentally different forms depending on whether they grew organically or were designed from scratch. Both approaches have strengths and weaknesses.</div>
 
       <div class="u-display-grid u-gridcols-auto-fit-150px-1fr u-gap-sm u-mb-md">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Organic growth</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Most historic cities (Rome, London, Cairo, Istanbul) grew incrementally over centuries, with streets following desire paths, property boundaries, and topography. The result is often messy, inefficient for cars, but rich in character, mixed use, and human scale. Jane Jacobs famously argued these "chaotic" cities were actually more vibrant and safe than planned ones.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Planned cities</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Some cities were designed on paper before being built: Washington DC (1791, L'Enfant plan), Brasilia (1960, Niemeyer and Costa), Canberra (1913, Burley Griffin), Chandigarh (1952, Le Corbusier). Planned cities are often efficient in infrastructure but can feel sterile and struggle to generate the organic street life that makes cities enjoyable. Brasilia's central area is considered an urban planning failure despite being a UNESCO World Heritage Site.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Megacity growth</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">A megacity is a city with more than 10 million people. There are now 34 megacities worldwide. Tokyo (37M), Delhi (33M), and Shanghai (29M) top the list. Most megacity growth is happening in developing countries: Lagos, Kinshasa, and Dhaka are each adding ~500,000 people per year. This growth often outpaces formal planning, producing large informal settlements (slums) that house 1 in 8 people globally.</p>
         </div>
@@ -1444,7 +1444,7 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Transportation and how it shapes cities</div>
       <div class="u-fs-11px text-secondary u-mb-md">The dominant transportation mode of an era shapes the city built around it. This is sometimes called the "transportation-land use feedback loop."</div>
 
-      <div class="zone-tab-row">
+      <div class="button-row-compact">
         <button class="zone-tab active" onclick="switchZone('car', this)">Car city</button>
         <button class="zone-tab" onclick="switchZone('transit', this)">Transit city</button>
         <button class="zone-tab" onclick="switchZone('walk', this)">Walkable city</button>
@@ -1453,36 +1453,36 @@ const mod = modules.find((m) => m.id === 6)!;
 
       <div class="zone-panel active" id="zp-car">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Houston, Phoenix, Los Angeles</p></div>
-          <div class="vsub"><p class="vslabel">Road space</p><p class="vsval u-fs-13px">40–60% of land area</p></div>
-          <div class="vsub"><p class="vslabel">Modal share (car)</p><p class="vsval u-fs-13px">80–95% of trips</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Houston, Phoenix, Los Angeles</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Road space</p><p class="vsval u-fs-13px">40–60% of land area</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Modal share (car)</p><p class="vsval u-fs-13px">80–95% of trips</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Car-centric cities distribute development thinly across very large areas, making transit economically unviable (too few passengers per route). The average American drives 28 km per day. Houston's urban area is larger than the entire country of Kuwait. Roads and parking can consume over half the land area of a US city. The result: high per-capita CO2 emissions, high transport costs for households (15–20% of income), and near-total car dependency that makes life very difficult without a vehicle.</p>
       </div>
 
       <div class="zone-panel" id="zp-transit">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Tokyo, Hong Kong, Singapore</p></div>
-          <div class="vsub"><p class="vslabel">Transit modal share</p><p class="vsval u-fs-13px">40–70% of trips</p></div>
-          <div class="vsub"><p class="vslabel">Key enabler</p><p class="vsval u-fs-13px">High density along corridors</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Tokyo, Hong Kong, Singapore</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Transit modal share</p><p class="vsval u-fs-13px">40–70% of trips</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key enabler</p><p class="vsval u-fs-13px">High density along corridors</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Transit cities concentrate density around rail stations and corridors, making public transport economically self-sustaining. Tokyo's transit system carries ~14 million passengers per day and runs at a profit. Hong Kong's MTR is one of the few metro systems in the world that makes money, using real estate development around stations to cross-subsidise fares. The key is that transit and land use planning must be done together: a metro line through low-density suburbs will always lose money.</p>
       </div>
 
       <div class="zone-panel" id="zp-walk">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Venice, central Paris, Amsterdam</p></div>
-          <div class="vsub"><p class="vslabel">Walking modal share</p><p class="vsval u-fs-13px">30–60% of trips (by count)</p></div>
-          <div class="vsub"><p class="vslabel">Key features</p><p class="vsval u-fs-13px">Mixed use, fine grain, short blocks</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Venice, central Paris, Amsterdam</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Walking modal share</p><p class="vsval u-fs-13px">30–60% of trips (by count)</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key features</p><p class="vsval u-fs-13px">Mixed use, fine grain, short blocks</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Walkable areas work when daily needs (food, work, services, leisure) are within ~10–15 minutes on foot. This requires a mix of uses on the same block and short city blocks. Parisian blocks average ~70 m; Manhattan blocks ~80 m; Houston blocks ~240 m. The difference is dramatic in practice. The "15-minute city" concept (championed by Paris Mayor Anne Hidalgo) aims to redesign the city so every resident can reach all daily needs within 15 minutes by foot or bicycle, eliminating the need for a car for most daily trips.</p>
       </div>
 
       <div class="zone-panel" id="zp-cycle">
         <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm u-mb-sm">
-          <div class="vsub"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Amsterdam, Copenhagen, Utrecht</p></div>
-          <div class="vsub"><p class="vslabel">Cycling modal share</p><p class="vsval u-fs-13px">25–63% of trips</p></div>
-          <div class="vsub"><p class="vslabel">Key infrastructure</p><p class="vsval u-fs-13px">Separated cycle lanes, priority signals</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Examples</p><p class="vsval u-fs-13px">Amsterdam, Copenhagen, Utrecht</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Cycling modal share</p><p class="vsval u-fs-13px">25–63% of trips</p></div>
+          <div class="sub-card-compact"><p class="vslabel">Key infrastructure</p><p class="vsval u-fs-13px">Separated cycle lanes, priority signals</p></div>
         </div>
         <p class="muted-copy u-lh-1-6">Amsterdam and Copenhagen are the most famous cycling cities, but their success was not inevitable: both had growing car traffic in the 1960s and 70s before political decisions reversed the trend. Amsterdam has more bikes than people (1.3 million bikes, ~900,000 residents). Utrecht now has a 12,500-space underground bicycle parking garage beneath the central station. The data is clear: separated cycle infrastructure (not painted lanes) drives cycling uptake. Cities with painted-only cycle lanes see cycling rates of ~2%; cities with fully protected lanes see 15–30%.</p>
       </div>
@@ -1496,63 +1496,63 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="city-cmp-row">
         <div class="city-cmp-name">Vienna, Austria</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-green">Top liveability</span>
-          <span class="city-cmp-pill ccp-green">Excellent transit</span>
-          <span class="city-cmp-pill ccp-green">High green space</span>
-          <span class="city-cmp-pill ccp-blue">Affordable rents</span>
+          <span class="city-cmp-pill p-green">Top liveability</span>
+          <span class="city-cmp-pill p-green">Excellent transit</span>
+          <span class="city-cmp-pill p-green">High green space</span>
+          <span class="city-cmp-pill p-blue">Affordable rents</span>
         </div>
       </div>
       <div class="city-cmp-row">
         <div class="city-cmp-name">Singapore</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-green">World-class transit</span>
-          <span class="city-cmp-pill ccp-green">Low crime</span>
-          <span class="city-cmp-pill ccp-amber">High cost of living</span>
-          <span class="city-cmp-pill ccp-blue">Strong urban planning</span>
+          <span class="city-cmp-pill p-green">World-class transit</span>
+          <span class="city-cmp-pill p-green">Low crime</span>
+          <span class="city-cmp-pill p-amber">High cost of living</span>
+          <span class="city-cmp-pill p-blue">Strong urban planning</span>
         </div>
       </div>
       <div class="city-cmp-row">
         <div class="city-cmp-name">Copenhagen</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-green">63% cycling modal share</span>
-          <span class="city-cmp-pill ccp-green">Carbon-neutral goal 2025</span>
-          <span class="city-cmp-pill ccp-amber">Very high housing costs</span>
+          <span class="city-cmp-pill p-green">63% cycling modal share</span>
+          <span class="city-cmp-pill p-green">Carbon-neutral goal 2025</span>
+          <span class="city-cmp-pill p-amber">Very high housing costs</span>
         </div>
       </div>
       <div class="city-cmp-row">
         <div class="city-cmp-name">Tokyo, Japan</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-green">Best transit in world</span>
-          <span class="city-cmp-pill ccp-blue">Relatively affordable</span>
-          <span class="city-cmp-pill ccp-green">Low crime</span>
-          <span class="city-cmp-pill ccp-purple">Flexible zoning</span>
+          <span class="city-cmp-pill p-green">Best transit in world</span>
+          <span class="city-cmp-pill p-blue">Relatively affordable</span>
+          <span class="city-cmp-pill p-green">Low crime</span>
+          <span class="city-cmp-pill p-purple">Flexible zoning</span>
         </div>
       </div>
       <div class="city-cmp-row">
         <div class="city-cmp-name">San Francisco, USA</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-green">High wages</span>
-          <span class="city-cmp-pill ccp-red">Most unaffordable housing</span>
-          <span class="city-cmp-pill ccp-amber">Poor transit for its size</span>
-          <span class="city-cmp-pill ccp-red">High homelessness</span>
+          <span class="city-cmp-pill p-green">High wages</span>
+          <span class="city-cmp-pill p-red">Most unaffordable housing</span>
+          <span class="city-cmp-pill p-amber">Poor transit for its size</span>
+          <span class="city-cmp-pill p-red">High homelessness</span>
         </div>
       </div>
       <div class="city-cmp-row">
         <div class="city-cmp-name">Houston, USA</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-green">No formal zoning code</span>
-          <span class="city-cmp-pill ccp-blue">Affordable housing</span>
-          <span class="city-cmp-pill ccp-red">Car-only mobility</span>
-          <span class="city-cmp-pill ccp-amber">High flood risk</span>
+          <span class="city-cmp-pill p-green">No formal zoning code</span>
+          <span class="city-cmp-pill p-blue">Affordable housing</span>
+          <span class="city-cmp-pill p-red">Car-only mobility</span>
+          <span class="city-cmp-pill p-amber">High flood risk</span>
         </div>
       </div>
       <div class="city-cmp-row">
         <div class="city-cmp-name">Lagos, Nigeria</div>
         <div class="city-cmp-pills">
-          <span class="city-cmp-pill ccp-amber">Fastest growing megacity</span>
-          <span class="city-cmp-pill ccp-red">Major congestion</span>
-          <span class="city-cmp-pill ccp-red">Informal settlements 60%</span>
-          <span class="city-cmp-pill ccp-purple">Young population</span>
+          <span class="city-cmp-pill p-amber">Fastest growing megacity</span>
+          <span class="city-cmp-pill p-red">Major congestion</span>
+          <span class="city-cmp-pill p-red">Informal settlements 60%</span>
+          <span class="city-cmp-pill p-purple">Young population</span>
         </div>
       </div>
 
@@ -1607,15 +1607,15 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-11px text-secondary u-mb-md">Three ideas that are shaping how urban planners think about cities in the coming decades.</div>
 
       <div class="u-display-grid u-gridcols-auto-fit-150px-1fr u-gap-sm u-mb-md">
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">The 15-minute city</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Every resident should be able to reach all daily needs within 15 minutes by foot or bicycle: work, school, groceries, healthcare, leisure, and green space. This requires mixed-use zoning at fine grain, eliminating large single-use areas. Paris is the most prominent city actively restructuring itself around this principle, converting car lanes to cycle lanes and allowing more mixed use in residential areas.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Smart cities</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Using sensors, data, and AI to manage city systems in real time: traffic signals that respond to actual flow, predictive maintenance of water pipes before they burst, energy grids that balance supply and demand dynamically. Singapore is the most advanced example, with the entire city modelled in a "digital twin." However, smart city technology has also raised serious questions about surveillance and data privacy.</p>
         </div>
-        <div class="vsub">
+        <div class="sub-card-compact">
           <p class="vslabel u-fs-12px u-fw-500 text-primary">Climate resilience</p>
           <p class="vsnote u-fs-12px u-mt-4px u-lh-1-6">Cities are beginning to plan explicitly for climate scenarios. Rotterdam has built a network of water squares, underground storage tanks, and permeable surfaces to manage the extreme rainfall events that will increase in frequency. Medellín (Colombia) planted 30-metre-wide green corridors through its hottest neighbourhoods, reducing temperatures by up to 3°C. New Orleans has accepted that some land will flood, and is managing retreat from high-risk areas.</p>
         </div>

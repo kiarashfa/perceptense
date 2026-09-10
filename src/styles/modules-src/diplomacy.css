@@ -101,7 +101,6 @@
 }
 .tl-year { font-size: 10px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1px; }
 .tl-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
-.tl-body  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
 
 /* ── Signal strength widget ── */
 .signal-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 1rem; }
@@ -312,13 +311,6 @@
   border-radius:99px;
   background:#EAF3DE;
   color:#27500A;
-}
-
-.diplomacy-text {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.5;
-  margin:0;
 }
 
 .diplomacy-text-2 {

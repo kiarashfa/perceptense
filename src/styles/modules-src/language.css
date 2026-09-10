@@ -208,12 +208,6 @@
       white-space: nowrap;
       overflow: hidden;
     }
-    .dist-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
     .dist-legend-item {
       display: flex;
       align-items: center;

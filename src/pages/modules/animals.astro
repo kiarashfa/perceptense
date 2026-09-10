@@ -20,7 +20,7 @@ const mod = modules.find((m) => m.id === 42)!;
     <h2 class="sec" id="part-a-the-animal-kingdom-what-animals-are-and-how-they-re-classified">Part A · the animal kingdom — what animals are and how they're classified</h2>
 
     <div class="teaser-grid">
-      <div class="teaser-card">
+      <div class="card">
         <div class="teaser-part">overview</div>
         <div class="teaser-title">Animals are not just "things that move"</div>
         <div class="teaser-body">This module builds a working map of animal life: how animals are defined, why vertebrates feel familiar but are a small branch, why invertebrates carry most of the diversity, how bodies solve movement and sensing, how behaviour emerges, how ecology links everything, and how human choices now shape the future of many lineages.</div>
@@ -54,7 +54,7 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- Evolutionary periods timeline — Cambrian to present -->
     <div class="pc-wrap">
       <div class="pc-inner">
-        <div class="chart-title" style="margin-bottom:12px;">Animal evolution: major periods (millions of years before present)</div>
+        <div class="panel-title" style="margin-bottom:12px;">Animal evolution: major periods (millions of years before present)</div>
         <div id="evo-timeline"></div>
         <div class="pc-axis" id="evo-axis"></div>
         <div class="pc-note">Dates are approximate. Fossils mark minimum ages; actual origins of lineages are usually older than the oldest rock record found. The Cambrian explosion did not create life from nothing — it was a rapid diversification of animals that had already existed for tens of millions of years as soft-bodied Ediacaran creatures.</div>
@@ -64,7 +64,7 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- Vertebrate class origins timeline -->
     <div class="pc-wrap">
       <div class="pc-inner">
-        <div class="chart-title" style="margin-bottom:12px;">When vertebrate groups first appeared (millions of years ago)</div>
+        <div class="panel-title" style="margin-bottom:12px;">When vertebrate groups first appeared (millions of years ago)</div>
         <div id="vert-timeline"></div>
         <div class="pc-axis" id="vert-axis"></div>
       </div>
@@ -90,7 +90,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Phylogenetic tree SVG -->
     <div class="svg-wrap">
-      <div class="chart-title" style="margin-bottom:10px;">Simplified phylogenetic tree of Animalia</div>
+      <div class="panel-title" style="margin-bottom:10px;">Simplified phylogenetic tree of Animalia</div>
       <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
         <style is:inline>
           .phy-line { stroke: var(--color-border-secondary); stroke-width: 1.5; fill: none; }
@@ -137,7 +137,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Biomass bar chart -->
     <div class="card" style="margin-bottom:1rem;">
-      <div class="chart-title">Animal biomass by group (approximate, gigatonnes of carbon)</div>
+      <div class="panel-title">Animal biomass by group (approximate, gigatonnes of carbon)</div>
       <div class="bar-row"><div class="bl">Arthropods</div><div class="bb" style="width:82%;background:#7DAA3C;"><span class="bv" style="color:#fff;">~1,000 Gt C (insects dominate)</span></div></div>
       <div class="bar-row"><div class="bl">Marine fish</div><div class="bb" style="width:10%;background:var(--accent);"><span class="bv" style="color:#fff;">~0.8</span></div></div>
       <div class="bar-row"><div class="bl">Livestock</div><div class="bb" style="width:9%;background:#D4A843;"><span class="bv" style="color:#fff;">~0.1</span></div></div>
@@ -165,7 +165,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Vertebrate body plan SVG (from alt) -->
     <div class="svg-wrap">
-      <div class="chart-title" style="margin-bottom:10px;">A simplified vertebrate body plan — one deep template, modified into every class</div>
+      <div class="panel-title" style="margin-bottom:10px;">A simplified vertebrate body plan — one deep template, modified into every class</div>
       <svg viewBox="0 0 760 250" role="img" aria-label="Simplified vertebrate body plan diagram" style="width:100%;height:auto;display:block;">
         <path class="svg-line" d="M88 124 C180 82, 330 82, 510 124 C610 148, 676 142, 714 110"/>
         <ellipse class="svg-accent" cx="120" cy="124" rx="60" ry="38"/>
@@ -201,7 +201,7 @@ const mod = modules.find((m) => m.id === 42)!;
     <h2 class="sec" id="part-c-invertebrates-97-of-all-animal-species">Part C · invertebrates — 97% of all animal species</h2>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="chart-title">Invertebrate diversity: share of all described animal species</div>
+      <div class="panel-title">Invertebrate diversity: share of all described animal species</div>
       <div class="dist-bar">
         <div class="dist-seg" style="width:59%;background:#7DAA3C;color:#fff;">Insects 59%</div>
         <div class="dist-seg" style="width:10%;background:var(--accent);color:#fff;">Arachnids</div>
@@ -298,7 +298,7 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- Body mass and metabolism slider (from alt) -->
     <div class="slider-wrap">
       <div class="slider-head">
-        <div class="chart-title" style="margin:0;">Body mass and metabolic scaling (Kleiber's law)</div>
+        <div class="panel-title" style="margin:0;">Body mass and metabolic scaling (Kleiber's law)</div>
         <div class="slider-value"><span id="massValue">10 kg</span></div>
       </div>
       <input id="massSlider" type="range" min="-3" max="5" step="0.1" value="1" oninput="updateMass()">
@@ -388,7 +388,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Migration bar chart -->
     <div class="card" style="margin-bottom:1rem;">
-      <div class="chart-title">Greatest animal migrations (round-trip km per year)</div>
+      <div class="panel-title">Greatest animal migrations (round-trip km per year)</div>
       <div class="bar-row"><div class="bl">Arctic Tern</div><div class="bb" style="width:100%;background:#7DAA3C;"><span class="bv" style="color:#fff;">90,000 km — pole to pole</span></div></div>
       <div class="bar-row"><div class="bl">Bar-tailed Godwit</div><div class="bb" style="width:26%;background:var(--accent);"><span class="bv" style="color:#fff;">24,000 km</span></div></div>
       <div class="bar-row"><div class="bl">Humpback Whale</div><div class="bb" style="width:19%;background:#5B6FE4;"><span class="bv" style="color:#fff;">17,000 km</span></div></div>
@@ -403,7 +403,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Food web SVG (network style from alt, upgraded) -->
     <div class="svg-wrap">
-      <div class="chart-title" style="margin-bottom:10px;">Food webs are networks, not ladders</div>
+      <div class="panel-title" style="margin-bottom:10px;">Food webs are networks, not ladders</div>
       <svg viewBox="0 0 760 330" role="img" aria-label="Food web diagram" style="width:100%;height:auto;display:block;">
         <defs>
           <marker id="fw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
@@ -442,11 +442,11 @@ const mod = modules.find((m) => m.id === 42)!;
       <p class="muted-copy" style="margin:0 0 10px;">Enter a starting energy level (plant biomass or producer units) and a transfer efficiency to see what survives at each trophic level. The real world averages ~10% efficiency, but aquatic systems can reach 15–20%; mammal-dominated food chains can drop below 5%.</p>
       <div class="calc-row">
         <div>
-          <div class="calc-label">Producer energy (arbitrary units)</div>
+          <div class="detail-label-spaced">Producer energy (arbitrary units)</div>
           <input id="energyInput" type="number" min="0" step="100" value="10000">
         </div>
         <div>
-          <div class="calc-label">Transfer efficiency per level (%)</div>
+          <div class="detail-label-spaced">Transfer efficiency per level (%)</div>
           <input id="efficiencyInput" type="number" min="1" max="50" step="1" value="10">
         </div>
         <div style="display:flex;align-items:flex-end;"><button id="energyCalc" onclick="calculateEnergy()">Calculate</button></div>
@@ -499,7 +499,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Human pressures bar chart (from alt) -->
     <div class="card" style="margin-bottom:1rem;">
-      <div class="chart-title">Human pressures on wild animal populations — ranked by typical global importance</div>
+      <div class="panel-title">Human pressures on wild animal populations — ranked by typical global importance</div>
       <div class="bar-row"><div class="bl">Habitat loss</div><div class="bb" style="width:96%;background:var(--color-background-danger);border:0.5px solid var(--color-border-danger);"><span class="bv" style="color:var(--color-text-danger);">very high — affects almost all taxa</span></div></div>
       <div class="bar-row"><div class="bl">Overexploitation</div><div class="bb" style="width:82%;background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);"><span class="bv" style="color:var(--color-text-warning);">high — fishing, hunting, trade</span></div></div>
       <div class="bar-row"><div class="bl">Climate change</div><div class="bb" style="width:74%;background:var(--color-background-danger);border:0.5px solid var(--color-border-danger);"><span class="bv" style="color:var(--color-text-danger);">rising fast — now 2nd driver</span></div></div>
@@ -510,7 +510,7 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Extinction rate chart -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="chart-title">Extinction rate: current vs background (extinctions per million species per year)</div>
+      <div class="panel-title">Extinction rate: current vs background (extinctions per million species per year)</div>
       <div class="bar-row"><div class="bl">Background rate</div><div class="bb" style="width:1%;background:#7DAA3C;min-width:28px;"><span class="bv" style="color:#fff;">&nbsp;0.1–1</span></div></div>
       <div class="bar-row"><div class="bl">20th-century rate</div><div class="bb" style="width:30%;background:#D4A843;"><span class="bv" style="color:#fff;">~100x background</span></div></div>
       <div class="bar-row"><div class="bl">Current estimate</div><div class="bb" style="width:100%;background:#C1440E;"><span class="bv" style="color:#fff;">100–1,000x background</span></div></div>

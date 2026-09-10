@@ -114,7 +114,7 @@ const mod = modules.find((m) => m.id === 19)!;
     <!-- Beef doneness interactive -->
     <div class="content-panel">
       <div class="panel-title">Beef doneness explorer — tap to see what's happening inside</div>
-      <div class="doneness-strip">
+      <div class="button-row-compact">
         <div class="doneness-swatch sel showdoneness-control" onclick="showDoneness(0,this)">
           <div class="ds-name text-white">Blue</div>
           <div class="ds-temp ds-temp-style">46–49°C</div>
@@ -143,10 +143,10 @@ const mod = modules.find((m) => m.id === 19)!;
       <div id="doneness-detail"></div>
     </div>
 
-    <div class="meat-card">
+    <div class="content-card">
       <div class="meat-header">
         <span class="meat-name">Chicken &amp; poultry</span>
-        <span class="meat-badge meat-badge-style">Most strict — no pink ever</span>
+        <span class="meat-badge p-coral">Most strict — no pink ever</span>
       </div>
       <div class="row2">
         <div class="sub-card">
@@ -174,10 +174,10 @@ const mod = modules.find((m) => m.id === 19)!;
       </div>
     </div>
 
-    <div class="meat-card">
+    <div class="content-card">
       <div class="meat-header">
         <span class="meat-name">Beef</span>
-        <span class="meat-badge meat-badge-style-2">Flexible — doneness is personal</span>
+        <span class="meat-badge p-amber">Flexible — doneness is personal</span>
       </div>
       <div class="row2">
         <div class="sub-card">
@@ -205,10 +205,10 @@ const mod = modules.find((m) => m.id === 19)!;
       </div>
     </div>
 
-    <div class="meat-card">
+    <div class="content-card">
       <div class="meat-header">
         <span class="meat-name">Pork</span>
-        <span class="meat-badge meat-badge-style-3">Slightly pink is now fine (updated guidelines)</span>
+        <span class="meat-badge p-green">Slightly pink is now fine (updated guidelines)</span>
       </div>
       <div class="row2">
         <div class="sub-card">
@@ -236,10 +236,10 @@ const mod = modules.find((m) => m.id === 19)!;
       </div>
     </div>
 
-    <div class="meat-card">
+    <div class="content-card">
       <div class="meat-header">
         <span class="meat-name">Fish (salmon, cod, sea bass…)</span>
-        <span class="meat-badge meat-badge-style-4">Fastest — easy to overcook</span>
+        <span class="meat-badge p-blue">Fastest — easy to overcook</span>
       </div>
       <div class="row2">
         <div class="sub-card">
@@ -274,7 +274,7 @@ const mod = modules.find((m) => m.id === 19)!;
         <div><div class="atext">Water boils. Meat cooked in boiling water can never exceed this.</div></div>
       </div>
       <div class="anchor-row">
-        <span class="pill pill-red">74°C</span>
+        <span class="pill p-coral">74°C</span>
         <div><div class="atext">Chicken must reach this — no exceptions</div><div class="asub">The strictest rule in all of cooking</div></div>
       </div>
       <div class="anchor-row">
@@ -387,54 +387,54 @@ const mod = modules.find((m) => m.id === 19)!;
       </div>
     </div>
 
-    <div class="sauce-card">
-      <div class="sh"><span class="sname">Béchamel</span><span class="sbadge meat-badge-style-4">milk + roux</span><span class="sbadge sbadge-style">white sauce</span></div>
+    <div class="content-card">
+      <div class="sh"><span class="sname">Béchamel</span><span class="sbadge p-blue">milk + roux</span><span class="sbadge p-teal">white sauce</span></div>
       <div class="ssub">
-        <div class="sbox"><p class="sl">Base</p><p class="sv">Butter + flour (roux) cooked until pale, then milk whisked in.</p></div>
-        <div class="sbox"><p class="sl">Key derivatives</p><p class="sv">Mornay (+ cheese), Soubise (+ onion purée), Nantua (+ crayfish butter), cream sauce.</p></div>
-        <div class="sbox"><p class="sl">Used in</p><p class="sv">Lasagne, moussaka, croque monsieur, cauliflower cheese, gratins, pasta bakes.</p></div>
+        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Butter + flour (roux) cooked until pale, then milk whisked in.</p></div>
+        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Mornay (+ cheese), Soubise (+ onion purée), Nantua (+ crayfish butter), cream sauce.</p></div>
+        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Lasagne, moussaka, croque monsieur, cauliflower cheese, gratins, pasta bakes.</p></div>
       </div>
-      <p class="snote">The roux is the key skill: equal parts butter and flour by weight, cooked over medium heat until it smells nutty but hasn't coloured (white roux). Then add milk gradually, whisking constantly to prevent lumps. Season with nutmeg. The ratio: ~50g butter + 50g flour per 500ml milk for a medium sauce.</p>
+      <p class="muted-copy-tight">The roux is the key skill: equal parts butter and flour by weight, cooked over medium heat until it smells nutty but hasn't coloured (white roux). Then add milk gradually, whisking constantly to prevent lumps. Season with nutmeg. The ratio: ~50g butter + 50g flour per 500ml milk for a medium sauce.</p>
     </div>
 
-    <div class="sauce-card">
-      <div class="sh"><span class="sname">Velouté</span><span class="sbadge meat-badge-style-2">stock + roux</span><span class="sbadge sbadge-style">blonde sauce</span></div>
+    <div class="content-card">
+      <div class="sh"><span class="sname">Velouté</span><span class="sbadge p-amber">stock + roux</span><span class="sbadge p-teal">blonde sauce</span></div>
       <div class="ssub">
-        <div class="sbox"><p class="sl">Base</p><p class="sv">Blond roux (slightly coloured) + white stock (veal, chicken, or fish).</p></div>
-        <div class="sbox"><p class="sl">Key derivatives</p><p class="sv">Allemande (+ egg yolk/cream), Suprême (+ chicken velouté + cream), Vin Blanc (fish velouté + white wine).</p></div>
-        <div class="sbox"><p class="sl">Used in</p><p class="sv">Chicken dishes, fish dishes, vol-au-vents, creamy soups as a base.</p></div>
+        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Blond roux (slightly coloured) + white stock (veal, chicken, or fish).</p></div>
+        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Allemande (+ egg yolk/cream), Suprême (+ chicken velouté + cream), Vin Blanc (fish velouté + white wine).</p></div>
+        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Chicken dishes, fish dishes, vol-au-vents, creamy soups as a base.</p></div>
       </div>
-      <p class="snote">The difference from béchamel: stock instead of milk gives a deeper, more savoury flavour. The blond roux (cooked a few minutes longer than white) adds a subtle nutty note. Velouté means "velvety" — the sauce should be smooth and silky, coating the back of a spoon.</p>
+      <p class="muted-copy-tight">The difference from béchamel: stock instead of milk gives a deeper, more savoury flavour. The blond roux (cooked a few minutes longer than white) adds a subtle nutty note. Velouté means "velvety" — the sauce should be smooth and silky, coating the back of a spoon.</p>
     </div>
 
-    <div class="sauce-card">
-      <div class="sh"><span class="sname">Espagnole</span><span class="sbadge meat-badge-style">brown stock + tomato + mirepoix</span><span class="sbadge meat-badge-style-2">brown sauce</span></div>
+    <div class="content-card">
+      <div class="sh"><span class="sname">Espagnole</span><span class="sbadge p-coral">brown stock + tomato + mirepoix</span><span class="sbadge p-amber">brown sauce</span></div>
       <div class="ssub">
-        <div class="sbox"><p class="sl">Base</p><p class="sv">Dark (brown) roux + rich brown veal stock + mirepoix (carrot, onion, celery) + tomato purée. Slow-cooked, skimmed repeatedly.</p></div>
-        <div class="sbox"><p class="sl">Key derivatives</p><p class="sv">Demi-glace (espagnole reduced 50% + equal veal stock), Bordelaise (demi-glace + red wine + shallots + bone marrow), Chasseur, Robert, Madeira.</p></div>
-        <div class="sbox"><p class="sl">Used in</p><p class="sv">Rich meat dishes, stews, braised meats, classic French bistro sauces.</p></div>
+        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Dark (brown) roux + rich brown veal stock + mirepoix (carrot, onion, celery) + tomato purée. Slow-cooked, skimmed repeatedly.</p></div>
+        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Demi-glace (espagnole reduced 50% + equal veal stock), Bordelaise (demi-glace + red wine + shallots + bone marrow), Chasseur, Robert, Madeira.</p></div>
+        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Rich meat dishes, stews, braised meats, classic French bistro sauces.</p></div>
       </div>
-      <p class="snote">The most labour-intensive mother sauce — traditionally takes 2 days. The brown roux (cooked until deep brown) and reduction of rich bone stock creates extraordinary depth of flavour. Demi-glace is its most important derivative — the backbone of classical French restaurant cooking. When a sauce is described as "reduced to a glaze," this is the direction.</p>
+      <p class="muted-copy-tight">The most labour-intensive mother sauce — traditionally takes 2 days. The brown roux (cooked until deep brown) and reduction of rich bone stock creates extraordinary depth of flavour. Demi-glace is its most important derivative — the backbone of classical French restaurant cooking. When a sauce is described as "reduced to a glaze," this is the direction.</p>
     </div>
 
-    <div class="sauce-card">
-      <div class="sh"><span class="sname">Sauce tomat</span><span class="sbadge sbadge-style-2">tomatoes + pork + aromatics</span><span class="sbadge meat-badge-style-2">red sauce</span></div>
+    <div class="content-card">
+      <div class="sh"><span class="sname">Sauce tomat</span><span class="sbadge p-red">tomatoes + pork + aromatics</span><span class="sbadge p-amber">red sauce</span></div>
       <div class="ssub">
-        <div class="sbox"><p class="sl">Base</p><p class="sv">Pork fat (or butter) + mirepoix + tomatoes + stock. The classical version uses salt pork and veal stock — more complex than Italian tomato sauce.</p></div>
-        <div class="sbox"><p class="sl">Key derivatives</p><p class="sv">Creole, Portuguese, Provençale. Also forms the base for pizza and pasta sauces in adapted form.</p></div>
-        <div class="sbox"><p class="sl">Used in</p><p class="sv">Braised meats, stuffed vegetables, eggs (shakshuka-style), pasta (simplified version).</p></div>
+        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Pork fat (or butter) + mirepoix + tomatoes + stock. The classical version uses salt pork and veal stock — more complex than Italian tomato sauce.</p></div>
+        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Creole, Portuguese, Provençale. Also forms the base for pizza and pasta sauces in adapted form.</p></div>
+        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Braised meats, stuffed vegetables, eggs (shakshuka-style), pasta (simplified version).</p></div>
       </div>
-      <p class="snote">Not to be confused with simple Italian pomodoro. The French classical sauce tomat is richer and more complex — includes roux, salt pork, and long cooking. The tomato arrived in France via Spain in the 16th century; Escoffier elevated it to mother sauce status. The modern kitchen often uses simplified tomato sauce as this base.</p>
+      <p class="muted-copy-tight">Not to be confused with simple Italian pomodoro. The French classical sauce tomat is richer and more complex — includes roux, salt pork, and long cooking. The tomato arrived in France via Spain in the 16th century; Escoffier elevated it to mother sauce status. The modern kitchen often uses simplified tomato sauce as this base.</p>
     </div>
 
-    <div class="sauce-card">
-      <div class="sh"><span class="sname">Hollandaise</span><span class="sbadge meat-badge-style-2">butter + egg yolks + acid</span><span class="sbadge meat-badge-style">emulsified butter sauce</span></div>
+    <div class="content-card">
+      <div class="sh"><span class="sname">Hollandaise</span><span class="sbadge p-amber">butter + egg yolks + acid</span><span class="sbadge p-coral">emulsified butter sauce</span></div>
       <div class="ssub">
-        <div class="sbox"><p class="sl">Base</p><p class="sv">Clarified butter whisked into egg yolks over gentle heat, with lemon juice or white wine vinegar. An emulsion — fat suspended in water by lecithin from egg yolks.</p></div>
-        <div class="sbox"><p class="sl">Key derivatives</p><p class="sv">Béarnaise (+ tarragon + shallots — classic with steak), Choron (béarnaise + tomato), Foyot (béarnaise + meat glaze), Maltaise (+ blood orange).</p></div>
-        <div class="sbox"><p class="sl">Used in</p><p class="sv">Eggs Benedict, asparagus, fish, vegetables. Béarnaise with steak is one of the great pairings.</p></div>
+        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Clarified butter whisked into egg yolks over gentle heat, with lemon juice or white wine vinegar. An emulsion — fat suspended in water by lecithin from egg yolks.</p></div>
+        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Béarnaise (+ tarragon + shallots — classic with steak), Choron (béarnaise + tomato), Foyot (béarnaise + meat glaze), Maltaise (+ blood orange).</p></div>
+        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Eggs Benedict, asparagus, fish, vegetables. Béarnaise with steak is one of the great pairings.</p></div>
       </div>
-      <p class="snote">The most technically demanding mother sauce — the emulsion can "break" (separate into greasy butter and watery eggs) if too hot or stirred too fast. Temperature control is everything: the bowl should be over barely simmering water, not boiling (below 65°C). If it breaks, whisking in a cold tablespoon of water or starting a new yolk in a clean bowl and slowly incorporating the broken sauce can rescue it.</p>
+      <p class="muted-copy-tight">The most technically demanding mother sauce — the emulsion can "break" (separate into greasy butter and watery eggs) if too hot or stirred too fast. Temperature control is everything: the bowl should be over barely simmering water, not boiling (below 65°C). If it breaks, whisking in a cold tablespoon of water or starting a new yolk in a clean bowl and slowly incorporating the broken sauce can rescue it.</p>
     </div>
 
     <!-- ════════════════════════════════════════════
@@ -631,32 +631,32 @@ const mod = modules.find((m) => m.id === 19)!;
     <div class="knife-grid">
       <div class="knife-card">
         <div class="knife-name">Chef's knife (20–25 cm)</div>
-        <div class="knife-use">The single most important knife. Handles 90% of all cutting tasks — dicing, slicing, chopping, mincing. If you own one knife, make it this. German knives (Wüsthof, Henckels) are heavier; Japanese (Global, MAC) are lighter and harder.</div>
+        <div class="muted-copy-tight">The single most important knife. Handles 90% of all cutting tasks — dicing, slicing, chopping, mincing. If you own one knife, make it this. German knives (Wüsthof, Henckels) are heavier; Japanese (Global, MAC) are lighter and harder.</div>
         <span class="knife-tip">Grip: pinch the blade just above the handle (pinch grip) — not the handle. Far more control.</span>
       </div>
       <div class="knife-card">
         <div class="knife-name">Paring knife (8–10 cm)</div>
-        <div class="knife-use">Precision work where a chef's knife is too large — peeling, trimming, segmenting citrus, deveining prawns, scoring. Held in the hand rather than used against a board for many tasks.</div>
+        <div class="muted-copy-tight">Precision work where a chef's knife is too large — peeling, trimming, segmenting citrus, deveining prawns, scoring. Held in the hand rather than used against a board for many tasks.</div>
         <span class="knife-tip">For peeling: cut toward your thumb, not away. More control, not more dangerous if done properly.</span>
       </div>
       <div class="knife-card">
         <div class="knife-name">Serrated bread knife (25–30 cm)</div>
-        <div class="knife-use">Designed for bread's hard crust. The serrated edge saws rather than compresses, so soft interiors don't squash. Also excellent for tomatoes and anything with a firm exterior and soft interior.</div>
+        <div class="muted-copy-tight">Designed for bread's hard crust. The serrated edge saws rather than compresses, so soft interiors don't squash. Also excellent for tomatoes and anything with a firm exterior and soft interior.</div>
         <span class="knife-tip">Never hone or sharpen a serrated knife at home — send to a professional.</span>
       </div>
       <div class="knife-card">
         <div class="knife-name">Boning knife (13–17 cm)</div>
-        <div class="knife-use">Thin, flexible or stiff blade for separating meat from bone, butterflying chicken breasts, filleting fish. The thin blade can follow contours that a chef's knife cannot.</div>
+        <div class="muted-copy-tight">Thin, flexible or stiff blade for separating meat from bone, butterflying chicken breasts, filleting fish. The thin blade can follow contours that a chef's knife cannot.</div>
         <span class="knife-tip">Flexible for fish; stiff for beef and pork. A filleting knife is essentially a long flexible boning knife.</span>
       </div>
       <div class="knife-card">
         <div class="knife-name">Nakiri (Japanese vegetable knife)</div>
-        <div class="knife-use">Flat rectangular blade for vegetables — pushes straight down rather than rocking. Zero tip means no puncturing the board; perfect for long, thin cuts of soft vegetables. Increasingly popular in Western kitchens.</div>
+        <div class="muted-copy-tight">Flat rectangular blade for vegetables — pushes straight down rather than rocking. Zero tip means no puncturing the board; perfect for long, thin cuts of soft vegetables. Increasingly popular in Western kitchens.</div>
         <span class="knife-tip">Not for hard root vegetables like large turnips — the thin blade can chip on extreme resistance.</span>
       </div>
       <div class="knife-card">
         <div class="knife-name">Honing steel</div>
-        <div class="knife-use">Not a sharpener — it realigns the microscopic edge that bends with use. Should be used before nearly every cooking session. A few strokes per side at 15–20° angle maintains sharpness between proper sharpenings.</div>
+        <div class="muted-copy-tight">Not a sharpener — it realigns the microscopic edge that bends with use. Should be used before nearly every cooking session. A few strokes per side at 15–20° angle maintains sharpness between proper sharpenings.</div>
         <span class="knife-tip">A ceramic honing rod is gentler on harder Japanese knives. The "swipe down the steel" technique is faster but the "steel held upright" method is safer for beginners.</span>
       </div>
     </div>
@@ -983,37 +983,37 @@ const mod = modules.find((m) => m.id === 19)!;
       <div class="wine-row">
         <div class="wine-dot wine-dot-style"></div>
         <div>
-          <div class="wine-text"><strong>Acid cuts fat and richness.</strong> Chablis (high-acid Chardonnay) with oysters; Champagne with fried food; Sauvignon Blanc with goat's cheese. The acid refreshes the palate between bites.</div>
+          <div class="atext"><strong>Acid cuts fat and richness.</strong> Chablis (high-acid Chardonnay) with oysters; Champagne with fried food; Sauvignon Blanc with goat's cheese. The acid refreshes the palate between bites.</div>
         </div>
       </div>
       <div class="wine-row">
         <div class="wine-dot wine-dot-style-2"></div>
         <div>
-          <div class="wine-text"><strong>Tannins clash with fish oils but love protein.</strong> A tannic Cabernet Sauvignon with a rich beef steak — the tannins bind to the meat's proteins, creating a velvet texture. The same wine with fish makes the wine taste metallic and the fish taste bitter.</div>
+          <div class="atext"><strong>Tannins clash with fish oils but love protein.</strong> A tannic Cabernet Sauvignon with a rich beef steak — the tannins bind to the meat's proteins, creating a velvet texture. The same wine with fish makes the wine taste metallic and the fish taste bitter.</div>
         </div>
       </div>
       <div class="wine-row">
         <div class="wine-dot wine-dot-style-3"></div>
         <div>
-          <div class="wine-text"><strong>Sweet wine with spicy food.</strong> Off-dry Riesling with Thai food; Gewürztraminer with Indian curry. The residual sugar cools the heat and contrasts it pleasantly. Dry wine with very spicy food makes both taste harsh.</div>
+          <div class="atext"><strong>Sweet wine with spicy food.</strong> Off-dry Riesling with Thai food; Gewürztraminer with Indian curry. The residual sugar cools the heat and contrasts it pleasantly. Dry wine with very spicy food makes both taste harsh.</div>
         </div>
       </div>
       <div class="wine-row">
         <div class="wine-dot wine-dot-style-4"></div>
         <div>
-          <div class="wine-text"><strong>Match weight to weight.</strong> A light Pinot Noir won't stand up to a rich beef bourguignon; a powerful Barolo will overwhelm a delicate sole. Match the body and intensity of the wine to the body and intensity of the dish.</div>
+          <div class="atext"><strong>Match weight to weight.</strong> A light Pinot Noir won't stand up to a rich beef bourguignon; a powerful Barolo will overwhelm a delicate sole. Match the body and intensity of the wine to the body and intensity of the dish.</div>
         </div>
       </div>
       <div class="wine-row">
         <div class="wine-dot wine-dot-style-5"></div>
         <div>
-          <div class="wine-text"><strong>Regional pairings work almost always.</strong> Wines and foods from the same region evolved together over centuries. Burgundy Pinot Noir with coq au vin; Sancerre with Loire Valley goat's cheese; Barolo with Piedmontese white truffle pasta; Fino Sherry with jamón ibérico.</div>
+          <div class="atext"><strong>Regional pairings work almost always.</strong> Wines and foods from the same region evolved together over centuries. Burgundy Pinot Noir with coq au vin; Sancerre with Loire Valley goat's cheese; Barolo with Piedmontese white truffle pasta; Fino Sherry with jamón ibérico.</div>
         </div>
       </div>
       <div class="wine-row wine-row-style">
         <div class="wine-dot wine-dot-style-6"></div>
         <div>
-          <div class="wine-text"><strong>Dessert wine must be sweeter than the dessert.</strong> If the dessert is sweeter, the wine tastes sour and unpleasant. Sauternes with crème brûlée; Pedro Ximénez Sherry with vanilla ice cream; Tokaji Aszú with foie gras (the classic sweet-fatty pairing).</div>
+          <div class="atext"><strong>Dessert wine must be sweeter than the dessert.</strong> If the dessert is sweeter, the wine tastes sour and unpleasant. Sauternes with crème brûlée; Pedro Ximénez Sherry with vanilla ice cream; Tokaji Aszú with foie gras (the classic sweet-fatty pairing).</div>
         </div>
       </div>
     </div>

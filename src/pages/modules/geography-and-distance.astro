@@ -50,13 +50,13 @@ const mod = modules.find((m) => m.id === 3)!;
     <!-- NEW: Continents comparison -->
     <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">All seven continents by area</div>
-      <div class="cont-row"><span class="ct-lbl">Asia (44.6M km²)</span><div class="ct-bar u-w-100-pct u-bg-blue-700"><span class="ct-val u-text-white">largest — 30% of Earth's land</span></div></div>
-      <div class="cont-row"><span class="ct-lbl">Africa (30.4M km²)</span><div class="ct-bar u-w-68-pct u-bg-blue-500"><span class="ct-val u-text-white">often underestimated on maps</span></div></div>
-      <div class="cont-row"><span class="ct-lbl">North America (24.7M km²)</span><div class="ct-bar u-w-55-pct u-bg-blue-400"><span class="ct-val u-text-white">55%</span></div></div>
-      <div class="cont-row"><span class="ct-lbl">South America (17.8M km²)</span><div class="ct-bar u-w-40-pct u-bg-blue-300"><span class="ct-val u-text-navy-950">40%</span></div></div>
-      <div class="cont-row"><span class="ct-lbl">Antarctica (14.2M km²)</span><div class="ct-bar u-w-32-pct u-bg-blue-200"><span class="ct-val u-text-navy-950">bigger than Europe</span></div></div>
-      <div class="cont-row"><span class="ct-lbl">Europe (10.5M km²)</span><div class="ct-bar u-w-24-pct u-bg-blue-100 u-border-0-d-5px-solid-hex-b5d4f4"><span class="ct-val u-text-navy-950">≈ USA</span></div></div>
-      <div class="cont-row"><span class="ct-lbl">Australia (7.7M km²)</span><div class="ct-bar u-w-17-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4"><span class="ct-val u-text-navy-950">smallest</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">Asia (44.6M km²)</span><div class="ct-bar u-w-100-pct u-bg-blue-700"><span class="bv u-text-white">largest — 30% of Earth's land</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">Africa (30.4M km²)</span><div class="ct-bar u-w-68-pct u-bg-blue-500"><span class="bv u-text-white">often underestimated on maps</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">North America (24.7M km²)</span><div class="ct-bar u-w-55-pct u-bg-blue-400"><span class="bv u-text-white">55%</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">South America (17.8M km²)</span><div class="ct-bar u-w-40-pct u-bg-blue-300"><span class="bv u-text-navy-950">40%</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">Antarctica (14.2M km²)</span><div class="ct-bar u-w-32-pct u-bg-blue-200"><span class="bv u-text-navy-950">bigger than Europe</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">Europe (10.5M km²)</span><div class="ct-bar u-w-24-pct u-bg-blue-100 u-border-0-d-5px-solid-hex-b5d4f4"><span class="bv u-text-navy-950">≈ USA</span></div></div>
+      <div class="bar-row"><span class="ct-lbl">Australia (7.7M km²)</span><div class="ct-bar u-w-17-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4"><span class="bv u-text-navy-950">smallest</span></div></div>
       <p class="u-fs-12px text-secondary u-m-8px-0-0 u-lh-1-d-5">Africa is far larger than it looks on most world maps — the Mercator projection inflates Northern latitudes. Africa could fit the USA, China, India, and most of Europe inside it simultaneously.</p>
     </div>
 
@@ -555,11 +555,11 @@ const mod = modules.find((m) => m.id === 3)!;
     <!-- NEW: Ocean sizes -->
     <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Ocean surface areas</div>
-      <div class="ocean-row"><span class="oc-lbl">Pacific (165M km²)</span><div class="oc-bar u-w-100-pct u-bg-blue-700"><span class="oc-val u-text-white">largest — bigger than all land combined</span></div></div>
-      <div class="ocean-row"><span class="oc-lbl">Atlantic (106M km²)</span><div class="oc-bar u-w-64-pct u-bg-blue-500"><span class="oc-val u-text-white">64% of Pacific</span></div></div>
-      <div class="ocean-row"><span class="oc-lbl">Indian (70M km²)</span><div class="oc-bar u-w-42-pct u-bg-blue-400"><span class="oc-val u-text-white">42%</span></div></div>
-      <div class="ocean-row"><span class="oc-lbl">Southern (21M km²)</span><div class="oc-bar u-w-13-pct u-bg-blue-300"><span class="oc-val u-text-navy-950">13%</span></div></div>
-      <div class="ocean-row"><span class="oc-lbl">Arctic (15M km²)</span><div class="oc-bar u-w-9-pct u-bg-blue-200 u-border-0-d-5px-solid-hex-85b7eb"><span class="oc-val u-text-navy-950">9%</span></div></div>
+      <div class="bar-row"><span class="oc-lbl">Pacific (165M km²)</span><div class="bb u-w-100-pct u-bg-blue-700"><span class="bv u-text-white">largest — bigger than all land combined</span></div></div>
+      <div class="bar-row"><span class="oc-lbl">Atlantic (106M km²)</span><div class="bb u-w-64-pct u-bg-blue-500"><span class="bv u-text-white">64% of Pacific</span></div></div>
+      <div class="bar-row"><span class="oc-lbl">Indian (70M km²)</span><div class="bb u-w-42-pct u-bg-blue-400"><span class="bv u-text-white">42%</span></div></div>
+      <div class="bar-row"><span class="oc-lbl">Southern (21M km²)</span><div class="bb u-w-13-pct u-bg-blue-300"><span class="bv u-text-navy-950">13%</span></div></div>
+      <div class="bar-row"><span class="oc-lbl">Arctic (15M km²)</span><div class="bb u-w-9-pct u-bg-blue-200 u-border-0-d-5px-solid-hex-85b7eb"><span class="bv u-text-navy-950">9%</span></div></div>
       <p class="u-fs-12px text-secondary u-m-10px-0-0 u-lh-1-d-5">The Pacific Ocean alone is larger than all of Earth's land surface combined (~150M km²). Water covers 71% of the planet.</p>
     </div>
 

@@ -157,7 +157,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Cirrus (Ci)</div>
           <div class="cloud-desc">Wispy, hair-like streaks of ice crystals. The first sign of an approaching warm front. Appear like white brushstrokes on blue. "Mare's tails" point in the direction of upper winds.</div>
-          <span class="cloud-badge cloud-badge-style">Fair now · front 24h+ away</span>
+          <span class="cloud-badge p-blue">Fair now · front 24h+ away</span>
         </div>
       </div>
 
@@ -166,7 +166,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Cirrostratus (Cs)</div>
           <div class="cloud-desc">Thin, milky veil covering the whole sky. Halos around the Sun or Moon form here (22° ring from ice crystal refraction). Sky looks milky-white. The halo is a reliable indicator of approaching precipitation.</div>
-          <span class="cloud-badge cloud-badge-style">Halo · rain within 12–24 h</span>
+          <span class="cloud-badge p-blue">Halo · rain within 12–24 h</span>
         </div>
       </div>
 
@@ -175,7 +175,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Cirrocumulus (Cc)</div>
           <div class="cloud-desc">Small, white puffs in rows or ripples ("mackerel sky"). Pure white — no grey. Rare. Indicates high-altitude instability. Traditional sailors' warning: "mackerel sky and mares' tails make tall ships carry low sails."</div>
-          <span class="cloud-badge cloud-badge-style">Short-lived · possible deterioration</span>
+          <span class="cloud-badge p-blue">Short-lived · possible deterioration</span>
         </div>
       </div>
 
@@ -184,7 +184,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Altostratus (As)</div>
           <div class="cloud-desc">Grey or blue-grey sheet covering the whole sky. The Sun appears as through ground glass — no halo (water droplets, not ice crystals). Follows cirrostratus. Steady, continuous rain imminent.</div>
-          <span class="cloud-badge cloud-badge-style-2">Continuous rain soon</span>
+          <span class="cloud-badge p-teal">Continuous rain soon</span>
         </div>
       </div>
 
@@ -193,7 +193,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Altocumulus (Ac)</div>
           <div class="cloud-desc">White and grey patches or rolls, larger than cirrocumulus. Often shows iridescence (rainbow colours at edges from diffraction). "Altocumulus castellanus" — turret-shaped tops — signals instability and possible afternoon thunderstorms.</div>
-          <span class="cloud-badge cloud-badge-style-2">Variable · possible afternoon storms</span>
+          <span class="cloud-badge p-teal">Variable · possible afternoon storms</span>
         </div>
       </div>
 
@@ -202,7 +202,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Stratus (St)</div>
           <div class="cloud-desc">Uniform grey layer, like fog that isn't quite at the surface. May produce drizzle but rarely heavy rain. Creates grey, overcast days without dramatic weather. Fog lifting off the ground becomes stratus.</div>
-          <span class="cloud-badge cloud-badge-style-3">Drizzle possible · dull overcast</span>
+          <span class="cloud-badge p-amber">Drizzle possible · dull overcast</span>
         </div>
       </div>
 
@@ -211,7 +211,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Stratocumulus (Sc)</div>
           <div class="cloud-desc">The most common cloud type globally. Low, grey, lumpy rolls or patches with some blue sky between. Usually produces little or no rain. Covers vast areas under anticyclones. The "grey British sky" is typically stratocumulus.</div>
-          <span class="cloud-badge cloud-badge-style-3">Most common cloud · usually dry</span>
+          <span class="cloud-badge p-amber">Most common cloud · usually dry</span>
         </div>
       </div>
 
@@ -220,7 +220,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Nimbostratus (Ns)</div>
           <div class="cloud-desc">Dark, thick grey layer — the "rain cloud." Produces continuous, steady precipitation (rain, snow, or sleet). So thick it blocks sunlight completely. Typically 3–4 km deep. Associated with warm fronts.</div>
-          <span class="cloud-badge cloud-badge-style-4">Continuous rain or snow</span>
+          <span class="cloud-badge p-red">Continuous rain or snow</span>
         </div>
       </div>
 
@@ -229,7 +229,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Cumulus (Cu)</div>
           <div class="cloud-desc">Flat base, cauliflower top. The "fair weather" cloud when small ("cumulus humilis"). When they grow tall ("cumulus congestus"), they signal increasing instability and may develop into cumulonimbus. Key sign: if cumulus keep growing through the afternoon, take shelter.</div>
-          <span class="cloud-badge cloud-badge-style-5">Fair if small · watch if growing</span>
+          <span class="cloud-badge p-coral">Fair if small · watch if growing</span>
         </div>
       </div>
 
@@ -238,7 +238,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div>
           <div class="cloud-name">Cumulonimbus (Cb)</div>
           <div class="cloud-desc">The king of clouds. Towering from near the surface to the tropopause. The classic "anvil" top forms when the top spreads sideways at the tropopause (ice crystals). Contains hail, lightning, extreme turbulence, downbursts. Can contain energy equivalent to several atomic bombs. Generates its own mesoscale circulation.</div>
-          <span class="cloud-badge cloud-badge-style-4">Heavy rain · hail · lightning · danger</span>
+          <span class="cloud-badge p-red">Heavy rain · hail · lightning · danger</span>
         </div>
       </div>
     </div>
@@ -294,7 +294,7 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
       <div class="calc-result" id="wc-result">
         <div class="calc-result-big" id="wc-feels">−14°C</div>
-        <div class="calc-result-note" id="wc-note">Feels like −14°C</div>
+        <div class="muted-copy-tight" id="wc-note">Feels like −14°C</div>
       </div>
     </div>
 
@@ -316,7 +316,7 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
       <div class="calc-result" id="hi-result">
         <div class="calc-result-big" id="hi-feels">?</div>
-        <div class="calc-result-note" id="hi-note"></div>
+        <div class="muted-copy-tight" id="hi-note"></div>
       </div>
     </div>
 
