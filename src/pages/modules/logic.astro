@@ -1,0 +1,1549 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/logic.css';
+
+const mod = modules.find((m) => m.id === 47)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+    <div class="module-head">
+      <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+      <h1 class="module-title">Module 47: Logic</h1>
+    </div>
+    <p class="module-subtitle">The rules of valid reasoning, formal systems, and the paradoxes that break them</p>
+
+    <h2 class="sec" id="part-a-what-logic-is-the-science-of-valid-reasoning">Part A - what logic is: the science of valid reasoning</h2>
+    <div class="teaser-grid">
+      <div class="teaser-card">
+        <div class="teaser-num">Overview</div>
+        <div class="teaser-name">A map of reasoning itself</div>
+        <div class="teaser-desc">Logic studies what follows from what. It is the discipline of separating the structure of an argument from the topic, tone, and social pressure around it. In this module, students move from validity and soundness into symbolic logic, fallacies, formal systems, probability, decision theory, paradoxes, and practical critical thinking.</div>
+      </div>
+    </div>
+
+    <div class="logic-card">
+      <div class="logic-title">Form over content</div>
+      <div class="logic-copy">Logic's central insight is that validity depends on form, not subject matter. "All A are B; C is A; therefore C is B" keeps the same structure whether A means mammals, legal contracts, integers, or fictional creatures. A valid argument guarantees only this: if the premises are true, the conclusion cannot be false. A sound argument is stronger because it is valid and its premises are actually true.</div>
+    </div>
+
+    <div class="explorer-buttons" aria-label="Logic foundations">
+      <button onclick="showLogicCore('validity', this)">Validity</button>
+      <button onclick="showLogicCore('soundness', this)">Soundness</button>
+      <button onclick="showLogicCore('form', this)">Form</button>
+      <button onclick="showLogicCore('rhetoric', this)">Rhetoric</button>
+      <button onclick="showLogicCore('informal', this)">Informal logic</button>
+    </div>
+    <div id="logic-core-display" class="explorer-panel"></div>
+
+    <div class="logic-card">
+      <div class="logic-title">The historical hinge</div>
+      <div class="logic-copy">Aristotle, writing around 350 BCE, made the syllogism famous: all humans are mortal; Socrates is human; therefore Socrates is mortal. The Stoics then developed propositional logic, with if-then arguments closer to modern computing. George Boole turned logic into algebra in 1847. Gottlob Frege's 1879 <span class="mono">Begriffsschrift</span> added quantifiers and variables, which is why modern logic can say "for every number there is a larger number" without pretending every argument is about Socrates. The short version: logic moved from classifying sentences to designing languages precise enough for mathematics and machines.</div>
+    </div>
+
+    <h2 class="sec" id="part-b-classical-logic-the-foundations">Part B - classical logic: the foundations</h2>
+    <div class="diagram-card">
+      <div class="chart-title">Argument anatomy</div>
+      <svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow diagram showing how premises and inference rules produce a conclusion">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-border-secondary)"></path>
+          </marker>
+        </defs>
+        <rect class="diagram-node" x="30" y="34" width="180" height="58" rx="10"></rect>
+        <text class="diagram-label" x="120" y="58" text-anchor="middle">Premise 1</text>
+        <text class="diagram-small" x="120" y="77" text-anchor="middle">If P, then Q</text>
+        <rect class="diagram-node" x="30" y="138" width="180" height="58" rx="10"></rect>
+        <text class="diagram-label" x="120" y="162" text-anchor="middle">Premise 2</text>
+        <text class="diagram-small" x="120" y="181" text-anchor="middle">P is true</text>
+        <rect class="diagram-accent" x="285" y="86" width="160" height="64" rx="10"></rect>
+        <text class="diagram-label" x="365" y="112" text-anchor="middle">Inference rule</text>
+        <text class="diagram-small" x="365" y="132" text-anchor="middle">modus ponens</text>
+        <rect class="diagram-node" x="515" y="86" width="170" height="64" rx="10"></rect>
+        <text class="diagram-label" x="600" y="112" text-anchor="middle">Conclusion</text>
+        <text class="diagram-small" x="600" y="132" text-anchor="middle">Q is true</text>
+        <path class="diagram-line" d="M 210 63 C 248 63, 250 104, 285 108" marker-end="url(#arrow)"></path>
+        <path class="diagram-line" d="M 210 167 C 248 167, 250 132, 285 128" marker-end="url(#arrow)"></path>
+        <path class="diagram-line" d="M 445 118 L 515 118" marker-end="url(#arrow)"></path>
+        <text class="diagram-small" x="360" y="204" text-anchor="middle">Logic checks whether the bridge is licensed, not whether the starting facts are pleasant.</text>
+      </svg>
+    </div>
+
+    <div class="elem-grid" aria-label="Classical logic explorer">
+      <div class="elem-card" onclick="showLogicElement('connectives', this)">
+        <div class="elem-icon"><i class="fa-solid fa-code-branch"></i></div>
+        <div class="elem-name">Connectives</div>
+        <div class="elem-sub">and, or, not, if, iff</div>
+      </div>
+      <div class="elem-card" onclick="showLogicElement('deduction', this)">
+        <div class="elem-icon"><i class="fa-solid fa-arrow-down-short-wide"></i></div>
+        <div class="elem-name">Deduction</div>
+        <div class="elem-sub">certainty from premises</div>
+      </div>
+      <div class="elem-card" onclick="showLogicElement('predicate', this)">
+        <div class="elem-icon"><i class="fa-solid fa-universal-access"></i></div>
+        <div class="elem-name">Predicate logic</div>
+        <div class="elem-sub">all, some, none</div>
+      </div>
+      <div class="elem-card" onclick="showLogicElement('induction', this)">
+        <div class="elem-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="elem-name">Induction</div>
+        <div class="elem-sub">evidence to expectation</div>
+      </div>
+      <div class="elem-card" onclick="showLogicElement('abduction', this)">
+        <div class="elem-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="elem-name">Abduction</div>
+        <div class="elem-sub">best explanation</div>
+      </div>
+    </div>
+    <div id="logic-element-detail" class="elem-detail elem-detail-panel"></div>
+
+    <div class="truth-explorer">
+      <div class="chart-title">Truth table explorer</div>
+      <div class="logic-copy">Select a connective and watch how the truth value changes. The table columns use a fixed layout so the shape stays stable while students compare operators.</div>
+      <div class="explorer-buttons" aria-label="Truth table explorer">
+        <button onclick="showTruthTable('and', this)">AND</button>
+        <button onclick="showTruthTable('or', this)">OR</button>
+        <button onclick="showTruthTable('not', this)">NOT</button>
+        <button onclick="showTruthTable('if', this)">IF</button>
+        <button onclick="showTruthTable('iff', this)">IFF</button>
+      </div>
+      <div id="truth-table-display" class="truth-table-wrap"></div>
+      <div id="truth-table-note" class="chart-note"></div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="chart-title">Four valid deductive forms</div>
+      <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing four valid deductive forms">
+        <rect class="diagram-node" x="12" y="26" width="170" height="132" rx="10"></rect>
+        <text class="diagram-label" x="97" y="50" text-anchor="middle">Modus ponens</text>
+        <text class="diagram-small" x="97" y="75" text-anchor="middle">If P then Q</text>
+        <text class="diagram-small" x="97" y="96" text-anchor="middle">P is true</text>
+        <line x1="38" y1="111" x2="156" y2="111" class="diagram-line"></line>
+        <text class="diagram-small" x="97" y="133" text-anchor="middle">therefore Q</text>
+
+        <rect class="diagram-node" x="202" y="26" width="170" height="132" rx="10"></rect>
+        <text class="diagram-label" x="287" y="50" text-anchor="middle">Modus tollens</text>
+        <text class="diagram-small" x="287" y="75" text-anchor="middle">If P then Q</text>
+        <text class="diagram-small" x="287" y="96" text-anchor="middle">Q is false</text>
+        <line x1="228" y1="111" x2="346" y2="111" class="diagram-line"></line>
+        <text class="diagram-small" x="287" y="133" text-anchor="middle">therefore P is false</text>
+
+        <rect class="diagram-accent" x="392" y="26" width="170" height="132" rx="10"></rect>
+        <text class="diagram-label" x="477" y="50" text-anchor="middle">Conditional chain</text>
+        <text class="diagram-small" x="477" y="75" text-anchor="middle">If P then Q</text>
+        <text class="diagram-small" x="477" y="96" text-anchor="middle">If Q then R</text>
+        <line x1="418" y1="111" x2="536" y2="111" class="diagram-line"></line>
+        <text class="diagram-small" x="477" y="133" text-anchor="middle">therefore if P then R</text>
+
+        <rect class="diagram-node" x="582" y="26" width="166" height="132" rx="10"></rect>
+        <text class="diagram-label" x="665" y="50" text-anchor="middle">Either-or</text>
+        <text class="diagram-small" x="665" y="75" text-anchor="middle">P or Q</text>
+        <text class="diagram-small" x="665" y="96" text-anchor="middle">P is false</text>
+        <line x1="608" y1="111" x2="722" y2="111" class="diagram-line"></line>
+        <text class="diagram-small" x="665" y="133" text-anchor="middle">therefore Q</text>
+      </svg>
+      <div class="chart-note">These are reusable argument skeletons. Logic asks whether the skeleton preserves truth; other fields decide whether the starting premises deserve belief.</div>
+    </div>
+
+    <h2 class="sec" id="part-c-fallacies-the-patterns-of-bad-reasoning">Part C - fallacies: the patterns of bad reasoning</h2>
+    <div class="explorer-buttons" aria-label="Fallacy explorer">
+      <button onclick="showFallacy('consequent', this)">Affirming consequent</button>
+      <button onclick="showFallacy('antecedent', this)">Denying antecedent</button>
+      <button onclick="showFallacy('middle', this)">Undistributed middle</button>
+      <button onclick="showFallacy('straw', this)">Straw man</button>
+      <button onclick="showFallacy('adHominem', this)">Ad hominem</button>
+      <button onclick="showFallacy('dichotomy', this)">False dichotomy</button>
+      <button onclick="showFallacy('authority', this)">Appeal to authority</button>
+      <button onclick="showFallacy('postHoc', this)">Post hoc</button>
+      <button onclick="showFallacy('base', this)">Base rate neglect</button>
+      <button onclick="showFallacy('sunk', this)">Sunk cost</button>
+    </div>
+    <div id="fallacy-display" class="explorer-panel"></div>
+
+    <div class="scale-box">
+      <div class="chart-title">Fallacies on a spectrum: structural error to persuasion trick</div>
+      <div class="scale-poles">
+        <div></div>
+        <div class="scale-pole-labels"><span>invalid form</span><span>rhetorical distortion</span></div>
+      </div>
+      <div class="cscale-row"><div class="cscale-name">Affirming consequent</div><div class="cscale-track"><span class="cscale-dot" data-left="8"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Undistributed middle</div><div class="cscale-track"><span class="cscale-dot" data-left="18"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">False dichotomy</div><div class="cscale-track"><span class="cscale-dot" data-left="54"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Appeal to authority</div><div class="cscale-track"><span class="cscale-dot" data-left="66"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Straw man</div><div class="cscale-track"><span class="cscale-dot" data-left="86"></span></div></div>
+      <div class="chart-note">Placement is conceptual, not a measurement. Formal fallacies can be diagnosed from structure alone; informal fallacies usually require context, definitions, and background facts.</div>
+    </div>
+
+    <div class="logic-warning">A bias is not automatically a fallacy. Confirmation bias is a psychological tendency to seek friendly evidence; a fallacy is a defect in an argument. They overlap when a person turns selective attention into a conclusion, as in "I found three stories that confirm my belief, so the belief is established."</div>
+
+    <h2 class="sec" id="part-d-formal-systems-and-their-limits-godel-hilbert-and-turing">Part D - formal systems and their limits: Godel, Hilbert, and Turing</h2>
+    <div id="logic-timeline" class="period-chart"></div>
+
+    <div class="cgrid">
+      <div class="card">
+        <div class="clabel">Formal system</div>
+        <div class="cval">A game with symbols</div>
+        <div class="cnote">A formal system needs an alphabet, formation rules, axioms, and inference rules. Euclidean geometry is the classical model: start with postulates and derive theorems. Modern arithmetic can be formalized the same way, but the symbols are stripped of intuition so every legal move can be checked mechanically.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Hilbert's programme</div>
+        <div class="cval">Prove mathematics secure</div>
+        <div class="cnote">David Hilbert wanted mathematics shown complete, consistent, and decidable by finite means. In 1900 he listed 23 famous problems; in 1928 he sharpened the decision problem. The dream was not modest: a procedure that, in principle, could settle every well-formed mathematical question.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Godel's blow</div>
+        <div class="cval">Truth outruns proof</div>
+        <div class="cnote">In 1931 Kurt Godel showed that any consistent formal system strong enough for ordinary arithmetic contains true statements it cannot prove. His second theorem added that such a system cannot prove its own consistency from inside itself. This did not destroy mathematics; it ended one fantasy about total self-certification.</div>
+      </div>
+      <div class="card">
+        <div class="clabel">Turing's mirror</div>
+        <div class="cval">Computation has limits</div>
+        <div class="cnote">Alan Turing proved in 1936 that no general algorithm can decide whether any arbitrary program eventually halts. The proof diagonalizes against the hypothetical solver. It is not a hardware limitation, and faster computers do not help. It is a theorem about what computation is.</div>
+      </div>
+    </div>
+
+    <div class="slider-box">
+      <div class="slider-head">
+        <div class="chart-title">Self-reference risk slider</div>
+        <div class="slider-value"><span id="selfref-value">3</span>/10</div>
+      </div>
+      <input id="selfref-slider" type="range" min="0" max="10" value="3">
+      <div class="slider-poles"><span>object language only</span><span>talking about its own sentences</span></div>
+      <div id="selfref-output" class="live-result"></div>
+    </div>
+
+    <h2 class="sec" id="part-e-probability-and-decision-theory-logic-under-uncertainty">Part E - probability and decision theory: logic under uncertainty</h2>
+    <div class="calc-box">
+      <div class="chart-title">Bayes calculator: base rates change everything</div>
+      <div class="calc-grid">
+        <div class="calc-field">
+          <label for="prior">Prior probability (%)</label>
+          <input id="prior" type="number" min="0.01" max="99.99" step="0.01" value="1">
+        </div>
+        <div class="calc-field">
+          <label for="sensitivity">Sensitivity (%)</label>
+          <input id="sensitivity" type="number" min="0.01" max="99.99" step="0.01" value="99">
+        </div>
+        <div class="calc-field">
+          <label for="falsepos">False positive rate (%)</label>
+          <input id="falsepos" type="number" min="0.01" max="99.99" step="0.01" value="5">
+        </div>
+      </div>
+      <button onclick="calculateBayes()">Calculate</button>
+      <div id="bayes-result" class="calc-result"></div>
+    </div>
+
+    <div class="dist-box">
+      <div class="chart-title">Reasoning under uncertainty: what changes the conclusion?</div>
+      <div class="dist-bar" aria-label="Distribution of evidence forces">
+        <div class="dist-seg" data-width="35" data-color="var(--color-background-info)"></div>
+        <div class="dist-seg" data-width="25" data-color="var(--color-background-success)"></div>
+        <div class="dist-seg" data-width="20" data-color="var(--color-background-warning)"></div>
+        <div class="dist-seg" data-width="20" data-color="var(--accent-bg)"></div>
+      </div>
+      <div class="dist-legend">
+        <div class="legend-item"><span class="legend-swatch" data-color="var(--color-background-info)"></span>Base rate</div>
+        <div class="legend-item"><span class="legend-swatch" data-color="var(--color-background-success)"></span>Likelihood</div>
+        <div class="legend-item"><span class="legend-swatch" data-color="var(--color-background-warning)"></span>Payoff</div>
+        <div class="legend-item"><span class="legend-swatch" data-color="var(--accent-bg)"></span>Strategy</div>
+      </div>
+      <div class="chart-note">Illustrative distribution, not a universal law. It reminds you that probability, utility, and strategic interaction are different questions that people often collapse into one vague word: "rational."</div>
+    </div>
+
+    <div class="logic-card">
+      <div class="logic-title">Decision theory and game theory are not the same game</div>
+      <div class="logic-copy">Decision theory asks what one agent should choose under uncertainty, usually by expected utility: probability multiplied by value. Pascal's wager is a famous early version, though its assumptions are heavily disputed. Game theory adds other agents whose choices respond to yours. In the prisoner's dilemma, defection dominates in a one-shot version, yet cooperation can win in repeated play because reputation changes the payoff landscape.</div>
+      <div class="matrix" aria-label="Prisoner's dilemma payoff matrix">
+        <div></div><div class="m-head">Other cooperates</div><div class="m-head">Other defects</div>
+        <div class="m-head">You cooperate</div><div>You: 3<br>Other: 3</div><div>You: 0<br>Other: 5</div>
+        <div class="m-head">You defect</div><div>You: 5<br>Other: 0</div><div>You: 1<br>Other: 1</div>
+      </div>
+    </div>
+
+    <h2 class="sec" id="part-f-logical-and-self-reference-paradoxes">Part F - logical and self-reference paradoxes</h2>
+    <div class="explorer-buttons" aria-label="Self reference paradoxes">
+      <button onclick="showParadox('liar', this)">Liar</button>
+      <button onclick="showParadox('russell', this)">Russell</button>
+      <button onclick="showParadox('grelling', this)">Grelling-Nelson</button>
+      <button onclick="showParadox('berry', this)">Berry</button>
+      <button onclick="showParadox('barber', this)">Barber</button>
+    </div>
+    <div id="paradox-display" class="explorer-panel"></div>
+
+    <div class="logic-note">Self-reference is not automatically forbidden. A book can say "this book has 300 pages" without exploding. The danger appears when a system is strong enough to encode statements about its own truth or provability while also pretending there is only one level of language. Alfred Tarski's hierarchy separates object language from metalanguage precisely to stop truth from chasing its own tail.</div>
+
+    <h2 class="sec" id="part-g-mathematical-and-infinity-paradoxes">Part G - mathematical and infinity paradoxes</h2>
+    <div class="elem-grid" aria-label="Infinity paradox explorer">
+      <div class="elem-card" onclick="showInfinity('zeno', this)">
+        <div class="elem-icon"><i class="fa-solid fa-person-running"></i></div>
+        <div class="elem-name">Zeno</div>
+        <div class="elem-sub">motion split infinitely</div>
+      </div>
+      <div class="elem-card" onclick="showInfinity('hotel', this)">
+        <div class="elem-icon"><i class="fa-solid fa-hotel"></i></div>
+        <div class="elem-name">Hilbert's Hotel</div>
+        <div class="elem-sub">countable infinity</div>
+      </div>
+      <div class="elem-card" onclick="showInfinity('cantor', this)">
+        <div class="elem-icon"><i class="fa-solid fa-table-cells"></i></div>
+        <div class="elem-name">Cantor</div>
+        <div class="elem-sub">larger infinities</div>
+      </div>
+      <div class="elem-card" onclick="showInfinity('banach', this)">
+        <div class="elem-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+        <div class="elem-name">Banach-Tarski</div>
+        <div class="elem-sub">choice gets wild</div>
+      </div>
+      <div class="elem-card" onclick="showInfinity('horn', this)">
+        <div class="elem-icon"><i class="fa-solid fa-volume-high"></i></div>
+        <div class="elem-name">Gabriel's Horn</div>
+        <div class="elem-sub">finite volume, infinite area</div>
+      </div>
+    </div>
+    <div id="infinity-detail" class="elem-detail elem-detail-panel"></div>
+
+    <div class="slider-box">
+      <div class="slider-head">
+        <div class="chart-title">Birthday paradox slider</div>
+        <div class="slider-value"><span id="birthday-count">23</span> people</div>
+      </div>
+      <input id="birthday-slider" type="range" min="2" max="80" value="23">
+      <div class="slider-poles"><span>few pairs</span><span>many pairwise comparisons</span></div>
+      <div id="birthday-output" class="live-result"></div>
+    </div>
+
+    <h2 class="sec" id="part-h-probability-and-decision-paradoxes">Part H - probability and decision paradoxes</h2>
+    <div class="logic-bar-chart">
+      <div class="chart-title">Monty Hall win rates after the host opens a goat door</div>
+      <div class="bar-row"><div class="bl">Always switch</div><div class="bb"><div class="bar-fill" data-width="66.7" data-color="var(--accent)"></div></div><div class="bv">66.7%</div></div>
+      <div class="bar-row"><div class="bl">Always stay</div><div class="bb"><div class="bar-fill" data-width="33.3" data-color="var(--color-background-warning)"></div></div><div class="bv">33.3%</div></div>
+      <div class="bar-row"><div class="bl">Random choice</div><div class="bb"><div class="bar-fill" data-width="50" data-color="var(--color-background-info)"></div></div><div class="bv">50%</div></div>
+      <div class="chart-note">Assumes the standard rules: the host knows where the car is, always opens a goat door, and always offers the switch. Change those rules and the calculation changes.</div>
+    </div>
+
+    <div class="logic-card">
+      <div class="logic-title">Monty Hall simulator</div>
+      <div class="logic-copy">Pick a door. The host will reveal one empty door and offer the switch. Manual plays update the policy you choose; auto-play tests both stay and switch on the same random setups.</div>
+      <div id="mh-doors" class="mh-doors" aria-label="Monty Hall doors"></div>
+      <div id="mh-status" class="mh-status">Pick a door to begin.</div>
+      <div id="mh-actions" class="mh-actions"></div>
+      <div class="mh-stats" aria-label="Monty Hall running results">
+        <div class="mh-stat"><span id="mh-stay-wins" class="mh-stat-val">0</span><span class="mh-stat-label">stay wins</span></div>
+        <div class="mh-stat"><span id="mh-stay-total" class="mh-stat-val">0</span><span class="mh-stat-label">stay games</span></div>
+        <div class="mh-stat"><span id="mh-switch-wins" class="mh-stat-val">0</span><span class="mh-stat-label">switch wins</span></div>
+        <div class="mh-stat"><span id="mh-switch-total" class="mh-stat-val">0</span><span class="mh-stat-label">switch games</span></div>
+      </div>
+      <div class="mh-actions">
+        <button onclick="mhRunMany(100)">Auto-play 100</button>
+        <button onclick="mhReset()">Reset stats</button>
+      </div>
+    </div>
+
+    <div class="explorer-buttons" aria-label="Probability paradoxes">
+      <button onclick="showProbParadox('monty', this)">Monty Hall</button>
+      <button onclick="showProbParadox('simpson', this)">Simpson</button>
+      <button onclick="showProbParadox('petersburg', this)">St. Petersburg</button>
+      <button onclick="showProbParadox('newcomb', this)">Newcomb</button>
+      <button onclick="showProbParadox('envelopes', this)">Two envelopes</button>
+    </div>
+    <div id="prob-paradox-display" class="explorer-panel"></div>
+
+    <div class="calc-box">
+      <div class="chart-title">Expected value calculator</div>
+      <div class="calc-grid">
+        <div class="calc-field">
+          <label for="gain">Gain if it works</label>
+          <input id="gain" type="number" value="1000" step="10">
+        </div>
+        <div class="calc-field">
+          <label for="prob">Chance of success (%)</label>
+          <input id="prob" type="number" value="35" min="0" max="100" step="1">
+        </div>
+        <div class="calc-field">
+          <label for="cost">Cost if it fails</label>
+          <input id="cost" type="number" value="200" step="10">
+        </div>
+      </div>
+      <button onclick="calculateEV()">Calculate</button>
+      <div id="ev-result" class="calc-result"></div>
+    </div>
+
+    <h2 class="sec" id="part-i-philosophical-and-metaphysical-paradoxes">Part I - philosophical and metaphysical paradoxes</h2>
+    <div class="scale-box">
+      <div class="chart-title">Paradoxes by what they pressure</div>
+      <div class="scale-poles">
+        <div></div>
+        <div class="scale-pole-labels"><span>language and concepts</span><span>world and causality</span></div>
+      </div>
+      <div class="cscale-row"><div class="cscale-name">Sorites heap</div><div class="cscale-track"><span class="cscale-dot" data-left="12"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Omnipotence</div><div class="cscale-track"><span class="cscale-dot" data-left="30"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Trolley problem</div><div class="cscale-track"><span class="cscale-dot" data-left="48"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Ship of Theseus</div><div class="cscale-track"><span class="cscale-dot" data-left="58"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Unexpected hanging</div><div class="cscale-track"><span class="cscale-dot" data-left="70"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Fermi paradox</div><div class="cscale-track"><span class="cscale-dot" data-left="84"></span></div></div>
+      <div class="cscale-row"><div class="cscale-name">Predestination</div><div class="cscale-track"><span class="cscale-dot" data-left="92"></span></div></div>
+    </div>
+
+    <div class="explorer-buttons" aria-label="Philosophical paradoxes">
+      <button onclick="showPhilParadox('trolley', this)">Trolley</button>
+      <button onclick="showPhilParadox('sorites', this)">Sorites</button>
+      <button onclick="showPhilParadox('theseus', this)">Theseus</button>
+      <button onclick="showPhilParadox('fermi', this)">Fermi</button>
+      <button onclick="showPhilParadox('time', this)">Time travel</button>
+      <button onclick="showPhilParadox('hanging', this)">Unexpected hanging</button>
+      <button onclick="showPhilParadox('omni', this)">Omnipotence</button>
+      <button onclick="showPhilParadox('olbers', this)">Olbers</button>
+    </div>
+    <div id="phil-paradox-display" class="explorer-panel"></div>
+
+    <div class="logic-card">
+      <div class="logic-title">The useful habit: ask which assumption breaks</div>
+      <div class="logic-copy">The Sorites paradox pressures vague predicates like "heap" and "bald." The Ship of Theseus pressures identity through time. The Fermi paradox pressures estimates about life, technology, and detectability in a galaxy with roughly 100 to 400 billion stars. Olbers' paradox looked at a dark night sky and refuted an infinite, eternal, static universe before modern cosmology supplied the mechanism: the observable universe has finite age and is expanding.</div>
+    </div>
+
+    <h2 class="sec" id="part-j-decision-making-and-critical-thinking-logic-applied-to-real-choices">Part J - decision making and critical thinking: logic applied to real choices</h2>
+
+    <div class="teaser-grid">
+      <div class="teaser-card">
+        <div class="teaser-num">The gap</div>
+        <div class="teaser-name">From valid arguments to good decisions</div>
+        <div class="teaser-desc">Logic tells you when conclusions follow. Decision theory tells you what to choose under uncertainty. Critical thinking bridges both: it is the applied discipline of catching the errors, biases, and framing effects that corrupt reasoning before a real stake is won or lost.</div>
+      </div>
+      <div class="teaser-card">
+        <div class="teaser-num">The tools</div>
+        <div class="teaser-name">Frameworks you can actually use</div>
+        <div class="teaser-desc">Pre-mortems, decision matrices, steelmanning, hypothesis testing, and the outside view all reduce reliance on intuition in situations where intuition is known to be unreliable. Each tool targets a different failure mode.</div>
+      </div>
+    </div>
+
+    <div class="content-panel">
+      <div class="panel-title">The decision anatomy diagram</div>
+      <div class="diagram-card u-mb-md" style="margin-bottom:0">
+        <svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision anatomy showing the five stages from problem framing to post-decision review">
+          <defs>
+            <marker id="darrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--color-border-secondary)"></path>
+            </marker>
+          </defs>
+          <!-- Stage boxes -->
+          <rect class="diagram-node" x="10" y="90" width="118" height="52" rx="9"></rect>
+          <text class="diagram-label" x="69" y="112" text-anchor="middle">Frame</text>
+          <text class="diagram-small" x="69" y="131" text-anchor="middle">What is the question?</text>
+
+          <rect class="diagram-node" x="152" y="90" width="118" height="52" rx="9"></rect>
+          <text class="diagram-label" x="211" y="112" text-anchor="middle">Generate</text>
+          <text class="diagram-small" x="211" y="131" text-anchor="middle">What options exist?</text>
+
+          <rect class="diagram-accent" x="294" y="90" width="132" height="52" rx="9"></rect>
+          <text class="diagram-label" x="360" y="112" text-anchor="middle">Evaluate</text>
+          <text class="diagram-small" x="360" y="131" text-anchor="middle">Probabilities + values</text>
+
+          <rect class="diagram-node" x="450" y="90" width="118" height="52" rx="9"></rect>
+          <text class="diagram-label" x="509" y="112" text-anchor="middle">Choose</text>
+          <text class="diagram-small" x="509" y="131" text-anchor="middle">Commit to one path</text>
+
+          <rect class="diagram-node" x="592" y="90" width="118" height="52" rx="9"></rect>
+          <text class="diagram-label" x="651" y="112" text-anchor="middle">Review</text>
+          <text class="diagram-small" x="651" y="131" text-anchor="middle">Update the model</text>
+
+          <!-- Arrows between stages -->
+          <path class="diagram-line" d="M 128 116 L 152 116" marker-end="url(#darrow)"></path>
+          <path class="diagram-line" d="M 270 116 L 294 116" marker-end="url(#darrow)"></path>
+          <path class="diagram-line" d="M 426 116 L 450 116" marker-end="url(#darrow)"></path>
+          <path class="diagram-line" d="M 568 116 L 592 116" marker-end="url(#darrow)"></path>
+
+          <!-- Bias labels below each stage -->
+          <text class="diagram-small" x="69" y="178" text-anchor="middle" fill="var(--color-text-warning)">Anchoring</text>
+          <text class="diagram-small" x="69" y="193" text-anchor="middle" fill="var(--color-text-warning)">Framing effect</text>
+          <text class="diagram-small" x="211" y="178" text-anchor="middle" fill="var(--color-text-warning)">Availability</text>
+          <text class="diagram-small" x="211" y="193" text-anchor="middle" fill="var(--color-text-warning)">Tunnel vision</text>
+          <text class="diagram-small" x="360" y="178" text-anchor="middle" fill="var(--color-text-warning)">Base rate neglect</text>
+          <text class="diagram-small" x="360" y="193" text-anchor="middle" fill="var(--color-text-warning)">Overconfidence</text>
+          <text class="diagram-small" x="509" y="178" text-anchor="middle" fill="var(--color-text-warning)">Sunk cost</text>
+          <text class="diagram-small" x="509" y="193" text-anchor="middle" fill="var(--color-text-warning)">Loss aversion</text>
+          <text class="diagram-small" x="651" y="178" text-anchor="middle" fill="var(--color-text-warning)">Hindsight bias</text>
+          <text class="diagram-small" x="651" y="193" text-anchor="middle" fill="var(--color-text-warning)">Outcome bias</text>
+
+          <!-- Header labels -->
+          <text class="diagram-small" x="360" y="44" text-anchor="middle">The five decision stages (top) with the most common bias at each stage (below)</text>
+          <line x1="10" y1="155" x2="710" y2="155" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4,4"></line>
+          <text class="diagram-small" x="10" y="170" fill="var(--color-text-warning)">Biases that attack each stage:</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cognitive bias explorer -->
+    <h2 class="sec" style="margin-top:1.5rem" id="cognitive-biases-that-corrupt-decisions">Cognitive biases that corrupt decisions</h2>
+    <div class="explorer-buttons" aria-label="Cognitive bias explorer">
+      <button onclick="showBias('anchoring', this)">Anchoring</button>
+      <button onclick="showBias('availability', this)">Availability</button>
+      <button onclick="showBias('overconfidence', this)">Overconfidence</button>
+      <button onclick="showBias('framing', this)">Framing</button>
+      <button onclick="showBias('hindsight', this)">Hindsight</button>
+      <button onclick="showBias('planning', this)">Planning fallacy</button>
+    </div>
+    <div id="bias-display" class="explorer-panel"></div>
+
+    <!-- Bias severity chart -->
+    <div class="content-panel u-mb-lg">
+      <div class="panel-title">How biases are distributed across decision domains</div>
+      <div class="u-overflow-x-auto">
+        <div style="min-width:480px">
+          <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
+            <div class="bl">Overconfidence</div>
+            <div class="bb"><div class="bar-fill" data-width="88" data-color="var(--color-background-danger)"></div></div>
+            <div class="bv muted-copy">very high</div>
+          </div>
+          <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
+            <div class="bl">Anchoring</div>
+            <div class="bb"><div class="bar-fill" data-width="76" data-color="var(--color-background-warning)"></div></div>
+            <div class="bv muted-copy">high</div>
+          </div>
+          <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
+            <div class="bl">Framing effect</div>
+            <div class="bb"><div class="bar-fill" data-width="72" data-color="var(--color-background-warning)"></div></div>
+            <div class="bv muted-copy">high</div>
+          </div>
+          <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
+            <div class="bl">Availability</div>
+            <div class="bb"><div class="bar-fill" data-width="65" data-color="var(--accent-bg)"></div></div>
+            <div class="bv muted-copy">moderate</div>
+          </div>
+          <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
+            <div class="bl">Hindsight bias</div>
+            <div class="bb"><div class="bar-fill" data-width="58" data-color="var(--accent-bg)"></div></div>
+            <div class="bv muted-copy">moderate</div>
+          </div>
+          <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
+            <div class="bl">Planning fallacy</div>
+            <div class="bb"><div class="bar-fill" data-width="80" data-color="var(--color-background-danger)"></div></div>
+            <div class="bv muted-copy">very high</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-note">Severity ratings are consensus estimates from meta-analyses in behavioral economics, not precise measurements. The key insight is that overconfidence and planning errors are pervasive even among trained experts.</div>
+    </div>
+
+    <!-- Critical thinking toolkit -->
+    <h2 class="sec" id="critical-thinking-tools-and-when-to-use-them">Critical thinking tools and when to use them</h2>
+    <div class="elem-grid" aria-label="Critical thinking tool explorer">
+      <div class="elem-card" onclick="showCTTool('premortem', this)">
+        <div class="elem-icon"><i class="fa-solid fa-skull"></i></div>
+        <div class="elem-name">Pre-mortem</div>
+        <div class="elem-sub">imagine failure first</div>
+      </div>
+      <div class="elem-card" onclick="showCTTool('steelman', this)">
+        <div class="elem-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="elem-name">Steelmanning</div>
+        <div class="elem-sub">best version of the opposite view</div>
+      </div>
+      <div class="elem-card" onclick="showCTTool('outside', this)">
+        <div class="elem-icon"><i class="fa-solid fa-eye"></i></div>
+        <div class="elem-name">Outside view</div>
+        <div class="elem-sub">reference class forecasting</div>
+      </div>
+      <div class="elem-card" onclick="showCTTool('ferminest', this)">
+        <div class="elem-icon"><i class="fa-solid fa-calculator"></i></div>
+        <div class="elem-name">Fermi estimation</div>
+        <div class="elem-sub">order-of-magnitude check</div>
+      </div>
+      <div class="elem-card" onclick="showCTTool('five-whys', this)">
+        <div class="elem-icon"><i class="fa-solid fa-circle-question"></i></div>
+        <div class="elem-name">Five Whys</div>
+        <div class="elem-sub">root cause drill-down</div>
+      </div>
+      <div class="elem-card" onclick="showCTTool('null', this)">
+        <div class="elem-icon"><i class="fa-solid fa-vial"></i></div>
+        <div class="elem-name">Null hypothesis</div>
+        <div class="elem-sub">burden of proof discipline</div>
+      </div>
+    </div>
+    <div id="ct-tool-detail" class="elem-detail elem-detail-panel"></div>
+
+    <!-- Decision quality vs outcome matrix -->
+    <div class="content-panel u-mb-lg">
+      <div class="panel-title">Decision quality is not the same as outcome quality</div>
+      <div class="muted-copy u-mb-md">Luck and skill both affect outcomes, but only process quality is within your control. Outcome bias judges a decision by its result; a careful reasoner judges it by the process given the information available at the time.</div>
+      <div class="matrix" aria-label="Decision quality vs outcome matrix" style="grid-template-columns:100px repeat(2, minmax(120px, 1fr))">
+        <div></div>
+        <div class="m-head">Good outcome</div>
+        <div class="m-head">Bad outcome</div>
+        <div class="m-head">Good process</div>
+        <div>Deserved win. Skill and luck aligned.</div>
+        <div>Bad luck. The process was still correct. Learn from randomness, not the decision.</div>
+        <div class="m-head">Bad process</div>
+        <div>Dumb luck. Do not reinforce the bad process.</div>
+        <div>Deserved loss. Luck and skill both failed. Fix the process.</div>
+      </div>
+    </div>
+
+    <!-- Confidence calibration slider -->
+    <div class="slider-box">
+      <div class="slider-head">
+        <div class="chart-title">Confidence calibration</div>
+        <div class="slider-value"><span id="conf-value">70</span>% confident</div>
+      </div>
+      <input id="conf-slider" type="range" min="50" max="99" value="70">
+      <div class="slider-poles"><span>uncertain (50/50)</span><span>near-certain (99%)</span></div>
+      <div id="conf-output" class="live-result"></div>
+    </div>
+
+    <!-- Argument reconstruction tool -->
+    <div class="content-panel u-mb-lg">
+      <div class="panel-title">Argument reconstruction: a worked example</div>
+      <div class="muted-copy u-mb-md">One of the most practical critical thinking skills is breaking a messy claim into its premise-conclusion skeleton. Choose an example argument to see how it reconstructs.</div>
+      <div class="button-row">
+        <button onclick="showArgReconstruct('policy', this)">Policy claim</button>
+        <button onclick="showArgReconstruct('science', this)">Science communication</button>
+        <button onclick="showArgReconstruct('legal', this)">Legal argument</button>
+        <button onclick="showArgReconstruct('ad', this)">Advertising claim</button>
+      </div>
+      <div id="arg-reconstruct-output" class="live-result" style="min-height:80px"></div>
+    </div>
+
+    <!-- Good vs bad epistemic habits -->
+    <h2 class="sec" id="epistemic-habits-good-and-bad">Epistemic habits: good and bad</h2>
+    <div class="two-col-grid">
+      <div class="content-card">
+        <div class="panel-title" style="color:var(--color-text-success)"><i class="fa-solid fa-check u-mb-sm"></i> Habits that improve reasoning</div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Seek disconfirming evidence</div>
+            <div class="asub">Actively look for what would prove you wrong, not just what confirms you.</div>
+          </div>
+        </div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Assign explicit probabilities</div>
+            <div class="asub">Saying "70% likely" forces precision; "probably" hides uncertainty.</div>
+          </div>
+        </div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Update on new evidence</div>
+            <div class="asub">Bayesian updating: new evidence should shift your estimate, not be ignored.</div>
+          </div>
+        </div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Separate object-level from meta-level</div>
+            <div class="asub">Track both what is likely true and how confident you should be.</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-card">
+        <div class="panel-title" style="color:var(--color-text-danger)"><i class="fa-solid fa-xmark u-mb-sm"></i> Habits that degrade reasoning</div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Motte-and-bailey switching</div>
+            <div class="asub">Defend a bold claim by retreating to a modest one when challenged, then returning to bold.</div>
+          </div>
+        </div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Galaxy-brained reasoning</div>
+            <div class="asub">Clever chains of steps reaching conclusions that common sense rejects. Each step seems valid; the whole is dangerous.</div>
+          </div>
+        </div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Moving the goalposts</div>
+            <div class="asub">Changing the success criterion once the original has been met to avoid conceding the argument.</div>
+          </div>
+        </div>
+        <div class="anchor-row">
+          <div>
+            <div class="atext">Epistemic cowardice</div>
+            <div class="asub">Giving vague or uncommitted answers to avoid social cost, rather than stating what you actually believe.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logic-note">The difference between a good reasoner and a bad one is not intelligence. It is the willingness to be wrong. Every technique in this section is designed to make it slightly easier to discover and admit an error before it becomes expensive.</div>
+
+    <h2 class="sec" id="part-k-q-and-a">Part K - Q&A</h2>
+    <div class="qa">
+      <div class="qa-q">If an argument is valid, does that mean the conclusion is true?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">No. Validity only means the conclusion would have to be true if the premises were true. "All whales are planets; all planets are made of cheese; therefore all whales are made of cheese" is valid and absurd. Soundness is the stronger standard: valid structure plus true premises. Most real disputes are not about validity alone; they are about whether the premises deserve belief.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Why does predicate logic matter if propositional logic already has truth tables?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Truth tables can handle whole propositions, but they cannot see inside "every prime greater than 2 is odd." Predicate logic opens the sentence and tracks objects, properties, and quantifiers. That jump is what lets mathematics express general theorems instead of listing cases. It is also the basis for database query languages and automated theorem proving.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Is calling something a fallacy enough to refute it?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">No. The label is only useful if you show the exact failed inference. "Ad hominem" is often misused: attacking a witness's reliability can be relevant in court, while attacking a mathematician's personality does not refute a proof. The disciplined move is to reconstruct the argument charitably, identify the premise-to-conclusion step, and explain why that step fails. Otherwise "fallacy" becomes a rhetorical club, which is deliciously ironic and not very logical.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Does Godel prove that humans are not machines?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Not by itself. Godel proves limits for formal systems that are consistent, effectively axiomatized, and strong enough for arithmetic. Some philosophers, including J. R. Lucas and Roger Penrose, argue that human mathematicians can "see" truths no machine can prove, but that argument is controversial because humans also make mistakes and may not be consistent. The safe lesson is narrower and powerful: formal proof cannot capture all arithmetical truth in one tidy, self-validating package.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Why do smart people still mishandle medical tests and risk numbers?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Because a test's accuracy is not the same as the chance you have the condition after a positive result. If a disease is rare, false positives can outnumber true positives even when the test looks impressive. Natural frequencies help: "10 out of 1,000 have the disease" is easier to reason with than "1% prevalence." The mind is good at stories; probability asks it to count alternative ways the evidence could appear.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Are paradoxes just word games?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Some are linguistic, but the serious ones reveal a broken assumption. Russell's paradox was not a party trick; it damaged Frege's logicist project just as volume two of Frege's work was going to press in 1902. The liar paradox presses on truth, Berry on definability, and Godel turns self-reference into arithmetic. A good paradox is a stress test for a theory.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Is Tarski's hierarchy a complete solution to the Liar Paradox?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">It is a powerful formal solution, not a magic eraser for ordinary language. Tarski avoids the paradox by separating an object language from a metalanguage: a language does not get to contain its own full truth predicate. Natural language ignores that neat separation, so the puzzle remains useful as a warning about unrestricted self-reference.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">How can infinity plus one still be the same size?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">For finite sets, adding one always makes a larger set. For countably infinite sets, size is defined by whether you can pair members one-to-one with the natural numbers. Hilbert's Hotel moves guest 1 to room 2, guest 2 to room 3, and so on, freeing room 1 without losing anyone. That feels illegal because finite intuitions are doing work in an infinite setting where they no longer apply.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Why did so many mathematicians object to the Monty Hall answer?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">The mind sees two unopened doors and wants to assign 50% to each. But the host's action is not neutral information; it is constrained by knowledge of the prize. Your first pick had a 1 in 3 chance of being right, so the two unchosen doors collectively had 2 in 3. When the host deliberately removes a losing door from that pair, the 2 in 3 mass shifts to the remaining unchosen door.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Can logic settle moral paradoxes like the trolley problem?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Logic can expose consistency, hidden premises, and tradeoffs, but it cannot supply values from nowhere. The trolley problem separates outcomes from duties: saving five looks compelling, while pushing one person from a bridge feels like using a person as a tool. Philippa Foot introduced the original case in 1967 to probe the doctrine of double effect. Logic clarifies the disagreement; ethics decides which principles deserve authority.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">What is the fastest way to diagnose an argument?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Separate truth from structure. First list the premises and conclusion in plain sentences. Then ask: if the premises were true, would the conclusion have to be true, probably true, or merely possible? That one distinction sorts deduction, induction, and abduction before the argument gets emotionally noisy.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">Why is "correlation is not causation" true but incomplete?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Correlation alone does not prove causation because confounders, reverse causation, and selection effects can produce the same pattern. But correlation is still evidence, especially when it is large, repeated, temporally ordered, and tied to a mechanism. The better slogan is: correlation is not causation by itself. Science earns causal claims by combining statistics with design, controls, experiments, and explanation.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">What is the difference between a paradox and a contradiction?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">A contradiction is a direct clash, such as "P and not P." A paradox is a route to trouble: plausible assumptions plus apparently valid reasoning lead to a contradiction, impossibility, or deeply surprising conclusion. The value is diagnostic. When a paradox is serious, you do not simply reject the conclusion; you inspect the assumptions that made it unavoidable.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">What should I remember from Godel and Turing if I forget the technical details?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Remember that formalization is powerful but not omnipotent. Godel shows that arithmetic truth cannot be completely captured by any one consistent, computable axiom system strong enough for arithmetic. Turing shows that no universal program can decide all program behavior. Together they mark a boundary: rigor does not mean every meaningful question has a mechanical answer.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">What is the single most effective habit for improving decision quality?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Keeping a decision journal. Write down what you expect to happen, why you believe it, and how confident you are before the outcome is known. Review entries after the fact with the same rigor. This disciplines against hindsight bias: you cannot rewrite memory of what you expected when the expectation is on paper. Over time the journal reveals whether your confidence is calibrated, which patterns in your reasoning recur, and which domains you are actually good at predicting versus those where you are fooling yourself.</div>
+    </div>
+    <div class="qa">
+      <div class="qa-q">How does steelmanning differ from devil's advocacy, and why does it matter?</div>
+      <button class="qa-btn">show answer</button>
+      <div class="qa-ans">Devil's advocacy assigns someone to argue against a proposal, but the advocate often does so halfheartedly because their actual view is unchanged. Steelmanning asks you to construct the strongest possible version of the opposing position, one that the position's best defenders would recognize and endorse. The difference is motivation: a devil's advocate can perform dissent; a steelman must understand it. The practical payoff is that you are far less likely to dismiss a position you have genuinely reconstructed at its best. It also makes your own view more defensible because you have already tested it against the best available opposition.</div>
+    </div>
+  
+
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const logicCore = {
+        validity: {
+          title: 'Validity: truth preservation',
+          body: 'An argument is valid when its conclusion cannot be false if its premises are true. Validity is about the shape of the inference, not the subject matter. This is why logic can compare an argument about Socrates, a circuit, and a legal statute using the same skeleton.',
+          meta: ['Test: assume the premises are true and try to make the conclusion false.', 'Classic form: if P then Q; P; therefore Q.', 'Danger: valid arguments can still start from false premises.']
+        },
+        soundness: {
+          title: 'Soundness: validity plus true premises',
+          body: 'A sound argument is valid and has true premises. Mathematicians prize soundness because a proof with one false premise can produce an elegant disaster. In public argument, many fights hide here: people agree on the inference but contest the factual premise.',
+          meta: ['Validity is structural.', 'Truth of premises is empirical, definitional, or mathematical.', 'Soundness is the gold standard for deduction.']
+        },
+        form: {
+          title: 'Form over content',
+          body: 'Logic abstracts away from content so it can reveal the argument form. "All A are B; C is A; therefore C is B" works whether A is mammal, judge, integer, or fictional dragon. The abstraction is the point: it lets us inspect reasoning without being hypnotized by familiar nouns.',
+          meta: ['Aristotle formalized syllogisms around 350 BCE.', 'Frege later added variables and quantifiers.', 'Computers exploit this formal cleanliness.']
+        },
+        rhetoric: {
+          title: 'Logic is not rhetoric',
+          body: 'Rhetoric studies persuasion; logic studies support. A speech can be persuasive because of timing, identity, fear, beauty, or repetition while still being invalid. The inverse also happens: a valid argument can be dull, unpopular, and badly delivered.',
+          meta: ['Good rhetoric can carry good logic.', 'Bad rhetoric can smuggle bad logic.', 'The listener has to separate force from warrant.']
+        },
+        informal: {
+          title: 'Informal logic: real arguments in the wild',
+          body: 'Informal logic deals with ordinary language, missing premises, definitions, burden of proof, analogy, and relevance. It is messier than symbolic logic because context matters. That mess is not a weakness; it is where law, journalism, science communication, and family arguments actually live.',
+          meta: ['Looks for suppressed premises.', 'Checks relevance and ambiguity.', 'Useful when the argument cannot be fully formalized.']
+        }
+      };
+
+      const truthTables = {
+        and: {
+          title: 'P AND Q',
+          headers: ['P', 'Q', 'P AND Q'],
+          rows: [
+            [true, true, true],
+            [true, false, false],
+            [false, true, false],
+            [false, false, false]
+          ],
+          note: 'AND is true only when both statements are true.'
+        },
+        or: {
+          title: 'P OR Q',
+          headers: ['P', 'Q', 'P OR Q'],
+          rows: [
+            [true, true, true],
+            [true, false, true],
+            [false, true, true],
+            [false, false, false]
+          ],
+          note: 'Formal OR is inclusive by default: P, Q, or both may be true.'
+        },
+        not: {
+          title: 'NOT P',
+          headers: ['P', 'NOT P'],
+          rows: [
+            [true, false],
+            [false, true]
+          ],
+          note: 'NOT reverses the truth value of a statement.'
+        },
+        if: {
+          title: 'IF P THEN Q',
+          headers: ['P', 'Q', 'IF P THEN Q'],
+          rows: [
+            [true, true, true],
+            [true, false, false],
+            [false, true, true],
+            [false, false, true]
+          ],
+          note: 'Material implication is false only when P is true and Q is false. If P never happens, the formal promise is not broken.'
+        },
+        iff: {
+          title: 'P IF AND ONLY IF Q',
+          headers: ['P', 'Q', 'P IFF Q'],
+          rows: [
+            [true, true, true],
+            [true, false, false],
+            [false, true, false],
+            [false, false, true]
+          ],
+          note: 'IFF is true when both sides have the same truth value.'
+        }
+      };
+
+      const logicElements = {
+        connectives: {
+          title: 'Propositions and connectives',
+          body: 'A proposition is a sentence that can be true or false. Connectives build complex propositions: P and Q, P or Q, not P, if P then Q, and P if and only if Q. The trick is that formal "or" is usually inclusive, so "tea or coffee" means one or the other or both unless a rule excludes both. Tautologies are true under every assignment; contradictions are false under every assignment.'
+        },
+        deduction: {
+          title: 'Deductive reasoning',
+          body: 'Deduction gives necessity. Modus ponens says: if P implies Q, and P is true, Q follows. Modus tollens says: if P implies Q, and Q is false, P must be false. These forms are small, but they run through mathematical proof, debugging, and legal reasoning whenever a rule is applied to a case.'
+        },
+        predicate: {
+          title: 'Predicate logic',
+          body: 'Predicate logic adds variables, predicates, and quantifiers. "All mammals breathe air" becomes a claim about every object: if something is a mammal, it breathes air. "Some swans are black" needs only one instance. The square of opposition was a medieval way to track all, none, some, and some-not relations, but modern predicate logic handles the machinery with far more precision.'
+        },
+        induction: {
+          title: 'Inductive reasoning',
+          body: 'Induction moves from observed cases to a broader expectation. If 10,000 observed ravens are black, that supports but does not prove "all ravens are black." David Hume\'s 1739 problem of induction still bites: the future resembling the past cannot itself be proven by past regularity without circularity. Science uses induction anyway, disciplined by replication, mechanism, and error correction.'
+        },
+        abduction: {
+          title: 'Abductive reasoning',
+          body: 'Abduction, named by Charles Sanders Peirce, is inference to the best explanation. The lawn is wet; the best explanation may be rain, sprinklers, or a burst pipe depending on background clues. Sherlock Holmes is often called deductive, but much of his method is abductive: he selects the explanation that makes many details unsurprising. Occam\'s razor helps, but simplicity loses when a messier hypothesis explains much more.'
+        }
+      };
+
+      const fallacies = {
+        consequent: {
+          title: 'Affirming the consequent',
+          body: 'Invalid form: if P then Q; Q; therefore P. If it rained, the street is wet. The street is wet, therefore it rained. Maybe a street cleaner passed. The conclusion could be true, but the structure does not force it.',
+          meta: ['Formal fallacy', 'Diagnosis: Q can have several causes', 'Valid cousin: modus ponens']
+        },
+        antecedent: {
+          title: 'Denying the antecedent',
+          body: 'Invalid form: if P then Q; not P; therefore not Q. If someone is in Paris, they are in France. They are not in Paris, therefore they are not in France. Lyon exists, which is a polite geographical refutation.',
+          meta: ['Formal fallacy', 'Diagnosis: P is sufficient, not necessary', 'Valid cousin: modus tollens']
+        },
+        middle: {
+          title: 'Undistributed middle',
+          body: 'Invalid categorical form: all A are C; all B are C; therefore all A are B. All cats are mammals, and all dogs are mammals, so all cats are dogs. The middle term "mammals" never covers the whole class, so it cannot connect A and B.',
+          meta: ['Formal fallacy', 'Common in category arguments', 'Fix: show a real bridge between groups']
+        },
+        straw: {
+          title: 'Straw man',
+          body: 'A straw man replaces an opponent\'s claim with a weaker or sillier one. "We should regulate risky AI deployments" becomes "you want to ban computers." The refutation may be energetic and still irrelevant because it defeats a claim nobody made.',
+          meta: ['Informal fallacy', 'Diagnosis: compare original claim to attacked claim', 'Best antidote: steelman first']
+        },
+        adHominem: {
+          title: 'Ad hominem',
+          body: 'Ad hominem attacks the person instead of the claim. "You cannot trust her argument about climate science because she drives an SUV" does not address the evidence. Character can matter when the question is witness credibility, but it does not refute a mathematical proof, a dataset, or a causal argument.',
+          meta: ['Informal fallacy', 'Diagnosis: ask whether character is relevant', 'Repair: return to the claim and evidence']
+        },
+        dichotomy: {
+          title: 'False dichotomy',
+          body: 'A false dichotomy presents two options as if they exhaust the space: "Either you support this policy exactly as written or you hate progress." Many arguments become weaker once the hidden third, fourth, and fifth options are named.',
+          meta: ['Informal fallacy', 'Diagnosis: search for missing alternatives', 'Common frame: either-or pressure']
+        },
+        authority: {
+          title: 'Appeal to authority',
+          body: 'Authority can be evidence, but it is not a proof. The fallacy appears when an expert endorsement is treated as decisive outside the expert\'s domain, or when disagreement among relevant experts is hidden. The better question is: what is the strongest evidence in the relevant field?',
+          meta: ['Informal fallacy', 'Legitimate cousin: expert consensus', 'Repair: check domain and evidence']
+        },
+        postHoc: {
+          title: 'Post hoc fallacy',
+          body: 'Post hoc means "after this, therefore because of this." If B followed A, that does not prove A caused B. Causation needs more: a mechanism, comparison cases, controls, and a way to rule out coincidence or a shared hidden cause.',
+          meta: ['Causation error', 'Diagnosis: time order is not enough', 'Repair: test rival explanations']
+        },
+        base: {
+          title: 'Base rate neglect',
+          body: 'Base rate neglect ignores how common something was before the new evidence arrived. A 99% accurate test sounds decisive, but if the condition occurs in 1 out of 10,000 people, false positives can dominate. This is one reason courts and hospitals prefer frequencies over vibes.',
+          meta: ['Bias and probability error', 'Bayes theorem repairs it', 'Often appears in screening tests']
+        },
+        sunk: {
+          title: 'Sunk cost fallacy',
+          body: 'The sunk cost fallacy treats spent resources as a reason to continue. If a city has spent 800 million on a failing project, that money is gone whether it continues or stops. The rational question is about future cost and future benefit, not emotional loyalty to past expenditure.',
+          meta: ['Decision error', 'Common in wars, startups, and bad movies', 'Repair: ignore unrecoverable costs']
+        }
+      };
+
+      const selfReference = {
+        liar: {
+          title: 'The Liar Paradox',
+          body: '"This sentence is false" seems true if false and false if true. Ancient versions are linked to Epimenides, but the strengthened liar removes easy escape routes. Tarski\'s response was to separate language levels: a language cannot contain its own full truth predicate without trouble.',
+          meta: ['Pressures: truth', 'Key move: object language vs metalanguage', 'Lesson: unrestricted self-reference is dangerous']
+        },
+        russell: {
+          title: 'Russell\'s Paradox',
+          body: 'Consider the set of all sets that do not contain themselves. If it contains itself, it should not; if it does not, it should. Bertrand Russell sent this to Frege in 1902, exposing a flaw in naive set theory. ZFC set theory avoids it by restricting how sets can be formed.',
+          meta: ['Pressures: naive comprehension', 'Historical impact: logicism crisis', 'Repair: type theory or axiomatic set theory']
+        },
+        grelling: {
+          title: 'Grelling-Nelson Paradox',
+          body: 'An adjective is autological if it describes itself: "short" is short. It is heterological if it does not: "long" is not long. Is "heterological" heterological? If yes, it describes itself and is not; if no, it fails to describe itself and is.',
+          meta: ['Pressures: semantic self-description', 'Family resemblance: liar paradox', 'Repair: restrict semantic predicates']
+        },
+        berry: {
+          title: 'Berry\'s Paradox',
+          body: 'The phrase "the smallest positive integer not definable in under eleven words" appears to define that number in ten words. The issue is not arithmetic but definability inside a language. Chaitin\'s work on algorithmic information later gave this family a rigorous computational cousin.',
+          meta: ['Pressures: definability', 'Key theme: language limits', 'Related: Kolmogorov complexity']
+        },
+        barber: {
+          title: 'The Barber Paradox',
+          body: 'A village barber shaves all and only the men who do not shave themselves. Does he shave himself? If yes, he should not; if no, he should. The right answer is not a mysterious grooming schedule. Such a barber cannot exist under that definition.',
+          meta: ['Illustrates: Russell\'s paradox', 'Repair: reject the object', 'Lesson: definitions can be inconsistent']
+        }
+      };
+
+      const infinity = {
+        zeno: {
+          title: 'Zeno\'s paradoxes',
+          body: 'Achilles must first reach where the tortoise was, then where it next was, and so on forever. The resolution is that infinitely many intervals can have a finite sum: 1/2 + 1/4 + 1/8 and the continuing halves approach 1. Zeno was not bad at arithmetic; he was attacking assumptions about plurality, space, and motion in 5th century BCE Greek philosophy.'
+        },
+        hotel: {
+          title: 'Hilbert\'s Hotel',
+          body: 'A hotel with countably infinite rooms can be full and still accept a new guest: move guest n to room n+1. It can even accept countably many new guests by moving guest n to room 2n. The paradox teaches that "same size" for infinite sets means pairable one-to-one, not intuitively crowded.'
+        },
+        cantor: {
+          title: 'Cantor\'s diagonalisation',
+          body: 'Cantor proved the real numbers are uncountable by showing any proposed list misses a number made by changing the nth digit of the nth entry. Natural numbers and rational numbers are countable; real numbers are not. This is why some infinities are strictly larger than others, a result published in the 1870s that scandalized several contemporaries.'
+        },
+        banach: {
+          title: 'Banach-Tarski paradox',
+          body: 'Assuming the axiom of choice, a mathematical sphere can be decomposed into finitely many non-measurable pieces and reassembled into two spheres the same size as the original. It cannot be done with physical matter; the pieces are not normal chunks. The theorem reveals how strange unrestricted choice becomes in infinite geometry.'
+        },
+        horn: {
+          title: 'Gabriel\'s Horn',
+          body: 'Rotate y = 1/x around the x-axis from x = 1 onward. The resulting horn has finite volume but infinite surface area. The common "paint it by filling it with paint" joke fails because real paint has thickness, but the math is clean: one improper integral converges while another diverges.'
+        }
+      };
+
+      const probabilityParadoxes = {
+        monty: {
+          title: 'Monty Hall',
+          body: 'With three doors, your first choice has a 1/3 chance of being the car. The two unchosen doors have 2/3 together. When a knowledgeable host opens one goat door, that 2/3 transfers to the remaining unopened door. Switching wins twice as often as staying.',
+          meta: ['Correct move: switch', 'Standard win rate: 2/3', 'Key condition: host always reveals a goat']
+        },
+        simpson: {
+          title: 'Simpson\'s paradox',
+          body: 'A trend can reverse when groups are combined. In the 1973 UC Berkeley graduate admissions data, men appeared to have a higher admission rate overall, but department-level analysis showed many departments admitted women at similar or higher rates. The confounder was application distribution across departments with different selectivity.',
+          meta: ['Pressures: aggregation', 'Fix: condition on relevant groups', 'Key word: confounding']
+        },
+        petersburg: {
+          title: 'St. Petersburg paradox',
+          body: 'A coin-toss game pays 2 dollars if heads appears on toss 1, 4 dollars on toss 2, 8 on toss 3, and so on. The expected value is infinite, yet almost nobody would pay a huge entry fee. Daniel Bernoulli\'s 1738 response used diminishing marginal utility: money is not psychologically linear.',
+          meta: ['Pressures: expected value', 'Repair: utility, not raw dollars', 'Lesson: risk attitude matters']
+        },
+        newcomb: {
+          title: 'Newcomb\'s problem',
+          body: 'A predictor has put either 1 million dollars or nothing in a closed box. You may take only that box, or take it plus a visible 1,000 dollars. If the predictor is highly reliable, evidential decision theory tends to one-box; causal decision theory tends to two-box. Robert Nozick made the problem famous in 1969, and it remains gloriously unresolved.',
+          meta: ['Pressures: evidence vs causation', 'One-box: act as good news', 'Two-box: take the extra money now']
+        },
+        envelopes: {
+          title: 'The two-envelope paradox',
+          body: 'You choose one of two envelopes, knowing one has twice as much money as the other. A seductive calculation says the other envelope is worth 1.25 times yours, so you should always switch. The mistake is treating your observed amount as equally likely to be the smaller or larger without a proper prior distribution.',
+          meta: ['Pressures: conditional expectation', 'Bad move: symmetric handwave', 'Repair: specify the generating process']
+        }
+      };
+
+      const philosophicalParadoxes = {
+        trolley: {
+          title: 'The trolley problem',
+          body: 'Philippa Foot\'s 1967 trolley case asks whether you may divert a runaway trolley to kill one person instead of five. Judith Jarvis Thomson\'s footbridge variant makes the one person a means rather than a side effect. The contrast exposes a tension between utilitarian outcome-counting and deontological limits on using people.',
+          meta: ['Domain: ethics', 'Pressure point: means vs side effect', 'Related: doctrine of double effect']
+        },
+        sorites: {
+          title: 'The Sorites paradox',
+          body: 'One grain is not a heap. If n grains are not a heap, adding one grain seems unable to create a heap. Repeat this and a million grains are not a heap. The paradox exposes vagueness: many ordinary concepts have no sharp boundary, yet they remain useful.',
+          meta: ['Domain: language', 'Pressure point: vagueness', 'Responses: fuzzy logic, supervaluationism']
+        },
+        theseus: {
+          title: 'The Ship of Theseus',
+          body: 'If every plank of a ship is replaced over years, is it still the same ship? Thomas Hobbes sharpened the case: if the discarded planks are reassembled, which ship is original? The paradox matters for personal identity, institutions, and even software systems updated piece by piece.',
+          meta: ['Domain: identity', 'Pressure point: continuity vs material', 'Modern cousin: teleportation thought experiments']
+        },
+        fermi: {
+          title: 'The Fermi paradox',
+          body: 'The Milky Way has roughly 100 to 400 billion stars, and many planets are billions of years older than Earth. If technological life is common and expansion is possible, where is everybody? Proposed answers include rare life, short-lived civilizations, the Great Filter, quiet aliens, and our limited search window.',
+          meta: ['Domain: astrobiology', 'Pressure point: expectation vs silence', 'Tool: Drake equation']
+        },
+        time: {
+          title: 'Predestination and bootstrap loops',
+          body: 'In a bootstrap paradox, information or an object exists because it was sent back in time, with no clear origin. The grandfather paradox asks what happens if a traveler prevents their own existence. Physics has speculative tools such as closed timelike curves and Novikov consistency, but no evidence that macroscopic time travel is available.',
+          meta: ['Domain: causality', 'Pressure point: causal loops', 'Repair attempt: consistency constraints']
+        },
+        hanging: {
+          title: 'The unexpected hanging',
+          body: 'A prisoner is told he will be hanged on a weekday next week and that the hanging will be a surprise. He reasons it cannot be Friday, then Thursday, and so on, so it cannot happen. Yet a Wednesday hanging can still surprise him. The paradox turns on knowledge, announcement, and self-referential prediction.',
+          meta: ['Domain: epistemic logic', 'Pressure point: knowability', 'Lesson: reasoning about future surprise is unstable']
+        },
+        omni: {
+          title: 'The omnipotence paradox',
+          body: 'Can an omnipotent being create a stone so heavy that it cannot lift it? If yes, there is something it cannot lift; if no, there is something it cannot create. Many theologians respond by defining omnipotence as the power to do all logically possible things, not to make contradictions true.',
+          meta: ['Domain: theology and modal logic', 'Pressure point: possibility', 'Repair: exclude incoherent tasks']
+        },
+        olbers: {
+          title: 'Olbers\' paradox',
+          body: 'In an infinite, eternal, static universe filled evenly with stars, every line of sight should eventually hit a star, making the night sky bright. It is dark. The modern resolution uses the finite age of the observable universe, cosmic expansion, and redshift. A simple observation ruled out a tempting cosmological picture.',
+          meta: ['Domain: cosmology', 'Pressure point: infinite static universe', 'Modern answer: finite age plus expansion']
+        }
+      };
+
+      const timelineItems = [
+        { label: 'Aristotle syllogistic', start: -350, end: -320, col: 'var(--accent)', bg: 'var(--accent-bg)', text: 'var(--accent)' },
+        { label: 'Stoic propositional logic', start: -300, end: -100, col: 'var(--color-background-info)', bg: 'var(--color-background-info)', text: 'var(--color-text-info)' },
+        { label: 'Medieval scholastic logic', start: 1100, end: 1500, col: 'var(--color-background-success)', bg: 'var(--color-background-success)', text: 'var(--color-text-success)' },
+        { label: 'Boole algebra of logic', start: 1847, end: 1854, col: 'var(--color-background-warning)', bg: 'var(--color-background-warning)', text: 'var(--color-text-warning)' },
+        { label: 'Frege quantifiers', start: 1879, end: 1893, col: 'var(--accent)', bg: 'var(--accent-bg)', text: 'var(--accent)' },
+        { label: 'Russell and Whitehead', start: 1910, end: 1913, col: 'var(--color-background-info)', bg: 'var(--color-background-info)', text: 'var(--color-text-info)' },
+        { label: 'Godel incompleteness', start: 1931, end: 1931, col: 'var(--color-background-danger)', bg: 'var(--color-background-danger)', text: 'var(--color-text-danger)' },
+        { label: 'Turing computability', start: 1936, end: 1937, col: 'var(--color-background-success)', bg: 'var(--color-background-success)', text: 'var(--color-text-success)' }
+      ];
+
+      window.showLogicCore = function(key, btn) {
+        setActive(btn);
+        const item = logicCore[key];
+        document.getElementById('logic-core-display').innerHTML = renderPanel(item);
+      };
+
+      window.showTruthTable = function(key, btn) {
+        setActive(btn);
+        const item = truthTables[key];
+        const colWidth = (100 / item.headers.length).toFixed(3) + '%';
+        let html = '<table class="truth-table fixed" aria-label="Truth table for ' + item.title + '"><colgroup>';
+        item.headers.forEach(function() {
+          html += '<col style="width:' + colWidth + '">';
+        });
+        html += '</colgroup><thead><tr>';
+        item.headers.forEach(function(header) {
+          html += '<th>' + header + '</th>';
+        });
+        html += '</tr></thead><tbody>';
+        item.rows.forEach(function(row) {
+          html += '<tr>';
+          row.forEach(function(value) {
+            const label = value ? 'true' : 'false';
+            html += '<td><span class="truth-val ' + label + '">' + label + '</span></td>';
+          });
+          html += '</tr>';
+        });
+        html += '</tbody></table>';
+        document.getElementById('truth-table-display').innerHTML = html;
+        document.getElementById('truth-table-note').textContent = item.note;
+      };
+
+      window.showLogicElement = function(key, card) {
+        setActive(card);
+        const item = logicElements[key];
+        const detail = document.getElementById('logic-element-detail');
+        detail.classList.add('show');
+        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+      };
+
+      window.showFallacy = function(key, btn) {
+        setActive(btn);
+        document.getElementById('fallacy-display').innerHTML = renderPanel(fallacies[key]);
+      };
+
+      window.showParadox = function(key, btn) {
+        setActive(btn);
+        document.getElementById('paradox-display').innerHTML = renderPanel(selfReference[key]);
+      };
+
+      window.showInfinity = function(key, card) {
+        setActive(card);
+        const item = infinity[key];
+        const detail = document.getElementById('infinity-detail');
+        detail.classList.add('show');
+        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+      };
+
+      window.showProbParadox = function(key, btn) {
+        setActive(btn);
+        document.getElementById('prob-paradox-display').innerHTML = renderPanel(probabilityParadoxes[key]);
+      };
+
+      window.showPhilParadox = function(key, btn) {
+        setActive(btn);
+        document.getElementById('phil-paradox-display').innerHTML = renderPanel(philosophicalParadoxes[key]);
+      };
+
+      window.calculateBayes = function() {
+        const prior = readPercent('prior');
+        const sens = readPercent('sensitivity');
+        const fp = readPercent('falsepos');
+        const out = document.getElementById('bayes-result');
+        if (!prior || !sens || !fp) {
+          out.textContent = 'Enter percentages greater than 0 and less than 100.';
+          return;
+        }
+        const numerator = sens * prior;
+        const denominator = numerator + fp * (1 - prior);
+        const posterior = numerator / denominator;
+        out.textContent = 'After a positive result, the probability is about ' + formatPct(posterior) + '. In natural frequencies: out of 10,000 people, expect about ' + Math.round(prior * 10000 * sens).toLocaleString() + ' true positives and ' + Math.round((1 - prior) * 10000 * fp).toLocaleString() + ' false positives.';
+      };
+
+      window.calculateEV = function() {
+        const gain = Number(document.getElementById('gain').value);
+        const prob = Number(document.getElementById('prob').value) / 100;
+        const cost = Number(document.getElementById('cost').value);
+        const out = document.getElementById('ev-result');
+        if (!Number.isFinite(gain) || !Number.isFinite(prob) || !Number.isFinite(cost) || prob < 0 || prob > 1) {
+          out.textContent = 'Enter a gain, a success chance from 0 to 100, and a failure cost.';
+          return;
+        }
+        const ev = prob * gain - (1 - prob) * cost;
+        const verdict = ev >= 0 ? 'positive' : 'negative';
+        out.textContent = 'Expected value: ' + formatMoney(ev) + ' per attempt, which is ' + verdict + ' before risk tolerance, cash limits, and strategic effects are considered.';
+      };
+
+      let mhState = { phase: 'pick', car: 0, picked: -1, revealed: -1 };
+      let mhStats = { stayWins: 0, stayTotal: 0, switchWins: 0, switchTotal: 0 };
+
+      function mhNewGame() {
+        mhState = {
+          phase: 'pick',
+          car: Math.floor(Math.random() * 3),
+          picked: -1,
+          revealed: -1
+        };
+        mhRender('Pick a door to begin.');
+      }
+      window.mhNewGame = mhNewGame;
+
+      function mhRevealDoor(picked) {
+        const revealable = [0, 1, 2].filter(function(door) {
+          return door !== picked && door !== mhState.car;
+        });
+        return revealable[Math.floor(Math.random() * revealable.length)];
+      }
+
+      function mhRemainingDoor() {
+        return [0, 1, 2].filter(function(door) {
+          return door !== mhState.picked && door !== mhState.revealed;
+        })[0];
+      }
+
+      function mhRender(message) {
+        const doors = document.getElementById('mh-doors');
+        let html = '';
+        for (let i = 0; i < 3; i++) {
+          let cls = 'mh-door';
+          let mark = '?';
+          if (mhState.phase === 'switch') {
+            if (i === mhState.picked) cls += ' picked';
+            if (i === mhState.revealed) {
+              cls += ' revealed locked';
+              mark = 'EMPTY';
+            }
+          }
+          if (mhState.phase === 'result') {
+            cls += ' locked';
+            mark = i === mhState.car ? 'PRIZE' : 'EMPTY';
+            if (i === mhState.car) cls += ' winner';
+            if (i === mhState.revealed && i !== mhState.car) cls += ' revealed';
+          }
+          html += '<button class="' + cls + '" onclick="mhPickDoor(' + i + ')">';
+          html += '<span class="mh-door-mark">' + mark + '</span>';
+          html += '<span class="mh-door-label">Door ' + (i + 1) + '</span>';
+          html += '</button>';
+        }
+        doors.innerHTML = html;
+        document.getElementById('mh-status').textContent = message;
+        document.getElementById('mh-stay-wins').textContent = mhStats.stayWins;
+        document.getElementById('mh-stay-total').textContent = mhStats.stayTotal;
+        document.getElementById('mh-switch-wins').textContent = mhStats.switchWins;
+        document.getElementById('mh-switch-total').textContent = mhStats.switchTotal;
+
+        const actions = document.getElementById('mh-actions');
+        if (mhState.phase === 'switch') {
+          const other = mhRemainingDoor();
+          actions.innerHTML = '<button onclick="mhChoose(false)">Stay with Door ' + (mhState.picked + 1) + '</button><button onclick="mhChoose(true)">Switch to Door ' + (other + 1) + '</button>';
+        } else if (mhState.phase === 'result') {
+          actions.innerHTML = '<button onclick="mhNewGame()">Play again</button>';
+        } else {
+          actions.innerHTML = '';
+        }
+      }
+
+      window.mhPickDoor = function(door) {
+        if (mhState.phase !== 'pick') return;
+        mhState.picked = door;
+        mhState.revealed = mhRevealDoor(door);
+        mhState.phase = 'switch';
+        mhRender('You picked Door ' + (door + 1) + '. The host opens Door ' + (mhState.revealed + 1) + ', which is empty. Stay or switch?');
+      };
+
+      window.mhChoose = function(switched) {
+        if (mhState.phase !== 'switch') return;
+        const finalDoor = switched ? mhRemainingDoor() : mhState.picked;
+        const won = finalDoor === mhState.car;
+        if (switched) {
+          mhStats.switchTotal++;
+          if (won) mhStats.switchWins++;
+        } else {
+          mhStats.stayTotal++;
+          if (won) mhStats.stayWins++;
+        }
+        mhState.phase = 'result';
+        const choice = switched ? 'switched to Door ' + (finalDoor + 1) : 'stayed with Door ' + (finalDoor + 1);
+        mhRender('You ' + choice + '. The prize was behind Door ' + (mhState.car + 1) + '. ' + (won ? 'You won.' : 'You lost.'));
+      };
+
+      window.mhRunMany = function(rounds) {
+        for (let i = 0; i < rounds; i++) {
+          const car = Math.floor(Math.random() * 3);
+          const picked = Math.floor(Math.random() * 3);
+          const revealable = [0, 1, 2].filter(function(door) {
+            return door !== picked && door !== car;
+          });
+          const revealed = revealable[Math.floor(Math.random() * revealable.length)];
+          const switchedTo = [0, 1, 2].filter(function(door) {
+            return door !== picked && door !== revealed;
+          })[0];
+          mhStats.stayTotal++;
+          mhStats.switchTotal++;
+          if (picked === car) mhStats.stayWins++;
+          if (switchedTo === car) mhStats.switchWins++;
+        }
+        mhNewGame();
+        const stayRate = mhStats.stayTotal ? formatPct(mhStats.stayWins / mhStats.stayTotal) : '0%';
+        const switchRate = mhStats.switchTotal ? formatPct(mhStats.switchWins / mhStats.switchTotal) : '0%';
+        document.getElementById('mh-status').textContent = 'Auto-played ' + rounds + ' setups. Stay win rate: ' + stayRate + '. Switch win rate: ' + switchRate + '.';
+      };
+
+      window.mhReset = function() {
+        mhStats = { stayWins: 0, stayTotal: 0, switchWins: 0, switchTotal: 0 };
+        mhNewGame();
+      };
+
+      function renderPanel(item) {
+        let html = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+        if (item.meta) {
+          html += '<div class="panel-meta">' + item.meta.map(function(m) {
+            return '<div class="panel-chip">' + m + '</div>';
+          }).join('') + '</div>';
+        }
+        return html;
+      }
+
+      function setActive(el) {
+        if (!el || !el.parentElement) return;
+        Array.prototype.forEach.call(el.parentElement.children, function(child) {
+          child.classList.remove('active');
+        });
+        el.classList.add('active');
+      }
+
+      function readPercent(id) {
+        const value = Number(document.getElementById(id).value);
+        if (!Number.isFinite(value) || value <= 0 || value >= 100) return null;
+        return value / 100;
+      }
+
+      function formatPct(x) {
+        return (x * 100).toFixed(x < 0.1 ? 2 : 1) + '%';
+      }
+
+      function formatMoney(x) {
+        const sign = x < 0 ? '-' : '';
+        return sign + '$' + Math.abs(x).toLocaleString(undefined, { maximumFractionDigits: 2 });
+      }
+
+      function buildTimeline() {
+        const min = -400;
+        const max = 1950;
+        const axis = [-400, 0, 500, 1000, 1500, 1900];
+        const chart = document.getElementById('logic-timeline');
+        let html = '<div class="chart-title">A compressed history of formal logic</div><div class="pc-inner"><div class="pc-axis">';
+        axis.forEach(function(mark) {
+          const left = ((mark - min) / (max - min)) * 100;
+          const label = mark < 0 ? Math.abs(mark) + ' BCE' : mark;
+          html += '<span class="pc-axis-mark" style="left:' + left + '%">' + label + '</span>';
+        });
+        html += '</div>';
+        timelineItems.forEach(function(item) {
+          const start = Math.max(item.start, min);
+          const end = Math.min(item.end, max);
+          const left = ((start - min) / (max - min)) * 100;
+          const width = Math.max(((end - start) / (max - min)) * 100, 1.6);
+          html += '<div class="pc-row"><div class="pc-label">' + item.label + '</div><div class="pc-track"><div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + item.bg + ';color:' + item.text + '"><span class="pc-fill-label">' + item.start + '</span></div></div></div>';
+        });
+        html += '</div><div class="chart-note">Bars mark active periods or publication moments. Single-year breakthroughs are widened so they remain visible on small screens.</div>';
+        chart.innerHTML = html;
+      }
+
+      function updateSelfReference() {
+        const value = Number(document.getElementById('selfref-slider').value);
+        document.getElementById('selfref-value').textContent = value;
+        const stages = [
+          'At 0, a language talks only about outside objects: numbers, people, doors, sets.',
+          'Low risk: the language can name statements but does not assign truth or provability to itself.',
+          'Medium risk: it starts encoding its own syntax, which is powerful enough for metamathematics.',
+          'High risk: truth, definability, or provability are allowed to apply without level restrictions.',
+          'At 10, expect liar-style loops, Russell-style comprehension failures, or Godel-style self-reference.'
+        ];
+        const index = value <= 1 ? 0 : value <= 3 ? 1 : value <= 6 ? 2 : value <= 8 ? 3 : 4;
+        document.getElementById('selfref-output').textContent = stages[index];
+      }
+
+      function updateBirthday() {
+        const n = Number(document.getElementById('birthday-slider').value);
+        document.getElementById('birthday-count').textContent = n;
+        let pNoMatch = 1;
+        for (let i = 0; i < n; i++) {
+          pNoMatch *= (365 - i) / 365;
+        }
+        const p = 1 - pNoMatch;
+        const pairs = n * (n - 1) / 2;
+        document.getElementById('birthday-output').textContent = n + ' people create ' + pairs.toLocaleString() + ' pairs. The chance of at least one shared birthday is about ' + formatPct(p) + ', ignoring leap days and seasonal birth patterns.';
+      }
+
+      function applyDynamicStyles() {
+        document.querySelectorAll('.cscale-dot').forEach(function(dot) {
+          dot.style.left = dot.dataset.left + '%';
+        });
+        document.querySelectorAll('.bar-fill').forEach(function(fill) {
+          fill.style.width = fill.dataset.width + '%';
+          fill.style.background = fill.dataset.color;
+        });
+        document.querySelectorAll('.dist-seg').forEach(function(seg) {
+          seg.style.width = seg.dataset.width + '%';
+          seg.style.background = seg.dataset.color;
+        });
+        document.querySelectorAll('.legend-swatch').forEach(function(swatch) {
+          swatch.style.background = swatch.dataset.color;
+        });
+      }
+
+      function initialiseQA() {
+        document.querySelectorAll('.qa-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            const answer = btn.nextElementSibling;
+            const isOpen = answer.classList.toggle('show');
+            btn.textContent = isOpen ? 'hide' : 'show answer';
+          });
+        });
+      }
+
+      buildTimeline();
+      applyDynamicStyles();
+      initialiseQA();
+      document.getElementById('selfref-slider').addEventListener('input', updateSelfReference);
+      document.getElementById('birthday-slider').addEventListener('input', updateBirthday);
+      updateSelfReference();
+      updateBirthday();
+      calculateBayes();
+      calculateEV();
+      mhNewGame();
+
+      /* ---- Cognitive biases ---- */
+      const biasData = {
+        anchoring: {
+          title: 'Anchoring bias',
+          body: 'The first number or framing you encounter disproportionately influences all subsequent estimates. In salary negotiation, legal damages, and retail pricing, the anchor drags the final figure toward it even when the anchor is arbitrary. Tversky and Kahneman demonstrated this in 1974: people asked whether the percentage of African nations in the UN was above or below 65 gave higher estimates than those anchored at 10, across every subsequent question.',
+          meta: ['Stage: framing and evaluation', 'Antidote: generate your own estimate before seeing a number', 'Domain: negotiation, finance, medicine']
+        },
+        availability: {
+          title: 'Availability heuristic',
+          body: 'People estimate probability by how easily an example comes to mind. Plane crashes feel more likely than car crashes after a crash is in the news, despite statistics running the other way. Availability is a useful shortcut in stable environments, but media coverage, personal experience, and emotional salience all distort it systematically.',
+          meta: ['Stage: option generation', 'Antidote: look up base rates', 'Domain: risk perception, policy, medical diagnosis']
+        },
+        overconfidence: {
+          title: 'Overconfidence bias',
+          body: 'People systematically overestimate the accuracy of their beliefs and the precision of their predictions. Calibration studies consistently find that events assigned 90% confidence happen only about 70 to 75% of the time. Experts are often more overconfident than novices in their domains of expertise, partly because expertise increases fluency without eliminating hard limits.',
+          meta: ['Stage: evaluation', 'Antidote: consider base rates and track your predictions', 'Domain: forecasting, investment, project planning']
+        },
+        framing: {
+          title: 'Framing effect',
+          body: 'Logically equivalent information presented differently triggers different choices. "A 10% chance of dying" and "a 90% chance of surviving" describe the same situation; people consistently prefer the survival frame. Politicians, marketers, and lawyers exploit this: "estate tax" and "death tax" refer to the same policy but activate different intuitions.',
+          meta: ['Stage: framing', 'Antidote: rephrase the options in multiple frames before deciding', 'Domain: public policy, medicine, marketing']
+        },
+        hindsight: {
+          title: 'Hindsight bias',
+          body: 'After an event has occurred, people believe they knew it was coming more than they actually did. This "I knew it all along" effect distorts learning: if you misremember being confident before a success, you credit skill; if you misremember being confident before a failure, you search for external blame. Decision journals directly counter this.',
+          meta: ['Stage: post-decision review', 'Antidote: write predictions before outcomes are known', 'Domain: history, finance, medicine, management']
+        },
+        planning: {
+          title: 'Planning fallacy',
+          body: 'People consistently underestimate the time, cost, and risk of future projects while overestimating the benefits. The Sydney Opera House was budgeted for completion in 1963 at 7 million dollars; it finished in 1973 at 102 million. Reference class forecasting, developed by Daniel Kahneman and Amos Tversky, combats this by asking: how long did similar projects actually take?',
+          meta: ['Stage: option generation and evaluation', 'Antidote: reference class forecasting, add a pessimism buffer', 'Domain: construction, software, policy, research']
+        }
+      };
+
+      /* ---- Critical thinking tools ---- */
+      const ctTools = {
+        premortem: {
+          title: 'Pre-mortem',
+          body: 'Before committing to a plan, imagine it is one year in the future and the plan has failed badly. Now write down all the reasons it failed. This technique, developed by psychologist Gary Klein, breaks the groupthink that suppresses concern before a project begins. The pre-mortem is not pessimism; it is a structured search for overlooked failure modes. Teams using it identify more distinct risks than those using post-mortem only.'
+        },
+        steelman: {
+          title: 'Steelmanning',
+          body: 'Reconstruct the opposing view in its strongest, most charitable form, not the version easiest to defeat. This is the opposite of a straw man. A steelman is complete when the position\'s actual proponents would agree it represents their view fairly. The discipline produces three benefits: your critique becomes more useful, your own position becomes more robust, and the conversation becomes less adversarial because the other person is less defensive.'
+        },
+        outside: {
+          title: 'Outside view (reference class forecasting)',
+          body: 'The inside view uses the details of this specific project to estimate duration and cost. The outside view asks: what happened to the last 50 projects similar to this one? The outside view routinely outperforms expert judgment on novel projects because it ignores the special pleading of "but this time is different." The technique was developed by Kahneman and Tversky and formalized by Bent Flyvbjerg in infrastructure planning.'
+        },
+        ferminest: {
+          title: 'Fermi estimation',
+          body: 'A Fermi estimate breaks an unknown quantity into smaller, more estimable sub-questions and multiplies the results. Enrico Fermi famously estimated the explosive yield of the Trinity nuclear test by dropping torn paper scraps and watching how far they drifted. Fermi estimation is not about precision; it is about calibration. An order-of-magnitude check catches the wildly wrong answer before commitment. "Is this ten dollars or ten million dollars?" is often answerable even when the exact figure is not.'
+        },
+        'five-whys': {
+          title: 'Five Whys',
+          body: 'Ask "why?" five times in sequence to move from symptom to root cause. The technique was developed by Sakichi Toyoda and used extensively in the Toyota Production System. "The server went down" is a symptom. "Why?" leads to the trigger. Repeating the question usually passes through the proximate causes and arrives at a systemic one. The number five is a heuristic, not a law; some problems require three iterations and some require eight.'
+        },
+        null: {
+          title: 'Null hypothesis discipline',
+          body: 'The null hypothesis is the claim that nothing interesting is happening, that the effect observed is due to chance, that the two groups are the same. Science defaults to the null until evidence overturns it. In everyday reasoning, the discipline of asking "what would this look like if the null were true?" catches many excited claims that are actually noise. P-hacking and publication bias both exploit failures to hold this question steady.'
+        }
+      };
+
+      /* ---- Argument reconstruction examples ---- */
+      const argReconstructData = {
+        policy: {
+          raw: '"We should raise the minimum wage because workers deserve a living wage."',
+          p1: 'Workers who work full-time should be able to afford basic necessities.',
+          p2: 'The current minimum wage does not allow full-time workers to afford basic necessities in most regions.',
+          p3: 'Raising the minimum wage would close that gap without unacceptable side effects. (contested)',
+          conclusion: 'The minimum wage should be raised.',
+          note: 'The third premise is the empirical battleground. Economists dispute the magnitude of employment effects. Logic alone cannot settle this; it clarifies that the dispute is empirical, not moral.'
+        },
+        science: {
+          raw: '"Coffee causes cancer, according to a new study."',
+          p1: 'This study found a statistically significant association between coffee consumption and cancer incidence.',
+          p2: 'Statistically significant associations imply causal relationships. (hidden premise -- usually false)',
+          conclusion: 'Coffee causes cancer.',
+          note: 'The hidden second premise is the failure point. The study may show correlation in one population under one design. Causation requires replication, dose-response, mechanism, and ruling out confounders like smoking or socioeconomic status.'
+        },
+        legal: {
+          raw: '"My client cannot be guilty because he was at home that evening."',
+          p1: 'If the defendant was at home at the time of the crime, he could not have committed it at the scene.',
+          p2: 'The defendant was at home at the time of the crime.',
+          conclusion: 'The defendant did not commit the crime.',
+          note: 'The argument is valid. The dispute will be entirely over the second premise: alibi evidence, witness reliability, and whether "at home" is consistent with remote involvement. Logic hands the case to factual investigation.'
+        },
+        ad: {
+          raw: '"Four out of five dentists recommend our toothpaste."',
+          p1: 'Dentists have professional expertise on dental product quality.',
+          p2: 'Four out of five surveyed dentists recommend this toothpaste over competing products. (unstated: who was surveyed, what was the question, what did the fifth say)',
+          conclusion: 'This toothpaste is superior.',
+          note: 'Hidden premises include: the sample is representative, the recommendation reflects quality not incentive, the fifth dentist\'s objection is not material. Each can be contested. Reconstructing the argument exposes what "four out of five" is actually doing rhetorically.'
+        }
+      };
+
+      window.showBias = function(key, btn) {
+        setActive(btn);
+        document.getElementById('bias-display').innerHTML = renderPanel(biasData[key]);
+      };
+
+      window.showCTTool = function(key, card) {
+        setActive(card);
+        const item = ctTools[key];
+        const detail = document.getElementById('ct-tool-detail');
+        detail.classList.add('show');
+        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+      };
+
+      window.showArgReconstruct = function(key, btn) {
+        setActive(btn);
+        const d = argReconstructData[key];
+        let html = '<div class="u-mb-sm"><span class="mini-label">Original claim</span><div class="muted-copy-large u-mt-sm" style="font-style:italic">' + d.raw + '</div></div>';
+        html += '<div class="u-mb-sm"><span class="mini-label">Reconstructed premises</span>';
+        html += '<div class="u-mt-sm muted-copy">P1: ' + d.p1 + '</div>';
+        html += '<div class="muted-copy">P2: ' + d.p2 + '</div>';
+        if (d.p3) html += '<div class="muted-copy">P3: ' + d.p3 + '</div>';
+        html += '</div>';
+        html += '<div class="u-mb-sm"><span class="mini-label">Conclusion</span><div class="muted-copy u-mt-sm">' + d.conclusion + '</div></div>';
+        html += '<div class="logic-note" style="margin-bottom:0"><strong>Analysis: </strong>' + d.note + '</div>';
+        document.getElementById('arg-reconstruct-output').innerHTML = html;
+      };
+
+      function updateConfidence() {
+        const v = Number(document.getElementById('conf-slider').value);
+        document.getElementById('conf-value').textContent = v;
+        const msgs = [
+          [50, 59, 'This is near-ignorance territory. You should probably gather more evidence or acknowledge the question is genuinely open before committing.'],
+          [60, 69, 'Moderate lean. You have a directional belief but should actively seek disconfirming evidence and avoid acting as if the conclusion is established.'],
+          [70, 79, 'Reasonably confident. Worth checking: is this based on a reference class, multiple independent sources, or just a single vivid story?'],
+          [80, 89, 'High confidence. At this level, calibration research suggests you are likely still overestimating accuracy. What would change your mind?'],
+          [90, 95, 'Very high. Consider: have you steelmanned the opposite view? Have you accounted for unknown unknowns?'],
+          [96, 99, 'Near-certain. Reserve this range for logical and mathematical truths and well-replicated physical constants. Most real-world claims should not reach this level.']
+        ];
+        const msg = msgs.find(function(m) { return v >= m[0] && v <= m[1]; });
+        document.getElementById('conf-output').textContent = msg ? msg[2] : '';
+      }
+
+      document.getElementById('conf-slider').addEventListener('input', updateConfidence);
+      updateConfidence();
+      showBias('anchoring', document.querySelector('[onclick^="showBias"]'));
+      showCTTool('premortem', document.querySelector('[onclick^="showCTTool"]'));
+      showArgReconstruct('policy', document.querySelector('[onclick^="showArgReconstruct"]'));
+
+      const firstCore = document.querySelector('[onclick^="showLogicCore"]');
+      const firstTruth = document.querySelector('[onclick^="showTruthTable"]');
+      const firstElement = document.querySelector('[onclick^="showLogicElement"]');
+      const firstFallacy = document.querySelector('[onclick^="showFallacy"]');
+      const firstParadox = document.querySelector('[onclick^="showParadox"]');
+      const firstInfinity = document.querySelector('[onclick^="showInfinity"]');
+      const firstProb = document.querySelector('[onclick^="showProbParadox"]');
+      const firstPhil = document.querySelector('[onclick^="showPhilParadox"]');
+      showLogicCore('validity', firstCore);
+      showTruthTable('and', firstTruth);
+      showLogicElement('connectives', firstElement);
+      showFallacy('consequent', firstFallacy);
+      showParadox('liar', firstParadox);
+      showInfinity('zeno', firstInfinity);
+      showProbParadox('monty', firstProb);
+      showPhilParadox('trolley', firstPhil);
+    });
+  
+</script>

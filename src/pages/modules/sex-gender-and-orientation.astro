@@ -1,0 +1,1921 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/sex-gender-and-orientation.css';
+
+const mod = modules.find((m) => m.id === 23)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+
+    <div class="module-header">
+      <i class="fa-solid fa-venus-mars module-header-icon"></i>
+      <h1 class="module-title module-heading">Module 23: Sex, Gender & Orientation</h1>
+    </div>
+    <p class="module-subtitle">Biology, identity, and social constructs</p>
+
+    <!-- ============================================================
+         PART A — THREE DISTINCT CONCEPTS
+         ============================================================ -->
+    <h2 class="sec" id="part-a-three-distinct-concepts-often-conflated-fundamentally-different">Part A · three distinct concepts — often conflated, fundamentally different</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">Three separate dimensions — each independently variable</div>
+      <div class="concept-grid">
+        <div class="gender-panel">
+          <div class="gender-label">Biological sex</div>
+          <div class="gender-text">The biological characteristics: chromosomes, hormones, gonads, and anatomy. Primarily determined at conception; develops through fetal development and puberty. Mostly binary in distribution but includes variation (intersex).</div>
+          <div class="gender-text-2">Assigned at birth based on visible anatomy. May not reflect internal anatomy, chromosomes, or hormones.</div>
+        </div>
+        <div class="gender-panel-2">
+          <div class="gender-label-2">Gender identity</div>
+          <div class="gender-text-3">A person's internal, psychological sense of their own gender — who they are. May or may not correspond with biological sex. Not the same as gender expression (how you present yourself). A core aspect of self.</div>
+          <div class="gender-text-4">Not a choice. Research suggests it is established early in development, with neurobiological components.</div>
+        </div>
+        <div class="gender-panel-3">
+          <div class="gender-label-3">Sexual orientation</div>
+          <div class="gender-text-5">The pattern of emotional, romantic, and/or sexual attraction to others. Defined by the gender(s) a person is attracted to, not by their own gender. Distinct from gender identity — transgender people have all orientations.</div>
+          <div class="gender-text-6">Also not a choice. Strong evidence for biological and developmental (prenatal hormonal) contributions.</div>
+        </div>
+      </div>
+      <div class="gender-panel-4">
+        <strong class="text-primary">The key independence:</strong> These three dimensions can combine in any way. A person can be biologically male, identify as a woman (transgender), and be attracted to men (heterosexual) — or any other combination. Gender identity says nothing about sexual orientation; biological sex says nothing about gender identity. Each dimension is its own axis.
+      </div>
+    </div>
+
+    <!-- SVG: Three-axis independence diagram -->
+    <div class="scroll-panel">
+      <div class="gender-label-4">Three independent axes — any combination is possible</div>
+      <svg class="gender-media" viewBox="0 0 780 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Axis 1: Biological sex -->
+        <text x="2" y="18" font-size="10" font-weight="600" fill="#0C447C" letter-spacing="0.08em" text-transform="uppercase">BIOLOGICAL SEX</text>
+        <rect x="2" y="25" width="234" height="14" rx="7" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.5"/>
+        <text x="6" y="36" font-size="9" fill="#185FA5">Male</text>
+        <text x="110" y="36" font-size="9" fill="#185FA5" text-anchor="middle">Intersex variation</text>
+        <text x="228" y="36" font-size="9" fill="#185FA5" text-anchor="end">Female</text>
+
+        <!-- Axis 2: Gender identity -->
+        <text x="272" y="18" font-size="10" font-weight="600" fill="#3C3489" letter-spacing="0.08em">GENDER IDENTITY</text>
+        <defs>
+          <linearGradient id="genderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop class="gender-stop-style" offset="0%"/>
+            <stop class="gender-stop-style-2" offset="50%"/>
+            <stop class="gender-stop-style" offset="100%"/>
+          </linearGradient>
+        </defs>
+        <rect x="272" y="25" width="234" height="14" rx="7" fill="url(#genderGrad)" stroke="#AFA9EC" stroke-width="0.5"/>
+        <text x="276" y="36" font-size="9" fill="#3C3489">Man</text>
+        <text x="389" y="36" font-size="9" fill="#3C3489" text-anchor="middle">Non-binary spectrum</text>
+        <text x="498" y="36" font-size="9" fill="#3C3489" text-anchor="end">Woman</text>
+
+        <!-- Axis 3: Sexual orientation -->
+        <text x="542" y="18" font-size="10" font-weight="600" fill="#085041" letter-spacing="0.08em">SEXUAL ORIENTATION</text>
+        <defs>
+          <linearGradient id="orientGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop class="gender-stop-style-3" offset="0%"/>
+            <stop class="gender-stop-style-4" offset="50%"/>
+            <stop class="gender-stop-style-3" offset="100%"/>
+          </linearGradient>
+        </defs>
+        <rect x="542" y="25" width="234" height="14" rx="7" fill="url(#orientGrad)" stroke="#5DCAA5" stroke-width="0.5"/>
+        <text x="546" y="36" font-size="9" fill="#085041">Same-sex</text>
+        <text x="659" y="36" font-size="9" fill="#085041" text-anchor="middle">Bi / Pan / Asexual</text>
+        <text x="772" y="36" font-size="9" fill="#085041" text-anchor="end">Opposite</text>
+
+        <!-- Labels at bottom -->
+        <text x="119" y="72" font-size="9" fill="#888780" text-anchor="middle">Bimodal — most clearly M or F</text>
+        <text x="119" y="83" font-size="9" fill="#888780" text-anchor="middle">with ~1.7% intersex variation</text>
+        <text x="389" y="72" font-size="9" fill="#888780" text-anchor="middle">Psychologically determined;</text>
+        <text x="389" y="83" font-size="9" fill="#888780" text-anchor="middle">independent of biological sex</text>
+        <text x="659" y="72" font-size="9" fill="#888780" text-anchor="middle">Pattern of attraction; independent</text>
+        <text x="659" y="83" font-size="9" fill="#888780" text-anchor="middle">of both sex and gender identity</text>
+      </svg>
+    </div>
+
+    <!-- ============================================================
+         PART B — BIOLOGICAL SEX
+         ============================================================ -->
+    <h2 class="sec" id="part-b-biological-sex-the-biology-in-detail">Part B · biological sex — the biology in detail</h2>
+
+    <div class="bio-grid">
+      <div class="card">
+        <p class="clabel">Chromosomal sex</p>
+        <p class="cval">XX, XY, and variations</p>
+        <p class="cnote">Typically: XX = female, XY = male. The Y chromosome carries the SRY gene which triggers male development. But chromosomal variations exist: XXY (Klinefelter syndrome, ~1 in 500–650 males), XYY, X0 (Turner syndrome, ~1 in 2,500 females), XXX. Chromosomes determine initial gonadal development but are not the whole story — all subsequent sex characteristics depend on hormones.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Hormonal sex</p>
+        <p class="cval">Oestrogen, testosterone, and others</p>
+        <p class="cnote">Both sexes produce both oestrogen and testosterone — in different proportions. Testosterone (produced primarily by testes, adrenals) drives male secondary characteristics. Oestrogen and progesterone (ovaries, adrenals) drive female secondary characteristics. Hormonal variation is continuous — there is no hard line. Some biological females have higher testosterone than some biological males.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Gonadal sex</p>
+        <p class="cval">Ovaries, testes, or ambiguous</p>
+        <p class="cnote">Gonads develop from the same embryonic tissue (bipotential gonad). SRY gene triggers testes development; without SRY, ovaries develop by default. Some intersex conditions involve ambiguous or atypical gonadal development.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Intersex</p>
+        <p class="cval">~1.7% of the population (Fausto-Sterling estimate)</p>
+        <p class="cnote">Intersex describes people whose biological sex characteristics don't fit typical definitions of male or female — in chromosomes, hormones, gonads, or anatomy. Examples: congenital adrenal hyperplasia (CAH, XX individuals with virilised anatomy), androgen insensitivity syndrome (XY individuals with complete or partial female anatomy). Intersex is not the same as being transgender.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Sex determination — the timeline</p>
+        <p class="cval">Genetically set, anatomically expressed later</p>
+        <p class="cnote">Chromosomal sex is set at fertilisation. The embryo is anatomically undifferentiated until about week 6–7. SRY triggers testes development ~week 7; testosterone from fetal testes drives male anatomy week 8–12. Without this hormonal cascade, female anatomy develops. External genitalia differentiate from the same embryonic structures (homologous organs).</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Sex is mostly binary, not entirely</p>
+        <p class="cval">Bimodal distribution, not a strict binary</p>
+        <p class="cnote">The statement "biological sex is binary" is approximately true — the vast majority of people are clearly chromosomally, hormonally, and anatomically male or female. But variations exist at every level. The ~1.7% intersex estimate (narrower clinical definitions give ~0.018%) is comparable in scale to red hair. Biology accommodates the spectrum even if the distribution is strongly bimodal.</p>
+      </div>
+    </div>
+
+    <!-- SVG: Fetal sex development timeline -->
+    <div class="scroll-panel">
+      <div class="gender-text-7">Fetal sex differentiation timeline</div>
+      <svg class="gender-media-2" viewBox="0 0 720 130" xmlns="http://www.w3.org/2000/svg">
+        <!-- Timeline spine -->
+        <line x1="30" y1="50" x2="700" y2="50" stroke="var(--color-border-tertiary)" stroke-width="1.5"/>
+
+        <!-- Week markers -->
+        <line x1="30"  y1="45" x2="30"  y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="120" y1="45" x2="120" y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="210" y1="45" x2="210" y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="310" y1="45" x2="310" y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="430" y1="45" x2="430" y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="580" y1="45" x2="580" y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="700" y1="45" x2="700" y2="55" stroke="var(--color-border-secondary)" stroke-width="1"/>
+
+        <text x="30"  y="66" font-size="9" fill="#888780" text-anchor="middle">0</text>
+        <text x="120" y="66" font-size="9" fill="#888780" text-anchor="middle">wk 4</text>
+        <text x="210" y="66" font-size="9" fill="#888780" text-anchor="middle">wk 7</text>
+        <text x="310" y="66" font-size="9" fill="#888780" text-anchor="middle">wk 10</text>
+        <text x="430" y="66" font-size="9" fill="#888780" text-anchor="middle">wk 14</text>
+        <text x="580" y="66" font-size="9" fill="#888780" text-anchor="middle">wk 20</text>
+        <text x="700" y="66" font-size="9" fill="#888780" text-anchor="middle">Birth</text>
+
+        <!-- Events -->
+        <!-- Fertilisation: chromosomal sex set -->
+        <circle cx="30" cy="50" r="5" fill="#0C447C"/>
+        <text x="30" y="36" font-size="9" fill="#0C447C" text-anchor="middle">Chromosomal</text>
+        <text x="30" y="26" font-size="9" fill="#0C447C" text-anchor="middle">sex set</text>
+
+        <!-- Bipotential gonad forms -->
+        <circle cx="120" cy="50" r="5" fill="#888780"/>
+        <text x="120" y="36" font-size="9" fill="#888780" text-anchor="middle">Bipotential</text>
+        <text x="120" y="26" font-size="9" fill="#888780" text-anchor="middle">gonad forms</text>
+
+        <!-- SRY / gonadal differentiation -->
+        <circle cx="210" cy="50" r="5" fill="var(--accent)"/>
+        <text x="210" y="36" font-size="9" fill="var(--accent)" text-anchor="middle">SRY triggers</text>
+        <text x="210" y="26" font-size="9" fill="var(--accent)" text-anchor="middle">testes / ovaries</text>
+
+        <!-- Internal structures -->
+        <circle cx="310" cy="50" r="5" fill="#085041"/>
+        <text x="310" y="36" font-size="9" fill="#085041" text-anchor="middle">Internal anatomy</text>
+        <text x="310" y="26" font-size="9" fill="#085041" text-anchor="middle">differentiates</text>
+
+        <!-- External genitalia -->
+        <circle cx="430" cy="50" r="5" fill="#633806"/>
+        <text x="430" y="36" font-size="9" fill="#633806" text-anchor="middle">External genitalia</text>
+        <text x="430" y="26" font-size="9" fill="#633806" text-anchor="middle">differentiate</text>
+
+        <!-- Sex assigned at birth -->
+        <circle cx="700" cy="50" r="5" fill="#712B13"/>
+        <text x="700" y="36" font-size="9" fill="#712B13" text-anchor="middle">Sex assigned</text>
+        <text x="700" y="26" font-size="9" fill="#712B13" text-anchor="middle">at birth</text>
+
+        <!-- Hormone wave below -->
+        <text x="370" y="85" font-size="9" fill="#888780" text-anchor="middle">↑ Testosterone surge (if testes present) drives male development — without it, female anatomy is default</text>
+        <text x="370" y="99" font-size="9" fill="#888780" text-anchor="middle">Brain differentiation also occurs during this window — relevant to gender identity research</text>
+      </svg>
+    </div>
+
+    <!-- ============================================================
+         PART C — GENDER IDENTITY EXPLORER
+         ============================================================ -->
+    <h2 class="sec" id="part-c-gender-identity-the-spectrum-explored">Part C · gender identity — the spectrum explored</h2>
+
+    <div class="button-row">
+      <button class="exp-btn showgender-control" onclick="showGender('cisgender')"    >Cisgender</button>
+      <button class="exp-btn showgender-control" onclick="showGender('transgender')"  >Transgender</button>
+      <button class="exp-btn showgender-control" onclick="showGender('nonbinary')"    >Non-binary</button>
+      <button class="exp-btn showgender-control" onclick="showGender('genderfluid')"  >Genderfluid</button>
+      <button class="exp-btn showgender-control" onclick="showGender('agender')"      >Agender</button>
+      <button class="exp-btn showgender-control" onclick="showGender('genderqueer')"  >Genderqueer</button>
+      <button class="exp-btn showgender-control" onclick="showGender('dysphoria')"    >Gender dysphoria</button>
+      <button class="exp-btn showgender-control" onclick="showGender('transition')"   >Transition</button>
+    </div>
+    <div class="content-panel" id="gender-display"></div>
+
+    <!-- ============================================================
+         PART D — SEXUAL ORIENTATION EXPLORER
+         ============================================================ -->
+    <h2 class="sec" id="part-d-sexual-orientation-the-full-spectrum">Part D · sexual orientation — the full spectrum</h2>
+
+    <div class="button-row">
+      <button class="exp-btn showgender-control" onclick="showOrient('heterosexual')">Heterosexual</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('homosexual')"  >Homosexual (gay/lesbian)</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('bisexual')"    >Bisexual</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('pansexual')"   >Pansexual</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('asexual')"     >Asexual</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('demisexual')"  >Demisexual</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('aromantic')"   >Aromantic</button>
+      <button class="exp-btn showgender-control" onclick="showOrient('queer')"       >Queer</button>
+    </div>
+    <div class="content-panel" id="orient-display"></div>
+
+    <!-- ============================================================
+         PART E — KINSEY SCALE
+         ============================================================ -->
+    <h2 class="sec" id="part-e-the-kinsey-scale-history-and-limitations">Part E · the Kinsey scale — history and limitations</h2>
+
+    <div class="content-panel">
+      <div class="panel-title-spaced">Alfred Kinsey's 0–6 scale (1948) — a landmark and a limitation</div>
+      <div class="kinsey-wrap">
+        <div class="kinsey-bar">
+          <div class="gender-card"><div class="gender-label-5">0</div><div class="gender-text-8">Exclusively heterosexual</div></div>
+          <div class="gender-card-2"><div class="gender-label-6">1</div><div class="gender-text-9">Mostly hetero, incidental same-sex</div></div>
+          <div class="gender-card-3"><div class="gender-label-6">2</div><div class="gender-text-9">Mostly hetero, more than incidental</div></div>
+          <div class="gender-card-4"><div class="gender-label-6">3</div><div class="gender-text-10">Equally hetero and homosexual</div></div>
+          <div class="gender-card-5"><div class="gender-label-6">4</div><div class="gender-text-11">Mostly homosexual, more than incidental</div></div>
+          <div class="gender-card-6"><div class="gender-label-6">5</div><div class="gender-text-11">Mostly homosexual, incidental hetero</div></div>
+          <div class="gender-card-7"><div class="gender-label-7">6</div><div class="gender-text-12">Exclusively homosexual</div></div>
+        </div>
+      </div>
+      <div class="dist-grid">
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">What it contributed</div>
+          <div class="muted-copy-tight">Kinsey's 1948 "Sexual Behavior in the Human Male" was groundbreaking: it quantified that non-heterosexual behaviour and attraction were far more common than society admitted, and challenged the idea that sexuality was simply binary. It introduced the idea of a spectrum of orientation. Revolutionised scientific and public understanding.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Its limitations</div>
+          <div class="muted-copy-tight">The scale only captures one dimension (same-sex vs opposite-sex attraction) and conflates behaviour with attraction. It doesn't capture asexuality (no attraction to anyone), pansexuality, or the distinction between romantic and sexual attraction. Modern models (Klein Sexual Orientation Grid, Storms model) attempt to address these gaps.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART F — THREE IMPORTANT DISTINCTIONS
+         ============================================================ -->
+    <h2 class="sec" id="part-f-three-important-distinctions">Part F · three important distinctions</h2>
+
+    <div class="dist-grid">
+      <div class="card">
+        <p class="clabel">Orientation vs behaviour vs identity</p>
+        <p class="cval">Three separate things</p>
+        <p class="cnote">Orientation is who you are attracted to. Behaviour is who you have sex with. Identity is how you label yourself. A person can be attracted to both sexes (orientation), only have had opposite-sex relationships (behaviour), and identify as straight (identity). Or any other combination. These don't always align — and that's normal. Research focuses on attraction, not self-label or behaviour.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Romantic vs sexual attraction</p>
+        <p class="cval">Separable components</p>
+        <p class="cnote">Sexual attraction: physical/sexual desire. Romantic attraction: desire for emotional intimacy, partnership, and romance. Most people experience both for the same gender(s). But some are romantically attracted to one gender and sexually to another. Asexual people may have strong romantic attraction without sexual. The two-axis model captures this better than the Kinsey scale.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Gender expression vs gender identity</p>
+        <p class="cval">How you present vs who you are</p>
+        <p class="cnote">Gender expression is external: clothing, hair, mannerisms, pronoun preferences. Gender identity is internal: your sense of being a man, woman, neither, or other. These often align but don't have to. A cisgender man may have a feminine gender expression without this affecting his gender identity. Neither tells you about sexual orientation.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Sex assigned at birth vs gender</p>
+        <p class="cval">A medical observation vs a psychological reality</p>
+        <p class="cnote">"Sex assigned at birth" (SAAB) refers to the sex recorded at birth based on visible anatomy — male, female, or intersex. It's a medical designation. Gender is the person's lived psychological experience. For cisgender people they align. For transgender and non-binary people they don't fully. The medical community now formally distinguishes these.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART G — PREVALENCE
+         ============================================================ -->
+    <h2 class="sec" id="part-g-prevalence-what-the-numbers-say">Part G · prevalence — what the numbers say</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">Population estimates — with important caveats about measurement</div>
+      <div class="stat-grid">
+        <div class="gender-panel-7">
+          <div class="gender-label-9">~3–4%</div>
+          <div class="gender-text-13">US adults identifying as gay or lesbian (Gallup 2023)</div>
+        </div>
+        <div class="gender-panel-7">
+          <div class="gender-label-9">~5–6%</div>
+          <div class="gender-text-13">US adults identifying as bisexual (largest LGB subgroup)</div>
+        </div>
+        <div class="gender-panel-7">
+          <div class="gender-label-9">~7.6%</div>
+          <div class="gender-text-13">Gen Z adults in US identifying as LGBT+ (vs 2.6% of Baby Boomers)</div>
+        </div>
+        <div class="gender-panel-7">
+          <div class="gender-label-9">~0.5–1.7%</div>
+          <div class="gender-text-13">Population identifying as transgender (estimates vary widely by method)</div>
+        </div>
+        <div class="gender-panel-7">
+          <div class="gender-label-9">~1%</div>
+          <div class="gender-text-13">Population identifying as asexual (varies by study: 0.4–4%)</div>
+        </div>
+      </div>
+
+      <!-- Dot grid visualisation -->
+      <div class="gender-label-10">Dot visualisation — 100 representative people, US adult population (approximate)</div>
+      <div id="dotGridWrap" class="dot-grid-wrap"></div>
+      <div class="gender-row-2">
+        <div class="law-swatch"><div class="law-dot law-dot-style"></div><span>Straight (≈87%)</span></div>
+        <div class="law-swatch"><div class="law-dot bg-indigo-900"></div><span>Gay/lesbian (≈3.5%)</span></div>
+        <div class="law-swatch"><div class="law-dot bg-teal-500"></div><span>Bisexual (≈5.5%)</span></div>
+        <div class="law-swatch"><div class="law-dot law-dot-style-4"></div><span>Other LGBT+ (≈4%)</span></div>
+      </div>
+
+      <div class="gender-panel-8">
+        <strong class="text-primary">Why numbers vary so much:</strong> Stigma causes underreporting in less accepting environments. Self-labelling varies — many people attracted to the same sex don't use the label "gay" or "bisexual." Gen Z's higher rates reflect both genuine differences and greater willingness to identify. Measurement method matters enormously: anonymous surveys consistently produce higher rates than face-to-face interviews. The underlying rates of same-sex attraction are higher than the rates of self-identification as gay/lesbian/bisexual.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART H — GENERATION & COHORT TREND (NEW)
+         ============================================================ -->
+    <h2 class="sec" id="part-h-generational-trends-how-identification-has-changed">Part H · generational trends — how identification has changed</h2>
+
+    <div class="content-panel">
+      <div class="panel-title-spaced">LGBT+ identification by US generation — Gallup longitudinal tracking</div>
+
+      <!-- Bar chart SVG -->
+      <svg class="gender-media-3" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Y axis labels -->
+        <text x="38" y="170" font-size="9" fill="#888780" text-anchor="end">0%</text>
+        <text x="38" y="138" font-size="9" fill="#888780" text-anchor="end">2%</text>
+        <text x="38" y="106" font-size="9" fill="#888780" text-anchor="end">4%</text>
+        <text x="38" y="74"  font-size="9" fill="#888780" text-anchor="end">6%</text>
+        <text x="38" y="42"  font-size="9" fill="#888780" text-anchor="end">8%</text>
+        <text x="38" y="18"  font-size="9" fill="#888780" text-anchor="end">10%</text>
+
+        <!-- Gridlines -->
+        <line x1="42" y1="170" x2="660" y2="170" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="42" y1="138" x2="660" y2="138" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="106" x2="660" y2="106" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="74"  x2="660" y2="74"  stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="42"  x2="660" y2="42"  stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="14"  x2="660" y2="14"  stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+        <!-- Bars: scale is 0–10%, 170 = 0%, each 1% = 16px -->
+        <!-- Silent Generation: 1.3% -->
+        <rect x="60"  y="149.2" width="70" height="20.8" rx="3" fill="#B5D4F4"/>
+        <text x="95"  y="180" font-size="9" fill="#888780" text-anchor="middle">Silent Gen</text>
+        <text x="95"  y="190" font-size="9" fill="#888780" text-anchor="middle">born 1928–45</text>
+        <text x="95"  y="145" font-size="9" fill="#0C447C" text-anchor="middle">1.3%</text>
+
+        <!-- Baby Boomers: 2.6% -->
+        <rect x="170" y="128.4" width="70" height="41.6" rx="3" fill="#85B7EB"/>
+        <text x="205" y="180" font-size="9" fill="#888780" text-anchor="middle">Baby Boomers</text>
+        <text x="205" y="190" font-size="9" fill="#888780" text-anchor="middle">born 1946–64</text>
+        <text x="205" y="124" font-size="9" fill="#0C447C" text-anchor="middle">2.6%</text>
+
+        <!-- Gen X: 4.5% -->
+        <rect x="280" y="98" width="70" height="72" rx="3" fill="var(--accent)"/>
+        <text x="315" y="180" font-size="9" fill="#888780" text-anchor="middle">Gen X</text>
+        <text x="315" y="190" font-size="9" fill="#888780" text-anchor="middle">born 1965–80</text>
+        <text x="315" y="94" font-size="9" fill="#085041" text-anchor="middle">4.5%</text>
+
+        <!-- Millennials: 7.1% -->
+        <rect x="390" y="56.4" width="70" height="113.6" rx="3" fill="#3C3489"/>
+        <text x="425" y="180" font-size="9" fill="#888780" text-anchor="middle">Millennials</text>
+        <text x="425" y="190" font-size="9" fill="#888780" text-anchor="middle">born 1981–96</text>
+        <text x="425" y="52" font-size="9" fill="#3C3489" text-anchor="middle">7.1%</text>
+
+        <!-- Gen Z: 7.6% -->
+        <rect x="500" y="48.4" width="70" height="121.6" rx="3" fill="#712B13"/>
+        <text x="535" y="180" font-size="9" fill="#888780" text-anchor="middle">Gen Z</text>
+        <text x="535" y="190" font-size="9" fill="#888780" text-anchor="middle">born 1997–2012</text>
+        <text x="535" y="44" font-size="9" fill="#712B13" text-anchor="middle">7.6%</text>
+
+        <!-- Trend arrow -->
+        <path d="M95 149 L205 128 L315 98 L425 56 L535 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+      </svg>
+
+      <div class="gender-grid">
+        <div class="gender-panel-9">
+          <strong class="text-primary">Why the trend is rising:</strong> The increase from Boomers to Gen Z is real and substantial. The leading explanations are: greater social acceptance and reduced stigma enabling honest self-reporting; wider awareness of identity labels (especially bisexual, non-binary, queer) enabling identification; possible genuine cohort effects from reduced social pressure against same-sex attraction. The full explanation is probably all three, with measurement playing a significant role.
+        </div>
+        <div class="gender-panel-9">
+          <strong class="text-primary">Bisexual identification leads growth:</strong> The biggest driver of the increase is rising bisexual identification, particularly among women. Among Gen Z women, bisexual is more common than straight + gay combined in some surveys. This does not mean sexual behaviour has changed as dramatically — the gap between same-sex attraction (behaviour/attraction) and bisexual identity has historically been larger than the gap for gay/lesbian identification.
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART I — THE TWO-AXIS MODEL (NEW — INTERACTIVE)
+         ============================================================ -->
+    <h2 class="sec" id="part-i-the-two-axis-model-romantic-and-sexual-attraction-separately">Part I · the two-axis model — romantic and sexual attraction separately</h2>
+
+    <div class="twoaxis-wrap">
+      <div class="compact-card-title">The romantic–sexual split: why one axis isn't enough</div>
+      <div class="gender-text-14">The Kinsey scale treats attraction as one-dimensional. But sexual and romantic attraction are empirically separable — most people experience them together, but for a meaningful minority they diverge. Explore combinations below.</div>
+
+      <div class="twoaxis-grid">
+        <div>
+          <div class="gender-text-15">Sexual attraction axis</div>
+          <div class="sexaxisbtns" id="sexAxisBtns">
+            <button class="exp-btn setaxis-control" onclick="setAxis('sex','heterosexual')">Heterosexual (attracted to different gender)</button>
+            <button class="exp-btn setaxis-control" onclick="setAxis('sex','bisexual')"    >Bisexual / pansexual</button>
+            <button class="exp-btn setaxis-control" onclick="setAxis('sex','homosexual')"  >Homosexual (attracted to same gender)</button>
+            <button class="exp-btn setaxis-control" onclick="setAxis('sex','asexual')"     >Asexual (little/no sexual attraction)</button>
+          </div>
+        </div>
+        <div>
+          <div class="gender-text-15">Romantic attraction axis</div>
+          <div class="sexaxisbtns" id="romAxisBtns">
+            <button class="exp-btn setaxis-control" onclick="setAxis('rom','heteroromantic')" >Heteroromantic (romantic attraction to different gender)</button>
+            <button class="exp-btn setaxis-control" onclick="setAxis('rom','biromantic')"     >Biromantic / panromantic</button>
+            <button class="exp-btn setaxis-control" onclick="setAxis('rom','homoromantic')"   >Homoromantic (romantic attraction to same gender)</button>
+            <button class="exp-btn setaxis-control" onclick="setAxis('rom','aromantic')"      >Aromantic (little/no romantic attraction)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="twoaxis-result" id="twoaxis-result">
+        Select one option from each axis to see how they combine.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART J — SCIENCE OF ORIENTATION (NEW)
+         ============================================================ -->
+    <h2 class="sec" id="part-j-the-science-of-sexual-orientation-what-research-shows">Part J · the science of sexual orientation — what research shows</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">Lines of evidence — where the science points and its limits</div>
+
+      <div class="button-row">
+        <button class="exp-btn showgender-control" onclick="showScience('twin')"    >Twin studies</button>
+        <button class="exp-btn showgender-control" onclick="showScience('birth')"   >Fraternal birth order</button>
+        <button class="exp-btn showgender-control" onclick="showScience('brain')"   >Brain structure</button>
+        <button class="exp-btn showgender-control" onclick="showScience('genetics')">Genetics (GWAS)</button>
+        <button class="exp-btn showgender-control" onclick="showScience('hormones')">Prenatal hormones</button>
+        <button class="exp-btn showgender-control" onclick="showScience('limits')"  >Limits of research</button>
+      </div>
+      <div class="science-display" id="science-display">
+        Select a line of evidence to explore the research.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART K — MEDICAL & DIAGNOSTIC HISTORY (NEW)
+         ============================================================ -->
+    <h2 class="sec" id="part-k-medical-and-legal-history-the-key-milestones">Part K · medical and legal history — the key milestones</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">How the medical and legal framing has evolved</div>
+
+      <div class="timeline-row">
+        <div class="timeline-year">1948</div>
+        <div><div class="timeline-text">Kinsey publishes <em>Sexual Behavior in the Human Male</em> — first large-scale quantitative study of sexual behaviour. Introduces the 0–6 scale and demonstrates that same-sex behaviour is far more common than publicly acknowledged.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">1952</div>
+        <div><div class="timeline-text">APA's DSM-I lists "homosexuality" as a "sociopathic personality disturbance." This classification was not based on clinical evidence but on societal attitudes prevailing at the time.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">1969</div>
+        <div><div class="timeline-text">Stonewall riots, New York — patrons of a gay bar resist police raids. Widely credited as catalysing the modern LGBTQ+ rights movement.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">1973</div>
+        <div><div class="timeline-text">APA removes homosexuality from the DSM-II, citing lack of evidence that it constitutes a disorder. Replaced with "Sexual Orientation Disturbance" (distress about orientation), which was itself removed in 1987.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">1990</div>
+        <div><div class="timeline-text">WHO removes homosexuality from the ICD-10. May 17 is now celebrated as International Day Against Homophobia, Transphobia and Biphobia (IDAHOTB) to mark this date.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">1991</div>
+        <div><div class="timeline-text">Simon LeVay publishes study finding structural differences in the INAH-3 region of the hypothalamus between heterosexual and homosexual men, suggesting neurobiological components to orientation. Findings subsequently replicated with some refinements.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2003</div>
+        <div><div class="timeline-text"><em>Lawrence v. Texas</em> — US Supreme Court strikes down sodomy laws, decriminalising same-sex activity across the United States.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2013</div>
+        <div><div class="timeline-text">DSM-5 replaces "Gender Identity Disorder" with "Gender Dysphoria" — shifting focus from identity (not a disorder) to clinically significant distress. Major conceptual and terminological shift in transgender healthcare.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2015</div>
+        <div><div class="timeline-text"><em>Obergefell v. Hodges</em> — US Supreme Court rules same-sex marriage is constitutionally protected. Similar milestones occurred earlier in Netherlands (2001, first country), Spain (2005), Canada (2005).</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2019</div>
+        <div><div class="timeline-text">ICD-11 (WHO) removes "Gender Incongruence" from the mental health chapter and reclassifies it under "Conditions related to sexual health." Formally establishes that being transgender is not a mental illness.</div></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2019</div>
+        <div><div class="timeline-text">Large genome-wide association study (GWAS) of ~470,000 people in <em>Science</em> finds no single "gay gene" — rather, dozens of genetic variants each with small effects, accounting for 8–25% of variance in same-sex behaviour. Genetic effects not sufficient for prediction at individual level.</div></div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART L — GLOBAL LEGAL LANDSCAPE (NEW)
+         ============================================================ -->
+    <h2 class="sec" id="part-l-global-legal-landscape-a-snapshot">Part L · global legal landscape — a snapshot</h2>
+
+    <div class="content-panel">
+      <div class="panel-title-spaced">Same-sex relationships — legal status by region (approximate 2024)</div>
+
+      <!-- Legend -->
+      <div class="law-legend u-mb-md">
+        <div class="law-swatch"><div class="law-dot bg-green-800"></div><span>Marriage legal (~36 countries)</span></div>
+        <div class="law-swatch"><div class="law-dot bg-teal-500"></div><span>Civil unions / partial recognition (~20 countries)</span></div>
+        <div class="law-swatch"><div class="law-dot law-dot-style-6"></div><span>No recognition, legal (~70 countries)</span></div>
+        <div class="law-swatch"><div class="law-dot law-dot-style-4"></div><span>Criminalised (~60 countries)</span></div>
+        <div class="law-swatch"><div class="law-dot law-dot-style-7"></div><span>Death penalty possible (~11 countries)</span></div>
+      </div>
+
+      <!-- SVG world bar chart showing approximate country counts -->
+      <svg class="gender-media-4" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- Scale note: approx 195 countries total; bar widths proportional -->
+        <!-- Marriage: 36/195 = 18.5% → 126px -->
+        <text x="2" y="24" font-size="10" fill="#27500A" font-weight="500">Marriage legal</text>
+        <rect x="160" y="13" width="125" height="14" rx="4" fill="#27500A" opacity="0.8"/>
+        <text x="290" y="24" font-size="10" fill="#27500A" font-weight="600">~36</text>
+
+        <!-- Civil unions: 20/195 = 10.3% → 70px -->
+        <text x="2" y="46" font-size="10" fill="#085041" font-weight="500">Civil union / partial</text>
+        <rect x="160" y="35" width="70" height="14" rx="4" fill="var(--accent)" opacity="0.8"/>
+        <text x="236" y="46" font-size="10" fill="var(--accent)" font-weight="600">~20</text>
+
+        <!-- No recognition, legal: 70/195 = 35.9% → 244px -->
+        <text x="2" y="68" font-size="10" fill="#888780" font-weight="500">No recognition (legal)</text>
+        <rect x="160" y="57" width="244" height="14" rx="4" fill="#888780" opacity="0.7"/>
+        <text x="409" y="68" font-size="10" fill="#888780" font-weight="600">~70</text>
+
+        <!-- Criminalised: 60/195 = 30.8% → 209px -->
+        <text x="2" y="90" font-size="10" fill="#D4537E" font-weight="500">Criminalised</text>
+        <rect x="160" y="79" width="209" height="14" rx="4" fill="#D4537E" opacity="0.75"/>
+        <text x="375" y="90" font-size="10" fill="#D4537E" font-weight="600">~60</text>
+
+        <!-- Death penalty: 11/195 = 5.6% → 38px -->
+        <text x="2" y="112" font-size="10" fill="#791F1F" font-weight="500">Death penalty possible</text>
+        <rect x="160" y="101" width="38" height="14" rx="4" fill="#4B1528" opacity="0.9"/>
+        <text x="204" y="112" font-size="10" fill="#791F1F" font-weight="600">~11</text>
+
+        <text x="2" y="140" font-size="9" fill="#888780">Data: ILGA World State-Sponsored Homophobia 2023. Country counts are approximate; legal status is complex in federal systems.</text>
+        <text x="2" y="153" font-size="9" fill="#888780">Scale bar shows proportion of ≈195 UN member states. Trend: marriage equality has expanded from 1 country (Netherlands, 2001) to 36+ over two decades.</text>
+      </svg>
+
+      <div class="dist-grid">
+        <div class="gender-panel-9">
+          <strong class="text-primary">Where marriage equality exists:</strong> Predominantly Western Europe, North and South America (notably including Brazil, Argentina, Colombia, Mexico), South Africa, Australia, New Zealand, and Taiwan (Asia's first, 2019). The pace of adoption has accelerated: from 1 country in 2001 to 36+ by 2024.
+        </div>
+        <div class="gender-panel-9">
+          <strong class="text-primary">Where criminalisation remains:</strong> Primarily across sub-Saharan Africa, the Middle East, Central and Southeast Asia. Death penalty provisions exist in parts of Iran, Saudi Arabia, Yemen, Qatar, UAE, and under some interpretations of law in Nigeria and Pakistan. Over 60 countries still criminalise consensual same-sex activity.
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART N — SAFE SEX & PROTECTION
+         ============================================================ -->
+    <h2 class="sec" id="part-m-safe-sex-and-protection-health-autonomy-and-informed-choices">Part M · safe sex &amp; protection — health, autonomy, and informed choices</h2>
+
+    <!-- N-1: Why Safe Sex Matters -->
+    <div class="content-panel">
+      <div class="panel-title">Why safe sex matters — four intersecting dimensions</div>
+      <div class="concept-grid">
+        <div class="gender-panel">
+          <div class="gender-label">Physical health</div>
+          <div class="gender-text">Unprotected sex carries risks of sexually transmitted infections (STIs) and, for people with reproductive capacity, unintended pregnancy. Many STIs are asymptomatic for long periods yet cause long-term harm or are transmissible to others. Consistent, correct use of protection dramatically reduces these risks.</div>
+          <div class="gender-text-2">Prevention is more effective than treatment for most STIs. Many are permanently manageable but not curable.</div>
+        </div>
+        <div class="gender-panel-2">
+          <div class="gender-label-2">Consent and autonomy</div>
+          <div class="gender-text-3">Safe sex is inseparable from consent. Both people have the right to know the risks involved, to agree on protection methods, and to withdraw consent at any point. Removing or sabotaging protection without a partner's knowledge ("stealthing") is a form of sexual assault in many jurisdictions.</div>
+          <div class="gender-text-4">Informed consent means both partners understand what is and is not being used for protection and agree to it freely.</div>
+        </div>
+        <div class="gender-panel-3">
+          <div class="gender-label-3">Emotional wellbeing</div>
+          <div class="gender-text-5">Anxiety about STIs or unintended pregnancy significantly affects sexual wellbeing and relationship satisfaction. Using protection consistently reduces this background stress. Open communication about sexual health also builds trust and intimacy in relationships.</div>
+          <div class="gender-text-6">Sexual health conversations, though sometimes awkward, consistently improve relationship quality and trust when approached honestly.</div>
+        </div>
+      </div>
+      <div class="gender-panel-4">
+        <strong class="text-primary">An important reframe:</strong> Safe sex is not about shame or fear. It is about informed autonomy. Understanding the options, their effectiveness, and how to use them correctly is a form of self-knowledge and mutual respect. No single method is right for everyone -- the best approach depends on relationship context, reproductive goals, health history, and personal values.
+      </div>
+    </div>
+
+    <!-- N-2: Consent and Communication -->
+    <div class="content-panel">
+      <div class="panel-title-spaced">Consent and communication -- what clear, ongoing consent looks like in practice</div>
+      <div class="dist-grid">
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">FRIES framework (Planned Parenthood)</div>
+          <div class="muted-copy-tight u-mb-sm">A widely used framework for understanding consent:</div>
+          <div class="anchor-row">
+            <div class="pill p-blue">Freely given</div>
+            <div><div class="atext">Not under pressure, coercion, intoxication, or obligation.</div></div>
+          </div>
+          <div class="anchor-row">
+            <div class="pill p-green">Reversible</div>
+            <div><div class="atext">Anyone can change their mind at any time, even mid-activity.</div></div>
+          </div>
+          <div class="anchor-row">
+            <div class="pill p-amber">Informed</div>
+            <div><div class="atext">Both parties know what they are agreeing to, including protection methods.</div></div>
+          </div>
+          <div class="anchor-row">
+            <div class="pill p-purple">Enthusiastic</div>
+            <div><div class="atext">Consent is active and willing, not the absence of refusal.</div></div>
+          </div>
+          <div class="anchor-row">
+            <div class="pill p-teal" style="min-width:82px;">Specific</div>
+            <div><div class="atext">Agreeing to one activity does not imply agreement to others.</div></div>
+          </div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Communication topics to address</div>
+          <div class="muted-copy-tight u-mb-sm">Open discussion before or at the start of a sexual encounter normalises safe sex and reduces misunderstanding:</div>
+          <div class="anchor-row"><div class="atext"><strong class="text-primary">STI testing history</strong> -- when you were last tested and results.</div></div>
+          <div class="anchor-row"><div class="atext"><strong class="text-primary">Protection preferences</strong> -- which methods each partner is comfortable with.</div></div>
+          <div class="anchor-row"><div class="atext"><strong class="text-primary">Contraception</strong> -- whether either partner is using hormonal or long-acting methods.</div></div>
+          <div class="anchor-row"><div class="atext"><strong class="text-primary">Boundaries</strong> -- what each person is and is not comfortable with.</div></div>
+          <div class="anchor-row"><div class="atext"><strong class="text-primary">Relationship context</strong> -- expectations around exclusivity or other partners.</div></div>
+        </div>
+      </div>
+      <div class="info-block">
+        <strong>Consent and same-sex / queer relationships:</strong> Consent principles apply identically regardless of the genders involved. The specific risk profile changes (e.g., pregnancy risk is absent in many same-sex encounters; some STI transmission routes differ), but the need for communication, mutual agreement, and ongoing check-ins is universal.
+      </div>
+    </div>
+
+    <!-- N-3: Overview of Protection Methods -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-md">Protection and contraception -- overview by category</div>
+      <!-- Interactive method explorer -->
+      <div class="button-row">
+      <button class="exp-btn showgender-control" onclick="showMethod('barrier')">Barrier methods</button>
+      <button class="exp-btn showgender-control" onclick="showMethod('hormonal')">Hormonal methods</button>
+      <button class="exp-btn showgender-control" onclick="showMethod('larc')">Long-acting (LARCs)</button>
+      <button class="exp-btn showgender-control" onclick="showMethod('permanent')">Permanent options</button>
+      <button class="exp-btn showgender-control" onclick="showMethod('emergency')">Emergency contraception</button>
+      <button class="exp-btn showgender-control" onclick="showMethod('behavioral')">Behavioural methods</button>
+    </div>
+    <div class="content-panel" id="method-display"></div>
+    </div>
+
+    <!-- Effectiveness comparison chart -->
+    <div class="scroll-panel u-mt-md">
+      <div class="gender-text-7">Contraceptive effectiveness comparison -- typical use vs perfect use (% preventing pregnancy per year)</div>
+      <svg class="gender-media" viewBox="0 0 780 220" xmlns="http://www.w3.org/2000/svg">
+        <!-- Y axis: 0-100% -->
+        <text x="38" y="208" font-size="9" fill="#888780" text-anchor="end">0%</text>
+        <text x="38" y="168" font-size="9" fill="#888780" text-anchor="end">40%</text>
+        <text x="38" y="128" font-size="9" fill="#888780" text-anchor="end">60%</text>
+        <text x="38" y="88"  font-size="9" fill="#888780" text-anchor="end">80%</text>
+        <text x="38" y="48"  font-size="9" fill="#888780" text-anchor="end">95%</text>
+        <text x="38" y="18"  font-size="9" fill="#888780" text-anchor="end">99%</text>
+        <!-- Gridlines -->
+        <line x1="42" y1="208" x2="770" y2="208" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="42" y1="168" x2="770" y2="168" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="128" x2="770" y2="128" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="88"  x2="770" y2="88"  stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="48"  x2="770" y2="48"  stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <line x1="42" y1="18"  x2="770" y2="18"  stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+
+        <!-- Legend -->
+        <rect x="44" y="8" width="10" height="10" rx="2" fill="var(--accent)" opacity="0.9"/>
+        <text x="58" y="17" font-size="9" fill="#888780">Perfect use</text>
+        <rect x="120" y="8" width="10" height="10" rx="2" fill="#D4537E" opacity="0.7"/>
+        <text x="134" y="17" font-size="9" fill="#888780">Typical use</text>
+
+        <!-- No method: 0% -- 208px height -->
+        <!-- Male condom: perfect 98%, typical 87% -->
+        <!-- Female condom: perfect 95%, typical 79% -->
+        <!-- Pill: perfect 99.7%, typical 91% -->
+        <!-- Patch: perfect 99.7%, typical 91% -->
+        <!-- Implant: perfect/typical 99.95% -->
+        <!-- IUD (hormonal): perfect/typical 99.8% -->
+        <!-- IUD (copper): perfect/typical 99.2% -->
+        <!-- Vasectomy: 99.9% -->
+        <!-- Tubal ligation: 99.5% -->
+
+        <!-- Scale: 208=0%, 18=99% → 190px for 99%, so 1% = 1.919px, actual formula: y = 208 - (val * 1.919) -->
+        <!-- Male condom perfect 98% → y = 208 - 188 = 20 ... let me rescale. -->
+        <!-- Use: 208 = 0%, 18 = 99%. range = 190px for 99pts. px_per_pt = 190/99 = 1.919 -->
+        <!-- Male condom perfect 98%: y= 208-(98*1.919)=208-188.1=19.9≈20, h=188 -->
+        <!-- Male condom typical 87%: y=208-(87*1.919)=208-167=41, h=167 -->
+        <!-- Female condom perfect 95%: y=208-(95*1.919)=208-182=26, h=182 -->
+        <!-- Female condom typical 79%: y=208-(79*1.919)=208-151.6=56, h=152 -->
+        <!-- Pill perfect 99.7%: y=208-(99.7*1.919)=208-191.2=17→18, h=190 -->
+        <!-- Pill typical 91%: y=208-(91*1.919)=208-174.6=33, h=175 -->
+        <!-- Implant 99.95%: y≈18, h=190 -->
+        <!-- Hormonal IUD 99.8%: y≈18, h=190 -->
+        <!-- Copper IUD 99.2%: y≈18, h=190 -->
+        <!-- Vasectomy 99.9%: y≈18, h=190 -->
+        <!-- Tubal 99.5%: y≈18, h=190 -->
+
+        <!-- Male condom -->
+        <rect x="55"  y="20"  width="25" height="188" rx="3" fill="var(--accent)" opacity="0.9"/>
+        <rect x="83"  y="41"  width="25" height="167" rx="3" fill="#D4537E" opacity="0.7"/>
+        <text x="80"  y="220" font-size="8" fill="#888780" text-anchor="middle">Male</text>
+        <text x="80"  y="229" font-size="8" fill="#888780" text-anchor="middle">condom</text>
+
+        <!-- Female condom -->
+        <rect x="120" y="26"  width="25" height="182" rx="3" fill="var(--accent)" opacity="0.9"/>
+        <rect x="148" y="56"  width="25" height="152" rx="3" fill="#D4537E" opacity="0.7"/>
+        <text x="146" y="220" font-size="8" fill="#888780" text-anchor="middle">Female</text>
+        <text x="146" y="229" font-size="8" fill="#888780" text-anchor="middle">condom</text>
+
+        <!-- Pill -->
+        <rect x="185" y="18"  width="25" height="190" rx="3" fill="var(--accent)" opacity="0.9"/>
+        <rect x="213" y="33"  width="25" height="175" rx="3" fill="#D4537E" opacity="0.7"/>
+        <text x="211" y="220" font-size="8" fill="#888780" text-anchor="middle">Pill</text>
+        <text x="211" y="229" font-size="8" fill="#888780" text-anchor="middle">(combined)</text>
+
+        <!-- Patch -->
+        <rect x="250" y="18"  width="25" height="190" rx="3" fill="var(--accent)" opacity="0.9"/>
+        <rect x="278" y="33"  width="25" height="175" rx="3" fill="#D4537E" opacity="0.7"/>
+        <text x="276" y="220" font-size="8" fill="#888780" text-anchor="middle">Patch /</text>
+        <text x="276" y="229" font-size="8" fill="#888780" text-anchor="middle">ring</text>
+
+        <!-- Implant -->
+        <rect x="315" y="18"  width="55" height="190" rx="3" fill="#3C3489" opacity="0.85"/>
+        <text x="342" y="220" font-size="8" fill="#888780" text-anchor="middle">Implant</text>
+        <text x="342" y="229" font-size="8" fill="#888780" text-anchor="middle">(99.95%)</text>
+
+        <!-- Hormonal IUD -->
+        <rect x="380" y="18"  width="55" height="190" rx="3" fill="#3C3489" opacity="0.85"/>
+        <text x="407" y="220" font-size="8" fill="#888780" text-anchor="middle">Hormonal</text>
+        <text x="407" y="229" font-size="8" fill="#888780" text-anchor="middle">IUD</text>
+
+        <!-- Copper IUD -->
+        <rect x="445" y="18"  width="55" height="190" rx="3" fill="#3C3489" opacity="0.75"/>
+        <text x="472" y="220" font-size="8" fill="#888780" text-anchor="middle">Copper</text>
+        <text x="472" y="229" font-size="8" fill="#888780" text-anchor="middle">IUD</text>
+
+        <!-- Vasectomy -->
+        <rect x="510" y="18"  width="55" height="190" rx="3" fill="#085041" opacity="0.85"/>
+        <text x="537" y="220" font-size="8" fill="#888780" text-anchor="middle">Vasectomy</text>
+        <text x="537" y="229" font-size="8" fill="#888780" text-anchor="middle">(99.9%)</text>
+
+        <!-- Tubal ligation -->
+        <rect x="575" y="18"  width="55" height="190" rx="3" fill="#085041" opacity="0.85"/>
+        <text x="602" y="220" font-size="8" fill="#888780" text-anchor="middle">Tubal</text>
+        <text x="602" y="229" font-size="8" fill="#888780" text-anchor="middle">ligation</text>
+
+        <!-- No method -->
+        <rect x="650" y="188" width="55" height="20" rx="3" fill="#888780" opacity="0.5"/>
+        <text x="677" y="220" font-size="8" fill="#888780" text-anchor="middle">No method</text>
+        <text x="677" y="229" font-size="8" fill="#888780" text-anchor="middle">(~85% fail)</text>
+
+        <!-- Legend for purple/green -->
+        <rect x="300" y="8" width="10" height="10" rx="2" fill="#3C3489" opacity="0.85"/>
+        <text x="314" y="17" font-size="9" fill="#888780">LARCs (near-perfect both)</text>
+        <rect x="450" y="8" width="10" height="10" rx="2" fill="#085041" opacity="0.85"/>
+        <text x="464" y="17" font-size="9" fill="#888780">Permanent</text>
+      </svg>
+    </div>
+
+    <!-- N-4: Barrier Methods in depth -->
+    <div class="content-panel">
+      <div class="panel-title">Barrier methods -- the only forms of contraception that also protect against STIs</div>
+      <div class="bio-grid">
+        <div class="card">
+          <p class="clabel">External (male) condom</p>
+          <p class="cval">~98% effective (perfect use)</p>
+          <p class="cnote">A sheath that fits over the penis, collecting semen and blocking transmission of body fluids. The only male-controlled method that prevents both pregnancy and STIs. Made of latex (most common), polyurethane, or polyisoprene (for latex allergy). Correct use: check expiry date, open carefully (no teeth), squeeze tip to remove air, roll down fully, withdraw before losing erection, hold base while withdrawing. Use a new condom for each act.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Internal (female) condom</p>
+          <p class="cval">~95% effective (perfect use)</p>
+          <p class="cnote">A pouch inserted into the vagina (or anus for anal sex) before intercourse. Made of nitrile -- no latex allergy concern. Can be inserted up to 8 hours in advance. Offers the person with a vagina more control. Also protects against STIs. The outer ring remains outside the body. Do not use simultaneously with a male condom -- friction reduces effectiveness of both.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Dental dams</p>
+          <p class="cval">Barrier for oral sex</p>
+          <p class="cnote">A thin sheet of latex or polyurethane placed over the vulva or anus during oral sex. Prevents skin-to-skin transmission of herpes, HPV, and fluid-borne STIs. Not widely distributed by default but can be improvised from a condom (cut lengthwise) or non-microwaveable plastic wrap. Particularly relevant for lesbian, bisexual women, and people engaging in oral-anal contact.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Diaphragm / cervical cap</p>
+          <p class="cval">~88% (typical use with spermicide)</p>
+          <p class="cnote">A dome-shaped cup inserted to cover the cervix, used with spermicide. Does not protect against STIs. Must be fitted by a healthcare provider. Less commonly used than condoms or hormonal methods in most high-income countries, but an option for those who prefer non-hormonal barrier methods and accept the lower effectiveness against STIs.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Spermicide</p>
+          <p class="cval">~72% alone (not recommended as sole method)</p>
+          <p class="cnote">Chemical agents (nonoxynol-9) that immobilise or kill sperm. Available as creams, gels, foam, or suppositories. No STI protection. Frequent use of nonoxynol-9 can irritate vaginal tissue and may actually increase STI susceptibility. Best used as a supplement to other methods, not alone.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Gloves for manual sex</p>
+          <p class="cval">Barrier for hand-to-genital contact</p>
+          <p class="cnote">Latex or nitrile gloves reduce skin-to-skin STI transmission during manual stimulation of genitals or anus -- particularly relevant if either partner has cuts or sores on their hands, or in contexts where hygiene is a concern. Not a common topic in mainstream safe-sex education but relevant in many contexts.</p>
+        </div>
+      </div>
+
+      <!-- How to use a condom -- step display -->
+      <div class="panel-title u-mt-md">Step-by-step: correct condom use</div>
+      <div id="condom-steps-display" class="science-display u-mb-md">Select a step to see guidance.</div>
+      <div class="button-row-compact">
+        <button class="exp-btn showgender-control" onclick="showCondomStep(1)">1 Check</button>
+        <button class="exp-btn showgender-control" onclick="showCondomStep(2)">2 Open</button>
+        <button class="exp-btn showgender-control" onclick="showCondomStep(3)">3 Squeeze tip</button>
+        <button class="exp-btn showgender-control" onclick="showCondomStep(4)">4 Roll on</button>
+        <button class="exp-btn showgender-control" onclick="showCondomStep(5)">5 During</button>
+        <button class="exp-btn showgender-control" onclick="showCondomStep(6)">6 After</button>
+        <button class="exp-btn showgender-control" onclick="showCondomStep(7)">7 Common mistakes</button>
+      </div>
+    </div>
+
+    <!-- N-5: Hormonal and Long-Acting Methods -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-md">Hormonal and long-acting contraceptives</div>
+      <div class="button-row">
+      <button class="exp-btn showgender-control" onclick="showContra('pill-combined')">Combined pill</button>
+      <button class="exp-btn showgender-control" onclick="showContra('pill-mini')">Progestogen-only pill</button>
+      <button class="exp-btn showgender-control" onclick="showContra('patch')">Patch</button>
+      <button class="exp-btn showgender-control" onclick="showContra('ring')">Vaginal ring</button>
+      <button class="exp-btn showgender-control" onclick="showContra('injection')">Injection</button>
+      <button class="exp-btn showgender-control" onclick="showContra('implant')">Implant</button>
+      <button class="exp-btn showgender-control" onclick="showContra('iud-hormonal')">Hormonal IUD</button>
+      <button class="exp-btn showgender-control" onclick="showContra('iud-copper')">Copper IUD</button>
+    </div>
+    <div class="content-panel" id="contra-display"></div>
+    </div>
+
+    <!-- N-6: Permanent Options merged into overview tab above -->
+
+    <!-- N-7: STI Prevention -->
+    <div class="content-panel">
+      <div class="panel-title-spaced">Sexually transmitted infections -- prevention, testing, and treatment</div>
+      <div class="button-row">
+        <button class="exp-btn showgender-control" onclick="showSTI('chlamydia')">Chlamydia</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('gonorrhoea')">Gonorrhoea</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('syphilis')">Syphilis</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('herpes')">Herpes (HSV)</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('hpv')">HPV</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('hiv')">HIV</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('hep')">Hepatitis B/C</button>
+        <button class="exp-btn showgender-control" onclick="showSTI('trich')">Trichomoniasis</button>
+      </div>
+      <div class="content-card" id="sti-display">
+        <div class="muted-copy">Select an STI to see transmission, symptoms, testing, and treatment.</div>
+      </div>
+
+      <div class="panel-title u-mt-md">Prevention strategies beyond condoms</div>
+      <div class="two-col-grid">
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">PrEP (Pre-Exposure Prophylaxis)</div>
+          <div class="muted-copy-tight">A daily antiretroviral medication (tenofovir/emtricitabine) taken by HIV-negative people to prevent HIV acquisition. When taken consistently, PrEP reduces HIV risk from sex by ~99%. Recommended for people at substantial HIV risk. Does not protect against other STIs -- condoms remain important.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">PEP (Post-Exposure Prophylaxis)</div>
+          <div class="muted-copy-tight">Antiretroviral medication taken after potential HIV exposure. Must be started within 72 hours (sooner is better). Taken daily for 28 days. Approximately 80% effective when started promptly. Not a substitute for PrEP -- it is an emergency measure. Available at emergency departments and sexual health clinics.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Vaccination</div>
+          <div class="muted-copy-tight">HPV vaccine (Gardasil 9) prevents the strains responsible for ~90% of cervical cancers and most genital warts. Recommended for all people before sexual debut (ideally 9--12) and effective up to age 26 (and with discussion, to 45). Hepatitis B vaccine is standard childhood immunisation -- prevents a sexually transmissible liver infection.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Regular testing</div>
+          <div class="muted-copy-tight">Many STIs are asymptomatic. The CDC recommends annual STI testing for all sexually active people under 25, and for people with multiple partners regardless of age. Testing frequency should increase with number of partners. Knowing your status protects both you and your partners.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- N-8: Emergency Contraception -->
+    <div class="content-panel">
+      <div class="panel-title">Emergency contraception -- what it is, how it works, and time windows</div>
+      <div class="bio-grid">
+        <div class="card">
+          <p class="clabel">Levonorgestrel pill (Plan B / Next Choice)</p>
+          <p class="cval">Up to 120 hours</p>
+          <p class="cnote">A high-dose progestogen that delays or inhibits ovulation. Most effective when taken within 24 hours (95% effective); effectiveness declines to ~58% by 72 hours; low effectiveness after 72 hours. Available over the counter in most countries. Less effective in people over 70 kg / 154 lb -- ulipristal acetate or copper IUD is preferred. Does not terminate an existing pregnancy.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Ulipristal acetate (ella / ellaOne)</p>
+          <p class="cval">Up to 120 hours</p>
+          <p class="cnote">A selective progesterone receptor modulator -- delays or inhibits ovulation. More effective than levonorgestrel across the full 5-day window, and effectiveness does not decline as steeply over time. Equally effective up to 120 hours. Requires a prescription in some countries. Cannot be taken alongside combined hormonal contraceptives -- there is an interaction.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Copper IUD</p>
+          <p class="cval">Up to 120 hours -- most effective option</p>
+          <p class="cnote">The copper IUD (e.g., Paragard) is over 99.9% effective as emergency contraception when inserted within 5 days of unprotected sex. Works by preventing fertilisation and implantation. Has the added benefit of continuing as highly effective long-term contraception for 5--10+ years. Requires a healthcare provider appointment. The best option for people over 70 kg.</p>
+        </div>
+      </div>
+
+      <div class="dist-grid u-mt-md">
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">How emergency contraception works -- and what it does not do</div>
+          <div class="muted-copy-tight">All emergency contraceptive methods work primarily by delaying or preventing ovulation -- preventing the egg and sperm from meeting. They do not end an established pregnancy (they are not abortifacients). This is confirmed by medical and scientific consensus. If a pregnancy is already implanted, emergency contraception has no effect on it.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Pregnancy options -- the full picture</div>
+          <div class="muted-copy-tight">If an unintended pregnancy occurs, the options are: continuing the pregnancy and parenting, continuing the pregnancy and pursuing adoption, or terminating the pregnancy (abortion). All are legitimate medical choices. Abortion is legal in most of Europe, North America, and Australia; laws vary significantly worldwide and within countries (notably the United States post-Dobbs 2022). The WHO classifies safe abortion as essential healthcare.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- N-9: Myths and Common Mistakes -->
+    <div class="content-panel">
+      <div class="panel-title-spaced">Myths, risks, and common mistakes -- debunked</div>
+      <div class="button-row">
+        <button class="exp-btn showgender-control" onclick="showMyth('double-up')">Double condoms</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('pill-sti')">Pill vs STIs</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('withdrawal')">Withdrawal method</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('first-time')">First time</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('same-sex-sti')">Same-sex and STIs</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('condom-fail')">Condom failure</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('looks')">Can tell by looking</button>
+        <button class="exp-btn showgender-control" onclick="showMyth('oil')">Oil-based lube</button>
+      </div>
+      <div class="content-card" id="myth-display">
+        <div class="muted-copy">Select a myth or mistake to see the evidence.</div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART N — MENSTRUATION
+         ============================================================ -->
+    <h2 class="sec" id="part-n-menstruation-biology-cycle-symptoms-products-culture">Part N · menstruation — biology, cycle, symptoms, products, culture</h2>
+
+    <!-- N-1: Biology Basics -->
+    <div class="content-panel">
+      <div class="panel-title">What a period actually is — biology in plain terms</div>
+      <div class="concept-grid">
+        <div class="gender-panel">
+          <div class="gender-label">The shedding event</div>
+          <div class="gender-text">A period is the monthly shedding of the uterine lining (endometrium) when pregnancy does not occur. The lining thickens every cycle in preparation for a possible implanted embryo. When no embryo arrives, hormones drop, the lining detaches, and the body expels it through the vagina over roughly 3 to 7 days.</div>
+          <div class="gender-text-2">Average total blood loss per period: 30–80 ml. Anything consistently above 80 ml is medically defined as heavy menstrual bleeding (menorrhagia).</div>
+        </div>
+        <div class="gender-panel-2">
+          <div class="gender-label-2">What is in the flow</div>
+          <div class="gender-text-3">Menstrual fluid is not purely blood. It is roughly half blood and half a mix of endometrial tissue, cervical mucus, vaginal secretions, and small amounts of unfertilised egg material. The dark or brown colour often seen at the start or end is older, oxidised blood; bright red is fresher flow.</div>
+          <div class="gender-text-4">Clots up to the size of a 10-cent coin are normal. Frequent large clots are not, and they warrant a clinical conversation.</div>
+        </div>
+        <div class="gender-panel-3">
+          <div class="gender-label-3">When it begins and ends</div>
+          <div class="gender-text-5">Menarche (first period) typically occurs between ages 9 and 15, with the global average sitting around 12. Menopause (final period) occurs on average around 51, defined retrospectively as 12 consecutive months without bleeding. Between those bookends sit roughly 450 cycles in a typical lifetime, a substantial fraction of a person's life.</div>
+          <div class="gender-text-6">Earlier menarche has shifted globally over the last century, attributed largely to improved nutrition and rising body fat percentages.</div>
+        </div>
+      </div>
+      <div class="gender-panel-4">
+        <strong class="text-primary">Who menstruates:</strong> Most cisgender women between menarche and menopause, but also many transgender men and non-binary people with a uterus who have not started testosterone or had a hysterectomy. Some intersex people menstruate; others do not. Pregnancy, lactation, hormonal contraception, certain medical conditions, and significant weight loss or athletic training can pause periods entirely. "People who menstruate" is the inclusive descriptor; "women" is approximately but not strictly equivalent.
+      </div>
+    </div>
+
+    <!-- N-2: The Menstrual Cycle — Four Phases SVG -->
+    <div class="scroll-panel">
+      <div class="gender-text-7">The 28-day cycle — four phases, two organs, a hormonal dance</div>
+      <svg class="gender-media-2" viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg">
+        <!-- Day axis -->
+        <line x1="40" y1="180" x2="700" y2="180" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+        <text x="40"  y="198" font-size="9" fill="#888780" text-anchor="middle">Day 1</text>
+        <text x="158" y="198" font-size="9" fill="#888780" text-anchor="middle">Day 5</text>
+        <text x="276" y="198" font-size="9" fill="#888780" text-anchor="middle">Day 9</text>
+        <text x="394" y="198" font-size="9" fill="#888780" text-anchor="middle">Day 14 (ovulation)</text>
+        <text x="512" y="198" font-size="9" fill="#888780" text-anchor="middle">Day 21</text>
+        <text x="700" y="198" font-size="9" fill="#888780" text-anchor="middle">Day 28</text>
+
+        <!-- Phase bands -->
+        <rect x="40"  y="20" width="118" height="155" fill="#D4537E" opacity="0.18"/>
+        <rect x="158" y="20" width="236" height="155" fill="var(--accent)" opacity="0.18"/>
+        <rect x="394" y="20" width="40"  height="155" fill="#633806" opacity="0.20"/>
+        <rect x="434" y="20" width="266" height="155" fill="#3C3489" opacity="0.18"/>
+
+        <!-- Phase labels -->
+        <text x="99"  y="34" font-size="10" font-weight="600" fill="#791F1F" text-anchor="middle">MENSTRUAL</text>
+        <text x="99"  y="46" font-size="9" fill="#791F1F" text-anchor="middle">Days 1–5</text>
+        <text x="276" y="34" font-size="10" font-weight="600" fill="#085041" text-anchor="middle">FOLLICULAR</text>
+        <text x="276" y="46" font-size="9" fill="#085041" text-anchor="middle">Days 1–13 (overlap)</text>
+        <text x="414" y="34" font-size="10" font-weight="600" fill="#633806" text-anchor="middle">OV.</text>
+        <text x="414" y="46" font-size="9" fill="#633806" text-anchor="middle">~D14</text>
+        <text x="567" y="34" font-size="10" font-weight="600" fill="#3C3489" text-anchor="middle">LUTEAL</text>
+        <text x="567" y="46" font-size="9" fill="#3C3489" text-anchor="middle">Days 15–28</text>
+
+        <!-- Hormone curves -->
+        <!-- Oestrogen: rises through follicular, peaks just before ovulation, dips, second smaller luteal hump, drops -->
+        <path d="M40 160 Q160 155 280 100 Q360 70 400 80 Q440 100 480 90 Q540 100 600 130 Q660 165 700 175"
+              fill="none" stroke="#D4537E" stroke-width="2"/>
+
+        <!-- Progesterone: low through follicular, rises after ovulation, peaks mid-luteal, drops sharply -->
+        <path d="M40 170 L394 168 Q450 160 520 80 Q570 70 600 90 Q650 130 700 170"
+              fill="none" stroke="#3C3489" stroke-width="2"/>
+
+        <!-- LH spike at ovulation -->
+        <path d="M380 170 L395 60 L410 170" fill="none" stroke="#633806" stroke-width="2"/>
+
+        <!-- Legend -->
+        <line x1="50"  y1="60" x2="68"  y2="60" stroke="#D4537E" stroke-width="2"/>
+        <text x="74"  y="64" font-size="9" fill="#791F1F">Oestrogen</text>
+        <line x1="150" y1="60" x2="168" y2="60" stroke="#3C3489" stroke-width="2"/>
+        <text x="174" y="64" font-size="9" fill="#3C3489">Progesterone</text>
+        <line x1="260" y1="60" x2="278" y2="60" stroke="#633806" stroke-width="2"/>
+        <text x="284" y="64" font-size="9" fill="#633806">LH surge (ovulation trigger)</text>
+
+        <!-- Lining illustration at bottom -->
+        <text x="40"  y="215" font-size="9" fill="#888780">Lining: shedding → rebuilding → thick → maintained → shed if no pregnancy</text>
+      </svg>
+    </div>
+
+    <!-- N-3: The Four Phases Explorer -->
+    <div class="content-panel">
+      <div class="panel-title-spaced">Explore each phase — what is happening hormonally and what it feels like</div>
+      <div class="button-row">
+        <button class="exp-btn showgender-control" onclick="showPhase('menstrual')">Menstrual (1–5)</button>
+        <button class="exp-btn showgender-control" onclick="showPhase('follicular')">Follicular (1–13)</button>
+        <button class="exp-btn showgender-control" onclick="showPhase('ovulation')">Ovulation (~14)</button>
+        <button class="exp-btn showgender-control" onclick="showPhase('luteal')">Luteal (15–28)</button>
+      </div>
+      <div class="content-panel" id="phase-display"></div>
+    </div>
+
+    <!-- N-4: Cycle Variations -->
+    <div class="content-panel">
+      <div class="panel-title">Why 28 days is an average, not a rule</div>
+      <div class="bio-grid">
+        <div class="card">
+          <p class="clabel">Normal cycle length</p>
+          <p class="cval">21–35 days</p>
+          <p class="cnote">Anywhere in this range counts as a regular cycle. The famous "28 days" is the population median, not a target. The follicular phase varies most between individuals (and cycle to cycle); the luteal phase is more fixed at around 14 days. A short luteal phase (under 10 days) can affect fertility and warrants investigation if conception is the goal.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Short cycles (polymenorrhoea)</p>
+          <p class="cval">Under 21 days</p>
+          <p class="cnote">Persistently short cycles can indicate anovulation, thyroid dysfunction, perimenopause, stress, or hormonal imbalance. Occasional short cycles are not concerning, especially in the first few years after menarche or in the years approaching menopause when cycle irregularity is expected.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Long cycles (oligomenorrhoea)</p>
+          <p class="cval">Over 35 days</p>
+          <p class="cnote">Common in adolescence and perimenopause. In adults of reproductive age, persistently long cycles can signal polycystic ovary syndrome (PCOS — affecting around 10% of people of reproductive age), thyroid disease, hypothalamic amenorrhoea (often from low body weight or intense exercise), or hyperprolactinaemia.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Absent periods (amenorrhoea)</p>
+          <p class="cval">No bleed for 3+ cycles</p>
+          <p class="cnote">Primary amenorrhoea: no menarche by age 15. Secondary amenorrhoea: previously regular cycles that have stopped. Causes range from pregnancy (the most common) through hormonal contraception, breastfeeding, weight loss, athletic training, stress, PCOS, premature ovarian insufficiency, and pituitary disorders. A persistent absence warrants medical investigation.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Irregular cycles</p>
+          <p class="cval">Variation greater than 7–9 days</p>
+          <p class="cnote">A few days of variation between cycles is entirely normal. Substantial unpredictability (where you genuinely cannot estimate when the next period will arrive) is worth tracking and discussing with a clinician. Common in the first 2–3 years post-menarche, in perimenopause, with PCOS, with significant stress or life changes, and after stopping hormonal contraception.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Tracking — why and how</p>
+          <p class="cval">Apps, calendars, or a notebook</p>
+          <p class="cnote">Tracking reveals your own pattern, helps predict symptoms, supports conception or contraception decisions, and gives clinicians useful data. Note start date, flow intensity, pain, mood, and any unusual symptoms. Apps like Clue, Flo, and Natural Cycles are widely used; a basic calendar works equally well. Be aware that data privacy with some apps has been a documented concern, particularly in jurisdictions where reproductive choices are legally constrained.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- N-5: Common Symptoms Explorer -->
+    <div class="content-panel">
+      <div class="panel-title">Symptoms — what is normal, what is not</div>
+      <div class="button-row">
+        <button class="exp-btn showgender-control" onclick="showSymptom('cramps')">Cramps</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('flow')">Flow patterns</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('mood')">Mood &amp; mind</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('breast')">Breast changes</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('gut')">Gut &amp; digestion</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('skin')">Skin &amp; hair</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('sleep')">Sleep &amp; energy</button>
+        <button class="exp-btn showgender-control" onclick="showSymptom('warning')">Warning signs</button>
+      </div>
+      <div class="content-panel" id="symptom-display"></div>
+    </div>
+
+    <!-- N-6: PMS and PMDD -->
+    <div class="content-panel">
+      <div class="panel-title-spaced">PMS and PMDD — when premenstrual symptoms are clinically significant</div>
+      <div class="dist-grid">
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Premenstrual syndrome (PMS)</div>
+          <div class="muted-copy-tight u-mb-sm">A cluster of physical and emotional symptoms appearing in the luteal phase (the week or two before a period) and resolving within a few days of bleeding starting. Affects roughly 75% of menstruating people to some degree.</div>
+          <div class="anchor-row"><div class="pill p-blue">Physical</div><div><div class="atext">Bloating, breast tenderness, headaches, fatigue, food cravings, mild cramping.</div></div></div>
+          <div class="anchor-row"><div class="pill p-purple">Emotional</div><div><div class="atext">Irritability, low mood, anxiety, tearfulness, reduced concentration.</div></div></div>
+          <div class="anchor-row"><div class="pill p-teal">Management</div><div><div class="atext">Regular exercise, sleep, reduced caffeine and alcohol, magnesium and B6 (modest evidence), tracking to anticipate. Hormonal contraception can flatten symptoms by removing the cyclical hormone swing.</div></div></div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Premenstrual dysphoric disorder (PMDD)</div>
+          <div class="muted-copy-tight u-mb-sm">A severe form recognised in DSM-5. Affects roughly 3–8% of menstruating people. Symptoms are debilitating and disrupt work, relationships, or self-care. PMDD is not "bad PMS". It is a distinct neurobiological condition reflecting abnormal sensitivity to normal hormonal shifts.</div>
+          <div class="anchor-row"><div class="pill p-red">Severity</div><div><div class="atext">Marked mood swings, intense irritability or anger, hopelessness, anxiety, sometimes suicidal ideation, all confined to the luteal phase and lifting at menstruation.</div></div></div>
+          <div class="anchor-row"><div class="pill p-amber">Diagnosis</div><div><div class="atext">Requires prospective symptom tracking across at least two cycles, with significant impairment confined to the luteal window. Retrospective recall is unreliable.</div></div></div>
+          <div class="anchor-row"><div class="pill p-green">Treatment</div><div><div class="atext">SSRIs (effective even when taken only in the luteal phase), hormonal suppression of ovulation, cognitive behavioural therapy. PMDD is treatable and not a character flaw. Getting a name for it is often itself transformative.</div></div></div>
+        </div>
+      </div>
+      <div class="warning-block">
+        <strong>When to see a clinician:</strong> Severe pain that disables you, bleeding lasting more than 7 days, soaking through a pad or tampon every hour for several hours, large clots, bleeding between periods, periods stopping for 3+ months outside of pregnancy or known cause, mood symptoms that affect your safety or functioning. Period pain that requires you to miss school or work regularly is not "just normal". Endometriosis, adenomyosis, and fibroids are common, under-diagnosed, and treatable.
+      </div>
+    </div>
+
+    <!-- N-7: Products Comparison -->
+    <div class="content-panel">
+      <div class="panel-title">Period products — the full landscape</div>
+      <div class="bio-grid">
+        <div class="card">
+          <p class="clabel">Disposable pads</p>
+          <p class="cval">External, absorbent</p>
+          <p class="cnote">Worn in underwear. Range from panty liners through to overnight or postpartum pads. Easy, no insertion required, widely available. Should be changed every 4–6 hours to prevent odour and irritation. Some people react to fragrances or plastics; unscented and cotton-topped options exist. Environmental footprint is the main drawback: a person uses thousands across a lifetime.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Tampons</p>
+          <p class="cval">Internal, absorbent</p>
+          <p class="cnote">Inserted into the vagina, absorbing flow before it leaves the body. With or without applicator. Allow swimming and tighter clothing. Must be changed every 4–8 hours. Toxic shock syndrome (TSS) is a rare but serious risk associated with leaving tampons in too long or using higher absorbencies than needed. Use the lowest absorbency that suits your flow and change regularly.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Menstrual cups</p>
+          <p class="cval">Internal, reusable, 5–10 years</p>
+          <p class="cnote">A soft silicone or rubber cup that sits in the lower vagina, collecting rather than absorbing. Emptied every 4–12 hours, rinsed, reinserted. Steep learning curve (often 2–3 cycles to feel confident), but very low cost over time and minimal environmental footprint. Holds more than a super tampon. Brands include DivaCup, Mooncup, Saalt, OrganiCup, and many regional options.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Menstrual discs</p>
+          <p class="cval">Internal, reusable or disposable</p>
+          <p class="cnote">Similar concept to cups but sit higher, behind the pubic bone. Often allow mess-free sex during menstruation. Higher capacity than cups. Reusable versions (e.g., Nixit, Saalt Disc) are silicone; disposable versions (Flex) are single-use. Slightly trickier removal than a cup for beginners.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Period underwear</p>
+          <p class="cval">External, reusable, 2–3 years</p>
+          <p class="cnote">Absorbent layers built into underwear (Thinx, Modibodi, Knix, others). Worn alone for light to moderate days or as backup with other products on heavier days. Washed and reused. Comfortable, leak-resistant, low-effort. Front-loaded cost is higher than disposables but cheaper over the product lifespan. Some early Thinx products were found to contain PFAS in 2020, and many brands now publish testing.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Reusable cloth pads</p>
+          <p class="cval">External, reusable, 3–5 years</p>
+          <p class="cnote">Cotton or bamboo pads with snap-on wings, washed after use. Cheaper than period underwear, breathable, free of plastic, but require laundering after each use. Used worldwide and especially valuable where disposables are inaccessible or unaffordable. Brands include GladRags, Hannahpad, and many independent makers.</p>
+        </div>
+      </div>
+      <div class="info-block">
+        <strong>Choosing what works:</strong> No single product is "best". Flow intensity, comfort with insertion, lifestyle, environmental priorities, and budget all matter. Most people use a mix across a cycle (cup or tampon by day, pad or underwear at night, for instance). Trying new products outside of a stressful moment helps. Period poverty, the state of being unable to afford menstrual products, affects an estimated 500 million people globally and is increasingly addressed through free-product schemes in schools and public buildings (Scotland became the first country to make products free in 2020).
+      </div>
+    </div>
+
+    <!-- N-8: Cultural and Global Perspectives -->
+    <div class="content-panel">
+      <div class="panel-title-spaced">Cultural, social, and global perspectives — the social life of menstruation</div>
+      <div class="bio-grid">
+        <div class="card">
+          <p class="clabel">Taboo and silence</p>
+          <p class="cval">Near-universal, varying in severity</p>
+          <p class="cnote">Most cultures have historically treated menstruation as something to be hidden. Euphemisms abound across languages: "Aunt Flo," "shark week," "ces jours-là," "el mes," "having the painters in." Surveys consistently find that significant minorities of menstruating people feel shame, hide products at school or work, or avoid disclosing they are on their period. The taboo is gradually weakening in many places but remains powerful.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Religious practices</p>
+          <p class="cval">Varied, from restrictive to celebratory</p>
+          <p class="cnote">Orthodox Judaism observes <em>niddah</em>: separation during menstruation, with ritual immersion (<em>mikveh</em>) after. Hindu traditions in parts of South Asia exclude menstruating people from temples or kitchens, though practices vary enormously by region and reform movements push back. Some Christian denominations historically restricted communion during menstruation. Islamic practice exempts menstruating women from fasting and prayer. Some Indigenous traditions celebrate menarche with rite-of-passage ceremonies.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Chhaupadi (Nepal)</p>
+          <p class="cval">Banned 2017, still practised</p>
+          <p class="cnote">A practice in parts of rural western Nepal where menstruating people are isolated in huts away from the family home. Has caused deaths from cold, smoke inhalation, animal attacks, and assault. Criminalised in 2017 and pushed against by health workers and women's organisations, but persists in some regions. A stark illustration of how taboo can become lethal.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Period poverty</p>
+          <p class="cval">~500 million affected globally</p>
+          <p class="cnote">Inability to afford menstrual products or to access clean water and private sanitation. Linked to school absenteeism, infections from improvised materials, and reduced economic participation. Addressed through free-product policies (Scotland 2020, New Zealand schools 2021, parts of the US and UK), tax removal ("tampon tax" abolitions across many jurisdictions), and NGOs distributing reusables.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Menstrual leave</p>
+          <p class="cval">Policy in several countries</p>
+          <p class="cnote">Japan, South Korea, Indonesia, Taiwan, Zambia, and Spain (2023, the first European country) offer some form of menstrual leave. Debate continues about whether such policies reduce stigma and support those with severe symptoms or, conversely, reinforce stereotypes and discourage hiring. Take-up rates are often low even where the right exists, partly due to social pressure.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Activism and visibility</p>
+          <p class="cval">Rising since the 2010s</p>
+          <p class="cnote">A wave of menstrual activism: period emoji campaigns, free-product legislation, art projects, athlete openness about cycle effects on performance, and renewed scientific funding into endometriosis and PMDD. The shift from euphemism to direct language ("period," "menstruation") is itself a cultural change. The phrase "menstrual equity" has entered policy vocabulary, framing access to products and information as a matter of basic rights.</p>
+        </div>
+      </div>
+      <div class="gender-panel-4">
+        <strong class="text-primary">The bigger picture:</strong> Menstruation sits at an intersection of biology, gender, religion, economics, and law. The same physiological event is celebrated in one culture, hidden in another, criminalised in a third. Improving menstrual experience worldwide is partly a medical project (better treatments for pain, endometriosis, PMDD), partly a material one (products, water, sanitation), and partly a cultural one (information, normalisation, language). The three reinforce one another.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART O — Q&A
+         ============================================================ -->
+    <h2 class="sec" id="part-o-q-and-a">Part O · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. What is the difference between being transgender and being intersex?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">They are completely different phenomena that are frequently confused. Intersex refers to biological variation — a person whose chromosomes, hormones, gonads, or anatomy don't fit typical male or female definitions. It's a biological condition, not a gender identity. Most intersex people identify as the gender they were assigned at birth. Transgender refers to gender identity — a person whose gender identity doesn't match the sex they were assigned at birth. A transgender person's biological characteristics are typically standard male or female; the mismatch is between their biology and their gender identity. A person could theoretically be both intersex and transgender, but they are distinct things. Intersex is a biological description; transgender is a description of the relationship between a person's sex assigned at birth and their gender identity.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. What does gender dysphoria mean medically, and how is it different from general unhappiness about one's body?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Gender dysphoria (DSM-5 diagnosis) is clinically defined as significant distress or impairment caused by a marked incongruence between one's experienced or expressed gender and one's assigned gender, lasting at least 6 months. The key components: the distress must be clinically significant — affecting social, occupational, or other important areas of functioning. It's not simply being unhappy about one's appearance. Many transgender people experience dysphoria; some do not — being transgender doesn't require a diagnosis of dysphoria. The DSM-5 moved from "Gender Identity Disorder" to "Gender Dysphoria" in 2013, distinguishing the identity (which is not a disorder) from the distress caused by social context and bodily incongruence (which can cause genuine clinical suffering). The ICD-11 (WHO) uses "Gender Incongruence" and classifies it under sexual health rather than mental health — reflecting the consensus that being transgender is not a mental illness.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. What is the difference between pansexual and bisexual? Why do some people prefer one term over the other?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The definitions overlap significantly, and many bisexual and pansexual people use the terms interchangeably. The most common distinction: bisexual originally meant "attraction to both men and women" — but most bisexual people and bisexual advocacy organisations now define it as "attraction to one's own gender and other genders" or simply "attraction to multiple genders." Pansexual explicitly means "attraction regardless of gender" — including non-binary, genderfluid, and agender people — with "pan" (all) emphasising the gender-blind nature of the attraction. The practical difference is often one of emphasis and political/community identity rather than meaningfully different experience. Some people prefer "bisexual" because of its history and community; others prefer "pansexual" because it explicitly includes non-binary people in a way they feel "bisexual" may not; others use both. Neither is more valid — they represent different frameworks for describing overlapping experiences.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. What does medical transition involve, and what are the different steps?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Medical transition is not a single event but a range of possible interventions that a transgender person may pursue — some, all, or none. Social transition (not medical): changing name, pronouns, clothing, and social presentation — often the first step, can occur at any age. Hormonal transition: cross-sex hormone therapy — transgender women take oestrogen (and often anti-androgens) to feminise; transgender men take testosterone to masculinise. Effects include changes in body fat distribution, skin, body hair, voice (testosterone), breast development (oestrogen), and emotional changes. These happen over months to years. Puberty blockers: for adolescents, GnRH agonists pause puberty, buying time for decision-making. Effects are largely reversible. Surgical options vary widely — for transgender women: orchiectomy, vaginoplasty, facial feminisation surgery, breast augmentation. For transgender men: mastectomy (top surgery) is most common; phalloplasty or metoidioplasty for genital surgery. Not all transgender people pursue surgery — it is a personal decision based on dysphoria, health, finances, and individual needs. The medical standard of care is guided by WPATH (World Professional Association for Transgender Health) Standards of Care.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. Is sexual orientation a choice? What does the scientific evidence say?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The scientific consensus is clear: sexual orientation is not a conscious choice. The evidence comes from multiple directions. Twin studies: identical twins show higher concordance for same-sex orientation than fraternal twins, suggesting a genetic component — but concordance is not 100%, indicating environment (likely prenatal) also plays a role. Prenatal hormonal exposure: the fraternal birth order effect (gay men statistically have more older brothers than heterosexual men) is explained by a maternal immune response to male-specific proteins that increases with each male pregnancy. The H-Y antigen hypothesis suggests this affects prenatal brain development. Brain structure: studies (beginning with LeVay 1991) found structural differences in the hypothalamus between heterosexual and homosexual men. Finger length ratios (2D:4D): a marker of prenatal androgen exposure, shows consistent differences between lesbian women and heterosexual women. Large-scale GWAS (2019, ~470,000 participants) found dozens of genetic variants associated with same-sex behaviour but no single "gay gene" — confirming a complex, polygenic, and partly environmental picture. The most important practical point: "conversion therapy" — attempts to change sexual orientation through psychological or religious intervention — is not only ineffective but causes documented psychological harm, and is banned by professional medical organisations worldwide on this basis.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. What does research suggest about the origins of gender identity?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Research on the biological underpinnings of gender identity is ongoing but points to neurobiological and developmental factors. Key lines of evidence: Brain studies have found that certain brain regions in transgender women more closely resemble those of cisgender women than cisgender men, and similarly for transgender men — suggesting that brain development may be partially discordant with birth sex in transgender people. Twin studies show higher concordance for transgender identity among identical vs. fraternal twins, suggesting a heritable component. Prenatal hormone exposure: conditions that alter prenatal androgen exposure (e.g., congenital adrenal hyperplasia in XX individuals) are associated with higher rates of gender dysphoria and gender-nonconforming behaviour, though most affected individuals identify as women. Stability: gender identity is typically stable from early childhood (age 3–4) and does not change with social exposure. The consensus across APA, AMA, WPATH, and other major medical bodies is that being transgender reflects a normal variation in human development with biological underpinnings — not a choice, a pathology, or a social contagion. Childhood social desistance (children who identify as transgender and later identify as cisgender) is real but the statistics are contested — methodological problems in earlier studies mean earlier estimates (suggesting majority desistance) are now considered unreliable by most researchers.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. What is the fraternal birth order effect and what explains it?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The fraternal birth order effect (FBOE) is one of the most replicated findings in the biology of sexual orientation: gay men, as a group, have a statistically greater number of older brothers than heterosexual men. For each older brother, the odds of a younger male sibling being gay increase by approximately 33%. This effect is specific to biological older brothers — it doesn't appear for adopted brothers, suggesting it's not a socialisation effect but a biological one. The leading explanation (Bogaert, Blanchard, and colleagues) is a maternal immune hypothesis: when a mother carries male fetuses, small amounts of a Y-linked protein called NLGN4Y (previously called HYYY antigen) cross the placental barrier into the mother's bloodstream. Some mothers develop an immune response. With each subsequent male pregnancy, the antibody response strengthens. These antibodies may cross back into the fetal brain and affect development of brain regions involved in sexual attraction — the INAH-3 region of the anterior hypothalamus specifically. A 2017 study (Bogaert et al.) found that mothers of gay sons with older brothers had significantly higher anti-NLGN4Y antibody levels than other mothers, providing the first direct biochemical evidence for the mechanism. The FBOE accounts for roughly 15–29% of gay men (those with older brothers) — meaning most same-sex orientation has other causes, but the effect is a clear, repeatable, and now mechanistically supported example of a prenatal biological influence on sexual orientation.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">8. Hormonal contraceptives are very effective -- so why should someone still use condoms if they are on the pill?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Hormonal contraceptives prevent pregnancy through their effects on the reproductive system -- suppressing ovulation, thickening cervical mucus, and thinning the uterine lining. They have absolutely no effect on pathogens. They do not block the transmission of bacteria (chlamydia, gonorrhoea, syphilis), viruses (herpes, HIV, HPV, hepatitis B), or parasites (trichomoniasis). The pill, patch, ring, injection, implant, and all IUDs are silent on STI risk. Condoms are currently the only widely available method that addresses both pregnancy and infection simultaneously. For people in established, mutually monogamous relationships where both partners have been tested and are clear of STIs, relying solely on a hormonal method for pregnancy prevention is a reasonable and common choice. But for new partners, non-exclusive relationships, or any situation where STI status is unknown, combining hormonal contraception with condoms provides dual protection -- high effectiveness against pregnancy and meaningful reduction in STI transmission. This combination is sometimes called "dual protection."</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">9. What is the difference between emergency contraception and an abortion? Why does the distinction matter?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The distinction rests on when in the reproductive process each intervention acts. Emergency contraception (levonorgestrel, ulipristal acetate, or the copper IUD) works by preventing pregnancy from occurring in the first place -- primarily by delaying or inhibiting ovulation so that sperm and egg never meet. If fertilisation has already occurred, the evidence suggests emergency contraceptives do not prevent implantation, though this was once debated. The medical and scientific consensus is that pregnancy begins at implantation, not fertilisation -- this is the definition used by the American College of Obstetricians and Gynecologists and the WHO. By this definition, emergency contraception is not an abortifacient: it prevents pregnancy rather than terminating one. Abortion, by contrast, ends an established pregnancy after implantation -- through medication (mifepristone plus misoprostol, the "abortion pill") or a surgical procedure. The two are entirely different interventions acting at different points. The distinction matters because: (1) It is medically accurate and affects how people understand their options after unprotected sex; (2) Emergency contraception has been subject to political and religious controversy partly due to the incorrect belief that it causes abortion -- this has led to access barriers in some countries and US states; (3) Confusing the two can deter people from using emergency contraception when it would be appropriate and effective, leading to unintended pregnancies that might then require abortion.</div>
+    </div>
+
+  
+
+  
+
+  
+</ModuleLayout>
+
+<script is:inline>
+
+    /* ============================================================
+       DATA: GENDER IDENTITY EXPLORER
+       ============================================================ */
+    const genders = {
+      cisgender: { name:'Cisgender', badge:'Gender identity matches sex assigned at birth', bg:'#E6F1FB', col:'#0C447C',
+        def:'A person whose gender identity corresponds with the sex they were assigned at birth. A cisgender woman was assigned female at birth and identifies as a woman; a cisgender man was assigned male at birth and identifies as a man.',
+        prevalence:'The majority of people are cisgender. The prefix "cis-" comes from Latin meaning "on the same side" — as opposed to "trans-" meaning "across." The term was introduced to provide a neutral, non-default descriptor rather than treating cisgender as the unmarked norm.',
+        nuance:'Being cisgender says nothing about gender expression (a cisgender person may have non-conforming gender expression), sexual orientation (cisgender people are gay, straight, bisexual, etc. in the same range as anyone), or personality. It is one descriptor among many.' },
+      transgender: { name:'Transgender', badge:'Gender identity differs from sex assigned at birth', bg:'#EEEDFE', col:'#3C3489',
+        def:'An umbrella term for people whose gender identity differs from the sex they were assigned at birth. A transgender woman was assigned male at birth but identifies as a woman. A transgender man was assigned female at birth but identifies as a man.',
+        prevalence:'Estimates: 0.5–1.7% of the population, though estimates vary considerably by study design, country, and age group. Younger generations (Gen Z) report higher rates of transgender identification.',
+        nuance:'Being transgender is not contingent on medical transition. A person is transgender because of their gender identity, not because of surgery or hormones. Not all transgender people experience dysphoria to the same degree. Transgender identity is recognised as a normal human variation by all major medical and psychological organisations. Sexual orientation is independent — transgender people are straight, gay, bisexual, etc.' },
+      nonbinary: { name:'Non-binary', badge:'Gender identity outside male/female binary', bg:'#EAF3DE', col:'#27500A',
+        def:'An umbrella term for gender identities that don\'t fit exclusively into the categories of man or woman. Non-binary people may identify as between genders, as a blend of both, as neither, as a third gender, or as having a fluctuating gender.',
+        prevalence:'Surveys suggest 0.3–0.5% of the general population, higher in younger generations. A significant subset of those who identify as transgender also identify as non-binary.',
+        nuance:'Non-binary is a descriptive category, not a uniform experience. Some non-binary people use they/them pronouns; others use he/him, she/her, or neopronouns (xe/xem, ze/zir). Many cultures throughout history have recognised genders beyond two (hijra in South Asia, fa\'afafine in Samoa, Two-Spirit in some Indigenous North American cultures).' },
+      genderfluid: { name:'Genderfluid', badge:'Gender identity that shifts over time', bg:'#FBEAF0', col:'#72243E',
+        def:'A gender identity that is not fixed — it changes or shifts over time, sometimes between masculine and feminine, sometimes across other gender experiences. The fluidity may vary day to day, situationally, or over longer periods.',
+        prevalence:'A subset of non-binary experiences. No reliable separate prevalence data.',
+        nuance:'Genderfluid is distinct from being non-binary in that it explicitly describes movement — a non-binary person may have a stable identity that doesn\'t fit the binary, while a genderfluid person\'s identity itself shifts. The shifting is experienced as genuine changes in gender identity, not just changes in expression or mood.' },
+      agender: { name:'Agender', badge:'Absence of gender identity', bg:'#F1EFE8', col:'#444441',
+        def:'A person who identifies as having no gender, a neutral gender, or considers gender inapplicable to themselves. Agender people may also describe themselves as genderless or gender-neutral.',
+        prevalence:'A subset of non-binary identities. Prevalence not well-established separately.',
+        nuance:'Agender is distinct from non-binary in emphasis — it is specifically the absence or neutrality of gender rather than a third or alternative gender. Some agender people prefer gender-neutral pronouns; others are comfortable with any pronouns. Agender identity says nothing about sexual orientation or biological sex.' },
+      genderqueer: { name:'Genderqueer', badge:'Challenges or rejects gender norms', bg:'#EEEDFE', col:'#3C3489',
+        def:'An older term (predating "non-binary") describing a gender identity that challenges or rejects conventional gender norms. Some use it interchangeably with non-binary; others use it with a more explicitly political connotation — queering gender as a social construct.',
+        prevalence:'Overlaps significantly with non-binary. Often used by older people who adopted the term before "non-binary" became widespread.',
+        nuance:'Genderqueer carries a more explicitly activist or political history — it emerged from queer theory and gender studies. Some prefer it for its challenge to the gender system itself rather than just claiming a position outside the binary. The terms non-binary and genderqueer are often used interchangeably in everyday speech.' },
+      dysphoria: { name:'Gender dysphoria', badge:'Clinical term for distress from gender-sex mismatch', bg:'#FAECE7', col:'#712B13',
+        def:'Gender dysphoria (DSM-5) describes significant distress or impairment arising from an incongruence between one\'s experienced gender and sex assigned at birth. It is the clinical distress, not the identity itself, that constitutes the diagnosis.',
+        prevalence:'Not all transgender or non-binary people experience clinical-level gender dysphoria. Many experience gender incongruence without the degree of distress required for the clinical diagnosis.',
+        nuance:'The ICD-11 (WHO 2019) reclassified the relevant condition as "Gender Incongruence" and moved it out of the mental health chapter into sexual health. This reflects the consensus that being transgender is not a mental illness. Effective treatment is gender-affirming care, which reduces dysphoria and is associated with significantly improved mental health outcomes.' },
+      transition: { name:'Transition', badge:'Process of aligning life with gender identity', bg:'#E1F5EE', col:'#085041',
+        def:'Transition is the process by which transgender people align their social roles, bodies, and/or legal documents with their gender identity. It is not one event but a range of steps, each chosen individually.',
+        prevalence:'Transition is common among transgender people who experience dysphoria but varies enormously in what it involves.',
+        nuance:'Social transition: name, pronouns, presentation, relationships. Legal transition: changing name and gender marker on documents (varies by country). Medical transition: hormones and/or surgery. Not every transgender person pursues every step. Detransition occurs in a minority — studies estimate 1–8%, often due to family/social pressure rather than change in gender identity. The vast majority who medically transition report improved quality of life and reduced dysphoria.' }
+    };
+
+    function showGender(key) {
+      const g = genders[key];
+      document.querySelectorAll('[onclick^="showGender"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showGender('${key}')"]`).classList.add('active');
+      document.getElementById('gender-display').innerHTML = `
+        <div style="display:inline-block; background:${g.bg}; color:${g.col}; border-radius:99px; font-size:11px; font-weight:500; padding:2px 9px; margin-bottom:10px;">${g.name} — ${g.badge}</div>
+        <div style="display:grid; grid-template-columns:1fr; gap:8px;">
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Definition</div><div style="font-size:13px; color:var(--color-text-primary); line-height:1.6;">${g.def}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Prevalence and context</div><div style="font-size:13px; color:var(--color-text-primary); line-height:1.6;">${g.prevalence}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Important nuance</div><div style="font-size:13px; color:var(--color-text-primary); line-height:1.6;">${g.nuance}</div></div>
+        </div>`;
+    }
+
+    /* ============================================================
+       DATA: SEXUAL ORIENTATION EXPLORER
+       ============================================================ */
+    const orientations = {
+      heterosexual: { name:'Heterosexual / straight', badge:'Attraction to a different gender', bg:'#E6F1FB', col:'#0C447C',
+        def:'Emotional, romantic, and/or sexual attraction primarily to people of a different gender than oneself. The most common orientation in the population. In its simplest form: men attracted to women and women attracted to men — though this framing requires updating for non-binary contexts.',
+        nuance:'Even "straight" orientation has gradations and variation in attraction, relationship structures, and expression. The term "mostly straight" has emerged in research to describe people who identify as heterosexual but acknowledge occasional same-sex attraction — studies suggest this is a stable, distinct orientation rather than a transition state.' },
+      homosexual: { name:'Homosexual / gay / lesbian', badge:'Attraction to the same gender', bg:'#EEEDFE', col:'#3C3489',
+        def:'"Gay" typically refers to men attracted to men; "lesbian" to women attracted to women; "homosexual" is the clinical/older term covering both. The word "gay" is also used as a broader umbrella term for all LGB people in some contexts.',
+        nuance:'The word "homosexual" has clinical connotations and is sometimes felt to be pathologising given its association with its medical history (listed as a mental disorder until 1973 in the DSM, 1990 in the ICD). "Gay" and "lesbian" are the most commonly preferred self-descriptors. Same-sex attraction exists across all cultures and throughout recorded history.' },
+      bisexual: { name:'Bisexual', badge:'Attraction to one\'s own and other genders', bg:'#E1F5EE', col:'#085041',
+        def:'Attraction to people of one\'s own gender and other genders. The most common LGB+ orientation by self-identification in current surveys. The "bi" prefix is understood broadly — not limited to exactly two genders.',
+        nuance:'Bisexuality is frequently misunderstood. Common misconceptions: that it requires "equal" attraction (it doesn\'t — attraction can be weighted); that it\'s a "phase" (research shows bisexual identity is stable); that bisexual people in monogamous relationships "become" straight or gay (orientation doesn\'t change with relationship status). Bisexual people experience higher rates of mental health challenges than either gay/lesbian or straight people — partly attributed to "bisexual erasure."' },
+      pansexual: { name:'Pansexual', badge:'Attraction regardless of gender', bg:'#FAEEDA', col:'#633806',
+        def:'Attraction to people of any gender or regardless of gender — the "pan" (all) prefix emphasises that gender is not a determining factor in attraction. Sometimes described as being attracted to the person regardless of their gender.',
+        nuance:'The distinction from bisexual is discussed in the Q&A. Pansexuality explicitly names attraction to non-binary and genderfluid people. Some pansexual people describe experiencing "gender-blind" attraction; others describe attraction to people of all genders specifically. The two terms overlap significantly in lived experience.' },
+      asexual: { name:'Asexual (ace)', badge:'Little or no sexual attraction', bg:'#F1EFE8', col:'#444441',
+        def:'A person who experiences little or no sexual attraction to others. Asexuality is an orientation, not a behavioural choice or medical condition. Asexual people can and do have romantic attractions, relationships, and sometimes engage in sexual activity for reasons unrelated to sexual attraction (partner desire, physical sensation).',
+        nuance:'The asexual spectrum (ace spectrum) includes: graysexual (experiences sexual attraction rarely or weakly) and demisexual (only after emotional bond). Asexuality is distinct from celibacy (a behavioural choice) and from low libido (a clinical condition involving distress). AVEN estimates ~1% of the population is asexual, though methodological challenges make this uncertain.' },
+      demisexual: { name:'Demisexual', badge:'Sexual attraction only after emotional bond', bg:'#EEEDFE', col:'#3C3489',
+        def:'A person who experiences sexual attraction only after forming a strong emotional connection with someone. Without this bond, sexual attraction is absent, regardless of the person\'s physical appearance or social desirability.',
+        nuance:'Demisexuality sits on the asexual spectrum. The emotional bond required is genuine and deep — typically friendship, trust, or love — not just acquaintance. It is not simply "wanting to know someone first" or a preference, but an actual absence of sexual attraction without the bond. Demisexuality can combine with any romantic orientation.' },
+      aromantic: { name:'Aromantic (aro)', badge:'Little or no romantic attraction', bg:'#EAF3DE', col:'#27500A',
+        def:'A person who experiences little or no romantic attraction — the desire for emotional intimacy, partnership, and romance typical of romantic relationships. Aromantic people may still experience sexual attraction (aro allo), or be both aromantic and asexual (aroace).',
+        nuance:'Being aromantic is not about being emotionally closed off or incapable of love — aromantic people can have deep friendships and familial love. They simply don\'t experience the specific type of attraction that drives romantic partnership. The broader aromantic spectrum includes greyromantic (rarely experiences romantic attraction) and demiromantic (only after emotional bond).' },
+      queer: { name:'Queer', badge:'Umbrella term; also a reclaimed identity', bg:'#FAECE7', col:'#712B13',
+        def:'Originally a slur, largely reclaimed from the 1980s–90s by LGBTQ+ people as a self-descriptor. Used as an umbrella term for any non-heterosexual, non-cisgender identity, and also used by some as a specific personal identity when other labels feel too constraining.',
+        nuance:'Not everyone is comfortable with "queer" — for older generations who experienced it primarily as a slur, it may still feel offensive. Its use as an academic term (queer theory) and community umbrella (LGBTQ+) has made it widely accepted. Some people prefer "queer" specifically because it rejects the need for precise labelling and allows for fluid, complex identities. It is both an orientation/identity label and a political/cultural stance.' }
+    };
+
+    function showOrient(key) {
+      const o = orientations[key];
+      document.querySelectorAll('[onclick^="showOrient"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showOrient('${key}')"]`).classList.add('active');
+      document.getElementById('orient-display').innerHTML = `
+        <div style="display:inline-block; background:${o.bg}; color:${o.col}; border-radius:99px; font-size:11px; font-weight:500; padding:2px 9px; margin-bottom:10px;">${o.name} — ${o.badge}</div>
+        <div style="display:grid; grid-template-columns:1fr; gap:8px;">
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Definition</div><div style="font-size:13px; color:var(--color-text-primary); line-height:1.6;">${o.def}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Nuance and context</div><div style="font-size:13px; color:var(--color-text-primary); line-height:1.6;">${o.nuance}</div></div>
+        </div>`;
+    }
+
+    /* ============================================================
+       TWO-AXIS INTERACTIVE MODEL
+       ============================================================ */
+    let twoAxisState = { sex: null, rom: null };
+
+    const twoAxisCombinations = {
+      'heterosexual|heteroromantic': { label:'Heterosexual heteroromantic', desc:'The most common combination — sexual and romantic attraction both directed toward people of a different gender. This is what most people mean by "straight." The two axes align fully.' },
+      'heterosexual|biromantic':     { label:'Heterosexual biromantic', desc:'Experiences sexual attraction only to people of a different gender, but develops romantic feelings toward people of multiple genders. A person might fall in love more broadly than they experience sexual desire.' },
+      'heterosexual|homoromantic':   { label:'Heterosexual homoromantic', desc:'A rare but documented split — sexual attraction toward the opposite gender, but romantic/emotional attraction primarily toward the same gender. Can make navigating relationships complex since the two axes diverge.' },
+      'heterosexual|aromantic':      { label:'Heterosexual aromantic', desc:'Experiences sexual attraction to a different gender but little or no romantic attraction to anyone. May prefer casual sexual relationships or simply has no drive toward romantic partnership — this is not loneliness or avoidance but a genuine orientation.' },
+      'bisexual|heteroromantic':     { label:'Bisexual heteroromantic', desc:'Experiences sexual attraction to people of multiple genders, but romantic/emotional attraction primarily toward a different gender. Sexual and romantic desires can feel different — this person might seek different-gender long-term partners while experiencing broader sexual attraction.' },
+      'bisexual|biromantic':         { label:'Bisexual biromantic', desc:'Both sexual and romantic attraction span multiple genders — the axes align on a broad, multi-gender orientation. Often simply described as bisexual with no qualification.' },
+      'bisexual|homoromantic':       { label:'Bisexual homoromantic', desc:'Sexual attraction is broad (multiple genders) but romantic/emotional desire is primarily toward the same gender. Might pursue same-gender romantic relationships while experiencing sexual attraction more broadly.' },
+      'bisexual|aromantic':          { label:'Bisexual aromantic', desc:'Experiences sexual attraction to multiple genders but little or no romantic attraction. Can have sexual desire and connections with people of any gender but doesn\'t experience the pull toward romantic partnership.' },
+      'homosexual|homoromantic':     { label:'Homosexual homoromantic', desc:'Both sexual and romantic attraction are directed toward the same gender — the two axes align. This is the classic description of a gay man or lesbian woman.' },
+      'homosexual|biromantic':       { label:'Homosexual biromantic', desc:'Sexual attraction is same-sex only, but romantic feelings can develop toward people of multiple genders. Might fall in love more broadly than they experience sexual desire.' },
+      'homosexual|heteroromantic':   { label:'Homosexual heteroromantic', desc:'A notable split — sexual attraction toward the same gender, but romantic attraction toward a different gender. Creates real tension in forming satisfying relationships, as sexual and romantic needs point in different directions.' },
+      'homosexual|aromantic':        { label:'Homosexual aromantic', desc:'Sexual attraction toward the same gender, but little or no romantic attraction. May prefer non-romantic same-gender sexual relationships or simply doesn\'t experience the drive toward partnership.' },
+      'asexual|heteroromantic':      { label:'Asexual heteroromantic', desc:'Little or no sexual attraction, but experiences romantic attraction toward a different gender. Can want all the elements of a romantic relationship — emotional intimacy, partnership, love — without the sexual component. Sometimes called "straight ace."' },
+      'asexual|biromantic':          { label:'Asexual biromantic', desc:'Little or no sexual attraction, but romantic feelings can develop toward people of multiple genders. The romantic and relational axes are active; the sexual axis is quiet or absent.' },
+      'asexual|homoromantic':        { label:'Asexual homoromantic', desc:'Little or no sexual attraction, but romantic attraction toward the same gender. May want a same-gender romantic partnership in all non-sexual senses — sometimes called "gay ace" or "lesbian ace."' },
+      'asexual|aromantic':           { label:'Asexual aromantic (aroace)', desc:'Little or no sexual attraction and little or no romantic attraction. Both the sexual and romantic axes are largely absent. Aroace people can still experience deep platonic love, aesthetic attraction, and close relationships — just not the romantic or sexual variants. A fully valid orientation that many find freeing.' }
+    };
+
+    function setAxis(axis, value) {
+      twoAxisState[axis] = value;
+
+      // Update button active states
+      const prefix = axis === 'sex' ? 'setAxis(\'sex\'' : 'setAxis(\'rom\'';
+      document.querySelectorAll(`[onclick^="${prefix}"]`).forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="setAxis('${axis}','${value}')"]`).classList.add('active');
+
+      if (twoAxisState.sex && twoAxisState.rom) {
+        const key = `${twoAxisState.sex}|${twoAxisState.rom}`;
+        const combo = twoAxisCombinations[key];
+        if (combo) {
+          document.getElementById('twoaxis-result').innerHTML = `
+            <strong style="color:var(--color-text-primary);">${combo.label}</strong><br>
+            <span style="color:var(--color-text-secondary);">${combo.desc}</span>`;
+        }
+      } else {
+        document.getElementById('twoaxis-result').innerHTML = 'Select one option from each axis to see how they combine.';
+      }
+    }
+
+    /* ============================================================
+       SCIENCE EXPLORER
+       ============================================================ */
+    const scienceData = {
+      twin: {
+        title: 'Twin studies',
+        content: 'Twin studies compare concordance rates for same-sex orientation between identical (monozygotic, MZ) and fraternal (dizygotic, DZ) twins. If MZ twins — who share 100% of their DNA — show higher concordance than DZ twins (who share ~50%), this points to a genetic component. Key findings: MZ twins show higher concordance than DZ twins consistently across studies (e.g., Bailey & Pillard 1991: ~52% MZ vs ~22% DZ for male homosexuality). However, concordance is not 100% even for MZ twins — if orientation were purely genetic, identical twins would always share it. The incomplete concordance implies non-genetic factors (most likely prenatal environment, not post-natal socialization) also play a role. Later studies using population registries (e.g., Santtila et al. 2008 in Finland) have found somewhat lower concordance rates but still significantly higher for MZ than DZ twins. The heritability of same-sex orientation has been estimated at 30–50% in different studies.'
+      },
+      birth: {
+        title: 'Fraternal birth order effect',
+        content: 'One of the most replicated findings in orientation research: gay men have, on average, more older brothers than heterosexual men. Each older biological brother increases the odds of a later male being gay by approximately 33%. The key evidence that this is biological, not social: the effect holds for older biological brothers raised separately (adopted away at birth), but not for non-biological older brothers raised together. This rules out a socialisation or role-model explanation. The leading mechanism (Bogaert, Blanchard): maternal immune response. The Y-linked protein NLGN4Y crosses the placental barrier during male pregnancies. Some mothers develop antibodies. Each subsequent male pregnancy may strengthen this immune response. Antibodies crossing back into the fetal brain may alter development of the INAH-3 region, affecting sexual attraction. A 2017 study directly measured NLGN4Y antibody levels and found them significantly elevated in mothers of gay sons with older brothers — the first direct biochemical evidence for the mechanism. The FBOE accounts for ~15–29% of gay men — most same-sex orientation has other causes, but this is a clear, replicated, and now mechanistically supported example of a prenatal biological influence.'
+      },
+      brain: {
+        title: 'Brain structure research',
+        content: 'Simon LeVay\'s 1991 Science paper reported that the INAH-3 region of the anterior hypothalamus (an area involved in sexual behaviour in mammals) was significantly smaller in gay men and heterosexual women than in heterosexual men. This was the first published neuroanatomical study of sexual orientation and generated enormous scientific and public interest. The findings have been partially replicated by Byne et al. (2001) and others, though with some methodological refinements. More recently, neuroimaging studies have found that brain organisation in gay men and lesbians shows partial resemblance to that of the other sex (e.g., in the pattern of connections in the amygdala, cerebral asymmetry). Studies of transgender people have found that certain brain characteristics (regional volume, white matter tracts, neural response patterns) are intermediate between or resemble those of their identified gender rather than birth sex — supporting the idea of neurological underpinnings of gender identity independent of sex assigned at birth. Caution: all these studies are small, and brain structure is influenced by experience throughout life, not just prenatal development. Direction of causality is not always clear.'
+      },
+      genetics: {
+        title: 'Genetics (GWAS)',
+        content: 'A 2019 genome-wide association study (GWAS) published in Science — the largest of its kind, involving ~477,000 participants from US and UK biobanks — looked for genetic variants associated with ever having had a same-sex sexual partner. Key findings: No single "gay gene" exists. Multiple genetic variants (SNPs), each with small effect sizes, are associated with same-sex behaviour. The strongest single variants showed tiny effects. Collectively, the identified variants explained only 8–25% of the variance in same-sex behaviour. Genetic effects are not sufficient for individual prediction — you cannot tell from someone\'s genome whether they will be gay or straight. The study also found that genetic factors for same-sex behaviour partly overlap with variants associated with risk-taking, openness to experience, and other personality traits. Among the identified loci were variants near genes involved in olfaction and sex hormone regulation. This is consistent with a polygenic, complex picture where many genes each contribute a small amount to orientation, alongside significant non-genetic (likely prenatal biological) factors.'
+      },
+      hormones: {
+        title: 'Prenatal hormones',
+        content: 'Evidence for prenatal hormonal influence on sexual orientation and gender identity comes from several sources. The 2D:4D digit ratio: the ratio of the index to ring finger length is influenced by prenatal androgen exposure during fetal development. Lesbian women as a group show lower (more masculinised) 2D:4D ratios than heterosexual women — consistent with higher prenatal androgen exposure. This effect has been replicated in many studies. Congenital adrenal hyperplasia (CAH): XX individuals with CAH have elevated prenatal androgens due to a genetic enzyme deficiency. CAH women show higher rates of same-sex attraction and gender-nonconforming behaviour than non-CAH women, though the majority still identify as heterosexual women. This provides a natural experiment supporting a role for prenatal androgens. The diethylstilbestrol (DES) natural experiment: DES was a synthetic oestrogen prescribed to pregnant women from the 1940s–1970s. Daughters exposed prenatally to DES showed higher rates of same-sex orientation than unexposed women, suggesting prenatal oestrogen exposure also affects orientation. Taken together, the evidence strongly suggests that prenatal hormone levels — influenced by genetics, maternal immune factors, and chance — shape the developing brain in ways that influence sexual orientation.'
+      },
+      limits: {
+        title: 'Limits and caveats of the research',
+        content: 'Understanding the limitations is as important as understanding the findings. Key limits: (1) Small samples: Many early brain studies and twin studies involved fewer than 100 participants — too small to establish reliable effect sizes. (2) Publication bias: Positive results are more likely to be published. Null findings exist but are underrepresented. (3) Self-selected samples: Early studies often recruited participants through gay community organisations, potentially skewing results. (4) Behaviour ≠ orientation: GWAS studies often measure "ever had a same-sex sexual partner" rather than orientation or attraction — these are related but distinct variables. (5) Causality: Brain differences between groups could be caused by orientation-related life experiences, not just predate them. (6) Replication challenges: Some findings (e.g., early concordance rates in twin studies) have not fully replicated with population-based samples. (7) Intersectionality: Most research has focused on male homosexuality; much less is known about female same-sex orientation, bisexuality, or the biology of gender identity. (8) The "born this way" framing: Even if orientation has biological roots, this doesn\'t fully explain why social and legal equality depend on biology — a person\'s rights don\'t require biological justification. The scientific evidence for biological contributions to orientation is substantial but complex, and the mechanisms are not fully understood.'
+      }
+    };
+
+    function showScience(key) {
+      const s = scienceData[key];
+      document.querySelectorAll('[onclick^="showScience"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showScience('${key}')"]`).classList.add('active');
+      document.getElementById('science-display').innerHTML = `<strong style="color:var(--color-text-primary); display:block; margin-bottom:6px;">${s.title}</strong>${s.content}`;
+    }
+
+    /* ============================================================
+       DOT GRID POPULATION VIZ
+       ============================================================ */
+    function buildDotGrid() {
+      const wrap = document.getElementById('dotGridWrap');
+      if (!wrap) return;
+      // 100 dots: 87 straight, 3.5 gay (rounded 4), 5.5 bi (rounded 5), 4 other
+      const dots = [
+        ...Array(87).fill('#0C447C'),
+        ...Array(4).fill('#3C3489'),
+        ...Array(5).fill('var(--accent)'),
+        ...Array(4).fill('#D4537E')
+      ];
+      // Shuffle
+      for (let i = dots.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [dots[i], dots[j]] = [dots[j], dots[i]];
+      }
+      wrap.innerHTML = dots.map(c => `<div class="dot-pop" style="background:${c};"></div>`).join('');
+    }
+    buildDotGrid();
+
+    /* ============================================================
+       SAFE SEX: PROTECTION METHOD EXPLORER
+       ============================================================ */
+    const methodData = {
+      barrier: {
+        title: 'Barrier methods',
+        badge: 'Only methods that prevent both pregnancy AND STIs',
+        bg: '#E6F1FB', col: '#0C447C',
+        desc: 'Barrier methods physically block sperm from reaching an egg, and in the case of condoms and dental dams, also block the transmission of bodily fluids and skin-to-skin contact that spreads STIs. This dual protection makes them uniquely valuable -- no hormonal method provides any protection against STIs.',
+        items: [
+          { name: 'External condom', stat: '98% / 87%', note: 'Perfect / typical use. Latex, polyurethane, or polyisoprene.' },
+          { name: 'Internal condom', stat: '95% / 79%', note: 'Perfect / typical use. Nitrile -- latex-free.' },
+          { name: 'Dental dam', stat: 'Barrier only', note: 'Oral sex protection -- no contraceptive effect.' },
+          { name: 'Diaphragm + spermicide', stat: '94% / 88%', note: 'Perfect / typical use. No STI protection.' },
+        ]
+      },
+      hormonal: {
+        title: 'Hormonal methods',
+        badge: 'Prevent pregnancy via hormones -- no STI protection',
+        bg: '#EEEDFE', col: '#3C3489',
+        desc: 'Hormonal methods use synthetic oestrogen and/or progestogen to prevent pregnancy through multiple mechanisms: suppressing ovulation, thickening cervical mucus (blocking sperm), and thinning the uterine lining. They are highly effective with perfect use but none provide protection against STIs -- condoms should still be used with new or non-exclusive partners.',
+        items: [
+          { name: 'Combined oral pill', stat: '99.7% / 91%', note: 'Daily pill, same time each day. Many formulations.' },
+          { name: 'Progestogen-only pill (mini-pill)', stat: '99.7% / 91%', note: 'Stricter timing window (3-hour rule for some). Suitable for those who cannot use oestrogen.' },
+          { name: 'Contraceptive patch', stat: '99.7% / 91%', note: 'Weekly patch, changed 3 of 4 weeks. Same efficacy as pill.' },
+          { name: 'Vaginal ring (NuvaRing)', stat: '99.7% / 91%', note: 'Monthly ring inserted for 3 weeks. Delivers oestrogen + progestogen locally.' },
+          { name: 'Injectable (Depo-Provera)', stat: '99.8% / 94%', note: 'Every 3 months. Fertility may take 6--12 months to return after stopping.' },
+        ]
+      },
+      larc: {
+        title: 'Long-acting reversible contraceptives (LARCs)',
+        badge: 'Most effective reversible methods -- no daily attention needed',
+        bg: '#E1F5EE', col: '#085041',
+        desc: 'LARCs are the most effective reversible contraceptive methods available. Because they require no user action after fitting, the gap between perfect use and typical use is negligible -- effectiveness in the real world matches clinical trials. They are recommended as first-line options by most major gynaecological organisations for people who want highly effective contraception without surgical sterilisation.',
+        items: [
+          { name: 'Hormonal IUD (Mirena, Kyleena, Liletta)', stat: '99.8%+', note: 'Lasts 3--8 years depending on type. Often reduces or eliminates periods.' },
+          { name: 'Copper IUD (Paragard, non-hormonal)', stat: '99.2%+', note: 'Lasts up to 10--12 years. No hormones. Can cause heavier periods.' },
+          { name: 'Implant (Nexplanon)', stat: '99.95%', note: 'Small rod under the skin of the upper arm. Lasts 3 years. Most effective reversible method.' },
+        ]
+      },
+      permanent: {
+        title: 'Permanent options (surgical sterilisation)',
+        badge: 'Intended to be irreversible -- for those who are certain',
+        bg: '#EAF3DE', col: '#27500A',
+        desc: 'Surgical sterilisation is for people who are confident they do not want to be able to conceive in the future. Both methods are highly effective and among the most commonly used contraceptive methods globally. Reversal is possible but not guaranteed and should not be counted on. Neither method protects against STIs. Regret studies show approximately 6--20% of people sterilised before age 30 report regret later, vs 1--4% overall -- worth considering but not a reason to deny the procedure.',
+        items: [
+          { name: 'Vasectomy', stat: '99.9%', note: 'Outpatient procedure (~15--30 min, local anaesthetic). The vas deferens are cut, tied, or sealed. No effect on testosterone, libido, or orgasm. Recovery in a few days. Reversal success: 70--90% within 3 years, ~30% after 15 years.' },
+          { name: 'Tubal ligation', stat: '99.5%', note: 'Laparoscopic surgery (~30 min, general anaesthetic). Fallopian tubes cut, tied, blocked, or removed. Hormones and periods unaffected. Reversal possible but less reliable than vasectomy reversal.' },
+          { name: 'Salpingectomy (tube removal)', stat: '99.9%+', note: 'Complete removal of fallopian tubes. Also reduces ovarian cancer risk by ~40--65%. Increasingly preferred over ligation. No hormonal effect.' },
+        ]
+      },
+      emergency: {
+        title: 'Emergency contraception',
+        badge: 'Used after unprotected sex -- not a regular contraceptive method',
+        bg: '#FAEEDA', col: '#633806',
+        desc: 'Emergency contraception (EC) is used to prevent pregnancy after unprotected sex or contraceptive failure. It is not an abortion pill -- it works by preventing ovulation or fertilisation, not by ending an established pregnancy. EC is not recommended as a regular method because it is less effective and more expensive than consistent use of regular contraception.',
+        items: [
+          { name: 'Levonorgestrel (Plan B)', stat: '~85% within 72hr', note: 'Over the counter. Less effective after 72 hours and for higher body weights.' },
+          { name: 'Ulipristal acetate (ella)', stat: '~85% up to 120hr', note: 'Prescription in some countries. Maintains effectiveness up to 5 days.' },
+          { name: 'Copper IUD', stat: '>99% up to 120hr', note: 'Most effective EC. Also provides ongoing contraception for 10+ years.' },
+        ]
+      },
+      behavioral: {
+        title: 'Behavioural methods',
+        badge: 'Require discipline and accurate knowledge -- lower effectiveness',
+        bg: '#F1EFE8', col: '#444441',
+        desc: 'Behavioural methods rely on avoiding sex during fertile periods or preventing ejaculation inside the vagina. They require significant education, self-control, and consistent application. Their effectiveness is substantially lower than hormonal or barrier methods in typical use.',
+        items: [
+          { name: 'Withdrawal (pull-out)', stat: '96% / 78%', note: 'Perfect / typical use. Requires complete withdrawal before any ejaculation. Pre-ejaculate can carry sperm.' },
+          { name: 'Fertility awareness methods (FAM)', stat: '99% / 76-88%', note: 'Tracking cycles, temperature, and cervical mucus to identify fertile days. High failure rate with imperfect use.' },
+          { name: 'Abstinence', stat: '100% if consistent', note: '100% effective against pregnancy and STIs if consistently practiced -- but the definition of abstinence varies and adherence is imperfect.' },
+        ]
+      }
+    };
+
+    function showMethod(key) {
+      const m = methodData[key];
+      document.querySelectorAll('[onclick^="showMethod"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showMethod('${key}')"]`).classList.add('active');
+      const itemsHtml = m.items.map(i => `
+        <div class="anchor-row">
+          <div><div class="atext"><strong class="text-primary">${i.name}</strong> -- <span style="color:var(--accent);font-weight:500;">${i.stat}</span></div><div class="asub">${i.note}</div></div>
+        </div>`).join('');
+      document.getElementById('method-display').innerHTML = `
+        <div style="display:inline-block;background:${m.bg};color:${m.col};border-radius:99px;font-size:11px;font-weight:500;padding:2px 9px;margin-bottom:10px;">${m.title} -- ${m.badge}</div>
+        <div style="font-size:13px;color:var(--color-text-primary);line-height:1.6;margin-bottom:12px;">${m.desc}</div>
+        ${itemsHtml}`;
+    }
+
+    /* ============================================================
+       SAFE SEX: CONDOM STEPS
+       ============================================================ */
+    const condomSteps = {
+      1: { title: 'Check the condom', content: 'Look at the expiry date on the wrapper -- expired condoms are more likely to break. Check the wrapper for damage: if it looks torn, crushed, or has been exposed to heat (wallet, glovebox), discard it. Feel for the air bubble inside the sealed wrapper -- if there is none, the packaging may be compromised.' },
+      2: { title: 'Open carefully', content: 'Tear gently along the notched edge. Never use scissors, teeth, or fingernails -- these can nick the condom. Do not rush. The condom should be handled only once removed from the packaging.' },
+      3: { title: 'Squeeze the tip', content: 'Pinch the tip (reservoir end) to remove air before rolling down. This creates space for semen collection. Leaving air in the tip creates pressure that can cause the condom to burst during use.' },
+      4: { title: 'Roll fully down', content: 'While still pinching the tip, roll the condom all the way down to the base of the erect penis. If it won\'t unroll, it may be inside-out -- discard and use a new one (it may have already contacted pre-ejaculate). Never try to roll a condom back up and reuse it.' },
+      5: { title: 'During intercourse', content: 'Check periodically that the condom has not slipped. Use water-based or silicone-based lubricant on the outside of the condom to reduce friction and decrease breakage risk. Never use oil-based products (coconut oil, vaseline, body lotion) -- these degrade latex and dramatically increase breakage risk. Use a new condom for every act, including oral, vaginal, and anal sex.' },
+      6: { title: 'After -- withdraw and dispose', content: 'Withdraw while the penis is still erect, holding the base of the condom firmly to prevent slippage. Do not wait until the erection subsides. Tie the condom and dispose of it in a bin -- never flush condoms as they block plumbing and harm aquatic life. Wash hands after.' },
+      7: { title: 'Common mistakes that reduce effectiveness', content: 'The most frequent errors: (1) Putting the condom on inside-out and flipping it -- discard and use a new one. (2) Not leaving space at the tip. (3) Using oil-based lubricant. (4) Storing in a wallet or hot car. (5) Using an expired condom. (6) Double-condomming -- two condoms create friction that increases breakage risk. (7) Not checking the expiry date. (8) Putting the condom on too late (after contact has occurred). (9) Wrong size -- too tight increases breakage risk; too loose increases slippage risk.' }
+    };
+
+    function showCondomStep(n) {
+      const s = condomSteps[n];
+      document.querySelectorAll('[onclick^="showCondomStep"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showCondomStep(${n})"]`).classList.add('active');
+      document.getElementById('condom-steps-display').innerHTML = `<strong style="color:var(--color-text-primary);display:block;margin-bottom:6px;">Step ${n}: ${s.title}</strong>${s.content}`;
+    }
+
+    /* ============================================================
+       SAFE SEX: CONTRACEPTIVE METHOD DEEP DIVES
+       ============================================================ */
+    const contraData = {
+      'pill-combined': {
+        name: 'Combined oral contraceptive pill (COCP)',
+        badges: [{ label: '99.7% perfect / 91% typical', type: 'p-blue' }, { label: 'Rx required', type: 'p-amber' }],
+        how: 'Contains synthetic oestrogen and progestogen. Works by suppressing ovulation, thickening cervical mucus, and thinning the uterine lining. Taken daily (usually 21 active + 7 placebo, or continuously).',
+        consider: 'Not suitable for people with a history of blood clots, certain migraines with aura, high blood pressure, or who smoke over 35. May interact with some antibiotics (rifampicin specifically) and enzyme-inducing drugs. Requires daily adherence at roughly the same time. Common side effects: nausea, breast tenderness, mood changes -- often improve after 2-3 months.',
+        benefits: 'Reduces menstrual cramps, lighter periods, and may improve acne. Reduces risk of ovarian and endometrial cancer with long-term use. Periods return quickly after stopping.',
+        sti: false
+      },
+      'pill-mini': {
+        name: 'Progestogen-only pill (mini-pill)',
+        badges: [{ label: '99.7% perfect / 91% typical', type: 'p-blue' }, { label: 'Rx required', type: 'p-amber' }],
+        how: 'Contains only progestogen (no oestrogen). Works primarily by thickening cervical mucus (some formulations also suppress ovulation). Must be taken within a 3-hour window each day (traditional formulations) or 12-hour window (desogestrel formulations).',
+        consider: 'Suitable for people who cannot use oestrogen -- breastfeeding, history of clots, migraines with aura, or who smoke over 35. Irregular bleeding or spotting is common, particularly in the first few months.',
+        benefits: 'Can reduce or eliminate periods. Safe during breastfeeding. Returns to normal fertility quickly after stopping.',
+        sti: false
+      },
+      'patch': {
+        name: 'Contraceptive patch (e.g., Xulane, Evra)',
+        badges: [{ label: '99.7% perfect / 91% typical', type: 'p-blue' }, { label: 'Weekly change', type: 'p-teal' }],
+        how: 'A sticky patch worn on the skin (abdomen, back, upper arm, or buttocks) that releases oestrogen and progestogen through the skin. Changed weekly for 3 weeks, then a 7-day patch-free week (withdrawal bleed).',
+        consider: 'Less effective in people over 90 kg (body weight affects absorption). Can cause skin irritation at the site. Visible on the body -- may be a consideration for some people. Same contraindications as the combined pill.',
+        benefits: 'No need for daily pill-taking. Good for people who find daily adherence difficult. Same hormones as combined pill with similar side effects and benefits.',
+        sti: false
+      },
+      'ring': {
+        name: 'Vaginal ring (NuvaRing, Annovera)',
+        badges: [{ label: '99.7% perfect / 91% typical', type: 'p-blue' }, { label: 'Monthly or annual', type: 'p-teal' }],
+        how: 'A flexible ring inserted into the vagina, where it releases oestrogen and progestogen locally and into the bloodstream. NuvaRing: inserted for 3 weeks, removed for 1 week. Annovera: inserted for 21 days at a time, reused for up to a year (13 cycles total).',
+        consider: 'Same hormonal contraindications as combined pill. Some people feel uncomfortable inserting or removing it. Partners may feel the ring during intercourse (it can be removed for up to 3 hours without reducing efficacy for NuvaRing).',
+        benefits: 'Lower systemic hormone dose than the pill (local delivery). Monthly or annual cadence reduces daily attention. Predictable withdrawal bleed during ring-free week.',
+        sti: false
+      },
+      'injection': {
+        name: 'Injectable contraceptive (Depo-Provera / DMPA)',
+        badges: [{ label: '99.8% perfect / 94% typical', type: 'p-blue' }, { label: 'Every 12 weeks', type: 'p-teal' }],
+        how: 'A progestogen (medroxyprogesterone acetate) injection given every 12 weeks. Suppresses ovulation and thickens cervical mucus. Given by a healthcare provider (intramuscular) or self-administered subcutaneously at home in some settings.',
+        consider: 'Fertility return can be delayed significantly -- median 10 months after last injection (range: 4-31 months). Not ideal for those wanting to conceive in the near term. May cause irregular bleeding or no periods. Associated with temporary reduction in bone mineral density with prolonged use (recovers after stopping). Not recommended for long-term use in adolescents still building bone density.',
+        benefits: 'Highly discreet -- no visible devices, no daily actions. Reduces or eliminates periods in many users. Useful for those who cannot take oestrogen.',
+        sti: false
+      },
+      'implant': {
+        name: 'Hormonal implant (Nexplanon)',
+        badges: [{ label: '99.95% -- most effective reversible method', type: 'p-green' }, { label: '3 years', type: 'p-teal' }],
+        how: 'A flexible rod (4 cm) inserted under the skin of the upper arm by a healthcare provider under local anaesthetic. Releases etonogestrel (progestogen) continuously, primarily suppressing ovulation. Active for 3 years (approved for up to 5 years in some countries).',
+        consider: 'Irregular bleeding is the most common side effect and reason for removal -- bleeding patterns change unpredictably. Some people have no periods; others have more frequent or prolonged bleeding. A small scar at the insertion site. Removal requires a provider.',
+        benefits: 'Set-and-forget. Fertility returns within weeks of removal. No daily, weekly, or monthly actions. Among the most effective contraceptive methods available.',
+        sti: false
+      },
+      'iud-hormonal': {
+        name: 'Hormonal IUD (Mirena, Kyleena, Liletta)',
+        badges: [{ label: '99.8%+ -- near-perfect efficacy', type: 'p-green' }, { label: '3-8 years', type: 'p-teal' }],
+        how: 'A T-shaped device inserted into the uterus by a healthcare provider. Releases levonorgestrel (progestogen) locally. Works primarily by thickening cervical mucus and thinning the uterine lining. Mirena: 8 years; Kyleena/Liletta: 3-5 years.',
+        consider: 'Insertion can be painful (cramping during and after) -- pain management options should be discussed with the provider. Not suitable for people with uterine abnormalities, unexplained vaginal bleeding, or certain infections. Rare risk of expulsion or perforation during insertion (~1 in 1,000).',
+        benefits: 'Highly effective. Often reduces or eliminates periods -- significant quality-of-life improvement for those with heavy or painful periods. Fertility returns quickly after removal. Non-daily management.',
+        sti: false
+      },
+      'iud-copper': {
+        name: 'Copper IUD (Paragard) -- non-hormonal',
+        badges: [{ label: '99.2%+ efficacy', type: 'p-green' }, { label: '10-12 years (or emergency use)', type: 'p-teal' }],
+        how: 'A T-shaped copper device inserted into the uterus. Copper ions are spermicidal and toxic to eggs. Works without hormones. Also the most effective emergency contraceptive when inserted within 5 days of unprotected sex.',
+        consider: 'May cause heavier, longer, and more painful periods -- particularly in the first 3-6 months. This is the most common reason for removal. Same insertion risks as hormonal IUD.',
+        benefits: 'No hormones -- suitable for those who cannot use or prefer to avoid hormonal contraception. Immediately effective. Can be used as ongoing contraception for a decade or more. The only highly effective non-hormonal reversible method.',
+        sti: false
+      }
+    };
+
+    function showContra(key) {
+      const c = contraData[key];
+      document.querySelectorAll('[onclick^="showContra"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showContra('${key}')"]`).classList.add('active');
+      const badgesHtml = c.badges.map(b => `<span class="pill ${b.type}" style="margin-right:4px;">${b.label}</span>`).join('');
+      const stiNote = c.sti
+        ? `<div class="info-block" style="margin-top:8px;margin-bottom:0;font-size:12px;">Also provides STI protection.</div>`
+        : `<div class="warning-block" style="margin-top:8px;margin-bottom:0;font-size:12px;">Does not protect against STIs. Use condoms with new or non-exclusive partners.</div>`;
+      document.getElementById('contra-display').innerHTML = `
+        <div style="margin-bottom:8px;">${badgesHtml}</div>
+        <div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:10px;">${c.name}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+          <div class="sub-card"><div class="detail-label-spaced">How it works</div><div style="font-size:12px;color:var(--color-text-primary);line-height:1.6;">${c.how}</div></div>
+          <div class="sub-card"><div class="detail-label-spaced">What to consider</div><div style="font-size:12px;color:var(--color-text-primary);line-height:1.6;">${c.consider}</div></div>
+        </div>
+        <div class="sub-card" style="margin-bottom:8px;"><div class="detail-label-spaced">Benefits and extra effects</div><div style="font-size:12px;color:var(--color-text-primary);line-height:1.6;">${c.benefits}</div></div>
+        ${stiNote}`;
+    }
+
+    /* ============================================================
+       SAFE SEX: STI EXPLORER
+       ============================================================ */
+    const stiData = {
+      chlamydia: {
+        name: 'Chlamydia', type: 'curable', agent: 'Bacterial (Chlamydia trachomatis)',
+        transmission: 'Vaginal, anal, and oral sex. Mother to baby during childbirth.',
+        symptoms: 'Often asymptomatic (70-80% of cases). When present: unusual discharge, burning urination, pelvic pain, testicular pain.',
+        testing: 'Urine sample or swab (vaginal, cervical, rectal, throat depending on sexual practices). Can be self-collected.',
+        treatment: 'Antibiotics (azithromycin single dose or doxycycline 7-day course). Partners should be tested and treated simultaneously.',
+        prevention: 'Condoms significantly reduce risk. Regular testing essential as most cases are asymptomatic.'
+      },
+      gonorrhoea: {
+        name: 'Gonorrhoea', type: 'curable', agent: 'Bacterial (Neisseria gonorrhoeae)',
+        transmission: 'Vaginal, anal, and oral sex. Mother to baby during childbirth.',
+        symptoms: 'Often asymptomatic, especially in vulva-owners. When present: discharge (yellow/green), pain urinating, rectal symptoms. Throat infections usually asymptomatic.',
+        testing: 'Swab or urine. Testing all sites of sexual exposure is important (throat, rectum, genitals) -- gonorrhoea at different sites requires different considerations.',
+        treatment: 'Dual antibiotic therapy (ceftriaxone + azithromycin) due to rising antibiotic resistance. Antibiotic-resistant gonorrhoea is a major public health concern.',
+        prevention: 'Condoms. Regular testing, especially for people with multiple partners.'
+      },
+      syphilis: {
+        name: 'Syphilis', type: 'curable', agent: 'Bacterial (Treponema pallidum)',
+        transmission: 'Skin and mucous membrane contact with sores (chancres). Vaginal, anal, oral sex. Mother to baby (congenital syphilis).',
+        symptoms: 'Stages: Primary (painless sore), Secondary (rash, flu-like illness), Latent (asymptomatic), Tertiary (serious organ damage). The painless primary sore means many people are unaware they have it.',
+        testing: 'Blood test. Often included in routine sexual health screen.',
+        treatment: 'Penicillin injection. Highly effective if caught early. Later stages require longer treatment.',
+        prevention: 'Condoms reduce but do not eliminate risk (sores can be in areas not covered by condoms). Regular testing, especially for MSM (men who have sex with men) where rates have risen significantly since 2010.'
+      },
+      herpes: {
+        name: 'Herpes (HSV-1 and HSV-2)', type: 'manageable', agent: 'Viral (Herpes simplex virus)',
+        transmission: 'Skin-to-skin contact with affected areas. Genital herpes (usually HSV-2) via genital contact; oral herpes (usually HSV-1) via kissing or oral sex.',
+        symptoms: 'Many people have no symptoms or very mild ones. When present: blisters, ulcers, or sores on genitals, mouth, or anus. First outbreak tends to be most severe. Virus remains dormant in nerve tissue and can reactivate.',
+        testing: 'Swab of active lesion for diagnosis. Blood antibody tests exist but not routinely included in standard screens due to high prevalence and limited clinical utility.',
+        treatment: 'No cure. Antiviral medication (aciclovir, valaciclovir) reduces frequency and severity of outbreaks and reduces transmission risk (by ~50%). Daily suppressive therapy is available.',
+        prevention: 'Condoms reduce but do not eliminate risk (skin outside covered area can transmit). Dental dams for oral sex. Avoid sexual contact during outbreaks. Suppressive antivirals in regular partners. Disclosure is ethically important.'
+      },
+      hpv: {
+        name: 'HPV (Human Papillomavirus)', type: 'manageable', agent: 'Viral (over 200 strains)',
+        transmission: 'Skin-to-skin genital contact. Does not require penetrative sex. Most sexually active people will have HPV at some point.',
+        symptoms: 'Most infections are asymptomatic and clear spontaneously within 2 years. Some strains cause genital warts (low-risk strains). Other strains (high-risk: 16, 18) cause cervical, anal, oropharyngeal, penile, vulvar cancers.',
+        testing: 'HPV testing in conjunction with cervical smears (Pap tests). No HPV test available for penis-owners.',
+        treatment: 'No treatment for the virus itself. Genital warts can be treated. Cervical pre-cancerous changes detected via screening can be treated.',
+        prevention: 'HPV vaccine (Gardasil 9) prevents infection from the 9 highest-risk strains. Highly effective if given before sexual debut. Condoms reduce but do not eliminate risk. Cervical screening is the key secondary prevention measure.'
+      },
+      hiv: {
+        name: 'HIV (Human Immunodeficiency Virus)', type: 'manageable', agent: 'Viral (retrovirus)',
+        transmission: 'Blood, semen, vaginal fluids, rectal fluids, breast milk. Main routes: unprotected anal and vaginal sex, sharing needles, mother to child. Risk is highest for receptive anal sex.',
+        symptoms: 'Primary infection: flu-like illness 2-4 weeks after exposure (not always present). Then often asymptomatic for years. Without treatment, progresses to AIDS (immunodeficiency) over 10+ years.',
+        testing: 'Blood test (antibody/antigen). Window period: most tests detect infection by 4-6 weeks; definitive result at 3 months. Rapid/home tests available.',
+        treatment: 'Antiretroviral therapy (ART) is highly effective. People on effective treatment with undetectable viral load cannot transmit HIV sexually -- "Undetectable = Untransmittable" (U=U), confirmed by PARTNER studies. Life expectancy approaches normal with treatment.',
+        prevention: 'Condoms. PrEP for HIV-negative people at risk. PEP after potential exposure. Testing and treatment of all people with HIV (U=U). Not sharing needles.'
+      },
+      hep: {
+        name: 'Hepatitis B and C', type: 'manageable', agent: 'Viral (HBV and HCV)',
+        transmission: 'Hepatitis B: blood, semen, and vaginal fluids -- sexually transmitted and via shared needles. Hepatitis C: primarily blood-to-blood (sharing needles); sexual transmission is less efficient but possible, especially with anal sex and blood present.',
+        symptoms: 'Both can be asymptomatic for years while damaging the liver. Acute infection may cause jaundice, fatigue, abdominal pain. Chronic infection leads to cirrhosis and liver cancer.',
+        testing: 'Blood test for both. Included in comprehensive sexual health screens.',
+        treatment: 'Hepatitis B: no cure but highly effective antivirals manage chronic infection. Hepatitis C: curable with direct-acting antivirals (cure rates >95%) in 8-12 weeks.',
+        prevention: 'Hepatitis B: vaccine (standard childhood immunisation -- highly effective). Hepatitis C: no vaccine. Condoms reduce but do not eliminate risk. No sharing of needles or any blood-contaminated equipment.'
+      },
+      trich: {
+        name: 'Trichomoniasis', type: 'curable', agent: 'Parasitic (Trichomonas vaginalis)',
+        transmission: 'Genital-to-genital contact. Primarily vagina to vagina or penis to vagina. Less common via oral or anal sex.',
+        symptoms: 'About 70% of people have no symptoms. When present: frothy, foul-smelling vaginal discharge, itching, redness, burning urination. Often confused with bacterial vaginosis or yeast infection.',
+        testing: 'Vaginal swab or urine test. Not always included in standard STI screens -- request specifically if concerned.',
+        treatment: 'Single-dose antibiotic (metronidazole or tinidazole). Partners must be treated simultaneously or reinfection will occur.',
+        prevention: 'Condoms. Most commonly the most prevalent non-viral STI in the US (an estimated 3.7 million cases), yet rarely discussed.'
+      }
+    };
+
+    function showSTI(key) {
+      const s = stiData[key];
+      document.querySelectorAll('[onclick^="showSTI"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showSTI('${key}')"]`).classList.add('active');
+      const typeLabel = s.type === 'curable' ? 'Curable' : 'Manageable (not curable)';
+      const typeCls = s.type === 'curable' ? 'sti-badge-curable' : 'sti-badge-manageable';
+      document.getElementById('sti-display').innerHTML = `
+        <div style="margin-bottom:8px;">
+          <span class="sti-badge ${typeCls}">${typeLabel}</span>
+          <span class="sti-badge sti-badge-prevention" style="margin-left:4px;">${s.agent}</span>
+        </div>
+        <div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:10px;">${s.name}</div>
+        <div class="sti-row">
+          <div class="sti-cell"><div class="sti-cell-label">Transmission</div><div class="sti-cell-val">${s.transmission}</div></div>
+          <div class="sti-cell"><div class="sti-cell-label">Symptoms</div><div class="sti-cell-val">${s.symptoms}</div></div>
+          <div class="sti-cell"><div class="sti-cell-label">Testing</div><div class="sti-cell-val">${s.testing}</div></div>
+          <div class="sti-cell"><div class="sti-cell-label">Treatment</div><div class="sti-cell-val">${s.treatment}</div></div>
+          <div class="sti-cell"><div class="sti-cell-label">Prevention</div><div class="sti-cell-val">${s.prevention}</div></div>
+        </div>`;
+    }
+
+    /* ============================================================
+       SAFE SEX: MYTHS DEBUNKER
+       ============================================================ */
+    const mythData = {
+      'double-up': {
+        myth: 'Using two condoms gives double the protection',
+        verdict: 'FALSE -- and dangerous',
+        verdictType: 'p-red',
+        explain: 'Using two condoms simultaneously creates friction between the two latex surfaces, which dramatically increases the likelihood that both will break or tear. This is sometimes called "double-bagging." It reduces, not increases, protection. One correctly used condom is the right approach.'
+      },
+      'pill-sti': {
+        myth: 'The pill protects against STIs',
+        verdict: 'FALSE -- no STI protection at all',
+        verdictType: 'p-red',
+        explain: 'Hormonal contraceptives (pill, patch, ring, injection, implant, hormonal IUD) prevent pregnancy by affecting hormones and reproductive processes. They have no effect whatsoever on bacterial or viral transmission. They do nothing to prevent chlamydia, gonorrhoea, herpes, HIV, HPV, or any other STI. Condoms remain the only widely available method that addresses both.'
+      },
+      'withdrawal': {
+        myth: 'Withdrawal (pulling out) is not a real method',
+        verdict: 'PARTLY FALSE -- it works, but imperfectly',
+        verdictType: 'p-amber',
+        explain: 'With perfect use, withdrawal is ~96% effective at preventing pregnancy -- comparable to condoms with perfect use. The problem is typical use: ~78% effectiveness, because it requires complete withdrawal before any ejaculation, every time, and pre-ejaculate can carry sperm (particularly if the person has recently ejaculated). It is a legitimate method but more vulnerable to human error than others. It provides no STI protection.'
+      },
+      'first-time': {
+        myth: 'You cannot get pregnant or get an STI the first time',
+        verdict: 'FALSE -- completely false',
+        verdictType: 'p-red',
+        explain: 'Both pregnancy and STI transmission can and do occur on any first sexual encounter. There is nothing biologically special about "the first time" that prevents fertilisation or infection. This myth may originate from wishful thinking or misunderstood biology. Contraception and STI prevention are important from the very first sexual encounter.'
+      },
+      'same-sex-sti': {
+        myth: 'Same-sex couples cannot transmit STIs',
+        verdict: 'FALSE',
+        verdictType: 'p-red',
+        explain: 'STIs can be transmitted in all-female, all-male, and transgender relationships -- the specific risk profile differs but is not zero for any combination. HSV (herpes) and HPV transmit via skin contact. Chlamydia can be transmitted between vulva-owners via shared sex toys or digital contact. HIV and gonorrhoea are especially prevalent among men who have sex with men (MSM). Safe sex practices, testing, and appropriate protection (condoms, dental dams, gloves) are relevant across all sexual combinations.'
+      },
+      'condom-fail': {
+        myth: 'Condoms fail too often to be worth using',
+        verdict: 'FALSE -- typical-use failure is largely preventable',
+        verdictType: 'p-red',
+        explain: 'The typical-use failure rate of ~13% for condoms as contraceptives is almost entirely attributable to incorrect or inconsistent use -- not to manufacturing defects. When used correctly every time, the failure rate drops to ~2%. The gap between perfect and typical use is a measure of how often condoms are used incorrectly or not used at all in a given encounter. Condoms are highly effective when used properly.'
+      },
+      'looks': {
+        myth: 'You can tell if someone has an STI by looking at them',
+        verdict: 'FALSE -- most STIs are visually undetectable',
+        verdictType: 'p-red',
+        explain: 'The majority of common STIs (chlamydia, gonorrhoea, HIV, HPV, herpes between outbreaks) cause no visible symptoms in the majority of people who carry them. Someone can have an active STI and appear completely healthy. The only way to know someone\'s STI status is through testing. Making assumptions based on appearance, attractiveness, perceived lifestyle, or relationship history is both factually wrong and a major driver of ongoing STI transmission.'
+      },
+      'oil': {
+        myth: 'Any lubricant can be used with condoms',
+        verdict: 'FALSE -- oil-based products destroy latex condoms',
+        verdictType: 'p-red',
+        explain: 'Oil-based lubricants (coconut oil, baby oil, vaseline, body lotion, butter, cooking oil) degrade latex and polyisoprene condoms very rapidly -- significantly increasing breakage risk. Only water-based or silicone-based lubricants should be used with latex or polyisoprene condoms. Polyurethane condoms (less common) are compatible with all lubricants. This is a particularly common error that people are often unaware of.'
+      }
+    };
+
+    function showMyth(key) {
+      const m = mythData[key];
+      document.querySelectorAll('[onclick^="showMyth"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showMyth('${key}')"]`).classList.add('active');
+      document.getElementById('myth-display').innerHTML = `
+        <div style="margin-bottom:8px;"><span class="pill ${m.verdictType}">${m.verdict}</span></div>
+        <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;font-style:italic;">"${m.myth}"</div>
+        <div style="font-size:13px;color:var(--color-text-primary);line-height:1.65;">${m.explain}</div>`;
+    }
+
+    showMethod('barrier');
+    showContra('pill-combined');
+    showCondomStep(1);
+    showSTI('chlamydia');
+    showMyth('double-up');
+
+    /* ============================================================
+       MENSTRUATION: CYCLE PHASE EXPLORER
+       ============================================================ */
+    const phaseData = {
+      menstrual: {
+        name: 'Menstrual phase — days 1 to 5 (roughly)',
+        pill: 'p-red',
+        pillLabel: 'Bleeding phase',
+        hormones: 'Oestrogen and progesterone are at their lowest. The drop in progesterone is what triggers the lining to shed in the first place.',
+        body: 'The uterine lining detaches and leaves the body as menstrual flow. The first 1–2 days are typically heaviest. Cramping is caused by prostaglandins making the uterus contract to expel the lining; higher prostaglandin levels mean more pain.',
+        feel: 'Many people report low energy and sensitivity early in this phase, followed by relief and clarity as it ends. Iron levels can dip slightly with heavy flow, contributing to tiredness. Cravings, mild bloating, and headaches are common.',
+        note: 'Day 1 of a cycle is the first day of full bleeding (spotting does not count). Counting from this day is how clinicians track cycle length and timing.'
+      },
+      follicular: {
+        name: 'Follicular phase — days 1 to 13 (overlaps with menstrual phase)',
+        pill: 'p-teal',
+        pillLabel: 'Building phase',
+        hormones: 'FSH (follicle-stimulating hormone) rises from the pituitary, stimulating ovarian follicles. Oestrogen climbs steadily as a dominant follicle develops. Progesterone stays low.',
+        body: 'Multiple follicles in the ovaries begin to mature; one (occasionally two) becomes dominant. Oestrogen rebuilds and thickens the endometrium in preparation for possible implantation. Cervical mucus becomes increasingly clear, stretchy, and slippery (egg-white consistency) as ovulation approaches, a useful fertility sign.',
+        feel: 'Often the phase of highest energy, mood, libido, and cognitive sharpness for many. Skin tends to look its best. Confidence and sociability often peak.',
+        note: 'The follicular phase varies most in length between individuals and cycles. People with longer total cycles usually have longer follicular phases; the luteal phase stays more fixed.'
+      },
+      ovulation: {
+        name: 'Ovulation — around day 14',
+        pill: 'p-amber',
+        pillLabel: 'Release phase',
+        hormones: 'A sharp surge in LH (luteinising hormone), triggered by peak oestrogen, causes the dominant follicle to rupture and release its egg. This is the LH surge that ovulation prediction kits detect.',
+        body: 'The egg is released from the ovary and is viable for fertilisation for roughly 12–24 hours. Sperm can survive in the reproductive tract for up to 5 days, so the fertile window stretches from about 5 days before to 1 day after ovulation. Some people feel a one-sided twinge (mittelschmerz). Basal body temperature rises slightly after ovulation and stays elevated through the luteal phase.',
+        feel: 'Libido often peaks around this time, an evolutionary cue. Mood, energy, and confidence are often still high. Some experience light spotting or breast tenderness.',
+        note: 'In a regular 28-day cycle, ovulation is around day 14. In shorter or longer cycles, it shifts. Ovulation is typically about 14 days before the next period, not 14 days after the last one began.'
+      },
+      luteal: {
+        name: 'Luteal phase — days 15 to 28 (roughly)',
+        pill: 'p-purple',
+        pillLabel: 'Waiting phase',
+        hormones: 'The ruptured follicle becomes the <em>corpus luteum</em>, which produces progesterone (and some oestrogen). Progesterone dominates this phase. If no pregnancy occurs, the corpus luteum regresses around day 26–28 and progesterone collapses, triggering the next period.',
+        body: 'Progesterone maintains the thickened uterine lining and prepares it for possible implantation. Basal body temperature stays elevated. Breasts may feel fuller and tender. Bloating is common as progesterone slows gut motility and causes water retention.',
+        feel: 'Energy often gradually declines. Mood can become more reactive, anxious, or low in the second half (premenstrual symptoms). Sleep can fragment. Cravings, particularly for carbohydrates and chocolate, are common.',
+        note: 'PMS and PMDD symptoms cluster in the second half of this phase. They are caused not by abnormal hormone levels but by individual sensitivity to normal hormonal fluctuations, which is why the same hormones affect people very differently.'
+      }
+    };
+
+    function showPhase(key) {
+      const p = phaseData[key];
+      document.querySelectorAll('[onclick^="showPhase"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showPhase('${key}')"]`).classList.add('active');
+      document.getElementById('phase-display').innerHTML = `
+        <div style="margin-bottom:8px;"><span class="pill ${p.pill}">${p.pillLabel}</span></div>
+        <div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:10px;">${p.name}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+          <div class="sub-card"><div class="detail-label-spaced">Hormonally</div><div style="font-size:12px;color:var(--color-text-primary);line-height:1.6;">${p.hormones}</div></div>
+          <div class="sub-card"><div class="detail-label-spaced">In the body</div><div style="font-size:12px;color:var(--color-text-primary);line-height:1.6;">${p.body}</div></div>
+        </div>
+        <div class="sub-card" style="margin-bottom:8px;"><div class="detail-label-spaced">How it tends to feel</div><div style="font-size:12px;color:var(--color-text-primary);line-height:1.6;">${p.feel}</div></div>
+        <div class="info-block" style="margin-top:8px;margin-bottom:0;font-size:12px;">${p.note}</div>`;
+    }
+
+    /* ============================================================
+       MENSTRUATION: SYMPTOMS EXPLORER
+       ============================================================ */
+    const symptomData = {
+      cramps: {
+        title: 'Cramps (dysmenorrhoea)',
+        content: 'Caused by prostaglandins, hormone-like compounds that make the uterus contract to expel the lining. Higher prostaglandin levels mean stronger, more painful contractions. Primary dysmenorrhoea is pain from this normal mechanism, typically peaking in the first 1–2 days of flow. Secondary dysmenorrhoea is pain from an underlying condition: endometriosis (around 10% of people with a uterus), adenomyosis, fibroids, or pelvic inflammatory disease. <strong>What helps:</strong> NSAIDs (ibuprofen, naproxen) work better than paracetamol because they directly reduce prostaglandins, and they are most effective when started at the first sign of cramps rather than after pain is established. Heat (hot water bottle, warm bath), gentle exercise, and orgasm all reduce cramps. Hormonal contraception can largely eliminate them. <strong>Red flag:</strong> Pain severe enough to miss school or work, pain that worsens over years, pain with sex, or pain unresponsive to NSAIDs warrants investigation. Endometriosis takes an average of 7–10 years to diagnose; pushing back against "period pain is normal" framing matters.'
+      },
+      flow: {
+        title: 'Flow patterns',
+        content: '<strong>Normal range:</strong> 30–80 ml total per period, lasting 3–7 days. People typically overestimate their flow. A standard tampon holds about 5 ml when fully saturated; a super tampon about 12 ml; a menstrual cup typically 20–30 ml. <strong>Heavy menstrual bleeding (menorrhagia):</strong> consistently over 80 ml, or soaking through a pad or tampon every 1–2 hours, or passing clots larger than a 10-cent coin. Causes include fibroids, adenomyosis, copper IUDs, thyroid disorders, bleeding disorders (von Willebrand disease is under-diagnosed in menstruating people), and hormonal imbalances. Can cause iron-deficiency anaemia. <strong>Light flow:</strong> very light periods can be normal for some people, but a sudden reduction warrants investigation. Hormonal contraception, perimenopause, weight changes, PCOS, and stress can all cause it. <strong>Spotting between periods:</strong> occasional spotting is usually benign (often around ovulation), but persistent intermenstrual bleeding should be evaluated.'
+      },
+      mood: {
+        title: 'Mood and cognition',
+        content: 'Mood and cognitive shifts across the cycle are biologically real, though their magnitude varies enormously between individuals. <strong>Follicular phase:</strong> rising oestrogen is associated for many with improved mood, energy, confidence, and verbal fluency. <strong>Around ovulation:</strong> often peak mood and libido. <strong>Luteal phase:</strong> progesterone has anxiolytic effects early in the phase via the GABA system, but the late luteal drop in progesterone and oestrogen is associated with irritability, low mood, anxiety, and reduced stress tolerance for many. <strong>Important context:</strong> the research is not as clean as cycle-tracking apps imply. Studies that follow people prospectively find that around 75% experience some premenstrual mood change, but the pattern and severity differ enormously. Existing mood disorders (depression, anxiety, bipolar disorder) can worsen premenstrually, sometimes called premenstrual exacerbation. Hormonal contraception, by suppressing the cyclical swing, can stabilise mood for some and worsen it for others. Tracking is the only reliable way to know your own pattern.'
+      },
+      breast: {
+        title: 'Breast changes',
+        content: '<strong>Cyclical tenderness (cyclical mastalgia):</strong> breast fullness, soreness, and lumpy texture in the luteal phase, driven by progesterone and water retention. Affects most menstruating people to some degree. Resolves with the start of the next period. <strong>Management:</strong> well-fitting bras (often a size up in the luteal phase), reduced caffeine, evening primrose oil (mixed evidence but commonly tried), NSAIDs for severe pain. <strong>Lumps:</strong> cyclical lumpiness (fibrocystic breast changes) is common and benign. A lump that does not change with the cycle, is hard, fixed, or accompanied by skin or nipple changes, warrants prompt clinical evaluation. Self-examination is best done in the first week after a period when tissue is least lumpy and tender, making any persistent abnormality easier to detect.'
+      },
+      gut: {
+        title: 'Gut and digestion',
+        content: 'Hormones interact extensively with the gut. <strong>Around the period:</strong> rising prostaglandins (the same compounds that cause uterine cramps) also affect the bowel, often causing looser stools, increased bowel frequency, or genuine diarrhoea on day 1–2 of bleeding. This is so common it has a nickname (period poops) but is rarely discussed clinically. <strong>Luteal phase:</strong> progesterone slows gut motility, often causing bloating, constipation, and water retention in the days before a period. The bloating is real and measurable: abdominal circumference can increase by several centimetres. <strong>People with IBS:</strong> tend to experience marked worsening of symptoms perimenstrually. <strong>People with inflammatory bowel disease:</strong> often have cycle-linked flares. <strong>What helps:</strong> hydration, fibre, magnesium, regular meals, reduced caffeine and alcohol in the luteal phase. The bloating resolves on its own once the period starts.'
+      },
+      skin: {
+        title: 'Skin and hair',
+        content: '<strong>Premenstrual acne:</strong> the late luteal drop in oestrogen leaves androgens (testosterone) relatively unopposed, increasing sebum production. Breakouts typically appear on the chin, jaw, and around the mouth in the week before a period. <strong>Mid-cycle glow:</strong> peak oestrogen in the follicular phase is associated with brighter, more hydrated skin and often a notable improvement in complexion, the so-called ovulation glow. <strong>Hair:</strong> oestrogen prolongs the hair growth phase, so hair can feel thicker and shinier mid-cycle and shed slightly more in the late luteal phase. <strong>Skin sensitivity:</strong> skin is most reactive premenstrually; patch-test new products earlier in the cycle. <strong>Hormonal acne treatment:</strong> combined hormonal contraception (especially with anti-androgenic progestins like drospirenone) often dramatically improves cyclical acne. Spironolactone is another effective option for adults.'
+      },
+      sleep: {
+        title: 'Sleep and energy',
+        content: '<strong>Body temperature:</strong> rises by 0.3–0.5°C after ovulation and stays elevated through the luteal phase, which can disrupt sleep, particularly the deep stages. <strong>Premenstrual insomnia:</strong> common in the days before a period. Falling asleep is fine; staying asleep is harder. The progesterone drop appears to play a role. <strong>Energy:</strong> typically highest in the follicular phase, peaking around ovulation, then declining through the luteal phase. Many athletes and high-performers schedule demanding work and training accordingly when they can. <strong>Iron and fatigue:</strong> heavy bleeding can cause iron-deficiency anaemia, manifesting as fatigue, breathlessness, and pallor. A blood test (ferritin and full blood count) is straightforward and worth requesting if energy has dropped persistently. <strong>What helps:</strong> consistent sleep schedule, cool bedroom in the luteal phase, magnesium (modest evidence), reducing caffeine and alcohol in the late luteal phase.'
+      },
+      warning: {
+        title: 'Warning signs — when to see a clinician',
+        content: 'Most period experiences are within the normal range, but several patterns deserve clinical attention rather than endurance. <strong>Pain:</strong> severe enough to require missing school, work, or activities; not responsive to NSAIDs taken correctly; getting progressively worse year on year; pain with sex; pain with bowel movements during periods. Possible causes: endometriosis, adenomyosis, fibroids, PID. <strong>Bleeding:</strong> soaking through a pad or tampon every hour for several hours; periods lasting more than 7 days; large clots (golf ball or larger) repeatedly; bleeding between periods; bleeding after sex; bleeding after menopause. <strong>Absence:</strong> no period for 3+ months outside of pregnancy, breastfeeding, or known cause. <strong>Mood:</strong> mood symptoms that affect work, relationships, or safety. PMDD is treatable. <strong>Symptoms suggesting anaemia:</strong> persistent fatigue, breathlessness, dizziness, pale skin. <strong>The wider point:</strong> medicine has historically under-investigated menstrual symptoms. If you feel dismissed, ask for a referral to a gynaecologist, request a transvaginal ultrasound, or seek a second opinion. Endometriosis, adenomyosis, and PCOS together affect well over 15% of people with a uterus and are routinely diagnosed late.'
+      }
+    };
+
+    function showSymptom(key) {
+      const s = symptomData[key];
+      document.querySelectorAll('[onclick^="showSymptom"]').forEach(b => b.classList.remove('active'));
+      document.querySelector(`[onclick="showSymptom('${key}')"]`).classList.add('active');
+      document.getElementById('symptom-display').innerHTML = `
+        <strong style="color:var(--color-text-primary); display:block; margin-bottom:8px; font-size:14px;">${s.title}</strong>
+        <div style="font-size:13px;color:var(--color-text-primary);line-height:1.65;">${s.content}</div>`;
+    }
+
+    showPhase('menstrual');
+    showSymptom('cramps');
+
+    /* ============================================================
+       INIT: show defaults
+       ============================================================ */
+    showGender('cisgender');
+    showOrient('heterosexual');
+  
+</script>

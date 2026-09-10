@@ -1,0 +1,311 @@
+
+    :root {
+      --accent: #27A04A;
+      --accent-bg: #EAF3DE;
+      --accent-border: #97C459;
+      --accent-dark: #1A7A35;
+      --football-bg: #EAF3DE;
+      --football-border: #97C459;
+      --football-text: #27500A;
+    }
+
+    /* ── Football section headers ── */
+    .sec-football {
+      margin: 2rem 0 0.6rem;
+      font-size: 11px; font-weight: 600;
+      color: var(--football-text);
+      letter-spacing: 0.07em; text-transform: uppercase;
+      border-bottom: 0.5px solid var(--football-border);
+      padding-bottom: 5px;
+    }
+
+    /* ── Explorer panel ── */
+    .explorer-btns {
+      display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px;
+    }
+    .explorer-btns button {
+      font-size: 12px; padding: 6px 14px;
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: 99px; cursor: pointer;
+      color: var(--color-text-secondary);
+      transition: all 0.15s;
+    }
+    .explorer-btns button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .explorer-panel {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-lg);
+      padding: 16px 18px; min-height: 90px;
+    }
+    .explorer-panel .ep-title {
+      font-size: 14px; font-weight: 700;
+      color: var(--color-text-primary); margin-bottom: 6px;
+    }
+    .explorer-panel .ep-body {
+      font-size: 13px; color: var(--color-text-secondary); line-height: 1.65;
+    }
+
+    /* ── Period / timeline chart ── */
+    .pc-wrap { margin: 1rem 0; }
+    .pc-row { display: flex; align-items: center; margin-bottom: 6px; gap: 10px; }
+    .pc-label { width: 130px; flex-shrink: 0; font-size: 11.5px; font-weight: 600; color: var(--color-text-secondary); text-align: right; }
+    .pc-track { flex: 1; background: var(--color-background-tertiary); border-radius: 4px; height: 22px; position: relative; }
+    .pc-fill { position: absolute; top: 0; height: 100%; border-radius: 4px; display: flex; align-items: center; padding: 0 8px; }
+    .pc-fill-label { font-size: 10.5px; font-weight: 600; color: #fff; white-space: nowrap; overflow: hidden; }
+    .pc-axis { display: flex; justify-content: space-between; margin-left: 140px; margin-top: 6px; }
+    .pc-axis-mark { font-size: 10px; color: var(--color-text-tertiary); }
+
+    /* ── Comparison scale (dot-on-track) ── */
+    .cscale-wrap { margin: 1rem 0; }
+    .cscale-poles { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: var(--color-text-tertiary); margin-bottom: 4px; }
+    .cscale-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .cscale-name { width: 150px; flex-shrink: 0; font-size: 12px; color: var(--color-text-secondary); text-align: right; }
+    .cscale-track { flex: 1; background: var(--color-background-tertiary); border-radius: 99px; height: 8px; position: relative; }
+    .cscale-dot { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 2px solid var(--color-background-primary); }
+
+    /* ── Elem card grid (multi-card explorer) ── */
+    .elem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+      gap: 8px; margin-bottom: 10px;
+    }
+    .elem-card {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 12px 10px; text-align: center;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .elem-card:hover { border-color: var(--accent); }
+    .elem-card.active { background: var(--accent-bg); border-color: var(--accent); }
+    .elem-card .ec-icon { font-size: 22px; margin-bottom: 5px; color: var(--accent); }
+    .elem-card .ec-label { font-size: 11.5px; font-weight: 600; color: var(--color-text-primary); }
+    .elem-detail {
+      display: none;
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--accent-border);
+      border-radius: var(--border-radius-lg);
+      padding: 15px 18px; margin-bottom: 10px;
+    }
+    .elem-detail .ed-title { font-size: 14px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 6px; }
+    .elem-detail .ed-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; }
+
+    /* ── Range slider ── */
+    .slider-wrap {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-lg);
+      padding: 18px 20px; margin-bottom: 10px;
+    }
+    .slider-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 6px; }
+    .slider-wrap input[type="range"] { width: 100%; accent-color: var(--accent); }
+    .slider-out { margin-top: 12px; background: var(--accent-bg); border: 0.5px solid var(--accent-border); border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 13px; color: var(--football-text); line-height: 1.55; }
+
+    /* ── Pie / distribution bar ── */
+    .distbar-track { display: flex; height: 32px; border-radius: var(--border-radius-md); overflow: hidden; margin-bottom: 10px; }
+    .distbar-track div { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; }
+    .distbar-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
+    .distbar-legend div { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-text-secondary); }
+    .distbar-legend span { display: inline-block; width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+    /* ── Calculator ── */
+    .calc-wrap {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-lg);
+      padding: 18px 20px; margin-bottom: 10px;
+    }
+    .calc-wrap label { font-size: 12px; font-weight: 600; color: var(--color-text-secondary); display: block; margin-bottom: 4px; }
+    .calc-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 12px; }
+    .calc-row > div { display: flex; flex-direction: column; flex: 1; min-width: 130px; }
+    .calc-out { background: var(--accent-bg); border: 0.5px solid var(--accent-border); border-radius: var(--border-radius-md); padding: 12px 15px; font-size: 13px; color: var(--football-text); line-height: 1.6; min-height: 44px; }
+
+    /* ── SVG Diagram ── */
+    .diagram-wrap {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-secondary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px; margin-bottom: 10px; overflow: hidden;
+    }
+    .diagram-wrap svg { width: 100%; height: auto; display: block; }
+
+    /* ── Football accent cards ── */
+    .card-football {
+      background: var(--football-bg);
+      border: 0.5px solid var(--football-border);
+      border-radius: var(--border-radius-lg);
+      padding: 16px 18px; margin-bottom: 10px;
+    }
+    .card-football .clabel { color: var(--football-text); }
+
+    /* ── Info / highlight boxes ── */
+    .info-box {
+      background: var(--color-background-info);
+      border: 0.5px solid var(--color-border-info);
+      border-radius: var(--border-radius-md);
+      padding: 12px 15px; margin-bottom: 10px;
+      font-size: 13px; color: var(--color-text-info); line-height: 1.6;
+    }
+    .warn-box {
+      background: var(--color-background-warning);
+      border: 0.5px solid var(--color-border-warning);
+      border-radius: var(--border-radius-md);
+      padding: 12px 15px; margin-bottom: 10px;
+      font-size: 13px; color: var(--color-text-warning); line-height: 1.6;
+    }
+    .success-box {
+      background: var(--color-background-success);
+      border: 0.5px solid var(--color-border-success);
+      border-radius: var(--border-radius-md);
+      padding: 12px 15px; margin-bottom: 10px;
+      font-size: 13px; color: var(--color-text-success); line-height: 1.6;
+    }
+
+    /* ── Bar chart responsive ── */
+    @media (max-width: 500px) {
+      .bl { width: 80px !important; }
+      .pc-label { width: 80px; font-size: 10px; }
+      .pc-axis { margin-left: 90px; }
+      .cscale-name { width: 90px; font-size: 11px; }
+    }
+
+    /* ── Football deep-dive banner ── */
+    .football-banner {
+      background: var(--football-bg);
+      border: 0.5px solid var(--football-border);
+      border-radius: var(--border-radius-lg);
+      padding: 11px 14px; margin-bottom: 1rem;
+      font-size: 12px; color: var(--football-text); line-height: 1.6;
+    }
+
+/* === Shared-ready extracted styles === */
+
+.module-header-icon-accent {
+  font-size:42px;
+  color:var(--accent);
+  flex-shrink:0;
+}
+
+.u-w-100pct {
+  width:100%;
+}
+
+/* === Module-specific extracted styles === */
+
+.sports-text-2 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin:0 0 14px;
+}
+
+.sports-text-3 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin:0 0 10px;
+}
+
+.sports-text-4 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin:0;
+}
+
+.sport-pop-chart {
+  margin:10px 0;
+}
+
+.sports-text-5 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin:6px 0 0;
+}
+
+.sports-text-6 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin:0 0 12px;
+}
+
+.cscale-dot-style {
+  left:5%;
+}
+
+.cscale-dot-style-2 {
+  left:12%;
+}
+
+.cscale-dot-style-3 {
+  left:40%;
+}
+
+.cscale-dot-style-4 {
+  left:55%;
+}
+
+.cscale-dot-style-5 {
+  left:65%;
+}
+
+.cscale-dot-style-6 {
+  left:93%;
+}
+
+.cscale-dot-style-7 {
+  left:98%;
+}
+
+.sports-media {
+  max-height:320px;
+}
+
+.sports-text-7 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin:10px 0 0;
+}
+
+.clabel-style-2 {
+  margin-top:14px;
+}
+
+.sports-text-8 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin:4px 0 0;
+}
+
+.xg-type {
+  width:100%;
+  padding:8px;
+  border-radius:var(--border-radius-md);
+  border:0.5px solid var(--color-border-secondary);
+  background:var(--color-background-primary);
+  color:var(--color-text-primary);
+}
+
+.sports-div-style {
+  align-self:flex-end;
+}
+
+.sports-text-9 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  margin:0 0 8px;
+}
+
+.sports-text-10 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin:4px 0 10px;
+}
+  

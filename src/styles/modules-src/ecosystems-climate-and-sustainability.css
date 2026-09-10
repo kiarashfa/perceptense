@@ -1,0 +1,78 @@
+
+/* === explorer tabs === */
+.eco-tab { font-size:11px; padding:3px 10px; }
+.eco-tab.active { background:var(--color-text-primary); color:var(--color-background-primary); border-color:var(--color-text-primary); }
+
+/* === biome grid cards === */
+.biome-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px,1fr)); gap:8px; margin-bottom:10px; }
+.biome-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 8px; text-align:center; cursor:pointer; border:1.5px solid transparent; transition:border-color 0.12s; }
+.biome-card:hover { border-color:var(--color-border-secondary); }
+.biome-card.active { border-color:var(--color-text-primary); }
+.biome-icon { font-size:22px; margin-bottom:4px; }
+.biome-label { font-size:11px; font-weight:500; color:var(--color-text-primary); line-height:1.3; }
+
+/* === cycle diagram colours === */
+.cycle-node { fill:var(--color-background-secondary); stroke:var(--color-border-secondary); stroke-width:1; }
+.cycle-text { font-size:10px; fill:var(--color-text-primary); font-family:var(--font-sans); }
+.cycle-arrow { fill:var(--color-text-secondary); }
+.cycle-path { stroke:var(--color-text-secondary); stroke-width:1.5; fill:none; marker-end:url(#arr); }
+.cycle-path-green { stroke:#1D9E75; stroke-width:1.5; fill:none; marker-end:url(#arr-green); }
+.cycle-path-blue  { stroke:#185FA5; stroke-width:1.5; fill:none; marker-end:url(#arr-blue); }
+.cycle-path-red   { stroke:#993C1D; stroke-width:1.5; fill:none; marker-end:url(#arr-red); }
+
+/* === comparison scale track === */
+.scale-track { position:relative; height:12px; background:var(--color-background-secondary); border-radius:6px; margin:18px 0 28px; }
+.scale-dot { position:absolute; top:50%; transform:translate(-50%,-50%); width:14px; height:14px; border-radius:50%; border:2px solid var(--color-background-primary); cursor:default; }
+.scale-dot-label { position:absolute; top:18px; transform:translateX(-50%); font-size:10px; color:var(--color-text-secondary); white-space:nowrap; text-align:center; }
+.scale-axis-labels { display:flex; justify-content:space-between; font-size:11px; color:var(--color-text-tertiary); margin-top:2px; }
+
+/* === pie / distribution bar === */
+.dist-bar { display:flex; width:100%; height:28px; border-radius:6px; overflow:hidden; margin-bottom:10px; }
+.dist-seg { display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:600; overflow:hidden; }
+.dist-legend { display:flex; flex-wrap:wrap; gap:8px 16px; margin-bottom:10px; }
+.dist-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; margin-top:3px; }
+.dist-legend-item { display:flex; align-items:flex-start; gap:6px; font-size:11px; color:var(--color-text-secondary); }
+
+/* === trophic level diagram === */
+.trophic-wrap { display:flex; flex-direction:column; align-items:center; gap:0; margin:10px 0 14px; }
+.trophic-tier { display:flex; align-items:center; justify-content:center; border-radius:4px; font-size:11px; font-weight:500; color:#fff; margin-bottom:3px; }
+
+/* === GHG forcing bar === */
+.ghg-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.ghg-label { font-size:12px; color:var(--color-text-secondary); width:90px; flex-shrink:0; text-align:right; }
+.ghg-track { flex:1; background:var(--color-background-secondary); border-radius:3px; height:20px; overflow:hidden; }
+.ghg-fill { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 7px; font-size:10px; font-weight:600; color:#fff; }
+
+/* === timeline track === */
+.tl-track { position:relative; height:36px; background:var(--color-background-secondary); border-radius:4px; margin:10px 0 18px; overflow:visible; }
+.tl-bar { position:absolute; top:6px; height:24px; border-radius:3px; display:flex; align-items:center; padding:0 6px; font-size:10px; font-weight:500; overflow:hidden; white-space:nowrap; }
+.tl-tick { position:absolute; bottom:-16px; font-size:10px; color:var(--color-text-tertiary); transform:translateX(-50%); }
+
+/* === slider output === */
+.slider-output { font-size:22px; font-weight:500; color:var(--color-text-primary); }
+.slider-sub { font-size:12px; color:var(--color-text-secondary); }
+
+/* === energy card === */
+.energy-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px; margin-bottom:6px; }
+.energy-label { font-size:12px; font-weight:500; color:var(--color-text-primary); margin-bottom:3px; }
+.energy-body { font-size:11px; color:var(--color-text-secondary); line-height:1.5; }
+
+/* === calc inputs === */
+.calc-row { display:flex; gap:8px; flex-wrap:wrap; align-items:flex-end; margin-bottom:10px; }
+.calc-field { display:flex; flex-direction:column; gap:4px; flex:1; min-width:140px; }
+.calc-field label { font-size:11px; color:var(--color-text-secondary); }
+.calc-result { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:11px 13px; font-size:13px; color:var(--color-text-primary); line-height:1.7; }
+
+/* === boundary ring diagram === */
+.boundary-legend { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:6px; margin-top:10px; }
+.boundary-item { display:flex; align-items:flex-start; gap:8px; font-size:11px; color:var(--color-text-secondary); line-height:1.4; }
+.boundary-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; margin-top:3px; }
+
+/* === species interaction grid === */
+.interact-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:8px; margin-bottom:10px; }
+.interact-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 10px; cursor:pointer; border:1.5px solid transparent; transition:border-color 0.12s; }
+.interact-card:hover { border-color:var(--color-border-secondary); }
+.interact-card.active { border-color:var(--color-text-primary); }
+.interact-title { font-size:12px; font-weight:500; color:var(--color-text-primary); margin-bottom:3px; }
+.interact-sign { font-size:16px; font-weight:700; }
+  

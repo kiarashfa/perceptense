@@ -1,0 +1,174 @@
+
+    :root {
+      --accent: #A0845C;
+      --accent-bg: #F5EDE0;
+      --accent-border: #C9A87A;
+    }
+
+    .explorer-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .explorer-btns button { font-size: 11px; padding: 3px 11px; }
+    .explorer-btns button.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); }
+
+    .explorer-panel {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px 16px;
+      min-height: 100px;
+    }
+    .ep-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 8px; }
+    .ep-body  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
+    .ep-tags  { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+    .ep-tag   { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--accent-bg); border: 0.5px solid var(--accent-border); color: var(--accent); }
+
+    /* Branch info panel */
+    .branch-panel {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 12px 14px;
+      min-height: 80px;
+    }
+    .bp-title { font-size: 12px; font-weight: 600; color: var(--color-text-primary); margin: 0 0 8px; }
+    .bp-grid  { display: grid; grid-template-columns: 110px 1fr; gap: 4px 10px; margin-bottom: 8px; }
+    .bp-key   { font-size: 10px; color: var(--color-text-tertiary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 2px; }
+    .bp-val   { font-size: 12px; color: var(--color-text-primary); line-height: 1.5; }
+    .bp-desc  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; margin-top: 6px; padding-top: 6px; border-top: 0.5px solid var(--color-border-tertiary); }
+
+    /* Timeline */
+    .pc-wrap { margin: 1rem 0; }
+    .pc-axis { position: relative; height: 22px; margin-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+    .pc-axis-mark { position: absolute; font-size: 10px; color: var(--color-text-tertiary); transform: translateX(-50%); bottom: 4px; }
+    .pc-row { display: flex; align-items: center; margin-bottom: 6px; }
+    .pc-label { width: 130px; flex-shrink: 0; font-size: 11px; color: var(--color-text-secondary); text-align: right; padding-right: 10px; line-height: 1.3; }
+    .pc-track { flex: 1; position: relative; height: 22px; background: var(--color-background-secondary); border-radius: 3px; overflow: visible; }
+    .pc-fill  { position: absolute; height: 100%; border-radius: 3px; display: flex; align-items: center; }
+    .pc-fill-label { font-size: 10px; font-weight: 500; padding: 0 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* Elem cards */
+    .elem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px; margin-bottom: 10px; }
+    .elem-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 10px; text-align: center; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+    .elem-card:hover { background: var(--color-background-secondary); }
+    .elem-card.active { border-color: var(--accent-border); background: var(--accent-bg); }
+    .elem-card .ec-icon  { font-size: 22px; margin-bottom: 5px; }
+    .elem-card .ec-label { font-size: 11px; font-weight: 500; color: var(--color-text-primary); }
+    .elem-detail { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; display: none; margin-bottom: 10px; }
+    .elem-detail .ed-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 5px; }
+    .elem-detail .ed-body  { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
+
+    /* Comparison scale */
+    .cscale-wrap  { margin: 1rem 0; }
+    .cscale-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 8px; }
+    .cscale-row   { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .cscale-name  { width: 130px; flex-shrink: 0; font-size: 12px; color: var(--color-text-secondary); text-align: right; }
+    .cscale-track { flex: 1; position: relative; height: 6px; background: var(--color-background-secondary); border-radius: 3px; }
+    .cscale-dot   { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); top: -4px; transform: translateX(-50%); border: 2px solid var(--color-background-primary); }
+
+    /* Distribution bar */
+    .dist-bar    { display: flex; height: 32px; border-radius: 6px; overflow: hidden; margin-bottom: 10px; }
+    .dist-seg    { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; color: #fff; white-space: nowrap; overflow: hidden; }
+    .dist-legend { display: flex; flex-wrap: wrap; gap: 10px; }
+    .dl-item     { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-secondary); }
+    .dl-dot      { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+    /* Slider widget */
+    .slider-widget { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+    .slider-title  { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 10px; }
+    .slider-poles  { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 3px; }
+    .slider-output { margin-top: 10px; font-size: 13px; color: var(--color-text-primary); background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 12px; min-height: 38px; line-height: 1.55; }
+
+    /* Calculator widget */
+    .calc-widget  { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+    .calc-title   { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 10px; }
+    .calc-row     { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+    .calc-label   { font-size: 12px; color: var(--color-text-secondary); min-width: 160px; }
+    .calc-row input, .calc-row select { max-width: 200px; }
+    .calc-output  { margin-top: 10px; font-size: 13px; color: var(--color-text-primary); background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; min-height: 44px; line-height: 1.6; }
+
+    /* SVG diagram */
+    .svg-wrap  { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px; margin-bottom: 10px; overflow-x: auto; }
+    .svg-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-align: center; margin: 0 0 10px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    @media (max-width: 500px) {
+      .pc-label { width: 80px; font-size: 10px; }
+      .cscale-name { width: 80px; font-size: 11px; }
+      .bl { width: 90px; font-size: 11px; }
+      .bp-grid { grid-template-columns: 80px 1fr; }
+    }
+
+/* === Shared-ready extracted styles === */
+
+.text-amber-900 {
+  color:#633806;
+}
+
+.text-green-900 {
+  color:#085041;
+}
+
+/* === Module-specific extracted styles === */
+
+.religions-text {
+  font-size:42px;
+  color:var(--accent);
+  flex-shrink:0;
+}
+
+.religions-media {
+  width:100%;
+  max-width:680px;
+  display:block;
+  margin:0 auto;
+}
+
+.bb-style {
+  width:55%;
+  background:#e1f5ee;
+}
+
+.bb-style-2 {
+  width:75%;
+  background:#eeedfe;
+}
+
+.bv-style-2 {
+  color:#3c3489;
+}
+
+.bb-style-3 {
+  width:35%;
+  background:#faeeda;
+}
+
+.cscale-dot-style {
+  left:12%;
+  background:#3C3489;
+}
+
+.cscale-dot-style-2 {
+  left:30%;
+  background:#633806;
+}
+
+.cscale-dot-style-3 {
+  left:55%;
+  background:#085041;
+}
+
+.cscale-dot-style-4 {
+  left:70%;
+  background:#A0845C;
+}
+
+.cscale-dot-style-5 {
+  left:85%;
+  background:#27500a;
+}
+
+.religions-media-2 {
+  width:100%;
+  max-width:640px;
+  display:block;
+  margin:0 auto;
+}
+  

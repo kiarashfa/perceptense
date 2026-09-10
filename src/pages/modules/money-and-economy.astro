@@ -1,0 +1,1201 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/money-and-economy.css';
+
+const mod = modules.find((m) => m.id === 5)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+
+    <div class="u-display-flex u-items-center u-gap-14px u-mb-md">
+      <i class="fa-solid fa-sack-dollar u-fs-42px u-text-hex-4e99a3 u-shrink-0" aria-hidden="true"></i>
+      <h1 class="module-title u-m-0 u-lh-1-05">Module 5: Money &amp; Economy</h1>
+    </div>
+    <p class="module-subtitle">Millions, billions, GDP, inflation, debt, and financial scale</p>
+
+    <!-- ═══════════════════════════════════════════
+         PART A · SCALE
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-a-first-understand-the-scale-million-billion-trillion">Part A · first, understand the scale — million, billion, trillion</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-14px-16px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">The most important number lesson: a billion is not "a big million"</div>
+      <div class="u-display-grid u-gridcols-auto-fit-180px-1fr u-gap-md u-mb-md">
+        <div class="u-bg-background-secondary u-radius-radius-md u-p-10px-12px">
+          <div class="u-fs-11px text-secondary u-mb-xs">1 million</div>
+          <div class="u-fs-15px u-fw-500 text-primary">$1,000,000</div>
+          <div class="u-fs-12px text-secondary u-mt-4px u-lh-1-4">If you earn $50k/year, you'd need <strong class="text-primary">20 years</strong> to save this (spending nothing).</div>
+        </div>
+        <div class="u-bg-background-secondary u-radius-radius-md u-p-10px-12px">
+          <div class="u-fs-11px text-secondary u-mb-xs">1 billion</div>
+          <div class="u-fs-15px u-fw-500 text-primary">$1,000,000,000</div>
+          <div class="u-fs-12px text-secondary u-mt-4px u-lh-1-4">At $50k/year: <strong class="text-primary">20,000 years</strong> to save. That's longer than all of recorded history.</div>
+        </div>
+        <div class="u-bg-background-secondary u-radius-radius-md u-p-10px-12px">
+          <div class="u-fs-11px text-secondary u-mb-xs">1 trillion</div>
+          <div class="u-fs-15px u-fw-500 text-primary">$1,000,000,000,000</div>
+          <div class="u-fs-12px text-secondary u-mt-4px u-lh-1-4">At $50k/year: <strong class="text-primary">20 million years</strong>. The dinosaurs died 66 million years ago.</div>
+        </div>
+      </div>
+      <div class="u-bg-background-secondary u-radius-radius-md u-p-10px-12px">
+        <div class="u-fs-12px text-primary u-fw-500 u-mb-xs">Time anchor — the clearest way to feel the difference</div>
+        <div class="u-fs-12px text-secondary u-lh-1-6">
+          1 million seconds = <strong class="text-primary">11.5 days</strong><br>
+          1 billion seconds = <strong class="text-primary">31.7 years</strong><br>
+          1 trillion seconds = <strong class="text-primary">31,700 years</strong> — back to before the end of the last Ice Age
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG: logarithmic scale visualisation -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-14px-16px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Logarithmic scale — same visual distance, wildly different values</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Each step to the right is ×1,000. Linear scales make a billion invisible next to a trillion.</div>
+      <svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block" role="img" aria-label="Logarithmic scale from $1,000 to $1 trillion">
+        <!-- axis line -->
+        <line x1="30" y1="52" x2="670" y2="52" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+        <!-- tick marks and labels -->
+        <!-- $1K -->
+        <line x1="30" y1="46" x2="30" y2="58" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+        <text x="30" y="72" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$1K</text>
+        <!-- $1M -->
+        <line x1="190" y1="46" x2="190" y2="58" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+        <text x="190" y="72" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$1M</text>
+        <!-- $1B -->
+        <line x1="350" y1="46" x2="350" y2="58" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+        <text x="350" y="72" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$1B</text>
+        <!-- $1T -->
+        <line x1="510" y1="46" x2="510" y2="58" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+        <text x="510" y="72" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$1T</text>
+        <!-- $1Q -->
+        <line x1="670" y1="46" x2="670" y2="58" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+        <text x="670" y="72" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$1Q</text>
+
+        <!-- annotations -->
+        <!-- avg salary ~$55k -->
+        <line x1="97" y1="30" x2="97" y2="50" stroke="#378ADD" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="97" y="25" text-anchor="middle" font-size="9.5" fill="#378ADD" font-family="system-ui,sans-serif">Avg US salary</text>
+        <text x="97" y="35" text-anchor="middle" font-size="9" fill="#378ADD" font-family="system-ui,sans-serif">~$55K</text>
+
+        <!-- billionaire ~$300B -->
+        <line x1="460" y1="30" x2="460" y2="50" stroke="#A32D2D" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="460" y="25" text-anchor="middle" font-size="9.5" fill="#A32D2D" font-family="system-ui,sans-serif">Richest person</text>
+        <text x="460" y="35" text-anchor="middle" font-size="9" fill="#A32D2D" font-family="system-ui,sans-serif">~$300B</text>
+
+        <!-- Apple profit ~$94B -->
+        <line x1="441" y1="58" x2="441" y2="78" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="441" y="88" text-anchor="middle" font-size="9.5" fill="#185FA5" font-family="system-ui,sans-serif">Apple profit/yr</text>
+
+        <!-- US GDP ~$29T -->
+        <line x1="535" y1="30" x2="535" y2="50" stroke="#27500A" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="579" y="25" text-anchor="middle" font-size="9.5" fill="#27500A" font-family="system-ui,sans-serif">US GDP ~$29T</text>
+        <text x="579" y="35" text-anchor="middle" font-size="9" fill="#27500A" font-family="system-ui,sans-serif"></text>
+
+        <!-- ×1000 labels -->
+        <text x="110" y="48" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">×1,000</text>
+        <text x="270" y="48" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">×1,000</text>
+        <text x="430" y="48" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">×1,000</text>
+        <text x="590" y="48" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">×1,000</text>
+      </svg>
+      <p class="u-fs-11px text-secondary u-m-8px-0-0">On this scale the gap between an average salary and the richest person looks modest. On a true linear scale, a salary would be an atom-width line and the richest person's wealth would stretch across the room.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART B · COMPANY REVENUES AND PROFITS
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-b-company-revenues-and-profits">Part B · company revenues and profits</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Annual profit (net income) — approximate, 2024</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Profit = what's left after all costs. Revenue is always much larger.</div>
+      <div class="bar-row"><span class="bl">Saudi Aramco</span><div class="bb u-w-100-pct u-bg-hex-185fa5"><span class="bv u-text-hex-fff">~$106B profit/yr</span></div></div>
+      <div class="bar-row"><span class="bl">Alphabet (Google)</span><div class="bb u-w-94-pct u-bg-hex-185fa5"><span class="bv u-text-hex-fff">~$100B</span></div></div>
+      <div class="bar-row"><span class="bl">Apple</span><div class="bb u-w-88-pct u-bg-hex-185fa5"><span class="bv u-text-hex-fff">~$94B</span></div></div>
+      <div class="bar-row"><span class="bl">Microsoft</span><div class="bb u-w-83-pct u-bg-hex-378add"><span class="bv u-text-hex-fff">~$88B</span></div></div>
+      <div class="bar-row"><span class="bl">Toyota</span><div class="bb u-w-31-pct u-bg-hex-378add"><span class="bv u-text-hex-fff">~$33B</span></div></div>
+      <div class="bar-row"><span class="bl">Samsung</span><div class="bb u-w-19-pct u-bg-hex-85b7eb"><span class="bv u-text-hex-042c53">~$20B</span></div></div>
+      <div class="bar-row"><span class="bl">BMW</span><div class="bb u-w-8-pct u-bg-hex-b5d4f4"><span class="bv u-text-hex-042c53">~$8B</span></div></div>
+      <div class="bar-row"><span class="bl">Tesla</span><div class="bb u-w-7-pct u-bg-hex-b5d4f4"><span class="bv u-text-hex-042c53">~$7B</span></div></div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Saudi Aramco is the world's most profitable company by net income — often overlooked because it's state-owned. The four US tech giants (Aramco aside) collectively earned over $380B in profit in 2024 — more than the GDP of most nations. BMW and Tesla are now surprisingly close in profit size.</p>
+    </div>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Revenue vs. profit — Samsung example</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Revenue is total sales. Profit is what remains. The gap is enormous.</div>
+      <div class="bar-row"><span class="bl">Samsung revenue</span><div class="bb u-w-100-pct u-bg-hex-0f6e56"><span class="bv u-text-hex-fff">~$207B/yr revenue</span></div></div>
+      <div class="bar-row"><span class="bl">Samsung profit</span><div class="bb u-w-10-pct u-bg-hex-5dcaa5"><span class="bv u-text-hex-04342c">~$20B profit</span></div></div>
+      <p class="u-fs-11px text-secondary u-m-8px-0-0">Samsung keeps about 10 cents of profit per $1 of revenue. Apple keeps ~25 cents per dollar — a dramatically higher margin, reflecting the premium pricing power of its ecosystem.</p>
+    </div>
+
+    <!-- SVG: Profit margin comparison -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Net profit margins — how much of every $1 of revenue they keep</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Higher margin = more efficient business. Tech software has almost no marginal cost; manufacturing is squeezed on every unit.</div>
+      <svg viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block" role="img" aria-label="Net profit margin comparison chart">
+        <!-- Background grid lines -->
+        <line x1="160" y1="10" x2="160" y2="150" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="280" y1="10" x2="280" y2="150" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="400" y1="10" x2="400" y2="150" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="520" y1="10" x2="520" y2="150" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="640" y1="10" x2="640" y2="150" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <!-- axis labels -->
+        <text x="160" y="165" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">10%</text>
+        <text x="280" y="165" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">20%</text>
+        <text x="400" y="165" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">30%</text>
+        <text x="520" y="165" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">40%</text>
+        <text x="640" y="165" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">50%</text>
+        <!-- bars: max 50% maps to x=640, so 1% = 9.6px, start x=40 for labels -->
+        <!-- Alphabet ~26% -->
+        <text x="8" y="26" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">Alphabet</text>
+        <rect x="90" y="16" width="249.6" height="16" rx="2" fill="#378ADD"/>
+        <text x="345" y="24" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">26%</text>
+        <!-- Apple ~24% -->
+        <text x="8" y="52" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">Apple</text>
+        <rect x="90" y="42" width="230.4" height="16" rx="2" fill="#378ADD"/>
+        <text x="325" y="50" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">24%</text>
+        <!-- Microsoft ~37% -->
+        <text x="8" y="78" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">Microsoft</text>
+        <rect x="90" y="68" width="355.2" height="16" rx="2" fill="#185FA5"/>
+        <text x="450" y="76" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">37%</text>
+        <!-- Saudi Aramco ~27% -->
+        <text x="8" y="104" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">Aramco</text>
+        <rect x="90" y="94" width="259.2" height="16" rx="2" fill="#85B7EB"/>
+        <text x="354" y="102" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">27%</text>
+        <!-- Samsung ~10% -->
+        <text x="8" y="130" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">Samsung</text>
+        <rect x="90" y="120" width="96" height="16" rx="2" fill="#B5D4F4"/>
+        <text x="191" y="128" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">10%</text>
+        <!-- Toyota ~9% -->
+        <text x="8" y="152" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">Toyota</text>
+        <rect x="90" y="142" width="86.4" height="16" rx="2" fill="#C8DFF7"/>
+        <text x="181" y="150" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" dominant-baseline="middle">9%</text>
+      </svg>
+      <p class="u-fs-11px text-secondary u-m-8px-0-0">Microsoft's ~37% margin is extraordinary — mostly because its main products (Windows, Office, Azure) cost almost nothing extra to deliver to one more customer. Auto and hardware companies operate in a fundamentally different cost reality.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART C · TESLA VS BMW
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-c-tesla-vs-bmw-how-market-cap-and-earnings-diverge">Part C · Tesla vs BMW — how market cap and earnings diverge</h2>
+
+    <div class="u-display-grid u-gridcols-auto-fit-160px-1fr u-gap-md u-mb-lg">
+      <div class="card">
+        <p class="clabel">Tesla — market cap</p>
+        <p class="cval">~$700B–$1T+</p>
+        <p class="cnote">Highly volatile. At peak (Nov 2021) it hit $1.2T. Post-2024 election it briefly exceeded $1.3T. Elon's stake is ~13%.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">BMW — market cap</p>
+        <p class="cval">~$45–50B</p>
+        <p class="cnote">A fraction of Tesla's valuation, despite selling more cars and being profitable for decades. 2024 profit hit by recall costs.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Tesla cars sold/year</p>
+        <p class="cval">~1.8M</p>
+        <p class="cnote">Roughly flat 2023→2024. Growing from near zero in 2012.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">BMW cars sold/year</p>
+        <p class="cval">~2.5M</p>
+        <p class="cnote">Sells more cars but valued at roughly 1/15th of Tesla.</p>
+      </div>
+    </div>
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg u-fs-13px text-secondary u-lh-1-6">
+      Tesla's market cap is ~15–20× BMW's, yet BMW sells more cars and has made consistent profit for decades. The gap reflects investor bets on Tesla's future (AI, autonomous driving, energy storage) rather than its current business. This is the difference between <em class="text-primary">valuation</em> (what investors think it's worth) and <em class="text-primary">earnings</em> (what it actually makes today). Market cap is always a bet on the future.
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART D · RICHEST PEOPLE
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-d-the-richest-people-and-the-gap-between-them">Part D · the richest people — and the gap between them</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Top billionaires by net worth (~2025, approximate — these fluctuate daily)</div>
+      <div class="wealth-block">
+        <span class="wb-rank">#1</span>
+        <span class="wb-name">Elon Musk</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-100-pct u-bg-hex-a32d2d"></div></div>
+        <span class="wb-val">~$300B</span>
+      </div>
+      <div class="wealth-block">
+        <span class="wb-rank">#2</span>
+        <span class="wb-name">Jeff Bezos</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-78-pct u-bg-hex-d85a30"></div></div>
+        <span class="wb-val">~$235B</span>
+      </div>
+      <div class="wealth-block">
+        <span class="wb-rank">#3</span>
+        <span class="wb-name">Mark Zuckerberg</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-70-pct u-bg-hex-d85a30"></div></div>
+        <span class="wb-val">~$210B</span>
+      </div>
+      <div class="wealth-block">
+        <span class="wb-rank">#5</span>
+        <span class="wb-name">Bill Gates</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-35-pct u-bg-hex-f0997b"></div></div>
+        <span class="wb-val">~$105B</span>
+      </div>
+      <div class="wealth-block">
+        <span class="wb-rank">#10</span>
+        <span class="wb-name">~10th richest</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-27-pct u-bg-hex-f5c4b3"></div></div>
+        <span class="wb-val">~$80B</span>
+      </div>
+      <div class="wealth-block">
+        <span class="wb-rank">#99</span>
+        <span class="wb-name">~99th richest</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-6-pct u-bg-hex-faece7 u-border-0-5px-solid-hex-f5c4b3"></div></div>
+        <span class="wb-val">~$18B</span>
+      </div>
+      <div class="wealth-block">
+        <span class="wb-rank">#500</span>
+        <span class="wb-name">~500th richest</span>
+        <div class="wb-bar-wrap"><div class="wb-bar u-w-2-3-pct u-bg-hex-faece7 u-border-0-5px-solid-hex-f5c4b3"></div></div>
+        <span class="wb-val">~$7B</span>
+      </div>
+      <p class="scale-note">The #1 person (~$300B) is about 17× richer than #99 (~$18B). Both are still unimaginably far from a normal human's lifetime earnings (~$2–3M total over 40 working years).</p>
+    </div>
+
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">What $1 billion actually means for a billionaire</div>
+      <div class="u-fs-13px text-secondary u-lh-1-7">
+        If Elon Musk spent $1 million every single day, it would take him <strong class="text-primary">~820 years</strong> to spend his fortune.<br>
+        A $100 purchase for him is proportionally what <strong class="text-primary">2 cents</strong> is to someone earning $50,000/year.<br>
+        The gap between the richest person and the 99th richest (~$18B) is still <strong class="text-primary">~$282 billion</strong> — more than most countries' annual budgets.
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART E · GDP
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-e-gdp-what-countries-earn">Part E · GDP — what countries "earn"</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">GDP (economic output) per year</div>
+      <div class="bar-row"><span class="bl">USA</span><div class="bb u-w-100-pct u-bg-hex-27500a"><span class="bv u-text-hex-fff">~$29 trillion/yr</span></div></div>
+      <div class="bar-row"><span class="bl">China</span><div class="bb u-w-64-pct u-bg-hex-3b6d11"><span class="bv u-text-hex-fff">~$19 trillion</span></div></div>
+      <div class="bar-row"><span class="bl">Germany</span><div class="bb u-w-16-pct u-bg-hex-639922"><span class="bv u-text-hex-fff">~$4.5T</span></div></div>
+      <div class="bar-row"><span class="bl">Japan</span><div class="bb u-w-14-pct u-bg-hex-639922"><span class="bv u-text-hex-fff">~$4.0T</span></div></div>
+      <div class="bar-row"><span class="bl">France / UK</span><div class="bb u-w-10-pct u-bg-hex-97c459"><span class="bv u-text-hex-27500a">~$3T each</span></div></div>
+      <div class="bar-row"><span class="bl">Sweden</span><div class="bb u-w-2-pct u-bg-hex-c0dd97"><span class="bv u-text-hex-27500a u-fs-10px">~$590B</span></div></div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Apple's annual revenue (~$391B) is about 66% of Sweden's entire GDP (~$590B) — a single company approaching the economic output of an entire wealthy nation of 10 million people. The US GDP ($29T) is so large that Apple's revenue represents just ~1.3% of it.</p>
+    </div>
+
+    <!-- SVG: GDP pie-ish breakdown showing US vs rest -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Share of world GDP (~$105 trillion total, 2024)</div>
+      <div class="u-fs-11px text-secondary u-mb-md">US + China alone account for nearly half of all global economic output.</div>
+      <svg viewBox="0 0 680 140" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block" role="img" aria-label="World GDP share stacked bar chart">
+        <!-- stacked bar total width 580, start x=50 -->
+        <!-- US 27.6% of 105T ≈ 27.6% -->
+        <rect x="50" y="30" width="160" height="36" fill="#27500A" rx="2"/>
+        <text x="130" y="52" text-anchor="middle" font-size="11" fill="#fff" font-family="system-ui,sans-serif" font-weight="500">USA 27.6%</text>
+        <!-- China 18.1% -->
+        <rect x="210" y="30" width="105" height="36" fill="#3B6D11" rx="0"/>
+        <text x="262" y="52" text-anchor="middle" font-size="11" fill="#fff" font-family="system-ui,sans-serif" font-weight="500">China 18%</text>
+        <!-- EU combined ~17% -->
+        <rect x="315" y="30" width="98" height="36" fill="#639922" rx="0"/>
+        <text x="364" y="52" text-anchor="middle" font-size="10" fill="#fff" font-family="system-ui,sans-serif">EU ~17%</text>
+        <!-- Japan ~3.8% -->
+        <rect x="413" y="30" width="22" height="36" fill="#97C459" rx="0"/>
+        <!-- UK ~2.9% -->
+        <rect x="435" y="30" width="17" height="36" fill="#A8CE68" rx="0"/>
+        <!-- India ~3.5% -->
+        <rect x="452" y="30" width="20" height="36" fill="#C0DD97" rx="0"/>
+        <!-- Rest ~29% -->
+        <rect x="472" y="30" width="158" height="36" fill="var(--color-background-secondary)" rx="0" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="551" y="52" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Rest ~29%</text>
+        <!-- close cap -->
+        <rect x="628" y="30" width="2" height="36" fill="var(--color-border-tertiary)" rx="2"/>
+
+        <!-- legends below bar -->
+        <rect x="413" y="76" width="10" height="10" fill="#97C459" rx="1"/>
+        <text x="427" y="85" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Japan 3.8%</text>
+        <rect x="490" y="76" width="10" height="10" fill="#A8CE68" rx="1"/>
+        <text x="504" y="85" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">UK 2.9%</text>
+        <rect x="560" y="76" width="10" height="10" fill="#C0DD97" rx="1"/>
+        <text x="574" y="85" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">India 3.5%</text>
+
+        <text x="50" y="110" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">World total GDP ~$105 trillion (2024, nominal USD)</text>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART F · INFLATION & PURCHASING POWER
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-f-inflation-how-money-loses-value-over-time">Part F · inflation — how money loses value over time</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What $100 bought in past decades — US dollar purchasing power</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Inflation averages ~3%/year historically. It compounds: $100 in 1974 had the same buying power as ~$630 today.</div>
+      <!-- SVG: purchasing power decay chart -->
+      <svg viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block" role="img" aria-label="US dollar purchasing power over time">
+        <!-- y-axis labels -->
+        <text x="28" y="25" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">$100</text>
+        <text x="28" y="65" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">$80</text>
+        <text x="28" y="105" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">$60</text>
+        <text x="28" y="145" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">$40</text>
+        <!-- grid lines -->
+        <line x1="35" y1="22" x2="660" y2="22" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="35" y1="62" x2="660" y2="62" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="35" y1="102" x2="660" y2="102" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="35" y1="142" x2="660" y2="142" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <!-- Decay curve: $100 in 1974 → $100 today ~$16.
+             Plot "real value of $100 from each year" measured in today's dollars.
+             x: 1974=40, 1984=145, 1994=250, 2004=355, 2014=460, 2024=660
+             y: map $100 → y=22, $0 → y=162 (140px range)
+             1974: $100 = $16 today → plotted as: start=$100 real (point on line at x=40 showing it was $100 then)
+             Better approach: show nominal $100 bar for each decade, comparing what you can buy.
+             Each bar = purchasing power of $100 in that year measured in 2024 dollars.
+             1974: CPI ~49 vs 2024 ~315 → $100 then = $643 today → bar height = 100% = y top
+             1984: CPI ~104 → $100 then = $303
+             1994: CPI ~148 → $100 then = $213
+             2004: CPI ~189 → $100 then = $167
+             2014: CPI ~237 → $100 then = $133
+             2019: CPI ~256 → $100 then = $123
+             2024: $100 = $100 -->
+        <!-- bars width=60, gap=12, start x=50 -->
+        <!-- 1974: $643 → 100% of bar. max = 643, so scale 140/643 = 0.2177 px per $ -->
+        <rect x="50" y="22" width="55" height="140" fill="#185FA5" rx="2" opacity="0.9"/>
+        <text x="77" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">1974</text>
+        <text x="77" y="19" text-anchor="middle" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">$643</text>
+
+        <!-- 1984: $303 → 303/643 * 140 = 65.9px -->
+        <rect x="130" y="96" width="55" height="66" fill="#378ADD" rx="2" opacity="0.9"/>
+        <text x="157" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">1984</text>
+        <text x="157" y="93" text-anchor="middle" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">$303</text>
+
+        <!-- 1994: $213 → 213/643 * 140 = 46.4px -->
+        <rect x="210" y="116" width="55" height="46" fill="#85B7EB" rx="2" opacity="0.9"/>
+        <text x="237" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">1994</text>
+        <text x="237" y="113" text-anchor="middle" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">$213</text>
+
+        <!-- 2004: $167 → 167/643 * 140 = 36.4px -->
+        <rect x="290" y="126" width="55" height="36" fill="#B5D4F4" rx="2" opacity="0.9"/>
+        <text x="317" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">2004</text>
+        <text x="317" y="123" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$167</text>
+
+        <!-- 2014: $133 → 133/643 * 140 = 29px -->
+        <rect x="370" y="133" width="55" height="29" fill="#D0E6F8" rx="2" opacity="0.9"/>
+        <text x="397" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">2014</text>
+        <text x="397" y="130" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$133</text>
+
+        <!-- 2019: $123 → 123/643 * 140 = 26.8px -->
+        <rect x="450" y="135" width="55" height="27" fill="#E0EEF9" rx="2" opacity="0.9"/>
+        <text x="477" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">2019</text>
+        <text x="477" y="132" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$123</text>
+
+        <!-- 2024: $100 → 100/643 * 140 = 21.8px -->
+        <rect x="530" y="140" width="55" height="22" fill="var(--color-background-secondary)" rx="2" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+        <text x="557" y="170" text-anchor="middle" font-size="9.5" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">2024</text>
+        <text x="557" y="137" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">$100</text>
+
+        <!-- annotation line -->
+        <text x="620" y="80" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">Purchasing</text>
+        <text x="620" y="92" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">power of $100</text>
+        <text x="620" y="104" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">in 2024 $</text>
+      </svg>
+      <p class="u-fs-11px text-secondary u-m-8px-0-0">The post-2019 bars are especially stark: the COVID-era inflation surge (2021–2023) eroded purchasing power faster than any period since the 1970s oil shocks.</p>
+    </div>
+
+    <!-- Interactive inflation calculator -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Inflation calculator — what is a past amount worth today?</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Uses approximate US CPI data. Results are illustrative.</div>
+      <div class="inf-row">
+        <span class="inf-label">Amount: $</span>
+        <input class="inf-input" type="number" id="infAmount" value="100" min="1">
+        <span class="inf-label">in year</span>
+        <select class="inf-select" id="infYear">
+          <option value="1950">1950</option>
+          <option value="1960">1960</option>
+          <option value="1970">1970</option>
+          <option value="1974">1974</option>
+          <option value="1980">1980</option>
+          <option value="1990">1990</option>
+          <option value="2000">2000</option>
+          <option value="2005">2005</option>
+          <option value="2010">2010</option>
+          <option value="2015">2015</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+        </select>
+        <button onclick="calcInflation()" class="u-shrink-0">Calculate</button>
+      </div>
+      <div class="inf-result" id="infResult">Press Calculate to see the result.</div>
+    </div>
+
+    <!-- Key inflation concepts -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Key inflation concepts to know</div>
+      <div class="mc-step">
+        <div class="mc-num">1</div>
+        <div class="mc-text"><strong>The Rule of 72:</strong> Divide 72 by the annual inflation rate to estimate how long before prices double. At 3% inflation: 72 ÷ 3 = <strong>24 years</strong> until prices double. At 7%: just 10 years.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">2</div>
+        <div class="mc-text"><strong>Real vs. nominal:</strong> "Nominal" is the face value. "Real" is adjusted for inflation. If your salary rose 3% but inflation was 4%, your <strong>real wage fell 1%</strong>. This distinction is critical for evaluating economic data.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">3</div>
+        <div class="mc-text"><strong>Hyperinflation is a different beast:</strong> In Zimbabwe (2008), prices doubled every 24 hours at peak. In Weimar Germany (1923), a loaf of bread cost 200 billion marks. Normal inflation is a slow tax; hyperinflation is economic collapse.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">4</div>
+        <div class="mc-text"><strong>Why central banks target ~2%:</strong> Zero inflation risks deflation (where people delay spending, slowing the economy). High inflation erodes savings. The 2% target is a calibrated buffer — enough to keep the economy moving, not enough to destroy savers.</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART G · HOW MONEY IS CREATED
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-g-how-money-is-actually-created">Part G · how money is actually created</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The banking multiplier — money appears from loans</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Most people assume money = printed banknotes. In reality, ~97% of modern money is created by commercial banks when they make loans.</div>
+      <div class="mc-step">
+        <div class="mc-num">1</div>
+        <div class="mc-text">You deposit <strong>$10,000</strong> at Bank A. The bank must keep a small reserve (say 10%) but can lend out the rest.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">2</div>
+        <div class="mc-text">Bank A lends <strong>$9,000</strong> to someone to buy a car. That $9,000 gets deposited into Bank B.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">3</div>
+        <div class="mc-text">Bank B keeps 10% and lends out <strong>$8,100</strong>. That gets deposited at Bank C. And so on.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">4</div>
+        <div class="mc-text">Your original $10,000 deposit has now spawned <strong>up to $100,000</strong> of total deposits across the system. The "money multiplier" = 1 ÷ reserve ratio = 1 ÷ 0.10 = 10×.</div>
+      </div>
+      <div class="mc-step">
+        <div class="mc-num">5</div>
+        <div class="mc-text">The central bank (e.g. the Federal Reserve) controls the base by setting interest rates and buying/selling bonds (<strong>quantitative easing</strong>). It does not simply "print money" in a vacuum — it adjusts the conditions under which banks create it.</div>
+      </div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">This is why interest rate hikes slow inflation: higher rates mean fewer loans, less money creation, less spending pressure. Lowering rates does the reverse.</p>
+    </div>
+
+    <!-- SVG: Money multiplier visual -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The money supply layers (M0 → M2)</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Economists measure money in expanding layers. Each layer is less liquid but more voluminous.</div>
+      <svg viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block" role="img" aria-label="Money supply M0 M1 M2 diagram">
+        <!-- M0 small box -->
+        <rect x="30" y="60" width="80" height="44" rx="4" fill="#0c2540" stroke="var(--color-border-info)" stroke-width="1"/>
+        <text x="70" y="79" text-anchor="middle" font-size="11" fill="#85B7EB" font-family="system-ui,sans-serif" font-weight="600">M0</text>
+        <text x="70" y="93" text-anchor="middle" font-size="9" fill="#85B7EB" font-family="system-ui,sans-serif">~$6T (US)</text>
+        <text x="70" y="122" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Physical cash +</text>
+        <text x="70" y="133" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">central bank reserves</text>
+
+        <!-- arrow -->
+        <line x1="114" y1="82" x2="134" y2="82" stroke="var(--color-border-secondary)" stroke-width="1.2" marker-end="url(#arr)"/>
+        <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--color-border-secondary)"/></marker></defs>
+
+        <!-- M1 medium box -->
+        <rect x="138" y="40" width="140" height="84" rx="4" fill="var(--color-background-info)" stroke="var(--color-border-info)" stroke-width="1"/>
+        <text x="208" y="62" text-anchor="middle" font-size="11" fill="var(--color-text-info)" font-family="system-ui,sans-serif" font-weight="600">M1</text>
+        <text x="208" y="78" text-anchor="middle" font-size="9" fill="var(--color-text-info)" font-family="system-ui,sans-serif">~$18T (US)</text>
+        <text x="208" y="96" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">M0 + demand deposits</text>
+        <text x="208" y="108" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">(checking accounts)</text>
+
+        <!-- arrow -->
+        <line x1="282" y1="82" x2="302" y2="82" stroke="var(--color-border-secondary)" stroke-width="1.2" marker-end="url(#arr)"/>
+
+        <!-- M2 large box -->
+        <rect x="306" y="18" width="200" height="128" rx="4" fill="var(--color-background-success)" stroke="var(--color-border-success)" stroke-width="1"/>
+        <text x="406" y="40" text-anchor="middle" font-size="11" fill="var(--color-text-success)" font-family="system-ui,sans-serif" font-weight="600">M2</text>
+        <text x="406" y="56" text-anchor="middle" font-size="9" fill="var(--color-text-success)" font-family="system-ui,sans-serif">~$21T (US)</text>
+        <text x="406" y="76" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">M1 + savings deposits,</text>
+        <text x="406" y="88" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">money market funds,</text>
+        <text x="406" y="100" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">small CDs (&lt;$100k)</text>
+        <text x="406" y="120" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Most-watched by central banks</text>
+        <text x="406" y="132" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">for inflation signals</text>
+
+        <!-- key insight -->
+        <text x="526" y="60" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">M2 is ~3.5×</text>
+        <text x="526" y="74" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">larger than M0 —</text>
+        <text x="526" y="88" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">banks created</text>
+        <text x="526" y="102" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">most of the rest</text>
+        <text x="526" y="116" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">through lending.</text>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART H · NATIONAL DEBT & GLOBAL DEBT
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-h-national-debt-numbers-so-large-they-lose-meaning">Part H · national debt — numbers so large they lose meaning</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">US national debt — live approximation</div>
+      <div class="u-fs-11px text-secondary u-mb-md">The US government spends ~$2.2 trillion more per year than it collects in taxes. That deficit adds to the national debt every second.</div>
+      <div class="u-display-flex u-items-center u-gap-14px u-flex-wrap">
+        <div>
+          <div class="debt-sub">Approx. US National Debt (live counter)</div>
+          <div class="debt-ticker" id="debtTicker">$36,200,000,000,000</div>
+          <div class="debt-sub u-mt-4px">~$107,000 per American citizen · ~$270,000 per taxpayer</div>
+        </div>
+      </div>
+      <p class="u-fs-11px text-secondary u-m-12px-0-0">At the current deficit rate (~$2.2T/year), the debt grows by roughly <strong class="text-primary">$69,700 every second</strong>. This counter increments in real time.</p>
+    </div>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Debt-to-GDP ratios — who owes what relative to their income</div>
+      <div class="bar-row"><span class="bl">Japan</span><div class="bb u-w-100-pct u-bg-hex-791f1f"><span class="bv u-text-hex-fff">~261% of GDP</span></div></div>
+      <div class="bar-row"><span class="bl">USA</span><div class="bb u-w-50-pct u-bg-hex-a32d2d"><span class="bv u-text-hex-fff">~129%</span></div></div>
+      <div class="bar-row"><span class="bl">France</span><div class="bb u-w-44-pct u-bg-hex-d85a30"><span class="bv u-text-hex-fff">~114%</span></div></div>
+      <div class="bar-row"><span class="bl">UK</span><div class="bb u-w-41-pct u-bg-hex-d85a30"><span class="bv u-text-hex-fff">~106%</span></div></div>
+      <div class="bar-row"><span class="bl">Germany</span><div class="bb u-w-25-pct u-bg-hex-f0997b"><span class="bv u-text-hex-fff">~64%</span></div></div>
+      <div class="bar-row"><span class="bl">Sweden</span><div class="bb u-w-17-pct u-bg-hex-f5c4b3"><span class="bv u-text-hex-04342c">~43%</span></div></div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Japan has the world's highest debt-to-GDP ratio yet has not defaulted, partly because ~90% is held domestically. The US debt is ~65% domestically held. <strong class="text-primary">Debt-to-GDP matters more than absolute debt</strong> — a country with a large economy can service larger debt. Germany's fiscal conservatism (the "debt brake") keeps it among the lowest of major economies.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART I · COMPOUND INTEREST EXPLORER
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-i-compound-interest-the-most-powerful-force-in-personal-finance">Part I · compound interest — the most powerful force in personal finance</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Einstein allegedly called compound interest "the eighth wonder of the world"</div>
+      <div class="u-fs-11px text-secondary u-mb-md">The attribution is probably apocryphal — but the math is not. Small consistent growth over long time creates extraordinary results.</div>
+      <div class="slider-row">
+        <div class="slider-desc"><span>Initial investment</span><span class="slider-val" id="ciPLabel">$10,000</span></div>
+        <input type="range" id="ciPrincipal" min="1000" max="100000" step="1000" value="10000" oninput="calcCI()">
+      </div>
+      <div class="slider-row">
+        <div class="slider-desc"><span>Annual return rate</span><span class="slider-val" id="ciRLabel">7%</span></div>
+        <input type="range" id="ciRate" min="1" max="20" step="0.5" value="7" oninput="calcCI()">
+      </div>
+      <div class="slider-row">
+        <div class="slider-desc"><span>Years invested</span><span class="slider-val" id="ciYLabel">30 years</span></div>
+        <input type="range" id="ciYears" min="5" max="50" step="1" value="30" oninput="calcCI()">
+      </div>
+      <div class="ci-grid">
+        <div class="ci-result-box">
+          <div class="ci-label">Final value</div>
+          <div class="ci-val" id="ciFinal">$76,123</div>
+          <div class="ci-sub" id="ciGrowth">7.6× your money</div>
+        </div>
+        <div class="ci-result-box">
+          <div class="ci-label">Total interest earned</div>
+          <div class="ci-val" id="ciInterest">$66,123</div>
+          <div class="ci-sub" id="ciIntPct">66% came from compounding</div>
+        </div>
+        <div class="ci-result-box">
+          <div class="ci-label">Doubling time (Rule of 72)</div>
+          <div class="ci-val" id="ciDouble">~10.3 yrs</div>
+          <div class="ci-sub">72 ÷ rate</div>
+        </div>
+        <div class="ci-result-box">
+          <div class="ci-label">You invested</div>
+          <div class="ci-val" id="ciPrincipalOut">$10,000</div>
+          <div class="ci-sub">one-time, never added to</div>
+        </div>
+      </div>
+      <!-- SVG bar showing principal vs interest -->
+      <div class="u-mt-md">
+        <div class="u-fs-11px text-secondary u-mb-xs">Where the final value comes from</div>
+        <svg viewBox="0 0 500 36" id="ciBarSVG" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
+          <rect x="0" y="8" width="131" height="20" rx="2" fill="#185FA5" id="ciBarP"/>
+          <rect x="131" y="8" width="369" height="20" rx="2" fill="#85B7EB" id="ciBarI"/>
+          <text x="65" y="21" text-anchor="middle" font-size="10" fill="#fff" font-family="system-ui,sans-serif" id="ciBarPLabel">Your money</text>
+          <text x="315" y="21" text-anchor="middle" font-size="10" fill="#fff" font-family="system-ui,sans-serif" id="ciBarILabel">Compounding</text>
+        </svg>
+      </div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">The S&amp;P 500 has returned ~10% annually on average since 1957 (nominal), or ~7% inflation-adjusted. Berkshire Hathaway averaged ~20%/year for 50+ years — an outcome so rare it's essentially proof that Buffett's approach is exceptional rather than replicable.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART J · PERSONAL FINANCE ANCHORS
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-j-personal-finance-the-key-numbers-everyone-should-know">Part J · personal finance — the key numbers everyone should know</h2>
+
+    <div class="u-display-grid u-gridcols-auto-fit-160px-1fr u-gap-md u-mb-lg">
+      <div class="card">
+        <p class="clabel">US median household income</p>
+        <p class="cval">~$80,000</p>
+        <p class="cnote">Half of US households earn less. Individual median is ~$45k. These are gross — taxes take 20–35%.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">US median net worth</p>
+        <p class="cval">~$192,000</p>
+        <p class="cnote">Heavily skewed by home ownership. Median for under-35s: ~$39k. For 55–64: ~$364k.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Average US retirement savings</p>
+        <p class="cval">~$88,000</p>
+        <p class="cnote">Median is only ~$65k. Most Americans are significantly underprepared for retirement.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Cost of raising a child (US)</p>
+        <p class="cval">~$310,000</p>
+        <p class="cnote">USDA estimate through age 17. Add college and it's $400–600k+ in many states.</p>
+      </div>
+    </div>
+
+    <!-- 50/30/20 rule visual -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The 50/30/20 budgeting rule — a widely-used starting framework</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Popularized by Senator Elizabeth Warren's book. Designed as a guide, not a rigid law.</div>
+      <svg viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block" role="img" aria-label="50 30 20 budget rule diagram">
+        <!-- 50% needs -->
+        <rect x="10" y="20" width="320" height="46" rx="4" fill="#0c2540"/>
+        <text x="170" y="40" text-anchor="middle" font-size="14" fill="#85B7EB" font-family="system-ui,sans-serif" font-weight="700">50%</text>
+        <text x="170" y="56" text-anchor="middle" font-size="10" fill="#85B7EB" font-family="system-ui,sans-serif">Needs</text>
+        <text x="170" y="78" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Rent, food, utilities, transport, insurance</text>
+
+        <!-- 30% wants -->
+        <rect x="336" y="20" width="192" height="46" rx="4" fill="var(--color-background-warning)"/>
+        <text x="432" y="40" text-anchor="middle" font-size="14" fill="var(--color-text-warning)" font-family="system-ui,sans-serif" font-weight="700">30%</text>
+        <text x="432" y="56" text-anchor="middle" font-size="10" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">Wants</text>
+        <text x="432" y="78" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Dining out, entertainment, holidays</text>
+
+        <!-- 20% savings -->
+        <rect x="534" y="20" width="136" height="46" rx="4" fill="var(--color-background-success)"/>
+        <text x="602" y="40" text-anchor="middle" font-size="14" fill="var(--color-text-success)" font-family="system-ui,sans-serif" font-weight="700">20%</text>
+        <text x="602" y="56" text-anchor="middle" font-size="10" fill="var(--color-text-success)" font-family="system-ui,sans-serif">Savings/Debt</text>
+        <text x="602" y="78" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Emergency fund, investments, debt payoff</text>
+      </svg>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">In expensive cities (NYC, San Francisco, London), housing alone often exceeds 50% of take-home pay for most earners — the framework must adapt. The core principle is the saving/investing portion: pay yourself first, before discretionary spending.</p>
+    </div>
+
+    <!-- Take-home pay estimator -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Rough take-home pay estimator (US, single filer)</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Federal income tax + FICA only. State taxes, deductions, and credits not included. Illustrative only.</div>
+      <div class="inf-row">
+        <span class="inf-label">Gross annual salary: $</span>
+        <input class="inf-input" type="number" id="salInput" value="75000" min="10000" step="5000">
+        <button onclick="calcSalary()">Calculate</button>
+      </div>
+      <div class="inf-result" id="salResult">Press Calculate to see your approximate breakdown.</div>
+    </div>
+
+    <!-- Currency converter -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Currency converter — major world currencies</div>
+      <div class="u-fs-11px text-secondary u-mb-md" id="fxSubtitle">Enter an amount in any currency and see the equivalent in all others. Rates are fetched live — approximate fallback shown if unavailable.</div>
+
+      <!-- From currency row -->
+      <div class="u-display-flex u-items-center u-gap-sm u-flex-wrap u-mb-md">
+        <input class="inf-input u-w-110px" type="number" id="fxAmount" value="100" min="0" step="any" oninput="convertFX()">
+        <select class="inf-select u-w-auto" id="fxFrom" onchange="convertFX()">
+          <option value="USD">🇺🇸 USD — US Dollar</option>
+          <option value="EUR">🇪🇺 EUR — Euro</option>
+          <option value="GBP">🇬🇧 GBP — British Pound</option>
+          <option value="JPY">🇯🇵 JPY — Japanese Yen</option>
+          <option value="CNY">🇨🇳 CNY — Chinese Yuan</option>
+          <option value="CHF">🇨🇭 CHF — Swiss Franc</option>
+          <option value="CAD">🇨🇦 CAD — Canadian Dollar</option>
+          <option value="AUD">🇦🇺 AUD — Australian Dollar</option>
+          <option value="INR">🇮🇳 INR — Indian Rupee</option>
+          <option value="BRL">🇧🇷 BRL — Brazilian Real</option>
+          <option value="MXN">🇲🇽 MXN — Mexican Peso</option>
+          <option value="KRW">🇰🇷 KRW — South Korean Won</option>
+          <option value="SGD">🇸🇬 SGD — Singapore Dollar</option>
+          <option value="SAR">🇸🇦 SAR — Saudi Riyal</option>
+          <option value="SEK">🇸🇪 SEK — Swedish Krona</option>
+          <option value="NOK">🇳🇴 NOK — Norwegian Krone</option>
+          <option value="TRY">🇹🇷 TRY — Turkish Lira</option>
+          <option value="RUB">🇷🇺 RUB — Russian Ruble</option>
+        </select>
+      </div>
+
+      <!-- Results grid -->
+      <div class="fx-grid" id="fxGrid">
+        <div class="u-fs-12px text-secondary u-gridcol-1-1">Loading rates…</div>
+      </div>
+
+      <div class="u-mt-md u-fs-11px text-tertiary" id="fxTimestamp"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART K · ANCHOR NUMBERS TO MEMORIZE
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-k-anchor-numbers-to-memorize">Part K · anchor numbers to memorize</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-1-2rem">
+      <div class="anchor-row">
+        <span class="pill p-blue">$1M</span>
+        <div><div class="atext">A lifetime of careful saving for most people</div><div class="asub">20 years at $50k/year saving everything · 1M seconds = just 11.5 days</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">$1B</span>
+        <div><div class="atext">1,000 × a million. Functionally inexhaustible for one person.</div><div class="asub">1 billion seconds = 31.7 years · at $1M/day takes 2.7 years to spend</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">~$94–106B</span>
+        <div><div class="atext">Apple / Aramco annual profit — world's most profitable companies</div><div class="asub">Apple earns roughly $3,000 every second, 24/7</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">~$300B</span>
+        <div><div class="atext">Richest person's net worth (Musk, ~2025)</div><div class="asub">The 99th richest has ~$18B — 17× less · $1M/day takes 820 years</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">$29T</span>
+        <div><div class="atext">USA GDP — the world's largest economy</div><div class="asub">China is #2 at ~$19T · World total ~$105T</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-red">$36T+</span>
+        <div><div class="atext">US national debt — growing ~$70,000/second</div><div class="asub">~129% of GDP · ~$107,000 per citizen</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">3% / 72</span>
+        <div><div class="atext">Inflation rule of thumb / doubling time rule</div><div class="asub">At 3% inflation, prices double in 24 years. At 7%, just 10 years.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">~7–10%</span>
+        <div><div class="atext">Long-run S&amp;P 500 annual return</div><div class="asub">7% real (inflation-adjusted) · 10% nominal · not guaranteed, never linear</div></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART L · ESTIMATION GAME
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-l-estimation-game-test-your-financial-intuition">Part L · estimation game — test your financial intuition</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Financial scale quiz</div>
+      <div class="u-fs-11px text-secondary u-mb-md">10 questions. Pick the closest answer. No partial credit — financial intuition is about order of magnitude.</div>
+      <div class="u-display-flex u-justify-space-between u-items-center u-mb-md u-flex-wrap u-gap-sm">
+        <div class="u-fs-12px text-secondary">Question <span id="qNum">1</span> of 10</div>
+        <div class="u-display-flex u-items-center u-gap-sm">
+          <div class="u-fs-12px text-secondary">Score: <span id="qScore" class="text-primary u-fw-500">0</span>/10</div>
+          <div class="quiz-score-bar u-w-100px"><div class="quiz-score-fill u-w-0-pct" id="qScoreFill"></div></div>
+        </div>
+      </div>
+      <div id="quizArea">
+        <!-- injected by JS -->
+      </div>
+      <div id="quizFinal" class="u-display-none u-align-center u-p-20px-0">
+        <div class="u-fs-22px u-fw-500 text-primary" id="qFinalScore"></div>
+        <div class="u-fs-13px text-secondary u-mt-sm" id="qFinalMsg"></div>
+        <button onclick="restartQuiz()" class="u-mt-14px">Play again</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PART M · TEST YOURSELF (DEEPER)
+    ═══════════════════════════════════════════ -->
+    <h2 class="sec" id="part-m-q-and-a">Part M · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. A headline says "Company X made $500 million profit last year." Is that a lot, a little, or average for a major global company?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">It's decent but not exceptional — solidly mid-tier for a large global company. Apple makes ~$94B (188× more). Samsung makes ~$20B (40× more). $500M would be reasonable for a large regional bank, a mid-sized tech company, or a major retailer. It sounds huge to a human but is modest in corporate terms.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. Tesla's market cap is ~$700B–$1T+. BMW's is ~$45B. Yet BMW sells more cars. How is this possible?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Stock market value isn't about current earnings — it's about expected future earnings. Investors believe Tesla will dominate electric vehicles, autonomous driving, and energy storage. They're paying for the future. BMW is seen as a mature, stable but slower-growth company. This is why high-growth tech companies often have valuations that seem disconnected from their current profits.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. How long would it take Apple to earn $1 trillion in profit at its current rate?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 10–11 years. At ~$94B profit per year, $1 trillion ÷ $94B ≈ 10.6 years of total profit. Apple's entire market cap (~$3 trillion) represents roughly 32 years of current profits. That's the math behind how investors value companies — they're estimating many decades of future earnings.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. Elon Musk has ~$300B. The 99th richest person has ~$18B. How many "99th richest people" could you fit inside Musk's wealth?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 17. $300B ÷ $18B ≈ 16.7. So the single richest person holds as much wealth as about 17 of the 99th-richest people combined. And the 99th richest person ($18B) still holds more than 450,000 average lifetime earners combined — the wealth compression at the very top is extreme at every level.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. Sweden's GDP is ~$590 billion. Is Apple's revenue ($391B) bigger or smaller than Sweden's entire economy?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Smaller — but not by much. Apple's revenue (~$391B) is about 66% of Sweden's entire GDP (~$590B). If Apple were a country, it would rank roughly 20th in the world by economic output. Note the comparison is imperfect (revenue ≠ GDP), but it captures the order of magnitude: a single company approaching the economic output of an entire wealthy nation of 10 million people.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. You invest $5,000 at age 25. The market returns 7%/year. How much do you have at age 65?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About $74,872. That's $5,000 × (1.07)^40 ≈ $74,872 — nearly 15× your original investment. The math is brutal in reverse: if you wait until age 35 to invest the same $5,000, you end up with only ~$38,061 at 65. Ten years of delay costs you $36,000 in final value. Time is the most valuable variable in compounding — more than the rate of return.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. The US national debt is ~$36 trillion. Could it be paid off if the government just "printed the money"?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Technically yes, but it would be catastrophic. The US money supply (M2) is ~$21 trillion. "Printing" $36T would more than triple the money supply, causing extreme hyperinflation — the very act of doing it would destroy the dollar's value, wiping out the savings of every holder of dollar-denominated assets worldwide. This is why governments rarely monetize debt directly — the cure is worse than the disease. Instead, they manage debt through growth (GDP growing faster than debt), inflation (gentle erosion over time), taxation, and bond markets.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">8. Why does Japan have a debt-to-GDP ratio of ~261% yet has not defaulted, while some countries default at 60–80%?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Three main reasons: (1) ~90% of Japan's debt is held by Japanese institutions and citizens — it's money Japan essentially owes itself. External debt crises are driven by foreign creditors demanding repayment in foreign currency. (2) Japan controls its own currency and central bank, which can buy government bonds indefinitely. (3) Japan has extremely low interest rates — for decades, borrowing cost almost nothing. Countries that default at lower ratios typically have debt in foreign currencies, lack monetary sovereignty, or face sudden loss of investor confidence. Debt sustainability depends on who holds it, what currency it's in, and what interest rates are.</div>
+    </div>
+
+  
+
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+  /* ============================================================
+     MODULE 5 — INTERACTIVE JS
+  ============================================================ */
+
+  /* --- CPI lookup table (approximate US CPI, base 2024 ~315) --- */
+  var CPI = {
+    1950: 24.1, 1960: 29.6, 1970: 38.8, 1974: 49.3,
+    1980: 82.4, 1990: 130.7, 2000: 172.2, 2005: 195.3,
+    2010: 218.1, 2015: 237.0, 2019: 255.7, 2020: 258.8,
+    2021: 270.9
+  };
+  var CPI_NOW = 315;
+
+  function fmtMoney(n) {
+    if (n >= 1e12) return '$' + (n/1e12).toFixed(2) + ' trillion';
+    if (n >= 1e9)  return '$' + (n/1e9).toFixed(2) + ' billion';
+    if (n >= 1e6)  return '$' + (n/1e6).toFixed(2) + ' million';
+    return '$' + Math.round(n).toLocaleString();
+  }
+
+  function calcInflation() {
+    var amt  = parseFloat(document.getElementById('infAmount').value) || 100;
+    var yr   = parseInt(document.getElementById('infYear').value, 10);
+    var cpi  = CPI[yr];
+    if (!cpi) return;
+    var todayVal = amt * (CPI_NOW / cpi);
+    var pct = ((CPI_NOW - cpi) / cpi * 100).toFixed(1);
+    document.getElementById('infResult').innerHTML =
+      '<span class="inf-big">' + fmtMoney(todayVal) + '</span>' +
+      '<span class="u-fs-13px text-secondary"> in 2024 dollars</span>' +
+      '<br><span class="u-fs-12px text-secondary">Prices rose <strong class="text-primary">' + pct + '%</strong> since ' + yr +
+      '. Your $' + amt.toLocaleString() + ' of ' + yr + ' spending power now requires ' +
+      '<strong class="text-primary">' + fmtMoney(todayVal) + '</strong>.</span>';
+  }
+
+  /* --- Compound interest calculator --- */
+  function calcCI() {
+    var p = parseFloat(document.getElementById('ciPrincipal').value);
+    var r = parseFloat(document.getElementById('ciRate').value) / 100;
+    var y = parseInt(document.getElementById('ciYears').value, 10);
+    document.getElementById('ciPLabel').textContent = '$' + p.toLocaleString();
+    document.getElementById('ciRLabel').textContent = (r*100).toFixed(1) + '%';
+    document.getElementById('ciYLabel').textContent = y + ' years';
+    var final = p * Math.pow(1 + r, y);
+    var interest = final - p;
+    var mult = (final / p).toFixed(1);
+    var doubling = (72 / (r * 100)).toFixed(1);
+    var intPct = ((interest / final) * 100).toFixed(0);
+    document.getElementById('ciFinal').textContent = fmtMoney(final);
+    document.getElementById('ciGrowth').textContent = mult + '× your money';
+    document.getElementById('ciInterest').textContent = fmtMoney(interest);
+    document.getElementById('ciIntPct').textContent = intPct + '% came from compounding';
+    document.getElementById('ciDouble').textContent = '~' + doubling + ' yrs';
+    document.getElementById('ciPrincipalOut').textContent = '$' + p.toLocaleString();
+    /* update bar */
+    var pPct = (p / final * 500).toFixed(0);
+    var iPct = 500 - pPct;
+    document.getElementById('ciBarP').setAttribute('width', pPct);
+    document.getElementById('ciBarI').setAttribute('x', pPct);
+    document.getElementById('ciBarI').setAttribute('width', iPct);
+    document.getElementById('ciBarPLabel').setAttribute('x', pPct / 2);
+    document.getElementById('ciBarILabel').setAttribute('x', parseFloat(pPct) + iPct / 2);
+    document.getElementById('ciBarPLabel').textContent = 'Your $' + p.toLocaleString();
+    document.getElementById('ciBarILabel').textContent = 'Growth $' + Math.round(interest).toLocaleString();
+  }
+  calcCI();
+
+  /* --- Take-home pay estimator --- */
+  function calcSalary() {
+    var gross = parseFloat(document.getElementById('salInput').value) || 75000;
+    /* 2024 federal brackets (single filer, rough) */
+    var tax = 0;
+    if (gross > 609350) tax += (gross - 609350) * 0.37;
+    if (gross > 243725) tax += (Math.min(gross, 609350) - 243725) * 0.35;
+    if (gross > 191950) tax += (Math.min(gross, 243725) - 191950) * 0.32;
+    if (gross > 100525) tax += (Math.min(gross, 191950) - 100525) * 0.24;
+    if (gross > 47150)  tax += (Math.min(gross, 100525) - 47150) * 0.22;
+    if (gross > 11600)  tax += (Math.min(gross, 47150) - 11600) * 0.12;
+    tax += Math.min(gross, 11600) * 0.10;
+    /* FICA: SS 6.2% up to $168,600, Medicare 1.45% */
+    var ss   = Math.min(gross, 168600) * 0.062;
+    var medi = gross * 0.0145;
+    var totalTax = tax + ss + medi;
+    var takeHome = gross - totalTax;
+    var effRate = (totalTax / gross * 100).toFixed(1);
+    document.getElementById('salResult').innerHTML =
+      '<div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-sm">' +
+        '<div><div class="u-fs-11px text-secondary">Gross (annual)</div><div class="inf-big">$' + Math.round(gross).toLocaleString() + '</div></div>' +
+        '<div><div class="u-fs-11px text-secondary">Federal income tax</div><div class="u-fs-16px u-fw-500 u-text-text-danger">−$' + Math.round(tax).toLocaleString() + '</div></div>' +
+        '<div><div class="u-fs-11px text-secondary">FICA (SS + Medicare)</div><div class="u-fs-16px u-fw-500 u-text-text-danger">−$' + Math.round(ss + medi).toLocaleString() + '</div></div>' +
+        '<div><div class="u-fs-11px text-secondary">Approx. take-home</div><div class="u-fs-18px u-fw-500 u-text-text-success">$' + Math.round(takeHome).toLocaleString() + '/yr</div><div class="u-fs-11px text-secondary">~$' + Math.round(takeHome/12).toLocaleString() + '/mo</div></div>' +
+      '</div>' +
+      '<div class="u-mt-sm u-fs-12px text-secondary">Effective tax rate: <strong class="text-primary">' + effRate + '%</strong>. State taxes (0–13%), 401k contributions, and deductions not included — actual take-home typically differs.</div>';
+  }
+
+  /* --- Debt counter --- */
+  (function() {
+    /* US deficit ~$2.2T/year = $69,731 per second */
+    var DEBT_BASE = 36200000000000;
+    var RATE_PER_SEC = 69731;
+    /* Anchor to a fixed reference time to avoid drift */
+    var REF_TIME = new Date('2025-01-01T00:00:00Z').getTime();
+    function updateDebt() {
+      var now = Date.now();
+      var secElapsed = (now - REF_TIME) / 1000;
+      var debt = DEBT_BASE + secElapsed * RATE_PER_SEC;
+      var s = Math.floor(debt).toLocaleString('en-US');
+      document.getElementById('debtTicker').textContent = '$' + s;
+    }
+    updateDebt();
+    setInterval(updateDebt, 1000);
+  })();
+
+  /* --- Quiz --- */
+  var QUIZ = [
+    {
+      q: "Apple's annual profit is approximately:",
+      opts: ["$9.4 billion", "$940 million", "$94 billion", "$940 billion"],
+      ans: 2,
+      fb: "Apple earned ~$94B in FY2024. That's $3,000 every second. $9.4B would be a modest large company; $940B would be more than the US government's tax revenue."
+    },
+    {
+      q: "If you invested $1,000 at 7%/year for 40 years, you'd end up with approximately:",
+      opts: ["$3,800", "$14,974", "$28,000", "$149,745"],
+      ans: 1,
+      fb: "$1,000 × (1.07)^40 ≈ $14,974. Compound interest over 40 years gives ~15× your money. Many people dramatically underestimate this."
+    },
+    {
+      q: "The US national debt is closest to:",
+      opts: ["$3.6 trillion", "$36 trillion", "$360 billion", "$3.6 billion"],
+      ans: 1,
+      fb: "~$36 trillion as of 2025, growing by ~$2.2T per year. For scale, the entire US GDP is ~$29T — the debt exceeds annual economic output."
+    },
+    {
+      q: "In 1974, $100 had approximately the same buying power as how much today?",
+      opts: ["$120", "$220", "$450", "$640"],
+      ans: 3,
+      fb: "About $640 in today's dollars. US prices have risen ~540% since 1974. The 1970s oil shock inflation was especially severe."
+    },
+    {
+      q: "Saudi Aramco, Apple, and Alphabet each earned more profit last year than which country's entire GDP?",
+      opts: ["Luxembourg", "New Zealand", "Sweden", "Portugal"],
+      ans: 2,
+      fb: "Sweden's GDP is ~$590B. Each of those three companies earned $94–106B in profit alone — and Apple's revenue (~$391B) is about 66% of Sweden's total economic output."
+    },
+    {
+      q: "Microsoft's net profit margin (profit as % of revenue) is approximately:",
+      opts: ["7%", "14%", "25%", "37%"],
+      ans: 3,
+      fb: "~37% — one of the highest of any large company. Software has near-zero marginal cost. For comparison, Toyota's margin is ~9%, and Samsung's ~10%."
+    },
+    {
+      q: "At $1 million per day, how long would it take to spend Elon Musk's ~$300B fortune?",
+      opts: ["82 years", "820 years", "8,200 years", "82 days"],
+      ans: 1,
+      fb: "$300B ÷ $1M/day = 300,000 days = ~820 years. This is the core intuition about why billionaire-scale wealth is functionally different from mere millionaire wealth."
+    },
+    {
+      q: "The Rule of 72 says: at 6% annual inflation, prices double in approximately:",
+      opts: ["6 years", "12 years", "18 years", "72 years"],
+      ans: 1,
+      fb: "72 ÷ 6 = 12 years. This rule works for any compounding rate: at 3%, it's 24 years; at 9%, just 8 years. It's one of the most useful mental math shortcuts in finance."
+    },
+    {
+      q: "The US government runs a deficit of roughly how much per year?",
+      opts: ["$220 billion", "$700 billion", "$2.2 trillion", "$7 trillion"],
+      ans: 2,
+      fb: "~$2.2 trillion/year (2024 figure). This means the government spends $2.2T more than it collects in taxes each year — all of which adds to the national debt."
+    },
+    {
+      q: "Japan's debt-to-GDP ratio of ~261% hasn't caused a default mainly because:",
+      opts: [
+        "Japan's economy is growing fast enough to outrun the debt",
+        "~90% of the debt is held by Japanese citizens and institutions",
+        "Japan's debt is actually smaller than reported",
+        "The IMF guaranteed Japan's debt"
+      ],
+      ans: 1,
+      fb: "The key is who holds the debt. Domestic creditors are far less likely to trigger a crisis — they hold yen, they're Japanese, and the central bank can intervene. External debt crises happen when foreign creditors demand repayment and a country can't print its way out."
+    }
+  ];
+
+  var qCurrent = 0;
+  var qScore = 0;
+  var qAnswered = false;
+
+  function renderQuestion() {
+    var q = QUIZ[qCurrent];
+    var html = '<div class="u-fs-13px u-fw-500 text-primary u-mb-md u-lh-1-5">' + q.q + '</div>';
+    for (var i = 0; i < q.opts.length; i++) {
+      html += '<button class="quiz-opt" id="qOpt' + i + '" onclick="answerQ(' + i + ')">' + q.opts[i] + '</button>';
+    }
+    html += '<div class="quiz-feedback" id="qFeedback">' + q.fb + '</div>';
+    if (qCurrent < QUIZ.length - 1) {
+      html += '<button id="qNext" onclick="nextQ()" class="u-display-none u-mt-sm">Next question →</button>';
+    } else {
+      html += '<button id="qNext" onclick="finishQuiz()" class="u-display-none u-mt-sm">See results →</button>';
+    }
+    document.getElementById('quizArea').innerHTML = html;
+    document.getElementById('qNum').textContent = qCurrent + 1;
+    qAnswered = false;
+  }
+
+  function answerQ(chosen) {
+    if (qAnswered) return;
+    qAnswered = true;
+    var q = QUIZ[qCurrent];
+    for (var i = 0; i < q.opts.length; i++) {
+      document.getElementById('qOpt' + i).disabled = true;
+    }
+    if (chosen === q.ans) {
+      qScore++;
+      document.getElementById('qOpt' + chosen).classList.add('correct');
+    } else {
+      document.getElementById('qOpt' + chosen).classList.add('wrong');
+      document.getElementById('qOpt' + q.ans).classList.add('correct');
+    }
+    document.getElementById('qScore').textContent = qScore;
+    document.getElementById('qScoreFill').style.width = (qScore / QUIZ.length * 100) + '%';
+    var fb = document.getElementById('qFeedback');
+    fb.classList.add('show');
+    document.getElementById('qNext').style.display = 'inline-block';
+  }
+
+  function nextQ() {
+    qCurrent++;
+    renderQuestion();
+  }
+
+  function finishQuiz() {
+    document.getElementById('quizArea').style.display = 'none';
+    document.getElementById('quizFinal').style.display = 'block';
+    var pct = Math.round(qScore / QUIZ.length * 100);
+    document.getElementById('qFinalScore').textContent = qScore + ' / ' + QUIZ.length + ' correct (' + pct + '%)';
+    var msgs = [
+      [0, 3, "Just getting started — work through the module again and try once more."],
+      [4, 5, "Solid foundation. A few of these are genuinely tricky."],
+      [6, 7, "Good financial intuition. You've absorbed the scale anchors well."],
+      [8, 9, "Strong. You have a real feel for financial scale."],
+      [10, 10, "Perfect score. You have excellent financial intuition — every number in range."]
+    ];
+    var msg = msgs[0][2];
+    for (var m = 0; m < msgs.length; m++) {
+      if (qScore >= msgs[m][0] && qScore <= msgs[m][1]) { msg = msgs[m][2]; break; }
+    }
+    document.getElementById('qFinalMsg').textContent = msg;
+  }
+
+  function restartQuiz() {
+    qCurrent = 0; qScore = 0; qAnswered = false;
+    document.getElementById('qScore').textContent = '0';
+    document.getElementById('qScoreFill').style.width = '0%';
+    document.getElementById('quizFinal').style.display = 'none';
+    document.getElementById('quizArea').style.display = 'block';
+    renderQuestion();
+  }
+
+  renderQuestion();
+
+  /* --- Currency Converter --- */
+  var FX_RATES = {}; // keyed by currency code, value = units per 1 USD
+
+  /* Fallback approximate rates (mid-April 2025) */
+  var FX_FALLBACK = {
+    USD: 1, EUR: 0.924, GBP: 0.772, JPY: 142.5, CNY: 7.27,
+    CHF: 0.881, CAD: 1.383, AUD: 1.573, INR: 83.9,
+    BRL: 5.72, MXN: 17.15, KRW: 1370, SGD: 1.344,
+    SAR: 3.75, SEK: 10.38, NOK: 10.72, TRY: 38.2, RUB: 89.5
+  };
+
+  var FX_META = {
+    USD: { flag:'🇺🇸', name:'US Dollar',        symbol:'$'  },
+    EUR: { flag:'🇪🇺', name:'Euro',             symbol:'€'  },
+    GBP: { flag:'🇬🇧', name:'British Pound',    symbol:'£'  },
+    JPY: { flag:'🇯🇵', name:'Japanese Yen',     symbol:'¥'  },
+    CNY: { flag:'🇨🇳', name:'Chinese Yuan',     symbol:'¥'  },
+    CHF: { flag:'🇨🇭', name:'Swiss Franc',      symbol:'Fr' },
+    CAD: { flag:'🇨🇦', name:'Canadian Dollar',  symbol:'$'  },
+    AUD: { flag:'🇦🇺', name:'Australian Dollar',symbol:'$'  },
+    INR: { flag:'🇮🇳', name:'Indian Rupee',     symbol:'₹'  },
+    BRL: { flag:'🇧🇷', name:'Brazilian Real',   symbol:'R$' },
+    MXN: { flag:'🇲🇽', name:'Mexican Peso',     symbol:'$'  },
+    KRW: { flag:'🇰🇷', name:'Korean Won',       symbol:'₩'  },
+    SGD: { flag:'🇸🇬', name:'Singapore Dollar', symbol:'$'  },
+    SAR: { flag:'🇸🇦', name:'Saudi Riyal',      symbol:'﷼'  },
+    SEK: { flag:'🇸🇪', name:'Swedish Krona',    symbol:'kr' },
+    NOK: { flag:'🇳🇴', name:'Norwegian Krone',  symbol:'kr' },
+    TRY: { flag:'🇹🇷', name:'Turkish Lira',     symbol:'₺'  },
+    RUB: { flag:'🇷🇺', name:'Russian Ruble',    symbol:'₽'  }
+  };
+
+  var FX_ORDER = ['USD','EUR','GBP','JPY','CNY','CHF','CAD','AUD','INR','BRL','MXN','KRW','SGD','SAR','SEK','NOK','TRY','RUB'];
+  var fxLive = false;
+
+  function fxFmt(n, code) {
+    if (code === 'JPY' || code === 'KRW' || code === 'INR') {
+      return n >= 1000 ? n.toLocaleString('en-US', {maximumFractionDigits: 0})
+                       : n.toFixed(0);
+    }
+    return n.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  }
+
+  function convertFX() {
+    var rates = fxLive ? FX_RATES : FX_FALLBACK;
+    var amount = parseFloat(document.getElementById('fxAmount').value);
+    var fromCode = document.getElementById('fxFrom').value;
+    if (isNaN(amount) || amount < 0) return;
+
+    /* Convert input to USD first, then to each target */
+    var inUSD = amount / rates[fromCode];
+    var html = '';
+
+    for (var i = 0; i < FX_ORDER.length; i++) {
+      var code = FX_ORDER[i];
+      if (code === fromCode) continue;
+      var m = FX_META[code];
+      var converted = inUSD * rates[code];
+      html +=
+        '<div class="fx-card">' +
+          '<div class="fx-flag">' + m.flag + ' <span class="u-fs-11px u-fw-500 text-secondary">' + code + '</span></div>' +
+          '<div class="fx-currency">' + m.name + '</div>' +
+          '<div class="fx-amount">' + m.symbol + fxFmt(converted, code) + '</div>' +
+        '</div>';
+    }
+    document.getElementById('fxGrid').innerHTML = html;
+  }
+
+  /* Fetch live rates from open.er-api.com (free, no key required) */
+  (function fetchFXRates() {
+    fetch('https://open.er-api.com/v6/latest/USD')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data && data.rates) {
+          for (var c in FX_META) {
+            if (data.rates[c]) FX_RATES[c] = data.rates[c];
+            else FX_RATES[c] = FX_FALLBACK[c]; // fill missing with fallback
+          }
+          fxLive = true;
+          var d = new Date(data.time_last_update_utc || Date.now());
+          document.getElementById('fxSubtitle').textContent =
+            'Enter an amount in any currency and see the equivalent in all others. Rates are live.';
+          document.getElementById('fxTimestamp').textContent =
+            'Rates updated: ' + d.toUTCString().replace(' GMT','') + ' UTC';
+          convertFX();
+        }
+      })
+      .catch(function() {
+        /* Silently use fallback — already loaded */
+        document.getElementById('fxTimestamp').textContent =
+          'Live rates unavailable — showing approximate reference rates (mid-April 2025).';
+        FX_RATES = FX_FALLBACK;
+        convertFX();
+      });
+    /* Show fallback immediately while fetch is in flight */
+    FX_RATES = FX_FALLBACK;
+    convertFX();
+  })();
+  
+</script>

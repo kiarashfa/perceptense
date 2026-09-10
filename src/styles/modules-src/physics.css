@@ -1,0 +1,261 @@
+
+    :root {
+      --accent: #534AB7;
+      --accent-bg: #EEEDFE;
+      --accent-border: #A9A4E8;
+      --accent-light: #7B74CC;
+      --q-blue: #0C447C;
+      --q-blue-bg: #E6F1FB;
+      --q-blue-border: #85B7EB;
+    }
+
+    /* ---- QUANTUM SECTION HEADINGS ---- */
+    .sec-quantum {
+      margin: 2rem 0 0.6rem;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--q-blue);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border-bottom: 0.5px solid var(--q-blue-border);
+      padding-bottom: 5px;
+    }
+
+    /* ---- EXPLORER PANEL ---- */
+    .explorer-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .explorer-btns button { padding: 4px 11px; font-size: 12px; }
+    .explorer-btns button.active {
+      background: var(--accent-bg);
+      border-color: var(--accent-border);
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .explorer-panel {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px 16px;
+      min-height: 80px;
+    }
+    .ep-title { font-size: 14px; font-weight: 600; color: var(--color-text-primary); margin: 0 0 6px; }
+    .ep-body { font-size: 13px; color: var(--color-text-primary); line-height: 1.65; margin: 0; }
+    .ep-note { font-size: 12px; color: var(--color-text-secondary); margin: 6px 0 0; font-style: italic; }
+
+    /* ---- TIMELINE / PERIOD CHART ---- */
+    .pc-wrap { overflow-x: auto; padding-bottom: 6px; }
+    .pc-axis { position: relative; height: 20px; margin: 0 25px 2px 140px; }
+    .pc-axis-mark { position: absolute; font-size: 10px; color: var(--color-text-tertiary); transform: translateX(-50%); }
+    .pc-row { display: flex; align-items: center; margin-bottom: 5px; min-width: 400px; margin-right: 20px;}
+    .pc-label { width: 140px; flex-shrink: 0; font-size: 12px; color: var(--color-text-secondary); text-align: right; padding-right: 10px; line-height: 1.3; }
+    .pc-track { flex: 1; height: 20px; background: var(--color-background-tertiary); border-radius: 3px; position: relative; }
+    .pc-fill { position: absolute; height: 100%; border-radius: 3px; display: flex; align-items: center; overflow: hidden; min-width: 4px; }
+    .pc-fill-label { font-size: 10px; font-weight: 500; white-space: nowrap; padding: 0 6px; overflow: hidden; }
+
+    /* ---- RANGE SLIDER WIDGET ---- */
+    .slider-wrap { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 14px 16px; }
+    .slider-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .slider-end-label { font-size: 11px; color: var(--color-text-tertiary); flex-shrink: 0; width: 80px; }
+    .slider-end-label.right { text-align: right; }
+    .slider-output { text-align: center; font-size: 15px; font-weight: 600; color: var(--accent); margin: 6px 0 0; }
+    .slider-sub { text-align: center; font-size: 12px; color: var(--color-text-secondary); margin: 2px 0 0; }
+
+    /* ---- MULTI-CARD EXPLORER (dot grid) ---- */
+    .elem-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; margin-bottom: 10px; }
+    .elem-card {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.1s, border-color 0.1s;
+    }
+    .elem-card:hover { background: var(--color-background-primary); border-color: var(--color-border-secondary); }
+    .elem-card.active { background: var(--accent-bg); border-color: var(--accent-border); }
+    .elem-card .ec-icon { font-size: 20px; margin-bottom: 4px; }
+    .elem-card .ec-label { font-size: 11px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; }
+    .elem-detail {
+      display: none;
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px 16px;
+    }
+    .ed-title { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin: 0 0 5px; }
+    .ed-body { font-size: 13px; color: var(--color-text-primary); line-height: 1.65; margin: 0; }
+
+    /* ---- COMPARISON SCALE ---- */
+    .cscale-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--color-text-tertiary); margin: 0 0 4px; }
+    .cscale-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .cscale-name { width: 160px; flex-shrink: 0; font-size: 12px; color: var(--color-text-secondary); text-align: right; padding-right: 8px; line-height: 1.3; }
+    .cscale-track { flex: 1; height: 6px; background: var(--color-background-tertiary); border-radius: 3px; position: relative; }
+    .cscale-dot { position: absolute; top: 50%; transform: translate(-50%, -50%); width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--color-background-primary); }
+    .cscale-val { width: 40px; font-size: 11px; color: var(--color-text-secondary); flex-shrink: 0; }
+
+    /* ---- PIE / DISTRIBUTION BAR ---- */
+    .distbar { display: flex; height: 28px; border-radius: 6px; overflow: hidden; margin-bottom: 8px; }
+    .distbar-seg { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; white-space: nowrap; overflow: hidden; }
+    .distbar-legend { display: flex; flex-wrap: wrap; gap: 8px; }
+    .dbl-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-text-secondary); }
+    .dbl-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+    /* ---- CALCULATOR ---- */
+    .calc-box {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px 16px;
+    }
+    .calc-row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+    .calc-row label { font-size: 12px; color: var(--color-text-secondary); flex-shrink: 0; }
+    .calc-row input { flex: 1; min-width: 80px; }
+    .calc-output {
+      margin-top: 10px;
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 13px;
+      font-size: 13px;
+      color: var(--color-text-primary);
+      min-height: 44px;
+      display: none;
+    }
+    .calc-output.show { display: block; }
+    .calc-highlight { font-size: 16px; font-weight: 600; color: var(--accent); }
+
+    /* ---- SVG DIAGRAM ---- */
+    .diagram-wrap { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }
+    .diagram-caption { font-size: 11px; color: var(--color-text-tertiary); text-align: center; padding: 6px 0 8px; background: var(--color-background-secondary); }
+
+    /* ---- INFO BLOCKS ---- */
+    .info-block {
+      background: var(--q-blue-bg);
+      border: 0.5px solid var(--q-blue-border);
+      border-radius: var(--border-radius-lg);
+      padding: 11px 14px;
+      font-size: 12px;
+      color: var(--q-blue);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .warn-block {
+      background: var(--color-background-warning);
+      border: 0.5px solid var(--color-border-warning);
+      border-radius: var(--border-radius-lg);
+      padding: 11px 14px;
+      font-size: 12px;
+      color: var(--color-text-warning);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .success-block {
+      background: var(--color-background-success);
+      border: 0.5px solid var(--color-border-success);
+      border-radius: var(--border-radius-lg);
+      padding: 11px 14px;
+      font-size: 12px;
+      color: var(--color-text-success);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    /* ---- QUANTUM CARDS ---- */
+    .qcard {
+      background: var(--q-blue-bg);
+      border: 0.5px solid var(--q-blue-border);
+      border-radius: var(--border-radius-lg);
+      padding: 13px 15px;
+      margin-bottom: 10px;
+    }
+    .qcard .clabel { color: var(--q-blue); }
+
+    /* ---- DOUBLE SLIT ANIMATION ---- */
+    #slit-canvas { display: block; border-radius: var(--border-radius-md); }
+
+    /* ---- FORMULA DISPLAY ---- */
+    .formula {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 0.5px solid var(--accent-border);
+      border-radius: var(--border-radius-md);
+      padding: 8px 14px;
+      text-align: center;
+      margin: 8px 0;
+    }
+
+    @media (max-width: 500px) {
+      .bl { width: 90px; font-size: 11px; }
+      .pc-label { width: 90px; }
+      .cscale-name { width: 100px; }
+    }
+
+/* === Shared-ready extracted styles === */
+
+.module-header-icon-accent {
+  font-size:42px;
+  color:var(--accent);
+  flex-shrink:0;
+}
+
+/* === Module-specific extracted styles === */
+
+.physics-text-2 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+}
+
+.cgrid-style-2 {
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  margin-bottom:10px;
+}
+
+.spacetime-svg {
+  width:100%;
+  display:block;
+  background:var(--color-background-secondary);
+}
+
+.td-speed {
+  max-width:100px;
+}
+
+.td-time {
+  max-width:80px;
+}
+
+.bh-grid {
+  grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+}
+
+.slit-canvas {
+  width:100%;
+  border-radius:var(--border-radius-md);
+}
+
+.physics-row {
+  display:flex;
+  gap:8px;
+  margin-top:8px;
+  flex-wrap:wrap;
+}
+
+.cnote-style-2 {
+  margin-top:6px;
+}
+
+.weird-grid {
+  grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
+}
+
+.physics-text-3 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin:0 0 8px;
+}
+
+.sm-grid {
+  grid-template-columns:repeat(auto-fill,minmax(76px,1fr));
+}
+  

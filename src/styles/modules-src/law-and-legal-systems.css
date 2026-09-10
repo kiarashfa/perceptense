@@ -1,0 +1,579 @@
+
+    :root {
+      --accent: #7B5EA7;
+      --accent-bg: #F0ECF7;
+      --accent-border: #C7B8DD;
+      --tax-accent: #2E7D6B;
+      --tax-accent-bg: #E4F4F0;
+      --tax-accent-border: #8ECBBE;
+    }
+
+    .module-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 0.6rem;
+    }
+    .module-head i {
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 42px;
+    }
+    .module-head .module-title {
+      line-height: 1.05;
+      margin: 0;
+    }
+    .card .clabel {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .card .cval {
+      color: var(--color-text-secondary);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .mini-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+    .mini-buttons button {
+      font-size: 11px;
+      padding: 3px 9px;
+    }
+    .mini-buttons button.active {
+      background: var(--accent-bg);
+      border-color: var(--accent-border);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .tax-mini-buttons button.active {
+      background: var(--tax-accent-bg);
+      border-color: var(--tax-accent-border);
+      color: var(--tax-accent);
+      font-weight: 600;
+    }
+    .explorer-panel,
+    .detail-panel,
+    .period-chart,
+    .compute-box,
+    .distribution-box,
+    .scale-box,
+    .svg-card,
+    .chart-card,
+    .slider-box {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 1rem;
+      padding: 13px 15px;
+    }
+    .explorer-title {
+      color: var(--color-text-primary);
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .explorer-body {
+      color: var(--color-text-secondary);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .dense-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+    .micro-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+    .note-card {
+      background: var(--color-background-secondary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-md);
+      color: var(--color-text-secondary);
+      font-size: 12px;
+      line-height: 1.6;
+      padding: 10px 12px;
+    }
+    .info-block {
+      background: var(--color-background-info);
+      border: 0.5px solid var(--color-border-info);
+      border-radius: var(--border-radius-lg);
+      color: var(--color-text-info);
+      font-size: 12px;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      padding: 12px 14px;
+    }
+    .warning-block {
+      background: var(--color-background-warning);
+      border: 0.5px solid var(--color-border-warning);
+      border-radius: var(--border-radius-lg);
+      color: var(--color-text-warning);
+      font-size: 12px;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      padding: 12px 14px;
+    }
+
+    .period-chart {
+      overflow-x: auto;
+    }
+    .pc-inner {
+      min-width: 620px;
+    }
+    .pc-axis {
+      height: 18px;
+      margin-left: 148px;
+      position: relative;
+    }
+    .pc-axis-mark {
+      color: var(--color-text-tertiary);
+      font-size: 9px;
+      position: absolute;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+    .pc-row {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+      margin-bottom: 7px;
+    }
+    .pc-label {
+      color: var(--color-text-secondary);
+      flex-shrink: 0;
+      font-size: 11px;
+      text-align: right;
+      width: 140px;
+    }
+    .pc-track {
+      background: var(--color-background-secondary);
+      border-radius: 3px;
+      flex: 1;
+      height: 17px;
+      min-width: 240px;
+      position: relative;
+    }
+    .pc-fill {
+      align-items: center;
+      border-radius: 3px;
+      display: flex;
+      height: 100%;
+      padding: 0 5px;
+      position: absolute;
+      top: 0;
+    }
+    .pc-fill-label {
+      font-size: 9px;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .process-svg {
+      display: block;
+      min-width: 420px;
+      width: 100%;
+    }
+    .svg-scroll {
+      overflow-x: auto;
+    }
+    .svg-caption {
+      color: var(--color-text-tertiary);
+      font-size: 11px;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    .slider-top {
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .slider-value {
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .range-labels {
+      color: var(--color-text-tertiary);
+      display: flex;
+      font-size: 11px;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    .slider-result {
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      color: var(--color-text-primary);
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 10px;
+      min-height: 52px;
+      padding: 10px 12px;
+    }
+
+    .elem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .elem-card {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      cursor: pointer;
+      padding: 11px 12px;
+      text-align: center;
+      transition: background 0.12s, border-color 0.12s;
+    }
+    .elem-card:hover,
+    .elem-card.active {
+      background: var(--accent-bg);
+      border-color: var(--accent-border);
+    }
+    .elem-icon {
+      color: var(--accent);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .elem-name {
+      color: var(--color-text-primary);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .elem-sub {
+      color: var(--color-text-secondary);
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    /* Tax section elem cards use teal accent */
+    .tax-elem-card:hover,
+    .tax-elem-card.active {
+      background: var(--tax-accent-bg);
+      border-color: var(--tax-accent-border);
+    }
+    .tax-elem-card .elem-icon {
+      color: var(--tax-accent);
+    }
+
+    .compute-box {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 1rem;
+      padding: 13px 15px;
+    }
+    .compute-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .input-label {
+      color: var(--color-text-secondary);
+      font-size: 11px;
+      margin-bottom: 4px;
+    }
+    .compute-output {
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      color: var(--color-text-primary);
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 10px;
+      min-height: 44px;
+      padding: 10px 12px;
+    }
+
+    .distribution-bar {
+      border-radius: var(--border-radius-md);
+      display: flex;
+      height: 28px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .dist-seg {
+      min-width: 2px;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .legend-item {
+      align-items: center;
+      color: var(--color-text-secondary);
+      display: flex;
+      font-size: 11px;
+      gap: 5px;
+    }
+    .legend-swatch {
+      border-radius: 2px;
+      height: 10px;
+      width: 10px;
+    }
+
+    .cscale-row {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      margin-bottom: 9px;
+    }
+    .cscale-name {
+      color: var(--color-text-primary);
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 500;
+      width: 130px;
+    }
+    .cscale-track {
+      background: var(--color-background-secondary);
+      border-radius: 99px;
+      flex: 1;
+      height: 12px;
+      position: relative;
+    }
+    .cscale-dot {
+      background: var(--accent);
+      border: 2px solid var(--color-background-primary);
+      border-radius: 50%;
+      height: 14px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+    }
+    .scale-poles {
+      color: var(--color-text-tertiary);
+      display: flex;
+      font-size: 10px;
+      justify-content: space-between;
+      margin: 2px 0 10px 140px;
+    }
+
+    .chart-title {
+      color: var(--color-text-primary);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .bar-row {
+      margin-bottom: 8px;
+    }
+    .chart-card .bb {
+      background: var(--color-background-secondary);
+      flex: 1;
+      overflow: hidden;
+      padding: 0;
+    }
+    .chart-card .bar-fill {
+      height: 100%;
+      border-radius: 3px;
+    }
+    .bar-note {
+      color: var(--color-text-tertiary);
+      font-size: 11px;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    .tagline {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .tiny-label {
+      color: var(--color-text-secondary);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* --- Tax bracket visualiser --- */
+    .bracket-vis {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 1rem;
+      padding: 13px 15px;
+    }
+    .bracket-slider-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .bracket-val {
+      color: var(--tax-accent);
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .bracket-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+    .bracket-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .bracket-label {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      width: 160px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .bracket-track {
+      flex: 1;
+      height: 18px;
+      background: var(--color-background-secondary);
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bracket-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.25s ease;
+    }
+    .bracket-amount {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      width: 70px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .bracket-summary {
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 12px;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* --- Tariff flow diagram --- */
+    .tariff-flow {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 1rem;
+      padding: 13px 15px;
+    }
+
+    /* --- Tax timeline (compact) --- */
+    .tax-history-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+    .tax-era-card {
+      background: var(--color-background-secondary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 12px;
+    }
+    .tax-era-year {
+      color: var(--tax-accent);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .tax-era-label {
+      color: var(--color-text-primary);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+    .tax-era-desc {
+      color: var(--color-text-secondary);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    /* --- Incidence and deadweight visualiser --- */
+    .tax-compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    /* --- Views on taxation --- */
+    .views-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+    .views-tabs button {
+      font-size: 11px;
+      padding: 3px 9px;
+    }
+    .views-tabs button.active {
+      background: var(--tax-accent-bg);
+      border-color: var(--tax-accent-border);
+      color: var(--tax-accent);
+      font-weight: 600;
+    }
+
+    @media (max-width: 500px) {
+      .pc-label {
+        font-size: 10px;
+        width: 90px;
+      }
+      .pc-axis {
+        margin-left: 98px;
+      }
+      .cscale-name {
+        width: 88px;
+      }
+      .scale-poles {
+        margin-left: 98px;
+      }
+      .bl {
+        width: 92px;
+      }
+      .bracket-label {
+        width: 90px;
+      }
+      .tax-compare-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  

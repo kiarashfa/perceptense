@@ -1,0 +1,1005 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/the-human-body.css';
+
+const mod = modules.find((m) => m.id === 2)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+    <div class="module-header">
+      <i class="fa-solid fa-heart-pulse module-header-icon"></i>
+      <h1 class="module-title module-heading">Module 2: The Human Body</h1>
+    </div>
+    <p class="module-subtitle">Hair, vital signs, bones, senses, chromosomes, and the physical body in numbers</p>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-a-your-hair">Part A · your hair</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Hair strands on a human head</p>
+        <p class="cval">~100,000</p>
+        <p class="cnote">Range: 80,000–150,000. Blondes typically have most (~150k); redheads fewest (~80k); brunettes in between (~110k).</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Hair growth rate</p>
+        <p class="cval">~1.25 cm/month</p>
+        <p class="cnote">About 15 cm per year. To grow shoulder-length hair from bald takes roughly 2½ years.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Hair you shed per day</p>
+        <p class="cval">~50–100 strands</p>
+        <p class="cnote">Normal shedding. Each hair lives ~2–7 years before falling out and regrowing.</p>
+      </div>
+    </div>
+
+    <!-- Hair growth timeline — theme-adaptive -->
+    <div class="content-panel">
+      <div class="panel-title">Hair growth: how long to reach each length?</div>
+
+      <div class="timeline-row">
+        <span class="tl-label">Buzz cut (1 cm)</span>
+        <div class="tl-bar tl-bar-buzz"><span class="tl-val">~1 mo</span></div>
+      </div>
+      <div class="timeline-row">
+        <span class="tl-label">Ear-length (10 cm)</span>
+        <div class="tl-bar tl-bar-ear"><span class="tl-val">8 mo</span></div>
+      </div>
+      <div class="timeline-row">
+        <span class="tl-label">Chin-length (20 cm)</span>
+        <div class="tl-bar tl-bar-chin"><span class="tl-val">16 mo</span></div>
+      </div>
+      <div class="timeline-row">
+        <span class="tl-label">Shoulder (35 cm)</span>
+        <div class="tl-bar tl-bar-shoulder"><span class="tl-val">~2.5 yr</span></div>
+      </div>
+      <div class="timeline-row">
+        <span class="tl-label">Mid-back (55 cm)</span>
+        <div class="tl-bar tl-bar-midback"><span class="tl-val">~4 yr</span></div>
+      </div>
+      <div class="timeline-row">
+        <span class="tl-label">Waist-length (70 cm)</span>
+        <div class="tl-bar tl-bar-waist"><span class="tl-val">~5 yr</span></div>
+      </div>
+      <p class="panel-note">Based on 1.25 cm/month average. Individual growth varies ±30%.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-b-vital-signs">Part B · vital signs</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Resting heart rate (adult)</p>
+        <p class="cval">60–100 bpm</p>
+        <p class="cnote">Elite athletes often sit at 40–60 bpm. Your heart beats ~100,000 times every single day.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Normal body temperature</p>
+        <p class="cval">36.1–37.2 °C</p>
+        <p class="cnote">The old "98.6 °F / 37 °C" is a population average, not a fixed target. Individual normals vary by ~0.5 °C.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Normal blood pressure</p>
+        <p class="cval">120 / 80 mmHg</p>
+        <p class="cnote">Systolic (top) / Diastolic (bottom). Above 130/80 is considered elevated by current guidelines (AHA 2017).</p>
+      </div>
+    </div>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Breaths per minute (adult at rest)</p>
+        <p class="cval">12–20 /min</p>
+        <p class="cnote">You take roughly 17,000–23,000 breaths per day. Each breath moves about 0.5 L of air.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Blood oxygen saturation (SpO₂)</p>
+        <p class="cval">95–100%</p>
+        <p class="cnote">Below 90% is clinically significant hypoxia. Most pulse oximeters start alarming below 94%.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Blood volume (adult)</p>
+        <p class="cval">~4.5–6 L</p>
+        <p class="cnote">About 7–8% of body weight. Losing >40% (class IV hemorrhage) is immediately life-threatening.</p>
+      </div>
+    </div>
+
+    <!-- Heart rate zone explorer -->
+    <div class="content-panel">
+      <div class="panel-title panel-title-medium">Heart rate zones — interactive explorer</div>
+      <p class="panel-subtitle">Drag the slider to your age. The zones update based on the 220 − age formula (Karvonen approximation).</p>
+      <div class="hr-age-row">
+        <span class="hr-age-lbl">Age:</span>
+        <input type="range" id="hrAge" class="heart-rate-slider" min="15" max="80" value="35">
+        <span class="hr-age-val" id="hrAgeVal">35</span>
+        <span class="hr-age-lbl">Max HR: <span id="hrMax" class="strong-primary">185</span> bpm</span>
+      </div>
+      <div class="hr-zone-rows" id="hrZoneRows"></div>
+      <p class="panel-note panel-note-compact">Note: 220 − age is a population average formula with ±12 bpm standard deviation. Use a chest strap for precision.</p>
+    </div>
+
+    <!-- Heartbeats in a lifetime SVG infographic -->
+    <div class="content-panel">
+      <div class="panel-title">Your heart in numbers</div>
+      <svg class="heart-svg" viewBox="0 0 580 90" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style is:inline>
+            .hb-box { rx: 8; }
+          </style>
+        </defs>
+        <!-- Box 1 -->
+        <rect x="2" y="5" width="130" height="80" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="67" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="500" fill="var(--color-text-primary)">~100k</text>
+        <text x="67" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="var(--color-text-secondary)">beats per day</text>
+        <text x="67" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="var(--color-text-tertiary)">at 70 bpm resting</text>
+        <!-- Box 2 -->
+        <rect x="148" y="5" width="130" height="80" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="213" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="500" fill="var(--color-text-primary)">~36M</text>
+        <text x="213" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="var(--color-text-secondary)">beats per year</text>
+        <text x="213" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="var(--color-text-tertiary)">≈ 36,500,000</text>
+        <!-- Box 3 -->
+        <rect x="294" y="5" width="130" height="80" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="359" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="500" fill="var(--color-text-primary)">~2.5B</text>
+        <text x="359" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="var(--color-text-secondary)">beats in a lifetime</text>
+        <text x="359" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="var(--color-text-tertiary)">over ~70 years</text>
+        <!-- Box 4 -->
+        <rect x="440" y="5" width="138" height="80" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="509" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="500" fill="var(--color-text-primary)">200 mL</text>
+        <text x="509" y="48" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10.5" fill="var(--color-text-secondary)">pumped per beat</text>
+        <text x="509" y="72" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="var(--color-text-tertiary)">at peak exertion</text>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-c-bones-and-body-composition">Part C · bones &amp; body composition</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Bones in the adult body</p>
+        <p class="cval">206</p>
+        <p class="cnote">Newborns have ~270–300, as many bones fuse during childhood. The last fusions (clavicles, wisdom teeth sockets) occur in the mid-20s.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Muscles in the human body</p>
+        <p class="cval">~600–650</p>
+        <p class="cnote">Depends on counting method. Skeletal muscles only: ~640. The gluteus maximus is the largest by volume; the stapedius in the ear is the smallest.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Joints in the adult body</p>
+        <p class="cval">~360</p>
+        <p class="cnote">Varies by definition. Roughly 80 are freely movable (synovial) joints — the kind you feel when you crack your knuckles.</p>
+      </div>
+    </div>
+
+    <!-- Bone region explorer -->
+    <div class="bone-explorer">
+      <div class="panel-title">Where are the 206 bones?</div>
+      <div class="bone-tabs">
+        <button class="bone-tab active" onclick="showBoneRegion('skull')">Skull &amp; face</button>
+        <button class="bone-tab" onclick="showBoneRegion('spine')">Spine</button>
+        <button class="bone-tab" onclick="showBoneRegion('thorax')">Thorax</button>
+        <button class="bone-tab" onclick="showBoneRegion('arms')">Arms &amp; hands</button>
+        <button class="bone-tab" onclick="showBoneRegion('pelvis')">Pelvis &amp; legs</button>
+        <button class="bone-tab" onclick="showBoneRegion('feet')">Feet</button>
+      </div>
+      <div class="bone-content" id="boneContent">
+        <div class="bone-count" id="boneCount">28</div>
+        <div id="boneDetail" class="bone-detail"></div>
+        <div class="bone-note" id="boneNote"></div>
+      </div>
+    </div>
+
+    <!-- Body composition donut chart -->
+    <div class="content-panel">
+      <div class="panel-title panel-title-spacious">What is your body made of? (average adult, by weight)</div>
+      <div class="donut-wrap">
+        <!-- SVG donut chart -->
+        <svg class="donut-svg" viewBox="0 0 140 140" width="130" height="130">
+          <!-- Water 60% -->
+          <circle cx="70" cy="70" r="50" fill="none" stroke="#378ADD" stroke-width="24"
+            stroke-dasharray="188.5 125.7" stroke-dashoffset="0" transform="rotate(-90 70 70)"/>
+          <!-- Protein 16% -->
+          <circle cx="70" cy="70" r="50" fill="none" stroke="var(--accent)" stroke-width="24"
+            stroke-dasharray="50.3 264.0" stroke-dashoffset="-188.5" transform="rotate(-90 70 70)"/>
+          <!-- Fat 15% -->
+          <circle cx="70" cy="70" r="50" fill="none" stroke="#EF9F27" stroke-width="24"
+            stroke-dasharray="47.1 267.2" stroke-dashoffset="-238.8" transform="rotate(-90 70 70)"/>
+          <!-- Mineral 5% -->
+          <circle cx="70" cy="70" r="50" fill="none" stroke="#97C459" stroke-width="24"
+            stroke-dasharray="15.7 298.5" stroke-dashoffset="-285.9" transform="rotate(-90 70 70)"/>
+          <!-- Other 4% -->
+          <circle cx="70" cy="70" r="50" fill="none" stroke="#A8A69E" stroke-width="24"
+            stroke-dasharray="12.6 301.6" stroke-dashoffset="-301.6" transform="rotate(-90 70 70)"/>
+          <text x="70" y="67" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="var(--color-text-secondary)">by</text>
+          <text x="70" y="80" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="var(--color-text-secondary)">weight</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="donut-leg-row"><div class="donut-leg-swatch donut-water"></div><span class="donut-leg-label">Water</span><span class="donut-leg-pct">~60%</span></div>
+          <div class="donut-leg-row"><div class="donut-leg-swatch donut-protein"></div><span class="donut-leg-label">Protein (muscle, organs)</span><span class="donut-leg-pct">~16%</span></div>
+          <div class="donut-leg-row"><div class="donut-leg-swatch donut-fat"></div><span class="donut-leg-label">Fat (essential + storage)</span><span class="donut-leg-pct">~15%</span></div>
+          <div class="donut-leg-row"><div class="donut-leg-swatch donut-minerals"></div><span class="donut-leg-label">Minerals (bone matrix)</span><span class="donut-leg-pct">~5%</span></div>
+          <div class="donut-leg-row"><div class="donut-leg-swatch donut-other"></div><span class="donut-leg-label">Carbohydrates + other</span><span class="donut-leg-pct">~4%</span></div>
+        </div>
+      </div>
+      <p class="panel-note panel-note-flush">Values for a typical lean adult male. Body fat % varies substantially: essential fat is ~3–5% (men) and ~10–13% (women); average adults carry 15–25%.</p>
+    </div>
+
+    <!-- Organ weights bar chart -->
+    <div class="content-panel">
+      <div class="panel-title">How much do your organs weigh?</div>
+
+      <div class="organ-row"><span class="organ-lbl">Skin</span><div class="bb bar-info organ-skin"><span class="bv bar-info-text">~4–5 kg — the heaviest organ by far</span></div></div>
+      <div class="organ-row"><span class="organ-lbl">Liver</span><div class="bb bar-info organ-liver"><span class="bv bar-info-text">~1.5 kg</span></div></div>
+      <div class="organ-row"><span class="organ-lbl">Brain</span><div class="bb bar-info organ-brain"><span class="bv bar-info-text">~1.3–1.4 kg</span></div></div>
+      <div class="organ-row"><span class="organ-lbl">Lungs (×2)</span><div class="bb bar-info organ-lungs"><span class="bv bar-info-text">~1.0–1.2 kg</span></div></div>
+      <div class="organ-row"><span class="organ-lbl">Heart</span><div class="bb bar-info organ-heart"><span class="bv bar-info-text">~300 g</span></div></div>
+      <div class="organ-row"><span class="organ-lbl">Kidneys (×2)</span><div class="bb bar-info organ-kidneys"><span class="bv bar-info-text">~270 g</span></div></div>
+      <div class="organ-row"><span class="organ-lbl">Spleen</span><div class="bb bar-info organ-spleen"><span class="bv bar-info-text">~150 g</span></div></div>
+      <p class="panel-note">Skin is consistently the largest organ, yet rarely thought of as one. It covers ~1.5–2 m² and regenerates completely about every 2–4 weeks.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-d-body-proportions">Part D · body proportions</h2>
+
+    <p class="section-intro">The body has a set of remarkably consistent proportions that have been used by artists, tailors, and doctors for centuries. These are averages — individual variation is ±5–10%.</p>
+
+    <!-- Vitruvian-style proportion diagram -->
+    <div class="diagram-wrap">
+      <svg class="diagram-svg body-diagram-svg" viewBox="0 0 120 260" width="110">
+        <!-- Body silhouette -->
+        <!-- Head -->
+        <ellipse cx="60" cy="22" rx="16" ry="19" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <!-- Neck -->
+        <rect x="54" y="39" width="12" height="9" rx="2" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+        <!-- Torso -->
+        <path d="M38 48 Q34 56 33 80 Q32 110 35 130 L85 130 Q88 110 87 80 Q86 56 82 48 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <!-- Left arm -->
+        <path d="M38 52 Q22 68 20 110 Q19 120 23 124 Q27 124 29 118 Q32 100 36 80 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <!-- Right arm -->
+        <path d="M82 52 Q98 68 100 110 Q101 120 97 124 Q93 124 91 118 Q88 100 84 80 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <!-- Left leg -->
+        <path d="M35 130 Q31 160 30 200 Q29 220 33 235 Q40 238 44 234 Q46 220 47 200 Q48 170 50 130 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <!-- Right leg -->
+        <path d="M85 130 Q89 160 90 200 Q91 220 87 235 Q80 238 76 234 Q74 220 73 200 Q72 170 70 130 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+
+        <!-- Proportion annotation lines -->
+        <!-- Head height bracket -->
+        <line x1="14" y1="3" x2="14" y2="41" stroke="var(--color-border-secondary)" stroke-width="0.8" stroke-dasharray="2,2"/>
+        <line x1="11" y1="3" x2="17" y2="3" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+        <line x1="11" y1="41" x2="17" y2="41" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+        <text x="2" y="24" font-family="system-ui,sans-serif" font-size="7" fill="var(--color-text-tertiary)">1</text>
+
+        <!-- Midpoint line at navel (~130px = midpoint of 260) -->
+        <line x1="25" y1="130" x2="95" y2="130" stroke="var(--color-border-secondary)" stroke-width="0.7" stroke-dasharray="3,3"/>
+
+        <!-- Height indicators on right -->
+        <line x1="106" y1="3" x2="106" y2="257" stroke="var(--color-border-secondary)" stroke-width="0.8" stroke-dasharray="2,2"/>
+        <line x1="103" y1="3" x2="109" y2="3" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+        <line x1="103" y1="257" x2="109" y2="257" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+        <text x="110" y="132" font-family="system-ui,sans-serif" font-size="7" fill="var(--color-text-tertiary)" transform="rotate(90,112,130)">= 8 heads</text>
+
+        <!-- Foot -->
+        <ellipse cx="36" cy="237" rx="10" ry="5" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <ellipse cx="84" cy="237" rx="10" ry="5" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
+      </svg>
+
+      <div class="diagram-legend diagram-legend-fluid">
+        <div class="diagram-legend-title">Classic proportion rules</div>
+        <div class="dleg-row"><div class="dleg-dot dot-blue"></div><div class="dleg-text"><span class="dleg-val">Height = 8 heads.</span> Total body height is approximately 8 times the height of the head. Artists use this as a baseline (heroic figures use 9 heads).</div></div>
+        <div class="dleg-row"><div class="dleg-dot dot-teal"></div><div class="dleg-text"><span class="dleg-val">Wingspan ≈ Height.</span> Arm span from fingertip to fingertip roughly equals your total height — a fact Vitruvius noted in 25 BC.</div></div>
+        <div class="dleg-row"><div class="dleg-dot dot-amber"></div><div class="dleg-text"><span class="dleg-val">Navel at midpoint.</span> The belly button sits at almost exactly the midpoint of total body height.</div></div>
+        <div class="dleg-row"><div class="dleg-dot dot-green"></div><div class="dleg-text"><span class="dleg-val">Foot ≈ Forearm.</span> The length of your foot is roughly equal to the length of your forearm (elbow to wrist).</div></div>
+      </div>
+    </div>
+
+    <!-- Proportion cards -->
+    <div class="prop-grid">
+      <div class="prop-card">
+        <div class="prop-icon">👋</div>
+        <div class="prop-rule">Hand span ≈ face width</div>
+        <div class="prop-note">Your spread hand (pinky to thumb) roughly equals the width of your face. Useful for artists drawing portraits.</div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">👃</div>
+        <div class="prop-rule">Nose length ≈ ear length</div>
+        <div class="prop-note">The height of the nose (tip to bridge) is approximately equal to the length of the ear. Also, both typically equal the distance between the eyes.</div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">🦷</div>
+        <div class="prop-rule">Thumb = 2 joints wide</div>
+        <div class="prop-note">The width of your thumb at the nail is a rough estimate for 1 cm — a useful bodily ruler. The hand from palm base to middle fingertip is about 20 cm.</div>
+      </div>
+      <div class="prop-card">
+        <div class="prop-icon">💪</div>
+        <div class="prop-rule">Neck circumference ≈ wrist × 2</div>
+        <div class="prop-note">A traditional tailor's rule: the neck is roughly twice the wrist circumference, and the waist roughly twice the neck — so waist ≈ 4× wrist.</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-e-blood-and-genetics">Part E · blood &amp; genetics</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Red blood cells in the body</p>
+        <p class="cval">~25 trillion</p>
+        <p class="cnote">By far the most numerous cell type. Each RBC lives ~120 days; your body produces ~2 million new ones per second to keep up.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Total cells in the body</p>
+        <p class="cval">~37 trillion</p>
+        <p class="cnote">Classic estimate (Bianconi et al., 2013). Interestingly, your gut alone hosts ~38 trillion bacterial cells — roughly equal to your own cell count.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Length of all DNA uncoiled</p>
+        <p class="cval">~2 metres</p>
+        <p class="cnote">Per cell nucleus. Across all ~37 trillion cells, that's ~70 billion km — enough to wrap around Earth 175 million times.</p>
+      </div>
+    </div>
+
+    <!-- Blood type distribution -->
+    <div class="content-panel">
+      <div class="panel-title panel-title-tight">Blood type distribution (global average, ABO system)</div>
+      <p class="panel-subtitle">Frequencies vary significantly by ethnicity and geography. These are rough global averages.</p>
+      <div class="blood-grid">
+        <div class="blood-card">
+          <div class="blood-type">O+</div>
+          <div class="blood-pct">~38%</div>
+          <div class="blood-bar blood-o-pos"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">A+</div>
+          <div class="blood-pct">~27%</div>
+          <div class="blood-bar blood-a-pos"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">B+</div>
+          <div class="blood-pct">~20%</div>
+          <div class="blood-bar blood-b-pos"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">AB+</div>
+          <div class="blood-pct">~5%</div>
+          <div class="blood-bar blood-ab-pos"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">O−</div>
+          <div class="blood-pct">~7%</div>
+          <div class="blood-bar blood-o-neg"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">A−</div>
+          <div class="blood-pct">~6%</div>
+          <div class="blood-bar blood-a-neg"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">B−</div>
+          <div class="blood-pct">~2%</div>
+          <div class="blood-bar blood-b-neg"></div>
+        </div>
+        <div class="blood-card">
+          <div class="blood-type">AB−</div>
+          <div class="blood-pct">~1%</div>
+          <div class="blood-bar blood-ab-neg"></div>
+        </div>
+      </div>
+      <p class="panel-note">O− is the "universal donor" for red blood cells — anyone can receive it in an emergency. AB+ is the universal recipient. AB− is the rarest common type (about 1 in 100 people).</p>
+    </div>
+
+    <!-- Blood compatibility interactive matrix -->
+    <div class="content-panel">
+      <div class="panel-title panel-title-tight">Who can donate to whom? — interactive compatibility matrix</div>
+      <p class="panel-subtitle">Click a donor or recipient type to highlight. ✓ = compatible transfusion. This applies to red blood cells — plasma and platelets follow different rules.</p>
+      <div class="compat-control-row">
+        <span class="compat-control-label">Highlight donor:</span>
+        <div id="compatDonorBtns" class="compat-button-row"></div>
+      </div>
+      <div class="compat-control-row compat-control-row-spacious">
+        <span class="compat-control-label">Highlight recipient:</span>
+        <div id="compatRecipBtns" class="compat-button-row"></div>
+      </div>
+      <div id="compatResult" class="compat-result"></div>
+      <div class="compat-wrap">
+        <table class="compat-table" id="compatTable">
+          <thead>
+            <tr>
+              <th class="compat-th-corner compat-th-label">Donor ↓ · Recipient →</th>
+              <th>O−</th><th>O+</th><th>A−</th><th>A+</th><th>B−</th><th>B+</th><th>AB−</th><th>AB+</th>
+            </tr>
+          </thead>
+          <tbody id="compatTbody"></tbody>
+        </table>
+      </div>
+      <div class="compat-legend">
+        <div class="compat-leg-item"><div class="compat-leg-dot compat-dot-compatible"></div>Compatible</div>
+        <div class="compat-leg-item"><div class="compat-leg-dot compat-dot-incompatible"></div>Incompatible</div>
+        <div class="compat-leg-item"><div class="compat-leg-dot compat-dot-self"></div>Same type</div>
+      </div>
+      <p class="panel-note">Why does this matter? Red blood cells carry antigens — protein flags on their surface — and your plasma carries antibodies against foreign antigens. If you receive blood your immune system doesn't recognise as "self," it triggers a haemolytic transfusion reaction: the antibodies attack the donated cells, causing them to burst. This can be fatal. The ABO system and the Rhesus factor (the + / − ) are the two most clinically critical of over 30 known blood group systems.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-f-the-senses">Part F · the senses</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Photoreceptors in the eye</p>
+        <p class="cval">~120M rods, 6M cones</p>
+        <p class="cnote">Rods handle dim-light vision; cones handle colour and fine detail. The fovea (sharpest point) is packed with ~200,000 cones/mm².</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Human hearing range</p>
+        <p class="cval">20 Hz – 20 kHz</p>
+        <p class="cnote">The upper limit degrades with age — most adults over 40 can't hear above 15 kHz. Dogs hear up to ~65 kHz; bats to 110 kHz.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Taste buds</p>
+        <p class="cval">~10,000</p>
+        <p class="cnote">Mostly on the tongue, also on the palate and throat. Each bud lives ~10 days. Smokers and the elderly have fewer and less sensitive buds.</p>
+      </div>
+    </div>
+
+    <!-- Sense comparison — detection thresholds -->
+    <div class="content-panel">
+      <div class="panel-title">How sensitive are your senses? (remarkable detection limits)</div>
+
+      <div class="sense-row">
+        <span class="sense-icon-col">👁️</span>
+        <span class="sense-lbl-col">Vision</span>
+        <div class="sense-bar-col sense-vision"><span class="sense-val-col text-info">A candle flame visible at 48 km on a clear night</span></div>
+      </div>
+      <div class="sense-row">
+        <span class="sense-icon-col">👃</span>
+        <span class="sense-lbl-col">Smell</span>
+        <div class="sense-bar-col sense-smell"><span class="sense-val-col text-success">1 drop of perfume diffused in a 3-room apartment</span></div>
+      </div>
+      <div class="sense-row">
+        <span class="sense-icon-col">👂</span>
+        <span class="sense-lbl-col">Hearing</span>
+        <div class="sense-bar-col sense-hearing"><span class="sense-val-col text-warning">A watch ticking at 6 metres in a quiet room</span></div>
+      </div>
+      <div class="sense-row">
+        <span class="sense-icon-col">👅</span>
+        <span class="sense-lbl-col">Taste</span>
+        <div class="sense-bar-col sense-taste"><span class="sense-val-col text-secondary">1 tsp of sugar in 8 L of water</span></div>
+      </div>
+      <div class="sense-row">
+        <span class="sense-icon-col">✋</span>
+        <span class="sense-lbl-col">Touch</span>
+        <div class="sense-bar-col sense-touch"><span class="sense-val-col text-secondary">A bee wing falling on cheek from 1 cm</span></div>
+      </div>
+      <p class="panel-note">From Miller's "Plans and the Structure of Behavior" (1960) and updated sensory research. These are theoretical absolute thresholds under ideal conditions.</p>
+    </div>
+
+    <!-- Reaction time interactive game -->
+    <div class="content-panel">
+      <div class="panel-title panel-title-tight">🎮 Reaction time tester</div>
+      <p class="panel-subtitle">Click the button, wait for the green signal, then click as fast as you can. The average human visual reaction time is <strong class="primary-emphasis">200–250 ms</strong>.</p>
+      <div class="rt-game">
+        <div class="rt-screen rt-wait" id="rtScreen" onclick="handleRtClick()">
+          Click here to begin
+        </div>
+        <div class="rt-stats">
+          <div class="rt-stat">
+            <div class="rt-stat-val" id="rtLast">—</div>
+            <div class="rt-stat-lbl">Last (ms)</div>
+          </div>
+          <div class="rt-stat">
+            <div class="rt-stat-val" id="rtBest">—</div>
+            <div class="rt-stat-lbl">Best (ms)</div>
+          </div>
+          <div class="rt-stat">
+            <div class="rt-stat-val" id="rtAvg">—</div>
+            <div class="rt-stat-lbl">Avg (ms)</div>
+          </div>
+          <div class="rt-stat">
+            <div class="rt-stat-val" id="rtCount">0</div>
+            <div class="rt-stat-lbl">Attempts</div>
+          </div>
+        </div>
+      </div>
+      <!-- Reaction time benchmarks -->
+      <div class="rt-benchmarks">
+        <div class="bar-lbl"><span>Reaction time benchmarks</span></div>
+        <div class="bl-row">
+          <span class="benchmark-label">Elite athlete</span>
+          <div class="benchmark-bar benchmark-elite"><span class="benchmark-text text-success">&lt;150 ms</span></div>
+        </div>
+        <div class="bl-row">
+          <span class="benchmark-label">Young adult avg</span>
+          <div class="benchmark-bar benchmark-average"><span class="benchmark-text text-info">200–250 ms</span></div>
+        </div>
+        <div class="bl-row">
+          <span class="benchmark-label">Older adult avg</span>
+          <div class="benchmark-bar benchmark-older"><span class="benchmark-text text-warning">300–400 ms</span></div>
+        </div>
+        <div class="bl-row bl-row-last">
+          <span class="benchmark-label">Impaired / tired</span>
+          <div class="benchmark-bar benchmark-impaired"><span class="benchmark-text text-danger">&gt;500 ms — comparable to drunk driving limit effects</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-g-chromosomes-and-sex-determination">Part G · chromosomes &amp; sex determination</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Chromosomes per human cell</p>
+        <p class="cval">46 (23 pairs)</p>
+        <p class="cnote">22 pairs are autosomes — identical in males and females. The 23rd pair is the sex chromosomes: XX in females, XY in males.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Genes on the X chromosome</p>
+        <p class="cval">~800–900 genes</p>
+        <p class="cnote">The X is large and gene-rich. The Y chromosome carries only ~70 protein-coding genes — most related to male sex development and sperm production.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Total human genes (protein-coding)</p>
+        <p class="cval">~20,000–25,000</p>
+        <p class="cnote">Surprisingly modest — far fewer than many plants. The roundworm C. elegans has ~20,000 genes too. Gene count is not a good proxy for biological complexity.</p>
+      </div>
+    </div>
+
+    <!-- X and Y chromosome visual comparison -->
+    <div class="chrom-section">
+      <div class="panel-title panel-title-tight">X vs. Y — the sex chromosomes compared</div>
+      <p class="panel-subtitle">The X and Y chromosomes are dramatically different in size and function. Everyone inherits one sex chromosome from each parent.</p>
+
+      <div class="chrom-layout">
+        <!-- SVG showing X and Y side by side at scale -->
+        <svg class="chromosome-svg" viewBox="0 0 200 200" width="180">
+          <!-- X chromosome (larger) -->
+          <g transform="translate(40,10)">
+            <!-- X arms -->
+            <rect x="16" y="0"  width="18" height="70"  rx="9" fill="#378ADD" opacity="0.85"/>
+            <rect x="16" y="82" width="18" height="70"  rx="9" fill="#378ADD" opacity="0.85"/>
+            <rect x="0"  y="68" width="50" height="16"  rx="8" fill="#185FA5"/>
+            <!-- centromere pinch -->
+            <ellipse cx="25" cy="76" rx="10" ry="7" fill="#185FA5"/>
+            <text x="25" y="166" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#378ADD">X</text>
+            <text x="25" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~155 Mbp</text>
+            <text x="25" y="189" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~800–900 genes</text>
+          </g>
+          <!-- Y chromosome (smaller) -->
+          <g transform="translate(120,42)">
+            <rect x="16" y="0"  width="14" height="38" rx="7" fill="#97C459" opacity="0.85"/>
+            <rect x="16" y="46" width="14" height="20" rx="7" fill="#97C459" opacity="0.85"/>
+            <rect x="6"  y="36" width="34" height="12" rx="6" fill="#4E7A1A"/>
+            <ellipse cx="23" cy="42" rx="8" ry="5.5" fill="#4E7A1A"/>
+            <text x="23" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#97C459">Y</text>
+            <text x="23" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~57 Mbp</text>
+            <text x="23" y="105" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~70 genes</text>
+          </g>
+          <!-- Scale note -->
+          <text x="100" y="198" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-tertiary)">Drawn roughly to scale</text>
+        </svg>
+
+        <!-- Comparison table -->
+        <div class="chrom-table-wrap">
+          <div class="chrom-comparison">
+            <div class="chrom-cell chrom-head"></div>
+            <div class="chrom-cell chrom-x-head">X</div>
+            <div class="chrom-cell chrom-y-head">Y</div>
+            <div class="chrom-cell chrom-label">Size</div>
+            <div class="chrom-cell chrom-value">~155 Mbp</div>
+            <div class="chrom-cell chrom-value">~57 Mbp</div>
+            <div class="chrom-cell chrom-label">Genes</div>
+            <div class="chrom-cell chrom-value">~800–900</div>
+            <div class="chrom-cell chrom-value">~70</div>
+            <div class="chrom-cell chrom-label">Present in</div>
+            <div class="chrom-cell chrom-value">Everyone</div>
+            <div class="chrom-cell chrom-value">Males only</div>
+            <div class="chrom-cell chrom-label">Key role</div>
+            <div class="chrom-cell chrom-value">Many functions</div>
+            <div class="chrom-cell chrom-value">Sex &amp; sperm</div>
+            <div class="chrom-cell chrom-label">Copies</div>
+            <div class="chrom-cell chrom-value">2 (XX) or 1 (XY)</div>
+            <div class="chrom-cell chrom-value">0 or 1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How a baby gets its sex — Punnett square -->
+      <div class="diagram-legend-title">How does a baby's biological sex get determined?</div>
+      <p class="section-intro">Every egg cell carries exactly one X chromosome (females are XX, so all eggs get an X). Sperm cells come in two types: X-bearing or Y-bearing — each produced in roughly equal numbers. The sex of the offspring is entirely determined by which sperm fertilises the egg. The father's sperm decides; the mother's contribution is always X.</p>
+
+      <!-- Punnett square -->
+      <div class="punnett-layout">
+        <div>
+          <div class="punnett-title">Punnett square</div>
+          <div class="punnett-wrap">
+            <table class="punnett">
+              <thead>
+                <tr>
+                  <th class="punnett-axis">Sperm →<br><span class="punnett-sub">Egg ↓</span></th>
+                  <th class="punnett-x-head">X <span class="punnett-sub">(from father)</span></th>
+                  <th class="punnett-y-head">Y <span class="punnett-sub">(from father)</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="punnett-axis-blue">X <span class="punnett-sub">(from mother)</span></th>
+                  <td class="p-xx">XX<br><span class="punnett-cell-note">Female ♀</span></td>
+                  <td class="p-xy">XY<br><span class="punnett-cell-note">Male ♂</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="punnett-caption">Each combination has a ~50% chance</div>
+        </div>
+        <div class="punnett-explainer">
+          <div class="punnett-copy">
+            <div class="punnett-copy-row"><span class="strong-primary">XX → female.</span> Two X chromosomes. One X is randomly inactivated in each cell (forming a "Barr body"), so females express a mosaic of genes from both their maternal and paternal X.</div>
+            <div class="punnett-copy-row"><span class="strong-primary">XY → male.</span> The Y chromosome carries the SRY gene (Sex-determining Region Y), which triggers the embryo to develop testes at around 6–8 weeks. Without SRY, the default developmental path is female.</div>
+            <div><span class="strong-primary">Variation exists.</span> Some individuals are XXY (Klinefelter syndrome, ~1 in 600 males), XO (Turner syndrome), or XYY. Sex chromosome variations are among the most common chromosomal differences in humans.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-h-anchor-numbers-to-memorize">Part H · anchor numbers to memorize</h2>
+
+    <div class="content-panel content-panel-roomy">
+      <div class="anchor-row">
+        <span class="pill p-blue">100,000</span>
+        <div><div class="atext">Hair strands on your head</div><div class="asub">Think: one per person in a small city</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">1.25 cm</span>
+        <div><div class="atext">Hair grows per month</div><div class="asub">Width of your thumbnail ≈ 1 cm. Hair grows about that per month.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">60–100</span>
+        <div><div class="atext">Resting heart rate (bpm)</div><div class="asub">Below 60 = athletic or bradycardic. Above 100 = tachycardic at rest.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">120/80</span>
+        <div><div class="atext">Ideal blood pressure (mmHg)</div><div class="asub">Systolic / Diastolic. "120 over 80" — the classic benchmark.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">206</span>
+        <div><div class="atext">Bones in the adult body</div><div class="asub">You were born with ~270. Fusion reduces the count as you age.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">37°C</span>
+        <div><div class="atext">Core body temperature</div><div class="asub">± 0.5°C normal variation. Below 35°C = hypothermia. Above 40°C = dangerous fever.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">37 trillion</span>
+        <div><div class="atext">Cells in your body</div><div class="asub">Roughly the same number as bacteria living in your gut.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">200–250 ms</span>
+        <div><div class="atext">Average visual reaction time</div><div class="asub">Formula 1 drivers average ~200 ms. Under 150 ms is exceptional.</div></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-i-q-and-a">Part I · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. You grow your hair 3 years without cutting. Roughly how long would it be?</p>
+      <button class="qa-btn" aria-label="Show answer to question 1" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 45 cm — past shoulder length, approaching mid-back. 1.25 cm/month × 36 months = 45 cm. In practice slightly less, because individual hairs shed and restart before reaching full length.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. A resting heart rate of 52 bpm — is that worrying?</p>
+      <button class="qa-btn" aria-label="Show answer to question 2" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Not necessarily — 52 bpm is below the standard normal range (60–100), but in trained athletes and very fit people, a resting rate of 40–60 bpm is completely normal. The heart is more efficient and pumps more blood per beat. It only becomes worrying if you feel dizzy, faint, or breathless, or if there's no fitness explanation.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. You're told someone's blood pressure is 145/95. What does that mean and should they be concerned?</p>
+      <button class="qa-btn" aria-label="Show answer to question 3" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">145 is the systolic pressure (peak pressure when the heart contracts); 95 is diastolic (pressure when the heart is at rest between beats). By AHA 2017 guidelines, 130/80 and above is "Stage 1 hypertension," and 140/90+ is Stage 2. So 145/95 is Stage 2 — persistently elevated and worth medical attention. That said, a single reading doesn't diagnose hypertension; multiple readings over time are needed.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. A child is born with 270 bones but an adult has 206. Where did the extra 64 go?</p>
+      <button class="qa-btn" aria-label="Show answer to question 4" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">They fused together. Bones don't disappear — they merge. The skull, for example, starts as multiple plates that close over childhood (the "fontanelles" you can feel on a newborn's head). The sacrum (base of spine) fuses from 5 separate vertebrae during adolescence. The last bones to fuse are typically the clavicles, completing the process in the early-to-mid 20s.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. Your reaction time test comes back at 310 ms. Is that good, average, or slow?</p>
+      <button class="qa-btn" aria-label="Show answer to question 5" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Slightly above the average for young adults (200–250 ms), but within the normal range — especially for someone older or who just woke up, or if measured on a touchscreen (which adds ~20–50 ms latency). In context: at 310 ms, while driving at 100 km/h, a car travels about 8.6 metres before you even start braking. That's why following distance matters. Elite Formula 1 drivers average closer to 200 ms.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. Your body contains about 37 trillion cells, yet 25 trillion of them are a single type. Which type, and why so many?</p>
+      <button class="qa-btn" aria-label="Show answer to question 6" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Red blood cells (erythrocytes). They dominate in count because oxygen delivery is a massive, continuous demand — every cell in the body needs a constant oxygen supply. Red blood cells are also structurally unusual: they have no nucleus (making room for more haemoglobin) and they're tiny (~8 µm), so they can pack densely and squeeze through capillaries narrower than themselves. They live only ~120 days and are replaced at a rate of ~2 million per second.</div>
+    </div>
+
+  
+
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+  /* ─── Theme-adaptive timeline colors ─── */
+  (function() {
+    function setTlColors() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+        (document.documentElement.getAttribute('data-theme') === 'auto' &&
+         window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var root = document.documentElement;
+      if (isDark) {
+        root.style.setProperty('--tl-c1', '#0c2540');
+        root.style.setProperty('--tl-t1', '#85b7eb');
+        root.style.setProperty('--tl-c2', '#0c3060');
+        root.style.setProperty('--tl-t2', '#85b7eb');
+        root.style.setProperty('--tl-c3', '#0c447c');
+        root.style.setProperty('--tl-t3', '#fff');
+        root.style.setProperty('--tl-c4', '#185fa5');
+        root.style.setProperty('--tl-t4', '#fff');
+        root.style.setProperty('--tl-c5', '#378add');
+        root.style.setProperty('--tl-t5', '#fff');
+        root.style.setProperty('--tl-c6', '#85b7eb');
+        root.style.setProperty('--tl-t6', '#0c2540');
+      } else {
+        root.style.setProperty('--tl-c1', '#B5D4F4');
+        root.style.setProperty('--tl-t1', '#0C447C');
+        root.style.setProperty('--tl-c2', '#85B7EB');
+        root.style.setProperty('--tl-t2', '#0C447C');
+        root.style.setProperty('--tl-c3', '#378ADD');
+        root.style.setProperty('--tl-t3', '#fff');
+        root.style.setProperty('--tl-c4', '#185FA5');
+        root.style.setProperty('--tl-t4', '#fff');
+        root.style.setProperty('--tl-c5', '#0C447C');
+        root.style.setProperty('--tl-t5', '#fff');
+        root.style.setProperty('--tl-c6', '#042C53');
+        root.style.setProperty('--tl-t6', '#fff');
+      }
+    }
+    setTlColors();
+    // Re-run when theme changes (shared.js fires this by mutating data-theme attr)
+    var observer = new MutationObserver(setTlColors);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setTlColors);
+  })();
+
+  /* ─── Heart Rate Zone Explorer ─── */
+  var hrZoneData = [
+    { name: 'Zone 1 — Rest / Recovery', pct: [0.50, 0.60], barClass: 'hr-zone-recovery', label: '50–60%' },
+    { name: 'Zone 2 — Aerobic base',    pct: [0.60, 0.70], barClass: 'hr-zone-base', label: '60–70%' },
+    { name: 'Zone 3 — Aerobic',         pct: [0.70, 0.80], barClass: 'hr-zone-aerobic', label: '70–80%' },
+    { name: 'Zone 4 — Threshold',       pct: [0.80, 0.90], barClass: 'hr-zone-threshold', label: '80–90%' },
+    { name: 'Zone 5 — Max effort',      pct: [0.90, 1.00], barClass: 'hr-zone-max', label: '90–100%' }
+  ];
+
+  function renderHrZones() {
+    var age = parseInt(document.getElementById('hrAge').value, 10);
+    var maxHr = 220 - age;
+    document.getElementById('hrAgeVal').textContent = age;
+    document.getElementById('hrMax').textContent = maxHr;
+    var container = document.getElementById('hrZoneRows');
+    container.innerHTML = '';
+    hrZoneData.forEach(function(z) {
+      var lo = Math.round(z.pct[0] * maxHr);
+      var hi = Math.round(z.pct[1] * maxHr);
+      var row = document.createElement('div');
+      row.className = 'hr-zone-row';
+      row.innerHTML =
+        '<span class="hr-zone-lbl">' + z.label + '</span>' +
+        '<div class="hr-zone-bar hr-zone-scaled ' + z.barClass + '">' +
+        '<span class="hr-zone-txt hr-zone-light-text">' + lo + '–' + hi + ' bpm — ' + z.name + '</span>' +
+        '</div>';
+      container.appendChild(row);
+    });
+  }
+  document.getElementById('hrAge').addEventListener('input', renderHrZones);
+  renderHrZones();
+
+  /* ─── Bone Region Explorer ─── */
+  var boneRegions = {
+    skull:  { count: '28', detail: 'The skull consists of 8 cranial bones (forming the braincase) and 14 facial bones, plus 6 ossicles (3 tiny bones in each ear that transmit sound vibrations — the malleus, incus, and stapes). The stapes is the smallest bone in the body at about 3 mm.', note: 'Cranium: 8 · Facial: 14 · Ear ossicles: 6' },
+    spine:  { count: '26', detail: 'The adult spine has 26 bones: 7 cervical (neck), 12 thoracic (mid-back), 5 lumbar (lower back), 1 sacrum (5 fused), and 1 coccyx (3–5 fused). Intervertebral discs sit between each vertebra but are cartilage, not bone.', note: 'Cervical: 7 · Thoracic: 12 · Lumbar: 5 · Sacrum: 1 · Coccyx: 1' },
+    thorax: { count: '25', detail: 'The thorax (chest) has 24 ribs in 12 pairs, plus the sternum (breastbone). Ribs 1–7 are "true ribs" connecting directly to the sternum. Ribs 8–10 are "false ribs" connecting via cartilage. Ribs 11–12 are "floating ribs" with no anterior attachment.', note: 'Ribs: 24 (12 pairs) · Sternum: 1' },
+    arms:   { count: '64', detail: 'Each arm has 32 bones: 1 clavicle (collarbone) + 1 scapula (shoulder blade) + 1 humerus (upper arm) + 1 radius + 1 ulna (forearm) + 8 carpal (wrist) + 5 metacarpal (palm) + 14 phalanges (fingers, 3 per finger, 2 for thumb). The hands alone account for 54 of these 64.', note: 'Per arm: 32 · Total both arms: 64' },
+    pelvis: { count: '62', detail: 'Each leg has 31 bones: 1 hip bone (ilium/ischium/pubis — 3 fused) + 1 femur (thigh) + 1 patella (kneecap) + 1 tibia + 1 fibula (lower leg) + 7 tarsal (ankle/heel) + 5 metatarsal + 14 phalanges (toes). The femur is the longest, strongest bone in the body.', note: 'Per leg: 31 · Both legs: 62 · Note: pelvis bones counted with legs' },
+    feet:   { count: '52', detail: 'The two feet together contain 52 bones — over a quarter of all bones in the body. Each foot: 7 tarsals (including the calcaneus/heel bone), 5 metatarsals, and 14 phalanges. The high bone count gives feet the flexibility to adapt to uneven terrain. Flat feet occur when the arch ligaments loosen.', note: 'Per foot: 26 · Both feet: 52 (within the 62-bone leg count above)' }
+  };
+
+  function showBoneRegion(key) {
+    document.querySelectorAll('.bone-tab').forEach(function(t) { t.classList.remove('active'); });
+    event.target.classList.add('active');
+    var r = boneRegions[key];
+    document.getElementById('boneCount').textContent = r.count + ' bones';
+    document.getElementById('boneDetail').textContent = r.detail;
+    document.getElementById('boneNote').textContent = r.note;
+  }
+  // Init with skull
+  document.getElementById('boneCount').textContent = '28 bones';
+  document.getElementById('boneDetail').textContent = boneRegions.skull.detail;
+  document.getElementById('boneNote').textContent = boneRegions.skull.note;
+
+  /* ─── Blood Compatibility Matrix ─── */
+  (function() {
+    var types = ['O−','O+','A−','A+','B−','B+','AB−','AB+'];
+    // compatMatrix[donor][recipient] = true/false
+    // Rules: Rh-neg can donate to same and Rh-pos. ABO must be compatible.
+    // ABO donor must be subset of recipient antigens.
+    // Simplified: O gives to all; A gives to A,AB; B gives to B,AB; AB gives to AB only.
+    // Rh−: can give to − and +. Rh+: can only give to +.
+    var aboCompat = {
+      'O':  ['O','A','B','AB'],
+      'A':  ['A','AB'],
+      'B':  ['B','AB'],
+      'AB': ['AB']
+    };
+    function aboOf(t) { return t.replace('−','').replace('+',''); }
+    function rhOf(t)  { return t.includes('+') ? '+' : '−'; }
+    function canDonate(donor, recip) {
+      var aboOk = aboCompat[aboOf(donor)].indexOf(aboOf(recip)) !== -1;
+      var rhOk  = rhOf(donor) === '−' || rhOf(recip) === '+';
+      return aboOk && rhOk;
+    }
+
+    var selectedDonor = null;
+    var selectedRecip = null;
+
+    function buildButtons() {
+      var dCont = document.getElementById('compatDonorBtns');
+      var rCont = document.getElementById('compatRecipBtns');
+      types.forEach(function(t) {
+        var db = document.createElement('button');
+        db.textContent = t;
+        db.id = 'db-' + t.replace('+','pos').replace('−','neg');
+        db.style.cssText = 'font-size:12px; padding:3px 10px; border-radius:6px; border: 0.5px solid var(--color-border-secondary); background:none; cursor:pointer; color:var(--color-text-secondary); transition:all 0.15s;';
+        db.onclick = function() { selectedDonor = (selectedDonor === t) ? null : t; render(); };
+        dCont.appendChild(db);
+
+        var rb = document.createElement('button');
+        rb.textContent = t;
+        rb.id = 'rb-' + t.replace('+','pos').replace('−','neg');
+        rb.style.cssText = db.style.cssText;
+        rb.onclick = function() { selectedRecip = (selectedRecip === t) ? null : t; render(); };
+        rCont.appendChild(rb);
+      });
+    }
+
+    function buildTable() {
+      var tbody = document.getElementById('compatTbody');
+      tbody.innerHTML = '';
+      types.forEach(function(donor, di) {
+        var tr = document.createElement('tr');
+        tr.id = 'crow-' + di;
+        // Row header
+        var th = document.createElement('td');
+        th.className = 'compat-row-hdr';
+        th.textContent = donor;
+        tr.appendChild(th);
+        types.forEach(function(recip, ri) {
+          var td = document.createElement('td');
+          td.id = 'cell-' + di + '-' + ri;
+          if (donor === recip) {
+            td.className = 'compat-self';
+            td.textContent = '✓';
+            td.title = donor + ' → ' + recip + ': same type';
+          } else if (canDonate(donor, recip)) {
+            td.className = 'compat-yes';
+            td.textContent = '✓';
+            td.title = donor + ' can donate to ' + recip;
+          } else {
+            td.className = 'compat-no';
+            td.textContent = '✗';
+            td.title = donor + ' cannot donate to ' + recip;
+          }
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    }
+
+    function render() {
+      // Update donor buttons style
+      types.forEach(function(t, i) {
+        var key = t.replace('+','pos').replace('−','neg');
+        var db = document.getElementById('db-' + key);
+        var rb = document.getElementById('rb-' + key);
+        if (db) db.style.background = (selectedDonor === t) ? 'var(--color-background-warning)' : '';
+        if (db) db.style.color      = (selectedDonor === t) ? 'var(--color-text-warning)'    : 'var(--color-text-secondary)';
+        if (rb) rb.style.background = (selectedRecip === t) ? 'var(--color-background-info)'  : '';
+        if (rb) rb.style.color      = (selectedRecip === t) ? 'var(--color-text-info)'        : 'var(--color-text-secondary)';
+      });
+
+      // Highlight cells
+      types.forEach(function(donor, di) {
+        types.forEach(function(recip, ri) {
+          var cell = document.getElementById('cell-' + di + '-' + ri);
+          if (!cell) return;
+          var donorMatch = selectedDonor === donor;
+          var recipMatch = selectedRecip === recip;
+          if (donorMatch || recipMatch) {
+            cell.style.outline = '2px solid var(--color-border-warning)';
+            cell.style.outlineOffset = '-1px';
+          } else {
+            cell.style.outline = '';
+          }
+        });
+      });
+
+      // Result message
+      var res = document.getElementById('compatResult');
+      if (selectedDonor && selectedRecip) {
+        var ok = canDonate(selectedDonor, selectedRecip);
+        if (selectedDonor === selectedRecip) {
+          res.textContent = '✓ ' + selectedDonor + ' → ' + selectedRecip + ': Same blood type — always compatible.';
+          res.style.color = 'var(--color-text-info)';
+        } else if (ok) {
+          res.textContent = '✓ ' + selectedDonor + ' can donate to ' + selectedRecip + ' — compatible.';
+          res.style.color = 'var(--color-text-success)';
+        } else {
+          res.textContent = '✗ ' + selectedDonor + ' cannot donate to ' + selectedRecip + ' — incompatible.';
+          res.style.color = 'var(--color-text-danger)';
+        }
+      } else if (selectedDonor) {
+        var canReceive = types.filter(function(r) { return canDonate(selectedDonor, r); });
+        res.textContent = selectedDonor + ' can donate to: ' + canReceive.join(', ');
+        res.style.color = 'var(--color-text-primary)';
+      } else if (selectedRecip) {
+        var canGive = types.filter(function(d) { return canDonate(d, selectedRecip); });
+        res.textContent = selectedRecip + ' can receive from: ' + canGive.join(', ');
+        res.style.color = 'var(--color-text-primary)';
+      } else {
+        res.textContent = '';
+      }
+    }
+
+    buildButtons();
+    buildTable();
+    render();
+  })();
+
+  /* ─── Reaction Time Game ─── */
+  var rtState = 'idle'; // idle | waiting | go | done
+  var rtTimer = null;
+  var rtStart = 0;
+  var rtResults = [];
+
+  function handleRtClick() {
+    var screen = document.getElementById('rtScreen');
+    if (rtState === 'idle' || rtState === 'done') {
+      // Start waiting phase
+      rtState = 'waiting';
+      screen.className = 'rt-screen rt-ready';
+      screen.textContent = 'Wait for green…';
+      var delay = 1500 + Math.random() * 3000;
+      rtTimer = setTimeout(function() {
+        rtState = 'go';
+        screen.className = 'rt-screen rt-go';
+        screen.textContent = 'CLICK NOW!';
+        rtStart = performance.now();
+      }, delay);
+    } else if (rtState === 'waiting') {
+      // Clicked too early
+      clearTimeout(rtTimer);
+      rtState = 'done';
+      screen.className = 'rt-screen rt-wait';
+      screen.textContent = 'Too early! Click to try again.';
+    } else if (rtState === 'go') {
+      var elapsed = Math.round(performance.now() - rtStart);
+      rtResults.push(elapsed);
+      rtState = 'done';
+      screen.className = 'rt-screen rt-done';
+      screen.textContent = elapsed + ' ms — click to go again';
+      // Update stats
+      document.getElementById('rtLast').textContent = elapsed;
+      var best = Math.min.apply(null, rtResults);
+      document.getElementById('rtBest').textContent = best;
+      var avg = Math.round(rtResults.reduce(function(a,b){return a+b;},0) / rtResults.length);
+      document.getElementById('rtAvg').textContent = avg;
+      document.getElementById('rtCount').textContent = rtResults.length;
+    }
+  }
+  
+</script>

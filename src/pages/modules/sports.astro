@@ -1,0 +1,1253 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/sports.css';
+
+const mod = modules.find((m) => m.id === 41)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+
+    <div class="module-header">
+      <i class="fa-solid fa-person-skiing module-header-icon-accent"></i>
+      <h1 class="module-title module-heading">Module 41: Sports</h1>
+    </div>
+    <p class="module-subtitle">Why sport matters, how it works, and a deep dive into the world's game</p>
+
+    <!-- ── PART A ── -->
+    <h2 class="sec" id="part-a-what-sport-is-competition-culture-and-the-human-body">Part A · what sport is — competition, culture, and the human body</h2>
+
+    <div class="card">
+      <div class="clabel">Overview</div>
+      <p class="sports-text-2">
+        Sport is one of the oldest and most universal human activities, yet it is also surprisingly hard to define. At its core, sport combines physical skill, rule-bound competition, and a social audience — distinguishing it from mere play (no rules, no audience) and from games like chess (no physical skill threshold). This module builds a complete mental model of sport: why humans play, how bodies and minds perform, who controls the money, and how the world's most popular game — association football — works at every level from kick-off to contract clause.
+      </p>
+    </div>
+
+    <!-- Why humans play -->
+    <div class="card">
+      <div class="clabel">Why humans play sport</div>
+      <p class="sports-text-3">
+        Sport solves several problems at once. Evolutionarily, it is honest signalling: costly physical performance that cannot easily be faked, advertising genetic quality, coordination ability, and pain tolerance to potential mates and allies. Johan Huizinga's 1938 concept of "Homo Ludens" argues that play is not a byproduct of survival but constitutive of culture — that meaningful human civilization requires it. Sport also generates <em>flow states</em> — Mihaly Csikszentmihalyi's term for the absorption that occurs when challenge precisely matches skill. The brain releases dopamine, noradrenaline, and anandamide during intense play, making winning biologically rewarding.
+      </p>
+      <p class="sports-text-3">
+        Sociologically, sport creates <em>in-group cohesion</em> and shared identity. Henri Tajfel's social identity theory explains why fans experience their team's win as a personal victory: group membership is internalized as self-concept. Roughly 70% of British men report that following sport is important to their sense of identity (YouGov, 2019). This attachment is not irrational; it generates genuine community, ritual, and belonging that modern life often fails to provide elsewhere.
+      </p>
+      <div class="info-box">
+        Counterintuitive fact: sport watching produces measurable testosterone spikes in fans of the winning team — even when they did nothing physical. A 1998 study found male Brazil fans' testosterone rose ~28% after their team won a World Cup match, and dropped a similar amount after a loss. Identity and biology are inseparable here.
+      </div>
+    </div>
+
+    <!-- Sport vs game vs play -->
+    <div class="card">
+      <div class="clabel">Sport vs games vs play — where the lines fall</div>
+      <p class="sports-text-3">
+        The philosopher Bernard Suits defined sport as an activity requiring physical skill, rules, and an institutional structure (governing body, ranked competition). By this definition, chess is a game but not a sport; jogging is physical recreation but not sport; poker is a game. The boundary matters practically: the IOC debates whether eSports and chess deserve Olympic status on exactly these grounds.
+      </p>
+      <p class="sports-text-4">
+        A key property of sport is the <em>constitutive rule</em>: rules that don't just regulate an activity but create it. The offside rule doesn't restrict football — it creates football as we know it. This is why sports feel so different from work: the voluntary acceptance of unnecessary constraints is what makes the achievement meaningful. Usain Bolt running 100 metres is meaningless unless everyone agrees to start at the same line and not take a bus.
+      </p>
+    </div>
+
+    <!-- History of organised sport -->
+    <div class="card">
+      <div class="clabel">The history of organised sport</div>
+      <p class="sports-text-3">
+        The ancient Olympics began in 776 BCE at Olympia, Greece, as a religious festival honouring Zeus. Events included the stadion foot-race (roughly 192 metres), wrestling, discus, javelin, and chariot racing. Competitors were Greek citizens who trained full-time, often sponsored by wealthy patrons — not amateur idealists. The games were abolished by Emperor Theodosius I in 393 CE as pagan practice.
+      </p>
+      <p class="sports-text-3">
+        Modern codified sport emerged in 19th-century Britain, where industrialisation compressed work and leisure into distinct spheres, and railway networks allowed teams to travel. The Football Association was founded in 1863. The Marquess of Queensberry Rules for boxing appeared in 1867. Wimbledon launched in 1877. This codification wave was also a class project: elite schools (Eton, Rugby) formalized games that had previously been unruly mob activities.
+      </p>
+      <p class="sports-text-4">
+        Television transformed sport into a global product. The 1936 Berlin Olympics were the first televised games (to 28 closed-circuit venues). By 1996, Atlanta attracted 3.5 billion TV viewers. Today, the Super Bowl generates ~$600 million in US ad revenue in a single evening, and the FIFA World Cup final is reliably the most watched single broadcast event on Earth, drawing over 1.5 billion viewers in 2022.
+      </p>
+    </div>
+
+    <!-- Most popular sports — bar chart -->
+    <div class="card">
+      <div class="clabel">The world's most popular sports — estimated global following</div>
+      <div class="sport-pop-chart" id="sport-pop-chart"></div>
+      <p class="sports-text-5">Estimates of "global following" combine active participation and regular viewership. Sources: World Atlas, Statista 2023. Cricket's following is heavily concentrated in South Asia; football and basketball have broader geographic spread.</p>
+    </div>
+
+    <!-- ── PART B ── -->
+    <h2 class="sec" id="part-b-the-science-of-sport-physiology-psychology-and-performance">Part B · the science of sport — physiology, psychology, and performance</h2>
+
+    <!-- Human limits + comparison scale -->
+    <div class="card">
+      <div class="clabel">Human physical limits — what the body can and cannot do</div>
+      <p class="sports-text-6">
+        VO₂ max — the maximum rate of oxygen consumption — is the single best predictor of endurance performance. Average untrained adults score 35–45 ml/kg/min. Elite cyclists like Oskar Syklebust have recorded values above 97. The practical ceiling may be around 100, dictated by cardiac output and the diffusion capacity of the lungs. Eliud Kipchoge, who ran the first sub-2-hour marathon in 2019, has a VO₂ max of ~92.
+      </p>
+      <p class="sports-text-6">
+        Muscle fibres determine athletic specialisation. Type I (slow-twitch) fibres use oxygen efficiently and resist fatigue — marathoners have roughly 80% Type I. Type II (fast-twitch) fibres contract explosively but tire quickly — sprinters may have 75% Type II. This ratio is ~50% genetic, making a true sprinter becoming a world-class marathon runner essentially impossible at elite level.
+      </p>
+      <p class="sports-text-6">
+        The 100-metre sprint ceiling: biomechanical models suggest the absolute human limit is approximately 9.48 seconds, versus Usain Bolt's 9.58 in 2009. The constraint is not just muscle speed but ground contact time — below about 80 milliseconds per step, the foot cannot generate enough force.
+      </p>
+      <div class="clabel u-mt-md">Physical demand by sport (illustrative comparison)</div>
+      <div class="cscale-wrap">
+        <div class="cscale-poles"><span>Pure endurance</span><span>Pure power / speed</span></div>
+        <div class="cscale-row"><div class="cscale-name">Marathon</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
+        <div class="cscale-row"><div class="cscale-name">Tour de France cyclist</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-2"></div></div></div>
+        <div class="cscale-row"><div class="cscale-name">Football (midfield)</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-3"></div></div></div>
+        <div class="cscale-row"><div class="cscale-name">NBA basketball</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-4"></div></div></div>
+        <div class="cscale-row"><div class="cscale-name">200m swimmer</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-5"></div></div></div>
+        <div class="cscale-row"><div class="cscale-name">100m sprint</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-6"></div></div></div>
+        <div class="cscale-row"><div class="cscale-name">Powerlifting</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-7"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Training principles + VO2 slider -->
+    <div class="card">
+      <div class="clabel">Training principles — how elite athletes improve</div>
+      <p class="sports-text-3">
+        <em>Progressive overload</em> is the foundational principle: the training stimulus must continually exceed the body's current capacity to produce adaptation. Rest is not recovery from failure — it is when the adaptation actually occurs (supercompensation). This is why overtraining is a real pathology: athletes who never allow recovery plateau or regress.
+      </p>
+      <p class="sports-text-3">
+        <em>Periodisation</em> structures training across cycles: a macrocycle (full season or year), mesocycles (4–6 weeks each with different emphases), and microcycles (weekly training blocks). The Soviet sports scientist Lev Matveyev formalized this in the 1960s, and it remains the backbone of elite preparation. Modern variants include "block periodisation" used by Norwegian swimmer Henrik Christiansen: intense focus on one physical quality at a time rather than concurrent development.
+      </p>
+      <p class="sports-text-6">
+        The "10,000 hours" rule from Malcolm Gladwell (drawn from Anders Ericsson's research) is widely misunderstood. Ericsson's actual finding was that deliberate practice — not passive repetition — drives expertise, and the 10,000 figure was an average, not a threshold. Some elite tennis players (Roger Federer, who had a late start in tennis specifically) accumulated far fewer hours. Genetics, coaching quality, and early specialisation age all interact with practice volume.
+      </p>
+      <div class="clabel">VO₂ max improvement simulator</div>
+      <div class="slider-wrap">
+        <div class="slider-poles"><span>0 weeks of training</span><span>52 weeks</span></div>
+        <input type="range" id="training-weeks" min="0" max="52" value="12" step="1">
+        <div class="slider-out" id="training-out">Move the slider to see estimated VO₂ max improvement.</div>
+      </div>
+    </div>
+
+    <!-- Sports psychology -->
+    <div class="card">
+      <div class="clabel">Sports psychology — concentration, pressure, and the mental game</div>
+      <p class="sports-text-3">
+        <em>Choking</em> occurs when performance degrades under pressure despite sufficient skill. The mechanism is well understood: anxiety redirects conscious attention toward the execution of actions normally automated. Jana Sackmeister and colleagues demonstrated in 2010 that expert golfers putt worse when told to focus on "keeping the left arm straight" — a cue novices benefit from but experts don't, because their swing is already implicit. This is why commentary about "thinking too much" is neurologically accurate.
+      </p>
+      <p class="sports-text-3">
+        <em>Flow state</em> — Csikszentmihalyi's concept of total absorption — correlates with a specific EEG pattern: increased alpha waves in the left temporal lobe, associated with reduced self-monitoring. Athletes describe it as effortless control, slowed time, and the disappearance of self-consciousness. Conditions for flow: clear goals, immediate feedback, and challenge-skill balance within roughly 4% of current capacity.
+      </p>
+      <div class="warn-box">
+        Common misconception: positive self-talk ("I can do this") is always better than negative self-talk. Research by Antonis Hatzigeorgiadis (2011) found instructional self-talk ("bend your knees on contact") outperforms motivational self-talk for skill-based tasks. The right mental cue depends entirely on what the task requires.
+      </div>
+    </div>
+
+    <!-- Doping -->
+    <div class="card">
+      <div class="clabel">Nutrition and doping — optimisation vs cheating</div>
+      <p class="sports-text-3">
+        Sports nutrition operates on marginal gains. Creatine monohydrate is the most evidence-supported legal supplement: 3–5g daily increases phosphocreatine stores in muscle, improving high-intensity performance by 5–10% in trained athletes. Caffeine (3–6 mg/kg body weight) demonstrably reduces perceived exertion and improves endurance by 2–4% — which at the elite level is the difference between a medal and 10th place. Both are legal.
+      </p>
+      <p class="sports-text-3">
+        Performance-enhancing drug use has accompanied modern sport since the 1950s. EPO (erythropoietin) revolutionised cycling in the 1990s: it stimulates red blood cell production, raising haematocrit and VO₂ max by up to 10%. The USADA found that Lance Armstrong's US Postal Service team ran "the most sophisticated, professionalised, and successful doping programme" in sport history — Armstrong won 7 consecutive Tours de France between 1999–2005, all of which were later stripped.
+      </p>
+      <p class="sports-text-4">
+        WADA (World Anti-Doping Agency), established in 1999, maintains the Prohibited List of ~300 substances across categories. The biological passport — introduced in 2008 — tracks longitudinal blood parameters rather than testing for specific substances, making it much harder to dope without detection. Russia's state-sponsored doping programme (revealed by whistleblower Grigory Rodchenkov, 2015) involved switching urine samples through a hole in a Sochi lab wall, rendering standard testing useless.
+      </p>
+    </div>
+
+    <!-- ── PART C ── -->
+    <h2 class="sec" id="part-c-the-business-and-politics-of-sport">Part C · the business and politics of sport</h2>
+
+    <!-- Sports economy -->
+    <div class="card">
+      <div class="clabel">The sports economy — how sport makes and spends money</div>
+      <p class="sports-text-3">
+        Global sport is a $500+ billion industry. The dominant revenue engine is broadcast rights, not ticket sales or merchandise. The NFL's TV rights deals (2023–2033) total $113 billion across CBS, NBC, Fox, ESPN/ABC, and Amazon — approximately $11 billion per year for one domestic league. The Premier League earns ~£3 billion per season from UK broadcast deals alone, plus ~£1.6 billion from international rights.
+      </p>
+      <p class="sports-text-3">
+        Athlete salaries at the top tier are extraordinary. As of 2024, Cristiano Ronaldo earns approximately $200 million per year total (salary + commercial), making him the world's highest-paid athlete. The NBA minimum rookie salary is $1.1 million; the median is $3.8 million. But these figures obscure the pyramid structure: the vast majority of professional athletes globally earn near minimum wage, and career lengths in contact sports average just 3–4 years.
+      </p>
+      <div class="clabel u-mt-md">Athlete salary comparison (annual, USD, approximate 2024)</div>
+      <div id="salary-chart"></div>
+      <p class="sports-text-5">Total compensation including endorsements. Sources: Forbes, Sportico 2024.</p>
+    </div>
+
+    <!-- Governance -->
+    <div class="card">
+      <div class="clabel">Sports governance — who runs sport and the corruption problem</div>
+      <p class="sports-text-3">
+        Most global sports are governed by non-profit bodies with enormous commercial revenues and minimal external accountability. FIFA, which governs football globally, had $7.5 billion revenue in the 2022 World Cup cycle. The IOC controls a multi-billion-dollar broadcast empire while its 105 members are unelected and permanent. This structural opacity has generated systemic corruption.
+      </p>
+      <p class="sports-text-3">
+        The 2015 FBI/DoJ investigation into FIFA indicted 47 individuals and entities for wire fraud, racketeering, and money laundering totalling $200 million in bribes. Sepp Blatter and Michel Platini were banned for 8 years. The Salt Lake City Olympics bribery scandal (1998) involved 13 IOC members accepting money or gifts in exchange for hosting votes.
+      </p>
+      <div class="info-box">
+        The structural problem: international sports federations are often registered in Switzerland, which has historically provided legal shelter from foreign law enforcement. FIFA is incorporated in Zurich. Post-2015, the US relied on wire fraud statutes — asserting jurisdiction whenever a US dollar crossed a US server — to prosecute what Swiss law could not reach.
+      </div>
+    </div>
+
+    <!-- Sport and politics -->
+    <div class="card">
+      <div class="clabel">Sport and politics — when they cannot be separated</div>
+      <p class="sports-text-3">
+        The 1936 Berlin Olympics were explicitly designed by the Nazi regime as a propaganda showcase. Jesse Owens' four gold medals — before an audience that included Hitler — are remembered as a rebuke to Aryan superiority ideology. In fact, Owens himself said Hitler waved to him from his box; it was President Roosevelt who never sent Owens a telegram of congratulation. The politics cut in multiple directions.
+      </p>
+      <p class="sports-text-3">
+        Apartheid-era South Africa was expelled from the IOC in 1970 and FIFA in 1961. The international sporting boycott is widely cited as one of the most effective non-military economic and reputational pressures applied to the regime, contributing to its eventual isolation. Colin Kaepernick's NFL kneeling protests (2016–) cost him his career but generated a global conversation: Nike's "Believe in Something" campaign featuring Kaepernick reportedly increased Nike's online sales 31% in the week after launch.
+      </p>
+      <p class="sports-text-4">
+        <em>Sportswashing</em> — using sport to launder a country's international reputation — is the dominant political concern of the 2020s. Saudi Arabia's Public Investment Fund owns Newcastle United, LIV Golf, the Dakar Rally, and has hosted heavyweight boxing world title fights. Qatar hosted the 2022 World Cup despite evidence of migrant worker deaths during construction. The argument that "engagement beats isolation" has merit but also serves as a post-hoc justification for financial self-interest by governing bodies.
+      </p>
+    </div>
+
+    <!-- Analytics -->
+    <div class="card">
+      <div class="clabel">Analytics and data — how sport became a data science problem</div>
+      <p class="sports-text-3">
+        The Moneyball revolution, documented by Michael Lewis in 2003, describes how the Oakland Athletics under GM Billy Beane used on-base percentage (OBP) — a statistic ignored by the market — to acquire undervalued players and compete with a payroll 40% below the Yankees. The underlying insight was that human scouts systematically misprice players because they weight observable, emotionally salient qualities (appearance, confidence, throwing style) over predictive statistics. The A's won 103 games in 2002 with a $44 million payroll.
+      </p>
+      <p class="sports-text-3">
+        Football's data revolution came later. Opta began collecting event data in 1996; StatsBomb launched player tracking in 2014. Expected goals (xG) — the probability a given shot results in a goal, based on location, assist type, and body part — is now the standard metric. Clubs like Brentford and Brighton, with modest budgets, built analytical departments that identified undervalued players: Brighton signed Alexis Mac Allister (later sold to Liverpool for £35m) for £7.2m using data-driven scouting.
+      </p>
+      <div class="warn-box">
+        The limits of analytics: Goodhart's Law applies in sport. Once a metric becomes a target, it ceases to be a good metric. Teams optimised for xG began conceding counter-attacks that didn't show up in expected-goals models. The next frontier is tracking data — 25 position measurements per second per player — which captures shape, movement, and space rather than just ball events.
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════
+         PARTS D–J: THE FOOTBALL DEEP DIVE
+    ════════════════════════════════════ -->
+    <div class="sec-football">⚽ Football deep dive — Parts D through J</div>
+    <div class="football-banner">
+      Football (association football / soccer) is the world's most played and watched sport, with ~3.5 billion followers across every continent. Parts D–J are dedicated entirely to understanding it at depth — history, tactics, structure, economics, and culture.
+    </div>
+
+    <!-- ── PART D ── -->
+    <div class="sec-football">Part D · football basics — rules, positions, and the structure of play</div>
+
+    <!-- Laws of the game -->
+    <div class="card-football card">
+      <div class="clabel">The Laws of the Game</div>
+      <p class="sports-text-3">
+        Football has exactly 17 Laws, maintained by the International Football Association Board (IFAB), founded in 1886. The laws are elegant in their brevity: the entire document is shorter than an average mortgage agreement. But three laws generate the most controversy in practice.
+      </p>
+      <p class="sports-text-3">
+        <em>Offside (Law 11)</em> is the most misunderstood. A player is in an offside position if any part of their body that can legally play the ball is nearer to the opponents' goal line than both the ball and the second-to-last defender at the moment the ball is played. The key word is "played" — not when the player receives the ball. This is why VAR sometimes checks whether an armpit or kneecap was forward by 2 centimetres when a pass was struck.
+      </p>
+      <p class="sports-text-3">
+        <em>VAR</em> was mandated in 2018 World Cup and has since spread to most top leagues. It can only review four categories: goals, penalties, red cards, and mistaken identity. The "clear and obvious error" threshold was designed to preserve match flow, but in practice many leagues have dropped this threshold, creating lengthy delays. Fan satisfaction with VAR is net negative in most surveys.
+      </p>
+      <div class="info-box">
+        The handball rule has been changed five times since 2016 and remains contested. The current law distinguishes between deliberate handball (always a foul), handball that directly leads to a goal (foul even if accidental), and incidental handball during natural arm position (not a foul). The "natural silhouette" test is applied by referees, but no two referees draw this silhouette identically.
+      </div>
+    </div>
+
+    <!-- Positions diagram -->
+    <div class="card-football card">
+      <div class="clabel">Positions and their roles — a visual overview</div>
+      <p class="sports-text-6">
+        A standard 4-3-3 formation places players in three banks. Each position has a primary responsibility and a pressing responsibility when the team is without the ball. The diagram below shows a 4-3-3 with approximate pitch zones.
+      </p>
+      <div class="diagram-wrap">
+        <svg class="sports-media" viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg">
+          <!-- Pitch -->
+          <rect x="20" y="10" width="480" height="320" rx="6" fill="none" stroke="var(--color-border-secondary)" stroke-width="1.2"/>
+          <!-- Halfway line -->
+          <line x1="20" y1="170" x2="500" y2="170" stroke="var(--color-border-tertiary)" stroke-width="0.8" stroke-dasharray="6,4"/>
+          <!-- Centre circle -->
+          <circle cx="260" cy="170" r="36" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <!-- Penalty areas -->
+          <rect x="20" y="100" width="100" height="140" rx="3" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <rect x="380" y="100" width="100" height="140" rx="3" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <!-- Goal boxes -->
+          <rect x="20" y="135" width="40" height="70" rx="2" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <rect x="460" y="135" width="40" height="70" rx="2" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <!-- Pitch fill -->
+          <rect x="20" y="10" width="480" height="320" rx="6" fill="var(--accent-bg)" opacity="0.4"/>
+          <!-- Players: GK -->
+          <circle cx="60" cy="170" r="14" fill="var(--accent)" opacity="0.9"/>
+          <text x="60" y="174" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">GK</text>
+          <!-- Defenders -->
+          <circle cx="130" cy="110" r="13" fill="var(--accent)" opacity="0.8"/>
+          <text x="130" y="114" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">LB</text>
+          <circle cx="155" cy="155" r="13" fill="var(--accent)" opacity="0.8"/>
+          <text x="155" y="159" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CB</text>
+          <circle cx="155" cy="185" r="13" fill="var(--accent)" opacity="0.8"/>
+          <text x="155" y="189" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CB</text>
+          <circle cx="130" cy="230" r="13" fill="var(--accent)" opacity="0.8"/>
+          <text x="130" y="234" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">RB</text>
+          <!-- Midfielders -->
+          <circle cx="240" cy="145" r="13" fill="#2563EB" opacity="0.85"/>
+          <text x="240" y="149" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CM</text>
+          <circle cx="220" cy="175" r="13" fill="#2563EB" opacity="0.85"/>
+          <text x="220" y="179" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">DM</text>
+          <circle cx="240" cy="205" r="13" fill="#2563EB" opacity="0.85"/>
+          <text x="240" y="209" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CM</text>
+          <!-- Forwards -->
+          <circle cx="360" cy="120" r="13" fill="#DC2626" opacity="0.85"/>
+          <text x="360" y="124" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">LW</text>
+          <circle cx="390" cy="170" r="13" fill="#DC2626" opacity="0.85"/>
+          <text x="390" y="174" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">ST</text>
+          <circle cx="360" cy="220" r="13" fill="#DC2626" opacity="0.85"/>
+          <text x="360" y="224" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">RW</text>
+          <!-- Direction arrow -->
+          <defs><marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><polygon points="0 0, 7 3.5, 0 7" fill="var(--color-text-tertiary)"/></marker></defs>
+          <line x1="430" y1="315" x2="480" y2="315" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <text x="426" y="310" font-size="9" fill="var(--color-text-tertiary)" text-anchor="end">Attack</text>
+          <!-- Legend -->
+          <circle cx="30" cy="25" r="7" fill="var(--accent)"/>
+          <text x="40" y="29" font-size="9" fill="var(--color-text-secondary)">Defenders/GK</text>
+          <circle cx="130" cy="25" r="7" fill="#2563EB"/>
+          <text x="140" y="29" font-size="9" fill="var(--color-text-secondary)">Midfielders</text>
+          <circle cx="220" cy="25" r="7" fill="#DC2626"/>
+          <text x="230" y="29" font-size="9" fill="var(--color-text-secondary)">Forwards</text>
+        </svg>
+      </div>
+      <p class="sports-text-7">
+        The <em>false 9</em> is a striker who drops into midfield rather than staying central, dragging centre-backs out of position. Messi played the false 9 for Guardiola's Barcelona from 2008, creating space for the wide forwards (Pedro, Villa) to attack the now-unoccupied centre. Wing-backs — in a back-three system — have a dual role as wide defenders and attacking outlets, covering more ground (10–13km per match) than almost any other position.
+      </p>
+    </div>
+
+    <!-- Phases of play -->
+    <div class="card-football card">
+      <div class="clabel">The structure of a match — phases of play</div>
+      <p class="sports-text-3">
+        Modern tactical analysis divides a match into four phases: in possession, out of possession, transition to attack (winning the ball), and transition to defence (losing the ball). The transitions are often the most decisive moments — teams are most vulnerable in the 5 seconds after winning or losing the ball, when organisation breaks down.
+      </p>
+      <p class="sports-text-3">
+        A <em>pressing trigger</em> is a moment that signals the team should press collectively. Common triggers: the opposition goalkeeper has the ball (limited options), a heavy touch by an opposition player, a backward pass by a defender. Klopp's Liverpool (2016–2024) pressed at 82.8 PPDA (passes per defensive action) in their peak seasons, meaning they allowed opponents fewer than 1 pass per press attempt on average.
+      </p>
+      <p class="sports-text-4">
+        The <em>high block</em> (pressing high up the pitch) and <em>low block</em> (defending deep) represent opposite philosophies with different risk profiles. A high block generates turnovers near the opponent's goal (high reward if successful) but concedes large spaces behind the defensive line (high risk if beaten). Teams with inferior athletes often prefer low blocks — like José Mourinho's Inter in the 2010 Champions League final, which contained an exceptional Barcelona squad with a disciplined 4-5-1 and won 2–0.
+      </p>
+    </div>
+
+    <!-- ── PART E ── -->
+    <div class="sec-football">Part E · football tactics — formations, systems, and philosophy</div>
+
+    <!-- Tactics timeline -->
+    <div class="card-football card">
+      <div class="clabel">The history of football tactics — timeline</div>
+      <div id="tactics-timeline" class="pc-wrap"></div>
+      <p class="sports-text-5">Era labels are approximate. Tactical eras overlap significantly — the 4-4-2 remained common in England until the 2010s while continental football had moved on.</p>
+    </div>
+
+    <!-- Formation explorer -->
+    <div class="card-football card">
+      <div class="clabel">Major formations — click to explore</div>
+      <div class="explorer-btns" id="formation-btns"></div>
+      <div class="explorer-panel" id="formation-panel">
+        <div class="ep-title">Select a formation above</div>
+        <div class="ep-body">Click any button to see how that formation works, its strengths, weaknesses, and which managers made it famous.</div>
+      </div>
+    </div>
+
+    <!-- Pressing -->
+    <div class="card-football card">
+      <div class="clabel">Pressing — the tactical revolution of the 2010s</div>
+      <p class="sports-text-3">
+        Gegenpressing ("counter-pressing" in German) refers to immediately winning the ball back after losing possession, before the opposition can reorganize. Jürgen Klopp developed it at Borussia Dortmund between 2008–2015, drawing on Ralf Rangnick's predecessor work at RB Leipzig. The logic: for 5–8 seconds after losing the ball, attacking players are closer to the ball than defenders, creating a brief window to win it back in a dangerous area.
+      </p>
+      <p class="sports-text-3">
+        <em>PPDA</em> (Passes Allowed Per Defensive Action) is the standard press-intensity metric. Lower PPDA = more aggressive pressing. Elite pressing teams like Klopp's Liverpool 2019–20 averaged ~6 PPDA; a passive team averages 12–18. The physical cost is significant: high-press teams cover 3–4 km more than opponents in a match and see injury rates correlate with press intensity across a season.
+      </p>
+      <div class="warn-box">
+        The press has limits. Low-quality opposition can be pressed off the pitch; elite technical players (Iniesta, De Bruyne, Modric) can escape presses with first-touch control and short combinations. Manchester City under Guardiola specifically trains "press-breaking" patterns as a primary possession objective.
+      </div>
+
+      <div class="clabel clabel-style-2">Press intensity comparison — PPDA (lower = more aggressive press)</div>
+      <div class="u-mt-sm" id="u-mt-8px"></div>
+      <p class="sports-text-8">PPDA figures are approximate seasonal averages. Sources: StatsBomb, Understat 2019–23.</p>
+    </div>
+
+    <!-- Positional football -->
+    <div class="card-football card">
+      <div class="clabel">Build-up play and positional football — Guardiola and the Spanish school</div>
+      <p class="sports-text-3">
+        <em>Juego de posición</em> (positional play) was systematized by Johan Cruyff at Barcelona from 1988 and codified by Pep Guardiola, who played under Cruyff before managing the club. Its core principle: always maintain numerical and positional superiority in every zone of the pitch. The objective of ball possession is not possession itself (as critics claim) but to create asymmetric spaces the opponent cannot cover.
+      </p>
+      <p class="sports-text-3">
+        The <em>half-space</em> — the zone between the centre and the wide channel — is the critical area in positional play. It is the hardest zone for a back-four to defend because it is diagonal from both centre-backs and full-backs. Guardiola's teams specifically position inverted wingers and midfielders in half-spaces to receive, turn, and threaten goal.
+      </p>
+      <p class="sports-text-4">
+        An <em>inverted winger</em> is a right-footed player who plays on the left wing (or vice versa), so they cut inside onto their stronger foot rather than crossing. Arjen Robben at Bayern Munich and Franck Ribéry provided a template: Robben's cut-inside-and-shoot pattern was so well-known that opposing full-backs could do nothing to stop it — the sequence was so fast and precise that predictability didn't diminish effectiveness.
+      </p>
+    </div>
+
+    <!-- Set pieces -->
+    <div class="card-football card">
+      <div class="clabel">Set pieces — the neglected winning margin</div>
+      <p class="sports-text-3">
+        Approximately 30% of all goals at the 2022 World Cup came directly or indirectly from set pieces (corners, free kicks, and throw-ins). This figure has risen steadily since 2010, driven by increasing investment in set-piece coaching. Yet as recently as 2014, most elite clubs had no dedicated set-piece coach. Denmark was the first international side to formally employ one (full-time, 2010s).
+      </p>
+      <p class="sports-text-3">
+        Corner routines use coordinated movement patterns to create separation. The simplest mechanism: decoy runners drag markers away, while the true target arrives late into an uncontested zone. Liverpool's 2021–22 season included specifically designed "near-post flick" corners that relied on Trent Alexander-Arnold's delivery accuracy to within a 1-metre box.
+      </p>
+      <div class="info-box">
+        Rory Delap's long throw-ins at Stoke City (2009–2012) created a specialised threat equivalent to a corner kick from open play. Delap could throw the ball 40+ metres, reaching the six-yard box. Opponents specifically prepared for Stoke's throw-ins in a way usually reserved for free kicks. Stoke finished 11th in the Premier League in 2009–10 — comfortably beyond what their squad quality suggested was possible.
+      </div>
+    </div>
+
+    <!-- xG calculator -->
+    <div class="card-football card">
+      <div class="clabel">Football analytics — xG, progressive passes, and the data revolution</div>
+      <p class="sports-text-3">
+        <em>Expected goals (xG)</em> assigns each shot a probability between 0 and 1 that it results in a goal, based on historical data. A penalty is approximately 0.76 xG. A headed chance from 12 metres after a cross is ~0.09 xG. An open-play shot from the centre of the six-yard box is ~0.5 xG. Summing a team's xG over a season gives a better prediction of future performance than actual goals scored — teams who consistently outscore their xG tend to regress.
+      </p>
+      <div class="clabel u-mt-md">xG estimator — open-play shots</div>
+      <div class="calc-wrap">
+        <div class="calc-row">
+          <div>
+            <label for="u-w-100pct">Distance from goal (metres)</label>
+            <input class="u-w-100pct" type="number" id="u-w-100pct" min="3" max="40" value="18">
+          </div>
+          <div>
+            <label for="xg-angle">Shooting angle (degrees from centre, 0=straight-on, 45=wide)</label>
+            <input class="u-w-100pct" type="number" id="xg-angle" min="0" max="70" value="10">
+          </div>
+          <div>
+            <label for="xg-type">Shot type</label>
+            <select class="xg-type" id="xg-type">
+              <option value="foot">Foot shot</option>
+              <option value="head">Header</option>
+              <option value="volley">Volley</option>
+            </select>
+          </div>
+          <div class="sports-div-style">
+            <button onclick="calcXG()">Calculate xG</button>
+          </div>
+        </div>
+        <div class="calc-out" id="xg-out">Enter shot details above and click Calculate.</div>
+      </div>
+      <p class="sports-text-4">
+        <em>Progressive passes</em> move the ball at least 10 metres closer to the opponent's goal (StatsBomb definition). Teams with high progressive pass counts tend to have better positional control. The limitation of all current models: they measure ball events only. Context — whether defenders are tracking back, whether the goalkeeper is off his line — is largely absent.
+      </p>
+    </div>
+
+    <!-- ── PART F ── -->
+    <div class="sec-football">Part F · the history of football — from Sheffield to the global game</div>
+
+    <!-- Invention of football -->
+    <div class="card-football card">
+      <div class="clabel">The invention of football — codification in 19th-century England</div>
+      <p class="sports-text-3">
+        The founding myth of football assigns primacy to Cambridge and Sheffield, but the reality is messier. The 1848 Cambridge Rules were drawn up by students from different schools to enable inter-school matches; Sheffield FC, founded in 1857, developed its own code independently. The key divide was handling: rugby football allowed carrying the ball; association football banned it. The Football Association, formed in London on October 26, 1863, attempted to unify the various codes. Blackheath FC walked out when handling and hacking (kicking opponents) were prohibited — they eventually became part of the Rugby Football Union (founded 1871).
+      </p>
+      <p class="sports-text-4">
+        Professionalism was a class battle. The FA banned paid players until 1885, partly because elite clubs feared northern working-class teams (whose players needed wages to compensate for lost work hours) would dominate. When Preston North End and other northern clubs threatened to break away and form a professional league, the FA relented. The Football League — the world's first professional football league — launched in 1888 with 12 founding clubs. Aston Villa won the first season.
+      </p>
+    </div>
+
+    <!-- Global spread -->
+    <div class="card-football card">
+      <div class="clabel">Football spreads globally — how British sailors and workers exported the game</div>
+      <p class="sports-text-3">
+        Football spread primarily through the informal networks of British commercial expansion: sailors, railway engineers, merchants, and teachers exported the game before any organised international effort. Genoa Cricket and Football Club (1893) is Italy's oldest surviving football club, founded by British expatriates. Club Atlético de Madrid was originally called Madrid Football Club when founded by students returning from England in 1903.
+      </p>
+      <p class="sports-text-3">
+        South America developed its own football culture quickly. Uruguay won the first two Olympic football tournaments (1924, 1928) and hosted and won the inaugural World Cup in 1930. Brazil's hybrid style — shaped by African and European influences, formalized in the 1950s as <em>jogo bonito</em> (the beautiful game) — became the dominant aesthetic ideal globally after the 1970 World Cup.
+      </p>
+      <div class="info-box">
+        Africa and Asia received football largely through British colonial administration. The Africa Cup of Nations began in 1957. Asian countries first competed in the Olympics in 1948. But the global football hierarchy — which still sees European clubs drain talent from South America and Africa — reflects colonial economic patterns: the best players from Lagos, Cairo, and Buenos Aires move to London, Barcelona, and Munich, not the reverse.
+      </div>
+    </div>
+
+    <!-- World Cup history -->
+    <div class="card-football card">
+      <div class="clabel">The World Cup — winners and political context</div>
+      <div id="wc-distbar">
+        <p class="sports-text-9">World Cup wins by nation (1930–2022, 22 tournaments)</p>
+      </div>
+      <p class="sports-text-7">
+        The 1954 tournament is the "Miracle of Bern" — West Germany beat Hungary 3–2 in the final after Hungary had demolished Germany 8–3 in the group stage. The 1970 Brazil team (Pelé, Jairzinho, Rivelino, Tostão) is considered by many analysts the greatest World Cup team ever; they are the only side to win every match in the tournament. The 1986 tournament belongs to Maradona: he scored both the "Hand of God" goal and the "Goal of the Century" against England in the same quarter-final, six minutes apart. Qatar 2022 was the first World Cup in the Middle East; the tournament generated $7.5 billion in FIFA revenue.
+      </p>
+    </div>
+
+    <!-- Great club teams -->
+    <div class="card-football card">
+      <div class="clabel">The great club dynasties — what made them dominant</div>
+      <div class="explorer-btns" id="club-btns"></div>
+      <div class="explorer-panel" id="club-panel">
+        <div class="ep-title">Select a club dynasty above</div>
+        <div class="ep-body">Each dynasty combined exceptional playing talent with a specific tactical idea and often a single visionary leader. Click a name to explore.</div>
+      </div>
+    </div>
+
+    <!-- GOAT debate -->
+    <div class="card-football card">
+      <div class="clabel">The greatest players — criteria and the GOAT debate</div>
+      <div class="elem-grid" id="player-grid"></div>
+      <div class="elem-detail" id="player-detail"></div>
+    </div>
+
+    <!-- ── PART G ── -->
+    <div class="sec-football">Part G · the football industry — money, transfers, and power</div>
+
+    <!-- Revenue streams -->
+    <div class="card-football card">
+      <div class="clabel">How football clubs make money — revenue streams and hierarchy</div>
+      <p class="sports-text-6">
+        The top 20 clubs by revenue (Deloitte Football Money League 2024) collectively earned €10.5 billion in 2022–23. Real Madrid topped the list at €831m, followed by Manchester City (€826m) and PSG (€804m). Revenue divides into three streams: broadcasting (largest, ~45%), commercial (sponsorship, shirt sales, ~35%), and matchday (tickets, hospitality, ~20%). The broadcasting share matters because it is the most volatile: the Premier League's next UK deal may be worth more or less than anticipated.
+      </p>
+      <div class="clabel">Revenue breakdown — typical top-10 Premier League club</div>
+      <div id="revenue-distbar"></div>
+      <p class="sports-text-10">Approximate proportions vary by club size and stadium capacity. Source: Deloitte Football Money League 2024.</p>
+      <div class="info-box">
+        The revenue gap between the top and the rest is structural. Brighton, a well-run mid-table Premier League club, earned ~£181m in 2022–23 — less than 22% of Real Madrid's income. This gap funds player quality: the difference in wage bills explains roughly 75% of league position variance across a season (Szymanski & Kuypers, 1999 — still remarkably accurate in updated studies).
+      </div>
+    </div>
+
+    <!-- Transfer market -->
+    <div class="card-football card">
+      <div class="clabel">The transfer market — how player buying and selling works</div>
+      <p class="sports-text-3">
+        Transfer fees are paid by the buying club to the selling club for a player's registration. The player themselves receives a signing-on fee and wage, negotiated separately. Agents — who represent players (and sometimes, controversially, clubs simultaneously) — typically receive 3–10% of the fee and 10–15% of the player's wages. PSG paid €222 million to Barcelona for Neymar in 2017, still the world record. At that price, PSG paid approximately €11,000 per minute of football across his contract.
+      </p>
+      <p class="sports-text-3">
+        <em>Sell-on clauses</em> entitle the selling club to a percentage of any future sale. Crystal Palace inserted a 15% sell-on clause when selling Wilfried Zaha to Manchester United for £15m in 2013; when Zaha eventually rejoined Palace and they sold him to Aston Villa for £30m in 2023, Palace received an additional share. Smaller clubs routinely use sell-on clauses as development income.
+      </p>
+      <p class="sports-text-4">
+        UEFA's Financial Fair Play rules (now called PSR — Profitability and Sustainability Rules) attempt to prevent clubs spending beyond their means. Clubs must not lose more than €30m per three-year cycle (with exceptions for infrastructure and youth). Manchester City were charged with 115 alleged Premier League rule breaches in 2023; Everton and Nottingham Forest received points deductions in the same season.
+      </p>
+    </div>
+
+    <!-- Ownership models -->
+    <div class="card-football card">
+      <div class="clabel">Ownership models — fans, billionaires, states, and the Super League</div>
+      <p class="sports-text-3">
+        Football club ownership has diversified radically since the 1990s. The Bundesliga's <em>50+1 rule</em> requires clubs to retain majority voting rights with their members: no single external investor can hold more than 49% of voting shares. Bayer Leverkusen and Wolfsburg (owned by Bayer and VW respectively, as founders) are exceptions. The rule has prevented the kind of debt-loading seen in English football, but critics argue it restricts investment and competitiveness in European competition.
+      </p>
+      <p class="sports-text-3">
+        State-backed ownership is the dominant force at the top. Manchester City (Abu Dhabi United Group), PSG (Qatar Sports Investments), and Newcastle United (Saudi PIF) are effectively sovereign-wealth assets. This creates an asymmetric advantage: losses are absorbed by national wealth funds without commercial consequence, allowing indefinite investment.
+      </p>
+      <div class="warn-box">
+        The European Super League proposal (April 2021) lasted 48 hours. Twelve clubs — including all six Premier League "Big Six" — announced a breakaway competition with guaranteed entry. Fan protests, government threats, UEFA/FIFA sanctions, and broadcast pressure caused all but three clubs (Real Madrid, Barcelona, Juventus) to withdraw within two days. The episode revealed that football clubs are not purely commercial entities — their legitimacy depends on a relationship with supporters that cannot be fully overridden by ownership.
+      </div>
+    </div>
+
+    <!-- Champions League -->
+    <div class="card-football card">
+      <div class="clabel">The Champions League — the most valuable club competition in sport</div>
+      <p class="sports-text-3">
+        The UEFA Champions League (rebranded from the European Cup in 1992–93) generates ~€3.5 billion in annual revenue, distributed primarily by performance and coefficient (historical results). Real Madrid have won it a record 14 times; AC Milan and Bayern Munich have 6 each. The 2023–24 final (Real Madrid 2–0 Borussia Dortmund) drew a global audience of 450 million viewers.
+      </p>
+      <p class="sports-text-3">
+        The <em>UEFA coefficient</em> system awards points for performance over five seasons, determining seedings and access. Clubs with high historical coefficients receive guaranteed group stage entry and better prize money even in poor seasons, creating a self-reinforcing hierarchy. From 2024–25, a new 36-team league-phase format replaced the group stage, giving the largest clubs two additional guaranteed matches per season — worth roughly €20m each.
+      </p>
+      <div class="clabel u-mt-md">Champions League prize money breakdown (2023–24 approximate)</div>
+      <div class="u-mt-sm" id="ucl-chart"></div>
+      <p class="sports-text-8">Figures in millions EUR. Market pool distributions vary by broadcaster market size. Source: UEFA 2024.</p>
+    </div>
+
+    <!-- ── PART H ── -->
+    <div class="sec-football">Part H · the major leagues — how the world's top competitions work</div>
+
+    <div class="card-football card">
+      <div class="clabel">The Premier League — the world's most watched domestic league</div>
+      <p class="sports-text-3">
+        The Premier League was founded in 1992 when the First Division clubs broke from the Football League to negotiate their own TV deal — principally with BSkyB (now Sky). That first deal was £304 million for five years. The 2022–25 UK rights deal was worth £5.1 billion for domestic rights alone; adding international rights (sold to 189 countries) takes total broadcast revenue above £10 billion per cycle. The league is broadcast in more countries than any other sports competition.
+      </p>
+      <p class="sports-text-3">
+        Revenue is distributed unequally but more evenly than most leagues: the "Big Six" (Arsenal, Chelsea, Liverpool, Man City, Man United, Tottenham) receive more from commercial and European competition, but equal share broadcasting ensures even promoted clubs earn ~£110m per season. This financial cushion is one reason English clubs perform well in Europe.
+      </p>
+      <div class="info-box">
+        Promotion and relegation is the key structural difference from American sports. Three clubs are promoted from the Championship each year; three Premier League clubs are relegated. The financial gap between the two divisions is roughly £170m per season, creating intense pressure around the relegation zone. "Parachute payments" (three years of reduced Premier League distributions to relegated clubs) partially cushion the drop, but also arguably impede competition within the Championship.
+      </div>
+    </div>
+
+    <div class="card-football card">
+      <div class="clabel">La Liga, Bundesliga, Serie A, Ligue 1 — how they differ</div>
+
+      <div class="clabel u-mb-sm">European league comparison</div>
+      <div class="explorer-btns" id="league-btns"></div>
+      <div class="explorer-panel" id="league-panel">
+        <div class="ep-title">Select a league to explore</div>
+        <div class="ep-body">Each of the five major European leagues has a distinct financial structure, ownership culture, and competitive balance profile.</div>
+      </div>
+    </div>
+
+    <div class="card-football card">
+      <div class="clabel">South American football — CONMEBOL, Libertadores, and the culture</div>
+      <p class="sports-text-3">
+        The Copa Libertadores — South America's Champions League — is contested by clubs from CONMEBOL's 10 member nations. It is widely considered the most intense club competition in football: Boca Juniors vs River Plate in the 2018 final was broadcast in 80 countries and decided across two legs with a cumulative 5–3 scoreline. The physical and emotional intensity of CONMEBOL football is higher than European competition, partly because South American fans have a more direct and confrontational relationship with players.
+      </p>
+      <p class="sports-text-3">
+        The <em>Superclásico</em> — Boca Juniors vs River Plate — is a contest between two Buenos Aires clubs that represent class and geography: Boca is the working-class port district; River is the wealthier Núñez neighbourhood. They share a city but have never shared mutual warmth. The rivalry is not simply sporting; it is woven into Argentine identity and has at times suspended normal civic relations.
+      </p>
+      <p class="sports-text-4">
+        The financial drain of talent to Europe is existential. Brazil's domestic league, the Brasileirao, loses its best players annually: Vinicius Jr left Flamengo for Real Madrid at 17, before playing a single top-division game. Argentina's Primera División has seen its top 10 earners earn less collectively than the Premier League minimum salary. The talent pipeline flows one direction.
+      </p>
+    </div>
+
+    <div class="card-football card">
+      <div class="clabel">African, Asian, MLS, and the growing competitions</div>
+      <p class="sports-text-3">
+        The <em>Africa Cup of Nations (AFCON)</em>, held biennially by CAF, is one of the most attended continental tournaments in the world. Senegal won their first title in 2022; Egypt holds the record with seven wins. The tournament has been criticised for clashing with European club fixtures, as roughly 80% of Africa's top players now earn their living in Europe.
+      </p>
+      <p class="sports-text-3">
+        The <em>Saudi Pro League's</em> 2023 investment wave — signing Ronaldo, Benzema, Neymar, and over 20 other high-profile players on contracts above €80m per year — represents either a new Gulf state model (similar to PSG's origins) or a temporary vanity project. Saudi clubs are backed by PIF funds; the league generated significant global media coverage but has not yet achieved competitive legitimacy comparable to the top five European leagues.
+      </p>
+      <p class="sports-text-4">
+        <em>MLS</em> — Major League Soccer — has grown from 10 founding clubs in 1996 to 29 in 2023, with expansion clubs costing $300–400m in franchise fees. Lionel Messi's arrival at Inter Miami in 2023 drove a 1,000% increase in MLS streaming subscriptions in a single week. The league uses a designated player rule (the "Beckham Rule," introduced for David Beckham's 2007 arrival at LA Galaxy) to allow each club to sign up to three players outside salary cap constraints.
+      </p>
+    </div>
+
+    <!-- ── PART I ── -->
+    <div class="sec-football">Part I · football and culture — identity, tribalism, and meaning</div>
+
+    <div class="card-football card">
+      <div class="clabel">Football and identity — why fans care so much</div>
+      <p class="sports-text-3">
+        Henri Tajfel's social identity theory holds that humans define themselves partly through group membership, and that the group's status affects individual self-esteem. Sport exploits this mechanism: fan loyalty is largely involuntary, inherited from family, geography, and class. Research by Robert Cialdini coined "BIRGing" (Basking In Reflected Glory) — fans are more likely to wear team colours after a win, and "CORFing" (Cutting Off Reflected Failure) — distancing themselves after defeat, shifting language from "we won" to "they lost."
+      </p>
+      <p class="sports-text-3">
+        Football clubs often perform functions previously fulfilled by religion or political parties: regular communal gatherings, shared rituals, a narrative of struggle and transcendence, and a community of strangers bound by abstract loyalty. Nick Hornby's <em>Fever Pitch</em> (1992) is the canonical literary document of this relationship; its insight — that football provides an emotional intensity otherwise unavailable to modern men — remains accurate and slightly sad.
+      </p>
+      <div class="info-box">
+        National team support is stronger than club support in most countries outside England and Germany. In Argentina, England is not "just another country" — the 1966 World Cup quarterfinal, the Malvinas war, and the Hand of God goal constitute a 30-year narrative thread. National football rivalries encode historical grievances that diplomacy cannot fully address.
+      </div>
+    </div>
+
+    <div class="card-football card">
+      <div class="clabel">Ultras, hooliganism, and fan culture</div>
+      <p class="sports-text-3">
+        Italian <em>ultras</em> emerged in the late 1960s: organized supporter groups occupying designated curvas (ends), producing choreographed tifo displays, and claiming an ownership stake in the club's identity distinct from commercial spectacle. The best ultras culture creates genuinely spectacular atmospheres — the Borussia Dortmund Yellow Wall (Südtribüne), Europe's largest standing terrace at 25,000 capacity, is the most replicated supporter model globally. The worst ultras culture involves violence, racism, political extremism, and criminal extortion of clubs.
+      </p>
+      <p class="sports-text-3">
+        English football hooliganism peaked between 1975 and 1990. The Heysel disaster (1985) — 39 Juventus fans killed before the European Cup final in Brussels — led to English clubs being banned from European competition for five years. The Hillsborough disaster (1989) — 97 Liverpool fans killed in a crush at Sheffield Wednesday's ground — was initially blamed on fan behaviour; the truth (police failure) took 23 years to be officially established.
+      </p>
+      <p class="sports-text-4">
+        Fan protests in the 2020s have targeted ownership. Manchester United fans stormed Old Trafford in May 2021 to protest against the Glazer family's leveraged buyout (which saddled the club with £500m in debt). The Leeds United fan protests against "dirty Leeds" imagery in the 1970s and the "Green and Gold" campaign (Manchester United scarves in Newton Heath's original colours, 2010) show that fans retain genuine power when they act collectively.
+      </p>
+    </div>
+
+    <div class="card-football card">
+      <div class="clabel">Football and race — discrimination, progress, and what still needs to change</div>
+      <p class="sports-text-3">
+        Racist abuse in European stadia has been documented since at least the 1970s. Monkey chants, banana throwing, and coordinated abuse from home and away fans became so normalised in Italy and Spain that it was treated as background noise. AC Milan's George Weah (1995 Ballon d'Or winner) faced weekly racial abuse; in 2023, Italy midfielder Mike Maignan walked off the pitch at Udine to protest racial abuse, prompting a match suspension.
+      </p>
+      <p class="sports-text-3">
+        Kick It Out, founded in England in 1993, monitors and reports discrimination in football. The structural issue it highlights: while approximately 43% of Premier League players are Black, fewer than 5% of head coaches and 3% of boardroom positions are held by Black or minority ethnic individuals. The Rooney Rule (requiring at least one BAME candidate to be interviewed for senior roles) was adopted by the FA in 2018 but has produced limited change.
+      </p>
+      <div class="warn-box">
+        The 2021 Euros final penalty shootout (Italy beat England) was followed by immediate racist abuse targeting Rashford, Sancho, and Saka — all of whom had missed penalties. A YouGov poll found 57% of England fans believed the abuse was racist; a further poll found 80% of Black Britons had experienced online racial abuse in their lifetimes. The abuse was swift, organised, and indisputably racial — not random anger at missed penalties.
+      </div>
+    </div>
+
+    <div class="card-football card">
+      <div class="clabel">Women's football — the fastest growing sport in the world</div>
+      <p class="sports-text-3">
+        The 2023 Women's World Cup in Australia and New Zealand broke every attendance and viewership record: the final (Spain 1–0 England) drew 32 million viewers in the UK alone — more than the men's team's equivalent in 2022. Total tournament attendance of 1.98 million exceeded the previous record by 40%.
+      </p>
+      <p class="sports-text-3">
+        The Women's Super League (England) has seen average attendance treble since 2019, with Arsenal and Chelsea regularly filling 25,000-seat venues. The FA Women's Super League broadcast deal with Sky and BBC (2022–25) is worth £24m — still a fraction of the men's game, but growing. Spain's Liga F, Germany's Frauen Bundesliga, and the NWSL (USA) are the other major leagues.
+      </p>
+      <div class="clabel u-mt-md">Women's World Cup final viewership growth</div>
+      <div class="u-mt-sm" id="wwc-chart"></div>
+      <p class="sports-text-8">UK television viewers, millions. Sources: BARB, BBC Sport.</p>
+    </div>
+
+    <!-- ── PART J ── -->
+    <div class="sec-football">Part J · coaching and management — leading a football club</div>
+
+    <div class="card-football card">
+      <div class="clabel">What a manager actually does — and how the role has changed</div>
+      <p class="sports-text-3">
+        The 19th-century football manager was primarily a secretary — organising fixtures, travel, and facilities. Tactical authority remained with players (often the team captain). The shift to manager-as-tactician happened gradually between 1900–1950; Herbert Chapman at Arsenal (1925–1934) is the first clearly modern manager, redesigning Chapman's position on the pitch, introducing the WM formation, installing floodlights, and even persuading London Underground to rename Gillespie Road station "Arsenal."
+      </p>
+      <p class="sports-text-3">
+        The modern manager operates within a <em>sporting director model</em> — a continental structure where recruitment, contracts, and squad planning are handled by a sporting director, leaving the manager free to focus on coaching and tactics. Liverpool's Julian Ward (later Michael Edwards) and Brighton's Paul Barber exemplify this. The alternative is the traditional English "manager-in-charge-of-everything" model, which Ferguson at Manchester United practised until 2013 but which is increasingly rare.
+      </p>
+      <p class="sports-text-4">
+        Backroom staff has exploded since 2000. A Premier League club's technical team now routinely includes: assistant manager, first team coach, goalkeeping coach, set-piece specialist, sports scientists (2–3), nutritionists (1–2), video analysts (2–4), performance analysts (2–3), data scientists (1–3), physiotherapists (3–5), sports psychologist, and a head of recruitment with a team of scouts. A 1990s top-flight club employed perhaps 8 people in coaching and support; today it is 30–50.
+      </p>
+    </div>
+
+    <!-- Great managers explorer -->
+    <div class="card-football card">
+      <div class="clabel">The great managers — a comparative explorer</div>
+      <div class="explorer-btns" id="manager-btns"></div>
+      <div class="explorer-panel" id="manager-panel">
+        <div class="ep-title">Select a manager above</div>
+        <div class="ep-body">Each of these figures transformed not just their clubs but the way the game is understood and played. Click to explore.</div>
+      </div>
+    </div>
+
+    <!-- Managerial turnover -->
+    <div class="card-football card">
+      <div class="clabel">Managerial turnover — the research on sacking</div>
+      <p class="sports-text-3">
+        The average Premier League manager tenure is approximately 1.4 years (2015–2023 data). The intuition behind sacking — that a new manager will improve results — is supported in the short term but collapses over longer time frames. A 2007 study by Bas ter Weel found that while clubs showed improved results in the first 8 games after a new appointment, this improvement was indistinguishable from statistical regression to the mean — the team was sacked at a performance trough and would have improved regardless.
+      </p>
+      <div class="clabel u-mt-md">Factors that actually predict managerial success (research-based)</div>
+      <div class="u-mt-sm" id="mgr-success-chart"></div>
+      <p class="sports-text-8">Relative importance based on econometric studies (Szymanski, ter Weel, Bridgewater). Wage bill is the dominant predictor of league performance regardless of manager.</p>
+
+      <div class="clabel clabel-style-2">Time-to-results simulator</div>
+      <div class="slider-wrap">
+        <div class="slider-poles"><span>Just appointed (0 months)</span><span>4 seasons (48 months)</span></div>
+        <input type="range" id="mgr-tenure" min="0" max="48" value="6" step="1">
+        <div class="slider-out" id="mgr-tenure-out">Move the slider to explore how manager tenure relates to performance.</div>
+      </div>
+    </div>
+
+    <!-- ── PART K ── -->
+    <h2 class="sec" id="part-k-other-major-sports-a-working-knowledge">Part K · other major sports — a working knowledge</h2>
+
+    <div class="card">
+      <div class="clabel">Basketball — the NBA, global reach, and how the game works</div>
+      <p class="sports-text-3">
+        Basketball was invented by James Naismith in December 1891 in Springfield, Massachusetts, with a soccer ball and two peach baskets nailed to a gymnasium balcony. The first formal rules allowed nine players per side and prohibited running with the ball. The NBA was founded in 1946 (as the BAA) and merged with the rival NBL in 1949. Today it has 30 franchises valued at an average of $3.85 billion (Forbes 2023), with the Golden State Warriors valued at $7.7 billion.
+      </p>
+      <p class="sports-text-3">
+        The <em>three-point revolution</em> is the most profound tactical shift in basketball history. In the 2012–13 season, NBA teams took an average of 18.4 three-point attempts per game; by 2022–23 that had risen to 35.1. The analytics driver was simple: 33% accuracy from three-point range produces 1.0 expected points per shot — equal to 50% accuracy on a two-pointer. Teams with elite three-point shooters (Golden State Warriors 2015–2019) unlocked an efficiency advantage that forced opponents to adapt or lose.
+      </p>
+      <div class="info-box">
+        The GOAT debate: Michael Jordan's Chicago Bulls won 6 championships in 8 seasons (1991–98) without ever losing an NBA Final. LeBron James has played more NBA minutes, reached more Finals, and statistically dominated every era he competed in — but his Finals record is 4–6. Jordan's defenders argue he never lost a Finals series; James' defenders note he dragged inferior teams to Finals Jordan could not have won. The debate is structurally unresolvable because the comparison requires counterfactual reasoning.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="clabel">Tennis — Grand Slams, surfaces, and the scoring system</div>
+      <p class="sports-text-3">
+        Tennis has four Grand Slams: Australian Open (Melbourne, January, hard court), Roland Garros (Paris, May–June, clay), Wimbledon (London, June–July, grass), and the US Open (New York, August–September, hard court). Surface differences are not aesthetic: clay slows the ball 20–30% and increases bounce height significantly, favouring baseliners; grass is fast and low, favouring serve-and-volley; hard courts split the difference.
+      </p>
+      <p class="sports-text-3">
+        The scoring system — 15, 30, 40, game; games, sets, match — is historically derived from medieval French real tennis and has little logical basis. The tiebreak (played at 6–6 in a set) was introduced by Jimmy Van Alen in the 1960s to prevent marathon sets. Wimbledon resisted it until 1971. The "super-tiebreak" final set (played to 10 points) replaced full final sets at all Slams except Wimbledon by 2022.
+      </p>
+      <p class="sports-text-4">
+        The "Big Three" era (Federer, Nadal, Djokovic, 2003–2023) produced 65 of the 83 possible Grand Slam titles between them. Djokovic holds the all-time record with 24 Grand Slams. The structural reason for their dominance: all three peaked simultaneously, reducing opportunities for any single rival to establish consistency. Carlos Alcaraz (born 2003) appears the most likely successor.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="clabel">Cricket — the longest and most complicated game</div>
+      <p class="sports-text-3">
+        Cricket exists in three formats of radically different character. <em>Test cricket</em> is played over five days, two innings each side, with no result being a legitimate outcome. It is the oldest format (first Test, England vs Australia, 1877) and considered the deepest test of skill, character, and concentration. <em>ODIs</em> (One Day Internationals, 50 overs per side) were introduced in 1971 and became the World Cup format. <em>T20</em> (Twenty20, 20 overs per side, ~3.5 hours) was introduced in 2003 and has become the dominant commercial format: the IPL (Indian Premier League), founded in 2008, now generates ~$11 billion in brand value (BCCI estimate 2023).
+      </p>
+      <p class="sports-text-3">
+        The LBW (Leg Before Wicket) rule is cricket's offside — frequently misunderstood. A batsman is out LBW if the ball hits their pad (without first hitting the bat) and would have gone on to hit the stumps. The DRS (Decision Review System) uses ball-tracking technology (Hawk-Eye) to project the ball's trajectory, but the projection carries an uncertainty range — and umpire's-call decisions (where the ball clips the edge of the stumps) remain subjective.
+      </p>
+      <div class="warn-box">
+        The T20 format has fundamentally changed batting technique. Reverse sweeps, ramps, scoops, and switch-hits that were considered trick shots in 2000 are now standard deliveries for international batsmen. Bowling averages in T20 have declined across all categories as batsmen optimise for aggressive scoring at every stage. This affects Test cricket: modern Test batsmen are more aggressive than previous generations and Test match run rates have risen steadily since 2005.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="clabel">American football, rugby, and the other football codes</div>
+      <p class="sports-text-3">
+        American football diverged from association football via rugby: Harvard, Yale, and Princeton adopted rugby-style rules in the 1870s; Walter Camp's rules changes (1880s) — the line of scrimmage, the down-and-distance system — created distinctly American football. The NFL, founded in 1920, is now the most lucrative sports league in the world, generating $18.6 billion in revenue in 2022.
+      </p>
+      <p class="sports-text-3">
+        Rugby union (15-a-side) and rugby league (13-a-side) split in 1895 over the same amateur/professional divide as football. Rugby union retained amateur status until 1995; professionalism transformed the game — previously undersize clubs now fell behind those that could pay. The World Cup final (2023: South Africa 12–11 New Zealand) is the sport's pinnacle. The Super Bowl is the single most-watched US television event each year — the 2023 broadcast drew 113 million viewers.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="clabel">Combat sports — boxing, MMA, and the tradition of fighting</div>
+      <p class="sports-text-3">
+        Boxing was the first combat sport to be fully codified in the modern era (Queensberry Rules, 1867). Today's professional boxing has 17 weight classes (strawweight to heavyweight) and four major sanctioning bodies (WBC, WBA, IBF, WBO), each of which has a "world champion" — creating a confusing proliferation of titles. The undisputed heavyweight championship (holding all four belts simultaneously) was unified only twice between 1990 and 2021: Lennox Lewis (1999) and Oleksandr Usyk (2021).
+      </p>
+      <p class="sports-text-3">
+        Mixed martial arts (MMA) and the UFC were founded in 1993 with the explicit purpose of testing which martial art was most effective. Early tournaments were won by Royce Gracie using Brazilian jiu-jitsu — ground submission techniques. Modern elite MMA fighters are highly cross-trained: the competitive advantage has shifted from a single specialization to the ability to impose one's preferred fighting range while denying the opponent theirs.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="clabel">Formula 1 — technology, money, and speed</div>
+      <p class="sports-text-3">
+        Formula 1's commercial value rests on a unique combination: the world's most expensive sporting technology, a global calendar (23+ races across 5 continents), and a narratively compelling driver/team dynamic. The FIA sets car regulations that define the competitive field; teams spend between $140 million (cost cap, introduced 2021) and ~$400 million total per year on car development, staff, and logistics.
+      </p>
+      <p class="sports-text-3">
+        The <em>constructor vs driver championship</em> distinction is important: Ferrari has won the most drivers' championships (15) across history, but Mercedes won 8 consecutive constructors' championships (2014–2021) in the V6 hybrid era — arguably the most dominant era in team performance in F1 history. Pit stop strategy involves real-time decisions about tyre compounds (soft, medium, hard, with different life and pace profiles) that can negate a 20-second on-track deficit in a single stop.
+      </p>
+      <div class="success-box">
+        Netflix's "Drive to Survive" (launched 2019) is the clearest documented case of a sports documentary expanding a sport's global audience. F1's US fanbase grew from ~1 million fans in 2016 to an estimated 6 million in 2022, directly correlating with the show's three seasons. Las Vegas was added to the calendar in 2023 with a reported $375 million city investment — a market that barely existed for F1 before Netflix.
+      </div>
+    </div>
+
+    <!-- ── PART L ── -->
+    <h2 class="sec" id="part-l-q-and-a">Part L · Q&A</h2>
+
+    <div class="qa">
+      <div class="qa-q">Is sport inherently meritocratic, or does it just look that way?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">Sport is significantly less meritocratic than it appears. Relative age effect — the advantage of being born early in a selection cohort year — means January-born players are dramatically overrepresented in elite football academies (Malcolm Gladwell popularized this in Outliers; the original research is by Roger Barnsley, 1992). Socioeconomic access shapes who reaches elite sport: swimming, tennis, and golf have enormous upfront cost barriers; even football requires consistent nutrition, recovery time, and access to coaching that disadvantaged families cannot provide. Race compounds geography: in England, Black players dominate the pitch but are absent from management boards, suggesting talent alone does not determine career ceiling. The meritocracy narrative serves both sport and ideology — it makes inequality look like natural selection.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Does VAR improve the fairness of football, or does it just move the argument?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">VAR reduces clear errors — the 2022 World Cup had zero incorrect red card decisions reach a final ruling, compared to roughly 3–4 in previous tournaments. But it has created new categories of controversy: marginal offside decisions (a 2cm armpit), "clear and obvious error" subjectivity, and inconsistency between leagues in their application threshold. A 2021 YouGov poll found 55% of Premier League fans believed VAR had made the sport worse. The core problem is philosophical: football's social contract involves shared uncertainty — moments of disputed, contested, argued meaning. Replacing that uncertainty with (imperfect) algorithmic precision changes what kind of thing football is.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Can analytics fully replace traditional scouting in identifying talent?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">No, and the best practitioners say so. Data models excel at identifying patterns in large samples and correcting for scout bias (halo effects, aesthetic preferences). They fail at qualitative factors that barely appear in data: a player's response to adversity, leadership within a group, injury risk from biomechanical movement, or tactical intelligence. Brighton's Paul Barber has argued that their analytical approach is to narrow the scouting pool to players statistically undervalued by the market, then apply human judgement to select within that pool. The model reduces error rate and search cost; it does not replace the scout's contextual judgement at the decisive step.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Why don't more countries have competitive national football teams despite producing enormous populations of players?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">Population alone is insufficient. India (1.4 billion people) ranks around 100th in FIFA rankings. The key variables are: investment in youth development infrastructure, coaching quality at grassroots level, competitive domestic leagues that develop players before international level, and cultural embedding of football (India's dominant sport is cricket). Brazil's success is partly population, but mainly its dense national football culture — every favela has a futsal court; the game is played and watched at every level of society. Nigeria and Ghana consistently produce elite players despite per-capita GDP far below European nations, because urban football culture is intense. China has a population of 1.4 billion and has invested billions in football development since 2015 but still ranked 79th in 2023.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Is the pay gap in women's sport a market outcome or a structural injustice?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">It is both, and the two are connected. Market outcomes in sport are downstream of historical investment, scheduling, and broadcast decisions — and women's football received essentially zero broadcast investment before 2010. The BBC showing the 2019 Women's World Cup in primetime increased women's FA Cup final viewership from 350,000 to 4.1 million overnight. Norway's national football team reached equal pay parity with the men's team in 2017; the US Women's National Team settled equal pay litigation with US Soccer for $24 million in 2022. The argument that "women's sport earns less, so should pay less" ignores that earnings in sport are determined by prior investment choices, not inherent audience interest. The 2023 Women's World Cup final viewership proved there is mass appetite when broadcast infrastructure supports it.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Does home advantage in football have a known cause?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">Home advantage is real and consistent: in the Premier League, home teams win approximately 46% of matches versus 28% for away teams (draw rate ~26%). Three causal mechanisms are supported by evidence. First, crowd noise increases referee bias toward the home team — studies of Serie A during the COVID-19 empty-stadium period (2020) showed home advantage nearly disappeared, reducing home wins to 38.7% vs 45.3% in comparable preceding seasons. Second, travel fatigue disadvantages the away team, particularly for fixture congestion. Third, familiarity with the pitch (size, surface quality, goalpost thickness) provides genuine tactical advantage at home. The crowd noise mechanism accounts for roughly 40–50% of home advantage.</div>
+    </div>
+
+    <div class="qa">
+      <div class="qa-q">Is the 100-metre sprint world record bound to continue falling, or have we reached the human limit?</div>
+      <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+      <div class="qa-ans">Biomechanical modelling by Mark Denny (2008, Journal of Experimental Biology) and updated by John Barrow suggest an absolute physiological limit around 9.48 seconds — meaning Usain Bolt's 9.58 (2009) is 0.10s from the wall. But the same models set the limit for women at 10.19s, and the current world record (Florence Griffith-Joyner, 1988) is 10.49 — suggesting the women's side is underperforming relative to the model, likely due to the doping era distortions. Improvements in sprint performance now come primarily from spikes technology (Nike's Alphafly contributed ~1% efficiency gains), altitude training, and track surface. The gap between current records and the physiological ceiling is measured in hundredths of a second.</div>
+    </div>
+
+  
+
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+  window.addEventListener('DOMContentLoaded', function() {
+
+    // ─── Q&A reveal ───
+    window.toggleQA = function (btn) {
+      const ans = btn.nextElementSibling;
+      const showing = ans.classList.toggle('show');
+      btn.textContent = showing ? 'hide' : 'show answer';
+    };
+
+    // ─── Utility ───
+    function barRow(label, val, maxVal, colour, unit) {
+      const pct = Math.min(100, (val / maxVal) * 100);
+      return `<div class="bar-row">
+        <div class="bl" style="width:160px;font-size:12px;color:var(--color-text-secondary);">${label}</div>
+        <div class="bb" style="flex:1;background:var(--color-background-tertiary);border-radius:4px;height:20px;position:relative;">
+          <div style="position:absolute;left:0;top:0;height:100%;width:${pct}%;background:${colour};border-radius:4px;"></div>
+        </div>
+        <div class="bv" style="width:60px;text-align:right;font-size:12px;font-weight:600;color:var(--color-text-primary);">${val}${unit}</div>
+      </div>`;
+    }
+
+    // ─── Sport popularity chart ───
+    const popData = [
+      { name: 'Football / Soccer', val: 3500 },
+      { name: 'Cricket', val: 2500 },
+      { name: 'Field Hockey', val: 2000 },
+      { name: 'Tennis', val: 1000 },
+      { name: 'Volleyball', val: 900 },
+      { name: 'Basketball', val: 825 },
+      { name: 'Table Tennis', val: 875 },
+      { name: 'Baseball', val: 500 },
+      { name: 'Rugby', val: 475 },
+      { name: 'Golf', val: 450 },
+    ];
+    const popEl = document.getElementById('sport-pop-chart');
+    popEl.innerHTML = popData.map(d => barRow(d.name, d.val, 3500, 'var(--accent)', 'm')).join('');
+
+    // ─── Salary chart ───
+    const salaryData = [
+      { name: 'C. Ronaldo (football)', val: 200 },
+      { name: 'LeBron James (NBA)', val: 127 },
+      { name: 'Lionel Messi (football)', val: 135 },
+      { name: 'Steph Curry (NBA)', val: 80 },
+      { name: 'Novak Djokovic (tennis)', val: 39 },
+      { name: 'Max Verstappen (F1)', val: 65 },
+      { name: 'Patrick Mahomes (NFL)', val: 58 },
+    ];
+    const salEl = document.getElementById('salary-chart');
+    salEl.innerHTML = salaryData.map(d => barRow(d.name, d.val, 200, '#2563EB', 'm')).join('');
+
+    // ─── Training / VO2 max slider ───
+    const trainingSlider = document.getElementById('training-weeks');
+    const trainingOut = document.getElementById('training-out');
+    function updateTraining() {
+      const w = parseInt(trainingSlider.value);
+      const baseVO2 = 38;
+      let gain, note;
+      if (w === 0) { gain = 0; note = 'Starting point for a moderately active adult (38 ml/kg/min baseline).'; }
+      else if (w <= 8) { gain = Math.round(w * 0.45); note = 'Early gains are rapid as the body adapts to aerobic stimulus. Mitochondrial density increases and cardiac stroke volume rises.'; }
+      else if (w <= 24) { gain = Math.round(3.6 + (w - 8) * 0.2); note = 'Gains slow as the body approaches its trained plateau. Consistency matters more than intensity at this stage.'; }
+      else if (w <= 40) { gain = Math.round(6.8 + (w - 24) * 0.08); note = 'Marginal improvements require periodised training and recovery. Overtraining risk increases.'; }
+      else { gain = Math.round(8.1 + (w - 40) * 0.03); note = 'Near-plateau territory. Elite gains now require altitude training, heat adaptation, or other marginal interventions.'; }
+      const newVO2 = baseVO2 + gain;
+      trainingOut.textContent = `After ${w} weeks of structured aerobic training: estimated VO₂ max ≈ ${newVO2} ml/kg/min (gain of +${gain}). ${note}`;
+    }
+    trainingSlider.addEventListener('input', updateTraining);
+    updateTraining();
+
+    // ─── Tactics timeline ───
+    const tacticsEras = [
+      { label: '2-3-5 / Pyramid', start: 1863, end: 1925, col: '#27A04A' },
+      { label: 'WM (Herbert Chapman)', start: 1925, end: 1953, col: '#2563EB' },
+      { label: 'Catenaccio / 4-3-3', start: 1950, end: 1970, col: '#DC2626' },
+      { label: 'Total Football', start: 1965, end: 1978, col: '#D97706' },
+      { label: '4-4-2 era', start: 1970, end: 2005, col: '#7C3AED' },
+      { label: 'Pressing revolution', start: 2005, end: 2015, col: '#0891B2' },
+      { label: 'Positional / xG era', start: 2012, end: 2024, col: '#059669' },
+    ];
+    const minY = 1863, maxY = 2024, span = maxY - minY;
+    const ttEl = document.getElementById('tactics-timeline');
+    let html = tacticsEras.map(e => {
+      const left = ((e.start - minY) / span) * 100;
+      const width = ((e.end - e.start) / span) * 100;
+      return `<div class="pc-row">
+        <div class="pc-label">${e.label}</div>
+        <div class="pc-track">
+          <div class="pc-fill" style="left:${left}%;width:${width}%;background:${e.col};">
+            <span class="pc-fill-label">${e.start}–${e.end}</span>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+    const axisMarks = [1863, 1880, 1900, 1920, 1940, 1960, 1980, 2000, 2024];
+    html += `<div class="pc-axis">${axisMarks.map(y => `<span class="pc-axis-mark">${y}</span>`).join('')}</div>`;
+    ttEl.innerHTML = html;
+
+    // ─── Formation explorer ───
+    const formations = {
+      '4-3-3': {
+        title: '4-3-3',
+        body: 'Four defenders, three central midfielders, and three forwards. The dominant European formation since 2008. Guardiola\'s Barcelona used it as a pressing and possession system; Klopp\'s Liverpool as a gegenpressing structure. The three midfielders can split into different shapes (6-8-10 vertically; or a flat three). Weakness: central midfield can be outnumbered if the opponent plays a 4-5-1 or double pivot.'
+      },
+      '4-2-3-1': {
+        title: '4-2-3-1',
+        body: 'A double pivot (two defensive midfielders) shields the back four, a playmaking number 10 operates behind a single striker, with wide midfielders providing width. José Mourinho\'s Chelsea and Inter used this to devastating effect. The double pivot creates defensive solidity and allows full-backs to advance, but the single striker must work intensely to hold the ball alone.'
+      },
+      '4-4-2': {
+        title: '4-4-2 (flat)',
+        body: 'The classic English formation: two banks of four, two strikers. Dominant in England from 1960 to 2005. The partnership between the two strikers creates unique combination play (one dropping, one running beyond). Alex Ferguson used it at Manchester United until Martin Keown and Thierry Henry exposed it with Arsenal\'s 4-2-3-1. Now rarely used at elite level because it leaves central midfield numerically vulnerable.'
+      },
+      '3-5-2': {
+        title: '3-5-2 / 3-4-3',
+        body: 'Three centre-backs with two wing-backs who act as the wide component of both defence and attack. Requires physically exceptional wing-backs who can cover the full flank. Antonio Conte used it at Juventus, Chelsea, and Inter Milan, winning league titles at all three. The system\'s vulnerability: if a wing-back is caught high and the ball is switched, the back three face a 2-vs-2 with no cover. Requires enormous fitness from the wing-backs.'
+      },
+      '5-3-2': {
+        title: '5-3-2 (defensive)',
+        body: 'A very deep block: five defenders, three narrow midfielders, two strikers. Used by weaker teams to absorb pressure and threaten on the counter. Portugal\'s Euro 2016 winning system was close to this, relying on Ronaldo\'s individual quality on the break. The 5-3-2 can be suffocating to play against but requires players of immense positional discipline and the ability to transition quickly from defending to counter-attacking.'
+      },
+    };
+    const fBtns = document.getElementById('formation-btns');
+    const fPanel = document.getElementById('formation-panel');
+    Object.keys(formations).forEach((key, i) => {
+      const btn = document.createElement('button');
+      btn.textContent = key;
+      btn.onclick = function() {
+        fBtns.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        fPanel.innerHTML = `<div class="ep-title">${formations[key].title}</div><div class="ep-body">${formations[key].body}</div>`;
+      };
+      if (i === 0) { btn.classList.add('active'); fPanel.innerHTML = `<div class="ep-title">${formations[key].title}</div><div class="ep-body">${formations[key].body}</div>`; }
+      fBtns.appendChild(btn);
+    });
+
+    // ─── PPDA chart ───
+    const ppdaData = [
+      { name: 'Liverpool 2019–20', val: 6.2, col: '#DC2626' },
+      { name: 'Man City 2022–23', val: 7.8, col: '#60A5FA' },
+      { name: 'Napoli 2022–23', val: 8.1, col: '#2563EB' },
+      { name: 'Brighton 2022–23', val: 9.3, col: '#1D4ED8' },
+      { name: 'Arsenal 2023–24', val: 8.5, col: '#DC2626' },
+      { name: 'Atletico Madrid', val: 15.2, col: '#D97706' },
+      { name: 'Burnley 2023', val: 18.7, col: '#7C3AED' },
+    ];
+    const ppdaEl = document.getElementById('u-mt-8px');
+    ppdaEl.innerHTML = ppdaData.map(d => barRow(d.name, d.val, 20, d.col, '')).join('');
+
+    // ─── xG calculator ───
+    window.calcXG = function() {
+      const dist = parseFloat(document.getElementById('u-w-100pct').value);
+      const angle = parseFloat(document.getElementById('xg-angle').value);
+      const type = document.getElementById('xg-type').value;
+      if (isNaN(dist) || isNaN(angle) || dist < 3 || dist > 40 || angle < 0 || angle > 70) {
+        document.getElementById('xg-out').textContent = 'Please enter valid values: distance 3–40m, angle 0–70°.';
+        return;
+      }
+      let base = Math.exp(-0.14 * dist - 0.025 * angle);
+      if (type === 'head') base *= 0.45;
+      if (type === 'volley') base *= 0.6;
+      base = Math.min(0.95, Math.max(0.01, base));
+      const xg = base.toFixed(3);
+      let quality;
+      if (base >= 0.4) quality = 'big chance (goalkeeper save required)';
+      else if (base >= 0.2) quality = 'good chance';
+      else if (base >= 0.1) quality = 'decent opportunity';
+      else if (base >= 0.05) quality = 'difficult chance';
+      else quality = 'long-shot attempt';
+      document.getElementById('xg-out').textContent = `Estimated xG: ${xg} — classified as a ${quality}. In an average match, a team accumulating 10 such shots would expect ${(base * 10).toFixed(1)} goals. Note: this is a simplified model; full xG models incorporate shot pressure, assist type, goalkeeper positioning, and historical sample sizes of 100,000+ shots.`;
+    };
+
+    // ─── Club dynasties explorer ───
+    const clubs = {
+      'Real Madrid 1956–60': {
+        title: 'Real Madrid 1956–1960 (Di Stéfano era)',
+        body: 'Five consecutive European Cups. Alfredo Di Stéfano was the key figure — not a conventional centre-forward but a universal player covering every zone. Ferenc Puskás arrived in 1958 and created the most feared attacking partnership in early European football. The 7–3 victory over Eintracht Frankfurt in the 1960 final (100,000 fans at Hampden Park) is still considered the finest performance in European Cup history.'
+      },
+      'Ajax 1971–73': {
+        title: 'Ajax 1971–1973 (Total Football)',
+        body: 'Three consecutive European Cups under Rinus Michels (and later Stefan Kovács). Total Football required every outfield player to be interchangeable — when a midfielder moved forward, a forward dropped back, a defender advanced. This demanded exceptional technical quality from every position. Johan Cruyff was the system\'s intelligence centre. The approach required more fitness and technical ability than any system before it and influenced every major European tactical school thereafter.'
+      },
+      'AC Milan 1988–94': {
+        title: 'AC Milan 1988–1994 (Sacchi / Capello era)',
+        body: 'Two distinct championships: Arrigo Sacchi\'s 1988–90 teams (Van Basten, Gullit, Rijkaard) were built on intense pressing and a flat back four that used the offside trap — revolutionary at the time. Fabio Capello\'s 1992–94 teams were more pragmatic but lost only one Serie A match across two seasons. This era produced four European Cup winners\' medals for Paolo Maldini, who anchored the defence throughout.'
+      },
+      'Barcelona 2008–15': {
+        title: 'Barcelona 2008–2015 (Guardiola era)',
+        body: 'The most analysed and influential club team in modern football history. Between 2008–2012 under Guardiola, Barcelona won 14 titles in 19 possible competitions including two Champions Leagues. The team combined Cruyff\'s positional principles with the generation of players (Xavi, Iniesta, Messi, Busquets, Piqué) entirely formed at La Masia academy in their tactical image. No team has since replicated this alignment of philosophy, player formation, and generational talent simultaneously.'
+      },
+      'Man City 2018–': {
+        title: 'Manchester City 2018–present (Guardiola era II)',
+        body: 'Six Premier League titles in seven seasons, the 2023 Treble (Premier League, FA Cup, Champions League), and a sequence of tactical innovation without precedent in English football. Guardiola adapted positional play to suit available personnel: inverted full-backs (Kyle Walker, Joao Cancelo) became interior midfielders; the "false pivot" system in 2022–23 used Rodri as the sole anchor with four effectively offensive players around him. The squad depth — 25 players capable of starting for most top-10 clubs — is itself a competitive weapon.'
+      },
+    };
+    const cBtns = document.getElementById('club-btns');
+    const cPanel = document.getElementById('club-panel');
+    Object.keys(clubs).forEach((key, i) => {
+      const btn = document.createElement('button');
+      btn.textContent = key;
+      btn.onclick = function() {
+        cBtns.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        cPanel.innerHTML = `<div class="ep-title">${clubs[key].title}</div><div class="ep-body">${clubs[key].body}</div>`;
+      };
+      if (i === 0) { btn.classList.add('active'); cPanel.innerHTML = `<div class="ep-title">${clubs[key].title}</div><div class="ep-body">${clubs[key].body}</div>`; }
+      cBtns.appendChild(btn);
+    });
+
+    // ─── Player multi-card explorer ───
+    const players = {
+      'Pelé': {
+        icon: 'fa-star',
+        detail: 'Edson Arantes do Nascimento won three World Cups (1958, 1962, 1970) — the only player in history to do so. He scored 77 goals in 92 Brazil appearances and over 1,000 career goals (though many came in unofficial friendlies). The counterintuitive fact: Pelé played his peak football for Santos in Brazil\'s domestic league, not in Europe — making his dominance harder to compare with modern players who compete in the most competitive environment. At 17 in the 1958 World Cup, he became the youngest person to play in and win a World Cup final.'
+      },
+      'Maradona': {
+        icon: 'fa-hand',
+        detail: 'Diego Maradona\'s 1986 World Cup performance is the single greatest individual tournament in football history: 5 goals, 5 assists, every goal a result of individual genius. The "Hand of God" goal (punched in with his fist; he admitted it was deliberate 20 years later) and the "Goal of the Century" (11 seconds, beating 6 English players from his own half) in the same quarter-final are the most studied 6 minutes in football history. At Napoli, he won two Serie A titles — a club that had never won one before — with a team of moderate quality, powered almost entirely by his individual brilliance.'
+      },
+      'Cruyff': {
+        icon: 'fa-lightbulb',
+        detail: 'Johan Cruyff may be the most intellectually important figure in football history. As a player he invented the "Cruyff turn" and embodied Total Football at Ajax and Barcelona. As a manager at Barcelona (1988–1996), he installed the positional philosophy that produced Guardiola\'s entire career. As a director, he advocated for La Masia academy methods that produced Xavi, Iniesta, Messi, and Piqué simultaneously. Cruyff never played in a World Cup final — the Netherlands lost the 1974 final to West Germany — yet his influence on the game exceeds any player who has.'
+      },
+      'Messi': {
+        icon: 'fa-trophy',
+        detail: 'Lionel Messi won 8 Ballon d\'Or awards (2009–2023), 4 Champions Leagues, 10 La Liga titles, and the 2021 Copa América and 2022 World Cup with Argentina. He scored 672 goals for Barcelona in 778 appearances — a scoring rate no player at that level has approached. His xG outperformance (scoring goals beyond what the model predicts) is consistent and extraordinary. The case against "greatest ever": he spent his peak years in arguably the greatest club team assembled (Barcelona 2008–15) and struggled at PSG, suggesting some context-dependence.'
+      },
+      'Ronaldo': {
+        icon: 'fa-futbol',
+        detail: 'Cristiano Ronaldo is the highest-scoring male international footballer in history: 128 goals for Portugal as of 2024. He won 5 Ballon d\'Or awards, 5 Champions Leagues across three clubs (Man United, Real Madrid, Juventus) — demonstrating that his quality was not system-dependent in the way Messi\'s may be. His physical evolution is genuinely unusual: he has maintained elite output through his late 30s by redesigning his body (reduced explosive pace replaced by positional intelligence and finishing). His critics argue his goals-per-touch efficiency is lower than Messi\'s and that he received better supporting casts at Real Madrid.'
+      },
+    };
+    const pgrid = document.getElementById('player-grid');
+    const pdetail = document.getElementById('player-detail');
+    Object.keys(players).forEach(key => {
+      const card = document.createElement('div');
+      card.className = 'elem-card';
+      card.innerHTML = `<div class="ec-icon"><i class="fa-solid ${players[key].icon}"></i></div><div class="ec-label">${key}</div>`;
+      card.onclick = function() {
+        const wasActive = card.classList.contains('active');
+        pgrid.querySelectorAll('.elem-card').forEach(c => c.classList.remove('active'));
+        if (wasActive) { pdetail.classList.remove('show'); pdetail.innerHTML = ''; return; }
+        card.classList.add('active');
+        pdetail.innerHTML = `<div class="ed-title">${key}</div><div class="ed-body">${players[key].detail}</div>`;
+        pdetail.classList.add('show');
+      };
+      pgrid.appendChild(card);
+    });
+
+    // ─── World Cup distribution bar ───
+    const wcWins = [
+      { name: 'Brazil', wins: 5, col: '#F59E0B' },
+      { name: 'Germany/WG', wins: 4, col: '#6B7280' },
+      { name: 'Italy', wins: 4, col: '#2563EB' },
+      { name: 'Argentina', wins: 3, col: '#60A5FA' },
+      { name: 'France', wins: 2, col: '#1D4ED8' },
+      { name: 'Uruguay', wins: 2, col: '#7C3AED' },
+      { name: 'England', wins: 1, col: '#DC2626' },
+      { name: 'Spain', wins: 1, col: '#EA580C' },
+      { name: 'Others', wins: 0, col: '#9CA3AF' },
+    ];
+    const total = 22;
+    const wcEl = document.getElementById('wc-distbar');
+    const track = document.createElement('div');
+    track.className = 'distbar-track';
+    wcWins.filter(d => d.wins > 0).forEach(d => {
+      const seg = document.createElement('div');
+      seg.style.width = ((d.wins / total) * 100) + '%';
+      seg.style.background = d.col;
+      seg.title = `${d.name}: ${d.wins}`;
+      if (d.wins > 1) seg.textContent = d.wins;
+      track.appendChild(seg);
+    });
+    const legend = document.createElement('div');
+    legend.className = 'distbar-legend';
+    wcWins.filter(d => d.wins > 0).forEach(d => {
+      legend.innerHTML += `<div><span style="background:${d.col}"></span>${d.name} (${d.wins})</div>`;
+    });
+    wcEl.appendChild(track);
+    wcEl.appendChild(legend);
+
+    // ─── Revenue breakdown distribution bar ───
+    const revData = [
+      { name: 'Broadcasting', pct: 45, col: '#27A04A' },
+      { name: 'Commercial/Sponsorship', pct: 35, col: '#2563EB' },
+      { name: 'Matchday', pct: 20, col: '#D97706' },
+    ];
+    const revEl = document.getElementById('revenue-distbar');
+    const revTrack = document.createElement('div');
+    revTrack.className = 'distbar-track';
+    revData.forEach(d => {
+      const seg = document.createElement('div');
+      seg.style.width = d.pct + '%';
+      seg.style.background = d.col;
+      seg.textContent = d.pct + '%';
+      revTrack.appendChild(seg);
+    });
+    const revLegend = document.createElement('div');
+    revLegend.className = 'distbar-legend';
+    revData.forEach(d => {
+      revLegend.innerHTML += `<div><span style="background:${d.col}"></span>${d.name} (${d.pct}%)</div>`;
+    });
+    revEl.appendChild(revTrack);
+    revEl.appendChild(revLegend);
+
+    // ─── UCL prize money chart ───
+    const uclData = [
+      { name: 'Participation fee', val: 15.64, col: '#27A04A' },
+      { name: 'Per group/league win', val: 2.8, col: '#2563EB' },
+      { name: 'Round of 16 qualification', val: 9.6, col: '#7C3AED' },
+      { name: 'Reaching QF', val: 10.5, col: '#D97706' },
+      { name: 'Reaching SF', val: 12.5, col: '#0891B2' },
+      { name: 'Runner-up bonus', val: 15.5, col: '#DC2626' },
+      { name: 'Winner bonus', val: 20, col: '#F59E0B' },
+    ];
+    const uclEl = document.getElementById('ucl-chart');
+    uclEl.innerHTML = uclData.map(d => barRow(d.name, d.val, 25, d.col, 'm')).join('');
+
+    // ─── League explorer ───
+    const leagues = {
+      'Premier League': {
+        title: 'Premier League (England)',
+        body: 'Founded 1992. 20 clubs. Total broadcast revenue ~£10bn per cycle (2022–25). Most competitive top-six historically, but Manchester City\'s financial power has created dominance from 2018. Promotion/relegation system means every matchweek has consequence. The "winter break" remains shorter than continental rivals, contributing to higher injury rates. Global fanbase estimated 3.2 billion.'
+      },
+      'La Liga': {
+        title: 'La Liga (Spain)',
+        body: 'Real Madrid and Barcelona have won 25 of 36 titles between 2000 and 2023, making La Liga less competitively balanced than other top leagues by any measure. However, the technical quality of its football is consistently rated highest by analysts. Barca\'s financial crisis (2020–22) briefly opened competition; Atletico Madrid (Simeone era, 2021 champions) represent the main interruption. TV revenue distribution is more unequal than the Premier League.'
+      },
+      'Bundesliga': {
+        title: 'Bundesliga (Germany)',
+        body: 'The 50+1 ownership rule keeps clubs fan-majority owned, creating a different culture but restricting ultra-wealthy investment. Bayern Munich have won 11 consecutive titles (2013–23), creating the league\'s dominant weakness: lack of genuine title competition. Average attendances are the highest in world football (over 43,000 per game in 2022–23). Bayer Leverkusen\'s 2023–24 title (unbeaten, under Xabi Alonso) was the first genuine interruption to Bayern\'s dominance in a decade.'
+      },
+      'Serie A': {
+        title: 'Serie A (Italy)',
+        body: 'The dominant world football competition of the 1980s and 1990s (AC Milan, Juventus, Inter), Serie A has declined significantly in global commercial value due to outdated stadia (all owned by local authorities rather than clubs), historical match-fixing scandals (Calciopoli 2006, Juventus relegated), and failure to attract broadcast revenue comparable to the Premier League. Juventus won 9 consecutive titles (2012–2020) but have been financially fragile since.'
+      },
+      'Ligue 1': {
+        title: 'Ligue 1 (France)',
+        body: 'QSI\'s purchase of PSG in 2011 (initially for €70m; now valued at ~€4bn) fundamentally distorted French football competition. PSG have won 9 of 12 titles since 2012. The league has produced exceptional talent (Mbappé, Benzema, Zidane, Henry) due to a strong academy culture, but this talent is consistently exported to wealthier leagues. Ligue 1 lost its Canal+ TV deal in 2024, creating significant financial pressure.'
+      },
+    };
+    const lBtns = document.getElementById('league-btns');
+    const lPanel = document.getElementById('league-panel');
+    Object.keys(leagues).forEach((key, i) => {
+      const btn = document.createElement('button');
+      btn.textContent = key;
+      btn.onclick = function() {
+        lBtns.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        lPanel.innerHTML = `<div class="ep-title">${leagues[key].title}</div><div class="ep-body">${leagues[key].body}</div>`;
+      };
+      if (i === 0) { btn.classList.add('active'); lPanel.innerHTML = `<div class="ep-title">${leagues[key].title}</div><div class="ep-body">${leagues[key].body}</div>`; }
+      lBtns.appendChild(btn);
+    });
+
+    // ─── WWC viewership chart ───
+    const wwcData = [
+      { name: '2007 final', val: 1.2 },
+      { name: '2011 final', val: 3.1 },
+      { name: '2015 final', val: 4.8 },
+      { name: '2019 final', val: 11.7 },
+      { name: '2023 final', val: 14.3 },
+    ];
+    const wwcEl = document.getElementById('wwc-chart');
+    wwcEl.innerHTML = wwcData.map(d => barRow(d.name, d.val, 15, '#DC2626', 'm')).join('');
+
+    // ─── Manager explorer ───
+    const managers = {
+      'Matt Busby': {
+        title: 'Matt Busby (Man United 1945–1969)',
+        body: 'Built three distinct Manchester United teams, surviving the Munich air disaster (1958) that killed eight of his "Busby Babes." The 1968 European Cup — won just 10 years after Munich — is one of sport\'s greatest acts of reconstruction. Busby gave young players opportunity (Charlton, Best, Law) at a time when most managers preferred experienced journeymen. He operated as general manager of the entire club, establishing the template for the "big club manager" model that Ferguson later perfected.'
+      },
+      'Bill Shankly': {
+        title: 'Bill Shankly (Liverpool 1959–1974)',
+        body: 'Took Liverpool from the Second Division to three First Division titles and two FA Cups. His real achievement was structural: he built the boot room culture (Fagan, Paisley, Moran as coaches) that created Liverpool\'s dynasty after his retirement. His socialist politics infused his management style — "football is not a matter of life and death, it is more important than that" — and his relationship with the Kop remains the template for fan-manager symbiosis.'
+      },
+      'Brian Clough': {
+        title: 'Brian Clough (Nottingham Forest 1975–1993)',
+        body: 'Won two consecutive European Cups (1979, 1980) with Nottingham Forest — a provincial club that had never won a top-flight title before his arrival. This remains the most improbable achievement in European club football history. Clough combined abrasive man-management with a surprisingly simple tactical approach: possession football, keeping the ball, and letting quality players express themselves. His 44-day tenure at Leeds United (1974) — documented in "The Damned United" — remains football\'s most studied management failure.'
+      },
+      'Alex Ferguson': {
+        title: 'Alex Ferguson (Man United 1986–2013)',
+        body: 'Won 13 Premier League titles, 5 FA Cups, 4 League Cups, 2 Champions Leagues. The scale of sustained excellence — 27 years, 38 trophies — has no parallel in club management. Key innovations: his youth development (the "Class of \'92": Beckham, Scholes, Neville, Butt, Giggs), his ability to reinvent his team in cycles (1993 team, 1999 team, 2008 team were almost entirely different), and his psychological dominance of opposing managers (notably Wenger). Never recovered after Paul Scholes retired in 2011; left in 2013, after which United failed to win a league title.'
+      },
+      'Arsène Wenger': {
+        title: 'Arsène Wenger (Arsenal 1996–2018)',
+        body: 'Changed English football\'s physical culture: introduced sports science, nutrition, and recovery methods that were standard in France and Japan but absent from English football. His 2003–04 "Invincibles" went unbeaten in 38 Premier League games — still the only team to achieve this. His post-2006 phase (losing finals, no league titles, loyalty to a diminishing squad) is as instructive as his peak: a manager\'s strengths (loyalty, long-term vision) can become weaknesses when competitive context changes.'
+      },
+      'Pep Guardiola': {
+        title: 'Pep Guardiola (Barcelona, Bayern, Man City 2008–)',
+        body: 'Won 15 league titles across three countries and 3 Champions Leagues. His tactical innovations — inverted full-backs, the false 9, positional pressing — have been adopted by coaches at every level globally. The most analysed manager in football history: his pre-game tactical sessions are documented in multiple books (Marti Perarnau\'s "Pep Confidential"). Consistent criticism: his teams require exceptionally high technical players to execute his system, and he has needed enormous financial resources at every club.'
+      },
+      'Jürgen Klopp': {
+        title: 'Jürgen Klopp (Dortmund, Liverpool 2008–2024)',
+        body: 'Developed gegenpressing at Dortmund (winning the Bundesliga back-to-back 2011–12 with a wage bill dwarfed by Bayern) and brought it to elite level at Liverpool, winning the Premier League, Champions League, FA Cup, League Cup, and Club World Cup. His emotional leadership style — high-intensity bench, genuine warmth with players — is studied as management rather than just coaching. His Liverpool won 6 of 7 possible domestic cup finals and could have won the Quadruple in 2021–22 (won 2 cups; lost the title by 1 point and the UCL final by 1 goal).'
+      },
+    };
+    const mBtns = document.getElementById('manager-btns');
+    const mPanel = document.getElementById('manager-panel');
+    Object.keys(managers).forEach((key, i) => {
+      const btn = document.createElement('button');
+      btn.textContent = key;
+      btn.onclick = function() {
+        mBtns.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        mPanel.innerHTML = `<div class="ep-title">${managers[key].title}</div><div class="ep-body">${managers[key].body}</div>`;
+      };
+      if (i === 0) { btn.classList.add('active'); mPanel.innerHTML = `<div class="ep-title">${managers[key].title}</div><div class="ep-body">${managers[key].body}</div>`; }
+      mBtns.appendChild(btn);
+    });
+
+    // ─── Manager success factors chart ───
+    const mgrData = [
+      { name: 'Club wage bill', val: 75, col: '#27A04A' },
+      { name: 'Squad depth (injuries)', val: 52, col: '#2563EB' },
+      { name: 'Transfer window success', val: 44, col: '#D97706' },
+      { name: 'Tactical system fit', val: 38, col: '#7C3AED' },
+      { name: 'Manager\'s track record', val: 31, col: '#0891B2' },
+      { name: 'Managerial "effect"', val: 18, col: '#DC2626' },
+    ];
+    const mgrEl = document.getElementById('mgr-success-chart');
+    mgrEl.innerHTML = mgrData.map(d => barRow(d.name, d.val, 100, d.col, '%')).join('');
+
+    // ─── Manager tenure slider ───
+    const mgrSlider = document.getElementById('mgr-tenure');
+    const mgrOut = document.getElementById('mgr-tenure-out');
+    function updateMgrTenure() {
+      const m = parseInt(mgrSlider.value);
+      let msg;
+      if (m === 0) msg = 'New appointment: performance is unpredictable. Teams often improve simply through regression to the mean after a bad run.';
+      else if (m <= 6) msg = `${m} months: the "new manager effect" is observable — typically 0.15–0.25 additional points per game. Research suggests this is partly real (new instructions, fresh motivation) and partly regression to mean (managers tend to be sacked after below-average form).`;
+      else if (m <= 18) msg = `${m} months: the squad begins to reflect the manager's philosophy in recruitment. Performance variance is high — this is when either acceleration (tactical embedding) or stagnation (squad resistance) becomes apparent.`;
+      else if (m <= 36) msg = `${m} months: managers who survive this long have typically stabilised their position. Two-season tenures allow a full transfer window cycle. Research suggests returns to peak effectiveness here — provided the club backs the manager in transfers.`;
+      else msg = `${m} months (${(m/12).toFixed(1)} years): elite long-tenure territory. Ferguson, Wenger, and Klopp all sustained excellence past 3 years by rebuilding squads while maintaining philosophical continuity. Risk: familiarity breeds resistance from players; the tactical system can be "solved" by opponents. Ferguson's solution: constant squad reinvention.`;
+      mgrOut.textContent = msg;
+    }
+    mgrSlider.addEventListener('input', updateMgrTenure);
+    updateMgrTenure();
+
+  }); // end DOMContentLoaded
+  
+</script>

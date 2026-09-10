@@ -1,0 +1,661 @@
+
+/* Gov cards */
+.gov-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
+.gh { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.gname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.gbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; flex-shrink: 0; }
+.gsub { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+@media (max-width: 600px) { .gsub { grid-template-columns: 1fr; } }
+.gbox { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
+.gl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
+.gv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
+.gnote { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
+
+/* Democracy index table */
+.dem-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.dem-table th { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-tertiary); padding: 6px 8px; text-align: left; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.dem-table td { padding: 7px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: middle; }
+.dem-table tr:last-child td { border-bottom: none; }
+.dem-score-bar { height: 8px; border-radius: 3px; display: inline-block; vertical-align: middle; }
+
+/* Power structures diagram */
+.power-node { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 8px 10px; text-align: center; }
+.power-node-title { font-size: 11px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 2px; }
+.power-node-sub { font-size: 10px; color: var(--color-text-secondary); }
+
+/* Timeline */
+.timeline-row { display: flex; gap: 0; align-items: stretch; margin-bottom: 4px; }
+.tl-year { font-size: 11px; color: var(--color-text-tertiary); width: 58px; flex-shrink: 0; padding-top: 4px; text-align: right; padding-right: 10px; font-variant-numeric: tabular-nums; }
+.tl-dot-col { width: 20px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+.tl-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.tl-line { flex: 1; width: 1px; background: var(--color-border-tertiary); }
+.tl-body { flex: 1; padding: 0 0 12px 8px; }
+.tl-event { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
+.tl-detail { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin-top: 2px; }
+
+/* Compass SVG container */
+.compass-wrap { display: flex; justify-content: center; margin: 10px 0; }
+
+/* Responsive 2-col grid helper */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+
+/* Bias meter */
+.bias-track { height: 12px; border-radius: 6px; background: linear-gradient(to right, #378ADD, #888780, #E24B4A); position: relative; margin: 6px 0 2px; }
+.bias-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--color-background-primary); border: 2px solid var(--color-text-primary); position: absolute; top: -2px; transform: translateX(-50%); transition: left 0.25s ease; }
+
+/* === Shared-ready extracted styles === */
+
+.bg-green-800 {
+  background:#27500A;
+}
+
+.bg-red-700 {
+  background:#A32D2D;
+}
+
+/* === Module-specific extracted styles === */
+
+.politics-panel {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.politics-panel-2 {
+  background:#E6F1FB;
+  border-radius:var(--border-radius-md);
+  padding:12px 14px;
+  border:0.5px solid #85B7EB;
+}
+
+.politics-label {
+  font-size:12px;
+  font-weight:500;
+  color:#0C447C;
+  margin-bottom:6px;
+}
+
+.politics-text {
+  font-size:12px;
+  color:#0C447C;
+  line-height:1.7;
+}
+
+.politics-panel-3 {
+  background:#FCEBEB;
+  border-radius:var(--border-radius-md);
+  padding:12px 14px;
+  border:0.5px solid #F09595;
+}
+
+.politics-label-2 {
+  font-size:12px;
+  font-weight:500;
+  color:#791F1F;
+  margin-bottom:6px;
+}
+
+.politics-text-2 {
+  font-size:12px;
+  color:#791F1F;
+  line-height:1.7;
+}
+
+.politics-panel-4 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-top:10px;
+}
+
+.politics-text-3 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.politics-media {
+  width:100%;
+  max-width:320px;
+  height:auto;
+}
+
+.politics-panel-5 {
+  background:#FCEBEB;
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  border:0.5px solid #F09595;
+}
+
+.politics-label-4 {
+  font-size:12px;
+  font-weight:500;
+  color:#791F1F;
+  margin-bottom:4px;
+}
+
+.politics-text-4 {
+  font-size:12px;
+  color:#791F1F;
+  line-height:1.5;
+}
+
+.politics-panel-6 {
+  background:#E6F1FB;
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  border:0.5px solid #85B7EB;
+}
+
+.politics-label-5 {
+  font-size:12px;
+  font-weight:500;
+  color:#0C447C;
+  margin-bottom:4px;
+}
+
+.politics-text-5 {
+  font-size:12px;
+  color:#0C447C;
+  line-height:1.5;
+}
+
+.politics-panel-7 {
+  background:#FAEEDA;
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  border:0.5px solid #EF9F27;
+}
+
+.politics-label-6 {
+  font-size:12px;
+  font-weight:500;
+  color:#633806;
+  margin-bottom:4px;
+}
+
+.politics-text-6 {
+  font-size:12px;
+  color:#633806;
+  line-height:1.5;
+}
+
+.politics-panel-8 {
+  background:#EAF3DE;
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  border:0.5px solid #97C459;
+}
+
+.politics-label-7 {
+  font-size:12px;
+  font-weight:500;
+  color:#27500A;
+  margin-bottom:4px;
+}
+
+.politics-text-7 {
+  font-size:12px;
+  color:#27500A;
+  line-height:1.5;
+}
+
+.politics-row {
+  display:flex;
+  gap:0;
+  margin-bottom:1rem;
+  border-radius:var(--border-radius-lg);
+  overflow:hidden;
+  border:0.5px solid var(--color-border-tertiary);
+}
+
+.politics-card {
+  flex:1;
+  padding:10px 8px;
+  background:#A32D2D;
+  text-align:center;
+}
+
+.politics-label-8 {
+  font-size:11px;
+  font-weight:500;
+  color:#FCEBEB;
+}
+
+.politics-text-8 {
+  font-size:10px;
+  color:#F7C1C1;
+  margin-top:3px;
+  line-height:1.4;
+}
+
+.politics-card-2 {
+  flex:1;
+  padding:10px 8px;
+  background:#D85A30;
+  text-align:center;
+}
+
+.politics-label-9 {
+  font-size:11px;
+  font-weight:500;
+  color:#fff;
+}
+
+.politics-text-9 {
+  font-size:10px;
+  color:#FAECE7;
+  margin-top:3px;
+  line-height:1.4;
+}
+
+.politics-card-3 {
+  flex:1;
+  padding:10px 8px;
+  background:#378ADD;
+  text-align:center;
+}
+
+.politics-text-10 {
+  font-size:10px;
+  color:#E6F1FB;
+  margin-top:3px;
+  line-height:1.4;
+}
+
+.politics-card-4 {
+  flex:1;
+  padding:10px 8px;
+  background:#888780;
+  text-align:center;
+}
+
+.politics-text-11 {
+  font-size:10px;
+  color:#F1EFE8;
+  margin-top:3px;
+  line-height:1.4;
+}
+
+.politics-card-5 {
+  flex:1;
+  padding:10px 8px;
+  background:#BA7517;
+  text-align:center;
+}
+
+.politics-text-12 {
+  font-size:10px;
+  color:#FAEEDA;
+  margin-top:3px;
+  line-height:1.4;
+}
+
+.politics-card-6 {
+  flex:1;
+  padding:10px 8px;
+  background:#993C1D;
+  text-align:center;
+}
+
+.politics-card-7 {
+  flex:1;
+  padding:10px 8px;
+  background:#501313;
+  text-align:center;
+}
+
+.showideology-control {
+  font-size:12px;
+  padding:3px 10px;
+}
+
+.ideology-display {
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  margin-bottom:1rem;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.gbadge-style {
+  background:#E6F1FB;
+  color:#0C447C;
+}
+
+.gbadge-style-2 {
+  background:#EAF3DE;
+  color:#27500A;
+}
+
+.gbadge-style-3 {
+  background:#FAEEDA;
+  color:#633806;
+}
+
+.gbadge-style-4 {
+  background:#FCEBEB;
+  color:#791F1F;
+}
+
+.gbadge-style-5 {
+  background:#EEEDFE;
+  color:#3C3489;
+}
+
+.politics-media-2 {
+  min-width:80px;
+}
+
+.p-teal-style {
+  font-size:10px;
+  padding:1px 7px;
+}
+
+.dem-score-bar-style {
+  width:98%;
+  background:#085041;
+}
+
+.dem-score-bar-style-2 {
+  width:94%;
+  background:#085041;
+}
+
+.dem-score-bar-style-3 {
+  width:88%;
+  background:#085041;
+}
+
+.dem-score-bar-style-4 {
+  width:78%;
+  background:#185FA5;
+}
+
+.dem-score-bar-style-5 {
+  width:80%;
+  background:#185FA5;
+}
+
+.dem-score-bar-style-6 {
+  width:72%;
+  background:#185FA5;
+}
+
+.dem-score-bar-style-7 {
+  width:66%;
+  background:#BA7517;
+}
+
+.dem-score-bar-style-8 {
+  width:44%;
+  background:#BA7517;
+}
+
+.dem-score-bar-style-9 {
+  width:22%;
+  background:#791F1F;
+}
+
+.dem-score-bar-style-10 {
+  width:19%;
+  background:#791F1F;
+}
+
+.dem-score-bar-style-11 {
+  width:11%;
+  background:#791F1F;
+}
+
+.politics-text-13 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-top:8px;
+}
+
+.politics-row-2 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+  flex-wrap:wrap;
+}
+
+.politics-text-14 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  min-width:130px;
+}
+
+.pa-votes {
+  flex:1;
+  min-width:100px;
+}
+
+.pa-out {
+  font-size:13px;
+  font-weight:500;
+  min-width:40px;
+  text-align:right;
+  color:#185FA5;
+}
+
+.pb-out {
+  font-size:13px;
+  font-weight:500;
+  min-width:40px;
+  text-align:right;
+  color:#A32D2D;
+}
+
+.politics-row-3 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+
+.pc-fixed {
+  font-size:12px;
+  color:var(--color-text-tertiary);
+  flex:1;
+}
+
+.pc-out {
+  font-size:13px;
+  font-weight:500;
+  min-width:40px;
+  text-align:right;
+  color:#27500A;
+}
+
+.election-results {
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.8;
+}
+
+.dem-table-style {
+  min-width:480px;
+}
+
+.politics-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.framing-display {
+  font-size:12px;
+  line-height:1.7;
+}
+
+.power-diagram {
+  font-size:12px;
+  color:var(--color-text-primary);
+  line-height:1.7;
+}
+
+.politics-text-15 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+  line-height:1.6;
+}
+
+.politics-text-16 {
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--color-text-tertiary);
+  margin-bottom:8px;
+}
+
+.tl-dot-style {
+  background:#BA7517;
+}
+
+.tl-dot-style-2 {
+  background:#993C1D;
+}
+
+.tl-dot-style-4 {
+  background:#791F1F;
+}
+
+.tl-dot-style-5 {
+  background:#501313;
+}
+
+.tl-body-style {
+  padding-bottom:0;
+}
+
+.politics-panel-9 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+}
+
+.politics-grid-2 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.politics-panel-10 {
+  background:#FCEBEB;
+  border-radius:var(--border-radius-md);
+  padding:12px 13px;
+  border:0.5px solid #F09595;
+}
+
+.politics-text-17 {
+  font-size:12px;
+  font-weight:600;
+  color:#791F1F;
+  margin-bottom:5px;
+}
+
+.politics-text-18 {
+  font-size:12px;
+  color:#791F1F;
+  line-height:1.6;
+}
+
+.politics-panel-11 {
+  background:#FAEEDA;
+  border-radius:var(--border-radius-md);
+  padding:12px 13px;
+  border:0.5px solid #EF9F27;
+}
+
+.politics-text-19 {
+  font-size:12px;
+  font-weight:600;
+  color:#633806;
+  margin-bottom:5px;
+}
+
+.politics-text-20 {
+  font-size:12px;
+  color:#633806;
+  line-height:1.6;
+}
+
+.politics-panel-12 {
+  background:#EAF3DE;
+  border-radius:var(--border-radius-md);
+  padding:12px 13px;
+  border:0.5px solid #97C459;
+}
+
+.politics-text-21 {
+  font-size:12px;
+  font-weight:600;
+  color:#27500A;
+  margin-bottom:5px;
+}
+
+.politics-text-22 {
+  font-size:12px;
+  color:#27500A;
+  line-height:1.6;
+}
+
+.politics-text-23 {
+  font-size:11px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:var(--color-text-tertiary);
+  margin-bottom:8px;
+}
+
+.politics-media-3 {
+  width:100%;
+  height:auto;
+}
+
+.politics-text-24 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-top:4px;
+}
+
+.politics-text-25 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:14px;
+  line-height:1.6;
+}
+
+.tl-dot-style-6 {
+  background:#378ADD;
+}
+
+.tl-dot-style-7 {
+  background:#085041;
+}
+
+.tl-dot-style-9 {
+  background:#633806;
+}
+  

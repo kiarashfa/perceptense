@@ -1,0 +1,538 @@
+
+/* Dot grid */
+.dot-grid { display: flex; flex-wrap: wrap; gap: 3px; margin: 8px 0; }
+.dot { width: 9px; height: 9px; border-radius: 50%; }
+
+/* Card grid fix: avoid text crunch at mid-widths */
+.card-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Monty Hall door styles */
+.mh-doors {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin: 14px 0;
+  flex-wrap: wrap;
+}
+.mh-door {
+  width: 88px;
+  height: 120px;
+  border-radius: 8px 8px 0 0;
+  border: 2px solid var(--color-border-secondary);
+  background: var(--color-background-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+  font-size: 28px;
+  position: relative;
+  user-select: none;
+}
+.mh-door:hover:not(.mh-revealed):not(.mh-disabled) {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.mh-door.mh-chosen {
+  border-color: #378ADD;
+  background: var(--color-background-info);
+}
+.mh-door.mh-revealed {
+  border-color: var(--color-border-tertiary);
+  opacity: 0.65;
+  cursor: default;
+}
+.mh-door.mh-winner {
+  border-color: #1D9E75;
+  background: var(--color-background-success);
+}
+.mh-door.mh-loser {
+  border-color: #A32D2D;
+  background: var(--color-background-danger);
+}
+.mh-door-num {
+  position: absolute;
+  top: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.05em;
+}
+.mh-door-label {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  font-weight: 500;
+  text-align: center;
+}
+.mh-disabled { pointer-events: none; }
+
+/* Simulation bar */
+.sim-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+.sim-bar-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  min-width: 60px;
+}
+.sim-bar-track {
+  flex: 1;
+  height: 18px;
+  background: var(--color-background-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sim-bar-fill {
+  height: 18px;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+.sim-bar-val {
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Expected value table */
+.ev-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.ev-table th {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 10px;
+  border-bottom: 0.5px solid var(--color-border-secondary);
+  text-align: left;
+}
+.ev-table td {
+  padding: 8px 10px;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  color: var(--color-text-primary);
+}
+.ev-table tr:last-child td { border-bottom: none; }
+.ev-table .ev-total td {
+  font-weight: 600;
+  border-top: 0.5px solid var(--color-border-secondary);
+  border-bottom: none;
+}
+
+/* LLN canvas area */
+.lln-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Risk spectrum bar */
+.spectrum-track {
+  position: relative;
+  height: 28px;
+  border-radius: 6px;
+  overflow: visible;
+  margin: 8px 0 24px;
+}
+.spectrum-marker {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spectrum-dot {
+  width: 10px;
+  height: 28px;
+  border-radius: 2px;
+}
+.spectrum-mlabel {
+  font-size: 9px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 60px;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+/* Conditional prob boxes */
+.tree-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 48px;
+  text-align: center;
+}
+
+/* Tab buttons */
+.tab-group {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.tab-btn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 13px;
+  border-radius: var(--border-radius-md);
+  border: 0.5px solid var(--color-border-secondary);
+  background: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.tab-btn.active {
+  background: var(--color-text-primary);
+  color: var(--color-background-primary);
+  border-color: var(--color-text-primary);
+}
+
+/* === Module-specific extracted styles === */
+
+.probability-text-2 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.probability-text-3 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-top:4px;
+}
+
+.probability-panel {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+}
+
+.probability-media {
+  width:100%;
+  height:auto;
+  overflow:visible;
+}
+
+.probability-row-2 {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+
+.risk-scenario {
+  flex:1;
+  min-width:200px;
+  height:36px;
+  padding:0 10px;
+  border-radius:var(--border-radius-md);
+  border:0.5px solid var(--color-border-secondary);
+  background:var(--color-background-primary);
+  color:var(--color-text-primary);
+  font-size:13px;
+}
+
+.risk-display {
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.8;
+}
+
+.probability-panel-2 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 14px;
+  margin-bottom:1rem;
+}
+
+.probability-label-3 {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:5px;
+}
+
+.probability-text-4 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+}
+
+.probability-media-2 {
+  width:100%;
+  height:auto;
+}
+
+.probability-text-5 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  line-height:1.5;
+  margin-top:4px;
+}
+
+.probability-row-3 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:8px;
+}
+
+.probability-text-6 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  min-width:160px;
+}
+
+.prev-out {
+  font-size:13px;
+  font-weight:500;
+  min-width:72px;
+  text-align:right;
+}
+
+.probability-row-4 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.fp-result {
+  font-size:14px;
+  color:var(--color-text-primary);
+  font-weight:500;
+  margin-bottom:6px;
+}
+
+.probability-text-7 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-bottom:10px;
+}
+
+.probability-panel-3 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:9px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-top:8px;
+}
+
+.probability-row-5 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.probability-row-6 {
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:8px;
+  flex-wrap:wrap;
+}
+
+.bday-people {
+  font-size:22px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+
+.bday-prob {
+  font-size:16px;
+  color:var(--color-text-secondary);
+}
+
+.probability-media-3 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  height:14px;
+  margin-bottom:8px;
+  overflow:hidden;
+}
+
+.bday-bar {
+  height:14px;
+  border-radius:3px;
+  transition:width 0.2s;
+}
+
+.probability-text-9 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-top:8px;
+  line-height:1.5;
+}
+
+.probability-text-10 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin-bottom:10px;
+}
+
+.probability-panel-4 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 13px;
+  font-size:13px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.addevrow-control {
+  font-size:12px;
+  padding:4px 12px;
+  margin-bottom:12px;
+}
+
+.ev-result {
+  font-size:15px;
+  font-weight:600;
+  color:var(--color-text-primary);
+  margin-bottom:6px;
+}
+
+.mh-message {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  text-align:center;
+  min-height:40px;
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+.probability-row-7 {
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.mh-stay-btn {
+  display:none;
+  background:#FAECE7;
+  border-color:#FAECE7;
+  color:#712B13;
+  font-weight:500;
+}
+
+.mh-switch-btn {
+  display:none;
+  background:#E1F5EE;
+  border-color:#E1F5EE;
+  color:#085041;
+  font-weight:500;
+}
+
+.probability-div-style-2 {
+  border-top:0.5px solid var(--color-border-tertiary);
+  margin:14px 0 10px;
+}
+
+.mh-sim-note {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-top:6px;
+  line-height:1.5;
+}
+
+.lln-canvas {
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:6px;
+  background:var(--color-background-secondary);
+}
+
+.probability-row-10 {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin-top:8px;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.lln-stats {
+  font-size:13px;
+  color:var(--color-text-primary);
+}
+
+.probability-row-11 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:8px;
+}
+
+.probability-text-11 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  min-width:130px;
+}
+
+.pa-slider {
+  flex:1;
+  min-width:80px;
+}
+
+.pa-out {
+  font-size:13px;
+  font-weight:500;
+  min-width:40px;
+  text-align:right;
+}
+
+.probability-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  align-items:start;
+}
+
+.probability-label-4 {
+  font-size:11px;
+  font-weight:500;
+  color:var(--color-text-secondary);
+  margin-bottom:6px;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.probability-text-12 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-top:6px;
+}
+  

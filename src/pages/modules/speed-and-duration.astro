@@ -1,0 +1,1105 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/speed-and-duration.css';
+
+const mod = modules.find((m) => m.id === 8)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+    <div class="u-display-flex u-items-center u-gap-14px u-mb-md">
+      <i class="fa-solid fa-truck-fast u-fs-42px u-text-hex-4e99a3 u-shrink-0"></i>
+      <h1 class="module-title u-m-0 u-lh-1-05">Module 8: Speed & Duration</h1>
+    </div>
+    <p class="module-subtitle">How fast things move and how long things take</p>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART A · THE SPEED SCALE
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-a-the-speed-scale-from-snail-to-light">Part A · the speed scale — from snail to light</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Speed comparison (km/h) — logarithmic feel</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Each step up is roughly 10× faster. Human intuition covers only the first few rows.</div>
+      <div class="bar-row"><span class="bl">Snail</span><div class="bb u-w-0-3-pct u-bg-hex-e6f1fb u-border-0-5px-solid-hex-b5d4f4"><span class="bv u-text-hex-0c447c u-ml-5px u-fs-10px">0.05 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">Human walk</span><div class="bb u-w-1-7-pct u-bg-hex-b5d4f4"><span class="bv u-text-hex-042c53 u-fs-10px">5 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">Cycling</span><div class="bb u-w-5-pct u-bg-hex-85b7eb"><span class="bv u-text-hex-042c53 u-fs-10px">15–25 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">City car / sprint</span><div class="bb u-w-11-pct u-bg-hex-378add"><span class="bv u-text-hex-fff u-fs-10px">~30–50 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">Motorway car</span><div class="bb u-w-40-pct u-bg-hex-185fa5"><span class="bv u-text-hex-fff">~120 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">High-speed train (TGV)</span><div class="bb u-w-60-pct u-bg-hex-0c447c"><span class="bv u-text-hex-fff">~300 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">Commercial plane</span><div class="bb u-w-100-pct u-bg-hex-042c53"><span class="bv u-text-hex-e6f1fb">~900 km/h</span></div></div>
+      <div class="u-mt-md u-bt-0-5px-solid-border-tertiary u-pt-10px">
+        <div class="bar-row"><span class="bl">Concorde (retired)</span><div class="bb u-w-100-pct u-bg-hex-633806"><span class="bv u-text-hex-faeeda">~2,170 km/h — Mach 2</span></div></div>
+        <div class="bar-row"><span class="bl">SR-71 spy plane</span><div class="bb u-w-100-pct u-bg-hex-412402"><span class="bv u-text-hex-fac775">~3,540 km/h — Mach 3.2</span></div></div>
+      </div>
+      <div class="u-mt-md u-bt-0-5px-solid-border-tertiary u-pt-10px">
+        <div class="bar-row"><span class="bl">Speed of sound (air)</span><div class="bb u-w-100-pct u-bg-hex-27500a"><span class="bv u-text-hex-eaf3de">1,235 km/h — Mach 1</span></div></div>
+        <div class="bar-row"><span class="bl">ISS / orbital speed</span><div class="bb u-w-100-pct u-bg-hex-085041"><span class="bv u-text-hex-e1f5ee">~28,000 km/h</span></div></div>
+        <div class="bar-row"><span class="bl">Speed of light</span><div class="bb u-w-100-pct u-bg-hex-3c3489"><span class="bv u-text-hex-eeedfe">1,080,000,000 km/h</span></div></div>
+      </div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Light is 1,200,000× faster than a plane. The ISS orbits Earth every 92 minutes — 16 sunrises per day.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART B · KEY SPEED ANCHORS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-b-the-key-speed-anchors-you-ll-use-every-day">Part B · the key speed anchors you'll use every day</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Walking</p>
+        <p class="cval">5 km/h</p>
+        <p class="cnote">1 km = 12 min walk. 10 min = ~800 m. The foundation of all human-scale distance sense.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Cycling</p>
+        <p class="cval">~20 km/h</p>
+        <p class="cnote">4× walking. 1 km = 3 min. 10 km commute = 30 min by bike.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Motorway driving</p>
+        <p class="cval">~120 km/h</p>
+        <p class="cnote">2 km per minute. 100 km = ~50 min. 1 hr = ~120 km.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Commercial flight</p>
+        <p class="cval">~900 km/h</p>
+        <p class="cnote">15 km per minute. 1,000 km ≈ 1 hr. The Module 3 anchor in action.</p>
+      </div>
+    </div>
+
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The travel time formula — works for any journey</div>
+      <div class="u-fs-13px text-secondary u-lh-1-7">
+        Time = Distance ÷ Speed. Always in the same units.<br>
+        300 km by car at 100 km/h = <strong class="text-primary">3 hours</strong>.<br>
+        300 km by plane at 900 km/h = <strong class="text-primary">20 minutes</strong> (plus airport time — realistically 3 hrs total).<br>
+        300 km by TGV at 300 km/h = <strong class="text-primary">1 hour</strong> — often faster door-to-door than flying.
+      </div>
+    </div>
+
+    <!-- Speed units cross-reference -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Speed in all three units — the conversion reference</div>
+      <div class="u-fs-11px text-secondary u-mb-md">km/h × 0.278 = m/s &nbsp;·&nbsp; km/h × 0.621 = mph &nbsp;·&nbsp; mph × 1.609 = km/h</div>
+      <table class="unit-table">
+        <thead><tr><th>Speed context</th><th>km/h</th><th>m/s</th><th>mph</th></tr></thead>
+        <tbody>
+          <tr><td>Human walking</td><td class="unit-hl">5</td><td>1.4</td><td>3.1</td></tr>
+          <tr><td>Competitive sprint (100 m WR)</td><td class="unit-hl">37.6</td><td>10.4</td><td>23.4</td></tr>
+          <tr><td>City speed limit</td><td class="unit-hl">50</td><td>13.9</td><td>31</td></tr>
+          <tr><td>Motorway / highway</td><td class="unit-hl">120</td><td>33.3</td><td>75</td></tr>
+          <tr><td>High-speed train</td><td class="unit-hl">300</td><td>83.3</td><td>186</td></tr>
+          <tr><td>Commercial aircraft</td><td class="unit-hl">900</td><td>250</td><td>560</td></tr>
+          <tr><td>Speed of sound (sea level)</td><td class="unit-hl">1,235</td><td>343</td><td>767</td></tr>
+        </tbody>
+      </table>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Quick rule: to convert km/h to m/s, divide by 3.6. So 90 km/h = 25 m/s — useful for stopping-distance calculations.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART C · INTERACTIVE CALCULATOR
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-c-interactive-speed-and-distance-calculator">Part C · interactive speed & distance calculator</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How long does a journey take? Pick a speed and enter a distance.</div>
+      <div class="u-display-flex u-gap-md u-items-center u-flex-wrap u-mb-md">
+        <select id="speed-select" class="u-flex-1 u-minw-160px">
+          <option value="5">Walking (5 km/h)</option>
+          <option value="20">Cycling (20 km/h)</option>
+          <option value="50">City driving (50 km/h)</option>
+          <option value="120" selected>Motorway (120 km/h)</option>
+          <option value="300">High-speed train (300 km/h)</option>
+          <option value="900">Commercial plane (900 km/h)</option>
+          <option value="28000">Space station (28,000 km/h)</option>
+          <option value="1080000000">Speed of light (1,080,000,000 km/h)</option>
+        </select>
+        <input type="number" id="dist-input" placeholder="Distance (km)" value="500" step="1" class="u-flex-1 u-minw-130px">
+      </div>
+      <div id="calc-result" class="u-fs-14px text-primary u-lh-1-8 u-bg-background-secondary u-radius-radius-md u-p-10px-13px"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART D · DURATION ANCHORS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-d-how-long-does-it-actually-take-duration-anchors">Part D · how long does it actually take? duration anchors</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Real-world task durations — most people underestimate these</div>
+      <div class="dur-row"><span class="dur-name">Boiling water (1L)</span><div class="dur-bar-wrap"><div class="dur-bar u-w-1-pct u-bg-hex-85b7eb"></div></div><span class="dur-val">~4 min</span></div>
+      <div class="dur-row"><span class="dur-name">Cooking pasta</span><div class="dur-bar-wrap"><div class="dur-bar u-w-2-pct u-bg-hex-85b7eb"></div></div><span class="dur-val">8–12 min</span></div>
+      <div class="dur-row"><span class="dur-name">Roasting a chicken (1.5kg)</span><div class="dur-bar-wrap"><div class="dur-bar u-w-15-pct u-bg-hex-378add"></div></div><span class="dur-val">~90 min</span></div>
+      <div class="dur-row"><span class="dur-name">Appendix surgery</span><div class="dur-bar-wrap"><div class="dur-bar u-w-5-pct u-bg-hex-ef9f27"></div></div><span class="dur-val">30–60 min</span></div>
+      <div class="dur-row"><span class="dur-name">Hip replacement</span><div class="dur-bar-wrap"><div class="dur-bar u-w-10-pct u-bg-hex-ef9f27"></div></div><span class="dur-val">1–2 hours</span></div>
+      <div class="dur-row"><span class="dur-name">Open-heart surgery</span><div class="dur-bar-wrap"><div class="dur-bar u-w-50-pct u-bg-hex-ba7517"></div></div><span class="dur-val">4–6 hours</span></div>
+      <div class="dur-row"><span class="dur-name">Building a house</span><div class="dur-bar-wrap"><div class="dur-bar u-w-25-pct u-bg-hex-1d9e75"></div></div><span class="dur-val">6–18 months</span></div>
+      <div class="dur-row"><span class="dur-name">Building a skyscraper</span><div class="dur-bar-wrap"><div class="dur-bar u-w-70-pct u-bg-hex-0f6e56"></div></div><span class="dur-val">3–5 years</span></div>
+      <div class="dur-row"><span class="dur-name">Building a nuclear plant</span><div class="dur-bar-wrap"><div class="dur-bar u-w-100-pct u-bg-hex-085041"></div></div><span class="dur-val">10–20 years</span></div>
+      <div class="dur-row"><span class="dur-name">Writing a PhD thesis</span><div class="dur-bar-wrap"><div class="dur-bar u-w-20-pct u-bg-hex-7f77dd"></div></div><span class="dur-val">3–5 years</span></div>
+      <div class="dur-row"><span class="dur-name">Becoming a surgeon</span><div class="dur-bar-wrap"><div class="dur-bar u-w-80-pct u-bg-hex-534ab7"></div></div><span class="dur-val">12–15 years</span></div>
+    </div>
+
+    <div class="u-bg-background-warning u-radius-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 u-text-text-warning u-mb-xs">Why we consistently underestimate durations</div>
+      <div class="u-fs-13px text-secondary u-lh-1-6">Psychologists call it <em>planning fallacy</em>: we remember tasks going smoothly and forget interruptions, rework, and dependencies. The fix is to estimate by analogy — how long did the <em>last similar thing</em> actually take? — rather than imagining a perfect run. Projects with no prior reference (building a nuclear plant, for example) are especially prone to massive overruns: the global median nuclear build time has historically exceeded 10 years, with large cost overruns common.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART E · HUMAN BODY SPEEDS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-e-human-body-speeds-things-happening-inside-you-right-now">Part E · human body speeds — things happening inside you right now</h2>
+
+    <div class="cgrid-2">
+      <div class="card">
+        <p class="clabel">Nerve signal speed</p>
+        <p class="cval">~70 m/s</p>
+        <p class="cnote">252 km/h. Pain signals are slower (~1 m/s). That's why you feel a stubbed toe slightly after you see it happen.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Blood circulation (full loop)</p>
+        <p class="cval">~60 seconds</p>
+        <p class="cnote">One full circuit every ~1 minute. The body contains ~100,000 km of blood vessels total — enough to circle Earth twice.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Heart beats per minute</p>
+        <p class="cval">~60–100 bpm</p>
+        <p class="cnote">~100,000 beats per day. ~3 billion beats in a lifetime. It never stops for a rest longer than 1 second.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Blink duration</p>
+        <p class="cval">~150–400 ms</p>
+        <p class="cnote">You blink 15–20 times per minute. Total "blind time" per day: ~30 minutes. You never notice.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Sneezing speed</p>
+        <p class="cval">~150–160 km/h</p>
+        <p class="cnote">Air exits your nose faster than a motorway car. A cough is slower (~80 km/h) but still powerful enough to travel several metres.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Hair growth</p>
+        <p class="cval">~15 cm/year</p>
+        <p class="cnote">About 1.25 cm per month, or 0.4 mm per day — roughly the thickness of four sheets of paper. Nails grow slightly slower at ~3.5 mm/month.</p>
+      </div>
+    </div>
+
+    <!-- Body signals SVG -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Body signals: how fast does information travel through you?</div>
+      <div class="u-fs-11px text-secondary u-mb-md">From stimulus to brain — comparing your own biological "latency"</div>
+      <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
+        <defs>
+          <marker id="arrowB" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+            <polygon points="0 0, 7 3.5, 0 7" fill="var(--color-text-tertiary)"/>
+          </marker>
+        </defs>
+        <line x1="30" y1="170" x2="510" y2="170" stroke="var(--color-border-secondary)" stroke-width="0.8" marker-end="url(#arrowB)"/>
+        <text x="510" y="185" font-size="10" fill="var(--color-text-tertiary)" text-anchor="end" font-family="system-ui, sans-serif">time →</text>
+        <line x1="30" y1="168" x2="30" y2="172" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="30" y="182" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui, sans-serif">0</text>
+        <line x1="77" y1="168" x2="77" y2="172" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="77" y="182" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui, sans-serif">100ms</text>
+        <line x1="124" y1="168" x2="124" y2="172" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="124" y="182" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui, sans-serif">200ms</text>
+        <line x1="218" y1="168" x2="218" y2="172" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="218" y="182" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui, sans-serif">400ms</text>
+        <line x1="359" y1="168" x2="359" y2="172" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="359" y="182" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui, sans-serif">700ms</text>
+        <line x1="500" y1="168" x2="500" y2="172" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="500" y="182" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui, sans-serif">1000ms</text>
+        <text x="28" y="26" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui, sans-serif" font-weight="500">Touch hot surface</text>
+        <rect x="30" y="30" width="23" height="13" rx="2" fill="#85B7EB" opacity="0.9"/>
+        <text x="54" y="40" font-size="9" fill="var(--color-text-info)" font-family="system-ui, sans-serif">reflex ~50ms</text>
+        <rect x="30" y="30" width="329" height="13" rx="2" fill="#B5D4F4" opacity="0.35"/>
+        <rect x="30" y="30" width="329" height="13" rx="2" fill="none" stroke="#85B7EB" stroke-width="0.5"/>
+        <text x="362" y="40" font-size="9" fill="var(--color-text-info)" font-family="system-ui, sans-serif">pain felt ~700ms</text>
+        <text x="28" y="75" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui, sans-serif" font-weight="500">See fast-moving object</text>
+        <rect x="30" y="79" width="117" height="13" rx="2" fill="#97C459" opacity="0.6"/>
+        <text x="150" y="89" font-size="9" fill="var(--color-text-success)" font-family="system-ui, sans-serif">conscious vision ~250ms</text>
+        <text x="28" y="120" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui, sans-serif" font-weight="500">Hear a loud sound</text>
+        <rect x="30" y="124" width="75" height="13" rx="2" fill="#EF9F27" opacity="0.7"/>
+        <text x="108" y="134" font-size="9" fill="var(--color-text-warning)" font-family="system-ui, sans-serif">reaction ~160ms (fastest sense)</text>
+        <text x="28" y="152" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui, sans-serif" font-weight="500">Blink reflex (to threat)</text>
+        <rect x="30" y="156" width="47" height="9" rx="2" fill="#7F77DD" opacity="0.7"/>
+        <text x="80" y="163" font-size="9" fill="#534AB7" font-family="system-ui, sans-serif">~100ms</text>
+      </svg>
+      <p class="u-fs-11px text-secondary u-m-6px-0-0">Hearing triggers the fastest reactions (~160ms) — faster than vision (~250ms). This is why starting pistols are used instead of visual flags in sprinting.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART F · STOPPING DISTANCES
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-f-stopping-distances-speed-kills-because-physics">Part F · stopping distances — speed kills because physics</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Interactive stopping distance calculator</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Drag the slider. Stopping distance grows with the <em>square</em> of speed — double your speed, quadruple your stopping distance.</div>
+      <div class="stop-slider-wrap">
+        <div class="stop-label"><span>Speed</span><span id="stop-speed-label">90 km/h</span></div>
+        <input type="range" id="stop-slider" min="20" max="160" value="90" step="5">
+      </div>
+      <svg id="stop-svg" viewBox="0 0 520 70" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block u-m-10px-0">
+        <rect x="0" y="28" width="520" height="24" rx="3" fill="var(--color-background-tertiary)"/>
+        <line x1="0" y1="40" x2="520" y2="40" stroke="var(--color-border-secondary)" stroke-width="0.8" stroke-dasharray="12,8"/>
+        <rect id="stop-react-bar" x="10" y="30" width="80" height="10" rx="2" fill="#378ADD" opacity="0.85"/>
+        <rect id="stop-brake-bar" x="90" y="30" width="120" height="10" rx="2" fill="#185FA5" opacity="0.85"/>
+        <rect id="stop-car" x="10" y="22" width="26" height="14" rx="3" fill="var(--accent)"/>
+        <rect id="stop-car-w1" x="13" y="24" width="8" height="6" rx="1" fill="var(--color-background-info)" opacity="0.7"/>
+        <rect id="stop-car-w2" x="23" y="24" width="8" height="6" rx="1" fill="var(--color-background-info)" opacity="0.7"/>
+        <polygon id="stop-hazard" points="220,20 228,36 212,36" fill="#EF9F27" opacity="0.9"/>
+        <text id="stop-hazard-t" x="220" y="16" font-size="9" fill="var(--color-text-warning)" text-anchor="middle" font-family="system-ui, sans-serif">hazard</text>
+        <text id="stop-react-label" x="50" y="62" font-size="9" fill="#378ADD" text-anchor="middle" font-family="system-ui, sans-serif">reaction</text>
+        <text id="stop-brake-label" x="150" y="62" font-size="9" fill="#185FA5" text-anchor="middle" font-family="system-ui, sans-serif">braking</text>
+      </svg>
+      <div class="stop-breakdown">
+        <div class="stop-block">
+          <div class="stop-block-label">Reaction distance</div>
+          <div class="stop-block-val" id="stop-react-val">—</div>
+          <div class="stop-block-sub">~0.75 s reaction time</div>
+        </div>
+        <div class="stop-block">
+          <div class="stop-block-label">Braking distance (dry)</div>
+          <div class="stop-block-val" id="stop-brake-val">—</div>
+          <div class="stop-block-sub">grows as speed²</div>
+        </div>
+        <div class="stop-block u-bg-background-info">
+          <div class="stop-block-label u-text-text-info">Total stopping distance</div>
+          <div class="stop-block-val u-text-text-info" id="stop-total-val">—</div>
+          <div class="stop-block-sub" id="stop-context">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART G · 0–100 KM/H ACCELERATION
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-g-0-to-100-km-h-the-universal-measure-of-a-car-s-acceleration">Part G · 0 to 100 km/h — the universal measure of a car's acceleration</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">0–100 km/h times across all categories</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Bar length = time taken. Shorter = faster. Click a category to explore.</div>
+
+      <!-- Category tabs -->
+      <div class="car-tab-btns" id="car-tab-btns">
+        <button class="dest-btn active" onclick="showCars(this,'all')">All</button>
+        <button class="dest-btn" onclick="showCars(this,'petrol')">Petrol / ICE</button>
+        <button class="dest-btn" onclick="showCars(this,'electric')">Electric</button>
+        <button class="dest-btn" onclick="showCars(this,'everyday')">Everyday cars</button>
+        <button class="dest-btn" onclick="showCars(this,'classic')">Classics &amp; icons</button>
+      </div>
+
+      <div id="car-list"></div>
+    </div>
+
+    <!-- 0-100 note box -->
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Why 0–100 km/h? And what does it actually feel like?</div>
+      <div class="u-fs-13px text-secondary u-lh-1-6">
+        0–100 km/h (0–62 mph) is the universal benchmark because it represents the most common real-world acceleration scenario: joining a motorway or overtaking. The number is honest — it can't be gamed by gearing tricks the way top-speed figures can. <strong class="text-primary">Below 4 seconds</strong> feels violent; your vision narrows and you're pressed into the seat with ~0.6–0.8 g. <strong class="text-primary">Below 2 seconds</strong> (modern hypercars) produces a brief sensation of near-weightlessness followed by sharp chest compression — roughly equivalent to fighter-pilot g-onset. The <strong class="text-primary">electric advantage</strong> is real: an electric motor produces maximum torque from 0 rpm, while a petrol engine must reach its torque peak (often 3,000–5,000 rpm). This is why a modest family EV often outaccelerates sports cars from a standing start, even if it's slower at high speed.
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART H · SPEED OF LIGHT & COSMOS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-h-the-speed-of-light-putting-the-universe-in-perspective">Part H · the speed of light — putting the universe in perspective</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Light travels 300,000 km per second. How far in each timeframe?</div>
+      <div class="bar-row"><span class="bl">1 nanosecond</span><div class="bb u-w-0-3-pct u-bg-hex-eeedfe u-border-0-5px-solid-hex-cecbf6"><span class="bv u-text-hex-26215c u-ml-5px u-fs-10px">30 cm — a ruler</span></div></div>
+      <div class="bar-row"><span class="bl">1 blink (200ms)</span><div class="bb u-w-1-5-pct u-bg-hex-cecbf6"><span class="bv u-text-hex-26215c u-fs-10px">60,000 km</span></div></div>
+      <div class="bar-row"><span class="bl">1 second</span><div class="bb u-w-3-pct u-bg-hex-afa9ec"><span class="bv u-text-hex-26215c u-fs-10px">300,000 km</span></div></div>
+      <div class="bar-row"><span class="bl">1.3 seconds</span><div class="bb u-w-4-pct u-bg-hex-9790e5"><span class="bv u-text-hex-26215c u-fs-10px">~384,000 km — Earth→Moon</span></div></div>
+      <div class="bar-row"><span class="bl">1 minute</span><div class="bb u-w-10-pct u-bg-hex-7f77dd"><span class="bv u-text-hex-fff u-fs-10px">18M km</span></div></div>
+      <div class="bar-row"><span class="bl">8 minutes</span><div class="bb u-w-50-pct u-bg-hex-534ab7"><span class="bv u-text-hex-fff">150M km — Earth to Sun</span></div></div>
+      <div class="bar-row"><span class="bl">4.2 years</span><div class="bb u-w-100-pct u-bg-hex-26215c"><span class="bv u-text-hex-cecbf6">nearest star (Proxima Centauri)</span></div></div>
+      <p class="u-fs-12px text-secondary u-m-10px-0-0">When you look at the Sun, you're seeing it as it was 8 minutes ago. The night sky is a time machine — the further you look, the older the light.</p>
+    </div>
+
+    <!-- Cosmic distance explorer -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Cosmic distance explorer</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Select a destination to see how long a light-speed signal takes to get there.</div>
+      <div class="u-display-flex u-flex-wrap u-gap-6px u-mb-md" id="dest-btn-wrap">
+        <button class="dest-btn active" onclick="showDest(this,'moon')">Moon</button>
+        <button class="dest-btn" onclick="showDest(this,'mars')">Mars</button>
+        <button class="dest-btn" onclick="showDest(this,'jupiter')">Jupiter</button>
+        <button class="dest-btn" onclick="showDest(this,'saturn')">Saturn</button>
+        <button class="dest-btn" onclick="showDest(this,'voyager')">Voyager 1</button>
+        <button class="dest-btn" onclick="showDest(this,'proxima')">Proxima Centauri</button>
+        <button class="dest-btn" onclick="showDest(this,'andromeda')">Andromeda Galaxy</button>
+      </div>
+      <div class="dest-result" id="dest-result"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART I · SLOW SPEEDS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-i-the-other-end-of-the-scale-speeds-that-are-almost-imperceptible">Part I · the other end of the scale — speeds that are almost imperceptible</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Incredibly slow — but not zero</div>
+      <div class="u-fs-11px text-secondary u-mb-md">All values in mm/year for comparison.</div>
+      <div class="slow-row"><span class="slow-name">Human nail growth</span><div class="slow-bar-wrap"><div class="slow-bar u-w-1-5-pct u-bg-hex-7f77dd"></div></div><span class="slow-val">~42 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Human hair growth</span><div class="slow-bar-wrap"><div class="slow-bar u-w-5-pct u-bg-hex-534ab7"></div></div><span class="slow-val">~150 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Stalactite growth</span><div class="slow-bar-wrap"><div class="slow-bar u-w-0-3-pct u-bg-hex-85b7eb"></div></div><span class="slow-val">0.1–3 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Continental drift</span><div class="slow-bar-wrap"><div class="slow-bar u-w-1-pct u-bg-hex-378add"></div></div><span class="slow-val">~25–50 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Tree trunk widening</span><div class="slow-bar-wrap"><div class="slow-bar u-w-0-8-pct u-bg-hex-1d9e75"></div></div><span class="slow-val">~5–20 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Sea-level rise (current)</span><div class="slow-bar-wrap"><div class="slow-bar u-w-0-15-pct u-bg-hex-ef9f27"></div></div><span class="slow-val">~3.6 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Sahara expansion</span><div class="slow-bar-wrap"><div class="slow-bar u-w-100-pct u-bg-hex-ba7517"></div></div><span class="slow-val">~5,000 m/year</span></div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Continental drift moves at roughly the same speed as your fingernails grow. Africa and South America separate by about the width of your hand every year. Over 100 million years, that's the Atlantic Ocean.</p>
+    </div>
+
+    <!-- Geological timescale SVG -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Rate vs. cumulative effect — the patience of slow processes</div>
+      <div class="u-fs-11px text-secondary u-mb-sm">The Grand Canyon took ~5–6 million years to form — yet the Colorado River only erodes ~0.3 mm of rock per year. Small rates, given enough time, produce colossal results.</div>
+      <svg viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
+        <rect x="0" y="0" width="520" height="130" rx="4" fill="var(--color-background-secondary)"/>
+        <line x1="30" y1="100" x2="500" y2="100" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+        <line x1="30"  y1="98" x2="30"  y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="30"  y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1 yr</text>
+        <line x1="81"  y1="98" x2="81"  y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="81"  y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">10 yr</text>
+        <line x1="132" y1="98" x2="132" y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="132" y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">100 yr</text>
+        <line x1="183" y1="98" x2="183" y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="183" y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1 000 yr</text>
+        <line x1="336" y1="98" x2="336" y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="336" y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1 M yr</text>
+        <line x1="438" y1="98" x2="438" y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="438" y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">100 M yr</text>
+        <line x1="489" y1="98" x2="489" y2="102" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+        <text x="489" y="112" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1 B yr</text>
+        <rect x="30" y="62" width="88" height="9" rx="2" fill="#85B7EB" opacity="0.8"/>
+        <text x="30" y="57" font-size="9" fill="var(--color-text-info)" font-family="system-ui,sans-serif" font-weight="500">Human lifetime (~80 yr)</text>
+        <rect x="336" y="80" width="22" height="9" rx="2" fill="#BA7517" opacity="0.8"/>
+        <text x="336" y="75" font-size="9" fill="var(--color-text-warning)" font-family="system-ui,sans-serif" font-weight="500">Grand Canyon (~5 M yr)</text>
+        <rect x="387" y="44" width="51" height="9" rx="2" fill="#1D9E75" opacity="0.8"/>
+        <text x="387" y="39" font-size="9" fill="#1D9E75" font-family="system-ui,sans-serif" font-weight="500">Himalayas rise (~50 M yr)</text>
+        <rect x="438" y="62" width="38" height="9" rx="2" fill="#185FA5" opacity="0.8"/>
+        <text x="438" y="57" font-size="9" fill="var(--color-text-info)" font-family="system-ui,sans-serif" font-weight="500">Atlantic Ocean (~180 M yr)</text>
+        <text x="500" y="125" font-size="8" fill="var(--color-text-tertiary)" text-anchor="end" font-family="system-ui,sans-serif">logarithmic time axis</text>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART J · GUINNESS WORLD RECORDS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-j-guinness-world-records-fastest-of-everything">Part J · Guinness World Records — fastest of everything</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Official world speed records across categories</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Click any record card to reveal the story behind it.</div>
+      <div id="gwr-grid" class="u-display-grid u-gridcols-repeat-auto-fill-minmax-150px-1fr u-gap-sm"></div>
+      <div id="gwr-detail" class="u-display-none u-mt-md u-bt-0-5px-solid-border-tertiary u-pt-12px">
+        <div class="u-fs-11px u-fw-500 text-secondary u-transform-uppercase u-ls-0-06em u-mb-xs" id="gwr-detail-cat"></div>
+        <div class="u-fs-18px u-fw-500 u-lh-1-1 u-mb-2px" id="gwr-detail-speed"></div>
+        <div class="u-fs-13px u-fw-500 text-primary u-mb-sm" id="gwr-detail-title"></div>
+        <div class="u-fs-13px text-secondary u-lh-1-6" id="gwr-detail-body"></div>
+      </div>
+    </div>
+
+    <!-- GWR log-scale chart -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">All records on one scale (km/h, logarithmic)</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Each grid line is 10× faster.</div>
+      <svg viewBox="0 0 520 310" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
+        <line x1="30"  y1="10" x2="30"  y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="84"  y1="10" x2="84"  y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="138" y1="10" x2="138" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="192" y1="10" x2="192" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="246" y1="10" x2="246" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="300" y1="10" x2="300" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="354" y1="10" x2="354" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="408" y1="10" x2="408" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="462" y1="10" x2="462" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <line x1="510" y1="10" x2="510" y2="285" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="30"  y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1</text>
+        <text x="84"  y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">10</text>
+        <text x="138" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">100</text>
+        <text x="192" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1K</text>
+        <text x="246" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">10K</text>
+        <text x="300" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">100K</text>
+        <text x="354" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1M</text>
+        <text x="408" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">10M</text>
+        <text x="462" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">100M</text>
+        <text x="510" y="298" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">1B km/h</text>
+        <rect x="30" y="14" width="4"   height="12" rx="2" fill="#B5D4F4"/>
+        <text x="36" y="24" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Snail · 0.05 km/h</text>
+        <rect x="30" y="36" width="38"  height="12" rx="2" fill="#85B7EB"/>
+        <text x="70" y="46" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Human walk · 5 km/h</text>
+        <rect x="30" y="58" width="89"  height="12" rx="2" fill="#378ADD"/>
+        <text x="122" y="68" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Usain Bolt · 44.7 km/h</text>
+        <rect x="30" y="80" width="140" height="12" rx="2" fill="var(--accent)"/>
+        <text x="173" y="90" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Peregrine falcon · 389 km/h</text>
+        <rect x="30" y="102" width="167" height="12" rx="2" fill="#185FA5"/>
+        <text x="200" y="112" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">ThrustSSC (land speed) · 1,228 km/h</text>
+        <rect x="30" y="124" width="192" height="12" rx="2" fill="#0C447C"/>
+        <text x="225" y="134" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">SR-71 Blackbird · 3,540 km/h</text>
+        <rect x="30" y="146" width="217" height="12" rx="2" fill="#27500A"/>
+        <text x="250" y="156" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Rocket sled (Holloman AFB) · 10,325 km/h</text>
+        <rect x="30" y="168" width="257" height="12" rx="2" fill="#085041"/>
+        <text x="290" y="178" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">New Horizons · 58,536 km/h</text>
+        <rect x="30" y="190" width="315" height="12" rx="2" fill="#3C3489"/>
+        <text x="348" y="200" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Parker Solar Probe · 692,000 km/h</text>
+        <rect x="30" y="212" width="478" height="12" rx="2" fill="#534AB7"/>
+        <text x="30" y="238" font-size="9" fill="#534AB7" font-family="system-ui,sans-serif" font-weight="500">LHC protons · ~1,079,000,000 km/h (99.9999991% c)</text>
+        <line x1="510" y1="14" x2="510" y2="246" stroke="#534AB7" stroke-width="0.8" stroke-dasharray="3,3" opacity="0.5"/>
+        <text x="508" y="256" font-size="8" fill="#534AB7" text-anchor="end" font-family="system-ui,sans-serif">← speed of light</text>
+        <text x="30" y="308" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">logarithmic scale — km/h</text>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART K · FASTEST ROLLER COASTERS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-k-fastest-roller-coasters-in-the-world">Part K · fastest roller coasters in the world</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Top-speed coasters — ranked</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Click a coaster to explore its stats and story.</div>
+      <div id="rc-list" class="u-display-flex u-flex-direction-column u-gap-0"></div>
+    </div>
+
+    <div id="rc-detail-box" class="u-display-none u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+      <div class="u-display-flex u-justify-space-between u-items-flex-start u-flex-wrap u-gap-sm u-mb-md">
+        <div>
+          <div class="u-fs-11px u-fw-500 text-secondary u-transform-uppercase u-ls-0-06em" id="rc-det-loc"></div>
+          <div class="u-fs-18px u-fw-500" id="rc-det-name"></div>
+        </div>
+        <div class="u-align-right">
+          <div class="u-fs-26px u-fw-500 u-text-text-info" id="rc-det-speed"></div>
+          <div class="u-fs-11px text-secondary" id="rc-det-open"></div>
+        </div>
+      </div>
+      <svg id="rc-gauge-svg" viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-maxw-220px u-h-auto u-display-block u-m-0-auto-10px">
+        <path d="M 30 105 A 80 80 0 0 1 190 105" fill="none" stroke="var(--color-border-tertiary)" stroke-width="14" stroke-linecap="round"/>
+        <path id="rc-gauge-arc" d="M 30 105 A 80 80 0 0 1 190 105" fill="none" stroke="#185FA5" stroke-width="14" stroke-linecap="round" stroke-dasharray="251.3" stroke-dashoffset="251.3"/>
+        <line id="rc-gauge-needle" x1="110" y1="105" x2="110" y2="32" stroke="var(--color-text-primary)" stroke-width="2" stroke-linecap="round" transform="rotate(0,110,105)"/>
+        <circle cx="110" cy="105" r="5" fill="var(--color-text-primary)"/>
+        <text x="28" y="118" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">0</text>
+        <text x="192" y="118" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">280</text>
+        <text x="110" y="90" font-size="11" fill="var(--color-text-info)" text-anchor="middle" font-weight="500" font-family="system-ui,sans-serif" id="rc-gauge-label">—</text>
+        <text x="110" y="102" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">km/h</text>
+      </svg>
+      <div class="u-display-flex u-flex-wrap u-gap-6px u-mb-md" id="rc-stat-pills"></div>
+      <div class="u-fs-13px text-secondary u-lh-1-6" id="rc-det-body"></div>
+    </div>
+
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">How do the fastest coasters achieve such speed?</div>
+      <div class="u-fs-13px text-secondary u-lh-1-6">The old chain-lift method tops out around 120–130 km/h. The fastest coasters use <strong class="text-primary">hydraulic launch</strong> or <strong class="text-primary">linear synchronous motor (LSM)</strong> systems. A hydraulic launch works like a giant syringe — oil is pressurised over several minutes, then released in 1–4 seconds to slam the train down the track. Formula Rossa accelerates from 0 to 240 km/h in 4.9 seconds — requiring riders to wear protective goggles against wind and insects. For comparison, a Formula 1 car reaches 0–100 km/h in about 2.6 seconds but only reaches ~370 km/h top speed — slower than the fastest coasters.</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART L · THE LARGE HADRON COLLIDER
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-l-the-large-hadron-collider-the-fastest-thing-humans-have-ever-built">Part L · the Large Hadron Collider — the fastest thing humans have ever built</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem u-overflow-hidden">
+      <div class="u-display-flex u-flex-wrap u-gap-md u-mb-lg">
+        <div class="u-flex-1 u-minw-130px u-bg-background-info u-radius-radius-md u-p-10px-13px">
+          <div class="u-fs-11px u-text-text-info u-mb-2px">Proton speed</div>
+          <div class="u-fs-20px u-fw-500 u-text-text-info">99.9999991% c</div>
+          <div class="u-fs-11px u-text-text-info u-opacity-0-8">~1,079,251,200 km/h</div>
+        </div>
+        <div class="u-flex-1 u-minw-130px u-bg-background-secondary u-radius-radius-md u-p-10px-13px">
+          <div class="u-fs-11px text-secondary u-mb-2px">Circumference</div>
+          <div class="u-fs-20px u-fw-500 text-primary">27 km</div>
+          <div class="u-fs-11px text-secondary">buried 50–175 m underground</div>
+        </div>
+        <div class="u-flex-1 u-minw-130px u-bg-background-secondary u-radius-radius-md u-p-10px-13px">
+          <div class="u-fs-11px text-secondary u-mb-2px">Orbits per second</div>
+          <div class="u-fs-20px u-fw-500 text-primary">11,245</div>
+          <div class="u-fs-11px text-secondary">each proton beam</div>
+        </div>
+        <div class="u-flex-1 u-minw-130px u-bg-background-secondary u-radius-radius-md u-p-10px-13px">
+          <div class="u-fs-11px text-secondary u-mb-2px">Collision energy</div>
+          <div class="u-fs-20px u-fw-500 text-primary">13.6 TeV</div>
+          <div class="u-fs-11px text-secondary">Run 3 (2022–present)</div>
+        </div>
+      </div>
+
+      <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">The LHC ring — straddling the Swiss-French border</div>
+      <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block u-mb-md">
+        <ellipse cx="320" cy="150" rx="160" ry="120" fill="#EAF3DE" opacity="0.25"/>
+        <text x="430" y="60" font-size="10" fill="var(--color-text-success)" font-family="system-ui,sans-serif" font-weight="500" opacity="0.7">SWITZERLAND</text>
+        <ellipse cx="180" cy="150" rx="160" ry="120" fill="#E6F1FB" opacity="0.25"/>
+        <text x="60" y="60" font-size="10" fill="var(--color-text-info)" font-family="system-ui,sans-serif" font-weight="500" opacity="0.7">FRANCE</text>
+        <line x1="260" y1="10" x2="260" y2="290" stroke="var(--color-border-secondary)" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.5"/>
+        <text x="263" y="20" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">border</text>
+        <circle cx="258" cy="150" r="100" fill="none" stroke="#3C3489" stroke-width="3" opacity="0.85"/>
+        <circle cx="258" cy="150" r="104" fill="none" stroke="#534AB7" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+        <text x="258" y="43" font-size="10" fill="#534AB7" text-anchor="middle" font-family="system-ui,sans-serif">↻ clockwise</text>
+        <text x="258" y="268" font-size="10" fill="#3C3489" text-anchor="middle" font-family="system-ui,sans-serif">↺ counter-clockwise</text>
+        <circle cx="258" cy="50" r="7" fill="#185FA5"/>
+        <text x="258" y="35" font-size="9" fill="var(--color-text-info)" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="500">ATLAS</text>
+        <circle cx="258" cy="250" r="7" fill="#185FA5"/>
+        <text x="258" y="275" font-size="9" fill="var(--color-text-info)" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="500">CMS</text>
+        <circle cx="158" cy="150" r="6" fill="#1D9E75"/>
+        <text x="120" y="145" font-size="9" fill="var(--color-text-success)" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="500">ALICE</text>
+        <text x="120" y="155" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">(heavy ions)</text>
+        <circle cx="358" cy="150" r="6" fill="#BA7517"/>
+        <text x="400" y="145" font-size="9" fill="var(--color-text-warning)" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="500">LHCb</text>
+        <text x="400" y="155" font-size="8" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">(b-quarks)</text>
+        <rect x="238" y="118" width="40" height="16" rx="3" fill="var(--color-background-warning)" stroke="var(--color-border-warning)" stroke-width="0.5"/>
+        <text x="258" y="130" font-size="9" fill="var(--color-text-warning)" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="500">CERN</text>
+        <text x="258" y="245" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui,sans-serif">⟵ 8.6 km diameter ⟶</text>
+        <circle cx="285" cy="100" r="3" fill="var(--color-text-tertiary)" opacity="0.5"/>
+        <text x="290" y="98" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Geneva</text>
+      </svg>
+
+      <div class="u-fs-13px text-secondary u-lh-1-6 u-mb-md">
+        The LHC sits in a circular tunnel straddling the border between <strong class="text-primary">Switzerland and France</strong>, near Geneva. CERN's main campus is in Switzerland, but about 70% of the tunnel runs under French territory. The ring has a circumference of exactly <strong class="text-primary">26.659 km</strong> and was the most expensive scientific instrument ever built at the time of its first operation in 2008, costing approximately €4.4 billion for construction alone.
+      </div>
+    </div>
+
+    <!-- LHC interactive tabs -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+      <div class="u-display-flex u-flex-wrap u-gap-6px u-mb-md" id="lhc-tab-btns">
+        <button class="dest-btn active" onclick="showLhcTab(this,'speed')">Speed</button>
+        <button class="dest-btn" onclick="showLhcTab(this,'scale')">Scale of cold</button>
+        <button class="dest-btn" onclick="showLhcTab(this,'discovery')">Discoveries</button>
+        <button class="dest-btn" onclick="showLhcTab(this,'energy')">Energy</button>
+        <button class="dest-btn" onclick="showLhcTab(this,'why')">Why it matters</button>
+      </div>
+      <div id="lhc-tab-content" class="u-fs-13px text-secondary u-lh-1-7 u-bg-background-secondary u-radius-radius-md u-p-10px-13px u-min-height-80px"></div>
+    </div>
+
+    <!-- LHC relativistic effects -->
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What 99.9999991% of light speed actually means — relativistic effects</div>
+      <div class="u-fs-11px text-secondary u-mb-md">At these speeds, Einstein's special relativity isn't a theory — it's a measurable engineering constraint.</div>
+      <div class="cgrid-2 u-mb-md">
+        <div class="card">
+          <p class="clabel">Time dilation (Lorentz factor γ ≈ 7,461)</p>
+          <p class="cval u-fs-17px">7,461×</p>
+          <p class="cnote">A proton's internal "clock" ticks 7,461× slower than ours. If a proton were the size of a human, it would age only 4 seconds during a full day of operation in the LHC.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Length contraction</p>
+          <p class="cval u-fs-17px">÷ 7,461</p>
+          <p class="cnote">The 27 km ring appears contracted to just 3.6 metres from the proton's perspective. It "sees" the entire tunnel as shorter than a car.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Relativistic mass increase</p>
+          <p class="cval u-fs-17px">7,461×</p>
+          <p class="cnote">A proton at full LHC speed has an effective mass 7,461× its rest mass. This is why accelerating further gets exponentially harder — it approaches an infinite-energy wall.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Orbits per second</p>
+          <p class="cval u-fs-17px">11,245</p>
+          <p class="cnote">Each proton completes 11,245 laps of the 27 km ring every second. In 10 hours, each proton travels ~10 billion km — roughly the distance to Saturn.</p>
+        </div>
+      </div>
+      <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">How close to light speed is the LHC, really?</div>
+      <svg viewBox="0 0 520 110" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
+        <line x1="160" y1="98" x2="510" y2="98" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+        <text x="160" y="108" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">0%</text>
+        <text x="510" y="108" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">100% c</text>
+        <rect x="160" y="10" width="2" height="10" rx="1" fill="#85B7EB"/>
+        <text x="155" y="19" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" text-anchor="end">Plane (900 km/h)</text>
+        <text x="165" y="19" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">0.0001% c</text>
+        <rect x="160" y="30" width="4" height="10" rx="1" fill="var(--accent)"/>
+        <text x="155" y="39" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" text-anchor="end">Parker Solar Probe</text>
+        <text x="167" y="39" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">0.064% c</text>
+        <rect x="160" y="50" width="3" height="10" rx="1" fill="#378ADD"/>
+        <text x="155" y="59" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif" text-anchor="end">New Horizons</text>
+        <text x="166" y="59" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">0.0054% c</text>
+        <rect x="160" y="70" width="350" height="12" rx="2" fill="#3C3489" opacity="0.9"/>
+        <text x="155" y="80" font-size="9" fill="#3C3489" font-family="system-ui,sans-serif" text-anchor="end" font-weight="500">LHC protons</text>
+        <text x="340" y="80" font-size="9" fill="var(--color-background-primary)" font-family="system-ui,sans-serif" font-weight="500">99.9999991% of light speed</text>
+        <line x1="510" y1="10" x2="510" y2="90" stroke="#534AB7" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+      </svg>
+      <p class="u-fs-11px text-secondary u-m-8px-0-0">Even the fastest spacecraft (Parker Solar Probe) is barely visible on this scale. The remaining gap to light speed cannot be closed — it would require infinite energy.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART M · ANCHOR NUMBERS
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-m-anchor-numbers-to-memorize">Part M · anchor numbers to memorize</h2>
+
+    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-1-2rem">
+      <div class="anchor-row"><span class="pill p-blue">5 km/h</span><div><div class="atext">Human walking speed</div><div class="asub">1 km = 12 min · the foundation of all distance intuition</div></div></div>
+      <div class="anchor-row"><span class="pill p-teal">120 km/h</span><div><div class="atext">Motorway car — 2 km per minute</div><div class="asub">100 km = ~50 min driving</div></div></div>
+      <div class="anchor-row"><span class="pill p-green">300 km/h</span><div><div class="atext">High-speed train (TGV, Shinkansen)</div><div class="asub">Often faster than flying for &lt;500 km city-centre to city-centre</div></div></div>
+      <div class="anchor-row"><span class="pill p-purple">900 km/h</span><div><div class="atext">Commercial aircraft</div><div class="asub">1,000 km ≈ 1 hour — the module 3 rule</div></div></div>
+      <div class="anchor-row"><span class="pill p-amber">1,235 km/h</span><div><div class="atext">Speed of sound (Mach 1) at sea level</div><div class="asub">Thunder arrives ~3 sec after lightning per km of distance</div></div></div>
+      <div class="anchor-row"><span class="pill p-coral">300,000 km/s</span><div><div class="atext">Speed of light</div><div class="asub">Earth to Moon in 1.3 sec · Earth to Sun in 8 min</div></div></div>
+      <div class="anchor-row"><span class="pill p-red">25–50 mm/yr</span><div><div class="atext">Continental drift</div><div class="asub">Same rate as your fingernails grow — yet it built the Atlantic Ocean</div></div></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART N · FASTER OR SLOWER? GAME
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-n-faster-or-slower-speed-intuition-game">Part N · faster or slower? — speed intuition game</h2>
+
+    <div class="game-card" id="game-wrap">
+      <div class="game-score-row">
+        <div class="game-score">Score: <strong id="game-score">0</strong> / <strong id="game-total">0</strong></div>
+        <div class="game-score u-text-text-success" id="game-streak"></div>
+      </div>
+      <div id="game-inner">
+        <div class="game-q" id="game-q">Loading…</div>
+        <div class="game-choices" id="game-choices"></div>
+        <div class="game-feedback" id="game-feedback"></div>
+        <button class="game-next" id="game-next" onclick="nextQuestion()">Next question →</button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PART O · TEST YOURSELF
+    ═══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-o-q-and-a">Part O · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. You hear thunder 6 seconds after a lightning flash. How far away is the storm?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 2 km. Sound travels ~340 m/s. The rule of thumb: 3 seconds of delay ≈ 1 km. So 6 seconds ≈ 2 km. Light from the flash arrives almost instantly (less than a millisecond at 2 km), so the gap is purely sound travel time. At 6 seconds, the storm is close — seek shelter.</div>
+    </div>
+    <div class="qa">
+      <p class="qa-q">2. Paris to Lyon is about 460 km. Which is faster door-to-door: TGV or plane?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The TGV — easily. The train takes about 2 hours at ~300 km/h, city-centre to city-centre. A flight takes ~1 hour in the air, but add 45 min check-in, 30 min to/from each airport, and 20 min baggage = ~3.5–4 hours total. For any journey under ~600 km between well-connected cities, high-speed rail is almost always faster door-to-door than flying.</div>
+    </div>
+    <div class="qa">
+      <p class="qa-q">3. The ISS orbits at 28,000 km/h. How long does one full orbit of Earth take?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 92 minutes. Earth's circumference at orbital altitude (~400 km up) is roughly 42,000 km. 42,000 ÷ 28,000 ≈ 1.5 hours = 90 minutes. This means ISS astronauts see 16 sunrises and sunsets every single day — one every 45 minutes.</div>
+    </div>
+    <div class="qa">
+      <p class="qa-q">4. A surgeon says your operation will take "about 3 to 4 hours." Is that unusual, or normal for major surgery?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Completely normal for major surgery. Appendix removal: 30–60 min (minor). Hip replacement: 1–2 hours. Knee replacement: 1–2 hours. Open-heart surgery: 4–6 hours. Liver transplant: 6–12 hours. A 3–4 hour estimate puts you in the "significant but routine" category — complex enough to require careful work, but not an unusually long procedure. Add recovery room time and you're typically looking at waking up 1–2 hours after the stated surgery duration.</div>
+    </div>
+    <div class="qa">
+      <p class="qa-q">5. You're driving at 90 km/h and need to stop suddenly. Roughly how far does the car travel while you react and brake?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 55–65 metres total. At 90 km/h you're travelling 25 metres per second. Human reaction time is ~0.7–1 second, covering ~18–25 metres before you even touch the brakes. Then braking distance at 90 km/h on dry road is roughly 40 metres. Total: ~55–65 m. On wet roads, add 50%. This is why motorway tailgating is so dangerous — at 120 km/h, the total stopping distance exceeds 90 metres, longer than a football pitch.</div>
+    </div>
+    <div class="qa">
+      <p class="qa-q">6. Continental plates drift at about 25–50 mm per year. How far has Europe moved away from North America since the Roman Empire (~2,000 years ago)?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 50–100 metres — roughly the length of a football pitch. At 40 mm/year × 2,000 years = 80 metres. This is imperceptible on a human timescale, which is exactly why the idea of moving continents was ridiculed when first proposed. But over 100 million years, that same rate produces ~4,000 km of separation — the width of the North Atlantic.</div>
+    </div>
+    <div class="qa">
+      <p class="qa-q">7. You send a radio command to a Mars rover when Mars is at its furthest point from Earth (~400 million km). How long before the rover receives your command?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 22 minutes (one way). Radio signals travel at the speed of light: 400,000,000 km ÷ 300,000 km/s = ~1,333 seconds ≈ 22 minutes. A round-trip "conversation" would take ~44 minutes — which is why Mars rovers must be largely autonomous. You cannot drive them in real time from Earth. When Mars is at its closest (~56 million km), the delay is ~3 minutes each way.</div>
+    </div>
+
+    
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+/* ═══════════════════════════════════════════════
+   PART C — Travel time calculator
+═══════════════════════════════════════════════ */
+function fmtDuration(hours) {
+  if (hours < 1/60) {
+    const secs = hours * 3600;
+    if (secs < 0.001) return (secs * 1000).toFixed(3) + ' milliseconds';
+    if (secs < 1) return secs.toFixed(3) + ' seconds';
+    return secs.toFixed(1) + ' seconds';
+  }
+  if (hours < 1) {
+    const mins = hours * 60;
+    if (mins < 1) return (mins * 60).toFixed(1) + ' seconds';
+    return mins.toFixed(1) + ' minutes';
+  }
+  if (hours < 24) return hours.toFixed(2).replace(/\.?0+$/, '') + ' hours';
+  const days = hours / 24;
+  if (days < 365) return days.toFixed(1) + ' days';
+  return (days / 365).toFixed(2) + ' years';
+}
+function calcTravel() {
+  const speed = parseFloat(document.getElementById('speed-select').value);
+  const dist  = parseFloat(document.getElementById('dist-input').value);
+  const out   = document.getElementById('calc-result');
+  if (isNaN(dist) || dist <= 0) { out.innerHTML = 'Enter a positive distance.'; return; }
+  const hours = dist / speed;
+  const speedLabel = document.getElementById('speed-select').selectedOptions[0].text;
+  let context = '';
+  if (speed === 5)          context = ' — about the same as a very long walk';
+  else if (speed === 20)    context = ' — a solid cycling session';
+  else if (speed === 50)    context = ' — city traffic';
+  else if (speed === 120)   context = ' — add 20–30 min for stops on a real road trip';
+  else if (speed === 300)   context = ' — station to station; often faster than flying door-to-door';
+  else if (speed === 900)   context = ' — in the air only; add ~2 hrs for airport';
+  else if (speed === 28000) context = ' — the ISS would have completed ' + (hours / (92/60)).toFixed(1) + ' full orbits';
+  else if (speed === 1080000000) context = ' — light covers this in an instant';
+  out.innerHTML =
+    '<strong>' + dist.toLocaleString() + ' km</strong> at <strong>' + speedLabel + '</strong><br>' +
+    'Travel time: <strong>' + fmtDuration(hours) + '</strong>' + context;
+}
+document.getElementById('speed-select').addEventListener('change', calcTravel);
+document.getElementById('dist-input').addEventListener('input', calcTravel);
+calcTravel();
+
+/* ═══════════════════════════════════════════════
+   PART F — Stopping distance slider
+═══════════════════════════════════════════════ */
+function updateStopDist() {
+  const kmh   = parseInt(document.getElementById('stop-slider').value);
+  const ms    = kmh / 3.6;
+  const react = Math.round(ms * 0.75);
+  const brake = Math.round((ms * ms) / (2 * 7.5));
+  const total = react + brake;
+  const svgW  = 480;
+  const scale = Math.min(svgW / (total + 20), svgW / 50);
+  const rxPx  = Math.max(4, Math.round(react * scale));
+  const bkPx  = Math.max(4, Math.round(brake * scale));
+  const hazardX = 10 + rxPx + bkPx;
+
+  document.getElementById('stop-speed-label').textContent = kmh + ' km/h';
+  document.getElementById('stop-react-bar').setAttribute('width', rxPx);
+  document.getElementById('stop-brake-bar').setAttribute('x', String(10 + rxPx));
+  document.getElementById('stop-brake-bar').setAttribute('width', bkPx);
+  const hx = Math.min(hazardX, 508);
+  document.getElementById('stop-hazard').setAttribute('points', hx+',20 '+(hx+8)+',36 '+(hx-8)+',36');
+  document.getElementById('stop-hazard-t').setAttribute('x', String(hx));
+  document.getElementById('stop-react-label').setAttribute('x', String(10 + rxPx/2));
+  document.getElementById('stop-react-label').textContent = react + 'm';
+  document.getElementById('stop-brake-label').setAttribute('x', String(10 + rxPx + bkPx/2));
+  document.getElementById('stop-brake-label').textContent = brake + 'm';
+  document.getElementById('stop-react-val').textContent = react + ' m';
+  document.getElementById('stop-brake-val').textContent = brake + ' m';
+  document.getElementById('stop-total-val').textContent = total + ' m';
+  let ctx = '';
+  if (total < 20)       ctx = 'shorter than a bus';
+  else if (total < 40)  ctx = 'about the length of a bus';
+  else if (total < 60)  ctx = 'about half a football pitch';
+  else if (total < 90)  ctx = '~¾ of a football pitch';
+  else if (total < 120) ctx = 'longer than a football pitch';
+  else                  ctx = 'longer than an Olympic swimming pool';
+  document.getElementById('stop-context').textContent = ctx;
+}
+document.getElementById('stop-slider').addEventListener('input', updateStopDist);
+updateStopDist();
+
+/* ═══════════════════════════════════════════════
+   PART G — 0–100 km/h cars
+═══════════════════════════════════════════════ */
+const carData = [
+  // category: 'petrol','electric','everyday','classic'
+  // time in seconds (0-100 km/h)
+  // note: short context line
+
+  // ELECTRIC
+  { name: 'Rimac Nevera',        sub: 'Croatia · 2023',           time: 1.74, cat: 'electric', color: '#3C3489', note: 'Claimed 0–100 in 1.74 s — currently the fastest production car of any kind. 1,914 hp from four motors.' },
+  { name: 'Tesla Model S Plaid', sub: 'USA · 2021',               time: 1.99, cat: 'electric', color: '#3C3489', note: 'Tesla\'s tri-motor flagship. Sub-2-second 0–100 makes it quicker than virtually any street-legal petrol car.' },
+  { name: 'Porsche Taycan Turbo GT', sub: 'Germany · 2024',       time: 2.2,  cat: 'electric', color: '#534AB7', note: 'Porsche\'s answer to Tesla — offers exceptional handling alongside supercar acceleration. 1,108 hp.' },
+  { name: 'Hyundai Ioniq 6 (RWD)',   sub: 'South Korea · 2023',   time: 5.1,  cat: 'electric', color: '#7F77DD', note: 'A real-world family EV. 5.1 s is faster than a 1990s Ferrari 348 (5.7 s). EVs redefined "fast for a normal car."' },
+  { name: 'Tesla Model 3 (RWD)',     sub: 'USA · 2023',            time: 6.1,  cat: 'electric', color: '#AFA9EC', note: 'The global bestselling EV. Still outaccelerates almost every petrol car in its price bracket.' },
+  { name: 'Renault Mégane E-Tech',   sub: 'France · 2022',         time: 7.4,  cat: 'electric', color: '#CECBF6', note: 'Mainstream family hatchback. Competitive with a Golf GTI off the line.' },
+  { name: 'Volkswagen ID.3 (150 kW)',sub: 'Germany · 2023',        time: 7.3,  cat: 'electric', color: '#CECBF6', note: 'VW\'s mass-market EV golf-replacement. Similar acceleration to a hot hatch.' },
+
+  // PETROL / ICE
+  { name: 'Bugatti Chiron Super Sport', sub: 'France · 2021',     time: 2.4,  cat: 'petrol', color: '#042C53', note: '1,600 hp, 8.0L quad-turbo W16. Top speed 440 km/h — the fastest production car by top speed.' },
+  { name: 'Koenigsegg Agera RS',        sub: 'Sweden · 2017',     time: 2.6,  cat: 'petrol', color: '#0C447C', note: 'Set a production car top speed record (457 km/h) on a closed Nevada highway. Just 25 built.' },
+  { name: 'Ferrari SF90 Stradale',      sub: 'Italy · 2020',      time: 2.5,  cat: 'petrol', color: '#185FA5', note: 'Ferrari\'s first PHEV. Uses three electric motors to fill the turbo lag gap — hence the sub-2.5 s time.' },
+  { name: 'Lamborghini Huracán EVO',    sub: 'Italy · 2019',      time: 2.9,  cat: 'petrol', color: '#378ADD', note: '5.2L V10, 640 hp. 0–100 in 2.9 s — indistinguishable from teleportation in practice.' },
+  { name: 'Porsche 911 Turbo S (992)',  sub: 'Germany · 2020',    time: 2.7,  cat: 'petrol', color: '#85B7EB', note: 'Often considered the benchmark supercar. Brutally fast yet comfortable enough for daily use.' },
+  { name: 'BMW M5 Competition',         sub: 'Germany · 2018',    time: 3.3,  cat: 'petrol', color: 'var(--accent)', note: 'The definitive fast saloon. 600 hp, four-door, fits the family plus luggage. 3.3 s to 100.' },
+  { name: 'Ford Mustang Shelby GT500',  sub: 'USA · 2020',        time: 3.3,  cat: 'petrol', color: '#1D9E75', note: '760 hp supercharged V8. The most powerful street-legal Ford ever made. Pure American muscle.' },
+
+  // EVERYDAY
+  { name: 'Toyota Prius (5th gen)',      sub: 'Japan · 2023',     time: 6.7,  cat: 'everyday', color: '#EF9F27', note: 'The hybrid that defined the segment. 6.7 s is respectably brisk for a fuel-economy-focused car.' },
+  { name: 'Volkswagen Golf GTI (Mk8)',   sub: 'Germany · 2021',   time: 6.3,  cat: 'everyday', color: '#BA7517', note: 'The original hot hatch benchmark. 245 hp, practical family car, quicker than most think.' },
+  { name: 'Toyota Camry (2.5L Hybrid)',  sub: 'Japan · 2023',     time: 7.0,  cat: 'everyday', color: '#EF9F27', note: 'America\'s bestselling car. 7 s is completely adequate for safe highway merging and overtaking.' },
+  { name: 'Cadillac Escalade (6.2L)',    sub: 'USA · 2021',       time: 5.9,  cat: 'everyday', color: '#633806', note: 'A 3,000 kg luxury SUV doing 0–100 in 5.9 s is remarkable. The 6.2L V8 hides its mass well.' },
+  { name: 'Honda Civic (1.5T)',          sub: 'Japan · 2023',     time: 7.5,  cat: 'everyday', color: '#BA7517', note: 'The global compact benchmark. 7.5 s is entirely normal for a real-world daily driver.' },
+  { name: 'Toyota Corolla (2.0L)',       sub: 'Japan · 2023',     time: 8.1,  cat: 'everyday', color: '#EF9F27', note: 'The world\'s bestselling car of all time. Not quick, but a 8.1 s 0–100 is perfectly liveable.' },
+  { name: 'Ford F-150 (3.5L EcoBoost)', sub: 'USA · 2023',       time: 5.4,  cat: 'everyday', color: '#633806', note: 'America\'s bestselling vehicle — a full-size pickup truck that beats many sports cars off the line.' },
+  { name: 'Fiat 500 (1.0 Mild Hybrid)', sub: 'Italy · 2022',     time: 12.6, cat: 'everyday', color: '#97C459', note: 'City car at its honest best. 12.6 s feels slow on paper but is perfectly adequate in urban traffic.' },
+
+  // CLASSICS & ICONS (some now "slow" by modern standards)
+  { name: 'Ferrari Testarossa (1984)',   sub: 'Italy · 1984',     time: 5.8,  cat: 'classic', color: '#BA2B17', note: 'The poster car of the 1980s. 390 hp flat-12. Its 5.8 s 0–100 is now slower than a Toyota RAV4 hybrid.' },
+  { name: 'Lamborghini Countach (1988)', sub: 'Italy · 1988',     time: 4.7,  cat: 'classic', color: '#BA2B17', note: 'Defined the supercar silhouette for a generation. 455 hp V12, scissor doors. 4.7 s was otherworldly in 1988.' },
+  { name: 'Porsche 911 Turbo (930, 1975)',sub: 'Germany · 1975',  time: 5.5,  cat: 'classic', color: '#633806', note: 'The original widowmaker. Notorious oversteer, 260 hp, 5.5 s. Terrifying to drive fast. Iconic.' },
+  { name: 'BMW M3 (E30, 1986)',          sub: 'Germany · 1986',   time: 6.7,  cat: 'classic', color: 'var(--accent)', note: 'The M3 that started it all. 195 hp, 6.7 s. Slower than a current Toyota GR Yaris, yet still revered.' },
+  { name: 'Ferrari F40 (1987)',          sub: 'Italy · 1987',     time: 4.1,  cat: 'classic', color: '#BA2B17', note: 'The last Ferrari personally approved by Enzo Ferrari. 478 hp, 4.1 s — still fast by 2024 standards.' },
+  { name: 'Dodge Viper (GTS, 1996)',     sub: 'USA · 1996',       time: 4.0,  cat: 'classic', color: '#791F1F', note: 'No traction control, no ABS, 450 hp V10, 4.0 s. Genuinely dangerous and beloved for it.' },
+  { name: 'Aston Martin DB5 (1963)',     sub: 'UK · 1963',        time: 8.1,  cat: 'classic', color: '#0F6E56', note: 'James Bond\'s car. 282 hp, 8.1 s. Shockingly slow by modern standards, yet still costs £1M+ at auction.' },
+  { name: 'VW Golf GTI (Mk1, 1976)',     sub: 'Germany · 1976',   time: 9.0,  cat: 'classic', color: '#27500A', note: 'The original hot hatch. 110 hp, 9 s. Today\'s Toyota Yaris with a 1.0L engine is quicker.' },
+];
+
+// The slowest time in the full set (for bar scaling)
+const carMaxTime = Math.max(...carData.map(c => c.time));
+
+function showCars(btn, cat) {
+  document.querySelectorAll('#car-tab-btns .dest-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const list = document.getElementById('car-list');
+  list.innerHTML = '';
+  const filtered = cat === 'all' ? [...carData] : carData.filter(c => c.cat === cat);
+  filtered.sort((a, b) => a.time - b.time);
+
+  // Colour coding by category
+  const catColors = { petrol: '#185FA5', electric: '#3C3489', everyday: '#1D9E75', classic: '#BA2B17' };
+
+  filtered.forEach((c, i) => {
+    const pct = Math.round((c.time / carMaxTime) * 100);
+    const barColor = c.color || catColors[c.cat] || '#378ADD';
+    const timeLabel = c.time.toFixed(2) + 's';
+
+    const row = document.createElement('div');
+    row.className = 'car-row';
+    row.classList.add('clickable-row');
+    row.innerHTML =
+      '<span class="car-rank">' + (i + 1) + '</span>' +
+      '<div class="car-name-wrap">' +
+        '<div class="car-name">' + c.name + '</div>' +
+        '<div class="car-sub">' + c.sub + '</div>' +
+      '</div>' +
+      '<div class="car-bar-wrap">' +
+        '<div class="car-bar-track"><div class="car-bar-fill"></div></div>' +
+      '</div>' +
+      '<div class="car-time">' + timeLabel + '</div>';
+    row.querySelector('.car-bar-fill').style.width = pct + '%';
+    row.querySelector('.car-bar-fill').style.background = barColor;
+    row.querySelector('.car-time').style.color = barColor;
+
+    // Expand note on click
+    row.addEventListener('click', (e) => {
+      const existing = row.nextElementSibling;
+      if (existing && existing.classList.contains('car-note-row')) {
+        existing.remove();
+        return;
+      }
+      // Remove any other open notes
+      document.querySelectorAll('.car-note-row').forEach(el => el.remove());
+      const noteEl = document.createElement('div');
+      noteEl.className = 'car-note-row';
+      noteEl.textContent = c.note;
+      row.after(noteEl);
+    });
+
+    list.appendChild(row);
+  });
+}
+
+// Init with 'all'
+showCars(document.querySelector('#car-tab-btns .dest-btn'), 'all');
+
+/* ═══════════════════════════════════════════════
+   PART H — Cosmic distance explorer
+═══════════════════════════════════════════════ */
+const destData = {
+  moon:      { label: 'The Moon',           dist_km: 384400,      note: 'The Moon is our closest neighbour. A light signal (or radio wave) takes about 1.3 seconds to travel there — this is why early lunar astronauts and Mission Control experienced a noticeable ~2.6 second round-trip delay on every exchange. You can hear it clearly in Apollo recordings.' },
+  mars:      { label: 'Mars',               dist_km: 225000000,   note: 'Mars varies between ~56 million km (closest approach) and ~400 million km (furthest). At average distance (~225 million km), a signal takes ~12.5 minutes. This one-way delay makes real-time rover driving impossible — Mars rovers must execute pre-programmed command sequences autonomously.' },
+  jupiter:   { label: 'Jupiter',            dist_km: 778500000,   note: 'Jupiter is on average ~778 million km away. A light signal takes ~43 minutes one way. When the Galileo probe entered Jupiter\'s atmosphere in 1995, scientists on Earth had to wait 43 minutes to confirm it had survived.' },
+  saturn:    { label: 'Saturn',             dist_km: 1432000000,  note: 'Saturn averages ~1.4 billion km from Earth. A signal takes ~80 minutes each way. The Cassini spacecraft\'s final plunge into Saturn\'s atmosphere in 2017 was confirmed 83 minutes after it actually occurred.' },
+  voyager:   { label: 'Voyager 1 (current)',dist_km: 23500000000, note: 'Voyager 1, launched in 1977, is now ~23.5 billion km away. A radio signal takes over 21 hours to reach it. Engineers must send commands well in advance. Yet its 8-watt transmitter (less than a refrigerator light bulb) still reaches Earth.' },
+  proxima:   { label: 'Proxima Centauri',   dist_km: 40200000000000, note: 'Proxima Centauri is ~4.24 light-years away. When you look at it tonight, you\'re seeing light that left it over 4 years ago. At Voyager 1\'s current speed, it would take ~70,000 years to reach it.' },
+  andromeda: { label: 'Andromeda Galaxy',   dist_km: 2.37e19,     note: 'The Andromeda Galaxy is ~2.537 million light-years away. The light you see from it tonight left when Homo habilis was alive on Earth. Andromeda is heading toward us at ~110 km/s — the two galaxies will merge in roughly 4.5 billion years.' }
+};
+function lightTime(dist_km) {
+  const secs = dist_km / 299792;
+  if (secs < 60) return secs.toFixed(2) + ' seconds';
+  if (secs < 3600) return (secs/60).toFixed(1) + ' minutes';
+  if (secs < 86400) return (secs/3600).toFixed(1) + ' hours';
+  const days = secs / 86400;
+  if (days < 365) return days.toFixed(1) + ' days';
+  const yrs = days / 365.25;
+  if (yrs < 1000) return yrs.toFixed(2) + ' years';
+  return (yrs/1e6).toFixed(3) + ' million years';
+}
+function showDest(btn, key) {
+  document.querySelectorAll('#dest-btn-wrap .dest-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const d = destData[key];
+  document.getElementById('dest-result').innerHTML =
+    '<strong>' + d.label + '</strong> — light travel time: <strong>' + lightTime(d.dist_km) + '</strong><br>' +
+    '<span class="u-fs-12px text-secondary u-lh-1-6">' + d.note + '</span>';
+}
+showDest(document.querySelector('#dest-btn-wrap .dest-btn'), 'moon');
+
+/* ═══════════════════════════════════════════════
+   PART J — Guinness World Records
+═══════════════════════════════════════════════ */
+const gwrRecords = [
+  { cat: 'Land animal',           title: 'Cheetah',                              speed: '112 km/h',   kmh: 112,      color: '#EF9F27', body: 'The cheetah holds the record for fastest land animal, clocking up to 112 km/h over short distances of 200–300 m. It achieves this through an asymmetric gallop where all four feet are off the ground twice per stride. Its acceleration — 0 to 96 km/h in under 3 seconds — exceeds most sports cars. However, it can only sustain top speed for about 20 seconds before overheating.' },
+  { cat: 'Human sprint',          title: 'Usain Bolt (100 m WR, 2009)',          speed: '44.72 km/h', kmh: 44.72,    color: '#185FA5', body: 'Usain Bolt\'s peak speed of 44.72 km/h was recorded at the 60–80 m mark of his 9.58-second 100 m world record in Berlin, 2009. His top speed corresponds to a stride length of 2.44 m and a stride frequency of 4.28 strides per second. He covered the last 40 m of that race faster than any human in recorded history.' },
+  { cat: 'Bird in level flight',  title: 'Common swift',                         speed: '169 km/h',   kmh: 169,      color: 'var(--accent)', body: 'The common swift holds the speed record for any bird in level (non-diving) flight at ~169 km/h. Remarkably, swifts spend almost their entire lives airborne — eating, sleeping, and even mating in the air. Young swifts may fly continuously for up to 10 months without landing after their first flight from the nest.' },
+  { cat: 'Bird in a dive',        title: 'Peregrine falcon',                     speed: '389 km/h',   kmh: 389,      color: '#633806', body: 'The peregrine falcon is the fastest animal on Earth in a stoop (hunting dive), reaching ~389 km/h. It achieves this by folding its wings into a teardrop shape and using specially adapted nostrils with bony tubercles that redirect airflow so it can breathe at such extreme speeds.' },
+  { cat: 'Fish',                  title: 'Black marlin',                         speed: '~129 km/h',  kmh: 129,      color: '#085041', body: 'The black marlin (Istiompax indica) has been recorded at approximately 129 km/h, making it the fastest fish and fastest marine animal. Its rigid, non-folding pectoral fins are unique among billfish and allow for a hydrodynamic profile at speed.' },
+  { cat: 'Land vehicle (wheels)', title: 'Vesco Turbinator II (2018)',           speed: '737 km/h',   kmh: 737,      color: '#27500A', body: 'The Turbinator II, driven by Dave Spangler at Bonneville Salt Flats in 2018, set the wheel-driven land speed record at 737.4 km/h. Powered by a Lycoming T55 turboshaft engine (the same engine that powers Chinook helicopters), it moves faster than a commercial passenger aircraft — yet rolls on wheels the entire time.' },
+  { cat: 'Land vehicle (jet)',    title: 'ThrustSSC (1997)',                     speed: '1,228 km/h', kmh: 1228,     color: '#3C3489', body: 'ThrustSSC, driven by RAF pilot Andy Green in the Black Rock Desert, Nevada on 15 October 1997, became the first land vehicle to break the sound barrier, reaching 1,228 km/h (Mach 1.02). It used two Rolls-Royce Spey jet engines producing 223 kN of thrust combined — more than a fully loaded Boeing 747.' },
+  { cat: 'Rocket sled',           title: 'Holloman High Speed Test Track (2003)',speed: '10,325 km/h', kmh: 10325,    color: '#412402', body: 'On 30 April 2003, an unmanned rocket sled at Holloman Air Force Base, New Mexico reached 10,325 km/h (Mach 8.5). Despite reaching Mach 8.5, it stops within about 900 metres using water brakes — a plough-like scoop that scoops water from a trough, using hydrodynamic drag.' },
+  { cat: 'Manned aircraft',       title: 'SR-71 Blackbird (1976)',               speed: '3,529 km/h', kmh: 3529,     color: '#185FA5', body: 'The Lockheed SR-71 Blackbird set its official airspeed record of 3,529.56 km/h (Mach 3.3) on 28 July 1976. At this speed, the skin of the aircraft reaches 316°C from aerodynamic heating — which is why it was made of titanium. It could fly from New York to London in under 2 hours.' },
+  { cat: 'Unmanned aircraft',     title: 'NASA X-43A (2004)',                    speed: '11,265 km/h', kmh: 11265,   color: '#534AB7', body: 'NASA\'s X-43A scramjet demonstrator reached 11,265 km/h (Mach 9.6) in 2004 — the fastest air-breathing aircraft ever. At Mach 9.6, the aircraft would travel from London to Sydney in under 2 hours. The flight lasted just 10 seconds under power.' },
+  { cat: 'Spacecraft (crewed)',   title: 'Apollo 10 (1969)',                     speed: '39,897 km/h', kmh: 39897,   color: '#085041', body: 'Apollo 10 holds the record for fastest crewed spacecraft at 39,897 km/h (24,791 mph), achieved on 26 May 1969 during re-entry from the Moon. The crew — Tom Stafford, John Young, and Gene Cernan — experienced this speed for only minutes. This record has stood for over 50 years.' },
+  { cat: 'Spacecraft (uncrewed)', title: 'Parker Solar Probe (2024)',            speed: '692,000 km/h', kmh: 692000, color: '#26215C', body: 'NASA\'s Parker Solar Probe, on its closest perihelion pass in 2024, reached a record 692,000 km/h (192 km/s) — the fastest human-made object ever. At this speed it would travel from Earth to Moon in under 2 minutes. Its heat shield must withstand temperatures of 1,377°C while keeping the instruments behind it at room temperature.' },
+  { cat: 'Tennis serve',          title: 'Sam Groth (2012)',                     speed: '263 km/h',    kmh: 263,     color: '#BA7517', body: 'Australian Sam Groth served at 263.4 km/h (163.7 mph) in an ATP Challenger event in Busan, South Korea in 2012 — the fastest tennis serve ever recorded. At that speed, the ball travels the 23.77 m service length in approximately 0.32 seconds. Despite the record, Groth lost the point.' },
+  { cat: 'Cricket delivery',      title: 'Shoaib Akhtar (2003)',                 speed: '161 km/h',    kmh: 161,     color: '#1D9E75', body: 'Pakistani fast bowler Shoaib Akhtar bowled the fastest delivery in international cricket history at 161.3 km/h (100.23 mph) against England in the 2003 Cricket World Cup. The ball travels the 20.12 m pitch in about 0.45 seconds — giving a batsman roughly 0.2 seconds to decide whether to play a shot after the ball reaches halfway.' },
+  { cat: 'Golf ball speed',       title: 'Ryan Winther (2013)',                  speed: '349 km/h',    kmh: 349,     color: 'var(--accent)', body: 'Ryan Winther set the record for fastest golf ball speed at 349 km/h (217 mph) off the tee. Ball speed is approximately 1.5× club head speed, meaning his driver head was moving at ~232 km/h at impact. Average PGA Tour ball speed is ~270 km/h — already faster than a peregrine falcon\'s dive.' },
+  { cat: 'Elevator',              title: 'Guangzhou CTF Finance Centre (2016)',  speed: '75.6 km/h',   kmh: 75.6,    color: '#378ADD', body: 'The elevator in the Guangzhou CTF Finance Centre travels at 75.6 km/h (21 m/s) — the fastest passenger elevator in the world. It uses active vibration-control and special air pressure regulation to prevent passenger ear discomfort. It covers 440 metres in 43 seconds. A typical office elevator travels at ~7.2 km/h — roughly 10× slower.' }
+];
+
+const gwrGrid = document.getElementById('gwr-grid');
+gwrRecords.forEach(r => {
+  const card = document.createElement('div');
+  card.className = 'gwr-record-card';
+  card.innerHTML =
+    '<div class="gwr-record-cat">' + r.cat + '</div>' +
+    '<div class="gwr-record-speed">' + r.speed + '</div>' +
+    '<div class="gwr-record-title">' + r.title.split(' (')[0] + '</div>';
+  card.querySelector('.gwr-record-speed').style.color = r.color;
+  card.addEventListener('mouseenter', () => { card.style.boxShadow = '0 0 0 1.5px ' + r.color; });
+  card.addEventListener('mouseleave', () => { card.style.boxShadow = 'none'; });
+  card.addEventListener('click', () => {
+    document.getElementById('gwr-detail').style.display = 'block';
+    document.getElementById('gwr-detail-cat').textContent = r.cat;
+    document.getElementById('gwr-detail-speed').textContent = r.speed;
+    document.getElementById('gwr-detail-speed').style.color = r.color;
+    document.getElementById('gwr-detail-title').textContent = r.title;
+    document.getElementById('gwr-detail-body').textContent = r.body;
+    document.getElementById('gwr-detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+  gwrGrid.appendChild(card);
+});
+
+/* ═══════════════════════════════════════════════
+   PART K — Roller Coasters
+═══════════════════════════════════════════════ */
+const coasters = [
+  { rank:1, name:'Formula Rossa',            park:'Ferrari World',            location:'Abu Dhabi, UAE',     speed:240, height:52,  length:2200, gforce:1.7, opened:2010, type:'Hydraulic launch',               color:'#BA2B17', body:'Formula Rossa is the fastest roller coaster in the world, reaching 240 km/h (149 mph) in just 4.9 seconds. It was purpose-built to simulate the experience of driving a Ferrari Formula 1 car. Riders must wear protective goggles — at 240 km/h, even insects become projectiles. The ride lasts 92 seconds. It uses a hydraulic launch system: oil is pumped to high pressure over several minutes, then released in under 5 seconds.' },
+  { rank:2, name:'Kingda Ka',                park:'Six Flags Great Adventure', location:'New Jersey, USA',   speed:206, height:139, length:950,  gforce:5.0, opened:2005, type:'Hydraulic launch',               color:'#185FA5', body:'Kingda Ka reaches 206 km/h in 3.5 seconds and was the tallest roller coaster in the world at 139 m when it opened — taller than a 45-storey building. It goes straight up, crests over 420 feet, then drops straight down. The ride itself lasts only 28 seconds.' },
+  { rank:3, name:'Top Thrill 2',             park:'Cedar Point',               location:'Ohio, USA',         speed:193, height:128, length:1067, gforce:3.0, opened:2003, type:'Electric launch (redesign 2024)', color:'#27500A', body:'Originally called Top Thrill Dragster (opened 2003), this coaster was rebuilt as Top Thrill 2 and re-opened in 2024 after a 2021 incident. The redesign added a secondary launch that propels the train backwards up a second spike before the main launch.' },
+  { rank:4, name:'Do-Dodonpa',               park:'Fuji-Q Highland',           location:'Yamanashi, Japan',  speed:172, height:52,  length:1244, gforce:3.0, opened:2001, type:'Compressed air launch',          color:'var(--accent)', body:'Do-Dodonpa uses compressed air to launch riders from 0 to 172 km/h in just 1.56 seconds — one of the most violent accelerations of any coaster, producing approximately 3 g. The launch sound is famously described as a "DODON-PA!" — hence the name.' },
+  { rank:5, name:'Red Force',                park:'Ferrari Land',               location:'Salou, Spain',      speed:180, height:112, length:1148, gforce:1.4, opened:2017, type:'Linear synchronous motor (LSM)', color:'#BA2B17', body:'Red Force is Europe\'s tallest (112 m) and fastest (180 km/h) roller coaster. Unlike most ultra-fast coasters which use hydraulic launches, Red Force uses LSM (linear synchronous motor) technology — essentially a linear electric motor running along the launch track. This allows smoother acceleration and more reliable operation year-round.' },
+  { rank:6, name:'Fury 325',                 park:'Carowinds',                 location:'North Carolina, USA',speed:153, height:99,  length:6602, gforce:1.4, opened:2015, type:'Chain lift (gravity)',           color:'#3C3489', body:'Fury 325 reaches 153 km/h — remarkable because it uses a traditional chain lift rather than any launch system. It\'s the fastest coaster in the world that uses only gravity. Its first drop is 81°, steeper than vertical.' },
+  { rank:7, name:'Steel Dragon 2000',        park:'Nagashima Spa Land',        location:'Mie, Japan',        speed:153, height:97,  length:2479, gforce:1.5, opened:2000, type:'Chain lift (gravity)',           color:'#534AB7', body:'Steel Dragon 2000 held the world record for longest roller coaster track (2,479 m) for many years and remains one of the longest. Built in the year 2000, it cost approximately $50 million — the most expensive roller coaster ever at the time — partly due to earthquake-resistant construction standards required in Japan.' }
+];
+
+const rcList = document.getElementById('rc-list');
+coasters.forEach((c, i) => {
+  const row = document.createElement('div');
+  row.className = 'coaster-row' + (i === coasters.length - 1 ? ' last' : '');
+  row.innerHTML =
+    '<span class="coaster-rank">#' + c.rank + '</span>' +
+    '<div class="coaster-main"><div class="coaster-name">' + c.name + '</div><div class="coaster-meta">' + c.park + ' · ' + c.location + '</div></div>' +
+    '<div class="coaster-speed-wrap"><span class="coaster-speed">' + c.speed + '</span><span class="coaster-speed-unit"> km/h</span></div>';
+  row.querySelector('.coaster-speed').style.color = c.color;
+  row.addEventListener('mouseenter', () => { row.style.background = 'var(--color-background-secondary)'; });
+  row.addEventListener('mouseleave', () => { row.style.background = 'none'; });
+  row.addEventListener('click', (e) => {
+    document.getElementById('rc-detail-box').style.display = 'block';
+    document.getElementById('rc-det-name').textContent = c.name;
+    document.getElementById('rc-det-name').style.color = c.color;
+    document.getElementById('rc-det-loc').textContent = c.park + ' · ' + c.location;
+    document.getElementById('rc-det-speed').textContent = c.speed + ' km/h';
+    document.getElementById('rc-det-open').textContent = 'Opened ' + c.opened + ' · ' + c.type;
+    document.getElementById('rc-det-body').textContent = c.body;
+    const pillBox = document.getElementById('rc-stat-pills');
+    pillBox.innerHTML = [['Height', c.height + ' m'], ['Track', c.length + ' m'], ['G-force', c.gforce + ' g'], ['Launch', c.type]]
+      .map(([k,v]) => '<span class="u-bg-background-secondary u-border-0-5px-solid-border-tertiary u-radius-radius-md u-p-3px-9px u-fs-11px text-secondary"><strong class="text-primary">' + v + '</strong> ' + k + '</span>').join('');
+    const pct = Math.min(c.speed / 280, 1);
+    document.getElementById('rc-gauge-arc').setAttribute('stroke-dashoffset', String(251.3 - 251.3 * pct));
+    document.getElementById('rc-gauge-arc').setAttribute('stroke', c.color);
+    document.getElementById('rc-gauge-label').textContent = c.speed;
+    document.getElementById('rc-gauge-label').setAttribute('fill', c.color);
+    document.getElementById('rc-gauge-needle').setAttribute('transform', 'rotate(' + (-90 + pct * 180) + ',110,105)');
+    if (e.isTrusted) {document.getElementById('rc-detail-box').scrollIntoView({ behavior: 'smooth', block: 'nearest' });}
+  });
+  rcList.appendChild(row);
+});
+rcList.firstChild && rcList.firstChild.click();
+
+/* ═══════════════════════════════════════════════
+   PART L — LHC tabs
+═══════════════════════════════════════════════ */
+const lhcTabs = {
+  speed:     '<strong class="text-primary">How close to the speed of light are LHC protons?</strong><br>At full energy, LHC protons travel at 99.9999991% of the speed of light — just 3 m/s slower than light itself. To cover the final 3 m/s gap would require infinite energy, per Einstein\'s special relativity. In practical terms: a proton completes 11,245 laps of the 27 km ring every second. The gap between the LHC proton and a photon is so small it amounts to one part in a billion — roughly the same proportion as the thickness of a single hair compared to the distance from Earth to the Moon.',
+  scale:     '<strong class="text-primary">The coldest place in the known universe — inside the LHC</strong><br>The LHC\'s superconducting magnets operate at 1.9 Kelvin (–271.25°C), colder than outer space (which averages ~2.7 K from cosmic microwave background radiation). The LHC is therefore the largest structure in the universe known to be colder than space itself. This extreme cold is achieved using 120 tonnes of superfluid helium-4. The magnets must be superconducting to produce the 8.3-tesla magnetic fields needed to bend proton beams around the ring.',
+  discovery: '<strong class="text-primary">The Higgs boson — confirming the mechanism that gives particles mass</strong><br>On 4 July 2012, CERN announced the discovery of a particle consistent with the Higgs boson — the last missing piece of the Standard Model of particle physics. The discovery confirmed a theory proposed by Peter Higgs and others in 1964 — a 48-year gap between prediction and confirmation. Higgs and François Englert received the Nobel Prize in Physics in 2013. The LHC has since confirmed the Higgs boson\'s properties with increasing precision.',
+  energy:    '<strong class="text-primary">13.6 TeV — a number almost impossible to visualise</strong><br>The LHC accelerates two proton beams to 6.8 TeV each, colliding them at 13.6 TeV combined (Run 3, since 2022). 13.6 TeV is roughly the kinetic energy of a flying mosquito (0.2 microjoules) concentrated into a space billions of times smaller than a mosquito. What makes it extraordinary is the energy <em>density</em>. The LHC uses 120 MW of electricity during operation — about the same as a small city.',
+  why:       '<strong class="text-primary">Why accelerate protons to near-light speed?</strong><br>At these energies, protons dissolve into a momentary soup of fundamental particles that existed only in the first fractions of a second after the Big Bang. By studying what emerges from these collisions, physicists can reverse-engineer the laws of the universe. Practical technologies born from CERN research include the World Wide Web (invented by Tim Berners-Lee at CERN in 1989), advances in superconducting magnet technology used in MRI scanners, and particle beam cancer therapy techniques now used in proton therapy centres worldwide.'
+};
+function showLhcTab(btn, key) {
+  document.querySelectorAll('#lhc-tab-btns .dest-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('lhc-tab-content').innerHTML = lhcTabs[key];
+}
+showLhcTab(document.querySelector('#lhc-tab-btns .dest-btn'), 'speed');
+
+/* ═══════════════════════════════════════════════
+   PART N — Faster or Slower? game
+═══════════════════════════════════════════════ */
+const questions = [
+  { q:'Which is faster?', a:'A sneeze (~160 km/h)', b:'A cheetah at top speed (~112 km/h)', correct:'a', fact:'A sneeze expels air at ~150–160 km/h — faster than the world\'s fastest land animal (cheetah, ~112 km/h). That\'s also why covering your mouth matters.' },
+  { q:'Which takes longer?', a:'Flying London → New York (~7 hrs in the air)', b:'The Titanic sinking from impact to submersion (2 hrs 40 min)', correct:'a', fact:'The Titanic sank in 2 hours 40 minutes after hitting the iceberg. The transatlantic flight is ~7 hours in the air — nearly three times as long.' },
+  { q:'Which is faster?', a:'A hummingbird\'s wing flap (~70 beats/sec)', b:'A human blink (~5 blinks/sec)', correct:'a', fact:'A hummingbird beats its wings up to 80 times per second — so fast they appear as a blur. A human blinks 15–20 times per minute, roughly 5× per second. The hummingbird\'s wings move 14× faster.' },
+  { q:'Which is faster?', a:'Continental drift (North Atlantic, ~25 mm/yr)', b:'Human hair growth (~150 mm/yr)', correct:'b', fact:'Human hair grows at ~150 mm/year — about 6× faster than the North Atlantic plates drift apart (~25 mm/year). You are literally growing faster than the ocean is widening.' },
+  { q:'Which takes longer to complete?', a:'Building the Burj Khalifa (6 years, 2004–2010)', b:'The entire First World War (4 years, 1914–1918)', correct:'a', fact:'The Burj Khalifa took ~6 years to construct (2004–2010). World War I lasted 4 years and 4 months. The tallest building in the world took longer to build than the Great War lasted.' },
+  { q:'Which is faster?', a:'A nerve signal along a motor neuron (~70–120 m/s)', b:'The speed of sound in water (~1,480 m/s)', correct:'b', fact:'Sound travels through water at ~1,480 m/s — over 10× faster than your nerve signals (~70–120 m/s). Your own nervous system is the slower one here.' },
+  { q:'Which travels further in one second?', a:'A bullet fired from a rifle (~900 m/s)', b:'The Earth orbiting the Sun (~29.8 km/s)', correct:'b', fact:'Earth orbits the Sun at ~29.8 km/s — about 33× faster than a rifle bullet. You are permanently on a spaceship moving at nearly 30 kilometres every second.' },
+  { q:'Which is slower?', a:'Glacial flow in Antarctica (~0.5–2 m/day)', b:'A garden snail (~0.05 km/h = ~1.2 m/day)', correct:'b', fact:'Glaciers in Antarctica can flow at 0.5–2 metres per day. A garden snail moves at roughly 1.2 metres per day. Many glaciers actually outpace snails.' },
+  { q:'Which takes longer?', a:'Light crossing the diameter of our Solar System (~11 hours)', b:'An average trans-Pacific flight (~12 hours)', correct:'b', fact:'Light crossing the full diameter of our Solar System takes about 11 hours. A Tokyo–Los Angeles flight takes ~10–12 hours. You spend roughly as long on a trans-Pacific flight as it takes light to traverse our entire solar neighbourhood.' },
+  { q:'Which is faster?', a:'A racing cyclist downhill (~100 km/h)', b:'A peregrine falcon in a dive (~390 km/h)', correct:'b', fact:'The peregrine falcon is the fastest animal on Earth, reaching ~390 km/h in a stoop — nearly 4× faster than a downhill cyclist and faster than many aircraft.' }
+];
+
+let gameIdx = 0, gameScore = 0, gameStreak = 0, answered = false;
+const shuffled = [...questions].sort(() => Math.random() - 0.5);
+
+function renderQuestion() {
+  if (gameIdx >= shuffled.length) { endGame(); return; }
+  answered = false;
+  const q = shuffled[gameIdx];
+  document.getElementById('game-q').textContent = q.q;
+  document.getElementById('game-feedback').textContent = '';
+  document.getElementById('game-next').style.display = 'none';
+  document.getElementById('game-score').textContent = gameScore;
+  document.getElementById('game-total').textContent = gameIdx;
+  const ch = document.getElementById('game-choices');
+  ch.innerHTML = '';
+  [['a', q.a], ['b', q.b]].forEach(([key, text]) => {
+    const btn = document.createElement('div');
+    btn.className = 'game-choice';
+    btn.textContent = text;
+    btn.onclick = () => chooseAnswer(key, btn);
+    ch.appendChild(btn);
+  });
+  document.getElementById('game-streak').textContent = gameStreak >= 2 ? '🔥 ' + gameStreak + ' in a row!' : '';
+}
+function chooseAnswer(chosen, btn) {
+  if (answered) return;
+  answered = true;
+  const q = shuffled[gameIdx];
+  const correct = chosen === q.correct;
+  document.querySelectorAll('.game-choice').forEach(b => {
+    const bkey = b.textContent === q.a ? 'a' : 'b';
+    b.classList.add(bkey === q.correct ? 'correct' : 'wrong');
+  });
+  if (correct) { gameScore++; gameStreak++; document.getElementById('game-feedback').innerHTML = '<strong class="u-text-text-success">✓ Correct!</strong> ' + q.fact; }
+  else         { gameStreak = 0; document.getElementById('game-feedback').innerHTML = '<strong class="u-text-text-danger">✗ Not quite.</strong> ' + q.fact; }
+  document.getElementById('game-score').textContent = gameScore;
+  document.getElementById('game-total').textContent = gameIdx + 1;
+  document.getElementById('game-next').style.display = 'block';
+}
+function nextQuestion() { gameIdx++; renderQuestion(); }
+function endGame() {
+  const pct = Math.round((gameScore / shuffled.length) * 100);
+  const msg = pct === 100 ? 'Perfect. You have an exceptional sense of speed.' : pct >= 80 ? 'Excellent speed intuition.' : pct >= 60 ? 'Good — you\'re building a solid sense of scale.' : pct >= 40 ? 'Room to grow. Re-read the anchors and try again.' : 'Speed is tricky. Review the module and give it another go.';
+  document.getElementById('game-inner').innerHTML = '<div class="game-end"><div class="game-end-score">' + gameScore + ' / ' + shuffled.length + '</div><div class="game-end-label">' + msg + '</div><button onclick="resetGame()">Play again</button></div>';
+}
+function resetGame() {
+  gameIdx = 0; gameScore = 0; gameStreak = 0;
+  shuffled.sort(() => Math.random() - 0.5);
+  document.getElementById('game-inner').innerHTML =
+    '<div class="game-q" id="game-q"></div>' +
+    '<div class="game-choices" id="game-choices"></div>' +
+    '<div class="game-feedback" id="game-feedback"></div>' +
+    '<button class="game-next" id="game-next" onclick="nextQuestion()">Next question →</button>';
+  renderQuestion();
+}
+renderQuestion();
+    
+</script>

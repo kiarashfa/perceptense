@@ -1,0 +1,1085 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/geography-and-distance.css';
+
+const mod = modules.find((m) => m.id === 3)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+<div class="u-display-flex u-align-center u-gap-14px u-mb-md">
+  <i class="fa-solid fa-earth-americas u-fs-42px u-text-hex-4e99a3 u-shrink-0" aria-hidden="true"></i>
+  <h1 class="module-title u-m-0 u-lh-1-d-05">Module 3: Geography & Distance</h1>
+</div>
+    <p class="module-subtitle">Countries, oceans, and how far things are</p>
+
+    <h2 class="sec" id="part-a-country-areas">Part A · country areas</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">USA</p>
+        <p class="cval">9.8M km²</p>
+        <p class="cnote">Think: roughly the size of China or Europe. About 40× the size of the UK.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Japan</p>
+        <p class="cval">378,000 km²</p>
+        <p class="cnote">Similar to Germany or California. About 26× smaller than the USA.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">France</p>
+        <p class="cval">551,000 km²</p>
+        <p class="cnote">The largest country in the EU. About 1.5× the size of Japan.</p>
+      </div>
+    </div>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Country area comparison (relative scale)</div>
+      <div class="bar-row"><span class="bl">Russia (17.1M km²)</span><div class="bb u-w-100-pct u-bg-blue-900"><span class="bv u-text-white">largest country</span></div></div>
+      <div class="bar-row"><span class="bl">USA (9.8M km²)</span><div class="bb u-w-57-pct u-bg-blue-700"><span class="bv u-text-white">57% of Russia</span></div></div>
+      <div class="bar-row"><span class="bl">China (9.6M km²)</span><div class="bb u-w-56-pct u-bg-blue-500"><span class="bv u-text-white">56%</span></div></div>
+      <div class="bar-row"><span class="bl">Brazil (8.5M km²)</span><div class="bb u-w-50-pct u-bg-blue-500"><span class="bv u-text-white">50%</span></div></div>
+      <div class="bar-row"><span class="bl">Europe total (~10.5M km²)</span><div class="bb u-w-61-pct u-bg-blue-300"><span class="bv u-text-navy-950">slightly > USA</span></div></div>
+      <div class="bar-row"><span class="bl">France (551k km²)</span><div class="bb u-w-3-d-2-pct u-bg-blue-200 u-min-w-28px"><span class="bv u-text-navy-950 u-fs-10px">3%</span></div></div>
+      <div class="bar-row"><span class="bl">Japan (378k km²)</span><div class="bb u-w-2-d-2-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4 u-min-w-28px"><span class="bv u-text-navy-950 u-fs-10px">2%</span></div></div>
+      <div class="bar-row"><span class="bl">UK (244k km²)</span><div class="bb u-w-1-d-4-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4 u-min-w-28px"><span class="bv u-text-navy-950 u-fs-10px">1%</span></div></div>
+    </div>
+
+    <!-- NEW: Continents comparison -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">All seven continents by area</div>
+      <div class="cont-row"><span class="ct-lbl">Asia (44.6M km²)</span><div class="ct-bar u-w-100-pct u-bg-blue-700"><span class="ct-val u-text-white">largest — 30% of Earth's land</span></div></div>
+      <div class="cont-row"><span class="ct-lbl">Africa (30.4M km²)</span><div class="ct-bar u-w-68-pct u-bg-blue-500"><span class="ct-val u-text-white">often underestimated on maps</span></div></div>
+      <div class="cont-row"><span class="ct-lbl">North America (24.7M km²)</span><div class="ct-bar u-w-55-pct u-bg-blue-400"><span class="ct-val u-text-white">55%</span></div></div>
+      <div class="cont-row"><span class="ct-lbl">South America (17.8M km²)</span><div class="ct-bar u-w-40-pct u-bg-blue-300"><span class="ct-val u-text-navy-950">40%</span></div></div>
+      <div class="cont-row"><span class="ct-lbl">Antarctica (14.2M km²)</span><div class="ct-bar u-w-32-pct u-bg-blue-200"><span class="ct-val u-text-navy-950">bigger than Europe</span></div></div>
+      <div class="cont-row"><span class="ct-lbl">Europe (10.5M km²)</span><div class="ct-bar u-w-24-pct u-bg-blue-100 u-border-0-d-5px-solid-hex-b5d4f4"><span class="ct-val u-text-navy-950">≈ USA</span></div></div>
+      <div class="cont-row"><span class="ct-lbl">Australia (7.7M km²)</span><div class="ct-bar u-w-17-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4"><span class="ct-val u-text-navy-950">smallest</span></div></div>
+      <p class="u-fs-12px text-secondary u-m-8px-0-0 u-lh-1-d-5">Africa is far larger than it looks on most world maps — the Mercator projection inflates Northern latitudes. Africa could fit the USA, China, India, and most of Europe inside it simultaneously.</p>
+    </div>
+
+    <!-- NEW: Which is bigger? quiz -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Which country is bigger? <span id="quiz-score-label" class="u-fs-12px u-fw-400 text-tertiary"></span></div>
+      <div class="quiz-score-bar"><span>Score:</span><div class="quiz-score-dots" id="quiz-dots"></div></div>
+      <div class="quiz-pair" id="quiz-pair">
+        <div class="quiz-opt" id="qopt-a" onclick="quizAnswer('a')">
+          <div class="qo-name" id="qname-a">—</div>
+          <div class="qo-hint" id="qhint-a"></div>
+        </div>
+        <div class="quiz-opt" id="qopt-b" onclick="quizAnswer('b')">
+          <div class="qo-name" id="qname-b">—</div>
+          <div class="qo-hint" id="qhint-b"></div>
+        </div>
+      </div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+      <div class="u-display-flex u-justify-space-between u-align-center u-mt-sm">
+        <span class="u-fs-12px text-tertiary" id="quiz-progress"></span>
+        <button onclick="quizNext()" id="quiz-next-btn" class="u-display-none u-fs-12px u-p-3px-12px">Next →</button>
+        <button onclick="quizRestart()" id="quiz-restart-btn" class="u-display-none u-fs-12px u-p-3px-12px">Play again</button>
+      </div>
+    </div>
+
+    <h2 class="sec" id="part-b-the-seven-continents">Part B · the seven continents</h2>
+
+    <!-- Continents overview: scrollable table card -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg u-overflow-x-auto">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Continent by continent — the key numbers</div>
+      <table class="u-w-100-pct u-border-collapse-collapse u-fs-12px u-min-w-520px">
+        <thead>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-secondary">
+            <th class="u-text-align-left u-p-5px-8px-6px-0 u-fw-500 text-secondary u-fs-11px u-text-transform-uppercase u-letter-spacing-0-d-05em">Continent</th>
+            <th class="u-text-align-right u-p-5px-6px u-fw-500 text-secondary u-fs-11px u-text-transform-uppercase u-letter-spacing-0-d-05em">Area</th>
+            <th class="u-text-align-right u-p-5px-6px u-fw-500 text-secondary u-fs-11px u-text-transform-uppercase u-letter-spacing-0-d-05em">Population</th>
+            <th class="u-text-align-right u-p-5px-6px u-fw-500 text-secondary u-fs-11px u-text-transform-uppercase u-letter-spacing-0-d-05em">Countries</th>
+            <th class="u-text-align-right u-p-5px-6px u-fw-500 text-secondary u-fs-11px u-text-transform-uppercase u-letter-spacing-0-d-05em">Density</th>
+            <th class="u-text-align-left u-p-5px-0-5px-6px u-fw-500 text-secondary u-fs-11px u-text-transform-uppercase u-letter-spacing-0-d-05em">Highest point</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">Asia</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">44.6M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">4.8 billion</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">49</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">108 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Everest 8,849 m</td>
+          </tr>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">Africa</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">30.4M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">1.5 billion</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">54</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">50 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Kilimanjaro 5,895 m</td>
+          </tr>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">North America</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">24.7M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">600 million</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">23</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">24 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Denali 6,190 m</td>
+          </tr>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">South America</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">17.8M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">440 million</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">12</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">25 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Aconcagua 6,961 m</td>
+          </tr>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">Antarctica</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">14.2M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">~5,000 ¹</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">0</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">&lt;1 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Vinson 4,892 m</td>
+          </tr>
+          <tr class="u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">Europe</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">10.5M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">750 million</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">44</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">73 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Mont Blanc 4,808 m ²</td>
+          </tr>
+          <tr>
+            <td class="u-p-7px-8px-7px-0 text-primary u-fw-500">Australia / Oceania</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">8.5M km²</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">45 million</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">14</td>
+            <td class="u-p-7px-6px u-text-align-right text-secondary">5 /km²</td>
+            <td class="u-p-7px-0-7px-6px text-secondary">Puncak Jaya 4,884 m ³</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="u-fs-11px text-tertiary u-m-8px-0-0 u-lh-1-d-5">¹ Researchers only, no permanent population. ² Some geographers cite Elbrus (5,642 m, Russia) as Europe's highest; Mont Blanc is the consensus for Western Europe. ³ Puncak Jaya is in Indonesian New Guinea, highest peak in Oceania. Australia's highest point is Mount Kosciuszko (2,228 m).</p>
+    </div>
+
+    <!-- Continent population vs area: two-column visual -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The mismatch: area vs. people</div>
+      <p class="u-fs-12px text-secondary u-m-0-0-10px u-lh-1-d-5">The two bars below show that land area and population tell very different stories about continents.</p>
+      <div class="u-fs-11px u-fw-500 text-secondary u-mb-sm u-text-transform-uppercase u-letter-spacing-0-d-05em">% of world land area</div>
+      <div class="bar-row"><span class="bl">Asia</span><div class="bb u-w-30-pct u-bg-blue-700"><span class="bv u-text-white">30%</span></div></div>
+      <div class="bar-row"><span class="bl">Africa</span><div class="bb u-w-20-pct u-bg-blue-500"><span class="bv u-text-white">20%</span></div></div>
+      <div class="bar-row"><span class="bl">North America</span><div class="bb u-w-16-d-5-pct u-bg-blue-400"><span class="bv u-text-white">16.5%</span></div></div>
+      <div class="bar-row"><span class="bl">South America</span><div class="bb u-w-12-pct u-bg-blue-300"><span class="bv u-text-navy-950">12%</span></div></div>
+      <div class="bar-row"><span class="bl">Antarctica</span><div class="bb u-w-9-d-5-pct u-bg-blue-200 u-border-0-d-5px-solid-hex-85b7eb"><span class="bv u-text-navy-950">9.5%</span></div></div>
+      <div class="bar-row"><span class="bl">Europe</span><div class="bb u-w-7-pct u-bg-blue-100 u-border-0-d-5px-solid-hex-b5d4f4"><span class="bv u-text-navy-950">7%</span></div></div>
+      <div class="bar-row"><span class="bl">Oceania</span><div class="bb u-w-5-d-7-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-ccdff4"><span class="bv u-text-navy-950">5.7%</span></div></div>
+      <div class="u-fs-11px u-fw-500 text-secondary u-m-12px-0-6px u-text-transform-uppercase u-letter-spacing-0-d-05em">% of world population</div>
+      <div class="bar-row"><span class="bl">Asia</span><div class="bb u-w-59-pct u-bg-blue-900"><span class="bv u-text-white">59% — nearly 3 in 5 humans</span></div></div>
+      <div class="bar-row"><span class="bl">Africa</span><div class="bb u-w-18-pct u-bg-blue-700"><span class="bv u-text-white">18%</span></div></div>
+      <div class="bar-row"><span class="bl">Europe</span><div class="bb u-w-9-pct u-bg-blue-500"><span class="bv u-text-white">9%</span></div></div>
+      <div class="bar-row"><span class="bl">North America</span><div class="bb u-w-7-d-5-pct u-bg-blue-400"><span class="bv u-text-white">7.5%</span></div></div>
+      <div class="bar-row"><span class="bl">South America</span><div class="bb u-w-5-d-5-pct u-bg-blue-300"><span class="bv u-text-navy-950">5.5%</span></div></div>
+      <div class="bar-row"><span class="bl">Oceania</span><div class="bb u-w-0-d-6-pct u-bg-blue-200 u-min-w-28px u-border-0-d-5px-solid-hex-85b7eb"><span class="bv u-text-navy-950 u-fs-10px">0.6%</span></div></div>
+      <div class="bar-row"><span class="bl">Antarctica</span><div class="bb u-w-0-d-1-pct u-bg-blue-50 u-min-w-28px u-border-0-d-5px-solid-hex-b5d4f4"><span class="bv u-text-navy-950 u-fs-10px">≈0</span></div></div>
+      <p class="u-fs-12px text-secondary u-m-10px-0-0 u-lh-1-d-5">Europe is 7% of the land but holds 9% of people. Africa is 20% of the land and 18% of people — but Africa's population is growing fastest, and is projected to reach 2.5 billion by 2050. Asia holds 30% of the land and 59% of people.</p>
+    </div>
+
+    <!-- Quick-fire continent facts -->
+    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">Things worth knowing about each continent</div>
+      <div class="anchor-row">
+        <span class="pill p-blue">Asia</span>
+        <div><div class="atext">Home to the 10 most populous countries in the world (by combined weight). Contains both the highest point on Earth (Everest) and the lowest dry land (Dead Sea, −430 m). China and India together account for ~35% of all humans.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">Africa</span>
+        <div><div class="atext">The most underestimated continent on maps. Has the most countries (54) of any continent and the youngest average population (median age ~19). The Sahara alone is roughly the size of the USA.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">N. America</span>
+        <div><div class="atext">The USA and Canada together make up 79% of the continent's land. The Mississippi–Missouri river system is the 4th longest river system in the world. Central America and the Caribbean add 23 more nations.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">S. America</span>
+        <div><div class="atext">Brazil alone is 47% of the continent. The Amazon basin holds roughly 10% of all species on Earth. The Andes, running 7,000 km along the western coast, are the longest mountain range on land.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">Europe</span>
+        <div><div class="atext">The most densely networked continent — 44 countries in the same area as the USA. The Russian Federation spans both Europe and Asia; it is sometimes treated as its own entity. The EU's 27 members share a single market of 450 million people.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-coral">Oceania</span>
+        <div><div class="atext">Australia is technically a continent and a country simultaneously. Papua New Guinea (on the same island as Indonesian New Guinea) is one of the world's most linguistically diverse places — over 800 languages spoken.</div></div>
+      </div>
+      <div class="anchor-row u-border-bottom-none">
+        <span class="pill p-blue">Antarctica</span>
+        <div><div class="atext">No indigenous population, no government, governed by the Antarctic Treaty (1959) signed by 56 nations. 98% is covered by ice averaging 1.9 km thick. If it melted entirely, sea levels would rise ~58 m worldwide.</div></div>
+      </div>
+    </div>
+
+    <h2 class="sec" id="part-c-distances-between-cities">Part C · distances between cities</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Key European distances (straight line)</div>
+      <div class="bar-row"><span class="bl">Paris → Rome</span><div class="bb u-w-42-pct u-bg-green-600"><span class="bv u-text-white">~1,100 km</span></div></div>
+      <div class="bar-row"><span class="bl">Paris → Berlin</span><div class="bb u-w-40-pct u-bg-green-600"><span class="bv u-text-white">~1,050 km</span></div></div>
+      <div class="bar-row"><span class="bl">London → Madrid</span><div class="bb u-w-50-pct u-bg-green-800"><span class="bv u-text-white">~1,260 km</span></div></div>
+      <div class="bar-row"><span class="bl">Moscow → London</span><div class="bb u-w-100-pct u-bg-green-900"><span class="bv u-text-white">~2,500 km</span></div></div>
+      <div class="bar-row"><span class="bl">Paris → Istanbul</span><div class="bb u-w-88-pct u-bg-green-900"><span class="bv u-text-white">~2,200 km</span></div></div>
+    </div>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">World distances for scale</div>
+      <div class="bar-row"><span class="bl">New York → LA</span><div class="bb u-w-22-pct u-bg-green-200"><span class="bv u-text-green-900">~3,940 km</span></div></div>
+      <div class="bar-row"><span class="bl">London → New York</span><div class="bb u-w-27-pct u-bg-green-400"><span class="bv u-text-green-950">~5,540 km</span></div></div>
+      <div class="bar-row"><span class="bl">Europe → Japan</span><div class="bb u-w-48-pct u-bg-green-600"><span class="bv u-text-white">~9,500 km</span></div></div>
+      <div class="bar-row"><span class="bl">Earth circumference</span><div class="bb u-w-100-pct u-bg-green-900"><span class="bv u-text-white">~40,000 km</span></div></div>
+    </div>
+
+    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">The travel-time anchor</div>
+      <div class="u-fs-13px text-secondary u-lh-1-d-6">
+        A commercial plane flies ~900 km/h. So: 1,000 km ≈ 1 hour of flying — but this is a rough rule. Shorter flights spend proportionally more time climbing and descending, and headwinds add time. Paris→Rome (~1,100 km) takes about 2 hours; London→New York (~5,540 km) is 7–8 hours westbound. The rule works best above 3,000 km.
+      </div>
+    </div>
+
+    <!-- NEW: Flight time calculator -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Flight time estimator</div>
+      <div class="flight-grid">
+        <div>
+          <div class="u-fs-11px text-secondary u-mb-xs">From</div>
+          <select id="fc-from" onchange="calcFlight()">
+            <option value="LON">London</option>
+            <option value="PAR">Paris</option>
+            <option value="BER">Berlin</option>
+            <option value="MAD">Madrid</option>
+            <option value="ROM">Rome</option>
+            <option value="IST">Istanbul</option>
+            <option value="NYC">New York</option>
+            <option value="LAX">Los Angeles</option>
+            <option value="TYO">Tokyo</option>
+            <option value="SYD">Sydney</option>
+            <option value="DXB">Dubai</option>
+            <option value="SIN">Singapore</option>
+            <option value="JNB">Johannesburg</option>
+            <option value="MEX">Mexico City</option>
+            <option value="SCL">Santiago</option>
+          </select>
+        </div>
+        <div>
+          <div class="u-fs-11px text-secondary u-mb-xs">To</div>
+          <select id="fc-to" onchange="calcFlight()">
+            <option value="NYC">New York</option>
+            <option value="LON">London</option>
+            <option value="PAR">Paris</option>
+            <option value="BER">Berlin</option>
+            <option value="MAD">Madrid</option>
+            <option value="ROM">Rome</option>
+            <option value="IST">Istanbul</option>
+            <option value="LAX">Los Angeles</option>
+            <option value="TYO">Tokyo</option>
+            <option value="SYD">Sydney</option>
+            <option value="DXB">Dubai</option>
+            <option value="SIN">Singapore</option>
+            <option value="JNB">Johannesburg</option>
+            <option value="MEX">Mexico City</option>
+            <option value="SCL">Santiago</option>
+          </select>
+        </div>
+      </div>
+      <div class="flight-result" id="fc-result">Select two cities above to estimate the flight.</div>
+    </div>
+
+    <!-- Distance in perspective: HTML bar chart -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Distance in perspective: the same scale</div>
+      <p class="u-fs-12px text-secondary u-m-0-0-12px u-lh-1-d-5">Each bar shows a route's distance as a fraction of Earth's full circumference (40,075 km = 100%).</p>
+
+      <!-- Header row -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-mb-sm u-pb-5px u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-10px u-fw-500 text-tertiary u-text-transform-uppercase u-letter-spacing-0-d-06em">Route</div>
+        <div class="u-fs-10px u-fw-500 text-tertiary u-text-transform-uppercase u-letter-spacing-0-d-06em u-pl-8px">Fraction of Earth's circumference</div>
+        <div class="u-fs-10px u-fw-500 text-tertiary u-text-transform-uppercase u-letter-spacing-0-d-06em u-text-align-right">km · flight</div>
+      </div>
+
+      <!-- Rows: % = km/40075 * 100 -->
+      <!-- Paris→Berlin 1050km = 2.6% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0 u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-12px u-fw-500 u-text-green-600 u-lh-1-d-4">Paris → Berlin</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-2-d-6-pct u-bg-green-600 u-radius-3px u-min-w-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">2.6% of circumference</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">1,050 km</div><div class="u-fs-10px text-tertiary">~1.5 h</div></div>
+      </div>
+
+      <!-- London→Madrid 1260km = 3.1% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0 u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-12px u-fw-500 u-text-green-800 u-lh-1-d-4">London → Madrid</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-3-d-1-pct u-bg-green-800 u-radius-3px u-min-w-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">3.1% of circumference</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">1,260 km</div><div class="u-fs-10px text-tertiary">~2 h</div></div>
+      </div>
+
+      <!-- Moscow→London 2500km = 6.2% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0 u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-12px u-fw-500 u-text-green-900 u-lh-1-d-4">Moscow → London</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-6-d-2-pct u-bg-green-900 u-radius-3px u-min-w-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">6.2% of circumference</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">2,500 km</div><div class="u-fs-10px text-tertiary">~3.5 h</div></div>
+      </div>
+
+      <!-- NY→LA 3940km = 9.8% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0 u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-12px u-fw-500 u-text-blue-500 u-lh-1-d-4">New York → LA</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-9-d-8-pct u-bg-blue-500 u-radius-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">9.8% of circumference</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">3,940 km</div><div class="u-fs-10px text-tertiary">~5 h</div></div>
+      </div>
+
+      <!-- London→NY 5540km = 13.8% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0 u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-12px u-fw-500 u-text-blue-700 u-lh-1-d-4">London → New York</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-13-d-8-pct u-bg-blue-700 u-radius-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">13.8% of circumference</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">5,540 km</div><div class="u-fs-10px text-tertiary">~7–8 h</div></div>
+      </div>
+
+      <!-- Europe→Japan 9500km = 23.7% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0 u-border-bottom-0-d-5px-solid-var-color-border-tertiary">
+        <div class="u-fs-12px u-fw-500 u-text-blue-900 u-lh-1-d-4">Europe → Japan</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-23-d-7-pct u-bg-blue-900 u-radius-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">23.7% of circumference — less than ¼ of the way around</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">9,500 km</div><div class="u-fs-10px text-tertiary">~11 h</div></div>
+      </div>
+
+      <!-- Earth circumference 100% -->
+      <div class="u-display-grid u-grid-cols-160px-1fr-90px u-gap-0 u-align-center u-p-5px-0">
+        <div class="u-fs-12px u-fw-500 text-secondary u-lh-1-d-4">Earth circumference</div>
+        <div class="u-p-0-8px">
+          <div class="u-h-14px u-bg-background-tertiary u-radius-3px u-overflow-hidden">
+            <div class="u-h-100-pct u-w-100-pct u-bg-border-secondary u-radius-3px"></div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-2px">100% — full lap around the planet</div>
+        </div>
+        <div class="u-text-align-right"><div class="u-fs-12px u-fw-500 text-primary">40,075 km</div><div class="u-fs-10px text-tertiary">~44 h nonstop</div></div>
+      </div>
+
+      <p class="u-fs-12px text-secondary u-m-10px-0-0 u-lh-1-d-5">The key insight: even the longest common long-haul route (Europe→Japan) covers less than a quarter of the planet's circumference.</p>
+    </div>
+
+    <h2 class="sec" id="part-d-landmark-heights">Part D · landmark heights</h2>
+
+    <!-- Heights: two panels — buildings zoomed, then full scale -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">How tall is it? Two scales</div>
+      <p class="u-fs-12px text-secondary u-m-0-0-14px u-lh-1-d-5">Panel A zooms into buildings (0–1,000 m). Panel B shows the full picture to cruising altitude (0–10,000 m). Same vertical proportions within each panel.</p>
+
+      <div class="u-display-grid u-grid-cols-1fr-1fr u-gap-16px u-align-end">
+
+        <!-- PANEL A: buildings, scale 0–1000m, bar height = m * 0.2px, max bar = 200px -->
+        <div>
+          <div class="u-fs-10px u-fw-500 text-tertiary u-text-transform-uppercase u-letter-spacing-0-d-06em u-mb-sm">Panel A — Buildings (0 – 1,000 m)</div>
+          <div class="u-display-flex u-align-flex-end u-gap-md u-h-220px u-border-bottom-1-d-5px-solid-var-color-border-secondary u-pb-0 u-position-relative">
+            <!-- scale lines at 250, 500, 750 m -->
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-50px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-50px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">250 m</div>
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-100px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-100px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">500 m</div>
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-150px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-150px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">750 m</div>
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-200px u-border-top-1px-dashed-var-color-border-secondary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-200px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">1,000 m</div>
+
+            <!-- 30m → 6px bar -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-9px text-tertiary u-white-space-nowrap">30 m</div>
+              <div class="u-w-28px u-h-6px u-bg-purple-100 u-radius-2px-2px-0-0 u-border-0-d-5px-solid-hex-afa9ec"></div>
+              <div class="u-fs-9px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">10 floors</div>
+            </div>
+            <!-- 96m → 19px bar -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-9px text-tertiary u-white-space-nowrap">96 m</div>
+              <div class="u-w-28px u-h-19px u-bg-purple-200 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-9px text-secondary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Big Ben</div>
+            </div>
+            <!-- 330m → 66px bar -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-9px text-tertiary u-white-space-nowrap">330 m</div>
+              <div class="u-w-28px u-h-66px u-bg-purple-500 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-9px text-secondary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Eiffel<br>Tower</div>
+            </div>
+            <!-- 541m → 108px bar -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-9px text-tertiary u-white-space-nowrap">541 m</div>
+              <div class="u-w-28px u-h-108px u-bg-purple-500 u-radius-2px-2px-0-0 u-opacity-0-d-85"></div>
+              <div class="u-fs-9px text-secondary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">One<br>World TC</div>
+            </div>
+            <!-- 632m → 126px bar -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-9px text-tertiary u-white-space-nowrap">632 m</div>
+              <div class="u-w-28px u-h-126px u-bg-purple-600 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-9px text-secondary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Shanghai<br>Tower</div>
+            </div>
+            <!-- 828m → 166px bar -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-9px u-text-purple-800 u-fw-500 u-white-space-nowrap">828 m</div>
+              <div class="u-w-28px u-h-166px u-bg-purple-800 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-9px u-text-purple-800 u-fw-500 u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Burj<br>Khalifa</div>
+            </div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-sm u-lh-1-d-4">Rule: 1 floor ≈ 3 m. Eiffel = ~110 floors. Burj = ~276 floors.</div>
+        </div>
+
+        <!-- PANEL B: full scale 0–10000m, bar height = m * 0.02px, max=200px -->
+        <div>
+          <div class="u-fs-10px u-fw-500 text-tertiary u-text-transform-uppercase u-letter-spacing-0-d-06em u-mb-sm">Panel B — Full scale (0 – 10,000 m)</div>
+          <div class="u-display-flex u-align-flex-end u-gap-6px u-h-220px u-border-bottom-1-d-5px-solid-var-color-border-secondary u-pb-0 u-position-relative">
+            <!-- scale lines at 2000, 4000, 6000, 8000, 10000 -->
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-40px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-40px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">2k m</div>
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-80px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-80px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">4k m</div>
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-120px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-120px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">6k m</div>
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-160px u-border-top-0-d-5px-dashed-var-color-border-tertiary"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-160px u-fs-9px text-tertiary u-lh-1 u-pr-2px u-transform-translatey-2px">8k m</div>
+            <!-- cruising altitude line at 200px -->
+            <div class="u-position-absolute u-left-0 u-right-0 u-bottom-200px u-border-top-1-d-5px-dashed-hex-378add u-z-2"></div>
+            <div class="u-position-absolute u-right-0 u-bottom-200px u-fs-9px u-text-blue-700 u-fw-500 u-lh-1 u-pr-2px u-transform-translatey-2px">✈ 10k m</div>
+
+            <!-- Burj 828m → 16.6px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px text-tertiary u-white-space-nowrap">828 m</div>
+              <div class="u-w-22px u-h-17px u-bg-purple-800 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Burj</div>
+            </div>
+            <!-- Ben Nevis 1345m → 26.9px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px text-tertiary u-white-space-nowrap">1,345 m</div>
+              <div class="u-w-22px u-h-27px u-bg-green-200 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Ben<br>Nevis</div>
+            </div>
+            <!-- Zugspitze 2962m → 59.2px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px text-tertiary u-white-space-nowrap">2,962 m</div>
+              <div class="u-w-22px u-h-59px u-bg-green-400 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Zugs-<br>pitze</div>
+            </div>
+            <!-- Mont Blanc 4808m → 96.2px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px text-tertiary u-white-space-nowrap">4,808 m</div>
+              <div class="u-w-22px u-h-96px u-bg-green-600 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Mont<br>Blanc</div>
+            </div>
+            <!-- Kilimanjaro 5895m → 117.9px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px text-tertiary u-white-space-nowrap">5,895 m</div>
+              <div class="u-w-22px u-h-118px u-bg-green-800 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Kiliman-<br>jaro</div>
+            </div>
+            <!-- K2 8611m → 172.2px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px text-tertiary u-white-space-nowrap">8,611 m</div>
+              <div class="u-w-22px u-h-172px u-bg-blue-700 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px text-tertiary u-text-align-center u-lh-1-d-2 u-white-space-nowrap">K2</div>
+            </div>
+            <!-- Everest 8849m → 177px -->
+            <div class="u-display-flex u-flex-direction-column u-align-center u-gap-4px u-z-1">
+              <div class="u-fs-8px u-text-blue-900 u-fw-500 u-white-space-nowrap">8,849 m</div>
+              <div class="u-w-22px u-h-177px u-bg-blue-900 u-radius-2px-2px-0-0"></div>
+              <div class="u-fs-8px u-text-blue-900 u-fw-500 u-text-align-center u-lh-1-d-2 u-white-space-nowrap">Everest</div>
+            </div>
+          </div>
+          <div class="u-fs-10px text-tertiary u-mt-sm u-lh-1-d-4">Everest is 88% of cruising altitude. K2 is only 238 m shorter than Everest.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Eiffel Tower</p>
+        <p class="cval">330 m</p>
+        <p class="cnote">Including antenna. Original 1889 height: 300 m. About 110 storeys tall.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Mount Everest</p>
+        <p class="cval">8,849 m</p>
+        <p class="cnote">That's 8.8 km straight up. About 27 Eiffel Towers stacked. Nearly as tall as planes cruise.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Plane cruising altitude</p>
+        <p class="cval">~10,000 m</p>
+        <p class="cnote">10 km up. Everest reaches 88% of that height — almost into plane territory.</p>
+      </div>
+    </div>
+
+    <!-- NEW: Height estimation interactive -->
+    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">Height estimator: floors ↔ metres</div>
+      <div class="u-display-flex u-align-center u-gap-md u-flex-wrap">
+        <div class="u-display-flex u-align-center u-gap-6px">
+          <input type="number" id="hest-floors" placeholder="floors" class="u-w-90px" oninput="calcHeight()" min="1" max="200">
+          <span class="u-fs-13px text-secondary">floors</span>
+        </div>
+        <span class="u-fs-13px text-tertiary">→</span>
+        <div id="hest-out" class="u-fs-13px text-secondary">Enter a floor count above</div>
+      </div>
+    </div>
+
+    <h2 class="sec" id="part-e-oceans-and-water">Part E · oceans & water</h2>
+
+    <!-- NEW: Ocean sizes -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Ocean surface areas</div>
+      <div class="ocean-row"><span class="oc-lbl">Pacific (165M km²)</span><div class="oc-bar u-w-100-pct u-bg-blue-700"><span class="oc-val u-text-white">largest — bigger than all land combined</span></div></div>
+      <div class="ocean-row"><span class="oc-lbl">Atlantic (106M km²)</span><div class="oc-bar u-w-64-pct u-bg-blue-500"><span class="oc-val u-text-white">64% of Pacific</span></div></div>
+      <div class="ocean-row"><span class="oc-lbl">Indian (70M km²)</span><div class="oc-bar u-w-42-pct u-bg-blue-400"><span class="oc-val u-text-white">42%</span></div></div>
+      <div class="ocean-row"><span class="oc-lbl">Southern (21M km²)</span><div class="oc-bar u-w-13-pct u-bg-blue-300"><span class="oc-val u-text-navy-950">13%</span></div></div>
+      <div class="ocean-row"><span class="oc-lbl">Arctic (15M km²)</span><div class="oc-bar u-w-9-pct u-bg-blue-200 u-border-0-d-5px-solid-hex-85b7eb"><span class="oc-val u-text-navy-950">9%</span></div></div>
+      <p class="u-fs-12px text-secondary u-m-10px-0-0 u-lh-1-d-5">The Pacific Ocean alone is larger than all of Earth's land surface combined (~150M km²). Water covers 71% of the planet.</p>
+    </div>
+
+    <!-- NEW: Ocean depth comparison -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Depths: how deep do the oceans go?</div>
+      <!-- SVG cross-section of ocean depths -->
+      <div class="heights-svg-wrap">
+        <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-min-w-280px u-display-block" aria-label="Ocean depth comparison cross-section">
+          <defs>
+            <linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#85B7EB"/>
+              <stop offset="100%" stop-color="#0C447C"/>
+            </linearGradient>
+          </defs>
+          <!-- Water surface -->
+          <line x1="0" y1="20" x2="560" y2="20" stroke="#85B7EB" stroke-width="1.5"/>
+          <text x="4" y="15" font-size="9" fill="#185FA5">sea level</text>
+          <!-- Depth scale: 0=20px, 11000m=185px → 1m = 165/11000 = 0.015px -->
+          <!-- 200m (sunlight zone) = 20+3=23px -->
+          <!-- 1000m avg ocean = 20+15=35px -->
+          <!-- 3800m avg deep = 20+57=77px -->
+          <!-- 8376m Puerto Rico = 20+125.6=146px -->
+          <!-- 10935m Mariana = 20+163=183px -->
+
+          <!-- Sunlight zone 0–200m -->
+          <rect x="20" y="20" width="120" height="3" fill="#9FE1CB" opacity="0.6"/>
+          <text x="82" y="18" text-anchor="middle" font-size="8.5" fill="#1D9E75">Sunlight zone (0–200 m)</text>
+
+          <!-- Column shapes for visual depth comparison -->
+          <!-- Atlantic avg 3,300m → 20+49.5=70 -->
+          <rect x="30" y="20" width="80" height="49" fill="url(#oceanGrad)" rx="2" opacity="0.8"/>
+          <text x="70" y="75" text-anchor="middle" font-size="8.5" fill="#fff">Atlantic avg</text>
+          <text x="70" y="85" text-anchor="middle" font-size="8" fill="#85B7EB">3,300 m</text>
+
+          <!-- Pacific avg 4,000m → 20+60=80 -->
+          <rect x="130" y="20" width="80" height="60" fill="url(#oceanGrad)" rx="2" opacity="0.9"/>
+          <text x="170" y="87" text-anchor="middle" font-size="8.5" fill="#fff">Pacific avg</text>
+          <text x="170" y="97" text-anchor="middle" font-size="8" fill="#85B7EB">4,000 m</text>
+
+          <!-- Puerto Rico Trench 8,376m (Atlantic deepest) → 20+125.6=146 -->
+          <rect x="240" y="20" width="40" height="126" fill="#0C447C" rx="2"/>
+          <text x="260" y="153" text-anchor="middle" font-size="8.5" fill="#85B7EB">Puerto Rico</text>
+          <text x="260" y="163" text-anchor="middle" font-size="8" fill="#85B7EB">Trench</text>
+          <text x="260" y="173" text-anchor="middle" font-size="8" fill="#85B7EB">8,376 m</text>
+
+          <!-- Mariana Trench 10,935m → 163px + 20 = 183 -->
+          <rect x="310" y="20" width="40" height="163" fill="#042C53" rx="2"/>
+          <text x="330" y="189" text-anchor="middle" font-size="8.5" fill="#5BA0D8">Mariana</text>
+          <text x="330" y="199" text-anchor="middle" font-size="7.5" fill="#5BA0D8">Trench 10,935 m</text>
+
+          <!-- Everest for comparison: 8,849m → 20+132=152, shown inverted as a mountain above sea -->
+          <polygon points="440,20 460,-112 480,20" fill="#CECBF6" stroke="#AFA9EC" stroke-width="0.5"/>
+          <!-- clip to keep above sea line -->
+          <rect x="430" y="0" width="60" height="20" fill="var(--color-background-primary)" opacity="0.7"/>
+          <text x="460" y="14" text-anchor="middle" font-size="7.5" fill="#7F77DD">Everest (8,849 m)</text>
+          <text x="460" y="24" text-anchor="middle" font-size="7" fill="#7F77DD">above sea level</text>
+          <line x1="420" y1="20" x2="500" y2="20" stroke="#AFA9EC" stroke-width="0.75" stroke-dasharray="3 2"/>
+
+          <!-- depth tick marks on right -->
+          <line x1="365" y1="20" x2="370" y2="20" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+          <text x="372" y="23" font-size="8" fill="var(--color-text-tertiary)">0</text>
+          <line x1="365" y1="65" x2="370" y2="65" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+          <text x="372" y="68" font-size="8" fill="var(--color-text-tertiary)">3,000 m</text>
+          <line x1="365" y1="110" x2="370" y2="110" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+          <text x="372" y="113" font-size="8" fill="var(--color-text-tertiary)">6,000 m</text>
+          <line x1="365" y1="183" x2="370" y2="183" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+          <text x="372" y="186" font-size="8" fill="var(--color-text-tertiary)">10,935 m</text>
+          <line x1="367" y1="20" x2="367" y2="183" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <p class="u-fs-12px text-secondary u-m-6px-0-0 u-lh-1-d-5">The Mariana Trench (10,935 m) is deeper than Everest is tall. If you dropped Everest into it, there'd still be over 2 km of water above the summit.</p>
+    </div>
+
+    <h2 class="sec" id="part-f-population-density">Part F · population density</h2>
+
+    <!-- NEW: Population density explorer -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Population density: people per km²</div>
+      <p class="u-fs-12px text-secondary u-m-0-0-10px u-lh-1-d-5">Each dot below represents 5 people per km². The contrast shows why some countries feel crowded and others feel empty.</p>
+      <div id="density-panel"></div>
+      <p class="u-fs-12px text-secondary u-m-8px-0-0 u-lh-1-d-5">Bangladesh is one of the most densely populated large countries on Earth — roughly 40× denser than the USA, and 130× denser than Australia.</p>
+    </div>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Bangladesh</p>
+        <p class="cval">1,325 /km²</p>
+        <p class="cnote">147M people in 148,000 km² — smaller than Greece. One of the most densely populated countries on Earth.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Netherlands</p>
+        <p class="cval">518 /km²</p>
+        <p class="cnote">Europe's most densely populated country. 17.9M people in 41,500 km² — smaller than Switzerland.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Mongolia</p>
+        <p class="cval">2.1 /km²</p>
+        <p class="cnote">One of the least dense countries. 3.4M people in 1.56M km² — the 18th largest country with a population smaller than Los Angeles.</p>
+      </div>
+    </div>
+
+    <h2 class="sec" id="part-g-latitude-and-what-it-tells-you">Part G · latitude & what it tells you</h2>
+
+    <!-- NEW: latitude guide -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">What latitude tells you about a place</div>
+      <div class="lat-item">
+        <span class="lat-deg">0°</span>
+        <div class="lat-text"><strong>The Equator</strong> — hot and humid year-round, maximum solar intensity. Countries: Ecuador, Kenya, Indonesia, Brazil (north), Singapore (1.3°N).</div>
+      </div>
+      <div class="lat-item">
+        <span class="lat-deg">23°</span>
+        <div class="lat-text"><strong>Tropics (Cancer / Capricorn)</strong> — subtropical, often desert or savanna. Sahara Desert, Arabian Peninsula, Sonoran Desert. Mexico City is at 19°N.</div>
+      </div>
+      <div class="lat-item">
+        <span class="lat-deg">35°</span>
+        <div class="lat-text"><strong>Mediterranean climate band</strong> — warm, dry summers; mild wet winters. Tokyo (35.7°N), Los Angeles (34°N), Beirut, Athens. The "pleasant" latitudes.</div>
+      </div>
+      <div class="lat-item">
+        <span class="lat-deg">48–52°</span>
+        <div class="lat-text"><strong>Central Europe / Canada band</strong> — four proper seasons, cold winters. Paris (48.9°N), London (51.5°N), Berlin (52.5°N), Vancouver (49.3°N).</div>
+      </div>
+      <div class="lat-item">
+        <span class="lat-deg">60°</span>
+        <div class="lat-text"><strong>Sub-Arctic</strong> — long cold winters, very long summer days. Helsinki, Oslo, St Petersburg. In summer, the sun barely sets (white nights).</div>
+      </div>
+      <div class="lat-item">
+        <span class="lat-deg">66.5°</span>
+        <div class="lat-text"><strong>Arctic Circle</strong> — at least one full day of midnight sun per year, and one polar night. Reykjavik (64°N) is just south. Tromsø (69.7°N) is inside.</div>
+      </div>
+      <div class="lat-item u-border-bottom-none">
+        <span class="lat-deg">90°</span>
+        <div class="lat-text"><strong>The Poles</strong> — 6 months of daylight, 6 months of darkness. South Pole has the Amundsen–Scott research station; North Pole is open Arctic Ocean under ice.</div>
+      </div>
+    </div>
+
+    <!-- NEW: Latitude SVG globe schematic -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Famous cities by latitude — some surprises</div>
+      <div class="heights-svg-wrap">
+        <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-min-w-300px u-display-block" aria-label="Cities arranged by latitude showing their relative north-south positions">
+          <!-- Vertical axis: equator at y=190, north pole at y=10. 90 degrees = 180px. 1°=2px -->
+          <!-- y = 190 - (lat * 2) -->
+          <line x1="30" y1="10" x2="30" y2="190" stroke="var(--color-border-secondary)" stroke-width="1.5"/>
+          <!-- Latitude lines and labels -->
+          <!-- Equator 0° y=190 -->
+          <line x1="28" y1="190" x2="540" y2="190" stroke="var(--color-border-tertiary)" stroke-width="0.75" stroke-dasharray="3 3"/>
+          <text x="3" y="193" font-size="8" fill="var(--color-text-tertiary)">0°</text>
+          <!-- 23.5° y=143 -->
+          <line x1="28" y1="143" x2="540" y2="143" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2 3"/>
+          <text x="1" y="146" font-size="8" fill="var(--color-text-tertiary)">23°</text>
+          <!-- 35° y=120 -->
+          <line x1="28" y1="120" x2="540" y2="120" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2 3"/>
+          <text x="1" y="123" font-size="8" fill="var(--color-text-tertiary)">35°</text>
+          <!-- 51° y=88 -->
+          <line x1="28" y1="88" x2="540" y2="88" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2 3"/>
+          <text x="1" y="91" font-size="8" fill="var(--color-text-tertiary)">51°</text>
+          <!-- 60° y=70 -->
+          <line x1="28" y1="70" x2="540" y2="70" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2 3"/>
+          <text x="1" y="73" font-size="8" fill="var(--color-text-tertiary)">60°</text>
+          <!-- 66.5° y=57 -->
+          <line x1="28" y1="57" x2="540" y2="57" stroke="#378ADD" stroke-width="0.75" stroke-dasharray="4 3" opacity="0.5"/>
+          <text x="1" y="60" font-size="7.5" fill="#378ADD">66°</text>
+          <!-- 90° y=10 -->
+          <text x="1" y="13" font-size="8" fill="var(--color-text-tertiary)">90°</text>
+          <text x="3" y="203" font-size="8" fill="var(--color-text-tertiary)">N lat</text>
+
+          <!-- Cities: dot at x position, y = 190 - lat*2 -->
+          <!-- Singapore 1.3° y=187.4 ≈ 187 -->
+          <circle cx="80" cy="187" r="3" fill="#1D9E75"/>
+          <text x="80" y="182" text-anchor="middle" font-size="8.5" fill="#1D9E75">Singapore</text>
+          <text x="80" y="174" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">1.3°N</text>
+
+          <!-- Bangkok 13.7° y=162.6 ≈ 163 -->
+          <circle cx="140" cy="163" r="3" fill="#1D9E75"/>
+          <text x="140" y="158" text-anchor="middle" font-size="8.5" fill="#1D9E75">Bangkok</text>
+          <text x="140" y="150" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">13.7°N</text>
+
+          <!-- Mexico City 19° y=152 -->
+          <circle cx="200" cy="152" r="3" fill="#0F6E56"/>
+          <text x="200" y="147" text-anchor="middle" font-size="8.5" fill="#0F6E56">Mexico City</text>
+          <text x="200" y="139" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">19.4°N</text>
+
+          <!-- Cairo 30° y=130 -->
+          <circle cx="260" cy="130" r="3" fill="#E8A427"/>
+          <text x="260" y="125" text-anchor="middle" font-size="8.5" fill="#E8A427">Cairo</text>
+          <text x="260" y="117" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">30.1°N</text>
+
+          <!-- Tokyo / LA 34-35° y=120 -->
+          <circle cx="320" cy="120" r="3" fill="#185FA5"/>
+          <text x="320" y="115" text-anchor="middle" font-size="8.5" fill="#185FA5">Tokyo / LA</text>
+          <text x="320" y="107" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">34–35°N</text>
+
+          <!-- NYC 40.7° y=109 -->
+          <circle cx="380" cy="109" r="3" fill="#185FA5"/>
+          <text x="380" y="104" text-anchor="middle" font-size="8.5" fill="#185FA5">New York</text>
+          <text x="380" y="96" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">40.7°N</text>
+
+          <!-- London 51.5° y=87 -->
+          <circle cx="440" cy="87" r="3" fill="#378ADD"/>
+          <text x="440" y="82" text-anchor="middle" font-size="8.5" fill="#378ADD">London</text>
+          <text x="440" y="74" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">51.5°N</text>
+
+          <!-- Oslo 59.9° y=70 -->
+          <circle cx="500" cy="70" r="3" fill="#533AB7"/>
+          <text x="500" y="65" text-anchor="middle" font-size="8.5" fill="#533AB7">Oslo</text>
+          <text x="500" y="57" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">59.9°N</text>
+
+          <!-- Arctic circle label -->
+          <text x="320" y="54" text-anchor="middle" font-size="8" fill="#378ADD" opacity="0.7">← Arctic Circle (66.5°N)</text>
+        </svg>
+      </div>
+      <p class="u-fs-12px text-secondary u-m-6px-0-0 u-lh-1-d-5">Surprise: Tokyo and Los Angeles are at nearly the same latitude (35°N). London is further north than most of Canada's major cities — it sits at the same latitude as central Newfoundland. New York is further south than Madrid.</p>
+    </div>
+
+    <h2 class="sec" id="part-h-anchor-numbers-to-memorize">Part H · anchor numbers to memorize</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+      <div class="anchor-row">
+        <span class="pill p-green">1 km</span>
+        <div><div class="atext">A 10–12 minute walk at normal pace</div><div class="asub">or ~1 minute by car at city speed</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">~500 km</span>
+        <div><div class="atext">A short domestic flight, or a full day's drive</div><div class="asub">Paris → Amsterdam, London → Edinburgh</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">~1,000 km</span>
+        <div><div class="asub">≈ 1–2 hours by plane (short-haul). Paris → Rome, Paris → Berlin.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">~10,000 km</span>
+        <div><div class="atext">Europe to Japan, or Europe to West Coast USA</div><div class="asub">~11–12 hour flight</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">40,000 km</span>
+        <div><div class="atext">Circumference of the Earth</div><div class="asub">A non-stop round-the-world trip at plane speed = ~44 hours</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">330 m</span>
+        <div><div class="atext">Eiffel Tower height</div><div class="asub">1 floor ≈ 3 m, so it equals ~110 floors</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">828 m</span>
+        <div><div class="atext">Burj Khalifa — tallest building</div><div class="asub">About 2.5× the Eiffel Tower, ~276 floors equivalent</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">165M km²</span>
+        <div><div class="atext">Pacific Ocean — larger than all land on Earth</div><div class="asub">Earth's surface: 71% water, 29% land</div></div>
+      </div>
+    </div>
+
+    <h2 class="sec" id="part-i-q-and-a">Part I · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. Someone says the flight from Tokyo to Los Angeles is about 9 hours. Does that make sense?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Yes, broadly — Tokyo to LA is ~8,800 km. At ~900 km/h that's about 9.8 hours of air time. Real flights are typically 10–11 hours westbound (headwinds) and 9–10 hours eastbound. So "about 9 hours" is a slight underestimate but in the right ballpark.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. How many times bigger is the USA than Japan?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 26 times bigger. USA = 9.8M km², Japan = 378,000 km². 9,800,000 ÷ 378,000 ≈ 26. Japan would fit inside the USA 26 times over — and yet Japan's population (~124M) is about 36% of the USA's (~340M), packed into a tiny area.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. A building has 50 floors. Roughly how tall is it in metres?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 150 m. One floor ≈ 3 m. 50 × 3 = 150 m. For context, the Eiffel Tower (330 m) is about the height of a 110-floor building. Most city skyscrapers you see are in the 150–400 m range.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. Paris to Rome by road is about 1,400 km. At 120 km/h on a motorway, how long would the drive take?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 11–12 hours of pure driving (1,400 ÷ 120 ≈ 11.7 hours). In reality, with stops, borders, and traffic it'd be closer to 14–15 hours. That's why most people fly — the same journey takes just over 2 hours by air.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. Is Europe larger or smaller than the USA in area?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Slightly larger — and this surprises most people. Europe (all countries combined) is about 10.5M km². The USA is 9.8M km². Europe is about 7% bigger. But Europe has ~750 million people vs the USA's ~340 million — more than twice as many people packed into slightly the same space, spread across 44 countries.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. The Pacific Ocean is larger than all land on Earth combined — true or false?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">True. The Pacific covers ~165 million km². All of Earth's land surface adds up to about 150 million km². The Pacific alone is 10% larger than all continents and islands combined. This is why early explorers crossing it could go weeks without sighting land.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. Name a major world city at roughly the same latitude as London (51.5°N).</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Warsaw (52.2°N), Berlin (52.5°N), Amsterdam (52.4°N), and Brussels (50.9°N) are all close. Calgary in Canada is at 51°N. The surprise: most of Canada's major cities (Toronto at 43.7°N, Vancouver at 49.3°N) are actually south of London. London's mild climate despite its northerly latitude is thanks to the Gulf Stream warming the North Atlantic.</div>
+    </div>
+
+  
+
+  
+
+  
+</ModuleLayout>
+
+<script is:inline>
+
+  /* ── Flight time calculator ── */
+  var CITIES = {
+    LON: { name: 'London',        lat: 51.5,  lon: -0.1  },
+    PAR: { name: 'Paris',         lat: 48.9,  lon:  2.3  },
+    BER: { name: 'Berlin',        lat: 52.5,  lon: 13.4  },
+    MAD: { name: 'Madrid',        lat: 40.4,  lon: -3.7  },
+    ROM: { name: 'Rome',          lat: 41.9,  lon: 12.5  },
+    IST: { name: 'Istanbul',      lat: 41.0,  lon: 29.0  },
+    NYC: { name: 'New York',      lat: 40.7,  lon:-74.0  },
+    LAX: { name: 'Los Angeles',   lat: 34.1,  lon:-118.2 },
+    TYO: { name: 'Tokyo',         lat: 35.7,  lon:139.7  },
+    SYD: { name: 'Sydney',        lat:-33.9,  lon:151.2  },
+    DXB: { name: 'Dubai',         lat: 25.2,  lon: 55.3  },
+    SIN: { name: 'Singapore',     lat:  1.3,  lon:103.8  },
+    JNB: { name: 'Johannesburg',  lat:-26.2,  lon: 28.0  },
+    MEX: { name: 'Mexico City',   lat: 19.4,  lon:-99.1  },
+    SCL: { name: 'Santiago',      lat:-33.5,  lon:-70.6  }
+  };
+
+  function haversine(a, b) {
+    var R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180;
+    var dLon = (b.lon - a.lon) * Math.PI / 180;
+    var x = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(a.lat * Math.PI/180) * Math.cos(b.lat * Math.PI/180) *
+            Math.sin(dLon/2) * Math.sin(dLon/2);
+    return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1-x));
+  }
+
+  function calcFlight() {
+    var fromKey = document.getElementById('fc-from').value;
+    var toKey   = document.getElementById('fc-to').value;
+    var el = document.getElementById('fc-result');
+    if (fromKey === toKey) { el.innerHTML = 'Choose two different cities.'; return; }
+    var a = CITIES[fromKey], b = CITIES[toKey];
+    var dist = Math.round(haversine(a, b) / 50) * 50;
+    var rawHrs = dist / 900;
+    // Add overhead: ~30min for short haul, proportionally less for long haul
+    var overhead = Math.max(0.5, 1.2 - dist / 20000);
+    var adjusted = rawHrs + overhead;
+    var low = (adjusted - 0.5).toFixed(1), high = (adjusted + 0.5).toFixed(1);
+    el.innerHTML = '<strong>' + a.name + ' → ' + b.name + '</strong><br>' +
+      'Great-circle distance: ~' + dist.toLocaleString() + ' km<br>' +
+      'Estimated flight time: ~' + parseFloat(low).toFixed(1) + '–' + parseFloat(high).toFixed(1) + ' hours' +
+      '<span class="u-fs-11px text-tertiary"> (based on 900 km/h cruise + taxi/climb overhead)</span>';
+  }
+
+  // Init flight calculator
+  calcFlight();
+
+  /* ── Height estimator ── */
+  function calcHeight() {
+    var floors = parseInt(document.getElementById('hest-floors').value, 10);
+    var out = document.getElementById('hest-out');
+    if (!floors || floors < 1) { out.textContent = 'Enter a floor count above'; return; }
+    var m = floors * 3;
+    var comparisons = [];
+    if (m < 30)       comparisons.push('shorter than a typical 10-storey building (30 m)');
+    else if (m < 96)  comparisons.push('comparable to Big Ben (' + 96 + ' m)');
+    else if (m < 200) comparisons.push('in the range of a typical skyscraper');
+    else if (m < 330) comparisons.push('shorter than the Eiffel Tower (330 m)');
+    else if (m < 828) comparisons.push('between the Eiffel Tower and Burj Khalifa');
+    else               comparisons.push('taller than the Burj Khalifa (828 m) — nothing built reaches that!');
+    out.innerHTML = '<strong>' + floors + ' floors ≈ ' + m.toLocaleString() + ' m</strong> — ' + comparisons[0];
+  }
+
+  /* ── Which is bigger? quiz ── */
+  var QUIZ_QUESTIONS = [
+    { a: 'Brazil',       aKm: 8.5,   b: 'Australia',    bKm: 7.7,   ans: 'a', note: 'Brazil (8.5M km²) is larger than Australia (7.7M km²), though both are massive. Australia is an entire continent yet Brazil beats it.' },
+    { a: 'India',        aKm: 3.3,   b: 'Europe (EU)',   bKm: 4.2,   ans: 'b', note: 'The EU (27 countries, ~4.2M km²) is larger than India (3.3M km²). Yet India has 1.4 billion people vs the EU\'s 450 million.' },
+    { a: 'Saudi Arabia', aKm: 2.15,  b: 'Mexico',        bKm: 2.0,   ans: 'a', note: 'Saudi Arabia (2.15M km²) narrowly edges Mexico (2.0M km²). Both are roughly the same size as Western Europe.' },
+    { a: 'Kazakhstan',   aKm: 2.72,  b: 'Argentina',     bKm: 2.78,  ans: 'b', note: 'Argentina (2.78M km²) just edges Kazakhstan (2.72M km²) — they\'re almost identical in size, which surprises most people.' },
+    { a: 'DR Congo',     aKm: 2.34,  b: 'Greenland',     bKm: 2.17,  ans: 'a', note: 'DR Congo (2.34M km²) is larger than Greenland (2.17M km²). Greenland looks enormous on Mercator maps but is smaller than several African countries.' },
+    { a: 'Sweden',       aKm: 0.45,  b: 'Spain',         bKm: 0.51,  ans: 'b', note: 'Spain (0.51M km²) is larger than Sweden (0.45M km²). Both are roughly the same order of magnitude as France.' },
+    { a: 'Pakistan',     aKm: 0.88,  b: 'Turkey',        bKm: 0.78,  ans: 'a', note: 'Pakistan (0.88M km²) is larger than Turkey (0.78M km²). Pakistan is often underestimated — it\'s the 33rd largest country.' },
+    { a: 'Germany',      aKm: 0.357, b: 'Japan',          bKm: 0.378, ans: 'b', note: 'Japan (378k km²) is slightly larger than Germany (357k km²) — they\'re almost identical, often cited as comparable countries.' }
+  ];
+
+  var quizIdx = 0, quizScore = 0, quizAnswered = false;
+  var quizOrder = [];
+
+  function shuffleQuiz() {
+    quizOrder = QUIZ_QUESTIONS.map(function(_, i){ return i; });
+    for (var i = quizOrder.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = quizOrder[i]; quizOrder[i] = quizOrder[j]; quizOrder[j] = tmp;
+    }
+  }
+
+  function renderQuizDots() {
+    var dots = document.getElementById('quiz-dots');
+    dots.innerHTML = '';
+    for (var i = 0; i < QUIZ_QUESTIONS.length; i++) {
+      var d = document.createElement('div');
+      d.className = 'quiz-dot';
+      if (i < quizIdx) d.className += quizOrder[i] !== undefined ? ' got-right' : ' got-wrong';
+      dots.appendChild(d);
+    }
+    // Recompute dots based on history
+    dots.innerHTML = '';
+    for (var i = 0; i < QUIZ_QUESTIONS.length; i++) {
+      var d = document.createElement('div');
+      d.className = 'quiz-dot' + (quizHistory[i] === true ? ' got-right' : quizHistory[i] === false ? ' got-wrong' : '');
+      dots.appendChild(d);
+    }
+  }
+
+  var quizHistory = new Array(QUIZ_QUESTIONS.length).fill(null);
+
+  function loadQuizQuestion() {
+    if (quizIdx >= QUIZ_QUESTIONS.length) { showQuizEnd(); return; }
+    quizAnswered = false;
+    var q = QUIZ_QUESTIONS[quizOrder[quizIdx]];
+    document.getElementById('qname-a').textContent = q.a;
+    document.getElementById('qhint-a').textContent = q.aKm + 'M km²?';
+    document.getElementById('qname-b').textContent = q.b;
+    document.getElementById('qhint-b').textContent = q.bKm + 'M km²?';
+    document.getElementById('qopt-a').className = 'quiz-opt';
+    document.getElementById('qopt-b').className = 'quiz-opt';
+    document.getElementById('quiz-feedback').textContent = '';
+    document.getElementById('quiz-next-btn').style.display = 'none';
+    document.getElementById('quiz-restart-btn').style.display = 'none';
+    document.getElementById('quiz-progress').textContent = (quizIdx + 1) + ' / ' + QUIZ_QUESTIONS.length;
+    document.getElementById('quiz-score-label').textContent = 'Score: ' + quizScore + '/' + quizIdx;
+    renderQuizDots();
+  }
+
+  function quizAnswer(choice) {
+    if (quizAnswered) return;
+    quizAnswered = true;
+    var q = QUIZ_QUESTIONS[quizOrder[quizIdx]];
+    var correct = choice === q.ans;
+    if (correct) quizScore++;
+    quizHistory[quizIdx] = correct;
+    document.getElementById('qopt-' + choice).className = 'quiz-opt ' + (correct ? 'correct' : 'wrong');
+    document.getElementById('qopt-' + (choice === 'a' ? 'b' : 'a')).className = 'quiz-opt ' + (correct ? '' : 'correct');
+    document.getElementById('quiz-feedback').innerHTML = (correct ? '✓ Correct! ' : '✗ Not quite. ') + q.note;
+    document.getElementById('quiz-score-label').textContent = 'Score: ' + quizScore + '/' + (quizIdx + 1);
+    renderQuizDots();
+    document.getElementById('quiz-next-btn').style.display = quizIdx < QUIZ_QUESTIONS.length - 1 ? 'inline-block' : 'none';
+    if (quizIdx === QUIZ_QUESTIONS.length - 1) {
+      setTimeout(showQuizEnd, 800);
+    }
+  }
+
+  function quizNext() {
+    quizIdx++;
+    loadQuizQuestion();
+  }
+
+  function showQuizEnd() {
+    document.getElementById('quiz-feedback').innerHTML = 'Finished! Score: <strong>' + quizScore + ' / ' + QUIZ_QUESTIONS.length + '</strong>. ' +
+      (quizScore >= 6 ? 'Excellent spatial sense.' : quizScore >= 4 ? 'Good — geography is tricky.' : 'Geography is genuinely counterintuitive. Try again!');
+    document.getElementById('quiz-next-btn').style.display = 'none';
+    document.getElementById('quiz-restart-btn').style.display = 'inline-block';
+    renderQuizDots();
+  }
+
+  function quizRestart() {
+    quizIdx = 0; quizScore = 0; quizHistory = new Array(QUIZ_QUESTIONS.length).fill(null);
+    shuffleQuiz();
+    loadQuizQuestion();
+  }
+
+  // Init quiz
+  shuffleQuiz();
+  loadQuizQuestion();
+
+  /* ── Population density dot panels ── */
+  var DENSITY_DATA = [
+    { label: 'Bangladesh',   density: 1325, color: '#E8503A' },
+    { label: 'Netherlands',  density: 518,  color: '#E8503A' },
+    { label: 'UK',           density: 275,  color: '#E87C3A' },
+    { label: 'India',        density: 464,  color: '#E87C3A' },
+    { label: 'Germany',      density: 235,  color: '#E8A427' },
+    { label: 'France',       density: 119,  color: '#E8C027' },
+    { label: 'USA',          density: 36,   color: '#85B7EB' },
+    { label: 'Russia',       density: 9,    color: '#378ADD' },
+    { label: 'Australia',    density: 3,    color: '#185FA5' },
+    { label: 'Mongolia',     density: 2,    color: '#0C447C' }
+  ];
+
+  (function buildDensityPanel() {
+    var container = document.getElementById('density-panel');
+    var maxDots = 70; // dots to represent max (Bangladesh)
+    var maxDensity = 1325;
+
+    DENSITY_DATA.forEach(function(d) {
+      var row = document.createElement('div');
+      row.className = 'density-row';
+
+      var lbl = document.createElement('div');
+      lbl.className = 'dn-label';
+      lbl.textContent = d.label;
+
+      var dotsWrap = document.createElement('div');
+      dotsWrap.className = 'dn-dots';
+
+      var numDots = Math.max(1, Math.round((d.density / maxDensity) * maxDots));
+      for (var i = 0; i < numDots; i++) {
+        var dot = document.createElement('div');
+        dot.className = 'dn-dot';
+        dot.style.background = d.color;
+        dotsWrap.appendChild(dot);
+      }
+
+      var val = document.createElement('div');
+      val.className = 'dn-val';
+      val.textContent = d.density.toLocaleString() + ' /km²';
+
+      row.appendChild(lbl);
+      row.appendChild(dotsWrap);
+      row.appendChild(val);
+      container.appendChild(row);
+    });
+  })();
+  
+</script>

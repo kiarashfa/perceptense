@@ -1,0 +1,1606 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/space-and-the-solar-system.css';
+
+const mod = modules.find((m) => m.id === 26)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+
+    <div class="module-header">
+      <i class="fa-solid fa-shuttle-space module-header-icon"></i>
+      <h1 class="module-title module-heading">Module 26: Space &amp; the Solar System</h1>
+    </div>
+    <p class="module-subtitle">Planets, distances, and cosmic scale</p>
+
+    <!-- ===========================
+         PART A -- THE SUN
+    =========================== -->
+    <h2 class="sec" id="part-a-the-sun-the-star-at-the-centre">Part A · the Sun -- the star at the centre</h2>
+
+    <div class="space-panel">
+      <div class="space-label">The Sun -- our star</div>
+      <div class="space-grid">
+        <div class="space-panel-2"><p class="space-text">Diameter</p><p class="space-label-2">1,392,700 km -- 109× Earth's diameter</p></div>
+        <div class="space-panel-2"><p class="space-text">Mass</p><p class="space-label-2">1.989 × 10³⁰ kg -- 333,000× Earth's mass</p></div>
+        <div class="space-panel-2"><p class="space-text">Surface temperature</p><p class="space-label-2">~5,500°C (corona: 1–3 million °C -- hotter than surface, still unexplained)</p></div>
+        <div class="space-panel-2"><p class="space-text">Distance from Earth</p><p class="space-label-2">~150 million km = 1 AU. Light travel time: 8 min 20 sec.</p></div>
+        <div class="space-panel-2"><p class="space-text">Composition</p><p class="space-label-2">~74% hydrogen, ~25% helium, 1% heavier elements</p></div>
+        <div class="space-panel-2"><p class="space-text">Age / remaining life</p><p class="space-label-2">4.6 billion years old. ~5 billion years of hydrogen fuel remaining.</p></div>
+      </div>
+      <div class="space-text-2">The Sun contains 99.86% of all mass in the solar system. Its gravity holds everything from Mercury to the Oort Cloud (~2 light-years away). The Sun is a G-type main-sequence star -- perfectly average by stellar standards, which is fortunate: massive stars burn fast and go supernova.</div>
+    </div>
+
+    <!-- Sun structure diagram -->
+    <div class="content-panel">
+      <div class="space-label-3">The Sun's internal layers</div>
+      <div class="space-row">
+        <div class="space-card">
+          <div class="space-row-2">
+            <span class="space-text-3">Core</span>
+            <span class="space-text-4">0–25% of radius · ~15 million °C</span>
+          </div>
+          <div class="space-text-5">Nuclear fusion occurs here: 4 hydrogen nuclei fuse into 1 helium nucleus, releasing enormous energy as gamma rays. The core fuses ~620 million tonnes of hydrogen per second. Density is ~150 g/cm³ -- 150× water.</div>
+        </div>
+        <div class="space-card-2">
+          <div class="space-row-2">
+            <span class="space-text-3">Radiative zone</span>
+            <span class="space-text-4">25–70% of radius · ~7 million °C</span>
+          </div>
+          <div class="space-text-5">Energy from the core travels outward as photons, but the plasma is so dense that photons are constantly absorbed and re-emitted -- a single photon takes 100,000–170,000 years to cross this zone. This is why sunlight you see today was "created" at the Sun's core over 100,000 years ago.</div>
+        </div>
+        <div class="space-card-3">
+          <div class="space-row-2">
+            <span class="space-text-6">Convective zone</span>
+            <span class="space-text-7">70–100% of radius · ~2 million → 5,500°C</span>
+          </div>
+          <div class="space-text-8">Heat is transported by convection -- hot plasma rises, cools at the surface, sinks back down in giant cells. Granules (convection cells ~1,000 km wide) are visible at the surface, each lasting ~10 minutes. The Sun's surface (photosphere) is the visible "surface" we see from Earth.</div>
+        </div>
+        <div class="space-card-4">
+          <div class="space-row-2">
+            <span class="space-text-9">Photosphere</span>
+            <span class="space-text-10">500 km thick · ~5,500°C</span>
+          </div>
+          <div class="space-text-11">The visible surface. Sunspots are cooler regions (~3,800°C) where intense magnetic fields suppress convection -- they appear dark only by contrast. Sunspot activity follows an 11-year cycle that affects space weather on Earth.</div>
+        </div>
+        <div class="space-panel-3">
+          <div class="space-row-2">
+            <span class="space-text-12">Chromosphere &amp; Corona</span>
+            <span class="space-text-13">Above surface · up to 3 million °C</span>
+          </div>
+          <div class="space-text-14">The chromosphere (pink during solar eclipses) extends ~2,000 km above the photosphere. The corona -- the Sun's wispy outer atmosphere -- extends millions of km and is inexplicably hotter than the surface. The solar wind originates here: a stream of charged particles that fills the solar system and drives auroras on Earth.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Star type comparison -->
+    <div class="content-panel">
+      <div class="space-label-3">The Sun in context -- stellar classification (Morgan–Keenan)</div>
+      <div class="star-row">
+        <div class="star-dot star-dot-style"></div>
+        <div class="star-info"><div class="star-name">O-type -- Blue supergiant (e.g. Rigel)</div><div class="star-sub">50× Sun's mass, 300,000× luminosity. Burns fuel in just millions of years. Ends as a supernova.</div></div>
+        <div class="star-temp">30,000–50,000 K</div>
+      </div>
+      <div class="star-row">
+        <div class="star-dot star-dot-style-2"></div>
+        <div class="star-info"><div class="star-name">B-type -- Blue-white (e.g. Spica)</div><div class="star-sub">2–16× Sun's mass. Very bright, short-lived. Responsible for much of a galaxy's UV output.</div></div>
+        <div class="star-temp">10,000–30,000 K</div>
+      </div>
+      <div class="star-row">
+        <div class="star-dot star-dot-style-3"></div>
+        <div class="star-info"><div class="star-name">A-type -- White (e.g. Sirius, Vega)</div><div class="star-sub">1.4–2× Sun's mass. Sirius is the brightest star in our night sky. Too short-lived for complex life to evolve.</div></div>
+        <div class="star-temp">7,500–10,000 K</div>
+      </div>
+      <div class="star-row">
+        <div class="star-dot star-dot-style-4"></div>
+        <div class="star-info"><div class="star-name">F-type -- Yellow-white (e.g. Procyon)</div><div class="star-sub">~1.2× Sun's mass. Slightly hotter and shorter-lived than the Sun. Some are in habitable zone candidates.</div></div>
+        <div class="star-temp">6,000–7,500 K</div>
+      </div>
+      <div class="star-row star-row-style">
+        <div class="star-dot star-dot-style-5"></div>
+        <div class="star-info"><div class="star-name text-teal-500">G-type -- Yellow dwarf ← The Sun (also: Alpha Centauri A)</div><div class="star-sub">~1× solar mass. Long-lived (~10 billion years). Stable output. Our Sun is 4.6 Gyr old, halfway through its life. Ideal for complex life.</div></div>
+        <div class="star-temp text-teal-500">5,200–6,000 K</div>
+      </div>
+      <div class="star-row">
+        <div class="star-dot star-dot-style-6"></div>
+        <div class="star-info"><div class="star-name">K-type -- Orange dwarf (e.g. Epsilon Eridani)</div><div class="star-sub">0.5–0.8× Sun's mass. Dimmer but very long-lived. Increasingly considered top candidates for life-hosting systems.</div></div>
+        <div class="star-temp">3,700–5,200 K</div>
+      </div>
+      <div class="star-row">
+        <div class="star-dot star-dot-style-7"></div>
+        <div class="star-info"><div class="star-name">M-type -- Red dwarf (e.g. Proxima Centauri)</div><div class="star-sub">Most common star type (~75% of all stars). 0.08–0.5× solar mass. Extremely long-lived (trillions of years). Prone to intense flares that may sterilise nearby planets.</div></div>
+        <div class="star-temp">2,400–3,700 K</div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         PART B -- PLANETS
+    =========================== -->
+    <h2 class="sec" id="part-b-the-planets-interactive-explorer">Part B · the planets -- interactive explorer</h2>
+
+    <div class="button-row-compact">
+      <button class="showplanet-control" onclick="showPlanet('mercury')" >Mercury</button>
+      <button class="showplanet-control" onclick="showPlanet('venus')"   >Venus</button>
+      <button class="showplanet-control" onclick="showPlanet('earth')"   >Earth</button>
+      <button class="showplanet-control" onclick="showPlanet('mars')"    >Mars</button>
+      <button class="showplanet-control" onclick="showPlanet('jupiter')" >Jupiter</button>
+      <button class="showplanet-control" onclick="showPlanet('saturn')"  >Saturn</button>
+      <button class="showplanet-control" onclick="showPlanet('uranus')"  >Uranus</button>
+      <button class="showplanet-control" onclick="showPlanet('neptune')" >Neptune</button>
+    </div>
+
+    <div class="content-card">
+      <div class="space-label-4">Scale visualisation -- relative planet sizes (not to orbital distance scale)</div>
+      <div class="space-row-4">
+        <div class="u-text-center">
+          <div class="space-media"></div>
+          <div class="space-text-15">Mer</div>
+        </div>
+        <div class="u-text-center">
+          <div class="space-media-2"></div>
+          <div class="space-text-15">Ven</div>
+        </div>
+        <div class="u-text-center">
+          <div class="space-media-3"></div>
+          <div class="space-text-15">Ear</div>
+        </div>
+        <div class="u-text-center">
+          <div class="space-media-4"></div>
+          <div class="space-text-15">Mar</div>
+        </div>
+        <div class="space-media-5"></div>
+        <div class="space-text-16">belt</div>
+        <div class="space-media-5"></div>
+        <div class="u-text-center">
+          <div class="space-media-6"></div>
+          <div class="space-text-15">Jupiter</div>
+        </div>
+        <div class="u-text-center">
+          <div class="space-media-7"></div>
+          <div class="space-text-15">Saturn (rings not shown)</div>
+        </div>
+        <div class="u-text-center">
+          <div class="space-media-8"></div>
+          <div class="space-text-15">Uranus</div>
+        </div>
+        <div class="u-text-center">
+          <div class="space-media-9"></div>
+          <div class="space-text-15">Neptune</div>
+        </div>
+      </div>
+      <div class="muted-text-small">Inner planets (Mercury–Mars) shown at 10px per Earth diameter. Gas giants scaled at ~1/11th for fit. If Jupiter were truly to scale relative to Earth above, it would be 1,120px wide.</div>
+    </div>
+
+    <div class="content-panel" id="planet-display"></div>
+
+    <!-- Planet comparison bars -->
+    <div class="content-panel">
+      <div class="space-label-5">Planetary comparison -- diameter relative to Earth</div>
+      <div id="planet-bar-chart"></div>
+      <div class="space-text-18">Bar width proportional to diameter. Earth = 12,742 km baseline.</div>
+    </div>
+
+    <!-- ===========================
+         PART C -- OUTER SOLAR SYSTEM
+    =========================== -->
+    <h2 class="sec" id="part-c-beyond-the-planets-the-outer-solar-system">Part C · beyond the planets -- the outer solar system</h2>
+
+    <div class="space-grid-2">
+      <div class="card">
+        <p class="clabel">Asteroid belt</p>
+        <p class="cval">Between Mars and Jupiter (~2.2–3.2 AU)</p>
+        <p class="cnote">Millions of rocky objects, but total mass only ~4% of Earth's Moon. Despite depictions in films, space between asteroids averages hundreds of thousands of km -- the Voyager probes passed through without incident. Ceres (diameter 940 km) is the largest and is classified as a dwarf planet.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Dwarf planets</p>
+        <p class="cval">Pluto, Eris, Ceres, Makemake, Haumea</p>
+        <p class="cnote">Pluto (reclassified in 2006) orbits at ~39 AU, takes 248 years per orbit, has 5 moons including Charon (half its size). Eris is slightly larger than Pluto -- its discovery triggered the dwarf planet debate. IAU definition: orbits the Sun, roughly spherical, but has NOT cleared its orbital neighbourhood.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Kuiper Belt</p>
+        <p class="cval">30–50 AU -- beyond Neptune</p>
+        <p class="cnote">A disc of icy objects, the remnants of solar system formation. Contains Pluto, Eris, and thousands of other objects. Short-period comets originate here (those with orbital periods under 200 years). 20× wider than the asteroid belt but 20–200× more massive.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Oort Cloud</p>
+        <p class="cval">~2,000–100,000 AU -- the edge of the solar system</p>
+        <p class="cnote">A vast spherical shell of icy bodies surrounding the solar system. Long-period comets (orbital periods thousands to millions of years) originate here. Never been directly observed -- inferred from comet trajectories. Its outer edge (~100,000 AU = ~1.6 light-years) is roughly halfway to the nearest star.</p>
+      </div>
+    </div>
+
+    <!-- ===========================
+         PART D -- THE MOON
+    =========================== -->
+    <h2 class="sec" id="part-d-earth-s-moon-everything-worth-knowing">Part D · Earth's Moon -- everything worth knowing</h2>
+
+    <div class="content-panel">
+      <div class="space-grid-3">
+        <div class="space-panel-5"><p class="clabel u-text-center">Distance from Earth</p><p class="space-label-6">384,400 km</p><p class="space-text-19">Light: 1.3 sec. Varies: 356,500 (perigee) to 406,700 km (apogee)</p></div>
+        <div class="space-panel-5"><p class="clabel u-text-center">Diameter</p><p class="space-label-6">3,474 km</p><p class="space-text-19">27% of Earth's. Largest moon relative to its planet (except Charon/Pluto)</p></div>
+        <div class="space-panel-5"><p class="clabel u-text-center">Orbital period</p><p class="space-label-6">27.3 days</p><p class="space-text-19">Sidereal (relative to stars). Lunar month (new moon to new moon): 29.5 days</p></div>
+        <div class="space-panel-5"><p class="clabel u-text-center">Rotation period</p><p class="space-label-6">27.3 days</p><p class="space-text-19">Same as orbital period -- tidally locked. We always see the same face.</p></div>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Tidal locking -- why one face only</div>
+          <div class="muted-copy-tight">Earth's gravity created tidal bulges in the Moon's crust. These bulges created a drag that gradually slowed the Moon's rotation over billions of years until rotation period exactly matched orbital period. Now perfectly synchronised -- the far side ("dark side" is a misnomer -- it gets as much sunlight as the near side, just never faces us) was unseen until Soviet Luna 3 photographed it in 1959.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="mini-card-title">Tides -- the Moon's gravitational pull</div>
+          <div class="muted-copy-tight">The Moon's gravity pulls Earth's oceans (and to a tiny extent, land) toward it. As Earth rotates, different points pass through this tidal bulge -- creating high and low tides (~2 per day). The Sun also creates tides (~46% the strength). When Sun, Moon, and Earth align (new/full moon): spring tides (highest). When at right angles: neap tides (lowest range).</div>
+        </div>
+      </div>
+
+      <div class="space-label-8">The 8 lunar phases -- one complete cycle = 29.5 days</div>
+      <div class="space-row-5">
+        <div class="space-panel-7">
+          <div class="space-media-10"></div>
+          <div class="space-label-9">New Moon</div>
+          <div class="muted-text-tiny">Day 0 -- invisible.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-11"></div>
+          <div class="space-label-9">Waxing crescent</div>
+          <div class="muted-text-tiny">Days 1–6. Right side lit.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-12"></div>
+          <div class="space-label-9">First quarter</div>
+          <div class="muted-text-tiny">Day 7. Right half lit.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-13"></div>
+          <div class="space-label-9">Waxing gibbous</div>
+          <div class="muted-text-tiny">Days 8–13. Mostly lit.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-14"></div>
+          <div class="space-label-9">Full Moon</div>
+          <div class="muted-text-tiny">Day 14–15. Fully lit.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-15"></div>
+          <div class="space-label-9">Waning gibbous</div>
+          <div class="muted-text-tiny">Days 16–21. Left side lit.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-16"></div>
+          <div class="space-label-9">Last quarter</div>
+          <div class="muted-text-tiny">Day 22. Left half lit.</div>
+        </div>
+        <div class="space-panel-7">
+          <div class="space-media-17"></div>
+          <div class="space-label-9">Waning crescent</div>
+          <div class="muted-text-tiny">Days 23–29. Sliver left.</div>
+        </div>
+      </div>
+
+      <div class="space-panel-8">
+        <strong class="text-primary">The Moon's movement through space is complex:</strong> It orbits Earth (27.3 days). Earth + Moon orbit the Sun together (365.25 days). The Moon's path around the Sun is always convex -- it always curves toward the Sun, never loops backward, despite appearances. The Moon is also very slowly drifting away from Earth at ~3.8 cm/year (measured by laser retroreflectors left by Apollo missions).
+      </div>
+    </div>
+
+    <!-- ===========================
+         PART E -- ATMOSPHERE
+    =========================== -->
+    <h2 class="sec" id="part-e-earth-s-atmosphere-the-five-layers">Part E · Earth's atmosphere -- the five layers</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">From the ground to space -- altitude and what happens at each level</div>
+      <div class="space-row-6">
+        <div class="space-panel-9">
+          <div class="space-row-2">
+            <span class="space-label-10">Exosphere</span>
+            <span class="space-text-21">700 km to ~10,000 km</span>
+          </div>
+          <div class="space-text-22">The outermost layer -- atmosphere so thin it merges imperceptibly into interplanetary space. Molecules can escape Earth's gravity. Satellites in very high orbits (GPS: ~20,200 km) orbit here. No weather phenomena. Temperature "definition" breaks down -- molecules travel huge distances between collisions.</div>
+        </div>
+        <div class="space-panel-10">
+          <div class="space-row-2">
+            <span class="space-label-10">Thermosphere</span>
+            <span class="space-text-21">80–700 km</span>
+          </div>
+          <div class="space-text-22">ISS orbits here (~400 km). Temperature rises dramatically with altitude (up to 2,500°C) -- but air is so thin there are almost no molecules to transfer heat. Auroras (Northern/Southern Lights) occur here -- solar wind particles excite atmospheric atoms. Re-entry vehicles experience intense heating here from air compression.</div>
+        </div>
+        <div class="space-panel-11">
+          <div class="space-row-2">
+            <span class="space-label-10">Mesosphere</span>
+            <span class="space-text-21">50–80 km</span>
+          </div>
+          <div class="space-text-23">Temperature drops to −90°C at the mesopause (top) -- coldest natural temperature on Earth. Most meteors burn up here (friction with air molecules). Noctilucent clouds form near the top at ~82 km -- rare, beautiful electric-blue clouds of ice crystals, only visible at twilight. Too high for aircraft, too low for satellites -- the "ignorosphere."</div>
+        </div>
+        <div class="space-panel-12">
+          <div class="space-row-2">
+            <span class="space-label-11">Stratosphere</span>
+            <span class="space-text-24">12–50 km</span>
+          </div>
+          <div class="space-text-25">Contains the ozone layer (~15–35 km) which absorbs UV radiation -- essential for life on Earth. Temperature increases with altitude here (the opposite of the troposphere) because ozone absorbs UV energy. Very dry, no weather. Commercial aircraft fly at ~10–12 km (just below/at the tropopause). Concorde flew at ~18 km in the lower stratosphere. Weather balloons reach ~30–40 km.</div>
+        </div>
+        <div class="space-panel-13">
+          <div class="space-row-2">
+            <span class="space-label-11">Troposphere</span>
+            <span class="space-text-26">0–12 km (8 km at poles, 16 km at equator)</span>
+          </div>
+          <div class="space-text-27">All weather happens here. Contains ~75% of the atmosphere's mass and ~99% of its water vapour. Temperature decreases ~6.5°C per km. Mount Everest (8,849 m) is near the top. Beyond the tropopause (the boundary), temperature stops falling -- this inversion "caps" convection and prevents weather systems from penetrating into the stratosphere.</div>
+        </div>
+      </div>
+      <div class="space-panel-14">The Kármán line (100 km) is the internationally recognised boundary of space -- the point where the atmosphere is too thin for aircraft to generate lift and orbital mechanics take over.</div>
+    </div>
+
+    <!-- ===========================
+         PART F -- KEY DISTANCES
+    =========================== -->
+    <h2 class="sec" id="part-f-key-space-distances-the-numbers-you-need">Part F · key space distances -- the numbers you need</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">Distances from Earth's surface -- drag to explore</div>
+      <div class="space-row-7">
+        <label class="space-text-28">Altitude:</label>
+        <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="18" value="3" step="1">
+      </div>
+      <div class="dist-display" id="dist-display"></div>
+    </div>
+
+    <!-- ===========================
+         PART G -- UNIVERSE COMPOSITION
+    =========================== -->
+    <h2 class="sec" id="part-g-the-universe-s-composition-what-everything-is-made-of">Part G · the universe's composition -- what everything is made of</h2>
+
+    <div class="space-grid-5">
+      <!-- Composition visual -->
+      <div class="content-card-static">
+        <div class="space-label-3">Composition of the observable universe</div>
+        <!-- SVG pie chart approximation using stacked sections -->
+        <svg class="space-media-18" viewBox="0 0 200 200">
+          <!-- Dark energy ~68%: 0–244.8° (in SVG path terms) -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#3C3489" stroke-width="50"
+            stroke-dasharray="341 660" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
+          <!-- Dark matter ~27%: 244.8–341.9° -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#878BE8" stroke-width="50"
+            stroke-dasharray="135 866" stroke-dashoffset="-341" transform="rotate(-90 100 100)"/>
+          <!-- Ordinary matter ~5%: 341.9–360° -->
+          <circle cx="100" cy="100" r="80" fill="none" stroke="var(--accent)" stroke-width="50"
+            stroke-dasharray="25 976" stroke-dashoffset="-476" transform="rotate(-90 100 100)"/>
+          <circle cx="100" cy="100" r="54" fill="var(--color-background-primary)"/>
+          <text x="100" y="97" text-anchor="middle" font-size="11" fill="var(--color-text-primary)" font-weight="600">Observable</text>
+          <text x="100" y="112" text-anchor="middle" font-size="11" fill="var(--color-text-primary)" font-weight="600">Universe</text>
+        </svg>
+        <div class="composition-legend">
+          <div class="comp-item"><div class="comp-dot bg-indigo-900"></div>Dark energy -- 68%</div>
+          <div class="comp-item"><div class="comp-dot comp-dot-style-2"></div>Dark matter -- 27%</div>
+          <div class="comp-item"><div class="comp-dot bg-teal-500"></div>Ordinary matter -- 5%</div>
+        </div>
+      </div>
+      <!-- What ordinary matter is -->
+      <div class="content-card-static">
+        <div class="space-label-3">Of that 5% ordinary matter…</div>
+        <div class="u-mb-sm">
+          <div class="mag-row">
+            <span class="mag-label">Intergalactic gas</span>
+            <div class="mag-bar mag-bar-style"><span class="mag-val text-white">~72%</span></div>
+          </div>
+          <div class="mag-row">
+            <span class="mag-label">Intragalactic gas &amp; dust</span>
+            <div class="mag-bar mag-bar-style-2"><span class="mag-val text-white">~18%</span></div>
+          </div>
+          <div class="mag-row">
+            <span class="mag-label">Stars</span>
+            <div class="mag-bar mag-bar-style-3"><span class="mag-val text-white">~8%</span></div>
+          </div>
+          <div class="mag-row">
+            <span class="mag-label">Everything else<br><span class="space-text-29">(planets, you, etc.)</span></span>
+            <div class="mag-bar mag-bar-style-4"><span class="mag-val text-white">&lt;1%</span></div>
+          </div>
+        </div>
+        <div class="space-text-30">Everything you can see, touch, and measure -- all galaxies, stars, planets, people, and light -- accounts for just <strong class="text-primary">~5% of the universe's total energy content.</strong> Dark matter doesn't interact with light (we detect it only via gravity). Dark energy is the name given to the force driving the universe's accelerating expansion. Both are among the deepest unsolved problems in physics.</div>
+      </div>
+    </div>
+
+    <!-- Cosmic timeline -->
+    <div class="content-panel">
+      <div class="space-label-3">The cosmic calendar -- if the universe's age were one year</div>
+      <div class="space-text-31">Carl Sagan's concept: compress 13.8 billion years into 1 calendar year. Each second = ~437 years.</div>
+      <div class="tl-item">
+        <span class="tl-year">Jan 1</span>
+        <div class="tl-body"><div class="tl-name">Big Bang -- the universe begins</div><div class="tl-desc">13.8 billion years ago. Time, space, and all matter created. Temperature: 10³² K. Cosmic inflation expands the universe by a factor of 10²⁶ in a fraction of a second.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Jan 22</span>
+        <div class="tl-body"><div class="tl-name">First stars ignite</div><div class="tl-desc">~13.5 billion years ago. Population III stars -- enormous, metal-free, extremely short-lived. Their explosions seeded the universe with heavier elements forged in stellar cores.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Mar 16</span>
+        <div class="tl-body"><div class="tl-name">Milky Way begins to form</div><div class="tl-desc">~12 billion years ago. The Milky Way is relatively old as galaxies go -- it has been assembling via mergers for most of cosmic history. Its central supermassive black hole (Sagittarius A*, 4 million solar masses) likely formed early.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Sep 2</span>
+        <div class="tl-body"><div class="tl-name">Sun and solar system form</div><div class="tl-desc">4.6 billion years ago. A giant molecular cloud collapses. The Sun ignites. Planets form from the protoplanetary disc within ~100 million years. Earth's Moon forms from a giant impact with a Mars-sized body (the "Theia" hypothesis) within the first ~50 million years.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Sep 14</span>
+        <div class="tl-body"><div class="tl-name">First life on Earth appears</div><div class="tl-desc">~4 billion years ago. Microbial life (likely chemosynthetic bacteria) in ancient oceans. Life appeared remarkably quickly after Earth cooled enough to have liquid water -- within the first ~500 million years.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Dec 17</span>
+        <div class="tl-body"><div class="tl-name">Cambrian explosion</div><div class="tl-desc">540 million years ago. Multicellular animal life diversifies explosively. Most major animal body plans appear in the fossil record within ~20 million years.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Dec 25</span>
+        <div class="tl-body"><div class="tl-name">Dinosaurs go extinct (K-Pg event)</div><div class="tl-desc">66 million years ago. Chicxulub impactor (~10 km diameter) hits the Yucatán Peninsula. 75% of all species extinct. Mammals diversify into the vacated ecological niches.</div></div>
+      </div>
+      <div class="tl-item tl-item-style">
+        <span class="tl-year">Dec 31<br>11:59:59</span>
+        <div class="tl-body"><div class="tl-name">All of recorded human history</div><div class="tl-desc">The last ~10,000 years (agriculture, writing, all civilisations, the entire scientific enterprise) occupies the final 23 seconds of the cosmic year. Modern Homo sapiens (~300,000 years old) appears at 11:58:43 pm. You exist in the final fraction of a second.</div></div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         PART H -- SPACE MISSIONS
+    =========================== -->
+    <h2 class="sec" id="part-h-landmark-space-missions-10-missions-that-changed-everything">Part H · landmark space missions -- 10 missions that changed everything</h2>
+
+    <div class="u-mb-lg">
+      <div class="tab-bar" id="mission-tabs"></div>
+      <div class="tab-panel" id="mission-panel"></div>
+    </div>
+
+    <!-- ===========================
+         PART I -- SpaceX
+    =========================== -->
+    <h2 class="sec" id="part-i-spacex-the-private-space-revolution">Part I · SpaceX -- the private space revolution</h2>
+
+    <div class="space-panel-16">
+      <div class="inline-card-title">Founded 2002 by Elon Musk with $100 million of his own capital</div>
+      <div class="muted-copy">SpaceX entered an industry dominated by governments and legacy contractors, with the explicit goal of making humanity multiplanetary. Its core innovation was vertical integration (building almost everything in-house) and reusability -- the two factors that have driven launch costs from ~$50,000/kg (Space Shuttle) toward a target of &lt;$100/kg with Starship. As of 2025, SpaceX conducts more orbital launches per year than all other countries combined.</div>
+    </div>
+
+    <!-- Launch Vehicles - Tabbed Version -->
+    <div class="space-label-13">Launch vehicles</div>
+    
+    <div class="tab-bar" id="launcher-tabs"></div>
+    <div class="tab-panel launcher-panel" id="launcher-panel"></div>
+
+    <!-- SpaceX mission tabs -->
+    <div class="space-text-32">Key missions &amp; programmes</div>
+    <div class="tab-bar" id="spacex-tabs"></div>
+    <div class="tab-panel u-mb-lg" id="spacex-panel"></div>
+
+    <!-- ===========================
+         PART J -- CROSS-MODULE CALCULATORS
+    =========================== -->
+    <h2 class="sec" id="part-j-interactive-calculators-from-other-modules">Part J · interactive calculators -- from other modules</h2>
+
+    <div class="xmod-grid">
+      <a href="/perceptense/modules/time-and-scale/#solar-age" target="_blank" rel="noopener" class="xmod-card">
+        <div class="xmod-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+        <div>
+          <div class="xmod-label">Module 07 · Time &amp; Scale</div>
+          <div class="xmod-title">Your age on other planets</div>
+          <div class="xmod-desc">Enter your birthdate and see how old you'd be if you'd lived on Mars, Jupiter, or any other planet.</div>
+        </div>
+      </a>
+      <a href="/perceptense/modules/weight-and-mass/#solar-mass" target="_blank" rel="noopener" class="xmod-card">
+        <div class="xmod-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+        <div>
+          <div class="xmod-label">Module 01 · Weight &amp; Mass</div>
+          <div class="xmod-title">Your weight across the solar system</div>
+          <div class="xmod-desc">See how many kilograms you'd register on the surface of every planet and the Moon, scaled by surface gravity.</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- ===========================
+         PART K -- BEYOND THE SOLAR SYSTEM
+    =========================== -->
+    <h2 class="sec" id="part-k-beyond-the-solar-system-stars-galaxies-and-the-cosmos">Part K · beyond the solar system -- stars, galaxies, and the cosmos</h2>
+
+    <!-- Nearest neighbours -->
+    <div class="content-panel">
+      <div class="panel-title">Our nearest stellar neighbours</div>
+      <div class="neighbor-row">
+        <span class="neighbor-dist">4.24 ly</span>
+        <div class="neighbor-body">
+          <div class="neighbor-name">Proxima Centauri -- the closest star to the Sun</div>
+          <div class="neighbor-desc">A red dwarf (M-type) only 0.12% as luminous as the Sun. Hosts Proxima b, a potentially rocky planet in the habitable zone. However, red dwarfs emit intense flares that could strip away atmospheres. Part of the Alpha Centauri triple system. At current spacecraft speeds (~17 km/s) it would take ~73,000 years to reach.</div>
+        </div>
+      </div>
+      <div class="neighbor-row">
+        <span class="neighbor-dist">4.37 ly</span>
+        <div class="neighbor-body">
+          <div class="neighbor-name">Alpha Centauri A &amp; B -- the two bright companions</div>
+          <div class="neighbor-desc">A binary pair (G-type and K-type) orbiting each other every 80 years. Alpha Centauri A is nearly identical to our Sun. The brightest star in the southern sky (Rigil Kentaurus). Breakthrough Starshot aims to send a laser-propelled probe there at 20% the speed of light -- arrival in ~20 years.</div>
+        </div>
+      </div>
+      <div class="neighbor-row">
+        <span class="neighbor-dist">5.96 ly</span>
+        <div class="neighbor-body">
+          <div class="neighbor-name">Barnard's Star -- the fastest-moving star in the sky</div>
+          <div class="neighbor-desc">A red dwarf moving at such high apparent speed across the sky that its position measurably shifts within a human lifetime. It will become our closest neighbour in ~10,000 years. Has a candidate super-Earth Barnard's Star b (contested). Its rapid motion was used historically to calculate its distance precisely.</div>
+        </div>
+      </div>
+      <div class="neighbor-row">
+        <span class="neighbor-dist">8.58 ly</span>
+        <div class="neighbor-body">
+          <div class="neighbor-name">Sirius -- the brightest star in the night sky</div>
+          <div class="neighbor-desc">A white A-type star 2.1× the Sun's mass and 25× its luminosity. Has a white dwarf companion (Sirius B) -- what remains after a star more massive than the Sun exhausted its fuel. Despite being the brightest star as seen from Earth, it is not particularly special; it just happens to be relatively close.</div>
+        </div>
+      </div>
+      <div class="neighbor-row">
+        <span class="neighbor-dist">10.5 ly</span>
+        <div class="neighbor-body">
+          <div class="neighbor-name">Epsilon Eridani -- one of the youngest nearby stars</div>
+          <div class="neighbor-desc">Only ~800 million years old (vs the Sun's 4.6 billion). Has a confirmed planet (Epsilon Eridani b) and a debris disc similar to a young solar system. Featured extensively in science fiction -- the destination of humanity's first interstellar colony ship in Arthur C. Clarke's novels.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Milky Way scale -->
+    <div class="content-panel">
+      <div class="panel-title">The Milky Way -- our galaxy in numbers</div>
+      <div class="two-col-grid">
+        <div class="sub-card">
+          <div class="mini-card-title">Scale</div>
+          <div class="muted-copy-tight">100,000–120,000 light-years diameter. ~1,000 light-years thick at the disc. Our Sun sits in the Orion Arm, ~26,000 light-years from the galactic centre.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Contents</div>
+          <div class="muted-copy-tight">100–400 billion stars. Estimated 100 billion planets. Central supermassive black hole: Sagittarius A* (~4 million solar masses). Dark matter halo extends ~260,000 light-years.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Structure</div>
+          <div class="muted-copy-tight">A barred spiral galaxy. The bar at the centre (~27,000 ly long) channels gas into the core. Four main spiral arms. Orbits its own centre once every ~225 million years (one "galactic year" = 225 Myr).</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Our motion</div>
+          <div class="muted-copy-tight">The Sun orbits the galactic centre at ~230 km/s. The Milky Way itself moves at ~630 km/s toward the Great Attractor. The entire Local Group is also falling toward the Virgo Supercluster.</div>
+        </div>
+      </div>
+      <!-- Scale bar visual -->
+      <div class="panel-title-spaced u-mt-sm">Milky Way cross-section -- our position</div>
+      <div class="mw-scale-track" id="mw-track">
+        <span class="mw-tick" style="left:0%">Centre<br>0 ly</span>
+        <span class="mw-tick" style="left:22%">Sagittarius<br>Arm</span>
+        <span class="mw-tick" style="left:43%">Sun &#9737;<br>26,000 ly</span>
+        <span class="mw-tick" style="left:70%">Perseus<br>Arm</span>
+        <span class="mw-tick" style="left:100%">Edge<br>60,000 ly</span>
+      </div>
+      <div style="margin-top:28px;" class="muted-copy">The Sun is not at the centre -- it sits in a relatively quiet suburban region of one of the Milky Way's minor spiral arms. This is likely important for life: the galactic centre is a violent environment of intense radiation, frequent supernovae, and gravitational disruption.</div>
+    </div>
+
+    <!-- Galaxy types -->
+    <div class="content-panel">
+      <div class="panel-title">Types of galaxies -- from spirals to ellipticals</div>
+      <div id="galaxy-tabs" class="tab-bar"></div>
+      <div class="tab-panel" id="galaxy-panel"></div>
+    </div>
+
+    <!-- Exoplanets -->
+    <div class="content-panel">
+      <div class="panel-title">Exoplanets -- planets beyond the Solar System</div>
+      <div class="muted-copy u-mb-md">As of 2025, over 5,700 exoplanets have been confirmed. The methods used to find them reveal how different -- and how common -- planetary systems are.</div>
+      <div id="exo-tabs" class="tab-bar"></div>
+      <div id="exo-panel"></div>
+    </div>
+
+    <!-- Cosmic distance ladder -->
+    <div class="content-panel">
+      <div class="panel-title">The cosmic distance ladder -- how we measure the universe</div>
+      <div class="muted-copy u-mb-md">Astronomers cannot use a single method for all distances. Instead they build a hierarchy of overlapping techniques, each calibrated against the one below it.</div>
+      <div class="space-row-6">
+        <div class="space-panel-9">
+          <div class="space-row-2">
+            <span class="space-label-10">Radar ranging</span>
+            <span class="space-text-21">Up to ~2 AU</span>
+          </div>
+          <div class="space-text-22">Bouncing radio waves off nearby planets and measuring the round-trip time gives exact distances in the inner Solar System. Used to calibrate the Astronomical Unit precisely to within metres.</div>
+        </div>
+        <div class="space-panel-10">
+          <div class="space-row-2">
+            <span class="space-label-10">Stellar parallax</span>
+            <span class="space-text-21">Up to ~10,000 light-years</span>
+          </div>
+          <div class="space-text-22">As Earth orbits the Sun, nearby stars appear to shift slightly against background stars. The angle of shift reveals distance geometrically. The Gaia spacecraft measured parallax for over 1 billion stars with extraordinary precision.</div>
+        </div>
+        <div class="space-panel-11">
+          <div class="space-row-2">
+            <span class="space-label-10">Cepheid variable stars</span>
+            <span class="space-text-21">Up to ~100 million light-years</span>
+          </div>
+          <div class="space-text-23">Cepheid stars pulsate with a period precisely linked to their intrinsic luminosity. Measure the period, know the true brightness, compare to apparent brightness, and you have the distance. Henrietta Swan Leavitt discovered this relationship in 1908, unlocking the scale of the universe.</div>
+        </div>
+        <div class="space-panel-12">
+          <div class="space-row-2">
+            <span class="space-label-11">Type Ia supernovae</span>
+            <span class="space-text-24">Up to ~10 billion light-years</span>
+          </div>
+          <div class="space-text-25">White dwarf stars that explode after accreting enough mass always reach the same intrinsic peak brightness -- a "standard candle." This allowed astronomers to discover in 1998 that the expansion of the universe is accelerating (earning a Nobel Prize in 2011), implying the existence of dark energy.</div>
+        </div>
+        <div class="space-panel-13">
+          <div class="space-row-2">
+            <span class="space-label-11">Cosmic Microwave Background / Hubble's Law</span>
+            <span class="space-text-26">Billions of light-years</span>
+          </div>
+          <div class="space-text-27">The universe's expansion means distant galaxies are redshifted in proportion to their distance (Hubble's Law: v = H₀ x d). The CMB maps the entire observable universe as it was 380,000 years after the Big Bang. Together these fix the universe's age at 13.8 billion years and size at 93 billion light-years (diameter of the observable universe).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         BLACK HOLES -- detailed section
+    =========================== -->
+    <h2 class="sec" id="part-k-i-black-holes-in-detail">Part K (i) · black holes -- in detail</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">What is a black hole?</div>
+      <div class="muted-copy-large u-mb-md">A black hole is a region of spacetime where gravity is so extreme that nothing -- not even light -- can escape once it crosses the event horizon. They are not "vacuum cleaners" that suck in matter from afar; at any distance beyond the event horizon, a black hole's gravity is no different from any other object of the same mass. Their power lies in their compactness.</div>
+      <div class="two-col-grid">
+        <div class="sub-card">
+          <div class="mini-card-title">Formation</div>
+          <div class="muted-copy-tight">Stellar black holes form when a massive star (more than ~20-25 solar masses) exhausts its nuclear fuel. The core collapses in a fraction of a second -- no longer able to support its own weight -- while the outer layers explode as a supernova. The collapsed core, if massive enough, becomes a black hole rather than a neutron star.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Schwarzschild radius</div>
+          <div class="muted-copy-tight">Every mass has a theoretical Schwarzschild radius: compress that mass within this radius and it becomes a black hole. For the Sun: ~3 km. For Earth: ~9 mm. For a human body: ~10⁻²⁵ m (far smaller than an atomic nucleus). The radius scales linearly with mass.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BH types -->
+    <div class="content-panel">
+      <div class="panel-title">Types of black holes</div>
+      <div class="bhtype-grid">
+        <div class="bhtype-card">
+          <div class="bhtype-name">Stellar-mass</div>
+          <div class="bhtype-mass">~3 to ~100 solar masses</div>
+          <div class="bhtype-desc">Formed from dying massive stars. Thousands exist in the Milky Way. The first confirmed: Cygnus X-1 (1972). Detectable via X-ray emissions from accreting material.</div>
+        </div>
+        <div class="bhtype-card">
+          <div class="bhtype-name">Intermediate-mass</div>
+          <div class="bhtype-mass">100 to ~100,000 solar masses</div>
+          <div class="bhtype-desc">Long theorised but hard to confirm. First strong evidence found in globular clusters and dwarf galaxy nuclei. The "missing link" between stellar and supermassive black holes.</div>
+        </div>
+        <div class="bhtype-card">
+          <div class="bhtype-name">Supermassive</div>
+          <div class="bhtype-mass">1 million to 66 billion solar masses</div>
+          <div class="bhtype-desc">Found at the centres of almost all large galaxies. Our own: Sagittarius A* (4 million solar masses). The largest known: TON 618 (66 billion solar masses). How they form remains an open question.</div>
+        </div>
+        <div class="bhtype-card">
+          <div class="bhtype-name">Primordial (theoretical)</div>
+          <div class="bhtype-mass">Any mass -- even sub-gram</div>
+          <div class="bhtype-desc">Hypothetical black holes formed from density fluctuations in the very early universe, before stars existed. Could explain dark matter. Searched for via gravitational lensing -- none confirmed yet.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BH anatomy interactive -->
+    <div class="content-panel">
+      <div class="panel-title">Anatomy of a black hole -- layers from outside in</div>
+      <div class="muted-copy u-mb-md">Click a region to learn more. Distances shown are for a stellar black hole of ~10 solar masses (Schwarzschild radius ~30 km).</div>
+      <div id="bh-anatomy">
+        <div class="bh-layer bh-zone-outer" data-bh="outer" style="cursor:pointer">
+          <span class="bh-layer-name">Accretion disc / jets</span>
+          <span class="bh-layer-dist">Thousands to millions of km out</span>
+        </div>
+        <div class="bh-layer bh-zone-accr" data-bh="accr" style="cursor:pointer">
+          <span class="bh-layer-name">Inner accretion disc</span>
+          <span class="bh-layer-dist">~300–3,000 km</span>
+        </div>
+        <div class="bh-layer bh-zone-isco" data-bh="isco" style="cursor:pointer">
+          <span class="bh-layer-name">ISCO -- innermost stable circular orbit</span>
+          <span class="bh-layer-dist">~90 km (3× r<sub>s</sub>)</span>
+        </div>
+        <div class="bh-layer bh-zone-photo" data-bh="photo" style="cursor:pointer">
+          <span class="bh-layer-name">Photon sphere</span>
+          <span class="bh-layer-dist">~45 km (1.5× r<sub>s</sub>)</span>
+        </div>
+        <div class="bh-layer bh-zone-eh" data-bh="eh" style="cursor:pointer">
+          <span class="bh-layer-name">★ Event horizon</span>
+          <span class="bh-layer-dist">~30 km (r<sub>s</sub>)</span>
+        </div>
+        <div class="bh-layer bh-zone-ergo" data-bh="ergo" style="cursor:pointer">
+          <span class="bh-layer-name">Ergosphere (rotating BH only)</span>
+          <span class="bh-layer-dist">Inside EH for Kerr BH</span>
+        </div>
+        <div class="bh-layer bh-zone-jets" data-bh="sing" style="cursor:pointer">
+          <span class="bh-layer-name">Singularity (theoretical)</span>
+          <span class="bh-layer-dist">r = 0 (mathematically)</span>
+        </div>
+      </div>
+      <div class="sub-card u-mt-md" id="bh-detail">
+        <div class="mini-card-title text-secondary" id="bh-detail-title">Select a region above to explore it</div>
+        <div class="muted-copy" id="bh-detail-text">Each zone of a black hole has radically different physics. The event horizon is where Einstein's general relativity predicts a "point of no return" for in-falling matter and light.</div>
+      </div>
+    </div>
+
+    <!-- BH famous events -->
+    <div class="content-panel">
+      <div class="panel-title">Milestones in black hole observation</div>
+      <div class="tl-item">
+        <span class="tl-year">1915</span>
+        <div class="tl-body"><div class="tl-name">Einstein's general relativity predicts extreme spacetime curvature</div><div class="tl-desc">Karl Schwarzschild derived the first exact solution to Einstein's field equations within weeks of their publication -- describing the geometry of spacetime around a point mass. He found the mathematical feature we now call the event horizon, though the physical interpretation took decades.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">1972</span>
+        <div class="tl-body"><div class="tl-name">Cygnus X-1 -- first strong black hole candidate confirmed</div><div class="tl-desc">An X-ray binary system in which a compact invisible object (too massive for a neutron star) accretes material from a companion star, emitting X-rays. Stephen Hawking famously bet Kip Thorne in 1974 that it was NOT a black hole -- and conceded in 1990.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2015</span>
+        <div class="tl-body"><div class="tl-name">First gravitational wave detection -- LIGO hears two black holes merge</div><div class="tl-desc">The merger of two stellar black holes (29 and 36 solar masses) 1.3 billion light-years away was detected as a spacetime ripple lasting 0.2 seconds. The signal matched general relativity's prediction perfectly. This opened gravitational wave astronomy as an entirely new way to observe the universe.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2019</span>
+        <div class="tl-body"><div class="tl-name">First image of a black hole's shadow -- M87*</div><div class="tl-desc">The Event Horizon Telescope (a planet-sized radio array) imaged the shadow of M87* -- a 6.5 billion solar mass black hole 55 million light-years away. The glowing ring of superheated gas matched theoretical predictions. In 2022, the same team imaged Sagittarius A*, the Milky Way's own central black hole.</div></div>
+      </div>
+      <div class="tl-item tl-item-style">
+        <span class="tl-year">Ongoing</span>
+        <div class="tl-body"><div class="tl-name">Hawking radiation -- still undetected but theoretically critical</div><div class="tl-desc">In 1974, Stephen Hawking showed that black holes must slowly emit thermal radiation due to quantum effects near the event horizon -- eventually evaporating entirely. For stellar black holes, the temperature is ~60 nanokelvin, undetectable in practice (cooler than the CMB), but the principle has profound implications for the "information paradox": what happens to the information about everything that fell in?</div></div>
+      </div>
+    </div>
+
+    <!-- ===========================
+         WORMHOLES -- detailed section
+    =========================== -->
+    <h2 class="sec" id="part-k-ii-wormholes-in-detail">Part K (ii) · wormholes -- in detail</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">What is a wormhole?</div>
+      <div class="muted-copy-large u-mb-md">A wormhole (formally: an Einstein-Rosen bridge) is a hypothetical tunnel through spacetime connecting two separate points in space or time. While they emerge from valid mathematics in general relativity, no wormhole has ever been observed, and enormous physical obstacles exist to their creation or traversability. They are not science fiction -- they are legitimate solutions to Einstein's equations -- but whether they can exist in nature remains one of physics' open questions.</div>
+      <div class="info-block">
+        <strong>Key distinction:</strong> All wormholes that appear in Einstein's equations are fundamentally unstable and non-traversable in their basic form. Making them traversable requires "exotic matter" with negative energy density -- a form of matter that may not exist, or may only exist in tiny quantities via the Casimir effect.
+      </div>
+    </div>
+
+    <!-- Wormhole anatomy -->
+    <div class="content-panel">
+      <div class="panel-title">Anatomy of a traversable wormhole (Thorne-Morris model, 1988)</div>
+      <div class="muted-copy u-mb-md">The Morris-Thorne wormhole is the physicists' favourite toy model -- mathematically well-defined, physically informative. Toggle each section to understand what the theory actually says.</div>
+      <div id="wh-anatomy">
+        <div class="wh-section wh-mouth-a">
+          <span class="wh-icon">🌌</span>
+          <div class="wh-body">
+            <div class="wh-title">Mouth A -- entry point (e.g. our region of space)</div>
+            <div class="wh-desc">Appears as a spherical opening suspended in space. To a distant observer it would look like a warped, lensed image of wherever the other mouth is -- you would see the other end of the universe as if looking through a glass sphere. Tidal forces near the mouth are theoretically kept survivable for a sufficiently large wormhole.</div>
+          </div>
+        </div>
+        <div class="wh-section wh-throat">
+          <span class="wh-icon">⏱️</span>
+          <div class="wh-body">
+            <div class="wh-title">The throat -- minimum radius</div>
+            <div class="wh-desc">The narrowest point of the tunnel. This is where time dilation is most extreme. For a traversable wormhole, the throat must remain open -- held apart by something. Gravity alone would collapse it instantly. The transit time through the throat can, in theory, be made shorter than the light-travel time between the two mouths in normal space -- this is what makes wormholes potentially useful for faster-than-light travel (or closed timelike curves).</div>
+          </div>
+        </div>
+        <div class="wh-section wh-exotic">
+          <span class="wh-icon">⚛️</span>
+          <div class="wh-body">
+            <div class="wh-title">Exotic matter requirement -- the fatal obstacle</div>
+            <div class="wh-desc">To keep the throat open, the wormhole requires "exotic matter" -- material with negative energy density that threads the throat and exerts a repulsive gravitational effect. The Casimir effect (a quantum phenomenon) demonstrates that negative energy densities are physically possible in tiny amounts, but the quantities required for a macroscopic wormhole are astronomically large. This is the central reason physicists believe traversable wormholes are probably impossible in practice, even if allowed in theory.</div>
+          </div>
+        </div>
+        <div class="wh-section wh-mouth-b">
+          <span class="wh-icon">🌠</span>
+          <div class="wh-body">
+            <div class="wh-title">Mouth B -- exit point (another location or time)</div>
+            <div class="wh-desc">Could in principle be anywhere in the same spacetime: billions of light-years away, or in a different region of the same galaxy. More provocatively, general relativity also permits the two mouths to be connected to different times -- a wormhole whose mouths are moved at relativistic speeds relative to each other (or placed in different gravitational potentials) would experience different rates of time, creating a potential time machine. This is what led Kip Thorne to publish the 1988 wormhole paper: a graduate student asked if time machines were possible, and the answer turned out to be: yes, IF wormholes exist AND can be traversed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wormhole types comparison -->
+    <div class="content-panel">
+      <div class="panel-title">Types of wormholes -- from Einstein-Rosen to ER=EPR</div>
+      <div id="wh-tabs" class="tab-bar"></div>
+      <div class="tab-panel" id="wh-panel"></div>
+    </div>
+
+    <!-- Wormhole vs BH comparison -->
+    <div class="content-panel">
+      <div class="panel-title">Wormhole vs. black hole -- key differences</div>
+      <div class="space-row-6">
+        <div class="space-panel-9">
+          <div class="space-label-10">Black hole</div>
+          <div class="space-text-22">One-way. Once you cross the event horizon, you cannot leave -- not even information can escape. General relativity predicts a singularity at the centre where density becomes infinite and current physics breaks down. Black holes are confirmed to exist via multiple independent lines of evidence. They destroy information (possibly -- this is the "information paradox").</div>
+        </div>
+        <div class="space-panel-11">
+          <div class="space-label-10">Wormhole</div>
+          <div class="space-text-22">Hypothetically two-way (if traversable). Both mouths have horizons in the non-traversable Schwarzschild case, but a traversable wormhole requires the exotic matter to prevent horizon formation. Information is preserved -- it exits the other mouth. Wormholes have never been observed. The ER=EPR conjecture (2013, Maldacena and Susskind) proposes that quantum entanglement and wormholes may be the same phenomenon -- connecting quantum mechanics and general relativity in a profound way.</div>
+        </div>
+      </div>
+      <div class="warning-block u-mt-md">
+        <strong>The chronology protection conjecture:</strong> Stephen Hawking proposed that the laws of physics conspire to prevent wormholes from being used as time machines -- quantum fluctuations near the wormhole throat would build up catastrophically, destroying the wormhole before it could be exploited for backwards time travel. This remains unproven but is consistent with our observation that we have not been visited by time travellers.
+      </div>
+    </div>
+
+    <!-- ===========================
+         PART L -- TEST YOURSELF
+    =========================== -->
+    <h2 class="sec" id="part-l-q-and-a">Part L · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. Venus is closer to Earth than Mars, yet Mars has been visited by more spacecraft. Why is Mars a better destination for exploration?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Venus is hellish in ways Mars is not. Venus's surface temperature is ~465°C -- hot enough to melt lead -- due to an extreme greenhouse effect. The atmosphere is 90× denser than Earth's (equivalent to 900m underwater) and composed of carbon dioxide with sulphuric acid clouds. Every spacecraft that has landed on Venus has been destroyed within 2 hours by the pressure and heat. Mars, while cold (avg −63°C) and with a very thin atmosphere (1% of Earth's), is survivable for robotic missions. Rovers (Curiosity, Perseverance) have operated for years. Mars also has evidence of ancient water (dried riverbeds, polar ice caps) making it interesting for life-detection. There are also serious proposals for human missions to Mars. A human mission to Venus would require floating in the upper atmosphere -- the surface is inaccessible with current technology.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. Why does the Moon always show the same face to Earth, and what would you see if you stood on the far side?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Tidal locking: Earth's gravity created tidal bulges in the Moon's solid crust. The gravitational pull on these bulges created a torque that gradually slowed the Moon's rotation over billions of years until its rotation period exactly equalled its orbital period (27.3 days). At that point, the same face perpetually points toward Earth -- the system is in its lowest energy state, and there's no longer a torque to change it. From the far side of the Moon, you would never see Earth -- it would always be below your horizon. You would see the stars and Sun in a completely black sky (no atmosphere means no scattered light). The far side has a much more heavily cratered surface -- the near side's mare (dark volcanic plains) are largely absent. China's Chang'e 4 became the first mission to land on the far side in January 2019. Communication requires a relay satellite positioned at the Earth-Moon L2 Lagrange point because the Moon itself blocks direct radio contact.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. If you were on the ISS (400 km altitude), would you experience weightlessness because you're "far from Earth's gravity"?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">No -- this is one of the most common misconceptions in space science. At 400 km altitude, Earth's gravity is still about 88–89% of its surface value. You feel weightless on the ISS not because gravity is weak, but because you are in continuous freefall. The ISS (and everything in it) is falling toward Earth at the same rate -- but moving horizontally fast enough (~27,600 km/h) that Earth's curved surface keeps falling away beneath it at the same rate it falls toward Earth. This is what an orbit is: perpetual freefall in which you miss the ground because you're moving sideways so fast. Astronauts experience microgravity because every object in the ISS -- the station itself, their bodies, their breakfast -- is all falling at exactly the same rate. There is no relative gravitational force between them. True weightlessness (absence of gravity) doesn't exist in the solar system -- gravity has infinite range, just diminishing with distance.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. Saturn has rings -- why doesn't every gas giant? And what are the rings actually made of?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">All four gas giants actually have rings -- but Saturn's are uniquely prominent and bright. Jupiter, Uranus, and Neptune all have ring systems, but they are faint and dark (composed of dust and dark rocky material). Saturn's rings are made primarily of water ice particles ranging from tiny grains to chunks several metres across -- and ice is highly reflective (albedo ~0.9 vs dark rocky material's ~0.05). This is why Saturn's rings are brilliant white and visible from Earth with a basic telescope while the other planets' rings are nearly invisible. The rings likely formed from the tidal disruption of an icy moon (or captured comet) that came within Saturn's Roche limit -- the distance at which tidal forces overcome an object's self-gravity. Saturn's rings are only ~10–100 metres thick despite being 282,000 km wide -- if scaled to the thickness of a sheet of paper, the rings would be several kilometres across. Saturn's rings are also surprisingly young -- estimated at only 10–100 million years old, meaning dinosaurs existed before Saturn had its current ring system.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. How far away is the nearest star, and how does that distance put the solar system's scale in perspective?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Proxima Centauri is 4.24 light-years away -- ~40 trillion km, or ~268,000 AU. To put this in perspective: if you shrank the Sun to the size of a grapefruit (13 cm), Earth would be a grain of sand 14 metres away, Jupiter a marble 73 metres away, and Neptune a pea 440 metres away. The Oort Cloud's outer edge would be about 50 km away. Proxima Centauri, at the same scale, would be 3,800 km away -- roughly the distance from London to New York. The nearest star is as far from our solar system as a different continent is from another, while our entire solar system (planets) fits on a football pitch. The Voyager 1 probe, launched in 1977 and travelling at ~17 km/s (the fastest human-made object at the time), is currently ~24 billion km from Earth -- which sounds enormous but is only ~0.000025% of the way to Proxima Centauri. At its current speed, it would take ~73,000 years to reach there (it's not heading that direction).</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. What is the "Fermi Paradox" and why does the scale of the universe make it so puzzling?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The Fermi Paradox is physicist Enrico Fermi's famous question: "Where is everybody?" Given the universe contains ~2 trillion galaxies, each with ~100–400 billion stars, many with planetary systems, and the universe is 13.8 billion years old -- there has been ample time and space for intelligent civilisations to arise, spread, and make themselves detectable. Even at 1% of the speed of light (far slower than theoretical limits), a civilisation could colonise the entire Milky Way in ~10 million years -- a blink of cosmic time. Yet we detect nothing: no signals, no megastructures, no visitors. Proposed resolutions include: (1) The Great Filter -- some evolutionary step is extraordinarily rare, and either we have already passed it (life, eukaryotes, multicellular life, intelligence -- take your pick), or it lies ahead of us; (2) The civilisation lifetimes hypothesis -- intelligent civilisations self-destruct before going interstellar; (3) The "Dark Forest" hypothesis -- civilisations deliberately hide; (4) We simply haven't looked hard or long enough. The silence of the cosmos is one of the deepest unsolved questions in all of science.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. If you fell into a black hole, would you notice crossing the event horizon? What would actually happen to you?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">For a sufficiently large black hole, you would feel nothing special at the moment of crossing the event horizon. There is no physical surface, no wall, no flash of light -- just empty space. The event horizon is a mathematical boundary defined by the escape velocity equalling the speed of light. A local observer falling freely through it experiences no discontinuity. This is a consequence of the equivalence principle: freefall locally feels the same as being in empty space. However, two things would eventually kill you. First, tidal forces: as you approach the singularity, the difference in gravitational pull between your head and feet grows without limit, stretching you lengthwise and compressing you sideways -- physicists call this "spaghettification." For a stellar-mass black hole (~10 solar masses, Schwarzschild radius ~30 km), tidal forces at the event horizon are already fatal. For a supermassive black hole like M87* (6.5 billion solar masses, horizon radius ~19 billion km), tidal forces at the horizon are negligible -- you would cross it comfortably and only be torn apart much closer to the singularity. Second, time: once inside, every possible future path in spacetime leads to the singularity. You cannot escape, turn around, or send a message out. From a distant observer's perspective, you would appear to slow down asymptotically, growing redder and dimmer, never quite reaching the horizon -- frozen in time. The two perspectives are both physically valid and irreconcilable from the outside.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">8. Traversable wormholes are mathematically permitted by general relativity -- so why do physicists think they almost certainly cannot exist in practice?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">There are several compounding obstacles, each of which alone would likely be fatal. First, exotic matter: keeping a wormhole throat open requires material with negative energy density -- something that pushes outward against gravity rather than inward. The Casimir effect (a quantum vacuum phenomenon) demonstrates that negative energy densities are physically real in tiny amounts, but the quantities needed to stabilise a wormhole of traversable size would be astronomically large, possibly exceeding the total mass-energy of the observable universe for any useful wormhole. Second, stability: even if exotic matter were available, wormholes are dynamically unstable. Any small perturbation -- a single photon passing through -- causes the throat to collapse on a timescale far shorter than the crossing time. Third, Hawking's chronology protection conjecture: if a wormhole were stabilised, moving its two mouths to different gravitational potentials or at relativistic speeds relative to each other would create a time machine. Hawking argued that quantum vacuum fluctuations would build up in a feedback loop at the moment a closed timelike curve (time loop) became possible, delivering enough energy to destroy the wormhole before it could be used. This has not been proven rigorously but is consistent with the absence of time travellers. Fourth, the ER=EPR conjecture suggests that the wormholes that do exist in nature (connecting entangled black holes) are non-traversable by construction -- the quantum information link and the spacetime tunnel are real, but sending a signal through requires a process that is equivalent to faster-than-light communication, which quantum mechanics independently forbids. The mathematical existence of wormholes in general relativity is therefore considered a feature of the theory's geometry rather than a blueprint for construction.</div>
+    </div>
+
+  
+
+  <!-- ===========================
+       INLINE SCRIPTS
+  =========================== -->
+  
+
+  
+</ModuleLayout>
+
+<script is:inline>
+
+  /* ─────────────────────────────────────────────
+     PLANET DATA
+  ───────────────────────────────────────────── */
+  const planets = {
+    mercury: { name:'Mercury', num:1, col:'#888780', diam_km:4879, gravity_g:0.38,
+      dist:'0.387 AU (57.9M km)', year:'88 Earth days', day:'59 Earth days (solar day = 176 Earth days)', diam:'4,879 km (0.38× Earth)', moons:'0',
+      facts:[
+        'Despite being closest to the Sun, Venus is hotter -- Mercury has no atmosphere to retain heat.',
+        'Surface temperatures swing from −180°C (night) to +430°C (day) -- the largest range of any planet.',
+        'Mercury has a surprisingly large iron core (~85% of its radius) -- possibly stripped of its mantle by a giant impact.',
+        'Has water ice in permanently shadowed craters at the poles despite its proximity to the Sun.',
+        'Visited by Mariner 10 (1974–75) and MESSENGER (2011–15). BepiColombo mission en route (arrives 2025).'
+      ]},
+    venus: { name:'Venus', num:2, col:'#BA7517', diam_km:12104, gravity_g:0.91,
+      dist:'0.723 AU (108.2M km)', year:'225 Earth days', day:'243 Earth days (longer than its year! Rotates backwards)', diam:'12,104 km (0.95× Earth)', moons:'0',
+      facts:[
+        'Hottest planet: ~465°C average surface temperature -- hotter than Mercury despite being further from the Sun.',
+        'Extreme greenhouse effect: 96% CO₂ atmosphere, atmospheric pressure 90× Earth\'s (like 900m underwater).',
+        'Rotates backwards (retrograde) and extremely slowly -- the Sun rises in the west and sets in the east.',
+        'Clouds of sulphuric acid reflect ~70% of sunlight -- brightest object in the night sky after the Moon.',
+        'Often called Earth\'s "twin" due to similar size and mass -- but radically different. A cautionary tale for climate change.'
+      ]},
+    earth: { name:'Earth', num:3, col:'#378ADD', diam_km:12742, gravity_g:1.00,
+      dist:'1.000 AU (149.6M km)', year:'365.25 days', day:'24 hours (23h 56min sidereal)', diam:'12,742 km (the baseline)', moons:'1 (The Moon)',
+      facts:[
+        'The only known planet with liquid water on its surface -- covers ~71% of the surface.',
+        'The largest rocky planet and the densest planet in the solar system (5,514 kg/m³).',
+        'The axial tilt of 23.5° creates the seasons -- Earth is actually slightly closer to the Sun in January (Northern winter).',
+        'Has plate tectonics -- unique among known planets. Responsible for mountains, earthquakes, and the carbon cycle.',
+        'The only planet known to harbour life. All life is based on liquid water and carbon chemistry.'
+      ]},
+    mars: { name:'Mars', num:4, col:'#D85A30', diam_km:6779, gravity_g:0.38,
+      dist:'1.524 AU (227.9M km)', year:'687 Earth days (1.88 Earth years)', day:'24 hours 37 minutes', diam:'6,779 km (0.53× Earth)', moons:'2 (Phobos, Deimos)',
+      facts:[
+        'Has Olympus Mons -- tallest volcano in the solar system (21 km high, 3× Everest) and Valles Marineris (4,000 km long canyon).',
+        'Average temperature −63°C; thin CO₂ atmosphere (1% of Earth\'s pressure).',
+        'Evidence of ancient liquid water: dried riverbeds, mineral deposits, polar ice caps (water + CO₂ ice).',
+        'Has the most explored non-Earth surface: 50+ missions, including rovers Curiosity (since 2012) and Perseverance (since 2021).',
+        'Perseverance found ancient organic molecules and the Ingenuity helicopter proved powered flight is possible on Mars.'
+      ]},
+    jupiter: { name:'Jupiter', num:5, col:'#D85A30', diam_km:139820, gravity_g:2.53,
+      dist:'5.203 AU (778.5M km)', year:'11.86 Earth years', day:'9 hours 56 minutes -- fastest rotation', diam:'139,820 km (11× Earth)', moons:'95 confirmed (2023)',
+      facts:[
+        'Most massive planet -- 2.5× more massive than all other planets combined.',
+        'The Great Red Spot is a storm that has persisted for at least 350 years -- currently ~1.3× Earth\'s diameter.',
+        'The four Galilean moons (Io, Europa, Ganymede, Callisto) are fascinating: Europa likely has a liquid ocean under its ice shell.',
+        'Acts as a "vacuum cleaner" for comets and asteroids -- protects inner planets from bombardment.',
+        'The Shoemaker-Levy 9 comet struck Jupiter in 1994 in one of history\'s most dramatic astronomical events.'
+      ]},
+    saturn: { name:'Saturn', num:6, col:'#EF9F27', diam_km:116460, gravity_g:1.06,
+      dist:'9.537 AU (1.43B km)', year:'29.46 Earth years', day:'10 hours 42 minutes', diam:'116,460 km (9.5× Earth)', moons:'146 confirmed (2023) -- most of any planet',
+      facts:[
+        'The only planet less dense than water (density 0.687 g/cm³) -- it would float in a large enough ocean.',
+        'Its spectacular ring system extends 282,000 km from the planet but is only ~10–100 m thick.',
+        'Titan (largest moon) has a thick nitrogen atmosphere, methane lakes, and complex organic chemistry.',
+        'Enceladus erupts geysers of water vapour and ice -- evidence of a subsurface ocean with hydrothermal vents.',
+        'Cassini spacecraft orbited Saturn 2004–2017 in one of the most successful planetary missions in history.'
+      ]},
+    uranus: { name:'Uranus', num:7, col:'#5DCAA5', diam_km:50724, gravity_g:0.89,
+      dist:'19.19 AU (2.87B km)', year:'84 Earth years', day:'17 hours 14 minutes (retrograde rotation)', diam:'50,724 km (4× Earth)', moons:'28 confirmed',
+      facts:[
+        'Axial tilt of 98° -- Uranus rotates essentially on its side, likely from a giant collision.',
+        'This extreme tilt means each pole gets ~42 years of continuous sunlight followed by 42 years of darkness.',
+        'Coldest planetary atmosphere: −224°C at the cloud tops -- colder than Neptune despite being closer to the Sun.',
+        'Composition (water, methane, ammonia "ices") places it in the category of "ice giant" rather than gas giant.',
+        'Has 13 known rings (discovered 1977) -- narrow and dark. Visited only once: Voyager 2 in 1986.'
+      ]},
+    neptune: { name:'Neptune', num:8, col:'#185FA5', diam_km:49244, gravity_g:1.14,
+      dist:'30.07 AU (4.50B km)', year:'164.8 Earth years (completed first orbit in 2011)', day:'16 hours 6 minutes', diam:'49,244 km (3.9× Earth)', moons:'16 confirmed',
+      facts:[
+        'Predicted mathematically before it was observed -- astronomers calculated its position from Uranus\'s orbital perturbations (1846).',
+        'Has the strongest winds in the solar system: up to 2,100 km/h.',
+        'The Great Dark Spot observed by Voyager 2 in 1989 had disappeared by 1994 -- Neptune\'s storms are transient.',
+        'Triton (largest moon) orbits backwards -- a captured Kuiper Belt object, slowly spiralling inward.',
+        'Only visited by Voyager 2 in 1989 -- an 8-hour flyby after a 12-year journey. No dedicated mission since.'
+      ]}
+  };
+
+  function showPlanet(key) {
+    const p = planets[key];
+    const factsHtml = p.facts.map(f =>
+      `<div style="display:flex;gap:8px;margin-bottom:5px;"><span style="color:${p.col};flex-shrink:0;font-weight:500;"> -- </span><span style="font-size:12px;color:var(--color-text-secondary);line-height:1.5;">${f}</span></div>`
+    ).join('');
+    document.getElementById('planet-display').innerHTML = `
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <div style="width:40px;height:40px;border-radius:50%;background:${p.col};flex-shrink:0;opacity:0.85;"></div>
+        <div style="font-size:16px;font-weight:500;color:var(--color-text-primary);">${p.name} -- planet ${p.num}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:1px;">Distance from Sun</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${p.dist}</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:1px;">Year length</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${p.year}</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:1px;">Day length</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${p.day}</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:1px;">Diameter</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${p.diam}</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);margin-bottom:1px;">Known moons</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${p.moons}</div></div>
+      </div>
+      <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Key facts</div>
+      ${factsHtml}`;
+  }
+
+  /* ─────────────────────────────────────────────
+     PLANET BAR CHART
+  ───────────────────────────────────────────── */
+  function buildBarChart() {
+    const el = document.getElementById('planet-bar-chart');
+    const maxD = 139820; // Jupiter
+    const cols = {mercury:'#888780',venus:'#BA7517',earth:'#378ADD',mars:'#D85A30',jupiter:'#D85A30',saturn:'#EF9F27',uranus:'#5DCAA5',neptune:'#185FA5'};
+    let html = '';
+    for (const [k, p] of Object.entries(planets)) {
+      const pct = (p.diam_km / maxD * 100).toFixed(1);
+      html += `<div class="mag-row">
+        <span class="mag-label">${p.name}</span>
+        <div class="mag-bar" style="background:${cols[k]};width:${pct}%;opacity:0.85;">
+          <span class="mag-val" style="color:white;font-size:10px;">${p.diam_km.toLocaleString()} km</span>
+        </div>
+      </div>`;
+    }
+    el.innerHTML = html;
+  }
+  buildBarChart();
+
+  /* ─────────────────────────────────────────────
+     DISTANCES SLIDER
+  ───────────────────────────────────────────── */
+  const distances = [
+    { km:0, label:"Sea level -- Earth's surface", atm:"Troposphere (ground level)", note:"Standard atmospheric pressure: 1013.25 hPa. Density: 1.225 kg/m³. 78% nitrogen, 21% oxygen. All weather occurs within the next 12 km." },
+    { km:10, label:"10 km -- commercial aircraft cruising altitude", atm:"Tropopause (boundary)", note:"Temperature ~−50°C. Pressure ~26% of sea level. Above most weather. The jet stream (strong winds 120–250 km/h) flows around this altitude, driving weather systems." },
+    { km:30, label:"30 km -- stratosphere / weather balloon", atm:"Stratosphere (ozone layer)", note:"Weather balloons reach ~30–40 km before bursting. Temperature starts rising here (ozone absorbs UV). Pressure ~1% of sea level. Concorde flew at ~18 km." },
+    { km:80, label:"80 km -- mesosphere top / meteors burn here", atm:"Mesopause (−90°C -- coldest point)", note:"Most meteors burn up between 70–120 km. Temperature here is the minimum in the atmosphere: −90°C. Above this, temperature rises dramatically in the thermosphere." },
+    { km:100, label:"100 km -- Kármán line (edge of space)", atm:"Lower thermosphere", note:"The internationally recognised boundary of space (IAF definition). Aircraft cannot generate aerodynamic lift here -- orbital mechanics required. This is where 'astronaut' status is conferred by most organisations." },
+    { km:200, label:"200 km -- lower LEO (decays quickly)", atm:"Thermosphere", note:"Spacecraft at this altitude experience significant drag and fall back to Earth in days. The atmosphere here is incredibly thin but sufficient to brake orbital objects. Temperature: ~800–1,200°C (but nearly no molecules)." },
+    { km:400, label:"400 km -- International Space Station (ISS)", atm:"Thermosphere", note:"The ISS orbits at 370–460 km, completing 15.5 orbits per day at ~27,600 km/h. Needs regular reboosts (every few months) because residual atmosphere creates drag. Gravity here is ~88% of surface strength -- weightlessness is from freefall, not weak gravity." },
+    { km:800, label:"800 km -- upper LEO (orbits for decades)", atm:"Thermosphere / lower exosphere", note:"Satellites at this altitude orbit for decades before atmospheric drag becomes significant. The debris-dense 'Shell of Concern' from rocket breakups and collisions." },
+    { km:2000, label:"2,000 km -- Van Allen radiation belts begin", atm:"Exosphere", note:"Inner Van Allen belt (2,000–5,000 km): intense trapped protons from cosmic rays. Highly dangerous for humans and electronics. The ISS orbit was chosen partly to be below the most intense regions." },
+    { km:20200, label:"20,200 km -- GPS satellites (MEO)", atm:"Deep space / geomagnetic field", note:"GPS satellites orbit here in Medium Earth Orbit (MEO). Each completes 2 orbits per day. A minimum of 4 satellites must be visible from any point on Earth for GPS to work." },
+    { km:35786, label:"35,786 km -- geostationary orbit (GEO)", atm:"Deep space", note:"At this exact altitude, orbital period = 24 hours -- the satellite stays stationary above a fixed point on the equator. Used for communications, weather satellites. Arthur C. Clarke proposed this orbit in 1945." },
+    { km:384400, label:"384,400 km -- the Moon", atm:"Interplanetary space", note:"Average distance (varies ±12%). Light travel time: 1.28 seconds. Travel time by Apollo missions: ~3 days. The Moon is the only celestial body beyond Earth visited by humans (Apollo 11: July 1969; last: Apollo 17: December 1972)." },
+    { km:1e8, label:"~100 million km -- Mars at close approach", atm:"Interplanetary space", note:"Mars's closest approach to Earth varies from ~54 million km (every 15–17 years) to ~401 million km. Communication delay: 3–22 minutes one way." },
+    { km:150e6, label:"150 million km -- the Sun (1 AU)", atm:"Interplanetary space", note:"1 Astronomical Unit (AU) = 149,597,870 km. Light travel time: 8 minutes 20 seconds. All planetary distances measured relative to this." },
+    { km:4.5e9, label:"4.5 billion km -- edge of planetary solar system (Neptune)", atm:"Kuiper Belt region", note:"Neptune's average distance from the Sun. Beyond Neptune: Kuiper Belt (30–50 AU), then Oort Cloud (2,000–100,000 AU). Voyager 1 is currently at ~165 AU." },
+    { km:1.5e10, label:"~15 billion km -- heliosphere boundary", atm:"Heliopause / interstellar space", note:"The heliopause is where the solar wind is balanced by interstellar medium. Voyager 1 crossed this at ~121 AU in 2012. Beyond: interstellar space." },
+    { km:2e13, label:"~20 trillion km -- inner Oort Cloud", atm:"Outer solar system", note:"The Oort Cloud begins at ~2,000 AU and extends to ~100,000 AU. Long-period comets originate here. No spacecraft has reached it; Voyager 1 will take ~300 years to reach its inner edge." },
+    { km:4e13, label:"~40 trillion km -- Proxima Centauri (nearest star)", atm:"Interstellar space (4.24 light-years)", note:"4.24 light-years = 268,000 AU = ~40 trillion km. At Voyager 1's speed (~17 km/s), reaching Proxima Centauri would take ~73,000 years." },
+    { km:9.5e15, label:"~10 quadrillion km -- 1,000 light-years", atm:"Milky Way galaxy (our neighbourhood)", note:"1,000 light-years -- a tiny fraction of the Milky Way (~100,000 light-years diameter). Our galaxy contains 100–400 billion stars. The nearest large galaxy (Andromeda) is 2.5 million light-years away." }
+  ];
+
+  function updateDist() {
+    const idx = parseInt(document.getElementById('u-flex-1').value);
+    const d = distances[idx];
+    const fmt = km => {
+      if (km >= 1e15) return `${(km/9.461e15).toFixed(1)} kly (${(km/1e12).toFixed(0)} trillion km)`;
+      if (km >= 1e12) return `${(km/1e9).toFixed(1)} billion km`;
+      if (km >= 1e9)  return `${(km/1e6).toFixed(0)} million km`;
+      if (km >= 1e6)  return `${(km/1e3).toFixed(0)} thousand km`;
+      return `${km.toLocaleString()} km`;
+    };
+    document.getElementById('dist-display').innerHTML = `
+      <div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;">${d.label}</div>
+      <div style="display:flex;gap:10px;margin-bottom:8px;flex-wrap:wrap;">
+        <div style="background:var(--color-background-primary);border-radius:var(--border-radius-md);padding:6px 10px;border:0.5px solid var(--color-border-tertiary);"><span style="font-size:11px;color:var(--color-text-secondary);">Distance: </span><span style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${fmt(d.km)}</span></div>
+        <div style="background:var(--color-background-primary);border-radius:var(--border-radius-md);padding:6px 10px;border:0.5px solid var(--color-border-tertiary);"><span style="font-size:11px;color:var(--color-text-secondary);">Region: </span><span style="font-size:12px;font-weight:500;color:var(--color-text-primary);">${d.atm}</span></div>
+      </div>
+      <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;">${d.note}</div>`;
+  }
+  document.getElementById('u-flex-1').max = distances.length - 1;
+  document.getElementById('u-flex-1').addEventListener('input', updateDist);
+
+  /* ─────────────────────────────────────────────
+     SPACE MISSIONS TABS
+  ───────────────────────────────────────────── */
+  const missions = [
+    {
+      tab: 'Sputnik 1',
+      year: '1957',
+      agency: 'Soviet Union (OKB-1)',
+      type: 'Earth orbit',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Sputnik 1 -- the world's first artificial satellite</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch date</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">4 October 1957</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Mass</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">83.6 kg -- size of a beach ball</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Orbit duration</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">21 days transmitting; re-entered Jan 1958</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Orbital period</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">96.2 minutes at ~215–939 km</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">A polished aluminium sphere with four radio antennas, Sputnik transmitted a simple "beep-beep" signal on 20 and 40 MHz -- detectable by amateur radio operators worldwide. Its launch shocked the Western world, triggered the Space Race, and directly led to the creation of NASA (1958) and DARPA. Its significance was not scientific but political and psychological: humanity had placed an object in Earth orbit for the first time. The word "sputnik" means "travelling companion" or "satellite" in Russian.</div>`
+    },
+    {
+      tab: 'Apollo 11',
+      year: '1969',
+      agency: 'NASA',
+      type: 'Lunar landing',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Apollo 11 -- the Moon landing</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch date</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">16 July 1969</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Lunar touchdown</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">20 July 1969, 20:17 UTC</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Crew</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Armstrong, Aldrin, Collins</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Time on lunar surface</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">21 hours 36 minutes total</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">The Apollo programme is arguably the greatest feat of engineering in human history, employing ~400,000 people. The Saturn V rocket remains the most powerful ever flown (140 MN thrust). Neil Armstrong's first step was watched by ~600 million people -- nearly 20% of the world's population. The mission brought back 21.5 kg of lunar samples. Collins orbited the Moon alone in the Command Module for 21 hours while Armstrong and Aldrin were on the surface -- the most isolated human in history (no radio contact with Earth or the crew when behind the Moon). Laser retroreflectors left on the surface are still used today to measure the Moon's orbital drift.</div>`
+    },
+    {
+      tab: 'Voyager 1&2',
+      year: '1977',
+      agency: 'NASA / JPL',
+      type: 'Outer solar system',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Voyager 1 &amp; 2 -- the grand tour</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Aug &amp; Sep 1977</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Voyager 1 distance (2025)</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~24 billion km (~163 AU)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Still operating?</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Yes -- both transmit science data</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Signal travel time</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~22+ hours one way</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">The Voyager probes exploited a rare planetary alignment (occurring once every 176 years) to visit all four outer planets using gravity assists. Voyager 1 visited Jupiter (1979) and Saturn (1980) before heading out of the solar system. Voyager 2 is the only spacecraft to have visited Uranus (1986) and Neptune (1989). Voyager 1 entered interstellar space in 2012 -- confirmed by detecting the change in plasma density. Both carry the "Golden Record" -- a gold-plated phonograph disc with sounds and images of Earth, intended as a message to any civilisation that finds them. Their nuclear power sources (RTGs) are slowly dying; engineers expect communications to cease by ~2030.</div>`
+    },
+    {
+      tab: 'Hubble',
+      year: '1990',
+      agency: 'NASA / ESA',
+      type: 'Space telescope',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Hubble Space Telescope -- humanity's eye on the cosmos</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">24 April 1990</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Orbit</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~547 km LEO</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Mirror diameter</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">2.4 m</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Scientific papers</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">18,000+ to date</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">Launched with a flawed mirror (off by 2.2 micrometres -- the width of 1/50th of a human hair), Hubble was nearly a catastrophic failure. A 1993 servicing mission by Space Shuttle astronauts installed corrective optics -- one of the most dramatic repairs in engineering history. Hubble has since produced some of the most iconic images in science: the Hubble Deep Field (1995) revealed ~3,000 galaxies in a patch of sky smaller than a grain of sand held at arm's length. It contributed to measuring the universe's expansion rate (Hubble constant) and confirming dark energy. Still operational as of 2025, though aging; the James Webb Space Telescope (launched 2021) now leads infrared astronomy.</div>`
+    },
+    {
+      tab: 'Mars rovers',
+      year: '1997–now',
+      agency: 'NASA',
+      type: 'Mars surface',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Mars rovers -- from Sojourner to Perseverance</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Sojourner</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">1997 -- 83 Martian days. Proved rover concept. 10.5 kg.</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Spirit &amp; Opportunity</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">2004 -- Opportunity lasted 14 years, 45 km.</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Curiosity</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">2012–present -- nuclear powered, still active.</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Perseverance + Ingenuity</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">2021–present -- oxygen production, flight.</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">The Mars Science Laboratory (Curiosity) used a never-before-attempted "skycrane" landing system -- lowering the rover on cables from a hovering rocket-powered descent stage. Perseverance carried the Ingenuity helicopter, which made the first powered, controlled flight on another planet (April 2021). Perseverance is collecting and caching rock samples in sealed tubes on the Martian surface for a future sample return mission -- the most complex sample return in history, involving two more spacecraft launches and a Mars orbit rendezvous. MOXIE (Mars Oxygen In-Situ Resource Utilisation Experiment) aboard Perseverance successfully produced oxygen from Martian CO₂ atmosphere -- a proof-of-concept for future human missions.</div>`
+    },
+    {
+      tab: 'Cassini',
+      year: '1997–2017',
+      agency: 'NASA / ESA / ASI',
+      type: 'Saturn system',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Cassini-Huygens -- Saturn's grand explorer</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">15 October 1997</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Saturn orbit insertion</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">1 July 2004</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Mission end</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">15 September 2017 (planned plunge)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Saturn orbits completed</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">294 orbits</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">Cassini transformed our understanding of the Saturn system. The ESA Huygens probe detached and landed on Titan (January 2005) -- the most distant landing ever -- revealing rivers and lakes of liquid methane and complex organic chemistry. Cassini discovered geysers erupting from Enceladus's south pole (2005), confirming a subsurface liquid water ocean with hydrothermal vents -- making Enceladus one of the most promising places to look for extraterrestrial life. The mission ended with a deliberate plunge into Saturn's atmosphere to prevent contamination of Titan or Enceladus. In its final weeks, Cassini made 22 "grand finale" dives between Saturn's rings and atmosphere -- collecting unprecedented data from a region never before explored.</div>`
+    },
+    {
+      tab: 'New Horizons',
+      year: '2006–now',
+      agency: 'NASA / APL',
+      type: 'Pluto + Kuiper Belt',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">New Horizons -- the edge of the known solar system</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">19 January 2006</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Pluto flyby</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">14 July 2015 (closest: 12,500 km)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Speed at Pluto</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">49,600 km/h</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Data downlink time</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">16 months for full dataset</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">New Horizons travelled for 9.5 years and 5 billion km to spend just 9 minutes of closest approach near Pluto. The images revealed a world of unexpected complexity: nitrogen ice plains (the "Tombaugh Regio" heart shape), mountains of water ice 3,500 m high, and a thin nitrogen atmosphere. Data took 16 months to fully downlink at a transmission speed of ~1 kilobit per second (due to distance). After Pluto, the probe continued into the Kuiper Belt and flew past Arrokoth (2019) -- the most distant object ever visited by a spacecraft (6.6 billion km from Earth). Arrokoth's contact-binary shape revealed how early solar system planetesimals formed through gentle collisions.</div>`
+    },
+    {
+      tab: 'ISS',
+      year: '1998–now',
+      agency: 'NASA, Roscosmos, ESA, JAXA, CSA',
+      type: 'Human spaceflight',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">International Space Station -- humanity's continuous presence in space</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">First module launched</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">November 1998 (Zarya)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Continuous occupation</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Since 2 November 2000 (24+ years)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Mass</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~420,000 kg -- size of a football field</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Total astronauts visited</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">270+ from 20 countries</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">The ISS is the most expensive single object ever built (~$150 billion, 1994–2020). It completes 15.5 orbits per day and has been continuously inhabited for over 24 years -- the longest unbroken human presence in space. The station conducts ~200 scientific experiments at any time, including research on muscle/bone loss (critical for long-duration spaceflight), fluid dynamics in microgravity, pharmaceutical crystallisation, and plant growth. It survives at ~400 km altitude despite being inside a thin residual atmosphere -- requiring periodic reboosts from visiting spacecraft. NASA plans to deorbit it by 2030. The ISS is currently visible to the naked eye from Earth -- it can be 16× brighter than the brightest star.</div>`
+    },
+    {
+      tab: 'JWST',
+      year: '2021–now',
+      agency: 'NASA / ESA / CSA',
+      type: 'Space telescope',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">James Webb Space Telescope -- looking back to the first light</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">25 December 2021</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Location</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Sun-Earth L2 point (~1.5 million km)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Mirror diameter</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">6.5 m (18 hexagonal segments)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Operating temperature</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">−233°C (40 K)</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">JWST observes in infrared wavelengths (0.6–28 microns) -- essential for seeing ancient, redshifted galaxies and through dust clouds where stars form. Its tennis-court-sized sunshield maintains instruments near absolute zero to prevent their own heat from drowning the faint signals. JWST has already observed galaxies from just 300–400 million years after the Big Bang -- far earlier than expected, challenging models of early galaxy formation. It has characterised the atmospheres of exoplanets (detecting water, CO₂, and even possible biosignature candidates). Unlike Hubble, JWST is unserviceable -- it orbits 4× further than the Moon -- so its fuel reserve (used for station-keeping) defines its lifespan, estimated at 20+ years. It represents 30 years of development and cost ~$10 billion.</div>`
+    },
+    {
+      tab: 'Artemis',
+      year: '2022–now',
+      agency: 'NASA + international',
+      type: 'Lunar return',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Artemis programme -- returning humans to the Moon</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Artemis I</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Nov 2022 -- uncrewed SLS/Orion lunar flyby</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Artemis II (planned)</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Crewed lunar flyby -- 4 astronauts</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Artemis III (planned)</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">First crewed lunar landing since 1972</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Landing vehicle</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">SpaceX Starship HLS (NASA contract)</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">Artemis aims to land the first woman and first person of colour on the Moon, targeting the lunar south pole where water ice deposits exist in permanently shadowed craters. This water ice is scientifically valuable (evidence of comet/asteroid delivery) and practically crucial: it can be split into hydrogen and oxygen for rocket propellant, enabling a long-term sustainable presence. The Space Launch System (SLS) is the most powerful rocket currently flying (8.8 MN thrust). Artemis is also a stepping stone toward a lunar Gateway space station (in lunar orbit) and ultimately crewed Mars missions. 27 nations have signed the Artemis Accords -- agreements on peaceful space exploration principles.</div>`
+    }
+  ];
+
+  function buildMissionTabs() {
+    const tabBar = document.getElementById('mission-tabs');
+    const panel = document.getElementById('mission-panel');
+    missions.forEach((m, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+      btn.textContent = m.tab;
+      btn.onclick = () => {
+        document.querySelectorAll('#mission-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        showMission(i);
+      };
+      tabBar.appendChild(btn);
+    });
+    showMission(0);
+  }
+
+  function showMission(i) {
+    const m = missions[i];
+    document.getElementById('mission-panel').innerHTML = `
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+        <span class="pill p-blue">${m.year}</span>
+        <span class="pill p-teal">${m.agency}</span>
+        <span class="pill p-amber">${m.type}</span>
+      </div>
+      ${m.content}`;
+  }
+
+  buildMissionTabs();
+
+  /* ─────────────────────────────────────────────
+   SPACEX LAUNCH VEHICLES TABS
+  ───────────────────────────────────────────── */
+  const launchVehicles = [
+    {
+      tab: "Falcon 1",
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;">Falcon 1 -- The First Step</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Height</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">21.3 m</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Payload to LEO</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~670 kg</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">First flight</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">2006 (failed) -- succeeded on 4th attempt in 2008</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Historical note</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">First privately developed liquid-fueled rocket to reach orbit</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">Falcon 1 was SpaceX’s proving ground. After three failures that nearly bankrupted the company, the fourth flight succeeded on 28 September 2008. This was the first time a privately developed rocket reached orbit. It paved the way for the much larger Falcon 9.</div>`
+    },
+    {
+      tab: "Falcon 9",
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;">Falcon 9 Block 5 -- The Workhorse</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Height</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">70 m</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Payload to LEO</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">22,800 kg (reusable) / ~28 t expendable</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Engines</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">9 Merlin 1D (first stage)</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Reusability</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">First stage landed and reflown more than 20 times on some boosters</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">The most reliable and frequently flown orbital rocket in history. It carries most Starlink satellites, NASA cargo and crew to the ISS, and commercial payloads. High launch cadence makes it extremely cost-effective.</div>`
+    },
+    {
+      tab: "Falcon Heavy",
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;">Falcon Heavy -- Heavy-lift champion</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Height</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">70 m</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Payload to LEO</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">63,800 kg (expendable) / ~30+ t reusable</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Engines</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">27 Merlin 1D (3 cores)</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Notable flights</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Psyche, Europa Clipper, and synchronized booster landings</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">Three Falcon 9 cores strapped together. The most powerful operational rocket until Starship. Side boosters often land together, creating spectacular synchronized landings.</div>`
+    },
+    {
+      tab: "Starship",
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;">Starship / Super Heavy -- The Future</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Height</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~120–130 m (full stack)</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Payload to LEO</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">100–150 t fully reusable (target)</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Engines</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">33 Raptor (booster) + 3–9 Raptor (ship)</div></div>
+          <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Goal</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Full reusability, Mars missions, and Earth point-to-point travel</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">SpaceX’s fully reusable next-generation system. Designed to eventually replace Falcon 9 and Falcon Heavy. Currently in rapid prototyping with test flights focused on booster catch and orbital refueling.</div>`
+    }
+  ];
+  
+  function buildLauncherTabs() {
+    const tabBar = document.getElementById('launcher-tabs');
+    const panel = document.getElementById('launcher-panel');
+    
+    launchVehicles.forEach((v, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+      btn.textContent = v.tab;
+      btn.onclick = () => {
+        document.querySelectorAll('#launcher-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        panel.innerHTML = v.content;
+      };
+      tabBar.appendChild(btn);
+    });
+    
+    // Show first tab by default
+    panel.innerHTML = launchVehicles[0].content;
+  }
+  
+  buildLauncherTabs();
+    
+  /* ─────────────────────────────────────────────
+     SPACEX MISSION TABS
+  ───────────────────────────────────────────── */
+  const spacexMissions = [
+    {
+      tab: 'Dragon',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Dragon -- cargo and crew to the ISS</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">First cargo flight</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">May 2012 -- first private spacecraft to berth ISS</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">First crewed flight</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">May 2020 (Crew Dragon Demo-2)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Capacity</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Up to 7 astronauts or 6,000 kg cargo</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Recovery</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Splashdown -- capsule reused</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">After the Space Shuttle's retirement in 2011, NASA relied on Russian Soyuz capsules ($90 million per seat) to reach the ISS. Crew Dragon ended this dependence and restored US crewed launch capability. The Demo-2 mission (May 2020) -- the first crewed orbital launch from US soil since 2011 -- was also the first crewed mission to use commercial hardware, not government-designed spacecraft. Dragon is the only spacecraft currently capable of returning significant cargo from the ISS (Soyuz can only bring back ~75 kg). The Polaris Dawn private mission (2024) performed the first commercial spacewalk from a Dragon capsule.</div>`
+    },
+    {
+      tab: 'Starlink',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Starlink -- the mega-constellation for global internet</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Satellites launched (2025)</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">6,000+ in orbit</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Orbital altitude</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">340–570 km (multiple shells)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Latency</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">20–40 ms (vs geostationary ~600 ms)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Subscribers (2025)</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">~4+ million across 100+ countries</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">Starlink is strategically central to SpaceX: the revenue it generates (~$6–10 billion/year by 2025) funds Starship development. The low orbit (550 km shells) gives it latency comparable to cable internet -- unlike traditional geostationary satellites. SpaceX can launch 60 Starlink satellites per Falcon 9 mission. The constellation has become controversial among astronomers because of satellite trails in observations -- SpaceX developed "darkened" versions to reduce reflectivity. Starlink also played a significant geopolitical role: SpaceX donated terminals to Ukraine after the 2022 invasion, maintaining communications infrastructure when ground-based systems were destroyed. The planned full constellation of ~42,000 satellites would constitute the largest in history.</div>`
+    },
+    {
+      tab: 'Starship dev.',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">Starship development -- a timeline of test flights</div>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:10px;line-height:1.5;">SpaceX's iterative "test to failure, learn fast" philosophy produced the most ambitious rocket programme in history. Each flight test dramatically expanded the envelope.</div>
+      <div class="tl-item">
+        <span class="tl-year">Apr 2023</span>
+        <div class="tl-body"><div class="tl-name">IFT-1 -- first integrated flight test</div><div class="tl-desc">First flight of the full 121m stack. Booster engines failed to separate cleanly; Flight Termination System destroyed both vehicles ~4 minutes after launch. Launchpad severely damaged. Critical data gathered. "Success -- we didn't blow up the pad" was not the original plan but became the revised definition.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Nov 2023</span>
+        <div class="tl-body"><div class="tl-name">IFT-2 -- stage separation achieved</div><div class="tl-desc">Hot staging (lighting upper-stage engines before booster separation) worked -- a novel technique SpaceX adopted from Soviet rockets. Ship reached space before FTS activation. Booster exploded during landing burn. Major progress.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Mar 2024</span>
+        <div class="tl-body"><div class="tl-name">IFT-3 -- first reentry</div><div class="tl-desc">Both vehicles flew successfully for the first time. Ship performed a controlled reentry, surviving peak heating before contact loss near splashdown. Booster flew back toward the launch site before disintegrating. First full mission profile demonstrated.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Jun 2024</span>
+        <div class="tl-body"><div class="tl-name">IFT-4 -- both vehicles survive</div><div class="tl-desc">Historic milestone: both Super Heavy booster and Ship completed controlled flight and were recovered (splashdown). Ship performed a controlled ocean splashdown with live video transmission through reentry -- the thermal protection system held.</div></div>
+      </div>
+      <div class="tl-item" style="border-bottom:none;">
+        <span class="tl-year">Oct 2024</span>
+        <div class="tl-body"><div class="tl-name">IFT-5 -- booster caught by "chopsticks"</div><div class="tl-desc">The Super Heavy booster returned to the launch tower and was caught mid-air by the "Mechazilla" mechanical arms -- the first time a rocket booster was caught rather than landing on legs. A moment that redefined what reusability could look like. Ship splashed down successfully in the Indian Ocean.</div></div>
+      </div>`
+    },
+    {
+      tab: 'Mars plan',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">SpaceX Mars colonisation architecture</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">First uncrewed Mars landing</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Target: ~2026 (2 cargo Starships)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">First crewed landing</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Target: ~2028 (if cargo missions succeed)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Launch window frequency</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Every ~26 months (Earth-Mars alignment)</div></div>
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:8px 10px;"><div style="font-size:11px;color:var(--color-text-secondary);">Long-term goal</div><div style="font-size:12px;font-weight:500;color:var(--color-text-primary);">Self-sustaining city of 1 million</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--color-text-secondary);line-height:1.6;">The SpaceX Mars architecture is built around propellant production on Mars: Starship uses methane and liquid oxygen, both of which can be synthesised on Mars using the Sabatier reaction (CO₂ + H₂O → CH₄ + O₂). This means Starship can be refuelled on Mars and return to Earth -- no one-way missions. The plan involves: (1) uncrewed cargo missions to pre-position propellant production equipment and supplies; (2) crewed missions once a fuel depot is operational; (3) exponential scaling -- each window sends more ships. The transit time to Mars is ~7 months. Elon Musk's stated motivation is making humanity multiplanetary as an insurance policy against extinction -- a "backup" for Earth civilisation. Critics note the enormous challenges: radiation exposure during transit (~1 year round trip), medical facilities, psychological isolation, and Martian surface conditions.</div>`
+    },
+    {
+      tab: 'Notable firsts',
+      content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">SpaceX milestones -- industry-defining firsts</div>
+      <div class="tl-item">
+        <span class="tl-year">2008</span>
+        <div class="tl-body"><div class="tl-name">First private liquid-fuelled orbital rocket (Falcon 1)</div><div class="tl-desc">On its 4th attempt, after 3 failures that nearly bankrupted the company. SpaceX had enough parts for one more attempt. It succeeded.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2010</span>
+        <div class="tl-body"><div class="tl-name">First private company to recover a spacecraft from orbit</div><div class="tl-desc">Dragon capsule returned safely from orbit -- only the 5th entity ever to achieve this (after USA, USSR, China, ESA).</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2012</span>
+        <div class="tl-body"><div class="tl-name">First private spacecraft to berth the ISS</div><div class="tl-desc">Dragon CRS-1 cargo mission. NASA had previously only accepted government-operated vehicles. A commercial turning point.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2015</span>
+        <div class="tl-body"><div class="tl-name">First orbital-class rocket booster to land propulsively</div><div class="tl-desc">Falcon 9 first stage landed at Cape Canaveral on 21 December 2015. The defining moment that proved reusability was achievable at orbital scale.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2017</span>
+        <div class="tl-body"><div class="tl-name">First reflight of an orbital-class rocket booster</div><div class="tl-desc">The same Falcon 9 booster flown twice to orbit, 6 months apart. Unit economics of launch transformed permanently.</div></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2020</span>
+        <div class="tl-body"><div class="tl-name">First private crewed orbital spaceflight</div><div class="tl-desc">Crew Dragon Demo-2 restored US crewed launch capability after a 9-year gap following Shuttle retirement. First astronauts to launch on a commercial vehicle.</div></div>
+      </div>
+      <div class="tl-item" style="border-bottom:none;">
+        <span class="tl-year">2024</span>
+        <div class="tl-body"><div class="tl-name">First rocket booster caught mid-air at launch tower</div><div class="tl-desc">Starship IFT-5 Super Heavy booster caught by Mechazilla chopsticks -- eliminating the need for landing legs and enabling rapid same-day reflight in the future.</div></div>
+      </div>`
+    }
+  ];
+
+  function buildSpacexTabs() {
+    const tabBar = document.getElementById('spacex-tabs');
+    const panel = document.getElementById('spacex-panel');
+    spacexMissions.forEach((m, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+      btn.textContent = m.tab;
+      btn.onclick = () => {
+        document.querySelectorAll('#spacex-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('spacex-panel').innerHTML = m.content;
+      };
+      tabBar.appendChild(btn);
+    });
+    panel.innerHTML = spacexMissions[0].content;
+  }
+
+  buildSpacexTabs();
+
+  /* ─────────────────────────────────────────────
+     GALAXY TYPES TABS
+  ───────────────────────────────────────────── */
+  const galaxyTypes = [
+    {
+      tab: 'Spiral',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Spiral galaxies -- the classic pinwheel shape</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Fraction of large galaxies</div><div class="u-fs-12px u-fw-500 text-primary">~60–70%</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Example</div><div class="u-fs-12px u-fw-500 text-primary">Milky Way, Andromeda, M51 (Whirlpool)</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Characteristic</div><div class="u-fs-12px u-fw-500 text-primary">Active star formation in arms</div></div>
+      </div>
+      <div class="muted-copy">Spiral galaxies have a central bulge (older, redder stars), a flat disc with spiral arms (younger, bluer stars, gas clouds, active star formation), and a spherical halo of older stars and dark matter. Barred spirals (like the Milky Way) have a central bar structure from which the arms emerge. The spiral pattern is not fixed structure -- it is a density wave that rotates at a different rate to the stars themselves, sweeping through the disc and triggering star formation as it compresses gas clouds.</div>`
+    },
+    {
+      tab: 'Elliptical',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Elliptical galaxies -- the aged giants</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Fraction of large galaxies</div><div class="u-fs-12px u-fw-500 text-primary">~20% (but dominate by mass)</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Example</div><div class="u-fs-12px u-fw-500 text-primary">M87 (hosts famous BH), Virgo A</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Characteristic</div><div class="u-fs-12px u-fw-500 text-primary">Little gas, minimal star formation</div></div>
+      </div>
+      <div class="muted-copy">Elliptical galaxies contain mostly old, red stars with very little gas or dust and almost no new star formation -- they have "used up" their raw material. They range from nearly spherical (E0) to very elongated (E7). The largest known galaxies are giant ellipticals, formed by mergers of multiple spirals. When the Milky Way and Andromeda collide in ~4.5 billion years, they will likely merge into an elliptical galaxy over billions of years -- astronomers call the future result "Milkomeda."</div>`
+    },
+    {
+      tab: 'Irregular',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Irregular galaxies -- chaos and star-forming intensity</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Fraction of galaxies</div><div class="u-fs-12px u-fw-500 text-primary">~20–25% (mostly small)</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Example</div><div class="u-fs-12px u-fw-500 text-primary">Large Magellanic Cloud, Small MC</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Characteristic</div><div class="u-fs-12px u-fw-500 text-primary">No defined structure; intense star birth</div></div>
+      </div>
+      <div class="muted-copy">Irregular galaxies lack the organised structure of spirals or ellipticals. They are typically smaller, gas-rich, and forming stars at a furious rate. Many are the result of gravitational interactions with larger neighbours -- the Large and Small Magellanic Clouds (visible from the Southern Hemisphere) are dwarf irregular galaxies being tidally disrupted by the Milky Way. Dwarf galaxies of all types are the most numerous in the universe; most large galaxies have dozens of satellite dwarfs orbiting them.</div>`
+    },
+    {
+      tab: 'Active galaxies',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Active galactic nuclei -- when the central black hole is feeding</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Types</div><div class="u-fs-12px u-fw-500 text-primary">Seyfert, Quasar, Blazar, Radio galaxy</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Energy source</div><div class="u-fs-12px u-fw-500 text-primary">Accretion onto supermassive BH</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Quasar brightness</div><div class="u-fs-12px u-fw-500 text-primary">Up to 10,000× entire galaxy</div></div>
+      </div>
+      <div class="muted-copy">When a supermassive black hole actively accretes material, the infall releases enormous energy -- often outshining the entire galaxy of stars. Quasars (quasi-stellar objects) are the most luminous sustained energy sources in the universe, visible across billions of light-years. A blazar is a quasar whose jet happens to point directly at us, making it even brighter. These objects are all found in the early universe -- our galaxy's own central black hole (Sgr A*) is currently "quiet," but shows evidence of past activity.</div>`
+    }
+  ];
+
+  function buildGenericTabs(tabId, panelId, data) {
+    const tabBar = document.getElementById(tabId);
+    const panel = document.getElementById(panelId);
+    if (!tabBar || !panel) return;
+    data.forEach((m, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+      btn.textContent = m.tab;
+      btn.onclick = () => {
+        tabBar.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        panel.innerHTML = m.content;
+      };
+      tabBar.appendChild(btn);
+    });
+    panel.innerHTML = data[0].content;
+  }
+
+  buildGenericTabs('galaxy-tabs', 'galaxy-panel', galaxyTypes);
+
+  /* ─────────────────────────────────────────────
+     EXOPLANET DETECTION TABS
+  ───────────────────────────────────────────── */
+  const exoMethods = [
+    {
+      tab: 'Transit',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Transit method -- watching a star dim</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Exoplanets found</div><div class="u-fs-12px u-fw-500 text-primary">~4,100+ (by Kepler and TESS alone)</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Best for</div><div class="u-fs-12px u-fw-500 text-primary">Large planets close to their star</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Key mission</div><div class="u-fs-12px u-fw-500 text-primary">Kepler Space Telescope (2009-2018)</div></div>
+      </div>
+      <div class="muted-copy">When a planet passes in front of its star (from our line of sight), it blocks a tiny fraction of the star's light -- typically 0.01% to 1%. Repeated, periodic dips in brightness reveal the planet's orbital period and size relative to its star. The Kepler mission alone revolutionised our understanding: it found that planets are the rule, not the exception -- the Milky Way likely contains more planets than stars. TESS (Transiting Exoplanet Survey Satellite) continued Kepler's work from 2018. Key limitation: requires orbital plane to be aligned with our line of sight -- only ~10% of orbits qualify.</div>`
+    },
+    {
+      tab: 'Radial velocity',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Radial velocity -- listening to the star wobble</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Exoplanets found</div><div class="u-fs-12px u-fw-500 text-primary">~1,000+</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Best for</div><div class="u-fs-12px u-fw-500 text-primary">Massive planets in tight orbits</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">First exoplanet discovery</div><div class="u-fs-12px u-fw-500 text-primary">51 Pegasi b (1995, Nobel Prize 2019)</div></div>
+      </div>
+      <div class="muted-copy">A planet does not orbit its star -- both the star and the planet orbit their common centre of mass. This causes the star to "wobble" slightly. As the star moves toward or away from us, its light is Doppler-shifted (blueshift / redshift) in proportion to its velocity. This is how Mayor and Queloz discovered 51 Pegasi b in 1995 -- a "hot Jupiter" orbiting closer to its star than Mercury does the Sun. The discovery overturned planetary formation models: such giant planets were thought impossible at those distances. Method is biased toward massive planets and tight orbits -- the induced stellar wobble for an Earth-like planet at 1 AU is only ~0.1 m/s.</div>`
+    },
+    {
+      tab: 'Direct imaging',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Direct imaging -- actually photographing the planet</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">Exoplanets found</div><div class="u-fs-12px u-fw-500 text-primary">~60 (enormously difficult)</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Best for</div><div class="u-fs-12px u-fw-500 text-primary">Young, massive planets far from bright stars</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Key tool</div><div class="u-fs-12px u-fw-500 text-primary">James Webb Space Telescope (JWST)</div></div>
+      </div>
+      <div class="muted-copy">The challenge: a star is typically 10 billion times brighter than the reflected light from a planet. Direct imaging requires blocking the star's light (coronagraph) while preserving the planet's. Only young, massive planets at large orbital distances have been imaged -- they are warm enough to emit their own infrared radiation. HR 8799 hosts four directly imaged planets, all Jupiter-mass or larger. JWST's coronagraph capability has expanded direct imaging possibilities dramatically. Future missions (like the Habitable Worlds Observatory planned for the 2040s) aim to directly image Earth-like planets and analyse their atmospheres for biosignatures.</div>`
+    },
+    {
+      tab: 'Habitable zone',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Habitable zone -- the "Goldilocks" distance</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-bottom:10px;">
+        <div class="sub-card-compact"><div class="muted-text-small">HZ candidates found</div><div class="u-fs-12px u-fw-500 text-primary">50+ potentially habitable planets</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Best candidate</div><div class="u-fs-12px u-fw-500 text-primary">TRAPPIST-1e, f (39 light-years)</div></div>
+        <div class="sub-card-compact"><div class="muted-text-small">Habitability caveat</div><div class="u-fs-12px u-fw-500 text-primary">Liquid water is necessary but not sufficient</div></div>
+      </div>
+      <div class="muted-copy">The habitable zone is the range of orbital distances where liquid water could exist on a planet's surface -- given the star's luminosity. The TRAPPIST-1 system (a red dwarf 39 light-years away) hosts 7 rocky planets, three of which are in the habitable zone. JWST has begun analysing their atmospheres -- TRAPPIST-1c appears to lack a thick CO₂ atmosphere, hinting at a Venus-like fate. The habitable zone is a crude concept: Europa (Jupiter's moon) has a liquid water ocean under an ice shell despite being far from the Sun -- heated by tidal forces. Life may exist in more places than simple orbital distance predicts.</div>`
+    }
+  ];
+
+  buildGenericTabs('exo-tabs', 'exo-panel', exoMethods);
+
+  /* ─────────────────────────────────────────────
+     WORMHOLE TYPE TABS
+  ───────────────────────────────────────────── */
+  const whTypes = [
+    {
+      tab: 'Schwarzschild',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Schwarzschild wormhole (Einstein-Rosen bridge, 1935)</div>
+      <div class="muted-copy">The original wormhole -- discovered by Einstein and Rosen as a mathematical curiosity in the Schwarzschild solution to general relativity. It connects two separate exterior regions of spacetime through the interior of a black hole. Crucially, it is non-traversable: the throat collapses faster than the speed of light, so nothing can pass through. It is more of a mathematical feature than a physical tunnel. If you tried to enter, you would reach the singularity long before you could exit the other side.</div>`
+    },
+    {
+      tab: 'Morris-Thorne',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Morris-Thorne traversable wormhole (1988)</div>
+      <div class="muted-copy">The first mathematically rigorous design for a traversable wormhole, published by Kip Thorne and Mike Morris in response to a question from Carl Sagan (who was writing Contact). It requires exotic matter with negative energy density to hold the throat open. Thorne showed that general relativity permits such a construction in principle, but the exotic matter requirement is a near-insurmountable obstacle. The paper opened a serious scientific discussion about wormholes and, unexpectedly, led to the investigation of time travel (closed timelike curves) as a genuine physics topic.</div>`
+    },
+    {
+      tab: 'Kerr wormhole',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">Kerr wormhole -- inside a rotating black hole</div>
+      <div class="muted-copy">The mathematics of a rotating (Kerr) black hole allows for a ring-shaped singularity instead of a point. In principle, a trajectory through the ring could avoid the singularity and emerge in a different region of spacetime -- effectively a wormhole. However, the inner horizon of a Kerr black hole is believed to be dynamically unstable (mass inflation instability): any perturbation, even a single photon, causes energy to diverge to infinity. Most physicists believe Kerr wormholes are non-traversable in any realistic scenario despite the appealing mathematics.</div>`
+    },
+    {
+      tab: 'ER = EPR',
+      content: `<div class="u-fs-14px u-fw-500 text-primary u-mb-md">ER = EPR -- wormholes and quantum entanglement (2013)</div>
+      <div class="muted-copy">In a landmark 2013 paper, Juan Maldacena and Leonard Susskind proposed that quantum entanglement (Einstein-Podolsky-Rosen pairs, or EPR) and wormholes (Einstein-Rosen bridges, ER) may be the same phenomenon described in different languages. Two entangled black holes are connected by a non-traversable wormhole. This conjecture -- ER = EPR -- has become one of the most discussed ideas in theoretical physics, offering a possible bridge between quantum mechanics and general relativity. It does not allow faster-than-light communication (entanglement never does), but it suggests spacetime geometry may be built from quantum information. Experimentally probing this link is a major goal of quantum gravity research.</div>`
+    }
+  ];
+
+  buildGenericTabs('wh-tabs', 'wh-panel', whTypes);
+
+  /* ─────────────────────────────────────────────
+     BLACK HOLE ANATOMY INTERACTIVE
+  ───────────────────────────────────────────── */
+  const bhDetails = {
+    outer: {
+      title: 'Accretion disc and relativistic jets',
+      text: 'Gas and dust spiralling toward a black hole form an accretion disc -- heated to millions of degrees by friction, emitting X-rays. This is how we detect black holes: not the black hole itself, but the glowing disc around it. Along the rotation axis, powerful jets of plasma are launched at near-light speed, extending for thousands of light-years. The mechanism (likely magnetic fields anchored in the disc) is not fully understood. M87\'s jet extends 5,000 light-years and was the first jet ever imaged, by Heber Curtis in 1918.'
+    },
+    accr: {
+      title: 'Inner accretion disc -- the hottest region',
+      text: 'As material spirals inward, it moves faster and faster, heating to ~100 million degrees close to the event horizon. This region emits most of the disc\'s energy. Turbulent magnetic fields thread the disc, extracting angular momentum and allowing material to fall inward. Time dilation from the black hole\'s gravity means clocks in this region run significantly slower than those far away -- a clock at the ISCO of a stellar black hole would run ~15% slower than one at infinity.'
+    },
+    isco: {
+      title: 'ISCO -- innermost stable circular orbit',
+      text: 'The ISCO is the closest orbit where a particle can stably circle a black hole without spiralling in. For a non-rotating (Schwarzschild) black hole it is at 3 Schwarzschild radii. For a maximally rotating (Kerr) black hole it can be as close as 0.5 r_s (co-rotating) or as far as 4.5 r_s (counter-rotating). Matter crossing the ISCO loses the ability to maintain a stable orbit and plunges into the black hole in less than a millisecond. The position of the ISCO is observable from the X-ray spectrum of the accretion disc and allows astronomers to measure a black hole\'s spin.'
+    },
+    photo: {
+      title: 'Photon sphere -- light in permanent orbit',
+      text: 'At 1.5 Schwarzschild radii, photons can theoretically orbit the black hole in circular paths. An observer at the photon sphere would be able to see their own back. However, these orbits are unstable -- any perturbation sends photons either inward to the event horizon or outward to escape. The photon sphere is what creates the dark "shadow" seen in the 2019 Event Horizon Telescope image of M87*: the bright ring is photons from the accretion disc bent around the photon sphere, while the dark region inside is the shadow -- not the event horizon itself, but the region from which light cannot escape our view.'
+    },
+    eh: {
+      title: 'Event horizon -- the point of no return',
+      text: 'The event horizon is not a physical surface -- there is no wall, no sudden change in local physics. A freely falling observer would pass through it without noticing (for a large enough black hole, tidal forces at the horizon are survivable). The event horizon is a mathematical surface: the boundary from which the escape velocity equals the speed of light. Once crossed, every possible future trajectory leads to the singularity. For a stellar black hole the crossing takes milliseconds of proper time. General relativity predicts that from a distant observer\'s perspective, in-falling matter appears to asymptotically approach the horizon, freezing and redshifting to invisibility -- but never actually crossing. The in-falling observer disagrees.'
+    },
+    ergo: {
+      title: 'Ergosphere -- frame dragging and the Penrose process',
+      text: 'Rotating black holes (Kerr black holes) drag spacetime itself along with their rotation -- "frame dragging." Outside the event horizon but within a region called the ergosphere, spacetime is dragged so fast that nothing can remain stationary; everything must co-rotate with the black hole. However, the ergosphere is still outside the event horizon, so escape is possible. The Penrose process (1971) shows that energy can be extracted from the ergosphere: a particle splitting in two, with one fragment falling into the black hole and the other escaping with more energy than the original particle had. This is the mechanism behind quasar jets and suggests rotating black holes are vast energy reservoirs.'
+    },
+    sing: {
+      title: 'Singularity -- where physics breaks down',
+      text: 'At the centre (r = 0 for Schwarzschild, a ring for Kerr), general relativity predicts a singularity: infinite density, infinite curvature. This is almost universally regarded as a sign that general relativity is incomplete -- not that a physical infinity actually exists. Quantum gravity (the not-yet-achieved unification of quantum mechanics and general relativity) is expected to resolve singularities, replacing them with something finite. The Penrose-Hawking singularity theorems (1965-1970) proved that singularities are inevitable inside event horizons given reasonable physical assumptions -- Penrose won the 2020 Nobel Prize in Physics for this work.'
+    }
+  };
+
+  document.querySelectorAll('[data-bh]').forEach(el => {
+    el.addEventListener('click', () => {
+      const key = el.getAttribute('data-bh');
+      const detail = bhDetails[key];
+      if (!detail) return;
+      document.getElementById('bh-detail-title').textContent = detail.title;
+      document.getElementById('bh-detail-text').textContent = detail.text;
+      document.querySelectorAll('[data-bh]').forEach(e => e.style.outline = 'none');
+      el.style.outline = '2px solid rgba(192,128,255,0.7)';
+    });
+  });
+
+  /* ─────────────────────────────────────────────
+     INITIAL RENDERS
+  ───────────────────────────────────────────── */
+  showPlanet('earth');
+  updateDist();
+  
+</script>

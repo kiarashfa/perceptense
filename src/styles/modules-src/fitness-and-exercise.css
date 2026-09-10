@@ -1,0 +1,579 @@
+
+/* ── Part C lift explorer ── */
+.lift-btn-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+.lift-btn-row button { font-size:12px; padding:4px 11px; }
+.lift-btn-row button.active { background:var(--color-background-secondary); border-color:var(--color-border-primary); }
+
+/* ── Responsive lift display grid (2-col above 520px, 1-col below) ── */
+.lift-inner-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-bottom:8px;
+}
+@media (max-width:520px) {
+  .lift-inner-grid { grid-template-columns:1fr; }
+}
+
+/* ── Part F recovery card grid — min 220px per card ── */
+.recovery-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+/* ── Part H — training programmes tab strip ── */
+.prog-tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+.prog-tabs button { font-size:12px; padding:4px 12px; }
+.prog-tabs button.active { background:var(--color-background-secondary); border-color:var(--color-border-primary); }
+
+/* ── Part I — rep range table ── */
+.rep-table { width:100%; border-collapse:collapse; font-size:12px; }
+.rep-table th { font-size:10px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--color-text-tertiary); text-align:left; padding:5px 8px; border-bottom:0.5px solid var(--color-border-tertiary); }
+.rep-table td { padding:7px 8px; border-bottom:0.5px solid var(--color-border-tertiary); color:var(--color-text-primary); vertical-align:top; line-height:1.45; }
+.rep-table tr:last-child td { border-bottom:none; }
+.rep-table tr:hover td { background:var(--color-background-secondary); }
+
+/* ── one-rep-max table ── */
+.orm-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(75px,1fr)); gap:6px; }
+.orm-cell { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:8px 10px; text-align:center; }
+.orm-pct  { font-size:10px; color:var(--color-text-tertiary); margin-bottom:1px; }
+.orm-val  { font-size:14px; font-weight:500; color:var(--color-text-primary); }
+.orm-reps { font-size:10px; color:var(--color-text-secondary); }
+
+/* ── body composition visual ── */
+.bcomp-bar { height:28px; border-radius:4px; overflow:hidden; display:flex; margin-bottom:6px; }
+.bcomp-seg { display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:600; white-space:nowrap; transition:width 0.4s ease; overflow:hidden; }
+
+/* === Shared-ready extracted styles === */
+
+.bar-row-tight {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+
+.detail-label {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-bottom:2px;
+}
+
+.item-title {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+
+.text-danger {
+  color:var(--color-text-danger);
+}
+
+.text-success {
+  color:var(--color-text-success);
+}
+
+.text-warning {
+  color:var(--color-text-warning);
+}
+
+/* === Module-specific extracted styles === */
+
+.fitness-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.fitness-panel {
+  background:#E1F5EE;
+  border:0.5px solid #5DCAA5;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+}
+
+.fitness-label {
+  font-size:14px;
+  font-weight:500;
+  color:#04342C;
+  margin-bottom:6px;
+}
+
+.fitness-text {
+  font-size:12px;
+  color:#085041;
+  margin-bottom:8px;
+  line-height:1.6;
+}
+
+.fitness-row {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin-bottom:8px;
+}
+
+.fitness-panel-2 {
+  background:#9FE1CB;
+  border-radius:3px;
+  padding:5px 8px;
+  font-size:11px;
+  color:#04342C;
+}
+
+.fitness-text-2 {
+  font-size:11px;
+  color:#085041;
+  line-height:1.5;
+}
+
+.fitness-panel-3 {
+  background:#FAECE7;
+  border:0.5px solid #F0997B;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+}
+
+.fitness-label-2 {
+  font-size:14px;
+  font-weight:500;
+  color:#4A1B0C;
+  margin-bottom:6px;
+}
+
+.fitness-text-3 {
+  font-size:12px;
+  color:#712B13;
+  margin-bottom:8px;
+  line-height:1.6;
+}
+
+.fitness-panel-4 {
+  background:#F5C4B3;
+  border-radius:3px;
+  padding:5px 8px;
+  font-size:11px;
+  color:#4A1B0C;
+}
+
+.fitness-text-4 {
+  font-size:11px;
+  color:#712B13;
+  line-height:1.5;
+}
+
+.fitness-panel-5 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:1rem;
+}
+
+.fitness-label-3 {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:12px;
+}
+
+.fitness-row-2 {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:5px;
+}
+
+.fitness-text-5 {
+  font-size:10px;
+  color:var(--color-text-tertiary);
+  width:80px;
+  flex-shrink:0;
+  text-align:right;
+}
+
+.fitness-media {
+  flex:1;
+  height:22px;
+  border-radius:3px;
+  overflow:hidden;
+}
+
+.fitness-row-3 {
+  width:50%;
+  height:100%;
+  background:#9FE1CB;
+  display:flex;
+  align-items:center;
+  padding-left:8px;
+}
+
+.fitness-text-6 {
+  font-size:10px;
+  font-weight:600;
+  color:#04342C;
+}
+
+.fitness-text-7 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  width:200px;
+  flex-shrink:0;
+  line-height:1.35;
+}
+
+.fitness-row-4 {
+  width:62%;
+  height:100%;
+  background:#5DCAA5;
+  display:flex;
+  align-items:center;
+  padding-left:8px;
+}
+
+.fitness-row-5 {
+  width:74%;
+  height:100%;
+  background:#EF9F27;
+  display:flex;
+  align-items:center;
+  padding-left:8px;
+}
+
+.fitness-text-8 {
+  font-size:10px;
+  font-weight:600;
+  color:#2A1A03;
+}
+
+.fitness-row-6 {
+  width:86%;
+  height:100%;
+  background:#F0997B;
+  display:flex;
+  align-items:center;
+  padding-left:8px;
+}
+
+.fitness-text-9 {
+  font-size:10px;
+  font-weight:600;
+  color:#4A1B0C;
+}
+
+.fitness-row-7 {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.fitness-row-8 {
+  width:100%;
+  height:100%;
+  background:#F09595;
+  display:flex;
+  align-items:center;
+  padding-left:8px;
+}
+
+.fitness-text-10 {
+  font-size:10px;
+  font-weight:600;
+  color:#791F1F;
+}
+
+.fitness-panel-6 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+}
+
+.fitness-row-9 {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:flex-end;
+  margin-bottom:12px;
+}
+
+.fitness-row-10 {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  flex:1;
+  min-width:100px;
+}
+
+.fitness-row-11 {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  flex:1;
+  min-width:80px;
+}
+
+.met-sex {
+  height:36px;
+  padding:0 10px;
+  border-radius:var(--border-radius-md);
+  border:0.5px solid var(--color-border-secondary);
+  background:var(--color-background-primary);
+  color:var(--color-text-primary);
+  font-size:13px;
+}
+
+.fitness-row-12 {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  flex:1;
+  min-width:130px;
+}
+
+.calcmet-control {
+  height:36px;
+  padding:0 16px;
+  font-size:13px;
+}
+
+.met-result {
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.9;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+}
+
+.fitness-panel-7 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-top:8px;
+}
+
+.fitness-text-12 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+  line-height:1.5;
+}
+
+.fitness-grid-2 {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:14px;
+}
+
+.fitness-text-13 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-bottom:4px;
+}
+
+.bcomp-cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:8px;
+}
+
+.bcomp-note {
+  margin-top:10px;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:9px 11px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+}
+
+.fitness-panel-8 {
+  background:#E1F5EE;
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  border:0.5px solid #5DCAA5;
+}
+
+.fitness-label-5 {
+  font-size:13px;
+  font-weight:500;
+  color:#04342C;
+  margin-bottom:4px;
+}
+
+.fitness-text-14 {
+  font-size:12px;
+  color:#085041;
+  line-height:1.5;
+}
+
+.fitness-panel-9 {
+  background:#FAECE7;
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  border:0.5px solid #F0997B;
+}
+
+.fitness-label-6 {
+  font-size:13px;
+  font-weight:500;
+  color:#4A1B0C;
+  margin-bottom:4px;
+}
+
+.fitness-text-15 {
+  font-size:12px;
+  color:#712B13;
+  line-height:1.5;
+}
+
+.fitness-panel-10 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:8px;
+}
+
+.fitness-grid-4 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:8px;
+}
+
+.fitness-text-17 {
+  font-size:12px;
+  color:var(--color-text-primary);
+  line-height:1.4;
+}
+
+.fitness-row-13 {
+  display:flex;
+  gap:10px;
+  align-items:flex-end;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+
+.fitness-row-14 {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  flex:1;
+  min-width:120px;
+}
+
+.prot-result {
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.9;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  margin-bottom:10px;
+}
+
+.fitness-grid-5 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
+  gap:10px;
+}
+
+.fitness-text-18 {
+  font-size:12px;
+  color:var(--color-text-primary);
+  line-height:1.5;
+}
+
+.fitness-panel-13 {
+  margin-top:10px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:9px 11px;
+}
+
+.fitness-text-19 {
+  margin-top:8px;
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  line-height:1.5;
+}
+
+.fitness-grid-6 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:12px;
+  margin-bottom:1rem;
+}
+
+.fitness-text-20 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.fitness-row-15 {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.fitness-svg-style {
+  flex-shrink:0;
+}
+
+.ant-chest {
+  cursor:pointer;
+}
+
+.fitness-text-21 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.muscle-display {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  min-height:80px;
+}
+
+.fitness-grid-7 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.fitness-text-22 {
+  font-size:16px;
+}
+
+.fitness-text-23 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.55;
+}
+  

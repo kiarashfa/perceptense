@@ -1,0 +1,1115 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/nutrition-and-food-labels.css';
+
+const mod = modules.find((m) => m.id === 4)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+
+    <div class="u-display-flex u-align-center u-gap-14px u-mb-md">
+      <i class="fa-solid fa-apple-whole u-fs-42px u-text-teal-500 u-shrink-0" aria-hidden="true"></i>
+      <h1 class="module-title u-m-0 u-lh-1-d-05">Module 4: Nutrition &amp; Food Labels</h1>
+    </div>
+    <p class="module-subtitle">Calories, macronutrients, and how to read what's in your food</p>
+
+    <!-- ═══════════════════════════════════════════════════════ PART A -->
+    <h2 class="sec" id="part-a-the-calorie-confusion-kcal-vs-cal">Part A · the calorie confusion — kcal vs cal</h2>
+
+    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The calorie confusion — kcal vs cal</div>
+      <div class="u-fs-13px text-secondary u-lh-1-d-7">
+        Food "calories" are actually <strong class="text-primary">kilocalories (kcal)</strong>. 1 food calorie = 1,000 physics calories. When a label says "250 calories," it means 250 kcal. This is one of the most widespread unit confusions in everyday life. From here on, "calorie" means food calorie = kcal.
+      </div>
+    </div>
+
+    <!-- SVG: the kcal vs cal scale diagram -->
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 660 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing 1 food calorie equals 1000 physics calories">
+        <rect width="660" height="90" fill="none"/>
+        <!-- left box: 1 food calorie -->
+        <rect x="10" y="12" width="148" height="52" rx="8" fill="var(--color-background-info)" stroke="var(--color-border-info)" stroke-width="0.8"/>
+        <text x="84" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-info)" font-family="system-ui,sans-serif">1 Food Calorie</text>
+        <text x="84" y="47" text-anchor="middle" font-size="10" fill="var(--color-text-info)" font-family="system-ui,sans-serif">(what labels show)</text>
+        <text x="84" y="60" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">= 1 kcal</text>
+        <!-- equals sign -->
+        <text x="178" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">=</text>
+        <!-- right box: 1000 physics calories -->
+        <rect x="200" y="12" width="172" height="52" rx="8" fill="var(--color-background-warning)" stroke="var(--color-border-warning)" stroke-width="0.8"/>
+        <text x="286" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">1,000 physics calories</text>
+        <text x="286" y="47" text-anchor="middle" font-size="10" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">(the scientific unit)</text>
+        <text x="286" y="60" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">= 4,184 joules</text>
+        <!-- equals sign -->
+        <text x="392" y="42" text-anchor="middle" font-size="18" font-weight="700" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">=</text>
+        <!-- right box 2: joules -->
+        <rect x="412" y="12" width="172" height="52" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+        <text x="498" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">4,184 joules</text>
+        <text x="498" y="47" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">(SI energy unit)</text>
+        <text x="498" y="60" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">used in physics &amp; engineering</text>
+        <!-- label at bottom -->
+        <text x="330" y="84" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Food labels in the US use "Calories" (capital C) — always meaning kcal. EU labels show both kcal and kJ.</text>
+      </svg>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART B -->
+    <h2 class="sec" id="part-b-macronutrients-what-s-in-your-food">Part B · macronutrients — what's in your food</h2>
+
+    <div class="cgrid">
+      <div class="card">
+        <p class="clabel">Human daily energy need</p>
+        <p class="cval">~2,000 kcal</p>
+        <p class="cnote">Average adult. ~2,500 for men, ~2,000 for women. Athletes can need 3,500–5,000 kcal.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">In watts (power output)</p>
+        <p class="cval">~80 W</p>
+        <p class="cnote">A resting human radiates about as much heat as a standard incandescent light bulb. Your body is literally a heater.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">1 gram of fat</p>
+        <p class="cval">9 kcal</p>
+        <p class="cnote">More than double carbs or protein (4 kcal/g each). Fat is the body's most dense energy store.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">1 gram of carbohydrate</p>
+        <p class="cval">4 kcal</p>
+        <p class="cnote">Same as protein. Sugar = carbohydrate. 1 teaspoon of sugar (~4g) = 16 kcal.</p>
+      </div>
+    </div>
+
+    <!-- Macronutrient deep-dive explorer -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">The three macronutrients — what they actually do</div>
+      <div class="u-display-flex u-gap-6px u-flex-wrap u-mb-md" role="tablist" aria-label="Macronutrient details">
+        <button class="macro-btn active" onclick="showMacro('carb')" role="tab" aria-selected="true" aria-controls="macro-carb" id="tab-carb">Carbohydrates</button>
+        <button class="macro-btn" onclick="showMacro('fat')" role="tab" aria-selected="false" aria-controls="macro-fat" id="tab-fat">Fat</button>
+        <button class="macro-btn" onclick="showMacro('protein')" role="tab" aria-selected="false" aria-controls="macro-protein" id="tab-protein">Protein</button>
+      </div>
+
+      <div id="macro-carb" class="macro-panel show" role="tabpanel" aria-labelledby="tab-carb">
+        <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
+          <div class="u-flex-1 u-min-w-200px">
+            <div class="u-fs-12px text-secondary u-lh-1-d-7">
+              <strong class="text-primary">Primary role:</strong> Fast energy. The brain alone uses ~120g of glucose per day — about half your carb intake. Carbs are the body's preferred fuel for high-intensity work.<br><br>
+              <strong class="text-primary">Simple vs complex:</strong> Sugar (glucose, fructose, sucrose) = simple carbs — digested in minutes, spike blood sugar fast. Starch (bread, rice, pasta) and fibre = complex carbs — slower digestion, steadier energy.<br><br>
+              <strong class="text-primary">Storage:</strong> Excess carbs convert to glycogen (stored in liver and muscle, ~400–500g total) or, once glycogen is full, to fat. Glycogen is why you can run a 10km without eating — you're burning stored carbs.
+            </div>
+          </div>
+          <!-- mini SVG: blood sugar spike comparison -->
+          <div class="u-shrink-0">
+            <svg viewBox="0 0 200 120" width="200" xmlns="http://www.w3.org/2000/svg" aria-label="Blood sugar response comparison: simple vs complex carbs">
+              <text x="100" y="12" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">Blood sugar response</text>
+              <!-- axes -->
+              <line x1="30" y1="100" x2="195" y2="100" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+              <line x1="30" y1="20" x2="30" y2="100" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+              <text x="110" y="113" text-anchor="middle" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Time</text>
+              <text x="8" y="64" text-anchor="middle" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" transform="rotate(-90,8,64)">Blood sugar</text>
+              <!-- simple carb spike: sharp peak, rapid drop -->
+              <polyline points="30,85 55,30 80,88 120,83 160,82 190,82" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-linejoin="round"/>
+              <!-- complex carb: gentle hill -->
+              <polyline points="30,85 70,58 110,50 150,60 190,72" fill="none" stroke="#378ADD" stroke-width="1.5" stroke-linejoin="round"/>
+              <!-- legend -->
+              <line x1="35" y1="22" x2="52" y2="22" stroke="#E24B4A" stroke-width="1.5"/>
+              <text x="55" y="25" font-size="8" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Sugar / white bread</text>
+              <line x1="35" y1="32" x2="52" y2="32" stroke="#378ADD" stroke-width="1.5"/>
+              <text x="55" y="35" font-size="8" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Oats / lentils</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="macro-fat" class="macro-panel" role="tabpanel" aria-labelledby="tab-fat">
+        <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
+          <div class="u-flex-1 u-min-w-200px">
+            <div class="u-fs-12px text-secondary u-lh-1-d-7">
+              <strong class="text-primary">Primary role:</strong> Long-term energy storage, cell membrane construction, fat-soluble vitamin transport (A, D, E, K), hormone production. Fat is not the enemy — it's essential.<br><br>
+              <strong class="text-primary">Types matter:</strong> Unsaturated fats (olive oil, avocado, nuts) are associated with better cardiovascular outcomes. Saturated fats (butter, red meat) should be moderate. Trans fats (partially hydrogenated oils) are the ones to genuinely avoid — largely banned in many countries now.<br><br>
+              <strong class="text-primary">Density insight:</strong> At 9 kcal/g, fat is the most energy-dense macronutrient — 2.25× more than carbs or protein. A tablespoon of olive oil (~14g) has ~125 kcal. This is why cooking oils add calories faster than people expect.
+            </div>
+          </div>
+          <div class="u-shrink-0">
+            <svg viewBox="0 0 180 130" width="180" xmlns="http://www.w3.org/2000/svg" aria-label="Energy density comparison chart: fat vs carbs vs protein">
+              <text x="90" y="12" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">kcal per gram</text>
+              <!-- fat bar -->
+              <rect x="20" y="22" width="140" height="22" rx="3" fill="#EF9F27" opacity="0.85"/>
+              <text x="167" y="37" font-size="9" font-weight="600" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">9</text>
+              <text x="24" y="37" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Fat</text>
+              <!-- carb bar -->
+              <rect x="20" y="52" width="62" height="22" rx="3" fill="#378ADD" opacity="0.85"/>
+              <text x="88" y="67" font-size="9" font-weight="600" fill="var(--color-text-info)" font-family="system-ui,sans-serif">4</text>
+              <text x="24" y="67" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Carbs</text>
+              <!-- protein bar -->
+              <rect x="20" y="82" width="62" height="22" rx="3" fill="#1D9E75" opacity="0.85"/>
+              <text x="88" y="97" font-size="9" font-weight="600" fill="var(--color-text-success)" font-family="system-ui,sans-serif">4</text>
+              <text x="24" y="97" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Protein</text>
+              <!-- alcohol note -->
+              <rect x="20" y="112" width="98" height="14" rx="3" fill="var(--color-background-warning)" stroke="var(--color-border-warning)" stroke-width="0.5"/>
+              <text x="24" y="122" font-size="8" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">Alcohol: 7 kcal/g (bonus!)</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="macro-protein" class="macro-panel" role="tabpanel" aria-labelledby="tab-protein">
+        <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
+          <div class="u-flex-1 u-min-w-200px">
+            <div class="u-fs-12px text-secondary u-lh-1-d-7">
+              <strong class="text-primary">Primary role:</strong> Building and repairing tissue — muscle, skin, enzymes, antibodies, hormones. The body cannot store protein the way it stores fat or glycogen, so it needs a daily supply.<br><br>
+              <strong class="text-primary">Complete vs incomplete:</strong> Proteins are made of 20 amino acids; 9 are "essential" (must come from food). Animal proteins (meat, eggs, dairy) are "complete" — they contain all 9. Most plant proteins are incomplete, but combining sources (e.g. rice + beans) covers all 9.<br><br>
+              <strong class="text-primary">Satiety superpower:</strong> Protein is the most satiating macronutrient — gram for gram, it keeps you full longer than carbs or fat. This is why high-protein breakfasts reduce total daily calorie intake in studies. The mechanism: protein raises GLP-1 and PYY (satiety hormones) more than other macros.
+            </div>
+          </div>
+          <div class="u-shrink-0">
+            <svg viewBox="0 0 180 120" width="180" xmlns="http://www.w3.org/2000/svg" aria-label="Satiety comparison chart: protein vs carbs vs fat">
+              <text x="90" y="12" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">Satiety per 100 kcal (approx)</text>
+              <!-- protein -->
+              <rect x="20" y="20" width="130" height="22" rx="3" fill="#1D9E75" opacity="0.85"/>
+              <text x="24" y="35" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Protein ████████████</text>
+              <!-- fat -->
+              <rect x="20" y="50" width="90" height="22" rx="3" fill="#EF9F27" opacity="0.85"/>
+              <text x="24" y="65" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Fat ████████</text>
+              <!-- carbs -->
+              <rect x="20" y="80" width="60" height="22" rx="3" fill="#378ADD" opacity="0.85"/>
+              <text x="24" y="95" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Carbs ████</text>
+              <text x="20" y="113" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Relative — varies by food type &amp; individual</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART C -->
+    <h2 class="sec" id="part-c-reading-real-food-what-s-actually-inside">Part C · reading real food — what's actually inside</h2>
+
+    <div class="u-mb-1-d-2rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Protein in 200g of cooked chicken breast</div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Protein</span><span>~46 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-23-pct u-bg-blue-500"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Fat</span><span>~5 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-2-d-5-pct u-bg-amber-500"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Total weight</span><span>200 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-100-pct u-bg-border-secondary"></div></div>
+      </div>
+      <p class="u-fs-12px text-secondary u-m-6px-0-0">Rule of thumb: cooked chicken breast = ~23% protein by weight. So 200g gives you about 46g of protein — roughly what a 75kg person needs in an entire day.</p>
+    </div>
+
+    <div class="u-mb-1-d-2rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">A Snickers bar (standard, ~52 g)</div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Sugar</span><span>~27 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-52-pct u-bg-red-500"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Fat</span><span>~13 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-25-pct u-bg-amber-500"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Protein</span><span>~4 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-8-pct u-bg-blue-500"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Total bar weight</span><span>52 g</span></div>
+        <div class="bar-track"><div class="bar-fill u-w-100-pct u-bg-border-secondary"></div></div>
+      </div>
+      <p class="u-fs-12px text-secondary u-m-6px-0-0">That 27g of sugar = about 6–7 teaspoons. The WHO recommends ≤25g free sugar per day for an adult. One Snickers already exceeds it.</p>
+    </div>
+
+    <!-- NEW: How to read a nutrition label -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How to read a nutrition label — annotated</div>
+      <div class="u-display-flex u-gap-20px u-flex-wrap u-align-flex-start">
+
+        <!-- Replica label -->
+        <div class="food-label" aria-label="Example nutrition facts label for a hypothetical food product">
+          <div class="fl-title">Nutrition Facts</div>
+          <div class="fl-serving">8 servings per container<br><strong>Serving size</strong> <span class="u-float-right u-fw-700">2/3 cup (55g)</span></div>
+          <div class="fl-cal-row">
+            <div>
+              <div class="fl-cal-label">Amount per serving</div>
+              <div class="u-fs-13px u-fw-700">Calories</div>
+            </div>
+            <div class="fl-cal-num">230</div>
+          </div>
+          <div class="u-text-align-right u-fs-10px u-fw-700 u-border-bottom-0-d-5px-solid-hex-ccc u-pb-2px">% Daily Value*</div>
+          <div class="fl-row fl-row-bold"><span>Total Fat 8g</span><span>10%</span></div>
+          <div class="fl-row fl-row-indent"><span>Saturated Fat 1g</span><span>5%</span></div>
+          <div class="fl-row fl-row-indent"><span><em>Trans</em> Fat 0g</span><span></span></div>
+          <div class="fl-row fl-row-bold"><span>Cholesterol 0mg</span><span>0%</span></div>
+          <div class="fl-row fl-row-bold"><span>Sodium 160mg</span><span>7%</span></div>
+          <div class="fl-row fl-row-bold"><span>Total Carbohydrate 37g</span><span>13%</span></div>
+          <div class="fl-row fl-row-indent"><span>Dietary Fiber 4g</span><span>14%</span></div>
+          <div class="fl-row fl-row-indent"><span>Total Sugars 12g</span><span></span></div>
+          <div class="fl-row fl-row-indent u-pl-20px"><span>Includes 10g Added Sugars</span><span>20%</span></div>
+          <div class="fl-row fl-row-bold u-border-bottom-4px-solid-hex-000"><span>Protein 3g</span><span></span></div>
+          <div class="fl-row"><span>Vitamin D 2mcg</span><span>10%</span></div>
+          <div class="fl-row"><span>Calcium 260mg</span><span>20%</span></div>
+          <div class="fl-row"><span>Iron 8mg</span><span>45%</span></div>
+          <div class="fl-row"><span>Potassium 235mg</span><span>6%</span></div>
+          <div class="fl-dv">* % Daily Values based on a 2,000 kcal diet. Your daily values may be higher or lower depending on your calorie needs.</div>
+        </div>
+
+        <!-- Annotations -->
+        <div class="u-flex-1 u-min-w-200px u-fs-12px text-secondary u-lh-1-d-8">
+          <div class="u-mb-sm"><strong class="text-primary">① Serving size is the key trap.</strong> Everything on this label is <em>per serving</em>. This container has 8 servings. Eat the whole box = multiply everything by 8. Most people don't.</div>
+          <div class="u-mb-sm"><strong class="text-primary">② Calories = the headline number.</strong> 230 kcal per serving. Quick mental check: is this a meal or a snack? 230 kcal is a light snack for most adults.</div>
+          <div class="u-mb-sm"><strong class="text-primary">③ % Daily Value is based on 2,000 kcal/day.</strong> 5% DV = low. 20% DV = high. Use it to compare products, not as gospel — your needs differ.</div>
+          <div class="u-mb-sm"><strong class="text-primary">④ Added Sugars vs Total Sugars.</strong> "Total Sugars" includes naturally occurring sugar (fruit, milk). "Added Sugars" is the dangerous one — 10g here = 40% of the WHO daily max in one serving.</div>
+          <div><strong class="text-primary">⑤ Protein has no % DV.</strong> Regulators consider deficiency rare in Western diets. For active people, aim for body weight in kg × 1.2–2.0g daily.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW: Sugar visualiser -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Sugar in teaspoons — a visual gut-check</div>
+      <div class="u-fs-12px text-secondary u-mb-md">Each cube = 1 teaspoon (~4g) of sugar. WHO daily max for adults = 6 teaspoons (25g).</div>
+      <div class="u-display-flex u-gap-sm u-flex-wrap u-mb-md" role="radiogroup" aria-label="Select a food to see its sugar content">
+        <button class="macro-btn active" onclick="showSugar('coke','Can of Coke (330ml)',9,'#E24B4A')" aria-pressed="true">Coke (330ml)</button>
+        <button class="macro-btn" onclick="showSugar('snickers','Snickers (52g)',7,'#EF9F27')" aria-pressed="false">Snickers</button>
+        <button class="macro-btn" onclick="showSugar('oj','Orange juice (250ml)',6,'#F4A823')" aria-pressed="false">Orange juice</button>
+        <button class="macro-btn" onclick="showSugar('yogurt','Flavoured yogurt (150g)',4,'#1D9E75')" aria-pressed="false">Yogurt</button>
+        <button class="macro-btn" onclick="showSugar('ketchup','Ketchup (3 tbsp ~45g)',2,'#C0392B')" aria-pressed="false">Ketchup</button>
+        <button class="macro-btn" onclick="showSugar('apple','Apple (medium ~182g)',5,'var(--accent)')" aria-pressed="false">Apple</button>
+      </div>
+      <div id="sugar-cubes" class="u-mb-sm u-min-h-32px" aria-live="polite"></div>
+      <div id="sugar-label" class="u-fs-12px text-secondary u-lh-1-d-6"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART D -->
+    <h2 class="sec" id="part-d-how-far-does-100-kcal-go">Part D · how far does 100 kcal go?</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How far does 100 kcal go? (exercise to burn it off)</div>
+      <div class="bar-row">
+        <span class="bl">Running (fast)</span>
+        <div class="bb u-w-20-pct u-bg-green-600"><span class="bv u-text-white">~8 min</span></div>
+      </div>
+      <div class="bar-row">
+        <span class="bl">Cycling</span>
+        <div class="bb u-w-30-pct u-bg-green-400"><span class="bv u-text-green-950">~15 min</span></div>
+      </div>
+      <div class="bar-row">
+        <span class="bl">Brisk walking</span>
+        <div class="bb u-w-50-pct u-bg-green-200"><span class="bv u-text-green-950">~25 min</span></div>
+      </div>
+      <div class="bar-row">
+        <span class="bl">Sitting at a desk</span>
+        <div class="bb u-w-100-pct u-bg-green-50 u-border-0-d-5px-solid-hex-9fe1cb"><span class="bv u-text-green-900">~75 min</span></div>
+      </div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">100 kcal = roughly a small apple, a plain rice cake with peanut butter, or 3 squares of dark chocolate. Exercise burns less than most people think — that croissant (250 kcal) needs 30 min of running to offset.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART E -->
+    <h2 class="sec" id="part-e-energy-in-the-world-from-food-to-nuclear-weapons">Part E · energy in the world — from food to nuclear weapons</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Energy released — logarithmic scale (in joules, J)</div>
+      <div class="u-fs-11px text-secondary u-mb-md">Each step up is ~1,000× more energy. 1 food calorie = 4,184 joules.</div>
+      <div class="energy-chart">
+        <div class="bar-row" data-val="~10 J"><span class="bl">Lifting 1 kg by 1 metre</span><div class="bb u-w-0-d-4-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4"><span class="bv u-text-blue-900 u-ml-4px u-fs-10px">~10 J</span></div></div>
+        <div class="bar-row" data-val="~4,200 J"><span class="bl">1 food calorie (1 kcal)</span><div class="bb u-w-0-d-6-pct u-bg-blue-200"><span class="bv u-text-navy-950 u-ml-4px u-fs-10px">~4,200 J</span></div></div>
+        <div class="bar-row" data-val="~8.4 MJ"><span class="bl">Human daily food (2,000 kcal)</span><div class="bb u-w-2-pct u-bg-blue-300"><span class="bv u-text-navy-950 u-fs-10px">~8.4 MJ</span></div></div>
+        <div class="bar-row" data-val="~34 MJ"><span class="bl">1 litre of petrol (burned)</span><div class="bb u-w-4-pct u-bg-blue-500"><span class="bv u-text-white u-fs-10px">~34 MJ</span></div></div>
+        <div class="bar-row" data-val="~250 MJ–1 GJ"><span class="bl">Lightning bolt</span><div class="bb u-w-6-pct u-bg-blue-700"><span class="bv u-text-white u-fs-10px">~250 MJ–1 GJ</span></div></div>
+        <div class="bar-row" data-val="~1.7 GJ"><span class="bl">Full tank of car petrol (~50L)</span><div class="bb u-w-8-pct u-bg-blue-900"><span class="bv u-text-blue-50 u-fs-10px">~1.7 GJ</span></div></div>
+        <div class="bar-row" data-val="~63 TJ"><span class="bl">Hiroshima bomb (Little Boy)</span><div class="bb u-w-30-pct u-bg-brown-800"><span class="bv u-text-white">~63 TJ (63 trillion J)</span></div></div>
+        <div class="bar-row" data-val="~210 PJ — 3,300× Hiroshima"><span class="bl">Largest H-bomb ever (Tsar Bomba)</span><div class="bb u-w-100-pct u-bg-purple-800"><span class="bv u-text-purple-50">~210 PJ — 3,300× Hiroshima</span></div></div>
+      </div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Surprising fact: a typical lightning bolt (~250 MJ to ~1 GJ) contains <em>less</em> total energy than a full car petrol tank (~1.7 GJ). The difference is delivery speed — a lightning bolt releases its energy in microseconds. Your petrol tank releases it over hours. Energy rate (power) matters as much as total energy.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART F -->
+    <h2 class="sec" id="part-f-interactive-calorie-calculator">Part F · interactive calorie calculator</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How long to burn off any food?</div>
+      <div class="u-display-flex u-gap-md u-flex-wrap u-align-center u-mb-md">
+        <label for="food-sel" class="sr-only">Choose a food</label>
+        <select id="food-sel" class="u-flex-1 u-min-w-160px">
+          <option value="52">Small apple (52 kcal)</option>
+          <option value="250">Croissant (250 kcal)</option>
+          <option value="300">Cheeseburger (300 kcal)</option>
+          <option value="550">Big Mac (550 kcal)</option>
+          <option value="140">Can of Coke (140 kcal)</option>
+          <option value="250">Snickers bar (250 kcal)</option>
+          <option value="130">Glass of wine (130 kcal)</option>
+          <option value="100">Banana (100 kcal)</option>
+          <option value="700">Pizza slice, large (700 kcal)</option>
+        </select>
+        <label for="activity-sel" class="sr-only">Choose an activity</label>
+        <select id="activity-sel" class="u-flex-1 u-min-w-160px">
+          <option value="11.5">Running fast (11.5 kcal/min)</option>
+          <option value="7">Cycling moderate (7 kcal/min)</option>
+          <option value="4">Brisk walking (4 kcal/min)</option>
+          <option value="2.5">Yoga / stretching (2.5 kcal/min)</option>
+          <option value="1.3">Sitting / desk work (1.3 kcal/min)</option>
+          <option value="0.9">Sleeping (0.9 kcal/min)</option>
+        </select>
+      </div>
+      <div id="calorie-result" class="u-fs-14px text-primary u-bg-background-secondary u-radius-border-radius-md u-p-10px-13px u-lh-1-d-8" aria-live="polite"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART G (NEW) -->
+    <h2 class="sec" id="part-g-fibre-the-forgotten-macronutrient">Part G · fibre — the forgotten macronutrient</h2>
+
+    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Why fibre deserves its own section</div>
+      <div class="u-fs-13px text-secondary u-lh-1-d-7">
+        Fibre is a carbohydrate the body cannot digest — it passes through mostly intact, but does critical work on the way. It is not "inert bulk." It feeds gut bacteria (your microbiome), slows glucose absorption, lowers cholesterol, and keeps bowel movements regular. Most adults in wealthy countries eat about half the recommended amount.
+      </div>
+    </div>
+
+    <div class="cgrid u-grid-cols-repeat-auto-fit-minmax-140px-1fr">
+      <div class="card">
+        <p class="clabel">Recommended daily fibre</p>
+        <p class="cval">25–30 g</p>
+        <p class="cnote">WHO / dietary guidelines. Average Western adult gets ~15g. A 50% shortfall is typical.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Fibre in an apple (medium)</p>
+        <p class="cval">~4.5 g</p>
+        <p class="cnote">Apple juice has almost zero — the fibre is in the pulp. Whole fruit, not juice.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Fibre in white bread (slice)</p>
+        <p class="cval">~0.6 g</p>
+        <p class="cnote">Vs ~2g in a slice of wholegrain. Processing strips most of the fibre out.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Fibre in lentils (100g cooked)</p>
+        <p class="cval">~8 g</p>
+        <p class="cnote">One of the best sources. Legumes, oats, and vegetables are the practical high-fibre staples.</p>
+      </div>
+    </div>
+
+    <!-- Fibre sources comparison chart SVG -->
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Fibre content per serving — common foods compared</div>
+      <div class="bar-row"><span class="bl">Lentils, 100g cooked</span><div class="bb u-w-80-pct u-bg-green-600"><span class="bv u-text-white">8 g</span></div></div>
+      <div class="bar-row"><span class="bl">Black beans, 100g cooked</span><div class="bb u-w-75-pct u-bg-green-500"><span class="bv u-text-white">7.5 g</span></div></div>
+      <div class="bar-row"><span class="bl">Oats, 40g dry (1 serving)</span><div class="bb u-w-40-pct u-bg-green-400"><span class="bv u-text-green-950">4 g</span></div></div>
+      <div class="bar-row"><span class="bl">Apple, medium (~182g)</span><div class="bb u-w-45-pct u-bg-green-200"><span class="bv u-text-green-950">4.5 g</span></div></div>
+      <div class="bar-row"><span class="bl">Broccoli, 100g</span><div class="bb u-w-26-pct u-bg-green-100"><span class="bv u-text-green-900">2.6 g</span></div></div>
+      <div class="bar-row"><span class="bl">Wholegrain bread, 1 slice</span><div class="bb u-w-20-pct u-bg-green-75"><span class="bv u-text-green-900">2 g</span></div></div>
+      <div class="bar-row"><span class="bl">White bread, 1 slice</span><div class="bb u-w-6-pct u-bg-green-50 u-border-0-d-5px-solid-hex-9fe1cb"><span class="bv u-text-green-900">0.6 g</span></div></div>
+      <p class="u-fs-11px text-secondary u-m-10px-0-0">Rule of thumb: ≥5g fibre per serving = "high fibre." ≥3g = "source of fibre" (EU labelling). Legumes beat everything else by a wide margin.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART H (NEW) -->
+    <h2 class="sec" id="part-h-food-label-estimation-game">Part H · food label estimation game</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Guess the calories — 5 rounds</div>
+      <div class="u-fs-12px text-secondary u-mb-md">You'll be shown a real food and a quantity. Pick the closest calorie estimate.</div>
+      <div id="cg-progress" class="u-fs-11px text-tertiary u-mb-sm"></div>
+      <div id="cg-question" class="u-fs-14px u-fw-500 text-primary u-mb-md"></div>
+      <div id="cg-options" class="u-display-flex u-flex-wrap u-gap-6px u-mb-md"></div>
+      <div id="cg-feedback" class="u-fs-12px text-secondary u-lh-1-d-6 u-min-h-36px"></div>
+      <div id="cg-score-board" class="u-display-none u-bg-background-secondary u-radius-border-radius-md u-p-10px-13px u-fs-13px"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART I (NEW) -->
+    <h2 class="sec" id="part-i-the-glycaemic-index-why-not-all-carbs-are-equal">Part I · the glycaemic index — why not all carbs are equal</h2>
+
+    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What is the glycaemic index (GI)?</div>
+      <div class="u-fs-13px text-secondary u-lh-1-d-7">
+        GI measures how fast a carbohydrate food raises blood glucose, on a scale of 0–100 (pure glucose = 100). High-GI foods cause a rapid spike and subsequent crash. Low-GI foods cause a slower, steadier rise. GI matters most for diabetics and athletes, but it's a useful mental model for everyone: it explains why you're hungry 90 minutes after white toast but not after oats.
+      </div>
+    </div>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glycaemic index scale showing foods from low GI to high GI">
+        <!-- Background -->
+        <rect width="640" height="200" fill="none"/>
+        <!-- GI scale bar -->
+        <defs>
+          <linearGradient id="gi-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1D9E75" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#EF9F27" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#E24B4A" stop-opacity="0.8"/>
+          </linearGradient>
+        </defs>
+        <rect x="40" y="60" width="560" height="18" rx="4" fill="url(#gi-grad)"/>
+        <!-- Zone labels -->
+        <text x="40" y="55" font-size="9" fill="var(--color-text-success)" font-family="system-ui,sans-serif" font-weight="600">LOW (&lt;55)</text>
+        <text x="266" y="55" font-size="9" fill="var(--color-text-warning)" font-family="system-ui,sans-serif" font-weight="600">MEDIUM (55–69)</text>
+        <text x="526" y="55" font-size="9" fill="var(--color-text-danger)" font-family="system-ui,sans-serif" font-weight="600">HIGH (≥70)</text>
+        <!-- Scale numbers -->
+        <text x="40" y="94" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">0</text>
+        <text x="320" y="94" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">50</text>
+        <text x="600" y="94" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">100</text>
+        <!-- Food markers: x = 40 + (gi/100)*560 -->
+        <!-- Lentils GI=29 → x=202 -->
+        <line x1="202" y1="62" x2="202" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="202" y="112" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">Lentils</text>
+        <text x="202" y="122" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 29</text>
+        <!-- Oats GI=55 → x=348 -->
+        <line x1="348" y1="62" x2="348" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="348" y="138" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">Oats</text>
+        <text x="348" y="148" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 55</text>
+        <!-- Brown rice GI=50 → x=320 -->
+        <line x1="320" y1="62" x2="320" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="320" y="112" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">Brown rice</text>
+        <text x="320" y="122" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 50</text>
+        <!-- White bread GI=75 → x=460 -->
+        <line x1="460" y1="62" x2="460" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="460" y="138" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">White bread</text>
+        <text x="460" y="148" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 75</text>
+        <!-- Banana GI=62 → x=387 -->
+        <line x1="387" y1="62" x2="387" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="387" y="112" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">Banana</text>
+        <text x="387" y="122" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 62</text>
+        <!-- White rice GI=72 → x=443 -->
+        <line x1="443" y1="62" x2="443" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <!-- slightly nudge label to avoid overlap with white bread -->
+        <text x="443" y="165" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">White rice</text>
+        <text x="443" y="175" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 72</text>
+        <!-- Watermelon GI=80 → x=488 -->
+        <line x1="488" y1="62" x2="488" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="488" y="112" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">Watermelon</text>
+        <text x="488" y="122" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 80</text>
+        <!-- Glucose GI=100 → x=600 -->
+        <line x1="598" y1="62" x2="598" y2="78" stroke="#fff" stroke-width="1.2"/>
+        <text x="598" y="138" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif" text-anchor="middle">Glucose</text>
+        <text x="598" y="148" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif" text-anchor="middle">GI 100</text>
+        <!-- note -->
+        <text x="320" y="193" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">GI is measured in isolation. Combining foods (fat, protein, fibre with carbs) lowers effective GI of the meal.</text>
+      </svg>
+    </div>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">GI — the nuances that matter</div>
+      <div class="anchor-row">
+        <span class="pill p-amber">GL &gt; GI</span>
+        <div><div class="atext">Glycaemic Load = GI × carb amount ÷ 100</div><div class="asub">Watermelon has a high GI (80) but a low GL (~5 per serving) because it's mostly water. GL is a better real-world metric than GI alone.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">Context</span>
+        <div><div class="atext">Fat and protein lower a meal's effective GI</div><div class="asub">Eating white rice alone spikes blood sugar fast. Eating it with chicken and olive oil slows digestion considerably. This is why isolated GI numbers can mislead.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">Cooking</span>
+        <div><div class="atext">Cooking method changes GI</div><div class="asub">Al dente pasta has a lower GI than overcooked pasta. Cooled, then reheated rice has a lower GI than freshly cooked (resistant starch forms on cooling).</div></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART J (NEW) -->
+    <h2 class="sec" id="part-j-food-label-decoder-interactive">Part J · food label decoder — interactive</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Calculate calories from a label</div>
+      <div class="u-fs-12px text-secondary u-mb-md">Enter the macros from any nutrition label and see the calorie breakdown.</div>
+      <div class="u-display-grid u-grid-cols-repeat-auto-fit-minmax-130px-1fr u-gap-md u-mb-md">
+        <div>
+          <label for="ld-fat" class="u-fs-11px text-secondary u-display-block u-mb-xs">Fat (g)</label>
+          <input type="number" id="ld-fat" min="0" max="200" value="8" step="0.5">
+        </div>
+        <div>
+          <label for="ld-carb" class="u-fs-11px text-secondary u-display-block u-mb-xs">Carbohydrate (g)</label>
+          <input type="number" id="ld-carb" min="0" max="200" value="37" step="0.5">
+        </div>
+        <div>
+          <label for="ld-protein" class="u-fs-11px text-secondary u-display-block u-mb-xs">Protein (g)</label>
+          <input type="number" id="ld-protein" min="0" max="200" value="3" step="0.5">
+        </div>
+        <div>
+          <label for="ld-servings" class="u-fs-11px text-secondary u-display-block u-mb-xs">Servings eaten</label>
+          <input type="number" id="ld-servings" min="0.5" max="20" value="1" step="0.5">
+        </div>
+      </div>
+      <button onclick="calcLabel()" class="u-mb-md">Calculate</button>
+      <div id="ld-result" aria-live="polite"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART K (anchor) -->
+    <h2 class="sec" id="part-k-anchor-numbers-to-memorize">Part K · anchor numbers to memorize</h2>
+
+    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+      <div class="anchor-row">
+        <span class="pill p-red">2,000 kcal</span>
+        <div><div class="atext">Average human daily energy need</div><div class="asub">Fat = 9 kcal/g. Carbs &amp; protein = 4 kcal/g each.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">~80 W</span>
+        <div><div class="atext">Resting human heat output</div><div class="asub">A human body radiates as much as a standard incandescent light bulb, continuously.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">23%</span>
+        <div><div class="atext">Protein content of cooked chicken breast</div><div class="asub">200g chicken ≈ 46g protein — nearly a full day's requirement.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">25 g</span>
+        <div><div class="atext">WHO recommended maximum free sugar per day</div><div class="asub">About 6 teaspoons. One Snickers bar (27g sugar) already exceeds this.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">25–30 g</span>
+        <div><div class="atext">Daily fibre target</div><div class="asub">Most Western adults get only ~15g. Legumes, oats, and whole vegetables are the practical solutions.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">GI &lt;55</span>
+        <div><div class="atext">Low glycaemic index threshold</div><div class="asub">Lentils (29), oats (55), brown rice (50). Combines with GL for real-world usefulness.</div></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART L (agriculture & food systems) -->
+    <h2 class="sec" id="part-l-agriculture-and-food-systems">Part L · agriculture &amp; food systems</h2>
+
+    <!-- L1: What is a food system? -->
+    <div class="sub-card-roomy u-mb-lg">
+      <div class="panel-title">What is a food system?</div>
+      <div class="muted-copy-large">
+        A food system includes every person, process, and resource involved in feeding people: the farmers, seeds, soil, water, factories, trucks, warehouses, supermarkets, kitchens, and waste bins. It starts with sunlight hitting a field and ends when nutrients enter a human body (or when food is thrown away). Understanding the system helps explain why certain foods are cheap, why some nutrients are abundant and others scarce, and why your breakfast is both local and global at the same time.
+      </div>
+    </div>
+
+    <!-- L2: Farm to table supply chain SVG -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-md">From farm to table: the supply chain</div>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 660 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Food supply chain: production, processing, storage, transport, distribution, retail, consumption">
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="var(--color-text-tertiary)"/>
+            </marker>
+          </defs>
+          <!-- Stage boxes -->
+          <!-- Production -->
+          <rect x="4" y="22" width="74" height="36" rx="6" fill="var(--color-background-success)" stroke="var(--color-border-success)" stroke-width="0.8"/>
+          <text x="41" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-success)" font-family="system-ui,sans-serif">Production</text>
+          <text x="41" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-success)" font-family="system-ui,sans-serif">Farm / fishing</text>
+          <!-- arrow -->
+          <line x1="79" y1="40" x2="90" y2="40" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <!-- Processing -->
+          <rect x="92" y="22" width="74" height="36" rx="6" fill="var(--color-background-warning)" stroke="var(--color-border-warning)" stroke-width="0.8"/>
+          <text x="129" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">Processing</text>
+          <text x="129" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">Milling / refining</text>
+          <!-- arrow -->
+          <line x1="167" y1="40" x2="178" y2="40" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <!-- Storage -->
+          <rect x="180" y="22" width="74" height="36" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <text x="217" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">Storage</text>
+          <text x="217" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Silos / cold chain</text>
+          <!-- arrow -->
+          <line x1="255" y1="40" x2="266" y2="40" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <!-- Transport -->
+          <rect x="268" y="22" width="74" height="36" rx="6" fill="var(--color-background-info)" stroke="var(--color-border-info)" stroke-width="0.8"/>
+          <text x="305" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-info)" font-family="system-ui,sans-serif">Transport</text>
+          <text x="305" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-info)" font-family="system-ui,sans-serif">Ships / trucks</text>
+          <!-- arrow -->
+          <line x1="343" y1="40" x2="354" y2="40" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <!-- Distribution -->
+          <rect x="356" y="22" width="74" height="36" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+          <text x="393" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">Distribution</text>
+          <text x="393" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Wholesale / DC</text>
+          <!-- arrow -->
+          <line x1="431" y1="40" x2="442" y2="40" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <!-- Retail -->
+          <rect x="444" y="22" width="74" height="36" rx="6" fill="var(--color-background-warning)" stroke="var(--color-border-warning)" stroke-width="0.8"/>
+          <text x="481" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">Retail</text>
+          <text x="481" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">Supermarket / market</text>
+          <!-- arrow -->
+          <line x1="519" y1="40" x2="530" y2="40" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
+          <!-- Consumption -->
+          <rect x="532" y="22" width="80" height="36" rx="6" fill="var(--color-background-success)" stroke="var(--color-border-success)" stroke-width="0.8"/>
+          <text x="572" y="37" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-success)" font-family="system-ui,sans-serif">Consumption</text>
+          <text x="572" y="50" text-anchor="middle" font-size="8" fill="var(--color-text-success)" font-family="system-ui,sans-serif">Your plate</text>
+          <!-- footnote -->
+          <text x="330" y="88" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Each arrow is a point of potential loss: food waste, nutrient degradation, energy use, and cost accumulation happen at every stage.</text>
+        </svg>
+      </div>
+      <div class="muted-copy">A banana from Ecuador passes through roughly 8 to 12 separate entities before reaching your hand. By the time it does, the farm gate price may represent only 5 to 10% of what you paid at the checkout.</div>
+    </div>
+
+    <!-- L3: Types of agriculture -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-md">How food is grown: types of agriculture</div>
+      <div class="cgrid u-gridcols-auto-fit-150px-1fr">
+        <div class="sub-card">
+          <div class="mini-card-title">Subsistence farming</div>
+          <div class="muted-copy-tight">Families grow mainly for themselves, with little surplus. Still practiced by roughly 500 million smallholders globally. Highly diverse crops, low external inputs, high labour intensity.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Industrial / conventional</div>
+          <div class="muted-copy-tight">Large monoculture fields, mechanised equipment, synthetic fertilisers, and pesticides. Produces the majority of calories in global trade. High yields per worker, but high environmental cost.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Organic farming</div>
+          <div class="muted-copy-tight">Prohibits synthetic pesticides and fertilisers; relies on crop rotation, compost, and biological pest control. Yields typically 20 to 25% lower than conventional, but soil health and biodiversity often better.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Precision agriculture</div>
+          <div class="muted-copy-tight">GPS-guided tractors, drones, soil sensors, and satellite imagery allow inputs to be applied exactly where needed. Reduces fertiliser and water waste without cutting yields.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Aquaculture</div>
+          <div class="muted-copy-tight">Fish, shellfish, and seaweed farming. Now supplies over 50% of fish eaten globally. Salmon farming uses roughly 1.2 kg of feed per kg of fish -- far more efficient than beef (7 to 8 kg feed per kg).</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Vertical farming</div>
+          <div class="muted-copy-tight">Crops grown in stacked indoor layers under LED lighting. Uses up to 95% less water than field farming, but currently 5 to 10x the energy cost. Economically viable mainly for leafy greens and herbs.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- L4: Farming inputs and environmental costs -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-sm">Key farming inputs and their real costs</div>
+      <div class="anchor-row">
+        <span class="pill p-green">Soil</span>
+        <div><div class="atext">The foundation of all terrestrial food production</div><div class="asub">It takes roughly 500 years to form 2.5 cm of topsoil naturally. Industrial farming can erode that in decades. About 33% of global soils are currently degraded.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">Water</span>
+        <div><div class="atext">Agriculture uses ~70% of all freshwater withdrawals globally</div><div class="asub">Producing 1 kg of beef requires roughly 15,000 litres of water. 1 kg of rice: ~2,500 litres. 1 kg of tomatoes: ~214 litres. The water footprint of your diet is far larger than your shower.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">Fertilisers</span>
+        <div><div class="atext">Nitrogen fertiliser is both a miracle and a pollutant</div><div class="asub">The Haber-Bosch process for synthesising nitrogen fertiliser is estimated to feed roughly half the world's current population. It also consumes about 1 to 2% of global energy and contributes to nitrogen runoff, dead zones in oceans, and nitrous oxide emissions.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-coral">Pesticides</span>
+        <div><div class="atext">Protect crops, but have non-target effects</div><div class="asub">Around 3.5 million tonnes of pesticides are applied globally per year. Residues on food are typically below regulatory limits, but cumulative effects on pollinators (especially bees), soil microbes, and aquatic life are a major ongoing concern.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-red">GHG emissions</span>
+        <div><div class="atext">Food systems produce ~26% of global greenhouse gas emissions</div><div class="asub">Livestock (especially beef and dairy) account for roughly 14.5% of global GHG. Rice paddies emit methane. Deforestation for agriculture is the single largest driver of land-use carbon loss.</div></div>
+      </div>
+    </div>
+
+    <!-- L5: Food processing and preservation -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-sm">Processing and preservation: why and how</div>
+      <div class="muted-copy u-mb-md">Food processing exists for good reasons: safety, shelf life, convenience, and making nutrients accessible. The problem is not processing itself, but the degree and what gets added or removed along the way.</div>
+      <div class="two-col-grid">
+        <div class="sub-card">
+          <div class="mini-card-title">Why process food?</div>
+          <div class="muted-copy-tight">Kill pathogens (pasteurisation, canning), extend shelf life (drying, freezing, fermentation), improve digestibility (cooking), add convenience (pre-chopped, pre-cooked), and enable global distribution of perishables.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">What can be lost</div>
+          <div class="muted-copy-tight">Heat damages water-soluble vitamins (C, B1). Milling grain removes the bran and germ, stripping fibre, B vitamins, and minerals. "Fortification" adds some back -- but not all, and not in the same form.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">NOVA classification</div>
+          <div class="muted-copy-tight">Group 1: unprocessed (fresh fruit, plain meat). Group 2: processed ingredients (oils, flour). Group 3: processed foods (canned fish, cheese). Group 4: ultra-processed -- industrial formulations with additives, emulsifiers, colourants. Group 4 dominates ~60% of calories in the average UK/US diet.</div>
+        </div>
+        <div class="sub-card">
+          <div class="mini-card-title">Ultra-processed foods (UPF)</div>
+          <div class="muted-copy-tight">Linked in observational studies to higher rates of obesity, type 2 diabetes, and cardiovascular disease. The mechanism is debated: is it the additives, the disrupted food matrix, the calorie density, or the easy over-consumption they encourage? Probably all four.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- L6: Global food trade -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-sm">Global food trade: how a banana crosses the world</div>
+      <div class="muted-copy u-mb-md">The world trades roughly $1.8 trillion in food per year. A handful of countries dominate exports of specific staples. This creates efficiency, but also fragility -- a drought, a war, or a blockage in one region can cascade into food price spikes globally within weeks.</div>
+      <div class="cgrid u-gridcols-auto-fit-150px-1fr">
+        <div class="card">
+          <p class="clabel">Wheat: top exporters</p>
+          <p class="cval u-fs-14px">Russia, US, Canada</p>
+          <p class="cnote">Russia and Ukraine together supplied ~28% of global wheat exports before 2022. The invasion created immediate price shocks in countries dependent on that supply.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Bananas: Ecuador dominates</p>
+          <p class="cval u-fs-14px">~25% of global exports</p>
+          <p class="cnote">A Cavendish banana spends typically 3 to 4 weeks in transit, shipped green at 13.5C in controlled-atmosphere containers, then ripened artificially with ethylene gas on arrival.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Food miles</p>
+          <p class="cval u-fs-14px">~9% of food GHG</p>
+          <p class="cnote">Transport accounts for a smaller share of food's carbon footprint than most people expect. What you eat (beef vs. vegetables) matters far more than how far it travelled.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Price transmission</p>
+          <p class="cval u-fs-14px">Days to weeks</p>
+          <p class="cnote">Global commodity price shocks reach your local supermarket within days to weeks for tradeable staples like wheat, cooking oil, and sugar. Prices of perishables (fresh vegetables) are more locally determined.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- L7: Challenges in modern food systems -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-md">Challenges in the modern food system</div>
+      <div class="anchor-row">
+        <span class="pill p-red">Food waste</span>
+        <div><div class="atext">~33% of all food produced is lost or wasted</div><div class="asub">About 1.3 billion tonnes per year globally (FAO). In rich countries, most waste happens at the retail and consumer end. In low-income countries, most is lost at harvest and storage. If food waste were a country, it would be the third-largest emitter of greenhouse gases on Earth.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">Food insecurity</span>
+        <div><div class="atext">~733 million people are chronically hungry</div><div class="asub">Not because the world produces too little food overall -- enough calories exist. The problem is distribution, poverty, conflict, and infrastructure. The world grows enough food to feed ~10 billion people; the current population is ~8.1 billion.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">Monocultures</span>
+        <div><div class="atext">Industrial farming narrows genetic diversity</div><div class="asub">The world now relies heavily on just a handful of crops: wheat, rice, maize, and soybean supply the majority of human calories. This efficiency is matched by fragility: a single new pathogen can devastate a monoculture in ways that a diverse field system would resist.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-coral">Labour</span>
+        <div><div class="atext">Farmworkers are among the lowest paid globally</div><div class="asub">The cheap food prices consumers in rich countries enjoy partly reflect labour conditions in producing countries (and domestic migrant labour) that would not pass muster in other industries. This is an embedded subsidy hidden in the price tag.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">Climate risk</span>
+        <div><div class="atext">Agriculture is both a cause and a victim of climate change</div><div class="asub">Rising temperatures reduce grain yields (each 1C of warming cuts wheat yields by roughly 6%). Extreme weather events are more frequent. At the same time, agriculture is one of the largest sources of emissions -- a reinforcing loop that is difficult to break.</div></div>
+      </div>
+    </div>
+
+    <!-- L8: Sustainability and the future -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-md">Sustainability and the future of food</div>
+      <div class="two-col-grid">
+        <div class="sub-card-roomy">
+          <div class="compact-card-title">Regenerative agriculture</div>
+          <div class="muted-copy-tight">Practices that actively restore soil health: cover cropping, reduced tillage, composting, rotational grazing. Goal is to make farmland a net carbon sink rather than a source. Still small-scale but growing rapidly in adoption.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="compact-card-title">Reducing livestock intensity</div>
+          <div class="muted-copy-tight">Shifting even 10 to 20% of beef consumption toward plant proteins, poultry, or farmed fish would reduce agricultural land use significantly. This is not about universal veganism; it is about rebalancing proportions.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="compact-card-title">Alternative proteins</div>
+          <div class="muted-copy-tight">Insect protein (10x more feed-efficient than beef), cultivated meat (grown from animal cells without slaughter), and precision-fermented proteins (using microbes as factories). Each is at different stages of scale and consumer acceptance.</div>
+        </div>
+        <div class="sub-card-roomy">
+          <div class="compact-card-title">Biodiversity and seed banks</div>
+          <div class="muted-copy-tight">The Svalbard Global Seed Vault stores over 1.3 million seed varieties as insurance against agricultural collapse. Maintaining crop diversity is the food system's backup hard drive -- protection against pests, disease, and climate shifts.</div>
+        </div>
+      </div>
+      <div class="info-block u-mt-md">
+        <strong>The 2050 challenge:</strong> the world will need to produce roughly 50 to 70% more food by 2050 to feed a larger, more prosperous population -- while simultaneously reducing the agricultural carbon footprint. These two demands are in direct tension. There is no single solution; the answer involves a combination of yield improvement, waste reduction, dietary shift, and technology.
+      </div>
+    </div>
+
+    <!-- L9: How agriculture shapes what is on your food label -->
+    <div class="content-panel">
+      <div class="panel-title u-mb-sm">How agriculture shapes your food label</div>
+      <div class="muted-copy u-mb-md">The ingredients, nutrients, and additives on a food label are not random -- they reflect upstream agricultural and processing decisions. Understanding those decisions changes how you read labels.</div>
+      <div class="anchor-row">
+        <span class="pill p-amber">Fortification</span>
+        <div><div class="atext">What processing removes, fortification adds back -- selectively</div><div class="asub">White flour is fortified with iron and B vitamins after milling strips them out. Iodised salt corrects widespread iodine deficiency. Vitamin D is added to milk. But fortification rarely restores the full nutritional profile of the whole food.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">Additives</span>
+        <div><div class="atext">Most additives solve supply chain problems, not cooking problems</div><div class="asub">Emulsifiers stop products separating during long-distance transport. Preservatives extend shelf life in warehouses. Artificial colours compensate for pigment loss during processing. Each is a response to the demands of industrial-scale distribution.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">Whole vs. refined</span>
+        <div><div class="atext">Refining concentrates energy and strips protective factors</div><div class="asub">Whole wheat flour retains the bran (fibre), germ (vitamins, healthy fats), and endosperm (starch). White flour keeps only the endosperm. The GI rises (from ~50 to ~75), fibre drops (from ~10g per 100g to ~3g), and the food becomes calorie-dense and less filling.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-coral">Grass-fed vs. grain-fed</span>
+        <div><div class="atext">Animal diet changes nutrient composition of the product</div><div class="asub">Grass-fed beef tends to have a higher ratio of omega-3 to omega-6 fatty acids and more conjugated linoleic acid (CLA). The difference is real but modest in absolute terms -- not a nutritional revolution, but a measurable shift.</div></div>
+      </div>
+    </div>
+
+    <!-- L10: Your role in the food system -->
+    <div class="sub-card-roomy u-mb-lg">
+      <div class="panel-title">Your role in the food system</div>
+      <div class="muted-copy-large u-mb-md">Every purchase is a vote in the food system. That is not marketing copy -- it is a direct economic signal. Here is what actually moves the needle:</div>
+      <div class="cgrid u-gridcols-auto-fit-150px-1fr">
+        <div class="card">
+          <p class="clabel">Biggest lever</p>
+          <p class="cval u-fs-14px">Reduce beef and dairy</p>
+          <p class="cnote">Switching one beef meal per week to legumes or poultry reduces your food-related carbon footprint by more than switching to all-local organic produce.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">High impact, low effort</p>
+          <p class="cval u-fs-14px">Cut food waste</p>
+          <p class="cnote">The average UK household wastes roughly 30% of food bought. Planning meals, using leftovers, and understanding "best before" vs. "use by" dates prevent real emissions.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Label habit</p>
+          <p class="cval u-fs-14px">Ingredients first</p>
+          <p class="cnote">A short ingredient list of recognisable items is a better signal of minimal processing than any front-of-pack health claim. "High in protein" means little if the product is otherwise ultra-processed.</p>
+        </div>
+        <div class="card">
+          <p class="clabel">Seasonal and local</p>
+          <p class="cval u-fs-14px">Where it matters</p>
+          <p class="cnote">Local food does not always mean lower emissions (heated greenhouses can be worse than imported sun-grown). Seasonal eating is the reliable version of this: in-season produce typically has lower energy inputs and better flavour.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART M (agriculture anchor numbers) -->
+    <h2 class="sec" id="part-m-agriculture-anchor-numbers">Part M · agriculture anchor numbers</h2>
+
+    <div class="content-card-static u-mb-1-d-2rem">
+      <div class="anchor-row">
+        <span class="pill p-green">~70%</span>
+        <div><div class="atext">Share of global freshwater withdrawals used by agriculture</div><div class="asub">Producing 1 kg of beef requires roughly 15,000 litres of water -- about the same as 6 months of drinking water for a person.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">~26%</span>
+        <div><div class="atext">Share of global greenhouse gas emissions from food systems</div><div class="asub">Livestock alone account for ~14.5% of global GHG (methane, nitrous oxide, land-use change). Beef and dairy are disproportionate contributors.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-red">~33%</span>
+        <div><div class="atext">Share of all food produced that is lost or wasted</div><div class="asub">1.3 billion tonnes per year. If it were a country, food waste would be the world's third-largest emitter.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">500 years</span>
+        <div><div class="atext">Time to form 2.5 cm of topsoil naturally</div><div class="asub">Industrial tillage can destroy that in one generation. Soil is a non-renewable resource on human timescales.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-teal">1.2 kg / kg</span>
+        <div><div class="atext">Feed conversion ratio of farmed salmon</div><div class="asub">Compared to ~7 to 8 kg feed per kg of beef. Aquaculture and poultry are markedly more efficient protein sources than ruminants.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-purple">~60%</span>
+        <div><div class="atext">Share of calories from ultra-processed foods in typical UK/US diets</div><div class="asub">NOVA Group 4. This figure has roughly doubled since the 1980s, tracking closely with rising rates of obesity and type 2 diabetes in those populations.</div></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ PART N (test yourself) -->
+    <h2 class="sec" id="part-n-q-and-a">Part N · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. You eat 300g of chicken breast for dinner. How much protein is that?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 69g of protein (23% of 300g). That's close to a full day's requirement for most adults (roughly 0.8–1g per kg of body weight, so ~60–80g for an average person).</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. A person eats 3 Snickers bars. How many teaspoons of sugar is that?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 20 teaspoons. Each bar has ~27g sugar, three bars = ~81g. One teaspoon of sugar ≈ 4g, so 81 ÷ 4 ≈ 20 teaspoons. That's more than 3× the WHO daily recommended limit in a single snack.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. A person eats a 550 kcal Big Mac and then goes for a 30-minute jog. Have they burned it off?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Not quite. Running burns roughly 10–12 kcal per minute at moderate pace, so 30 minutes = ~300–360 kcal. The Big Mac has 550 kcal — so you'd need closer to 50 minutes of running to fully offset it. This is the key insight: it is much faster to consume calories than to burn them. A 2-second bite of a burger takes 4 minutes of running to undo. This is why diet (what you eat) has far more impact on weight than exercise alone.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. A food label says "per 100g: 15g fat, 45g carbohydrate, 8g protein." Roughly how many kcal per 100g?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 347 kcal. Fat: 15g × 9 kcal/g = 135 kcal. Carbs: 45g × 4 kcal/g = 180 kcal. Protein: 8g × 4 kcal/g = 32 kcal. Total: 135 + 180 + 32 = 347 kcal per 100g. The fat contributes the most calories despite being only 15g — because fat is 9 kcal/g, more than double carbs or protein. This is the fundamental label-reading skill: multiply and add.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. You see two cereals. Cereal A: 30g serving, GI 70, 22g carbs. Cereal B: 40g serving, GI 40, 28g carbs. Which has the higher glycaemic load?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Cereal A: GL = 70 × 22 ÷ 100 = 15.4. Cereal B: GL = 40 × 28 ÷ 100 = 11.2. Cereal A has the higher GL despite its smaller serving size. The high GI (70) overwhelms the lower carb quantity. This is why GL is more useful than GI alone — it accounts for how much carbohydrate you're actually eating.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. A bag of chips lists "per 30g serving: 10g fat, 17g carbs, 2g protein." You eat 90g (the whole bag). How many kcal did you consume?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The label is per 30g, so multiply everything by 3: 30g fat, 51g carbs, 6g protein. Now apply kcal/g: 30 × 9 = 270 kcal (fat) + 51 × 4 = 204 kcal (carbs) + 6 × 4 = 24 kcal (protein) = 498 kcal total. Nearly 500 kcal for a bag of chips most people eat as a snack. The serving size trap is real.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. A friend says "I always buy local food to reduce my carbon footprint." Is this the most impactful dietary choice they could make?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Not really -- at least not as a first priority. Transport ("food miles") accounts for only about 9% of food's total greenhouse gas footprint. What you eat matters far more than where it came from. Switching one beef meal per week to lentils or chicken reduces a food-related carbon footprint more than sourcing every ingredient locally. A locally raised beef burger still has a much larger footprint than an imported tin of chickpeas. Local food has other genuine benefits -- freshness, supporting local farmers, reduced packaging -- but framing it primarily as a climate choice misdirects attention from the biggest lever, which is reducing ruminant meat consumption. The most impactful dietary changes, in rough order: (1) reduce beef and lamb, (2) reduce dairy, (3) reduce food waste, and only then (4) consider sourcing and seasonality.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">8. The world already produces enough calories to feed everyone alive today. So why are roughly 733 million people chronically hungry?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Because hunger is a distribution and access problem, not a production problem. The world currently grows enough food to feed roughly 10 billion people -- well above the current 8.1 billion. The gap between production and the plates of hungry people comes from several overlapping factors. First, poverty: food exists in markets but people cannot afford it. Second, conflict: wars and political instability destroy supply chains and farming capacity -- the majority of the world's food-insecure people live in conflict-affected regions. Third, infrastructure: post-harvest losses in low-income countries can reach 30 to 40% due to inadequate storage, refrigeration, and roads. Fourth, distribution: roughly one-third of global crop calories are fed to livestock or used for biofuels rather than directly to hungry people. Fifth, food waste: one-third of all food produced is lost or wasted before it is eaten. Solving hunger therefore requires addressing poverty, conflict, infrastructure, and waste -- not simply growing more food. This is the central policy insight the raw calorie numbers obscure.</div>
+    </div>
+
+    
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+/* ─── Macronutrient tab switcher ─── */
+function showMacro(id) {
+  ['carb','fat','protein'].forEach(function(k) {
+    document.getElementById('macro-'+k).classList.toggle('show', k===id);
+    var btn = document.getElementById('tab-'+k);
+    btn.classList.toggle('active', k===id);
+    btn.setAttribute('aria-selected', k===id ? 'true' : 'false');
+  });
+}
+
+/* ─── Sugar visualiser ─── */
+var sugarBtns = document.querySelectorAll('[onclick^="showSugar"]');
+function showSugar(id, name, teaspoons, color) {
+  sugarBtns.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+  var activeBtn = (typeof event !== 'undefined' && event.target) ? event.target : document.querySelector('[onclick^="showSugar(\'' + id + '\'"]');
+  if (activeBtn) {
+    activeBtn.classList.add('active');
+    activeBtn.setAttribute('aria-pressed','true');
+  }
+  var max = 12, container = document.getElementById('sugar-cubes');
+  container.innerHTML = '';
+  for (var i = 0; i < max; i++) {
+    var isFilled = i < teaspoons;
+    var isLimit  = i === 5; // 6th cube = WHO limit line
+    var cube = document.createElement('span');
+    cube.className = 'sugar-cube sugar-cube-marked' + (isFilled ? '' : ' sugar-cube-empty') + (isLimit ? ' sugar-cube-limit' : '');
+    if (isFilled) cube.style.background = color;
+    cube.title = i < teaspoons ? 'Sugar' : 'Empty';
+    container.appendChild(cube);
+    if (isLimit) {
+      var limitLabel = document.createElement('span');
+      limitLabel.className = 'sugar-limit-label';
+      limitLabel.textContent = 'WHO max';
+      container.appendChild(limitLabel);
+    }
+  }
+  var overUnder = teaspoons > 6
+    ? '<strong class="text-danger">' + (teaspoons-6) + ' teaspoon' + (teaspoons-6!==1?'s':'') + ' over</strong> the WHO daily maximum.'
+    : teaspoons === 6
+    ? '<strong>Exactly at</strong> the WHO daily maximum.'
+    : '<strong class="text-success">' + (6-teaspoons) + ' teaspoon' + (6-teaspoons!==1?'s':'') + ' under</strong> the WHO daily maximum.';
+  document.getElementById('sugar-label').innerHTML =
+    '<strong>' + name + '</strong> contains approximately <strong>' + teaspoons + ' teaspoon' + (teaspoons!==1?'s':'') + '</strong> (~' + (teaspoons*4) + 'g) of sugar. That is ' + overUnder;
+}
+// Init
+showSugar('coke','Can of Coke (330ml)',9,'#E24B4A');
+
+/* ─── Calorie calculator ─── */
+function updateCalc() {
+  var kcal = parseInt(document.getElementById('food-sel').value);
+  var rate = parseFloat(document.getElementById('activity-sel').value);
+  var mins = kcal / rate;
+  var foodLabel = document.getElementById('food-sel').selectedOptions[0].text;
+  var actLabel  = document.getElementById('activity-sel').selectedOptions[0].text.split(' (')[0];
+  var timeStr;
+  if (mins < 60) timeStr = Math.round(mins) + ' minutes';
+  else timeStr = Math.floor(mins/60) + ' hr ' + Math.round(mins%60) + ' min';
+  document.getElementById('calorie-result').innerHTML =
+    '<strong>' + foodLabel + '</strong><br>' +
+    actLabel + ': <strong>' + timeStr + '</strong> to burn it off.<br>' +
+    '<span class="result-note">That\'s ' + (kcal/rate).toFixed(1) + ' minutes at ' + rate + ' kcal/min.</span>';
+}
+document.getElementById('food-sel').addEventListener('change', updateCalc);
+document.getElementById('activity-sel').addEventListener('change', updateCalc);
+updateCalc();
+
+/* ─── Label decoder ─── */
+function calcLabel() {
+  var fat      = parseFloat(document.getElementById('ld-fat').value)     || 0;
+  var carb     = parseFloat(document.getElementById('ld-carb').value)    || 0;
+  var protein  = parseFloat(document.getElementById('ld-protein').value) || 0;
+  var servings = parseFloat(document.getElementById('ld-servings').value) || 1;
+  var fatKcal  = fat * 9;
+  var carbKcal = carb * 4;
+  var protKcal = protein * 4;
+  var totalPerServing = fatKcal + carbKcal + protKcal;
+  var totalEaten = totalPerServing * servings;
+  var pctFat  = totalPerServing > 0 ? Math.round(fatKcal/totalPerServing*100) : 0;
+  var pctCarb = totalPerServing > 0 ? Math.round(carbKcal/totalPerServing*100) : 0;
+  var pctProt = totalPerServing > 0 ? 100 - pctFat - pctCarb : 0;
+  // mini SVG pie-ish (stacked horizontal bar)
+  var barW = 280;
+  var fatW  = Math.round(barW * pctFat/100);
+  var carbW = Math.round(barW * pctCarb/100);
+  var protW = barW - fatW - carbW;
+  var svgBar = '<svg viewBox="0 0 280 28" width="100%" class="label-breakdown-svg" xmlns="http://www.w3.org/2000/svg" aria-label="Calorie breakdown bar">'
+    + (fatW  > 0 ? '<rect x="0" y="4" width="'+fatW+'" height="20" fill="#EF9F27" rx="3"/>' : '')
+    + (carbW > 0 ? '<rect x="'+fatW+'" y="4" width="'+carbW+'" height="20" fill="#378ADD"/>' : '')
+    + (protW > 0 ? '<rect x="'+(fatW+carbW)+'" y="4" width="'+protW+'" height="20" fill="#1D9E75" rx="3"/>' : '')
+    + '<text x="4" y="17" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">' + (fatW>28?'Fat '+pctFat+'%':'') + '</text>'
+    + '<text x="'+(fatW+4)+'" y="17" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">' + (carbW>38?'Carbs '+pctCarb+'%':'') + '</text>'
+    + '<text x="'+(fatW+carbW+4)+'" y="17" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">' + (protW>44?'Protein '+pctProt+'%':'') + '</text>'
+    + '</svg>';
+  var daily = Math.round(totalEaten/2000*100);
+  document.getElementById('ld-result').innerHTML =
+    '<div class="label-result-main">'
+    + '<strong>' + Math.round(totalPerServing) + ' kcal</strong> per serving'
+    + (servings !== 1 ? ' &nbsp;·&nbsp; <strong>' + Math.round(totalEaten) + ' kcal</strong> total (' + servings + ' servings)' : '')
+    + '</div>'
+    + svgBar
+    + '<div class="label-result-note">'
+    + 'Fat: ' + Math.round(fatKcal*servings) + ' kcal &nbsp;·&nbsp; '
+    + 'Carbs: ' + Math.round(carbKcal*servings) + ' kcal &nbsp;·&nbsp; '
+    + 'Protein: ' + Math.round(protKcal*servings) + ' kcal'
+    + '</div>'
+    + '<div class="label-result-note">'
+    + 'That\'s <strong>' + daily + '%</strong> of a 2,000 kcal daily target.'
+    + '</div>';
+}
+calcLabel();
+
+/* ─── Calorie guessing game ─── */
+var cgQuestions = [
+  { q: '1 tablespoon of olive oil (15 ml)', answer: 120, choices: [40, 80, 120, 190], fact: 'Fat is 9 kcal/g — denser than any other macro. 15ml of olive oil weighs ~14g, so 14 × 9 ≈ 126 kcal. Cooking oils add calories faster than almost anything.' },
+  { q: '100g of boiled white rice', answer: 130, choices: [55, 130, 210, 340], fact: 'Cooked rice is mostly water — about 70% by weight. That dilutes the calories significantly. Raw rice would be ~360 kcal per 100g.' },
+  { q: 'A medium avocado (~150g)', answer: 240, choices: [80, 150, 240, 380], fact: 'Avocados are ~15% fat by weight — unusually high for a fruit. But it\'s mostly unsaturated fat. At 9 kcal/g, fat adds up even in "healthy" foods.' },
+  { q: 'A glass of whole milk (250ml)', answer: 150, choices: [60, 150, 230, 310], fact: 'Whole milk is ~3.5% fat and 4.7% lactose (sugar). 250ml ≈ 150 kcal. Skimmed milk is ~85 kcal for the same volume.' },
+  { q: '2 large eggs (scrambled, no butter)', answer: 150, choices: [80, 150, 220, 300], fact: 'Each large egg is roughly 75 kcal — mostly from protein (6g) and fat (5g). The yolk contains all the fat and most of the micronutrients.' }
+];
+var cgCurrent = 0, cgScore = 0, cgAnswered = false;
+
+function cgRender() {
+  if (cgCurrent >= cgQuestions.length) { cgShowScore(); return; }
+  var q = cgQuestions[cgCurrent];
+  cgAnswered = false;
+  document.getElementById('cg-progress').textContent = 'Question ' + (cgCurrent+1) + ' of ' + cgQuestions.length + ' · Score: ' + cgScore;
+  document.getElementById('cg-question').textContent = q.q;
+  document.getElementById('cg-feedback').textContent = '';
+  var opts = document.getElementById('cg-options');
+  opts.innerHTML = '';
+  q.choices.forEach(function(c) {
+    var btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = c + ' kcal';
+    btn.setAttribute('aria-label', c + ' kilocalories');
+    btn.onclick = function() { cgAnswer(c, q, btn); };
+    opts.appendChild(btn);
+  });
+}
+
+function cgAnswer(chosen, q, btn) {
+  if (cgAnswered) return;
+  cgAnswered = true;
+  var allBtns = document.getElementById('cg-options').querySelectorAll('.quiz-opt');
+  allBtns.forEach(function(b) { b.onclick = null; });
+  var isCorrect = chosen === q.answer;
+  if (isCorrect) { cgScore++; btn.classList.add('correct'); }
+  else {
+    btn.classList.add('wrong');
+    allBtns.forEach(function(b) { if (parseInt(b.textContent) === q.answer) b.classList.add('correct'); });
+  }
+  var fb = document.getElementById('cg-feedback');
+  fb.style.display = 'block';
+  fb.style.color = isCorrect ? 'var(--color-text-success)' : 'var(--color-text-danger)';
+  fb.innerHTML = (isCorrect ? '✓ Correct! ' : '✗ The answer was ' + q.answer + ' kcal. ') + q.fact
+    + ' <button onclick="cgNext()" class="inline-next-btn">'
+    + (cgCurrent < cgQuestions.length - 1 ? 'Next →' : 'See score →')
+    + '</button>';
+}
+
+function cgNext() {
+  cgCurrent++;
+  cgRender();
+}
+
+function cgShowScore() {
+  document.getElementById('cg-progress').textContent = '';
+  document.getElementById('cg-question').textContent = '';
+  document.getElementById('cg-options').innerHTML = '';
+  document.getElementById('cg-feedback').textContent = '';
+  var sb = document.getElementById('cg-score-board');
+  sb.style.display = 'block';
+  var msgs = ['Keep studying — the facts are worth knowing!', 'Decent start — the macro maths will click with practice.', 'Good — you have solid food number intuition.', 'Great — that\'s real nutritional literacy.', 'Perfect score — you\'ve got a genuine sense for food energy.'];
+  sb.innerHTML = '<strong>Score: ' + cgScore + ' / ' + cgQuestions.length + '</strong><br>'
+    + '<span class="result-note">' + msgs[Math.min(cgScore, msgs.length - 1)] + '</span><br><br>'
+    + '<button onclick="cgRestart()" class="replay-btn">↺ Play again</button>';
+}
+
+function cgRestart() {
+  cgCurrent = 0; cgScore = 0;
+  document.getElementById('cg-score-board').style.display = 'none';
+  cgRender();
+}
+
+cgRender();
+    
+</script>

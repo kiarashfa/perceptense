@@ -1,0 +1,66 @@
+
+/* === Explorer tab active state === */
+.exp-tab { font-size:11px; padding:3px 10px; }
+.exp-tab.active { background:var(--color-text-primary); color:var(--color-background-primary); border-color:var(--color-text-primary); }
+
+/* === System cards grid === */
+.sys-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(130px,1fr)); gap:8px; margin-bottom:10px; }
+.sys-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:10px 8px; text-align:center; cursor:pointer; border:1.5px solid transparent; transition:border-color 0.12s, background 0.12s; }
+.sys-card:hover { background:var(--color-background-primary); }
+.sys-card.active { border-color:var(--color-text-info); background:var(--color-background-primary); }
+.sys-icon { font-size:22px; margin-bottom:4px; }
+.sys-label { font-size:11px; font-weight:500; color:var(--color-text-primary); }
+
+/* === Timeline track === */
+.tl-track { position:relative; height:32px; background:var(--color-background-secondary); border-radius:6px; overflow:hidden; margin-bottom:4px; }
+.tl-bar { position:absolute; top:4px; height:24px; border-radius:4px; display:flex; align-items:center; padding:0 8px; font-size:10px; font-weight:500; white-space:nowrap; overflow:hidden; cursor:pointer; transition:filter 0.12s; }
+.tl-bar:hover { filter:brightness(1.1); }
+.tl-axis { display:flex; justify-content:space-between; font-size:10px; color:var(--color-text-tertiary); margin-bottom:10px; }
+
+/* === Comparison scale (dot on track) === */
+.scale-track { position:relative; height:6px; background:var(--color-background-secondary); border-radius:3px; margin:20px 0 30px; }
+.scale-dot { position:absolute; top:50%; transform:translate(-50%,-50%); width:13px; height:13px; border-radius:50%; border:2px solid var(--color-background-primary); cursor:default; }
+.scale-dot-label { position:absolute; top:12px; transform:translateX(-50%); font-size:10px; color:var(--color-text-secondary); white-space:nowrap; }
+.scale-pole { display:flex; justify-content:space-between; font-size:11px; color:var(--color-text-tertiary); margin-top:-18px; margin-bottom:12px; }
+
+/* === Pie / distribution bar === */
+.dist-bar { display:flex; height:28px; border-radius:6px; overflow:hidden; margin-bottom:10px; }
+.dist-seg { display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:500; overflow:hidden; }
+.dist-legend { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
+.dist-key { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--color-text-secondary); }
+.dist-dot { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
+
+/* === Slider widget === */
+.slider-row { display:flex; justify-content:space-between; font-size:11px; color:var(--color-text-tertiary); margin-bottom:2px; }
+.slider-val { font-size:20px; font-weight:500; color:var(--color-text-primary); margin:4px 0 2px; }
+
+/* === Calc output === */
+.calc-out { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:10px 12px; font-size:13px; color:var(--color-text-primary); min-height:42px; margin-top:8px; line-height:1.6; }
+
+/* === SVG diagram wrapper === */
+.diagram-wrap { margin-bottom:1rem; }
+.diagram-wrap svg text { font-family: var(--font-sans); }
+
+/* === Vitals grid === */
+.vitals-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:8px; margin-bottom:1rem; }
+
+/* === Evidence pyramid === */
+.ev-level { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.ev-bar-fill { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 8px; }
+.ev-bar-label { font-size:11px; color:var(--color-text-secondary); flex-shrink:0; width:130px; }
+
+/* === Slim input row === */
+.calc-row { display:flex; gap:8px; align-items:center; margin-bottom:8px; flex-wrap:wrap; }
+.calc-row label { font-size:12px; color:var(--color-text-secondary); flex-shrink:0; }
+.calc-row input { width:90px; flex-shrink:0; }
+
+/* === ABCDE first aid cards === */
+.abcde-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:8px; margin-bottom:1rem; }
+.abcde-card { border-radius:var(--border-radius-md); padding:10px 12px; }
+.abcde-letter { font-size:28px; font-weight:700; line-height:1; margin-bottom:4px; }
+.abcde-word { font-size:13px; font-weight:500; margin-bottom:4px; }
+.abcde-body { font-size:11px; line-height:1.5; }
+
+/* === System detail panel === */
+#sys-detail { margin-top:10px; }
+  

@@ -1,0 +1,510 @@
+
+/* ── Sauce cards ── */
+.sauce-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
+.sh { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.sname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.sbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
+.ssub { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-bottom: 8px; }
+.sbox { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
+.sl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
+.sv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
+.snote { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+
+/* ── Sauce tree ── */
+.sauce-tree {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.sauce-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sauce-root {
+  border-radius: var(--border-radius-md);
+  padding: 8px 10px;
+  font-size: 12px;
+  text-align: center;
+  border: 0.5px solid;
+}
+
+.root-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.root-sub {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.sauce-children {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sauce-children div {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 6px 8px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.sauce-children span {
+  font-size: 10px;
+  color: var(--color-text-secondary);
+}
+
+/* Color themes */
+.sauce-root.blue   { background:#E6F1FB; border-color:#85B7EB; color:#0C447C; }
+.sauce-root.green  { background:#EAF3DE; border-color:#97C459; color:#27500A; }
+.sauce-root.brown  { background:#FAEEDA; border-color:#EF9F27; color:#633806; }
+.sauce-root.red    { background:#FCEBEB; border-color:#F09595; color:#791F1F; }
+.sauce-root.gold   { background:#FAEEDA; border-color:#EF9F27; color:#633806; }
+    
+/* ── Meat cards ── */
+.meat-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
+.meat-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+.meat-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.meat-badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
+.row2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 4px; }
+.sub-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 2px; }
+.sub-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
+.sub-note { font-size: 11px; color: var(--color-text-secondary); margin: 2px 0 0; }
+
+/* ── Temperature strip ── */
+.temp-strip { height: 12px; border-radius: 3px; margin: 8px 0 3px; display: flex; overflow: hidden; }
+.ts-seg { height: 12px; display: flex; align-items: center; justify-content: center; }
+.strip-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--color-text-secondary); margin-bottom: 8px; }
+
+/* ── Pill variant ── */
+.pill-red { color: #712B13; background: #FAECE7; }
+
+/* ── SVG sauce tree ── */
+.sauce-tree-wrap { overflow-x: auto; margin-bottom: 1rem; }
+.sauce-tree-wrap svg text { font-family: 'IBM Plex Sans', system-ui, sans-serif; }
+
+/* ── Knife grid ── */
+.knife-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+.knife-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
+.knife-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 3px; }
+.knife-use { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+.knife-tip { font-size: 11px; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 4px 8px; margin-top: 6px; display: inline-block; }
+
+/* ── Flavour wheel ── */
+#flavour-result { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 1rem; min-height: 60px; }
+
+/* ── Cooking method table ── */
+.method-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 1rem; }
+.method-table th { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); text-align: left; padding: 6px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.method-table td { padding: 9px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; line-height: 1.4; }
+.method-table tr:last-child td { border-bottom: none; }
+.method-table tr:hover td { background: var(--color-background-secondary); }
+
+/* ── Pairing explorer ── */
+.pairing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+.pairing-btn { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 10px 12px; cursor: pointer; text-align: left; transition: all 0.12s; }
+.pairing-btn:hover, .pairing-btn.active { background: var(--color-background-secondary); border-color: var(--color-border-secondary); }
+.pairing-btn .pb-label { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
+.pairing-btn .pb-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+
+/* ── Wine pairing ── */
+.wine-row { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.wine-row:last-child { border-bottom: none; }
+.wine-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
+.wine-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+.wine-sub { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+
+/* ── Flavour balance interactive ── */
+.balance-wrap { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 1rem; }
+.bal-row { display: grid; grid-template-columns: 80px 1fr 50px; align-items: center; gap: 10px; margin-bottom: 10px; }
+.bal-label { font-size: 12px; color: var(--color-text-secondary); text-align: right; }
+.bal-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); text-align: center; }
+#balance-feedback { font-size: 13px; color: var(--color-text-primary); background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; line-height: 1.6; margin-top: 4px; }
+
+/* ── Doneness visual ── */
+.doneness-strip { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.doneness-swatch { flex: 1; min-width: 70px; border-radius: var(--border-radius-md); padding: 10px 8px; text-align: center; cursor: pointer; border: 2px solid transparent; transition: all 0.12s; }
+.doneness-swatch.sel { border-color: var(--color-text-primary); }
+.doneness-swatch .ds-name { font-size: 12px; font-weight: 600; margin-bottom: 2px; }
+.doneness-swatch .ds-temp { font-size: 11px; opacity: 0.8; }
+#doneness-detail { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; margin-bottom: 1rem; }
+
+/* ── Spice heat scale ── */
+.heat-bar { height: 18px; border-radius: 4px; background: linear-gradient(to right, #FFF8E1, #FFCC02, #FF6B00, #CC0000, #6B0000); margin: 8px 0; position: relative; }
+.heat-marker { position: absolute; top: -4px; width: 4px; height: 26px; background: var(--color-text-primary); border-radius: 2px; transform: translateX(-50%); }
+.heat-label { position: absolute; top: 28px; transform: translateX(-50%); font-size: 10px; color: var(--color-text-secondary); white-space: nowrap; }
+
+/* === Shared-ready extracted styles === */
+
+.detail-label {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin-bottom:2px;
+}
+
+.item-title {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+
+.text-white {
+  color:#fff;
+}
+
+/* === Module-specific extracted styles === */
+
+.showcuisine-control {
+  font-size:12px;
+  padding:3px 10px;
+}
+
+.culinary-label {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:12px;
+}
+
+.culinary-media {
+  width:100%;
+  min-width:340px;
+  display:block;
+}
+
+.culinary-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px,1fr));
+  gap:8px;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.culinary-spacing {
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:2px;
+}
+
+.culinary-text {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-top:8px;
+}
+
+.showdoneness-control {
+  background:#8B1A1A;
+}
+
+.ds-temp-style {
+  color:rgba(255,255,255,0.8);
+}
+
+.showdoneness-control-2 {
+  background:#C0392B;
+}
+
+.showdoneness-control-3 {
+  background:#E74C3C;
+}
+
+.showdoneness-control-4 {
+  background:#E67E22;
+}
+
+.showdoneness-control-5 {
+  background:#D35400;
+}
+
+.showdoneness-control-6 {
+  background:#784212;
+}
+
+.ds-temp-style-2 {
+  color:rgba(255,255,255,0.9);
+}
+
+.meat-badge-style {
+  background:#FAECE7;
+  color:#712B13;
+}
+
+.meat-badge-style-2 {
+  background:#FAEEDA;
+  color:#633806;
+}
+
+.meat-badge-style-3 {
+  background:#EAF3DE;
+  color:#27500A;
+}
+
+.meat-badge-style-4 {
+  background:#E6F1FB;
+  color:#0C447C;
+}
+
+.culinary-panel-2 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:12px 14px;
+  margin-bottom:1rem;
+}
+
+.culinary-panel-3 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:1rem;
+}
+
+.culinary-text-3 {
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.08em;
+  color:var(--color-text-tertiary);
+  margin-bottom:6px;
+}
+
+.sbadge-style {
+  background:#E1F5EE;
+  color:#085041;
+}
+
+.sbadge-style-2 {
+  background:#FCEBEB;
+  color:#791F1F;
+}
+
+.culinary-grid-2 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.tech-display {
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  margin-bottom:1rem;
+  font-size:13px;
+  line-height:1.8;
+}
+
+.culinary-grid-3 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.culinary-panel-4 {
+  background:#EAF3DE;
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  border:0.5px solid #97C459;
+}
+
+.culinary-label-2 {
+  font-size:12px;
+  font-weight:500;
+  color:#27500A;
+  margin-bottom:4px;
+}
+
+.culinary-text-4 {
+  font-size:12px;
+  color:#3B6D11;
+  line-height:1.5;
+}
+
+.culinary-panel-5 {
+  background:#FCEBEB;
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  border:0.5px solid #F09595;
+}
+
+.culinary-label-3 {
+  font-size:12px;
+  font-weight:500;
+  color:#791F1F;
+  margin-bottom:4px;
+}
+
+.culinary-text-5 {
+  font-size:12px;
+  color:#A32D2D;
+  line-height:1.5;
+}
+
+.culinary-panel-6 {
+  background:#FAEEDA;
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  border:0.5px solid #EF9F27;
+}
+
+.culinary-label-4 {
+  font-size:12px;
+  font-weight:500;
+  color:#633806;
+  margin-bottom:4px;
+}
+
+.culinary-text-6 {
+  font-size:12px;
+  color:#854F0B;
+  line-height:1.5;
+}
+
+.culinary-panel-7 {
+  background:#E6F1FB;
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  border:0.5px solid #85B7EB;
+}
+
+.culinary-label-5 {
+  font-size:12px;
+  font-weight:500;
+  color:#0C447C;
+  margin-bottom:4px;
+}
+
+.culinary-text-7 {
+  font-size:12px;
+  color:#185FA5;
+  line-height:1.5;
+}
+
+.culinary-grid-4 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
+  gap:12px;
+}
+
+.culinary-text-9 {
+  font-size:12px;
+  color:var(--color-text-primary);
+  line-height:1.4;
+}
+
+.culinary-spacing-2 {
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+
+.culinary-media-2 {
+  width:100%;
+  min-width:400px;
+  display:block;
+}
+
+.culinary-media-3 {
+  width:100%;
+  min-width:500px;
+  display:block;
+}
+
+.culinary-media-4 {
+  width:100%;
+  min-width:480px;
+  display:block;
+}
+
+.culinary-text-10 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+.culinary-grid-5 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:8px;
+}
+
+.culinary-text-12 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:10px;
+}
+
+.culinary-spacing-3 {
+  position:relative;
+  margin:0 10px 40px;
+}
+
+.heat-marker-style {
+  left:2%;
+}
+
+.heat-marker-style-2 {
+  left:20%;
+}
+
+.heat-marker-style-3 {
+  left:38%;
+}
+
+.heat-marker-style-4 {
+  left:54%;
+}
+
+.heat-marker-style-5 {
+  left:70%;
+}
+
+.heat-marker-style-6 {
+  left:88%;
+}
+
+.culinary-text-13 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-top:8px;
+}
+
+.wine-dot-style {
+  background:#D4A0C0;
+}
+
+.wine-dot-style-2 {
+  background:#7B2D2D;
+}
+
+.wine-dot-style-3 {
+  background:#F7E48B;
+}
+
+.wine-dot-style-4 {
+  background:#C8A850;
+}
+
+.wine-dot-style-5 {
+  background:#3A6830;
+}
+
+.wine-row-style {
+  border-bottom:none;
+}
+
+.wine-dot-style-6 {
+  background:#E8C7A0;
+}
+  

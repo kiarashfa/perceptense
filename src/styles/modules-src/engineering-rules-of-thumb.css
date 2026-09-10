@@ -1,0 +1,344 @@
+
+/* ---- rule cards ---- */
+.rule-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
+.rh { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.rname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.rval { font-size: 13px; font-family: monospace; font-weight: 500; }
+.rbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
+.rsub { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+@media (max-width: 500px) { .rsub { grid-template-columns: 1fr; } }
+.rbox { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
+.rl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
+.rv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
+.rnote { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+/* ---- concept cards safe minmax ---- */
+.concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px; margin-bottom: 1rem; }
+/* ---- SVG diagrams ---- */
+.svg-wrap { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; overflow: hidden; }
+.svg-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px; }
+/* ---- scale viz ---- */
+.scale-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.scale-label { font-size: 11px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; text-align: right; padding-right: 8px; line-height: 1.3; }
+.scale-bar-outer { flex: 1; height: 18px; background: var(--color-background-secondary); border-radius: 3px; overflow: hidden; }
+.scale-bar-inner { height: 18px; border-radius: 3px; display: flex; align-items: center; padding: 0 6px; }
+.scale-bar-val { font-size: 10px; font-weight: 500; white-space: nowrap; }
+/* ---- reliability interactive ---- */
+.rel-display { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 11px 13px; font-size: 13px; line-height: 1.8; }
+/* ---- tolerance cost chart ---- */
+.tol-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.tol-label { font-size: 11px; color: var(--color-text-secondary); width: 90px; flex-shrink: 0; text-align:right; padding-right:8px; }
+.tol-bar { height: 20px; border-radius: 3px; display: flex; align-items: center; padding: 0 8px; transition: width 0.3s; }
+.tol-val { font-size: 11px; font-weight: 500; white-space: nowrap; }
+/* ---- failure timeline ---- */
+.fail-timeline { position: relative; padding-left: 24px; }
+.fail-timeline::before { content:''; position:absolute; left:8px; top:6px; bottom:6px; width:1px; background: var(--color-border-tertiary); }
+.fail-item { position:relative; margin-bottom:14px; }
+.fail-dot { position:absolute; left:-20px; top:4px; width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.fail-year { font-size:10px; font-weight:600; color:var(--color-text-tertiary); letter-spacing:0.05em; margin-bottom:1px; }
+.fail-name { font-size:13px; font-weight:500; color:var(--color-text-primary); margin-bottom:2px; }
+.fail-lesson { font-size:12px; color:var(--color-text-secondary); line-height:1.5; }
+/* ---- materials strength chart ---- */
+.mat-row { display:flex; align-items:center; gap:8px; margin-bottom:5px; }
+.mat-label { font-size:11px; color:var(--color-text-secondary); width:120px; flex-shrink:0; text-align:right; padding-right:8px; line-height:1.3; }
+.mat-bar { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 7px; }
+.mat-val { font-size:10px; font-weight:500; white-space:nowrap; }
+
+/* === Shared-ready extracted styles === */
+
+.muted-text {
+  font-size:12px;
+  color:var(--color-text-secondary);
+}
+
+.text-amber-900 {
+  color:#633806;
+}
+
+.text-blue-900 {
+  color:#0C447C;
+}
+
+.text-green-800 {
+  color:#27500A;
+}
+
+.text-green-900 {
+  color:#085041;
+}
+
+.text-indigo-900 {
+  color:#3C3489;
+}
+
+.text-orange-900 {
+  color:#712B13;
+}
+
+.text-red-900 {
+  color:#791F1F;
+}
+
+/* === Module-specific extracted styles === */
+
+.engineering-panel {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:12px 14px;
+  font-size:14px;
+  color:var(--color-text-primary);
+  line-height:1.6;
+  margin-bottom:10px;
+  font-style:italic;
+}
+
+.engineering-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:8px;
+}
+
+.engineering-label {
+  font-size:12px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:3px;
+}
+
+.engineering-media {
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.rbadge-style {
+  background:#E6F1FB;
+  color:#0C447C;
+}
+
+.engineering-spacing {
+  margin-top:4px;
+}
+
+.scale-bar-inner-style {
+  width:15%;
+  background:#E6F1FB;
+}
+
+.scale-bar-inner-style-2 {
+  width:25%;
+  background:#EAF3DE;
+}
+
+.scale-bar-inner-style-3 {
+  width:40%;
+  background:#FAEEDA;
+}
+
+.scale-bar-inner-style-4 {
+  width:40%;
+  background:#EEEDFE;
+}
+
+.scale-bar-inner-style-5 {
+  width:50%;
+  background:#FAECE7;
+}
+
+.scale-bar-inner-style-6 {
+  width:100%;
+  background:#FCEBEB;
+}
+
+.engineering-text-2 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-top:6px;
+}
+
+.rbadge-style-2 {
+  background:#EAF3DE;
+  color:#27500A;
+}
+
+.rbadge-style-3 {
+  background:#FAEEDA;
+  color:#633806;
+}
+
+.rbadge-style-4 {
+  background:#FAECE7;
+  color:#712B13;
+}
+
+.tol-bar-style {
+  width:6%;
+  background:#EAF3DE;
+}
+
+.engineering-text-3 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-left:6px;
+}
+
+.tol-bar-style-2 {
+  width:12%;
+  background:#E6F1FB;
+}
+
+.tol-bar-style-3 {
+  width:30%;
+  background:#FAEEDA;
+}
+
+.tol-bar-style-4 {
+  width:75%;
+  background:#FAECE7;
+}
+
+.rbadge-style-5 {
+  background:#EEEDFE;
+  color:#3C3489;
+}
+
+.rbadge-style-6 {
+  background:#E1F5EE;
+  color:#085041;
+}
+
+.showcalc-control {
+  font-size:12px;
+  padding:4px 11px;
+}
+
+.eng-result {
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.8;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+}
+
+.branch-display {
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  margin-bottom:1rem;
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.8;
+}
+
+.engineering-text-4 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.mat-bar-style {
+  width:4%;
+  background:#FAECE7;
+}
+
+.mat-bar-style-2 {
+  width:5%;
+  background:#EAF3DE;
+}
+
+.mat-bar-style-3 {
+  width:35%;
+  background:#E6F1FB;
+}
+
+.mat-bar-style-4 {
+  width:37%;
+  background:#FAEEDA;
+}
+
+.mat-bar-style-5 {
+  width:65%;
+  background:#EEEDFE;
+}
+
+.mat-bar-style-6 {
+  width:70%;
+  background:#FAECE7;
+}
+
+.engineering-text-5 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-top:8px;
+}
+
+.mat-bar-style-7 {
+  width:18%;
+  background:#FAEEDA;
+}
+
+.mat-bar-style-8 {
+  width:38%;
+  background:#FAECE7;
+}
+
+.mat-bar-style-9 {
+  width:40%;
+  background:#E6F1FB;
+}
+
+.engineering-grid-2 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.engineering-text-6 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  display:block;
+  margin-bottom:4px;
+}
+
+.rel-svg {
+  width:100%;
+  height:auto;
+  display:block;
+  margin-top:10px;
+}
+
+.engineering-grid-3 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.engineering-text-7 {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-top:4px;
+}
+
+.engineering-panel-4 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 12px;
+  margin-bottom:10px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+}
+
+.fermi-result {
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.8;
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  min-height:80px;
+}
+  

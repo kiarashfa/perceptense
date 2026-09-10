@@ -1,0 +1,203 @@
+
+/* === Duration bar chart === */
+.dur-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.dur-row:last-child { border-bottom: none; }
+.dur-name { font-size: 13px; color: var(--color-text-primary); width: 180px; flex-shrink: 0; font-weight: 500; }
+.dur-bar-wrap { flex: 1; }
+.dur-bar { height: 14px; border-radius: 2px; }
+.dur-val { font-size: 12px; color: var(--color-text-secondary); width: 80px; flex-shrink: 0; text-align: right; }
+
+/* === Slow speeds bar chart === */
+.slow-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.slow-row:last-child { border-bottom: none; }
+.slow-name { font-size: 12px; color: var(--color-text-primary); width: 160px; flex-shrink: 0; font-weight: 500; }
+.slow-bar-wrap { flex: 1; }
+.slow-bar { height: 12px; border-radius: 2px; }
+.slow-val { font-size: 11px; color: var(--color-text-secondary); width: 110px; flex-shrink: 0; text-align: right; }
+
+/* === Stopping distance visualiser === */
+.stop-slider-wrap { margin: 10px 0 6px; }
+.stop-label { font-size: 12px; color: var(--color-text-secondary); display: flex; justify-content: space-between; margin-bottom: 4px; }
+.stop-breakdown { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.stop-block { flex: 1; min-width: 120px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 11px; }
+.stop-block-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
+.stop-block-val { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+.stop-block-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
+
+/* === Speed units table === */
+.unit-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.unit-table th { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-align: left; padding: 5px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.unit-table td { padding: 6px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); }
+.unit-table tr:last-child td { border-bottom: none; }
+.unit-table td:not(:first-child) { font-variant-numeric: tabular-nums; }
+.unit-hl { font-weight: 500; }
+
+/* === Tab / explorer buttons === */
+.dest-btn { font-size: 12px; padding: 4px 11px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: none; color: var(--color-text-secondary); cursor: pointer; transition: background 0.1s, color 0.1s; }
+.dest-btn.active { background: var(--color-background-info); color: var(--color-text-info); border-color: var(--color-border-info); }
+.dest-result { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 13px; min-height: 60px; }
+
+/* === Faster/slower game === */
+.game-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+.game-score-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.game-score { font-size: 13px; color: var(--color-text-secondary); }
+.game-score strong { color: var(--color-text-primary); }
+.game-q { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 14px; line-height: 1.5; text-align: center; }
+.game-choices { display: flex; gap: 10px; flex-wrap: wrap; }
+.game-choice { flex: 1; min-width: 120px; padding: 12px 10px; text-align: center; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); cursor: pointer; font-size: 13px; font-weight: 500; color: var(--color-text-primary); transition: background 0.1s, border-color 0.1s; }
+.game-choice:hover { background: var(--color-background-tertiary); }
+.game-choice.correct { background: #EAF3DE; border-color: #97C459; color: #27500A; }
+.game-choice.wrong { background: #FCEBEB; border-color: #F09595; color: #791F1F; }
+.game-feedback { font-size: 13px; color: var(--color-text-secondary); margin-top: 10px; line-height: 1.5; min-height: 36px; text-align: center; }
+.game-next { display: none; margin-top: 10px; width: 100%; padding: 8px; }
+.game-end { text-align: center; padding: 20px 10px; }
+.game-end-score { font-size: 32px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.game-end-label { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 14px; }
+
+/* === 2-col card grid (mobile-safe) === */
+.cgrid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 1rem; }
+
+/* === Cars 0-100 table === */
+.car-tab-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.car-row { display: flex; align-items: center; gap: 10px; padding: 8px 4px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.car-row:last-child { border-bottom: none; }
+.car-rank { font-size: 11px; color: var(--color-text-tertiary); width: 18px; flex-shrink: 0; text-align: right; }
+.car-name-wrap { flex: 1; min-width: 0; }
+.car-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+.car-sub  { font-size: 11px; color: var(--color-text-secondary); }
+.car-bar-wrap { width: 120px; flex-shrink: 0; }
+.car-bar-track { background: var(--color-background-secondary); border-radius: 3px; height: 8px; overflow: hidden; }
+.car-bar-fill { height: 8px; border-radius: 3px; transition: width 0.4s ease; }
+.car-time { font-size: 13px; font-weight: 500; width: 42px; flex-shrink: 0; text-align: right; }
+
+/* === GWR & RC animated transitions === */
+#rc-gauge-arc { transition: stroke-dashoffset 0.5s ease, stroke 0.3s; }
+#rc-gauge-needle { transition: transform 0.5s ease; }
+.u-text-hex-4e99a3 { color: var(--accent); }
+.u-bg-background-primary { background: var(--color-background-primary); }
+.u-border-0-5px-solid-border-tertiary { border: 0.5px solid var(--color-border-tertiary); }
+.u-radius-radius-lg { border-radius: var(--border-radius-lg); }
+.u-p-13px-15px { padding: 13px 15px; }
+.u-w-0-3-pct { width: 0.3%; }
+.u-bg-hex-e6f1fb { background: #E6F1FB; }
+.u-border-0-5px-solid-hex-b5d4f4 { border: 0.5px solid #B5D4F4; }
+.u-text-hex-0c447c { color: #0C447C; }
+.u-ml-5px { margin-left: 5px; }
+.u-w-1-7-pct { width: 1.7%; }
+.u-bg-hex-b5d4f4 { background: #B5D4F4; }
+.u-text-hex-042c53 { color: #042C53; }
+.u-w-5-pct { width: 5%; }
+.u-bg-hex-85b7eb { background: #85B7EB; }
+.u-w-11-pct { width: 11%; }
+.u-bg-hex-378add { background: #378ADD; }
+.u-text-hex-fff { color: #fff; }
+.u-w-40-pct { width: 40%; }
+.u-bg-hex-185fa5 { background: #185FA5; }
+.u-w-60-pct { width: 60%; }
+.u-bg-hex-0c447c { background: #0C447C; }
+.u-w-100-pct { width: 100%; }
+.u-bg-hex-042c53 { background: #042C53; }
+.u-text-hex-e6f1fb { color: #E6F1FB; }
+.u-bt-0-5px-solid-border-tertiary { border-top: 0.5px solid var(--color-border-tertiary); }
+.u-pt-10px { padding-top: 10px; }
+.u-bg-hex-633806 { background: #633806; }
+.u-text-hex-faeeda { color: #FAEEDA; }
+.u-bg-hex-412402 { background: #412402; }
+.u-text-hex-fac775 { color: #FAC775; }
+.u-bg-hex-27500a { background: #27500A; }
+.u-text-hex-eaf3de { color: #EAF3DE; }
+.u-bg-hex-085041 { background: #085041; }
+.u-text-hex-e1f5ee { color: #E1F5EE; }
+.u-bg-hex-3c3489 { background: #3C3489; }
+.u-text-hex-eeedfe { color: #EEEDFE; }
+.u-m-10px-0-0 { margin: 10px 0 0; }
+.u-bg-background-secondary { background: var(--color-background-secondary); }
+.u-radius-radius-md { border-radius: var(--border-radius-md); }
+.u-p-11px-14px { padding: 11px 14px; }
+.u-minw-160px { min-width: 160px; }
+.u-minw-130px { min-width: 130px; }
+.u-p-10px-13px { padding: 10px 13px; }
+.u-w-1-pct { width: 1%; }
+.u-w-2-pct { width: 2%; }
+.u-w-15-pct { width: 15%; }
+.u-bg-hex-ef9f27 { background: #EF9F27; }
+.u-w-10-pct { width: 10%; }
+.u-w-50-pct { width: 50%; }
+.u-bg-hex-ba7517 { background: #BA7517; }
+.u-w-25-pct { width: 25%; }
+.u-bg-hex-1d9e75 { background: #1D9E75; }
+.u-w-70-pct { width: 70%; }
+.u-bg-hex-0f6e56 { background: #0F6E56; }
+.u-w-20-pct { width: 20%; }
+.u-bg-hex-7f77dd { background: #7F77DD; }
+.u-w-80-pct { width: 80%; }
+.u-bg-hex-534ab7 { background: #534AB7; }
+.u-bg-background-warning { background: var(--color-background-warning); }
+.u-text-text-warning { color: var(--color-text-warning); }
+.u-h-auto { height: auto; }
+.u-m-6px-0-0 { margin: 6px 0 0; }
+.u-m-10px-0 { margin: 10px 0; }
+.u-bg-background-info { background: var(--color-background-info); }
+.u-text-text-info { color: var(--color-text-info); }
+.u-mb-0-7rem { margin-bottom: 0.7rem; }
+.u-bg-hex-eeedfe { background: #EEEDFE; }
+.u-border-0-5px-solid-hex-cecbf6 { border: 0.5px solid #CECBF6; }
+.u-text-hex-26215c { color: #26215C; }
+.u-w-1-5-pct { width: 1.5%; }
+.u-bg-hex-cecbf6 { background: #CECBF6; }
+.u-w-3-pct { width: 3%; }
+.u-bg-hex-afa9ec { background: #AFA9EC; }
+.u-w-4-pct { width: 4%; }
+.u-bg-hex-9790e5 { background: #9790E5; }
+.u-bg-hex-26215c { background: #26215C; }
+.u-text-hex-cecbf6 { color: #CECBF6; }
+.u-gap-6px { gap: 6px; }
+.u-w-0-8-pct { width: 0.8%; }
+.u-w-0-15-pct { width: 0.15%; }
+.u-gridcols-repeat-auto-fill-minmax-150px-1fr { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.u-pt-12px { padding-top: 12px; }
+.u-transform-uppercase { text-transform: uppercase; }
+.u-ls-0-06em { letter-spacing: 0.06em; }
+.u-lh-1-1 { line-height: 1.1; }
+.u-mb-2px { margin-bottom: 2px; }
+.u-flex-direction-column { flex-direction: column; }
+.u-gap-0 { gap: 0; }
+.u-items-flex-start { align-items: flex-start; }
+.u-align-right { text-align: right; }
+.u-fs-26px { font-size: 26px; }
+.u-maxw-220px { max-width: 220px; }
+.u-m-0-auto-10px { margin: 0 auto 10px; }
+.u-overflow-hidden { overflow: hidden; }
+.u-fs-20px { font-size: 20px; }
+.u-opacity-0-8 { opacity: 0.8; }
+.u-min-height-80px { min-height: 80px; }
+.u-fs-17px { font-size: 17px; }
+.u-m-8px-0-0 { margin: 8px 0 0; }
+.u-mb-1-2rem { margin-bottom: 1.2rem; }
+.u-text-text-success { color: var(--color-text-success); }
+.u-mt-2px { margin-top: 2px; }
+.u-lh-1-3 { line-height: 1.3; }
+.u-w-16px { width: 16px; }
+.u-minw-0 { min-width: 0; }
+.u-p-3px-9px { padding: 3px 9px; }
+.u-text-text-danger { color: var(--color-text-danger); }
+
+/* --- Runtime generated element classes --- */
+.clickable-row { cursor: pointer; }
+.car-note-row { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; padding: 5px 4px 8px 52px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.dest-note { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; }
+.gwr-record-card { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); padding: 9px 10px; cursor: pointer; transition: box-shadow 0.1s; }
+.gwr-record-cat { font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; }
+.gwr-record-speed { font-size: 14px; font-weight: 500; }
+.gwr-record-title { font-size: 11px; color: var(--color-text-primary); margin-top: 2px; line-height: 1.3; }
+.coaster-row { display: flex; align-items: center; gap: 10px; padding: 8px 4px; border-bottom: 0.5px solid var(--color-border-tertiary); cursor: pointer; border-radius: 4px; transition: background 0.1s; }
+.coaster-row.last { border-bottom: 0; }
+.coaster-rank { font-size: 11px; color: var(--color-text-tertiary); width: 16px; flex-shrink: 0; text-align: right; }
+.coaster-main { flex: 1; min-width: 0; }
+.coaster-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+.coaster-meta { font-size: 11px; color: var(--color-text-secondary); }
+.coaster-speed-wrap { text-align: right; flex-shrink: 0; }
+.coaster-speed { font-size: 15px; font-weight: 500; }
+.coaster-speed-unit { font-size: 10px; color: var(--color-text-secondary); }
+
+  

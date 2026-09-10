@@ -1,0 +1,616 @@
+
+    /* ── philosopher / movement tab buttons ── */
+    .phil-btn-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .phil-btn {
+      font-size: 12px;
+      padding: 4px 11px;
+      border-radius: 99px;
+      border: 0.5px solid var(--color-border-secondary);
+      background: none;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      transition: all 0.12s;
+      font-family: inherit;
+    }
+    .phil-btn:hover {
+      background: var(--color-background-primary);
+      color: var(--color-text-primary);
+    }
+    .phil-btn.active {
+      background: var(--color-text-primary);
+      color: var(--color-background-primary);
+      border-color: var(--color-text-primary);
+    }
+
+    /* ── explorer display panel ── */
+    .explorer-panel {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px 16px;
+      margin-bottom: 1rem;
+      min-height: 80px;
+    }
+
+    /* ── 2-col grid used inside panels, collapses on mobile ── */
+    .panel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    @media (max-width: 560px) {
+      .panel-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── timeline bar (Part A visual) ── */
+    .timeline-bar {
+      position: relative;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--color-background-secondary);
+      margin: 6px 0 2px;
+      overflow: visible;
+    }
+    .timeline-fill {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    /* ── influence meter ── */
+    .influence-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 7px;
+    }
+    .influence-label {
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      width: 130px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .influence-track {
+      flex: 1;
+      height: 18px;
+      background: var(--color-background-secondary);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .influence-fill {
+      height: 100%;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      padding-left: 7px;
+      font-size: 11px;
+      font-weight: 500;
+      color: #fff;
+      transition: width 0.6s ease;
+    }
+
+    /* ── ethics spectrum slider ── */
+    .spectrum-wrap {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-lg);
+      padding: 14px 16px;
+      margin-bottom: 1rem;
+    }
+    .spectrum-track {
+      height: 10px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #0C447C, var(--accent), #27500A);
+      margin: 10px 0 4px;
+      position: relative;
+    }
+    .spectrum-tick {
+      position: absolute;
+      top: -18px;
+      transform: translateX(-50%);
+      font-size: 10px;
+      color: var(--color-text-tertiary);
+      white-space: nowrap;
+    }
+
+    /* ── comparison table ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-bottom: 1rem;
+    }
+    .compare-table th {
+      padding: 7px 10px;
+      background: var(--color-background-secondary);
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      text-align: left;
+      border-bottom: 0.5px solid var(--color-border-tertiary);
+    }
+    .compare-table td {
+      padding: 7px 10px;
+      border-bottom: 0.5px solid var(--color-border-tertiary);
+      color: var(--color-text-primary);
+      line-height: 1.45;
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:hover td { background: var(--color-background-secondary); }
+
+    /* ── logical fallacy cards ── */
+    .fallacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+    .fallacy-card {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-radius: var(--border-radius-md);
+      padding: 10px 12px;
+    }
+    .fallacy-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 3px;
+    }
+    .fallacy-latin {
+      font-size: 10px;
+      font-style: italic;
+      color: var(--color-text-tertiary);
+      margin-bottom: 5px;
+    }
+    .fallacy-def {
+      font-size: 11px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+    .fallacy-example {
+      font-size: 11px;
+      color: var(--color-text-primary);
+      margin-top: 5px;
+      padding: 4px 7px;
+      background: var(--color-background-secondary);
+      border-radius: 4px;
+      line-height: 1.45;
+    }
+
+    /* ── philosopher era badge ── */
+    .era-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 99px;
+      margin-right: 6px;
+    }
+
+    /* ── dot-matrix consciousness viz ── */
+    .dot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      margin: 8px 0;
+    }
+    .dot-grid span {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+.u-text-center {
+  text-align:center;
+}
+
+.u-text-right {
+  text-align:right;
+}
+
+/* === Module-specific extracted styles === */
+
+.philosophy-panel {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 13px;
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+  margin-bottom:10px;
+  font-style:italic;
+}
+
+.philosophy-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:8px;
+}
+
+.philosophy-label {
+  font-size:12px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:3px;
+}
+
+.philosophy-label-2 {
+  font-size:12px;
+  font-weight:500;
+  color:var(--color-text-secondary);
+  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+}
+
+.philosophy-text {
+  font-size:11px;
+  color:var(--color-text-tertiary);
+  margin-top:6px;
+}
+
+.philosophy-grid-2 {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.philosophy-panel-3 {
+  background:#EEEDFE;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  border:0.5px solid #AFA9EC;
+}
+
+.philosophy-label-3 {
+  font-size:13px;
+  font-weight:500;
+  color:#26215C;
+  margin-bottom:4px;
+}
+
+.philosophy-text-2 {
+  font-size:12px;
+  color:#3C3489;
+  margin-bottom:6px;
+  font-style:italic;
+}
+
+.philosophy-text-3 {
+  font-size:12px;
+  color:#534AB7;
+  line-height:1.5;
+}
+
+.philosophy-panel-4 {
+  background:#E6F1FB;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  border:0.5px solid #85B7EB;
+}
+
+.philosophy-label-4 {
+  font-size:13px;
+  font-weight:500;
+  color:#042C53;
+  margin-bottom:4px;
+}
+
+.philosophy-text-4 {
+  font-size:12px;
+  color:#0C447C;
+  margin-bottom:6px;
+  font-style:italic;
+}
+
+.philosophy-text-5 {
+  font-size:12px;
+  color:#185FA5;
+  line-height:1.5;
+}
+
+.philosophy-panel-5 {
+  background:#E1F5EE;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  border:0.5px solid #5DCAA5;
+}
+
+.philosophy-label-5 {
+  font-size:13px;
+  font-weight:500;
+  color:#04342C;
+  margin-bottom:4px;
+}
+
+.philosophy-text-6 {
+  font-size:12px;
+  color:#085041;
+  margin-bottom:6px;
+  font-style:italic;
+}
+
+.philosophy-text-7 {
+  font-size:12px;
+  color:#0F6E56;
+  line-height:1.5;
+}
+
+.philosophy-panel-6 {
+  background:#FAEEDA;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  border:0.5px solid #EF9F27;
+}
+
+.philosophy-label-6 {
+  font-size:13px;
+  font-weight:500;
+  color:#412402;
+  margin-bottom:4px;
+}
+
+.philosophy-text-8 {
+  font-size:12px;
+  color:#633806;
+  margin-bottom:6px;
+  font-style:italic;
+}
+
+.philosophy-text-9 {
+  font-size:12px;
+  color:#854F0B;
+  line-height:1.5;
+}
+
+.philosophy-panel-7 {
+  background:#FBEAF0;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  border:0.5px solid #ED93B1;
+}
+
+.philosophy-label-7 {
+  font-size:13px;
+  font-weight:500;
+  color:#4B1528;
+  margin-bottom:4px;
+}
+
+.philosophy-text-10 {
+  font-size:12px;
+  color:#72243E;
+  margin-bottom:6px;
+  font-style:italic;
+}
+
+.philosophy-text-11 {
+  font-size:12px;
+  color:#993556;
+  line-height:1.5;
+}
+
+.philosophy-panel-8 {
+  background:#F1EFE8;
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  border:0.5px solid #D3D1C7;
+}
+
+.philosophy-label-8 {
+  font-size:13px;
+  font-weight:500;
+  color:#2C2C2A;
+  margin-bottom:4px;
+}
+
+.philosophy-text-12 {
+  font-size:12px;
+  color:#444441;
+  margin-bottom:6px;
+  font-style:italic;
+}
+
+.philosophy-text-13 {
+  font-size:12px;
+  color:#5F5E5A;
+  line-height:1.5;
+}
+
+.philosophy-text-14 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.ethicsslider {
+  width:100%;
+  margin-bottom:6px;
+}
+
+.philosophy-row {
+  display:flex;
+  justify-content:space-between;
+  font-size:10px;
+  color:var(--color-text-tertiary);
+  margin-bottom:10px;
+}
+
+.ethics-explain {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 13px;
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.6;
+}
+
+.philosophy-panel-9 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 13px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.philosophy-text-15 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:10px;
+  line-height:1.6;
+}
+
+.sec-style {
+  margin-top:1.5rem;
+}
+
+.philosophy-spacing {
+  overflow-x:auto;
+  margin-bottom:1rem;
+}
+
+.philosophy-media {
+  width:14%;
+}
+
+.philosophy-media-2 {
+  width:16%;
+}
+
+.philosophy-media-3 {
+  width:18%;
+}
+
+.philosophy-text-16 {
+  color:var(--color-text-tertiary);
+  font-size:11px;
+}
+
+/* ── philosopher timeline ── */
+.phil-timeline-wrap {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+.phil-timeline-svg {
+  display: block;
+  min-width: 560px;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+.phil-timeline-tooltip {
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 9px 12px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--color-text-primary);
+  line-height: 1.55;
+  min-height: 44px;
+  transition: opacity 0.15s;
+}
+
+/* ── ethical scenario quiz ── */
+.quiz-wrap {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 1rem;
+}
+.quiz-progress {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+.quiz-pip {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-background-tertiary);
+  transition: background 0.2s;
+}
+.quiz-pip.done { background: var(--color-text-info); }
+.quiz-pip.active { background: var(--color-text-secondary); }
+.quiz-scenario {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.quiz-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 4px;
+}
+.quiz-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 9px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  text-align: left;
+  transition: background 0.12s, border-color 0.12s;
+  width: 100%;
+}
+.quiz-choice:hover {
+  background: var(--color-background-tertiary);
+  border-color: var(--color-border-secondary);
+}
+.quiz-choice.selected {
+  background: var(--color-background-info);
+  border-color: var(--color-border-info);
+  color: var(--color-text-info);
+}
+.quiz-letter {
+  font-weight: 600;
+  flex-shrink: 0;
+  width: 16px;
+}
+.quiz-result {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  display: none;
+}
+.quiz-result.show { display: block; }
+.quiz-result-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.quiz-restart {
+  margin-top: 10px;
+  font-size: 12px;
+}
+  

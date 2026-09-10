@@ -1,0 +1,153 @@
+
+    :root {
+      --accent: #CC4E2A;
+      --accent-bg: #FAF0EC;
+      --accent-border: #E8A48C;
+    }
+
+    /* ── Explorer panel ── */
+    .exp-btns { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+    .exp-btn { font-size: 12px; padding: 5px 13px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+    .exp-btn:hover { border-color: var(--accent-border); color: var(--color-text-primary); }
+    .exp-btn.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); font-weight: 600; }
+    .exp-panel { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 18px; min-height: 120px; }
+    .exp-panel h4 { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 8px; }
+    .exp-panel p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin: 0 0 8px; }
+    .exp-panel p:last-child { margin-bottom: 0; }
+    .exp-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .exp-tag { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+
+    /* ── Period chart (timeline) ── */
+    .pc-wrap { overflow-x: auto; margin-bottom: 1rem; }
+    .pc-row { display: flex; align-items: center; gap: 10px; margin-bottom: 7px; }
+    .pc-label { font-size: 12px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; text-align: right; line-height: 1.3; }
+    .pc-track { flex: 1; height: 22px; background: var(--color-background-secondary); border-radius: 4px; position: relative; min-width: 200px; }
+    .pc-fill { position: absolute; height: 100%; border-radius: 4px; display: flex; align-items: center; overflow: hidden; }
+    .pc-fill-label { font-size: 10px; color: #fff; padding: 0 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+    .pc-axis { display: flex; margin-left: 140px; margin-bottom: 4px; position: relative; }
+    .pc-axis-mark { font-size: 10px; color: var(--color-text-tertiary); position: absolute; transform: translateX(-50%); }
+    @media (max-width: 500px) { .pc-label { width: 80px; font-size: 10px; } .pc-axis { margin-left: 90px; } }
+
+    /* ── Multi-card explorer (elem-card style) ── */
+    .elem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-bottom: 10px; }
+    .elem-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 10px; text-align: center; cursor: pointer; transition: all 0.15s; }
+    .elem-card:hover { border-color: var(--accent-border); }
+    .elem-card.active { background: var(--accent-bg); border-color: var(--accent-border); }
+    .elem-icon { font-size: 22px; margin-bottom: 6px; }
+    .elem-name { font-size: 12px; font-weight: 600; color: var(--color-text-primary); line-height: 1.3; }
+    .elem-sub { font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px; }
+    .elem-detail { background: var(--color-background-primary); border: 0.5px solid var(--accent-border); border-radius: var(--border-radius-lg); padding: 15px 17px; margin-bottom: 1rem; display: none; }
+.elem-detail h4 { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 7px; }
+    .elem-detail p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin: 0 0 6px; }
+    .elem-detail p:last-child { margin: 0; }
+
+    /* ── Comparison scale (dot-on-track) ── */
+    .cscale-wrap { margin-bottom: 1rem; }
+    .cscale-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-secondary); margin-bottom: 5px; font-style: italic; }
+    .cscale-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .cscale-name { width: 160px; flex-shrink: 0; font-size: 12px; color: var(--color-text-secondary); text-align: right; line-height: 1.3; }
+    .cscale-track { flex: 1; height: 6px; background: var(--color-background-secondary); border-radius: 99px; position: relative; min-width: 150px; }
+    .cscale-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--color-background-primary); position: absolute; top: 50%; transform: translate(-50%, -50%); }
+    @media (max-width: 500px) { .cscale-name { width: 90px; font-size: 11px; } }
+
+    /* ── Distribution bar (pie-like) ── */
+    .dist-bar { display: flex; width: 100%; height: 28px; border-radius: var(--border-radius-md); overflow: hidden; margin-bottom: 10px; }
+    .dist-seg { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: #fff; overflow: hidden; transition: width 0.4s; }
+    .dist-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
+    .dist-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-text-secondary); }
+    .dist-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Range slider ── */
+    .slider-wrap { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 18px; margin-bottom: 1rem; }
+    .slider-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+    .slider-title { font-size: 13px; font-weight: 600; color: var(--color-text-primary); }
+    .slider-val { font-size: 20px; font-weight: 500; color: var(--accent); }
+    .slider-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px; }
+    .slider-output { margin-top: 12px; padding: 10px 12px; background: var(--color-background-primary); border-radius: var(--border-radius-md); font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; border: 0.5px solid var(--color-border-tertiary); }
+
+    /* ── Calculator widget ── */
+    .calc-wrap { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 18px; margin-bottom: 1rem; }
+    .calc-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 12px; }
+    .calc-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 12px; }
+    .calc-field label { font-size: 11px; color: var(--color-text-secondary); display: block; margin-bottom: 4px; }
+    .calc-field input, .calc-field select { width: 100%; padding: 7px 10px; font-size: 13px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-primary); box-sizing: border-box; }
+    .calc-result { padding: 12px 14px; background: var(--color-background-primary); border-radius: var(--border-radius-md); border: 0.5px solid var(--accent-border); font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; min-height: 50px; }
+    .calc-result strong { color: var(--color-text-primary); }
+
+    /* ── SVG schematic ── */
+    .schema-wrap { overflow-x: auto; margin-bottom: 1rem; }
+    .schema-wrap svg text { font-family: system-ui, sans-serif; }
+
+    /* ── News values card grid ── */
+    .nv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+    .nv-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
+    .nv-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 5px; }
+    .nv-body { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
+    .nv-eg { font-size: 11px; color: var(--accent); margin-top: 5px; font-style: italic; }
+
+    /* ── Info / warning blocks ── */
+    .info-block { background: var(--color-background-info); border: 0.5px solid var(--color-border-info); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; font-size: 13px; color: var(--color-text-info); line-height: 1.6; }
+    .warn-block { background: var(--color-background-warning); border: 0.5px solid var(--color-border-warning); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; font-size: 13px; color: var(--color-text-warning); line-height: 1.6; }
+    .success-block { background: var(--color-background-success); border: 0.5px solid var(--color-border-success); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; font-size: 13px; color: var(--color-text-success); line-height: 1.6; }
+    .danger-block { background: var(--color-background-danger); border: 0.5px solid var(--color-border-danger); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; font-size: 13px; color: var(--color-text-danger); line-height: 1.6; }
+
+    /* ── Standard card overrides ── */
+    .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+    .clabel { font-size: 11px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 3px; }
+    .cval { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+    .cnote { font-size: 12px; color: var(--color-text-secondary); margin-top: 5px; line-height: 1.5; }
+
+    /* ── Bar chart ── */
+    .bar-chart-title { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 10px; }
+    .bar-note { font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px; }
+    @media (max-width: 500px) { .bl { width: 90px !important; } }
+
+    /* ── Platform cards ── */
+    .plat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+    .plat-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; }
+    .plat-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 4px; }
+    .plat-stat { font-size: 19px; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 3px; }
+    .plat-stat-label { font-size: 10px; color: var(--color-text-tertiary); margin-bottom: 7px; }
+    .plat-body { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
+
+    /* ── Media literacy checklist ── */
+    .check-list { list-style: none; padding: 0; margin: 0 0 1rem; }
+    .check-list li { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+    .check-list li:last-child { border-bottom: none; }
+    .check-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; font-size: 14px; }
+
+    /* ── Ownership table ── */
+    .own-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-bottom: 1rem; }
+    .own-table th { text-align: left; padding: 7px 10px; background: var(--color-background-secondary); color: var(--color-text-secondary); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 0.5px solid var(--color-border-tertiary); }
+    .own-table td { padding: 8px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; line-height: 1.45; }
+    .own-table tr:last-child td { border-bottom: none; }
+    .own-table td:first-child { font-weight: 600; white-space: nowrap; }
+
+.u-w-100pct {
+  width:100%;
+}
+
+/* === Module-specific extracted styles === */
+
+.media-text {
+  font-size:42px;
+  color:var(--accent);
+  flex-shrink:0;
+}
+
+.cgrid-style {
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:10px;
+  margin-bottom:1rem;
+}
+
+.media-text-2 {
+  color:var(--color-text-tertiary);
+  font-size:13px;
+}
+
+.media-media {
+  width:100%;
+  height:auto;
+}
+  

@@ -1,0 +1,423 @@
+
+/* --- Timeline (hair growth chart) --- */
+.timeline-row { display: flex; align-items: center; gap: 0; margin-bottom: 5px; }
+.tl-label { font-size: 12px; color: var(--color-text-secondary); width: 120px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
+.tl-bar   { height: 20px; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; min-width: 4px; }
+.tl-val   { font-size: 11px; font-weight: 500; white-space: nowrap; }
+
+
+/* --- Body silhouette diagram --- */
+.diagram-wrap { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem; }
+.diagram-svg  { flex-shrink: 0; }
+.diagram-legend { flex: 1; min-width: 180px; }
+.dleg-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.dleg-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; margin-top: 3px; }
+.dleg-text { font-size: 12px; color: var(--color-text-secondary); line-height: 1.45; }
+.dleg-val  { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
+
+/* --- Proportion rule cards --- */
+.prop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+.prop-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
+.prop-icon { font-size: 20px; margin-bottom: 4px; }
+.prop-rule { font-size: 13px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; margin-bottom: 3px; }
+.prop-note { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
+
+/* --- HR zone explorer --- */
+.hr-age-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+.hr-age-lbl { font-size: 13px; color: var(--color-text-secondary); }
+.hr-age-val { font-size: 15px; font-weight: 500; color: var(--color-text-primary); min-width: 28px; }
+.hr-zone-rows { margin-top: 8px; }
+.hr-zone-row  { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.hr-zone-lbl  { font-size: 12px; color: var(--color-text-secondary); width: 80px; flex-shrink: 0; text-align: right; }
+.hr-zone-bar  { height: 20px; border-radius: 3px; display: flex; align-items: center; padding: 0 8px; transition: width 0.3s ease; }
+.hr-zone-txt  { font-size: 11px; font-weight: 500; white-space: nowrap; }
+.hr-zone-scaled { width: 36%; }
+.hr-zone-recovery { background: var(--accent); }
+.hr-zone-base { background: #378ADD; }
+.hr-zone-aerobic { background: #185FA5; }
+.hr-zone-threshold { background: #EF9F27; }
+.hr-zone-max { background: #c0392b; }
+.hr-zone-light-text { color: #fff; }
+
+/* --- Reaction time game --- */
+.rt-game { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px; margin-bottom: 1rem; text-align: center; }
+.rt-screen { height: 90px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; user-select: none; margin-bottom: 10px; }
+.rt-screen.rt-wait  { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+.rt-screen.rt-ready { background: #c0392b; color: #fff; }
+.rt-screen.rt-go    { background: #27ae60; color: #fff; font-size: 18px; }
+.rt-screen.rt-done  { background: var(--color-background-info); color: var(--color-text-info); }
+.rt-stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.rt-stat  { background: var(--color-background-secondary); border-radius: 8px; padding: 8px 14px; }
+.rt-stat-val { font-size: 17px; font-weight: 500; color: var(--color-text-primary); }
+.rt-stat-lbl { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
+
+/* --- Bone count interactive --- */
+.bone-explorer { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 1rem; }
+.bone-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.bone-tab { font-size: 12px; padding: 4px 11px; border-radius: 6px; border: 0.5px solid var(--color-border-secondary); background: none; cursor: pointer; color: var(--color-text-secondary); transition: all 0.15s; }
+.bone-tab.active { background: var(--color-background-info); color: var(--color-text-info); border-color: var(--color-border-info); }
+.bone-content { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+.bone-count { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.bone-note  { font-size: 12px; color: var(--color-text-secondary); margin-top: 6px; }
+
+/* --- Sense comparison chart --- */
+.sense-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.sense-icon-col { width: 26px; flex-shrink: 0; text-align: center; font-size: 15px; }
+.sense-lbl-col  { font-size: 12px; color: var(--color-text-secondary); width: 80px; flex-shrink: 0; }
+.sense-bar-col  { flex: 1; height: 18px; border-radius: 3px; display: flex; align-items: center; padding: 0 7px; }
+.sense-val-col  { font-size: 11px; font-weight: 500; white-space: nowrap; }
+
+/* --- Body composition donut --- */
+.donut-wrap { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 1rem; }
+.donut-legend { flex: 1; min-width: 150px; }
+.donut-leg-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
+.donut-leg-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+.donut-leg-label  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
+.donut-leg-pct    { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-left: auto; }
+
+/* --- Blood type chart --- */
+.blood-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 1rem; }
+.blood-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 10px 12px; text-align: center; }
+.blood-type { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
+.blood-pct  { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+.blood-bar  { height: 5px; border-radius: 3px; background: var(--color-border-info); margin-top: 6px; }
+
+/* --- Organ weight chart --- */
+.organ-row { display: flex; align-items: center; gap: 0; margin-bottom: 5px; }
+.organ-lbl { font-size: 12px; color: var(--color-text-secondary); width: 100px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
+
+/* --- Blood compatibility matrix --- */
+.compat-wrap { overflow-x: auto; margin-bottom: 0.6rem; }
+.compat-table { border-collapse: collapse; width: 100%; min-width: 340px; }
+.compat-table th, .compat-table td { width: 46px; height: 38px; text-align: center; vertical-align: middle; font-size: 12px; font-family: var(--font-sans); }
+.compat-table th { font-weight: 500; font-size: 11px; color: var(--color-text-secondary); padding: 4px 2px; }
+.compat-th-corner { font-size: 10px; color: var(--color-text-tertiary); }
+.compat-row-hdr { font-weight: 500; font-size: 12px; color: var(--color-text-primary); text-align: right; padding-right: 8px; white-space: nowrap; }
+.compat-yes { background: var(--color-background-success); color: var(--color-text-success); border-radius: 5px; font-size: 14px; cursor: default; transition: transform 0.1s; }
+.compat-yes:hover { transform: scale(1.25); }
+.compat-no  { background: var(--color-background-secondary); color: var(--color-text-tertiary); border-radius: 5px; font-size: 13px; cursor: default; }
+.compat-self { background: var(--color-background-info); color: var(--color-text-info); border-radius: 5px; font-size: 13px; font-weight: 500; cursor: default; }
+.compat-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
+.compat-leg-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--color-text-secondary); }
+.compat-leg-dot  { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+/* --- Chromosome diagram --- */
+.chrom-section { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 1rem; }
+
+/* Punnett square */
+.punnett-wrap { overflow-x: auto; margin: 12px 0; }
+.punnett { border-collapse: collapse; margin: 0 auto; }
+.punnett th, .punnett td { width: 80px; height: 56px; text-align: center; vertical-align: middle; font-size: 13px; font-family: var(--font-sans); border: 0.5px solid var(--color-border-tertiary); }
+.punnett th { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); background: var(--color-background-secondary); border: none; }
+.punnett .p-xx { background: var(--color-background-info); color: var(--color-text-info); font-weight: 500; border-radius: 4px; }
+.punnett .p-xy { background: var(--color-background-success); color: var(--color-text-success); font-weight: 500; border-radius: 4px; }
+
+.content-panel-roomy {
+  margin-bottom: 1.2rem;
+}
+.panel-title-tight {
+  margin-bottom: 4px;
+}
+.panel-title-medium {
+  margin-bottom: 6px;
+}
+.panel-title-spacious {
+  margin-bottom: 12px;
+}
+.panel-subtitle,
+.panel-note {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+.panel-subtitle {
+  margin: 0 0 12px;
+}
+.panel-note {
+  margin: 10px 0 0;
+}
+.panel-note-compact {
+  font-size: 11px;
+  margin: 8px 0 0;
+}
+.panel-note-flush {
+  margin: 0;
+}
+.section-intro {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 0.8rem;
+  line-height: 1.6;
+}
+.primary-emphasis {
+  color: var(--color-text-primary);
+}
+.strong-primary {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+.heart-rate-slider {
+  flex: 1;
+  max-width: 220px;
+}
+.heart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.bone-detail {
+  font-size: 13px;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+.donut-svg {
+  flex-shrink: 0;
+}
+.donut-water { background: #378ADD; }
+.donut-protein { background: var(--accent); }
+.donut-fat { background: #EF9F27; }
+.donut-minerals { background: #97C459; }
+.donut-other { background: #A8A69E; }
+.bar-info {
+  background: var(--color-background-info);
+}
+.bar-info-text {
+  color: var(--color-text-info);
+}
+.organ-skin { width: 100%; }
+.organ-liver { width: 36%; }
+.organ-brain { width: 30%; }
+.organ-lungs { width: 26%; }
+.organ-heart { width: 9%; }
+.organ-kidneys { width: 7%; }
+.organ-spleen { width: 4%; }
+.body-diagram-svg {
+  min-width: 110px;
+}
+.diagram-legend-fluid,
+.chrom-table-wrap,
+.punnett-explainer {
+  flex: 1;
+  min-width: 180px;
+}
+.diagram-legend-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+.dot-blue { background: #378ADD; }
+.dot-teal { background: var(--accent); }
+.dot-amber { background: #EF9F27; }
+.dot-green { background: #97C459; }
+.blood-o-pos { width: 100%; background: #c0392b; opacity: 0.7; }
+.blood-a-pos { width: 71%; background: #e74c3c; opacity: 0.7; }
+.blood-b-pos { width: 53%; background: #e74c3c; opacity: 0.5; }
+.blood-ab-pos { width: 13%; background: #e74c3c; opacity: 0.4; }
+.blood-o-neg { width: 18%; background: #2980b9; opacity: 0.7; }
+.blood-a-neg { width: 16%; background: #2980b9; opacity: 0.6; }
+.blood-b-neg { width: 5%; background: #2980b9; opacity: 0.5; }
+.blood-ab-neg { width: 3%; background: #2980b9; opacity: 0.4; }
+.compat-control-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  align-items: center;
+}
+.compat-control-row-spacious {
+  margin-bottom: 10px;
+}
+.compat-control-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+.compat-button-row {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.compat-result {
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 20px;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+.compat-th-label {
+  text-align: right;
+  padding-right: 6px;
+  width: 110px;
+}
+.compat-dot-compatible { background: var(--color-background-success); }
+.compat-dot-incompatible {
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+}
+.compat-dot-self { background: var(--color-background-info); }
+.sense-vision { width: 95%; background: var(--color-background-info); }
+.sense-smell { width: 88%; background: var(--color-background-success); }
+.sense-hearing { width: 76%; background: var(--color-background-warning); }
+.sense-taste { width: 52%; background: var(--color-background-secondary); }
+.sense-touch { width: 38%; background: var(--color-background-secondary); }
+.text-info { color: var(--color-text-info); }
+.text-success { color: var(--color-text-success); }
+.text-warning { color: var(--color-text-warning); }
+.rt-benchmarks {
+  margin-top: 10px;
+}
+.bar-lbl {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+.bl-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.bl-row-last {
+  margin-bottom: 0;
+}
+.benchmark-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  width: 120px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.benchmark-bar {
+  height: 16px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+}
+.benchmark-text {
+  font-size: 10px;
+  font-weight: 500;
+}
+.benchmark-elite { width: 40%; background: var(--color-background-success); }
+.benchmark-average { width: 62%; background: var(--color-background-info); }
+.benchmark-older { width: 80%; background: var(--color-background-warning); }
+.benchmark-impaired { width: 100%; background: var(--color-background-danger); }
+.text-danger { color: var(--color-text-danger); }
+.chrom-layout,
+.punnett-layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.chrom-layout {
+  margin-bottom: 14px;
+}
+.chromosome-svg {
+  flex-shrink: 0;
+  min-width: 160px;
+}
+.chrom-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  background: var(--color-border-tertiary);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.chrom-cell {
+  padding: 7px 9px;
+}
+.chrom-head {
+  background: var(--color-background-secondary);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+}
+.chrom-x-head {
+  background: var(--color-background-secondary);
+  font-weight: 600;
+  color: #378ADD;
+  text-align: center;
+}
+.chrom-y-head {
+  background: var(--color-background-secondary);
+  font-weight: 600;
+  color: #4E7A1A;
+  text-align: center;
+}
+.chrom-label {
+  background: var(--color-background-primary);
+  color: var(--color-text-secondary);
+}
+.chrom-value {
+  background: var(--color-background-primary);
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.punnett-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.punnett-axis {
+  width: 72px;
+  text-align: right;
+  padding-right: 8px;
+}
+.punnett-axis-blue {
+  text-align: right;
+  padding-right: 8px;
+  color: #378ADD;
+}
+.punnett-x-head { color: var(--accent); }
+.punnett-y-head { color: #97C459; }
+.punnett-sub {
+  font-size: 10px;
+  font-weight: 400;
+}
+.punnett-cell-note {
+  font-size: 10px;
+}
+.punnett-caption {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 6px;
+}
+.punnett-copy {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+.punnett-copy-row {
+  margin-bottom: 6px;
+}
+.tl-bar-buzz { width: 3%; background: var(--tl-c1,#B5D4F4); }
+.tl-bar-buzz .tl-val { color: var(--tl-t1,#0C447C); }
+.tl-bar-ear { width: 18%; background: var(--tl-c2,#85B7EB); }
+.tl-bar-ear .tl-val { color: var(--tl-t2,#0C447C); }
+.tl-bar-chin { width: 32%; background: var(--tl-c3,#378ADD); }
+.tl-bar-chin .tl-val { color: var(--tl-t3,#fff); }
+.tl-bar-shoulder { width: 52%; background: var(--tl-c4,#185FA5); }
+.tl-bar-shoulder .tl-val { color: var(--tl-t4,#fff); }
+.tl-bar-midback { width: 78%; background: var(--tl-c5,#0C447C); }
+.tl-bar-midback .tl-val { color: var(--tl-t5,#fff); }
+.tl-bar-waist { width: 100%; background: var(--tl-c6,#042C53); }
+.tl-bar-waist .tl-val { color: var(--tl-t6,#fff); }
+
+/* --- Responsive cgrid override for 3+ cards --- */
+@media (max-width: 520px) {
+  .cgrid { grid-template-columns: 1fr; }
+  .prop-grid { grid-template-columns: 1fr 1fr; }
+  .blood-grid { grid-template-columns: repeat(2, 1fr); }
+  .tl-label { width: 90px; }
+  .diagram-wrap { flex-direction: column; }
+  .compat-table th, .compat-table td { width: 36px; height: 32px; font-size: 11px; }
+}
+  

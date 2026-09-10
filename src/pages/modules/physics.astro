@@ -1,0 +1,1125 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/physics.css';
+
+const mod = modules.find((m) => m.id === 43)!;
+---
+
+<ModuleLayout mod={mod}>
+
+
+
+  <!-- HEADER -->
+  <div class="module-header">
+    <i class="fa-solid fa-atom module-header-icon-accent"></i>
+    <h1 class="module-title module-heading">Module 43: Physics</h1>
+  </div>
+  <p class="module-subtitle">The laws that govern reality — from falling apples to the fabric of spacetime</p>
+
+  <!-- ═══════════ PART A ═══════════ -->
+  <h2 class="sec" id="part-a-what-physics-is-the-project-of-understanding-nature">Part A · what physics is — the project of understanding nature</h2>
+
+  <div class="card u-mb-md">
+    <p class="clabel">What this module covers</p>
+    <p class="cnote u-fs-13px">Physics is the attempt to describe everything that happens in the universe using the fewest possible principles. It proceeds by experiment, mathematics, and bold theorising — and its track record is extraordinary: the same equations that describe a pendulum also describe a pulsar. This module moves from classical mechanics and thermodynamics through electromagnetism, relativity, and deep into quantum mechanics (the most successful and philosophically disturbing theory humans have ever built), then arrives at particle physics, open frontiers, and cosmology.</p>
+  </div>
+
+  <!-- EXPLORER: great theories -->
+  <div class="card u-mb-md">
+    <p class="clabel">The four great theories — explore each</p>
+    <div class="explorer-btns" id="theory-btns"></div>
+    <div class="explorer-panel" id="theory-panel"><span class="physics-text-2">Select a theory above.</span></div>
+  </div>
+
+  <!-- Units overview card -->
+  <div class="card u-mb-md">
+    <p class="clabel">Units & measurement — the bedrock</p>
+    <p class="cnote u-fs-13px">Physics is quantitative or it is nothing. The International System of Units (SI) defines seven base units — metre, kilogram, second, ampere, kelvin, mole, candela — from which every other unit is derived. The logic behind SI is elegant: units obey algebra, so if you have metres per second squared for acceleration and kilograms for mass, multiplying them gives kg·m/s², which is exactly the Newton, the unit of force. Dimensional analysis alone can often tell you whether an equation is wrong, a trick physicists use constantly. Fermi estimation — making useful order-of-magnitude guesses from sparse data — is the practical face of this: it's how Enrico Fermi estimated the yield of the first nuclear test from scraps of paper he dropped during the blast.</p>
+  </div>
+
+  <!-- ═══════════ PART B ═══════════ -->
+  <h2 class="sec" id="part-b-classical-mechanics-the-physics-of-everyday-motion">Part B · classical mechanics — the physics of everyday motion</h2>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="card">
+      <p class="clabel">Newton's three laws</p>
+      <p class="cnote u-fs-13px">Newton's first law (inertia) says a body continues in uniform motion unless acted on by a force — the punch-line being that "rest" and "constant velocity" are physically identical, a Galilean insight Newton codified. The second law, F = ma, is the workhorse: it tells you that force is what causes acceleration, not velocity. Crucially, F and a are vectors — direction matters. The third law (action-reaction) is frequently misunderstood: if you push a wall, the wall pushes back on you with equal force, but on a different object, so the forces don't cancel. That's why you accelerate away from the wall when you push off.</p>
+    </div>
+    <div class="card">
+      <p class="clabel">Conservation of energy — Noether's deeper insight</p>
+      <p class="cnote u-fs-13px">Energy conservation is so fundamental it seems like furniture. But Emmy Noether's 1915 theorem revealed why it must hold: every conservation law corresponds to a symmetry. Energy is conserved because the laws of physics are the same today as they were yesterday — time-translation symmetry. Momentum is conserved because physics is the same here as there — space-translation symmetry. If the universe had different physical laws at different times, energy would not be conserved. This is one of the most beautiful results in all of physics, and it's almost unknown outside physics departments.</p>
+    </div>
+  </div>
+
+  <!-- TIMELINE: History of physics -->
+  <div class="card u-mb-md">
+    <p class="clabel">Physics timeline — key eras</p>
+    <div class="pc-wrap">
+      <div class="pc-axis" id="phys-axis"></div>
+      <div id="phys-timeline"></div>
+    </div>
+  </div>
+
+  <!-- Gravity card -->
+  <div class="card u-mb-md">
+    <p class="clabel">Gravity — from Newton to Einstein</p>
+    <p class="cnote u-fs-13px">Newton's law of universal gravitation (1687) says every mass attracts every other mass with a force proportional to the product of their masses and inversely proportional to the square of the distance between them. It works brilliantly for apples, moons, and space probes — but not for Mercury. Mercury's orbit precesses 43 arcseconds per century more than Newton predicts. Einstein's general relativity (1915) gets it exactly right, because gravity is not a force in GR — it is the curvature of spacetime caused by mass-energy. The escape velocity from Earth is 11.2 km/s; from a neutron star it's a significant fraction of the speed of light; from a black hole's event horizon, it exceeds it.</p>
+  </div>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="card">
+      <p class="clabel">Waves and oscillations</p>
+      <p class="cnote u-fs-13px">Waves transfer energy without transferring matter. The key properties are frequency (f), wavelength (λ), and wave speed (v = fλ). Resonance — when an external force drives a system at its natural frequency — is both enormously useful (musical instruments, MRI machines) and dangerous: the Tacoma Narrows Bridge collapsed in 1940 because wind-induced resonance matched the bridge's natural frequency. The Doppler effect explains why a passing ambulance changes pitch: the source is moving relative to the medium, compressing wavefronts ahead and stretching them behind. The same effect is used to measure the recession velocity of distant galaxies via redshift.</p>
+    </div>
+    <div class="card">
+      <p class="clabel">Thermodynamics — the four laws</p>
+      <p class="cnote u-fs-13px">The four laws of thermodynamics are sometimes summarised wryly: you can't win (energy is conserved), you can't break even (entropy always increases in an isolated system), and you can't quit the game (absolute zero is unattainable). The zeroth law defines temperature by transitivity. The second law — that entropy never decreases — is the reason time has an arrow. A broken egg never unbreaks not because it's forbidden by energy conservation (it isn't), but because the probability of all the particles spontaneously reassembling into egg-form is so astronomically small it will never happen in the age of the universe.</p>
+    </div>
+  </div>
+
+  <!-- Escape velocity slider -->
+  <div class="card u-mb-md">
+    <p class="clabel">Escape velocity explorer — drag to compare objects</p>
+    <div class="slider-wrap">
+      <div class="slider-row">
+        <span class="slider-end-label">Moon<br>2.4 km/s</span>
+        <input type="range" id="escape-slider" min="0" max="100" value="30" oninput="updateEscape(this.value)">
+        <span class="slider-end-label right">Neutron Star<br>~100,000 km/s</span>
+      </div>
+      <div class="slider-output" id="escape-output">Earth · 11.2 km/s</div>
+      <div class="slider-sub" id="escape-sub">You'd need a rocket burning fuel for several minutes to reach this speed.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ PART C ═══════════ -->
+  <h2 class="sec" id="part-c-electromagnetism-the-physics-of-light-and-electricity">Part C · electromagnetism — the physics of light and electricity</h2>
+
+  <div class="card u-mb-md">
+    <p class="clabel">Maxwell's equations — four equations that unified everything</p>
+    <p class="cnote u-fs-13px">In the 1860s, James Clerk Maxwell assembled four equations that simultaneously describe electric fields, magnetic fields, and their relationship. The stunning result: when he looked at the speed at which electromagnetic disturbances propagate, he found it was 299,792 km/s — the measured speed of light. Light is an electromagnetic wave. The equations predicted the existence of radio waves, X-rays, and gamma rays decades before they were discovered. Hertz confirmed the prediction of radio waves in 1887. Einstein later said Maxwell's equations were the most important revolution in physics since Newton. They also seeded the incompatibility with Newtonian mechanics that led Einstein to special relativity.</p>
+  </div>
+
+  <!-- EM Spectrum multi-card explorer -->
+  <div class="card u-mb-md">
+    <p class="clabel">The electromagnetic spectrum — click each band</p>
+    <div class="elem-grid" id="em-grid"></div>
+    <div class="elem-detail" id="em-detail"></div>
+  </div>
+
+  <!-- Horizontal bar chart: frequency ranges -->
+  <div class="card u-mb-md">
+    <p class="clabel">EM band applications — relative energy per photon (log scale, eV)</p>
+    <div id="em-bars"></div>
+    <p class="cnote">Energy per photon = hf. A radio photon carries ~10⁻⁶ eV; a gamma ray photon carries >10⁶ eV — a ratio of a trillion. This is why gamma rays ionise tissue and radio waves don't.</p>
+  </div>
+
+  <!-- ═══════════ PART D ═══════════ -->
+  <h2 class="sec" id="part-d-special-and-general-relativity">Part D · special and general relativity</h2>
+
+  <div class="card u-mb-md">
+    <p class="clabel">The crisis that led to relativity</p>
+    <p class="cnote u-fs-13px">In 1887 Michelson and Morley tried to measure Earth's velocity through the luminiferous ether — the medium through which light was assumed to travel. They found no effect whatsoever. This null result was profoundly disturbing: if light requires no medium, what is it? Einstein in 1905 solved it by taking two postulates seriously: (1) the laws of physics are identical in all inertial frames; (2) the speed of light in a vacuum is the same for all observers regardless of their motion. The consequences that follow from just these two axioms are extraordinary.</p>
+  </div>
+
+  <!-- SVG: Spacetime diagram -->
+  <div class="card u-mb-md">
+  <p class="clabel">Spacetime diagram — light cone and causality</p>
+  <div class="diagram-wrap">
+    <svg class="spacetime-svg" viewBox="0 0 500 320" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" id="spacetime-svg" style="display: block; overflow: visible;">
+      <!-- Axes -->
+      <line x1="250" y1="25" x2="250" y2="300" stroke="var(--color-text-tertiary)" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="30" y1="160" x2="470" y2="160" stroke="var(--color-text-tertiary)" stroke-width="1" stroke-dasharray="4,3"/>
+      
+      <!-- Light cones -->
+      <polygon points="250,160 90,20 410,20" fill="var(--accent-bg)" opacity="0.7"/>
+      <polygon points="250,160 90,300 410,300" fill="var(--color-background-warning)" opacity="0.5"/>
+      
+      <!-- Light cone edges -->
+      <line x1="250" y1="160" x2="90" y2="20" stroke="var(--accent)" stroke-width="2"/>
+      <line x1="250" y1="160" x2="410" y2="20" stroke="var(--accent)" stroke-width="2"/>
+      <line x1="250" y1="160" x2="90" y2="300" stroke="var(--color-text-warning)" stroke-width="2"/>
+      <line x1="250" y1="160" x2="410" y2="300" stroke="var(--color-text-warning)" stroke-width="2"/>
+      
+      <!-- Origin dot -->
+      <circle cx="250" cy="160" r="5" fill="var(--color-text-primary)"/>
+      
+      <!-- Axis Labels (Safely padded inside viewBox bounds) -->
+      <text x="250" y="16" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="1">TIME</text>
+      <text x="35" y="152" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="start" font-weight="bold" letter-spacing="1">SPACE</text>
+      <text x="465" y="152" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="end" font-weight="bold" letter-spacing="1">SPACE</text>
+      
+      <!-- Future Label -->
+      <text x="250" y="55" font-size="12" fill="var(--accent)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="1">FUTURE</text>
+      <text x="250" y="70" font-size="10" fill="var(--accent)" font-family="system-ui" text-anchor="middle" opacity="0.8">(can be affected)</text>
+      
+      <!-- Past Label -->
+      <text x="250" y="255" font-size="12" fill="var(--color-text-warning)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="1">PAST</text>
+      <text x="250" y="270" font-size="10" fill="var(--color-text-warning)" font-family="system-ui" text-anchor="middle" opacity="0.8">(can have caused)</text>
+      
+      <!-- Elsewhere (Perfectly centered on the mathematical midpoints: 125 and 375) -->
+      <text x="125" y="156" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="0.5">ELSEWHERE</text>
+      <text x="125" y="170" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="middle">(unreachable)</text>
+      
+      <text x="375" y="156" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="0.5">ELSEWHERE</text>
+      <text x="375" y="170" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="middle">(unreachable)</text>
+      
+      <!-- Light cone boundary labels -->
+      <text x="170" y="90" dy="-8" font-size="9" fill="var(--accent)" font-family="system-ui" text-anchor="middle" transform="rotate(41.2, 170, 90)" letter-spacing="1" font-weight="bold">LIGHT CONE</text>
+      <text x="330" y="90" dy="-8" font-size="9" fill="var(--accent)" font-family="system-ui" text-anchor="middle" transform="rotate(-41.2, 330, 90)" letter-spacing="1" font-weight="bold">LIGHT CONE</text>
+      
+      <!-- Origin Label -->
+      <text x="262" y="164" font-size="10" fill="var(--color-text-primary)" font-family="system-ui" font-weight="bold" letter-spacing="0.5">HERE &amp; NOW</text>
+    </svg>
+    <div class="diagram-caption">The light cone: events in the blue future cone can be influenced; events in the past cone could have influenced the present; events in "elsewhere" are causally disconnected — no signal travelling &le;c can connect them.</div>
+  </div>
+</div>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="card">
+      <p class="clabel">Special relativity — the key results</p>
+      <p class="cnote u-fs-13px">Time dilation: a moving clock runs slow by factor γ = 1/√(1−v²/c²). At 99% of c, γ ≈ 7, so one year passes on the ship while 7 pass at home. This is not an illusion — muons created in the upper atmosphere at 0.998c reach the ground despite their lifetime being only 2.2 microseconds in their own frame. Length contraction: a moving object is shortened in the direction of travel. Mass-energy equivalence: E = mc². The 'c²' factor (≈ 9 × 10¹⁶) explains why a tiny mass converts to enormous energy — the Hiroshima bomb released energy from converting about 700mg of matter into radiation.</p>
+    </div>
+    <div class="card">
+      <p class="clabel">General relativity — gravity as geometry</p>
+      <p class="cnote u-fs-13px">The equivalence principle: there is no experiment you can do inside a closed box that distinguishes free fall from floating in empty space, or sitting still on Earth from accelerating at 9.8 m/s². Einstein extended this to conclude that gravity is not a force but the curvature of spacetime. Mass tells spacetime how to curve; curved spacetime tells mass how to move (John Wheeler's summary). Predictions: gravitational redshift (clocks in strong gravity run slow — GPS satellites must correct for this or accumulate 38 microseconds of error per day, adding 11km of positional error); gravitational waves (confirmed 2015 by LIGO, detecting two black holes merging 1.3 billion light-years away).</p>
+    </div>
+  </div>
+
+  <!-- Time dilation calculator -->
+  <div class="card u-mb-md">
+    <p class="clabel">Time dilation calculator — special relativity</p>
+    <div class="calc-box">
+      <div class="calc-row">
+        <label>Speed (% of c):</label>
+        <input class="td-speed" type="number" id="td-speed" value="90" min="0" max="99.9999" step="0.1">
+        <label>Traveller's time (years):</label>
+        <input class="td-time" type="number" id="td-time" value="10" min="0.01" step="0.1">
+        <button onclick="calcTimeDilation()">Calculate</button>
+      </div>
+      <div class="calc-output" id="td-output"></div>
+    </div>
+  </div>
+
+  <!-- Black holes multi-card -->
+  <div class="card u-mb-md">
+    <p class="clabel">Black holes — explore key concepts</p>
+    <div class="elem-grid bh-grid" id="bh-grid"></div>
+    <div class="elem-detail" id="bh-detail"></div>
+  </div>
+
+  <!-- ═══════════ QUANTUM INTRO ═══════════ -->
+  <div class="sec-quantum">⚛️ Quantum mechanics — the deep dive (Parts E through K)</div>
+  <div class="info-block">
+    Quantum mechanics is the most precisely tested theory in the history of science. The anomalous magnetic moment of the electron is predicted to agree with experiment to 12 significant figures. Yet its foundations remain contested: physicists still disagree about what it means. Parts E–K cover quantum physics from the historical crisis that created it, through its mathematics, its bizarre experimental consequences, its contested interpretations, and its technological applications.
+  </div>
+
+  <!-- ═══════════ PART E ═══════════ -->
+  <div class="sec-quantum">Part E · the quantum revolution — why classical physics failed</div>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="qcard">
+      <p class="clabel">The ultraviolet catastrophe</p>
+      <p class="cnote u-fs-13px">Classical physics predicted that a hot object in thermal equilibrium should radiate infinite energy — specifically, that radiated power should increase without limit as wavelength decreases. This was not a small discrepancy; it predicted that everything around you at room temperature should be bathing you in lethal ultraviolet and X-ray radiation, constantly. In 1900, Planck fixed this by assuming that energy is emitted only in discrete packets (quanta) of size E = hf, where h = 6.626 × 10⁻³⁴ J·s. He described this as "an act of desperation" — he didn't believe the quantisation was real. Einstein did.</p>
+    </div>
+    <div class="qcard">
+      <p class="clabel">The photoelectric effect — Einstein's Nobel Prize</p>
+      <p class="cnote u-fs-13px">Shine light on a metal surface and electrons pop off — but only if the light exceeds a threshold frequency, regardless of intensity. Classical wave theory predicted that more intense light would always eventually dislodge electrons. Einstein (1905) explained this by proposing that light itself comes in quanta (photons) of energy E = hf. A dim high-frequency light source ejects electrons; a brilliant low-frequency source ejects none. This wasn't just a mathematical trick — it meant light was genuinely particle-like, which contradicted Maxwell's undeniable wave description. The tension between these two views is wave-particle duality.</p>
+    </div>
+  </div>
+
+  <!-- Bohr atom and de Broglie -->
+  <div class="card u-mb-md">
+    <p class="clabel">From Bohr to de Broglie — quantisation of the atom</p>
+    <p class="cnote u-fs-13px">Rutherford's 1911 nuclear model of the atom had a fatal problem: electrons orbiting the nucleus are accelerating (changing direction counts as acceleration), and accelerating charges radiate electromagnetic energy. Classical physics predicted the electron would spiral into the nucleus in about 10 picoseconds. Bohr (1913) fixed this by simply declaring that certain orbits are stable and electrons only emit radiation when jumping between them. He could calculate hydrogen's spectral lines with startling accuracy, but his model was philosophically arbitrary. de Broglie (1924) supplied the missing logic: if light waves behave like particles, particles must behave like waves. The allowed Bohr orbits are exactly the ones where the electron's de Broglie wavelength fits a whole number of times around the orbit — a standing wave condition. Electron diffraction experiments confirmed this in 1927.</p>
+  </div>
+
+  <!-- ═══════════ PART F ═══════════ -->
+  <div class="sec-quantum">Part F · the formalism — how quantum mechanics actually works</div>
+
+  <!-- SVG: Wavefunction probability density -->
+  <div class="card u-mb-md">
+    <p class="clabel">The wavefunction — visualising probability amplitude</p>
+    <div class="diagram-wrap">
+      <svg class="spacetime-svg" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="wf-grad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.0"/>
+            <stop offset="30%" stop-color="var(--accent)" stop-opacity="0.6"/>
+            <stop offset="50%" stop-color="var(--accent)" stop-opacity="1.0"/>
+            <stop offset="70%" stop-color="var(--accent)" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0"/>
+          </linearGradient>
+        </defs>
+        <!-- Axes -->
+        <line x1="30" y1="165" x2="470" y2="165" stroke="var(--color-text-tertiary)" stroke-width="1"/>
+        <line x1="30" y1="165" x2="30" y2="20" stroke="var(--color-text-tertiary)" stroke-width="1"/>
+        <text x="440" y="184" font-size="11" fill="var(--color-text-tertiary)" font-family="system-ui">x (position)</text>
+        <text x="32" y="16" font-size="11" fill="var(--color-text-tertiary)" font-family="system-ui">|ψ|²</text>
+        <!-- Gaussian probability density -->
+        <path id="wf-path" fill="url(#wf-grad)" opacity="0.5"/>
+        <path id="wf-line" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <!-- Oscillating wavefunction Re(ψ) -->
+        <path id="wf-real" fill="none" stroke="var(--accent-light)" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <!-- Labels -->
+        <text x="220" y="185" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui" text-anchor="middle">Most likely position</text>
+        <line x1="250" y1="170" x2="250" y2="60" stroke="var(--color-text-secondary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+        <text x="300" y="50" font-size="10" fill="var(--accent)" font-family="system-ui">|ψ|² = probability density</text>
+        <text x="60" y="80" font-size="10" fill="var(--accent-light)" font-family="system-ui">Re(ψ) — wave oscillation</text>
+      </svg>
+      <div class="diagram-caption">The wavefunction ψ is complex-valued. |ψ|² gives the probability density of finding the particle at each position. The particle doesn't "blur out" — it's genuinely not at a definite location until measured.</div>
+    </div>
+  </div>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="qcard">
+      <p class="clabel">The Schrödinger equation</p>
+      <p class="cnote u-fs-13px">The Schrödinger equation is quantum mechanics' equation of motion. Given the wavefunction now, it tells you the wavefunction at any future time — perfectly deterministically. This surprises most people: quantum mechanics is deterministic about the wavefunction, but the wavefunction only gives probabilities for measurement outcomes. The randomness enters not in the time evolution but in the measurement itself. A particle in a box (infinite square well) is the simplest exact solution: the allowed energies are E_n = n²π²ℏ²/(2mL²), quantised naturally because only standing waves fit inside the box — just like Bohr's condition, but now derived rigorously.</p>
+    </div>
+    <div class="qcard">
+      <p class="clabel">The Heisenberg uncertainty principle</p>
+      <p class="cnote u-fs-13px">ΔxΔp ≥ ℏ/2 is not a statement about measurement disturbing particles. It is a fundamental property of waves: a wave with a well-defined wavelength (definite momentum) extends over all space (indefinite position), and vice versa. This is true for water waves too — it's a mathematical property of Fourier transforms. For quantum particles, momentum is encoded in wavelength, so localising a particle necessarily introduces a spread of wavelengths and hence momenta. Zero-point energy follows directly: the electron in a hydrogen atom can't collapse to the nucleus because that would require definite position, which demands infinite momentum spread, which requires infinite energy. The atom is stable because of the uncertainty principle.</p>
+    </div>
+  </div>
+
+  <!-- Uncertainty explorer slider -->
+  <div class="card u-mb-md">
+    <p class="clabel">Uncertainty principle — position vs momentum trade-off</p>
+    <div class="slider-wrap">
+      <div class="slider-row">
+        <span class="slider-end-label">Well-defined position<br>(localised)</span>
+        <input type="range" id="hup-slider" min="1" max="100" value="50" oninput="updateHUP(this.value)">
+        <span class="slider-end-label right">Well-defined momentum<br>(delocalised)</span>
+      </div>
+      <div class="slider-output" id="hup-output">Δx moderate · Δp moderate</div>
+      <div class="slider-sub" id="hup-sub">ΔxΔp ≈ ℏ/2. The product of the two uncertainties is always at least ℏ/2 ≈ 5.3 × 10⁻³⁵ J·s.</div>
+    </div>
+  </div>
+
+  <div class="qcard u-mb-md">
+    <p class="clabel">Spin — angular momentum with no classical analogue</p>
+    <p class="cnote u-fs-13px">Spin is intrinsic angular momentum that doesn't correspond to anything rotating. An electron has spin ½, meaning when you measure it along any axis you get exactly +ℏ/2 or −ℏ/2 — nothing in between. The Stern-Gerlach experiment (1922) confirmed this: a beam of silver atoms (with one unpaired electron) passing through a non-uniform magnetic field splits into exactly two lines, not a smear as classical theory predicted. The mathematics uses spinors — two-component complex vectors — that behave differently from ordinary vectors: you must rotate a spin-½ particle through 720° to return to its original state, not 360°. This has been experimentally confirmed using neutron interferometry.</p>
+  </div>
+
+  <!-- ═══════════ PART G ═══════════ -->
+  <div class="sec-quantum">Part G · quantum weirdness — the phenomena that defy intuition</div>
+
+  <!-- Double slit canvas -->
+  <div class="card u-mb-md">
+    <p class="clabel">The double-slit experiment — animated</p>
+    <canvas class="slit-canvas" id="slit-canvas" width="500" height="200"></canvas>
+    <div class="physics-row">
+      <button onclick="setSlitMode('wave')">Both slits open (interference)</button>
+      <button onclick="setSlitMode('which')">Detector on (which-path known)</button>
+      <button onclick="setSlitMode('single')">Only one slit open</button>
+    </div>
+    <p class="cnote cnote-style-2">With both slits open and no detector, individual particles build up an interference pattern — as if each particle goes through both slits simultaneously. Place a detector to determine which slit, and the interference pattern vanishes. This is the core mystery of quantum mechanics.</p>
+  </div>
+
+  <!-- Quantum weirdness multi-card -->
+  <div class="card u-mb-md">
+    <p class="clabel">Quantum weirdness — explore the phenomena</p>
+    <div class="elem-grid weird-grid" id="weird-grid"></div>
+    <div class="elem-detail" id="weird-detail"></div>
+  </div>
+
+  <!-- Entanglement distribution bar -->
+  <div class="card u-mb-md">
+    <p class="clabel">Bell inequality violations — experimental results summary</p>
+    <p class="physics-text-3">The Bell parameter S: classical (local hidden variable) theories require S ≤ 2. Quantum mechanics predicts S ≤ 2√2 ≈ 2.83. Experimental results consistently find S > 2.</p>
+    <div id="bell-bars"></div>
+    <p class="cnote">The Aspect et al. (1982), Hensen et al. (2015, loophole-free), and subsequent experiments all confirm quantum mechanics and rule out local hidden variable theories. The universe is genuinely non-local at the quantum level.</p>
+  </div>
+
+  <!-- ═══════════ PART H ═══════════ -->
+  <div class="sec-quantum">Part H · interpretations of quantum mechanics — what it all means</div>
+
+  <!-- Comparison scale: interpretations -->
+  <div class="card u-mb-md">
+    <p class="clabel">Interpretations compared — on key dimensions</p>
+    <p class="physics-text-3">Where each major interpretation falls on contested questions</p>
+
+    <p class="clabel u-mt-md">Wavefunction collapse — real or not?</p>
+    <div class="cscale-axis"><span>Collapse is physical</span><span>No collapse</span></div>
+    <div id="interp-collapse"></div>
+
+    <p class="clabel u-mt-md">Determinism — is the universe fundamentally random?</p>
+    <div class="cscale-axis"><span>Fundamentally random</span><span>Deterministic</span></div>
+    <div id="interp-det"></div>
+  </div>
+
+  <!-- Explorer: interpretations -->
+  <div class="card u-mb-md">
+    <p class="clabel">Interpretations — explore in depth</p>
+    <div class="explorer-btns" id="interp-btns"></div>
+    <div class="explorer-panel" id="interp-panel"><span class="physics-text-2">Select an interpretation above.</span></div>
+  </div>
+
+  <!-- ═══════════ PART I ═══════════ -->
+  <div class="sec-quantum">Part I · quantum fields — the deeper layer</div>
+
+  <!-- Standard Model multi-card -->
+  <div class="card u-mb-md">
+    <p class="clabel">The Standard Model — explore the particle families</p>
+    <div class="elem-grid sm-grid" id="sm-grid"></div>
+    <div class="elem-detail" id="sm-detail"></div>
+  </div>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="qcard">
+      <p class="clabel">From QM to quantum field theory</p>
+      <p class="cnote u-fs-13px">Quantum mechanics describes particles. Relativity requires that nothing propagates faster than light, including the interactions between particles. When you try to combine non-relativistic quantum mechanics with special relativity, you immediately encounter inconsistencies — the number of particles isn't conserved (particles can be created and destroyed), and you need to allow for anti-particles. Quantum field theory (QFT) resolves this by promoting fields (like the electromagnetic field) to be the fundamental objects, and particles are excitations of those fields. An electron is a ripple in the electron field that pervades all of space. The photon is a ripple in the electromagnetic field. This is why QFT is inherently multi-particle and handles creation/annihilation naturally.</p>
+    </div>
+    <div class="qcard">
+      <p class="clabel">Antimatter — prediction and asymmetry</p>
+      <p class="cnote u-fs-13px">Paul Dirac's 1928 equation for the relativistic electron had two solutions — one with positive energy (the electron) and one with negative energy. Rather than discard the negative solution, Dirac predicted the existence of a positive-charge counterpart: the positron. Carl Anderson discovered it in cosmic ray tracks in 1932, two years after Dirac's prediction. Every particle has an antiparticle; when they meet, they annihilate, converting mass entirely to energy (E = mc²). The deepest puzzle: the Big Bang should have produced equal amounts of matter and antimatter. The universe is almost entirely matter. This matter-antimatter asymmetry is one of physics' biggest unsolved problems.</p>
+    </div>
+  </div>
+
+  <!-- Standard model distribution bar -->
+  <div class="card u-mb-md">
+    <p class="clabel">Standard Model — particle categories by type</p>
+    <div class="distbar" id="sm-distbar"></div>
+    <div class="distbar-legend" id="sm-legend"></div>
+    <p class="cnote u-mt-sm">The Standard Model has 17 fundamental particles (6 quarks, 6 leptons, 4 force-carrying gauge bosons, plus the Higgs). The Higgs boson, last piece confirmed at the LHC in 2012, gives quarks and leptons their mass via the Higgs mechanism.</p>
+  </div>
+
+  <!-- ═══════════ PART J ═══════════ -->
+  <div class="sec-quantum">Part J · quantum applications — technology from the weird</div>
+
+  <!-- Applications explorer panel -->
+  <div class="card u-mb-md">
+    <p class="clabel">Quantum technologies — explore applications</p>
+    <div class="explorer-btns" id="qtech-btns"></div>
+    <div class="explorer-panel" id="qtech-panel"><span class="physics-text-2">Select a technology above.</span></div>
+  </div>
+
+  <!-- Quantum computing comparison scale -->
+  <div class="card u-mb-md">
+    <p class="clabel">Quantum vs classical computing — capability landscape 2025</p>
+    <div class="cscale-axis"><span>Classical advantage</span><span>Quantum advantage</span></div>
+    <div id="qcomp-scale"></div>
+    <p class="cnote">Quantum advantage exists for specific problem types, not general computation. In 2019 Google claimed quantum supremacy (a specific sampling task in 200 seconds vs ~10,000 years classically); IBM contested the classical estimate. As of 2025, quantum computers remain noisy and error-prone, with fault-tolerant quantum computing still years away.</p>
+  </div>
+
+  <!-- ═══════════ PART K ═══════════ -->
+  <div class="sec-quantum">Part K · the open frontiers of quantum physics</div>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="qcard">
+      <p class="clabel">Quantum gravity — the hardest problem</p>
+      <p class="cnote u-fs-13px">General relativity and quantum mechanics are each extraordinarily well confirmed. They are also mutually inconsistent. GR treats spacetime as a smooth, continuous, classical field. QM requires all fields to be quantised and subject to uncertainty. At the Planck scale (10⁻³⁵ m, 10⁻⁴³ s), both theories are needed simultaneously, and both break down. String theory proposes replacing point particles with 1D strings, predicting a spin-2 graviton and requiring 10 or 11 dimensions. Loop quantum gravity quantises spacetime itself, predicting space is discrete at the Planck scale. Neither theory yet makes new predictions that have been experimentally tested. This is the dominant unsolved problem in fundamental physics.</p>
+    </div>
+    <div class="qcard">
+      <p class="clabel">Dark matter and dark energy</p>
+      <p class="cnote u-fs-13px">Normal (baryonic) matter makes up only about 5% of the universe's energy content. Dark matter (~27%) is inferred from galactic rotation curves (stars move too fast for the visible mass), gravitational lensing, and cosmic structure formation. It doesn't emit, absorb, or reflect light and interacts only gravitationally and possibly weakly. WIMPs (weakly interacting massive particles) are the leading candidate, but decades of increasingly sensitive detectors have found nothing. Dark energy (~68%) causes the accelerating expansion of the universe, discovered in 1998. It may be Einstein's cosmological constant — the energy of the vacuum — or something more dynamic (quintessence). We have no confirmed particle physics explanation for either.</p>
+    </div>
+  </div>
+
+  <!-- Multiverse comparison scale -->
+  <div class="card u-mb-md">
+    <p class="clabel">Multiverse proposals — scientific status spectrum</p>
+    <div class="cscale-axis"><span>Speculative / untestable</span><span>Testable predictions exist</span></div>
+    <div id="multiverse-scale"></div>
+    <p class="cnote">The string theory landscape (~10⁵⁰⁰ possible vacua) and inflationary multiverse are criticised for being unfalsifiable. The many-worlds multiverse follows necessarily from standard QM with no collapse. Bubble universe collisions in eternal inflation could in principle leave imprints on the CMB.</p>
+  </div>
+
+  <!-- ═══════════ PART L ═══════════ -->
+  <h2 class="sec" id="part-l-astrophysics-and-cosmology-physics-at-the-largest-scales">Part L · astrophysics and cosmology — physics at the largest scales</h2>
+
+  <div class="cgrid cgrid-style-2">
+    <div class="card">
+      <p class="clabel">The Big Bang — evidence, not inference</p>
+      <p class="cnote u-fs-13px">The Big Bang is supported by three independent observational pillars. (1) Hubble expansion: all distant galaxies are receding, with velocity proportional to distance — run time backward and everything converges. (2) Cosmic Microwave Background: the universe was once opaque plasma; when it cooled enough for atoms to form (380,000 years post-Bang), photons were released. We detect them today as the CMB, at 2.725 K, perfectly matching predictions. (3) Big Bang nucleosynthesis: the light elements (H, He, Li) were forged in the first few minutes in exactly the ratios we observe — 75% hydrogen, 25% helium by mass. No stellar process can explain this ratio from scratch.</p>
+    </div>
+    <div class="card">
+      <p class="clabel">Stars — nuclear furnaces and element factories</p>
+      <p class="cnote u-fs-13px">Stars form when gas clouds collapse under gravity. A protostar heats until hydrogen fusion begins (the pp chain or CNO cycle depending on mass). On the main sequence, outward radiation pressure balances inward gravity. When the hydrogen core is exhausted, the star expands to a red giant, fusing helium, then carbon, all the way to iron (Fe-56) — the most tightly bound nucleus, beyond which fusion releases no energy. For massive stars (>8 M☉), the iron core collapses in under a second, bouncing to produce a Type II supernova, briefly outshining an entire galaxy. The explosion seeds space with all elements heavier than iron, forged in the explosion itself (r-process nucleosynthesis). Calcium in your bones was forged in a stellar explosion before the Sun formed.</p>
+    </div>
+  </div>
+
+  <!-- Stellar lifecycle timeline -->
+  <div class="card u-mb-md">
+    <p class="clabel">Stellar fates — by initial mass</p>
+    <div id="stellar-bars"></div>
+    <p class="cnote">Main sequence lifetime scales roughly as M⁻²·⁵ — a 10 M☉ star lives only ~30 million years; the Sun will last ~10 billion years total. The most massive stars live and die while the Sun barely blinks.</p>
+  </div>
+
+  <!-- Fate of universe explorer -->
+  <div class="card u-mb-md">
+    <p class="clabel">Fate of the universe — explore the scenarios</p>
+    <div class="explorer-btns" id="fate-btns"></div>
+    <div class="explorer-panel" id="fate-panel"><span class="physics-text-2">Select a scenario above.</span></div>
+  </div>
+
+  <!-- Cosmology distribution bar -->
+  <div class="card u-mb-md">
+    <p class="clabel">Composition of the universe (energy density)</p>
+    <div class="distbar" id="cosmos-distbar"></div>
+    <div class="distbar-legend" id="cosmos-legend"></div>
+    <p class="cnote u-mt-sm">Dark energy is the dominant component and drives the accelerating expansion. Baryonic matter — everything you can see, touch, and are made of — is a 5% afterthought in the cosmic inventory.</p>
+  </div>
+
+  <h2 class="sec" id="part-m-q-and-a">Part M · Q&A</h2>
+
+  <div class="qa">
+    <div class="qa-q">Isn't physics just applied maths? What actually distinguishes it from mathematics?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Mathematics is the study of abstract structures that need not correspond to anything real. Physics uses mathematics as a language for describing the actual world, and is constrained by experiment. A physically wrong theory — no matter how beautiful mathematically — must be abandoned if it contradicts measurement. The unreasonable effectiveness of mathematics in describing nature (a phrase Wigner coined) is itself one of physics' deepest open puzzles: why does the universe appear to run on mathematics at all?</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">If action and reaction are always equal and opposite, how does anything ever accelerate?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Newton's third law pairs always act on different objects, which is the key. When you push a wall, the wall pushes back on you — but that reaction force acts on you, not the wall. The net force on the wall from your push may well accelerate it slightly (though it's massive), and the reaction force from the wall accelerates you backward. The forces don't cancel because they're on different bodies. When a rocket fires, the exhaust gas is pushed backward (action) and the rocket is pushed forward (reaction) — two different objects, two different accelerations.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Does entropy always increase? What about living organisms that create order?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">The second law applies to isolated systems — ones that don't exchange energy or matter with the environment. Living organisms are far from isolated: they constantly take in low-entropy energy (food, sunlight) and expel high-entropy waste (heat, carbon dioxide). The local decrease in entropy within the organism is more than compensated by the increase in the surroundings — the total entropy of the universe still rises. Erwin Schrödinger coined the phrase "negative entropy" (negentropy) to describe this in his 1944 book "What is Life?", which influenced the founders of molecular biology.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Why does a changing magnetic field create an electric field? What's the physical mechanism?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">This is Faraday's law, and the honest answer is that physics describes how it happens with great precision but doesn't explain why at a deeper level — that's the job of the mathematical structure, not narrative intuition. What we can say: Maxwell realised that a changing electric field similarly creates a magnetic field (his "displacement current"), and together these two inductions sustain each other as a propagating wave without any medium. The deeper "why" is encoded in the symmetry structure of electromagnetism, which Einstein showed is a consequence of special relativity: electric and magnetic fields are actually the same field viewed from different reference frames.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Does time really slow down, or does it just appear to from outside?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">It really slows down — this is the key result of special relativity and it has been confirmed experimentally many times. The muon experiment is unambiguous: muons created 10km up should decay before reaching sea level based on their measured half-life, yet they arrive because time literally passes more slowly for them at 0.998c. The GPS system also provides daily confirmation: satellite clocks run fast due to weaker gravity (GR effect) and slow due to velocity (SR effect), and the net 38-microsecond-per-day correction is applied or the system stops working. The twin paradox — where a travelling twin returns younger — is real, though producing the effect with humans would require technology we don't have.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Planck supposedly didn't believe his own quantisation hypothesis. Why did it take Einstein to take it seriously?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Planck applied quantisation only to the emission and absorption of radiation, treating it as a mathematical convenience to patch the ultraviolet catastrophe. He did not suggest that light itself was quantised in transit — he believed electromagnetic radiation was still a continuous wave between emission and absorption. Einstein's 1905 paper was far more radical: it proposed that light genuinely consists of discrete quanta (photons) even as it travels through space. This contradicted Maxwell's wave theory, which was one of the most precisely confirmed theories of the time. Planck was understandably reluctant to abandon the wave picture; it took the photoelectric effect experiments by Millikan (who also didn't believe Einstein's explanation, even after confirming its predictions experimentally) to establish the photon as real.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Is the Schrödinger equation just a guess, or is there a derivation?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">The Schrödinger equation cannot be derived from more fundamental principles in the way Newton's laws can be derived from more modern frameworks — it is a postulate, a foundational assumption. Schrödinger himself arrived at it by requiring consistency with de Broglie's matter waves and the classical energy-momentum relationship, but this is heuristic motivation, not derivation. It's similar to asking why Newton's second law is F = ma and not F = ma²: ultimately, postulates are justified by the fact that they work. The Schrödinger equation is one of the most precisely confirmed equations in all of science. The more rigorous formulation is the path integral approach (Feynman) or the operator formulation (Dirac), both of which treat the Schrödinger equation as emergent from deeper axioms — but those axioms also cannot be derived from something more basic.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Entanglement seems to allow instant communication — why doesn't it?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">When you measure an entangled particle and get a result, the correlated particle instantly "knows" the result — but you can't use this to send information. The reason is that the measurement results on your end are random: if Alice measures her particle and gets "up," she can't control whether she gets up or down, so she can't encode a message. Bob on the other side will find his particle in the correlated state, but he also sees only random results. The correlation only becomes apparent when Alice and Bob compare their results via a classical channel — which is limited to c. The no-communication theorem proves rigorously that quantum entanglement cannot be used to transmit information faster than light, preserving special relativity.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">What is quantum tunnelling and why does it matter in the real world?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Classically, a particle that doesn't have enough energy to climb a barrier simply bounces back. In quantum mechanics, the wavefunction extends through the barrier and has a non-zero amplitude on the other side — meaning there is a finite probability of finding the particle there. This is tunnelling. It's not a metaphor: alpha decay happens because the alpha particle tunnels out of the nucleus despite not having enough energy to escape classically. The Sun burns largely because protons in the core tunnel through the Coulomb barrier to undergo fusion — without tunnelling, the Sun's core isn't hot enough for fusion to occur at the observed rate. The scanning tunnelling microscope (invented 1981, Nobel Prize 1986) images individual atoms by measuring tunnelling current, which drops exponentially with distance.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Why do physicists still argue about interpretations if quantum mechanics makes the same predictions regardless of interpretation?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">The interpretations do make the same predictions for all existing experiments — but they may diverge for future experiments (quantum gravity, cosmology, certain quantum computing scenarios) or for what extensions of quantum theory are worth pursuing. More fundamentally, the interpretation question is inseparable from what kind of physical theory we accept: does physics describe reality, or only our information about reality? Does the wavefunction represent something real or just probabilities? These aren't empty philosophy — they affect what kind of successor theory we should look for. David Deutsch has argued that only the many-worlds interpretation makes quantum computing intelligible. John Bell, who proved the theorem that finally ruled out local hidden variables, personally favoured pilot wave theory. The debate is live physics.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">What does it mean to say particles are "excitations of a field"?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Think of a quantum field as something like a mattress stretching through all of space — every point in space is a quantum oscillator. When this oscillator is in its lowest (ground) state, there are no particles. When it's excited by one quantum, there is one particle. Two quanta, two particles. The electron field, the quark field, the Higgs field — these are all such mattresses, filling all of space, all the time. They interact with each other (Feynman diagrams describe how). The "vacuum" in QFT is not empty: it's all these fields in their ground states, and because of the uncertainty principle, even the ground state has fluctuations — vacuum fluctuations — which produce measurable effects like the Lamb shift and the Casimir force.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Will quantum computers make encryption obsolete?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Shor's algorithm, running on a sufficiently powerful quantum computer, would factor large numbers exponentially faster than classical algorithms and thus break RSA and elliptic-curve cryptography. However, this requires a fault-tolerant quantum computer with thousands of logical qubits — current machines have at most hundreds of noisy physical qubits, and it takes roughly 1,000 physical qubits per logical qubit for error correction. Breaking RSA-2048 is estimated to require about 4,000 logical (4 million physical) qubits. We are years to decades away from this. Governments and standards bodies are already transitioning to post-quantum cryptography algorithms (NIST finalised its first standards in 2024), which are believed to be resistant to quantum attack. The transition will be gradual, not overnight.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Is the multiverse science or philosophy?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">It depends on the multiverse. The many-worlds interpretation is the most conservative: it follows directly from taking the Schrödinger equation seriously without adding a collapse postulate. It makes the same predictions as Copenhagen for all existing experiments but may diverge in future tests involving quantum coherence of macroscopic systems. The inflationary and string landscape multiverses are more problematic: eternal inflation generically predicts an infinite patchwork of bubble universes with different physical constants, but contact between bubbles is vanishingly rare. Critics (including George Ellis and Joe Silk) argue that an unfalsifiable theory isn't science; defenders (Sean Carroll, David Deutsch) argue that simplicity and explanatory power are valid scientific criteria even without direct testability. The debate is ongoing and unresolved.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">If entropy always increases, and the Big Bang was very low entropy, why did the universe start in such an ordered state?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">This is one of the deepest questions in physics, sometimes called the "past hypothesis" problem. The universe started in an extraordinarily low-entropy state — the early, hot, smooth universe had far less entropy than the clumpy, black-hole-filled universe we have now, even though hot gas sounds "disordered." The reason is gravity: a smooth distribution of gas has much less gravitational entropy available than a clumped one. Roger Penrose estimated the probability of our universe's initial state as 1 in 10^(10^123) — an incomprehensibly small number. Sean Carroll and others argue that the only satisfying explanation involves a much larger universe (multiverse) in which our low-entropy beginning is statistically inevitable somewhere. The question remains genuinely open.</div>
+  </div>
+
+  <div class="qa">
+    <div class="qa-q">Is physics "nearly complete," or are the big discoveries still ahead?</div>
+    <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
+    <div class="qa-ans">Physicists in 1900 famously thought they were nearly done — only two "small clouds" on the horizon (blackbody radiation and the Michelson-Morley result) which promptly turned into quantum mechanics and relativity. Today's open questions are far more tractable starting points: quantum gravity, dark matter, dark energy, matter-antimatter asymmetry, the interpretation of quantum mechanics, the origin of the universe's low entropy, and the measurement problem. These are not small clouds. The Standard Model and General Relativity together cover essentially every observation, but they are incompatible with each other at high energies and leave most of the universe's content (dark matter, dark energy) unexplained. The era of fundamental discovery is almost certainly not over.</div>
+  </div>
+
+
+
+
+
+</ModuleLayout>
+
+<script is:inline>
+
+window.addEventListener('DOMContentLoaded', function () {
+
+  /* ======= Q&A TOGGLE ======= */
+  window.toggleQA = function(btn) {
+    var ans = btn.nextElementSibling;
+    var showing = ans.classList.contains('show');
+    ans.classList.toggle('show', !showing);
+    btn.textContent = showing ? 'show answer' : 'hide';
+  };
+
+  /* ======= EXPLORER PANEL HELPER ======= */
+  function makeExplorer(btnContainerId, panelId, items, keyOrder) {
+    var container = document.getElementById(btnContainerId);
+    var panel = document.getElementById(panelId);
+    if (!container || !panel) return;
+    keyOrder.forEach(function(k, i) {
+      var item = items[k];
+      var btn = document.createElement('button');
+      btn.textContent = item.label;
+      btn.dataset.key = k;
+      btn.onclick = function() {
+        container.querySelectorAll('button').forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        panel.innerHTML = '<div class="ep-title">' + item.title + '</div><p class="ep-body">' + item.body + '</p>' + (item.note ? '<p class="ep-note">' + item.note + '</p>' : '');
+      };
+      if (i === 0) {
+        btn.classList.add('active');
+        panel.innerHTML = '<div class="ep-title">' + item.title + '</div><p class="ep-body">' + item.body + '</p>' + (item.note ? '<p class="ep-note">' + item.note + '</p>' : '');
+      }
+      container.appendChild(btn);
+    });
+  }
+
+  /* ======= MULTI-CARD EXPLORER HELPER ======= */
+  function makeElemGrid(gridId, detailId, items) {
+    var grid = document.getElementById(gridId);
+    var detail = document.getElementById(detailId);
+    if (!grid || !detail) return;
+    var activeKey = null;
+    items.forEach(function(item) {
+      var card = document.createElement('div');
+      card.className = 'elem-card';
+      card.innerHTML = '<div class="ec-icon">' + item.icon + '</div><div class="ec-label">' + item.label + '</div>';
+      card.onclick = function() {
+        if (activeKey === item.key) {
+          activeKey = null;
+          grid.querySelectorAll('.elem-card').forEach(function(c) { c.classList.remove('active'); });
+          detail.classList.remove('show');
+          return;
+        }
+        activeKey = item.key;
+        grid.querySelectorAll('.elem-card').forEach(function(c) { c.classList.remove('active'); });
+        card.classList.add('active');
+        detail.innerHTML = '<div class="ed-title">' + item.title + '</div><p class="ed-body">' + item.body + '</p>';
+        detail.classList.add('show');
+      };
+      grid.appendChild(card);
+    });
+  }
+
+  /* ======= COMPARISON SCALE HELPER ======= */
+  function makeCscale(containerId, items) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    items.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'cscale-row';
+      row.innerHTML = '<div class="cscale-name">' + item.name + '</div>' +
+        '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pct + '%;background:' + (item.col || 'var(--accent)') + '"></div></div>' +
+        '<div class="cscale-val">' + item.val + '</div>';
+      container.appendChild(row);
+    });
+  }
+
+  /* ======= BAR CHART HELPER ======= */
+  function makeBarChart(containerId, items, maxVal) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    items.forEach(function(item) {
+      var pct = Math.max(3, Math.round(item.val / maxVal * 100));
+      var row = document.createElement('div');
+      row.className = 'bar-row';
+      row.innerHTML = '<div class="bl">' + item.label + '</div>' +
+        '<div class="bb" style="width:' + pct + '%;background:' + item.bg + ';"><span class="bv" style="color:' + item.fg + ';">' + item.display + '</span></div>';
+      container.appendChild(row);
+    });
+  }
+
+  /* ======= DISTBAR HELPER ======= */
+  function makeDistbar(barId, legendId, segs) {
+    var bar = document.getElementById(barId);
+    var legend = document.getElementById(legendId);
+    if (!bar) return;
+    segs.forEach(function(s) {
+      var seg = document.createElement('div');
+      seg.className = 'distbar-seg';
+      seg.style.width = s.pct + '%';
+      seg.style.background = s.bg;
+      seg.style.color = s.fg;
+      seg.title = s.label + ': ' + s.pct + '%';
+      if (s.pct > 8) seg.textContent = s.pct + '%';
+      bar.appendChild(seg);
+    });
+    if (legend) {
+      segs.forEach(function(s) {
+        var item = document.createElement('div');
+        item.className = 'dbl-item';
+        item.innerHTML = '<div class="dbl-dot" style="background:' + s.bg + ';"></div>' + s.label + ' (' + s.pct + '%)';
+        legend.appendChild(item);
+      });
+    }
+  }
+
+  /* ======= TIMELINE HELPER ======= */
+  function makeTimeline(axisId, containerId, entries, minY, maxY) {
+    var axis = document.getElementById(axisId);
+    var container = document.getElementById(containerId);
+    if (!axis || !container) return;
+    var range = maxY - minY;
+    // Axis marks
+    var marks = [minY, minY + range*0.25, minY + range*0.5, minY + range*0.75, maxY];
+    marks.forEach(function(m) {
+      var mark = document.createElement('div');
+      mark.className = 'pc-axis-mark';
+      mark.style.left = ((m - minY) / range * 100) + '%';
+      mark.textContent = Math.round(m);
+      axis.appendChild(mark);
+    });
+    entries.forEach(function(e) {
+      var row = document.createElement('div');
+      row.className = 'pc-row';
+      var leftPct = (e.start - minY) / range * 100;
+      var widthPct = Math.max(1, (e.end - e.start) / range * 100);
+      row.innerHTML = '<div class="pc-label">' + e.label + '</div>' +
+        '<div class="pc-track"><div class="pc-fill" style="left:' + leftPct + '%;width:' + widthPct + '%;background:' + e.bg + ';"><span class="pc-fill-label" style="color:' + e.fg + ';">' + e.text + '</span></div></div>';
+      container.appendChild(row);
+    });
+  }
+
+  /* =====================================================
+     DATA & INITIALISATION
+  ===================================================== */
+
+  // GREAT THEORIES EXPLORER
+  makeExplorer('theory-btns', 'theory-panel', {
+    classical: { label: 'Classical Mechanics', title: 'Classical Mechanics (1687–1900)', body: 'Newton\'s laws describe the motion of everyday objects with astonishing precision. Classical mechanics works perfectly for planets, pendulums, projectiles, and fluids — essentially anything you can see and touch. It\'s a deterministic theory: if you know the positions and velocities of all particles now, you can predict the future. The difficulty is that classical mechanics predicts things that don\'t happen: electrons spiralling into nuclei, infinite radiation from hot objects. It fails for the very fast (relativity) and the very small (quantum mechanics).', note: 'Pioneers: Galileo, Newton, Lagrange, Hamilton, Euler' },
+    em: { label: 'Electromagnetism', title: 'Classical Electromagnetism (1820–1873)', body: 'Maxwell\'s four equations unify electricity, magnetism, and optics. An electric charge creates an electric field; a moving charge (current) creates a magnetic field; a changing magnetic field creates an electric field (Faraday\'s law); a changing electric field creates a magnetic field (Maxwell\'s displacement current). Together, these sustain propagating electromagnetic waves — light. The theory is Lorentz invariant and pointed directly to special relativity. It breaks down at very short distances where quantum effects dominate, leading to QED.', note: 'Pioneers: Faraday, Maxwell, Hertz, Lorentz' },
+    relativity: { label: 'Relativity', title: 'Special and General Relativity (1905/1915)', body: 'Special relativity established that space and time are unified into spacetime, and that the speed of light is absolute while simultaneity is relative. General relativity extended this to gravity, reconceiving it as the curvature of spacetime caused by mass-energy. Einstein\'s field equations (10 coupled nonlinear partial differential equations) predict black holes, gravitational waves, and the expanding universe. Every GPS satellite on Earth carries corrections for both SR and GR effects — without them, the system would accumulate ~11 km of error per day.', note: 'Pioneers: Einstein, Minkowski, Schwarzschild, Penrose' },
+    quantum: { label: 'Quantum Mechanics', title: 'Quantum Mechanics (1900–1930)', body: 'Quantum mechanics governs the behaviour of matter and energy at atomic and subatomic scales. Its core features: energy is quantised; particles have wave-like properties; physical quantities don\'t have definite values until measured; the state is described by a wavefunction whose square gives probabilities. It is the foundation of chemistry (atomic structure, chemical bonds), materials science (semiconductors), and all modern electronics. It is the most precisely tested theory in physics — the anomalous magnetic moment of the electron matches theory to 12 significant figures.', note: 'Pioneers: Planck, Einstein, Bohr, Heisenberg, Schrödinger, Dirac, Born' }
+  }, ['classical', 'em', 'relativity', 'quantum']);
+
+  // PHYSICS TIMELINE
+  makeTimeline('phys-axis', 'phys-timeline', [
+    { label: 'Galileo & Mechanics', start: 1590, end: 1700, bg: '#7B74CC', fg: '#fff', text: 'Kinematics' },
+    { label: 'Newtonian Physics', start: 1687, end: 1800, bg: '#534AB7', fg: '#fff', text: 'F=ma, Gravity' },
+    { label: 'Thermodynamics', start: 1820, end: 1880, bg: '#ef9f27', fg: '#fff', text: 'Entropy, Laws' },
+    { label: 'Electromagnetism', start: 1830, end: 1880, bg: '#27a060', fg: '#fff', text: 'Maxwell eqs.' },
+    { label: 'Special Relativity', start: 1905, end: 1920, bg: '#0C447C', fg: '#fff', text: 'SR (Einstein)' },
+    { label: 'Quantum Mechanics', start: 1900, end: 1930, bg: '#85B7EB', fg: '#0C447C', text: 'QM revolution' },
+    { label: 'General Relativity', start: 1915, end: 1930, bg: '#2b6cb0', fg: '#fff', text: 'GR' },
+    { label: 'QFT & Standard Model', start: 1930, end: 2012, bg: '#A9A4E8', fg: '#534AB7', text: 'SM complete' },
+  ], 1580, 2025);
+
+  // EM SPECTRUM MULTI-CARD
+  makeElemGrid('em-grid', 'em-detail', [
+    { key: 'radio', icon: '📻', label: 'Radio', title: 'Radio Waves (λ > 1mm, f < 300 GHz)', body: 'Radio waves have the longest wavelengths and lowest energies of the EM spectrum. They penetrate walls and the atmosphere, making them ideal for communication. AM radio uses frequencies around 1 MHz; FM around 100 MHz; WiFi at 2.4 or 5 GHz; 5G cellular at up to 60 GHz. Photon energy is so low (~10⁻⁶ eV) that they cannot ionise tissue — perfectly safe. The cosmic microwave background is microwave radiation: the faint afterglow of the Big Bang, now cooled to 2.725 K.' },
+    { key: 'micro', icon: '🌊', label: 'Microwave', title: 'Microwaves (1mm–30cm)', body: 'Microwaves sit between radio and infrared. Microwave ovens use 2.45 GHz — a frequency that couples efficiently to water molecules, causing them to rotate and heat food. Radar uses microwave pulses and measures return time to determine distance. The CMB peaks in the microwave band. Astronomical microwave observations require going to space or high-altitude sites to avoid atmospheric absorption.' },
+    { key: 'ir', icon: '♨️', label: 'Infrared', title: 'Infrared (700nm–1mm)', body: 'Everything at non-zero temperature emits infrared radiation. The human body emits primarily at ~10 µm (mid-infrared). Night-vision cameras detect near-IR. IR spectroscopy identifies molecules by their vibrational frequencies — each bond (C=O, O-H, etc.) absorbs at characteristic wavelengths, making IR a chemical fingerprint. Remote controls use near-IR LEDs at 940nm. Greenhouse gases (CO₂, H₂O, CH₄) absorb strongly in IR, trapping heat in Earth\'s atmosphere.' },
+    { key: 'vis', icon: '🌈', label: 'Visible', title: 'Visible Light (380–700 nm)', body: 'The visible range is a tiny sliver of the spectrum — about 1 octave in frequency, from violet (380nm, ~3.1eV) to red (700nm, ~1.8eV). Our eyes evolved to detect this range because it\'s where the Sun\'s blackbody emission peaks. Photosynthesis uses 400–700nm. The retina has three types of cone cells sensitive to roughly red, green, and blue, and the brain combines these to produce colour perception. Most of the information you have ever received about the world arrived as visible photons.' },
+    { key: 'uv', icon: '☀️', label: 'UV', title: 'Ultraviolet (10–380 nm)', body: 'Photon energies of 3–120 eV are enough to break chemical bonds and ionise atoms — which is why UV causes sunburn and DNA damage (specifically pyrimidine dimer formation). The ozone layer (O₃) absorbs most solar UV-C (100–280nm) and UV-B (280–315nm). UV-A (315–400nm) reaches the surface and penetrates skin more deeply. Blacklights emit UV-A and cause fluorescence. Many insects, birds, and bees can see UV; flower patterns invisible to humans are highly visible to pollinators.' },
+    { key: 'xray', icon: '🩻', label: 'X-ray', title: 'X-rays (0.01–10 nm, 120eV–120keV)', body: 'X-ray photons carry enough energy to eject inner-shell electrons from atoms (photoelectric effect) and to Compton scatter. Medical X-rays use 30–150 kV acceleration. Dense tissues (bone, contrast agents) absorb more X-rays than soft tissue, producing shadows on detectors. CT scans combine many X-ray projections to reconstruct 3D images. X-ray crystallography determines the atomic structure of molecules — it was used to confirm the double helix structure of DNA (Franklin\'s Photo 51, 1952). Synchrotron X-ray sources are millions of times brighter than medical tubes and can image individual atoms.' },
+    { key: 'gamma', icon: '☢️', label: 'Gamma', title: 'Gamma Rays (λ < 0.01nm, E > 100keV)', body: 'Gamma rays are produced in nuclear reactions (radioactive decay, nuclear fusion, neutron capture) and by the most energetic astrophysical processes (supernovae, neutron star mergers, gamma-ray bursts). They are deeply penetrating: stopping 50% of 1 MeV gammas requires ~8cm of lead or ~35cm of concrete. In medicine, Gamma Knife radiosurgery uses focused gamma beams from ¹⁹⁷Co sources to treat brain tumours without open surgery. Gamma-ray bursts — the most energetic explosions in the universe — release more energy in seconds than the Sun will emit in its entire lifetime.' }
+  ]);
+
+  // EM BARS (log scale, relative)
+  makeBarChart('em-bars', [
+    { label: 'Radio', val: 1, bg: '#7B74CC', fg: '#fff', display: '~10⁻⁶ eV' },
+    { label: 'Microwave', val: 4, bg: '#7B74CC', fg: '#fff', display: '~10⁻⁴ eV' },
+    { label: 'Infrared', val: 20, bg: '#ef9f27', fg: '#fff', display: '~0.1 eV' },
+    { label: 'Visible', val: 35, bg: '#27a060', fg: '#fff', display: '~2 eV' },
+    { label: 'Ultraviolet', val: 55, bg: '#9B59B6', fg: '#fff', display: '~10 eV' },
+    { label: 'X-ray', val: 75, bg: '#0C447C', fg: '#fff', display: '~10 keV' },
+    { label: 'Gamma ray', val: 100, bg: '#791F1F', fg: '#fff', display: '>100 keV' }
+  ], 100);
+
+  // BLACK HOLE CONCEPTS
+  makeElemGrid('bh-grid', 'bh-detail', [
+    { key: 'eh', icon: '⚫', label: 'Event Horizon', title: 'Event Horizon — the point of no return', body: 'The event horizon is not a physical surface — it is the boundary in spacetime beyond which the escape velocity exceeds c. For a non-rotating black hole, it is a sphere of radius r_s = 2GM/c² (the Schwarzschild radius). For the Sun\'s mass, r_s ≈ 3 km. For Earth, it\'s 9mm. Nothing that crosses the event horizon can return, including light — but an infalling observer feels nothing special at the crossing. From the outside, however, light from the infalling observer is infinitely redshifted: the observer appears to freeze and fade.' },
+    { key: 'hawk', icon: '🌡️', label: 'Hawking Radiation', title: 'Hawking Radiation — black holes aren\'t black', body: 'Stephen Hawking predicted in 1974 that black holes emit thermal radiation due to quantum effects near the event horizon. Virtual particle-antiparticle pairs constantly appear from the vacuum; when they form near the horizon, one can fall in while the other escapes. To conserve energy, the black hole loses mass. The temperature is T = ℏc³/(8πGMk_B) — inversely proportional to mass. Stellar-mass black holes have temperatures of ~10⁻⁸ K, far too cold to detect. Primordial black holes of ~10¹²kg would be evaporating now. Hawking radiation has never been directly observed but is considered theoretically robust.' },
+    { key: 'spag', icon: '🍝', label: 'Spaghettification', title: 'Spaghettification — tidal forces at the horizon', body: 'Near a black hole, tidal forces become extreme: gravity is much stronger on the side of your body facing the hole than on the far side, so you are stretched radially and compressed laterally — spaghettified. For stellar-mass black holes (r_s ≈ 3km), tidal forces become fatal well outside the horizon. For supermassive black holes (r_s ≈ millions of km), the tidal forces at the horizon are actually manageable — you could cross the event horizon of a large enough black hole without being torn apart immediately. You\'d be trapped and eventually destroyed as you fell deeper, but the horizon itself would be unremarkable.' },
+    { key: 'image', icon: '📷', label: 'First Image', title: 'Event Horizon Telescope (2019)', body: 'In April 2019, the Event Horizon Telescope collaboration published the first direct image of a black hole — M87*, the supermassive black hole at the centre of galaxy M87, 55 million light-years away, 6.5 billion solar masses. The image showed a bright ring (photons orbiting the black hole and redirected toward Earth) with a dark central shadow. The ring\'s angular diameter matched GR predictions. A 2022 image showed Sagittarius A*, the 4-million-solar-mass black hole at the Milky Way\'s centre. The EHT is a planet-scale radio interferometer using eight observatories simultaneously.' },
+    { key: 'sing', icon: '♾️', label: 'Singularity', title: 'Singularity — where physics breaks down', body: 'At the centre of a black hole (in classical GR) lies a singularity — a point of infinite density and zero volume where the equations of GR produce undefined results. Physicists generally believe this signals the breakdown of classical GR rather than a literal physical infinity: a theory of quantum gravity should resolve the singularity into something finite. The Penrose-Hawking singularity theorems (1965–70) proved that singularities are generic in GR — not special cases — under reasonable energy conditions. Their existence was confirmation that GR is incomplete and that quantum gravity is needed.' }
+  ]);
+
+  // ESCAPE VELOCITY SLIDER
+  var escapeData = [
+    { label: 'Moon', v: 2.38, note: 'Apollo missions achieved this with Saturn V rockets in ~3 minutes of burn.' },
+    { label: 'Mars', v: 5.03, note: 'About 45% of Earth\'s escape velocity. Future crewed missions must achieve this to return.' },
+    { label: 'Earth', v: 11.2, note: 'A rocket must accelerate to this speed to leave Earth\'s gravity entirely.' },
+    { label: 'Jupiter', v: 59.5, note: 'Enormous, but still achievable. Jupiter\'s gravity is why it\'s a gas giant — it captured hydrogen.' },
+    { label: 'Sun', v: 617, note: 'Solar wind particles don\'t escape — they\'re launched from above the photosphere with extra energy.' },
+    { label: 'White Dwarf', v: 6500, note: 'A teaspoon of white dwarf material weighs ~5 tonnes.' },
+    { label: 'Neutron Star', v: 100000, note: 'This is ~33% of the speed of light. The surface gravity is 2×10¹¹ times Earth\'s.' }
+  ];
+  window.updateEscape = function(val) {
+    var idx = Math.min(escapeData.length - 1, Math.floor(val / 100 * escapeData.length));
+    if (val == 100) idx = escapeData.length - 1;
+    var d = escapeData[idx];
+    document.getElementById('escape-output').textContent = d.label + ' · ' + (d.v >= 1000 ? (d.v/1000).toFixed(0) + ',000 km/s' : d.v + ' km/s');
+    document.getElementById('escape-sub').textContent = d.note;
+  };
+  updateEscape(30);
+
+  // HEISENBERG UNCERTAINTY SLIDER
+  window.updateHUP = function(val) {
+    var posLow = val < 30, posMed = val >= 30 && val <= 70, posHigh = val > 70;
+    var momHigh = val < 30, momMed = val >= 30 && val <= 70, momLow = val > 70;
+    var posStr = posLow ? 'Δx very small' : (posMed ? 'Δx moderate' : 'Δx very large');
+    var momStr = momHigh ? 'Δp very large' : (momMed ? 'Δp moderate' : 'Δp very small');
+    document.getElementById('hup-output').textContent = posStr + ' · ' + momStr;
+    var notes = [
+      'Highly localised particle: Δx ≈ 10⁻¹² m forces Δp ≈ 10⁻²³ kg·m/s — electron moves at ~10⁷ m/s.',
+      'Balanced uncertainty — neither position nor momentum is well-defined.',
+      'Highly delocalised particle (e.g. free electron): known momentum but unknown position — a pure plane wave.'
+    ];
+    var ni = val < 30 ? 0 : (val <= 70 ? 1 : 2);
+    document.getElementById('hup-sub').textContent = notes[ni];
+  };
+  updateHUP(50);
+
+  // TIME DILATION CALCULATOR
+  window.calcTimeDilation = function() {
+    var speedPct = parseFloat(document.getElementById('td-speed').value);
+    var travellerTime = parseFloat(document.getElementById('td-time').value);
+    var output = document.getElementById('td-output');
+    if (isNaN(speedPct) || speedPct <= 0 || speedPct >= 100) {
+      output.innerHTML = 'Please enter a speed between 0 and 99.9% of c.';
+      output.classList.add('show');
+      return;
+    }
+    var beta = speedPct / 100;
+    var gamma = 1 / Math.sqrt(1 - beta * beta);
+    var earthTime = travellerTime * gamma;
+    var energyFactor = gamma;
+    output.innerHTML = '<span class="calc-highlight">γ = ' + gamma.toFixed(3) + '</span><br>' +
+      'While ' + travellerTime.toFixed(1) + ' years pass for the traveller, <strong>' + earthTime.toFixed(2) + ' years</strong> pass on Earth.<br>' +
+      'The traveller ages ' + (earthTime - travellerTime).toFixed(2) + ' years less than people at home.<br>' +
+      '<span style="font-size:12px;color:var(--color-text-secondary);">The rocket also needs ' + energyFactor.toFixed(1) + '× more energy than its rest mass suggests. At 99%c, a 1kg probe needs ' + (gamma*0.001*9e16/1e15).toFixed(0) + ' petajoules of kinetic energy.</span>';
+    output.classList.add('show');
+  };
+
+  // DOUBLE SLIT CANVAS
+  var canvas = document.getElementById('slit-canvas');
+  var ctx = canvas.getContext('2d');
+  var slitMode = 'wave';
+  var particles = [];
+  var patternData = null;
+
+function buildPattern(mode) {
+    var W = canvas.width, H = canvas.height;
+    patternData = new Array(H).fill(0);
+    if (mode === 'wave') {
+      // Two-slit interference within a single-slit diffraction envelope.
+      // Slit centers match the wall geometry drawn below: H*0.42 and H*0.58.
+      var y1 = H * 0.42, y2 = H * 0.58;
+      var L = 224;              // effective slit-to-screen distance
+      var envWidth = H * 0.18;  // envelope sigma (single-slit diffraction)
+      var centerY = (y1 + y2) / 2;
+      for (var y = 0; y < H; y++) {
+        var d1 = Math.sqrt(Math.pow(y - y1, 2) + L * L);
+        var d2 = Math.sqrt(Math.pow(y - y2, 2) + L * L);
+        var phase = (d1 - d2) * 1.1;
+        var interference = Math.pow(Math.cos(phase / 2), 2);
+        var envelope = Math.exp(-Math.pow(y - centerY, 2) / (2 * envWidth * envWidth));
+        patternData[y] = interference * envelope * 0.95 + 0.02;
+      }
+    } else if (mode === 'which') {
+      // With which-path info, particles land directly behind their slit:
+      // two tight, well-separated bumps centered AT the slit positions.
+      var y1 = H * 0.42, y2 = H * 0.58;
+      var sigma = H * 0.035;
+      var twoSigSq = 2 * sigma * sigma;
+      for (var y = 0; y < H; y++) {
+        var g1 = Math.exp(-Math.pow(y - y1, 2) / twoSigSq);
+        var g2 = Math.exp(-Math.pow(y - y2, 2) / twoSigSq);
+        patternData[y] = (g1 + g2) * 0.9 + 0.02;
+      }
+    } else {
+      // Single slit: one diffraction bump centered on the slit at H*0.5
+      var yc = H * 0.5;
+      var sigma2 = H * 0.07;
+      var twoSigSq2 = 2 * sigma2 * sigma2;
+      for (var y = 0; y < H; y++) {
+        patternData[y] = Math.exp(-Math.pow(y - yc, 2) / twoSigSq2) * 0.9 + 0.02;
+      }
+    }
+    var max = Math.max.apply(null, patternData);
+    patternData = patternData.map(function(v) { return v / max; });
+  }
+
+  function drawSlit() {
+    var W = canvas.width, H = canvas.height;
+    // Background
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+      (document.documentElement.getAttribute('data-theme') === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var bgColor = isDark ? '#252523' : '#f5f5f4';
+    var wallColor = isDark ? '#3a3a38' : '#ccc';
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, W, H);
+
+    // Wall
+    var wallX = W * 0.35;
+    ctx.fillStyle = wallColor;
+    ctx.fillRect(wallX - 4, 0, 8, H);
+
+    // Slits (gaps)
+    ctx.fillStyle = bgColor;
+    if (slitMode !== 'single') {
+      ctx.fillRect(wallX - 4, H * 0.37, 8, H * 0.10); // slit 1
+      ctx.fillRect(wallX - 4, H * 0.53, 8, H * 0.10); // slit 2
+    } else {
+      ctx.fillRect(wallX - 4, H * 0.44, 8, H * 0.12); // one slit
+    }
+
+    // Screen on right
+    ctx.fillStyle = wallColor;
+    ctx.fillRect(W - 8, 0, 8, H);
+
+    // Pattern on screen
+    for (var y = 0; y < H; y++) {
+      var intensity = patternData[y];
+      ctx.fillStyle = 'rgba(83,74,183,' + (intensity * 0.9) + ')';
+      ctx.fillRect(W - 8, y, 8, 1);
+    }
+
+    // Particles
+    particles.forEach(function(p) {
+      var alpha = p.life / 60;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(83,74,183,' + alpha + ')';
+      ctx.fill();
+    });
+
+    // Label
+    ctx.font = '11px system-ui';
+    ctx.fillStyle = isDark ? 'rgba(168,166,158,0.8)' : 'rgba(95,94,90,0.8)';
+    ctx.fillText(slitMode === 'wave' ? 'Interference pattern (both slits, no detector)' :
+      slitMode === 'which' ? 'Two bands only (which-path detected)' :
+      'Single-slit diffraction pattern', 10, 16);
+  }
+
+  window.setSlitMode = function(mode) {
+    slitMode = mode;
+    buildPattern(mode);
+  };
+  buildPattern('wave');
+
+  function addParticle() {
+    if (Math.random() > 0.3) return;
+    var H = canvas.height;
+    var wallX = canvas.width * 0.35;
+    var targetY;
+    // pick y from pattern distribution
+    var r = Math.random();
+    var cdf = 0;
+    var total = patternData.reduce(function(a,b){return a+b;}, 0);
+    for (var y = 0; y < H; y++) {
+      cdf += patternData[y] / total;
+      if (cdf >= r) { targetY = y; break; }
+    }
+    var startY = H * 0.47 + (Math.random() - 0.5) * H * 0.1;
+    particles.push({ x: 10, y: startY, tx: canvas.width - 8, ty: targetY || H/2, life: 60, maxLife: 60 });
+  }
+
+  function animateSlit() {
+    addParticle();
+    particles.forEach(function(p) {
+      var t = 1 - p.life / p.maxLife;
+      p.x = 10 + t * (p.tx - 10);
+      p.y = p.y + (p.ty - p.y) * 0.04 + (Math.random() - 0.5) * 0.5;
+      p.life--;
+    });
+    particles = particles.filter(function(p) { return p.life > 0; });
+    drawSlit();
+    requestAnimationFrame(animateSlit);
+  }
+  animateSlit();
+
+  // QUANTUM WEIRDNESS
+  makeElemGrid('weird-grid', 'weird-detail', [
+    { key: 'sup', icon: '🌀', label: 'Superposition', title: 'Superposition', body: 'A quantum system can exist in a combination of multiple states simultaneously until measured. This isn\'t just "we don\'t know which state it\'s in" — the particle is genuinely in all states at once, as demonstrated by interference effects. Schrödinger\'s cat is the macroscopic extension: a cat linked to a quantum event is (in principle) simultaneously alive and dead until observed. Decoherence — interaction with the environment — explains why we don\'t see macroscopic superpositions: the quantum coherence is destroyed almost instantaneously by thermal fluctuations.' },
+    { key: 'ent', icon: '🔗', label: 'Entanglement', title: 'Quantum Entanglement', body: 'Two particles can be correlated in such a way that measuring one instantly determines the state of the other, regardless of distance. Einstein called this "spooky action at a distance" and believed it proved QM was incomplete (EPR paradox, 1935). John Bell (1964) showed that any local hidden variable theory must satisfy the Bell inequality. Experiments by Aspect (1982) and many successors — including loophole-free tests (Hensen et al., 2015) — consistently violate Bell inequalities, confirming the universe is genuinely non-local at the quantum level. Entanglement cannot transmit information but enables quantum teleportation and quantum key distribution.' },
+    { key: 'tun', icon: '🚇', label: 'Tunnelling', title: 'Quantum Tunnelling', body: 'Particles can pass through potential barriers they classically don\'t have enough energy to surmount. The probability decays exponentially with barrier width and height, but for thin barriers (as in atomic nuclei) the effect is significant. Alpha decay is tunnelling: the alpha particle has insufficient classical energy to escape but has a finite wavefunction outside the nucleus. The Sun\'s core is not hot enough for classical fusion — proton-proton fusion rates rely on tunnelling. STM microscopes measure tunnelling currents of 0.1 nA to image individual atoms at sub-Ångström resolution.' },
+    { key: 'zeno', icon: '👁️', label: 'Quantum Zeno', title: 'Quantum Zeno Effect', body: 'Measuring a quantum system repeatedly can freeze its evolution — "the watched pot never boils." If you measure whether a quantum system is in its initial state frequently enough, the wavefunction collapses back each time and the transition to another state is suppressed. First proposed by Misra and Sudarshan (1977). It has been experimentally confirmed using ultracold atoms and quantum optical systems. The inverse (anti-Zeno effect) can accelerate decay. This is not paradoxical — it follows directly from the measurement postulate — but it is startling: observation physically intervenes in reality.' },
+    { key: 'eraser', icon: '🗑️', label: 'Quantum Eraser', title: 'Quantum Eraser', body: 'If you detect which path a particle takes in a double-slit experiment, interference disappears. But if you subsequently "erase" the which-path information before detecting the particle, interference can be restored. In the delayed-choice quantum eraser (Kim et al., 1999), the erasure decision can be made after the particle has already been detected at the screen — apparently retroactively determining whether interference occurred. This is deeply unsettling if you believe in a definite timeline. The resolution is careful analysis of correlations: you can only see the interference when you select the subset of particles for which the path information was erased.' },
+    { key: 'elitzur', icon: '💣', label: 'Interaction-Free', title: 'Elitzur-Vaidman Bomb Problem', body: 'A thought experiment (1993): a bomb is triggered by a single photon. Can you detect whether it\'s live without setting it off? Using quantum interference, you can in some cases determine a bomb is live without the photon ever interacting with it — interaction-free measurement. In a Mach-Zehnder interferometer, the presence of the bomb (which would absorb a photon) changes the interference pattern even for photons that take the other path. This was experimentally realised using beam splitters and single photons. It demonstrates that quantum measurements can extract information about a system without any classical interaction.' }
+  ]);
+
+  // BELL BARS
+  makeBarChart('bell-bars', [
+    { label: 'Classical limit (LHV)', val: 2.0, bg: '#ccc', fg: '#333', display: 'S = 2.00 (max)' },
+    { label: 'QM prediction', val: 2.83, bg: '#A9A4E8', fg: '#534AB7', display: 'S = 2√2 ≈ 2.83' },
+    { label: 'Aspect et al. 1982', val: 2.70, bg: '#534AB7', fg: '#fff', display: 'S = 2.70 ±0.05' },
+    { label: 'Hensen et al. 2015', val: 2.42, bg: '#534AB7', fg: '#fff', display: 'S = 2.42 ±0.20' },
+    { label: 'Giustina et al. 2015', val: 2.74, bg: '#534AB7', fg: '#fff', display: 'S = 2.74 ±0.04' }
+  ], 3.0);
+
+  // INTERPRETATIONS SCALE: collapse
+  makeCscale('interp-collapse', [
+    { name: 'Copenhagen', pct: 20, val: 'Physical', col: '#534AB7' },
+    { name: 'Objective Collapse (GRW)', pct: 15, val: 'Physical', col: '#0C447C' },
+    { name: 'QBism', pct: 50, val: 'Epistemic', col: '#ef9f27' },
+    { name: 'Relational QM', pct: 55, val: 'Relational', col: '#ef9f27' },
+    { name: 'Many-Worlds', pct: 90, val: 'No collapse', col: '#27a060' },
+    { name: 'Pilot Wave', pct: 95, val: 'No collapse', col: '#27a060' }
+  ]);
+  // determinism scale
+  makeCscale('interp-det', [
+    { name: 'Copenhagen', pct: 15, val: 'Random', col: '#534AB7' },
+    { name: 'GRW / Objective', pct: 20, val: 'Random', col: '#0C447C' },
+    { name: 'QBism', pct: 25, val: 'Random', col: '#ef9f27' },
+    { name: 'Many-Worlds', pct: 75, val: 'Deterministic', col: '#27a060' },
+    { name: 'Pilot Wave', pct: 95, val: 'Deterministic', col: '#27a060' }
+  ]);
+
+  // INTERPRETATIONS EXPLORER
+  makeExplorer('interp-btns', 'interp-panel', {
+    copenhagen: { label: 'Copenhagen', title: 'Copenhagen Interpretation', body: 'Developed by Bohr and Heisenberg in the 1920s, Copenhagen says the wavefunction doesn\'t represent physical reality — it encodes our knowledge of a system. Physical quantities don\'t have values until measured; measurement causes collapse. "Shut up and calculate" is its caricature. It\'s deliberately silent on what constitutes a measurement and what happens during collapse — Bohr called these questions meaningless. Most working physicists use Copenhagen operationally, but few defend it philosophically. Its strength is pragmatic precision; its weakness is refusing to answer "but what\'s really happening?"', note: 'Dominant view in textbooks; philosophically contested.' },
+    mw: { label: 'Many-Worlds', title: 'Many-Worlds Interpretation (Everett, 1957)', body: 'Hugh Everett III proposed that the Schrödinger equation always evolves deterministically with no collapse. Instead, every measurement causes the universe to "branch" — both outcomes occur in different branches of a single quantum universe. There is one universal wavefunction. The branches decohere and can\'t interact (explaining why we see definite outcomes). Many physicists find this attractive because it adds nothing to standard QM — but it implies an unimaginable proliferation of parallel worlds. The hardest problem is the Born rule: why should probabilities be |ψ|² in a theory where all outcomes occur?', note: 'Popular among physicists; requires a branching multiverse.' },
+    pilot: { label: 'Pilot Wave', title: 'De Broglie-Bohm Pilot Wave Theory', body: 'Particles have definite positions at all times — they are guided by a "pilot wave" (the wavefunction) through configuration space. The theory is deterministic and produces exactly the same predictions as standard QM. Randomness enters only because we don\'t know the exact initial conditions (a hidden variable). Einstein would have approved. The catch: the guidance is non-local — a particle can be influenced instantaneously by conditions far away. This non-locality is compatible with special relativity (you still can\'t use it for FTL signalling), but many physicists find it aesthetically troubling. Bell himself favoured pilot wave theory.', note: 'Fully deterministic; non-local; same predictions as standard QM.' },
+    qbism: { label: 'QBism', title: 'QBism (Quantum Bayesianism)', body: 'QBism (Fuchs, Mermin, Schack) treats the wavefunction as an agent\'s subjective beliefs about future experiences — like a Bayesian probability distribution. Measurement doesn\'t collapse anything "out there"; it updates the agent\'s beliefs. The Born rule is a normative consistency constraint on betting, not a physical law. QBism dissolves the measurement problem by making physics explicitly about the experiences of agents, not an objective external reality. Critics argue this makes physics solipsistic or circular. Defenders argue all other interpretations illegitimately assume an "objective" view from nowhere.', note: 'Radically agent-centred; dismisses "objective" wavefunction.' }
+  }, ['copenhagen', 'mw', 'pilot', 'qbism']);
+
+  // STANDARD MODEL GRID
+  makeElemGrid('sm-grid', 'sm-detail', [
+    { key: 'u', icon: 'u', label: 'Up quark', title: 'Up quark (u) — charge +2/3', body: 'One of the two light quarks that make up protons and neutrons. A proton is uud; a neutron is udd. Mass ~2.2 MeV/c². Quarks are confined — they cannot exist as free particles due to colour confinement: as two quarks are separated, the string of gluons between them gains energy faster than it takes to create a new quark-antiquark pair, so quark pairs pop out of the vacuum instead of the quarks separating.' },
+    { key: 'd', icon: 'd', label: 'Down quark', title: 'Down quark (d) — charge −1/3', body: 'The other light quark. Mass ~4.7 MeV/c². Beta decay (n → p + e⁻ + νe) is a down quark converting to an up quark via the weak force: d → u + W⁻, W⁻ → e⁻ + anti-νe. This is the process that makes unstable nuclei radioactive.' },
+    { key: 'e', icon: 'e⁻', label: 'Electron', title: 'Electron (e⁻) — charge −1', body: 'The lightest charged lepton, mass 0.511 MeV/c². Electrons determine the chemical properties of atoms (QM energy levels), carry current in conductors, and are responsible for all chemistry, biology, and technology. The positron (anti-electron) was the first antiparticle discovered (Anderson, 1932). Electron-positron annihilation produces two 511 keV gamma photons — exploited in PET scans.' },
+    { key: 'nu', icon: 'ν', label: 'Neutrino', title: 'Electron neutrino (νe) — charge 0', body: 'Neutrinos interact only via the weak force and gravity. They pass through matter almost completely — a light-year of lead would stop about half the neutrinos passing through it. ~100 billion solar neutrinos pass through your thumbnail every second. Neutrinos were long thought massless; the observation of neutrino oscillations (1998, Nobel 2015) proved they have tiny but non-zero masses. The mass scale is ≲0.1 eV — about a million times less than the electron.' },
+    { key: 'photon', icon: 'γ', label: 'Photon', title: 'Photon (γ) — force carrier of electromagnetism', body: 'The quantum of the electromagnetic field. Massless, spin-1, travels at c. All electromagnetic interactions (electric and magnetic forces, light, chemical bonds, contact forces) are mediated by photon exchange. Virtual photons — off-shell excitations with imaginary mass — mediate the force between charged particles. Real photons are the excitations you detect with your eyes and instruments.' },
+    { key: 'gluon', icon: 'g', label: 'Gluon', title: 'Gluon (g) — force carrier of the strong force', body: 'Gluons mediate the strong nuclear force (quantum chromodynamics, QCD). Unlike photons, gluons carry colour charge themselves, which means they interact with each other — this is why the strong force gets stronger with distance (confinement), the opposite of gravity and electromagnetism. There are 8 types of gluon. The hadron masses (proton: 938 MeV) are mostly gluon field energy, not quark mass: the quarks contribute only ~10 MeV.' },
+    { key: 'w', icon: 'W±', label: 'W boson', title: 'W boson (W±) — weak force, charge-changing', body: 'The W⁺ and W⁻ bosons mediate the charged-current weak interaction — the one responsible for beta decay and the reactions that power the Sun. They are massive (80.4 GeV), which is why the weak force has such short range (~10⁻¹⁸ m). The W boson can change a quark\'s flavour (u↔d, c↔s, t↔b), making it the agent of radioactive decay. In 2022, CDF reported a W mass 7σ higher than the Standard Model prediction — an anomaly still under investigation.' },
+    { key: 'z', icon: 'Z', label: 'Z boson', title: 'Z boson (Z⁰) — weak force, neutral current', body: 'The Z boson mediates the neutral-current weak interaction — it doesn\'t change particle flavour, but does produce parity violation. Mass 91.2 GeV. The W and Z bosons were predicted by Glashow, Salam, and Weinberg\'s electroweak unification theory (Nobel 1979) and discovered at CERN in 1983 (Nobel 1984). The Z boson line shape measurement gives the number of light neutrino families: exactly 3.' },
+    { key: 'higgs', icon: 'H', label: 'Higgs', title: 'Higgs boson (H) — gives mass', body: 'The Higgs field permeates all of space. Particles acquire mass by interacting with it: the stronger the interaction, the heavier the particle. Photons don\'t interact with the Higgs at all — they are massless. The Higgs boson is the quantum of the Higgs field: a ripple in it. It was predicted in 1964 (Higgs, Brout, Englert) and discovered at CERN\'s LHC in 2012 (Nobel 2013). Mass: 125.1 GeV. It decays primarily to b-quark pairs (58%) and W boson pairs (21%).' }
+  ]);
+
+  // SM DISTBAR
+  makeDistbar('sm-distbar', 'sm-legend', [
+    { label: 'Quarks (6)', pct: 35, bg: '#534AB7', fg: '#fff' },
+    { label: 'Leptons (6)', pct: 35, bg: '#7B74CC', fg: '#fff' },
+    { label: 'Gauge Bosons (4)', pct: 24, bg: '#0C447C', fg: '#fff' },
+    { label: 'Higgs (1)', pct: 6, bg: '#85B7EB', fg: '#0C447C' }
+  ]);
+
+  // QUANTUM TECH EXPLORER
+  makeExplorer('qtech-btns', 'qtech-panel', {
+    laser: { label: 'Lasers', title: 'Lasers — stimulated emission and coherent light', body: 'Einstein predicted stimulated emission in 1917: a photon encountering an excited atom can trigger the release of an identical photon (same phase, frequency, direction). Population inversion — more atoms in the excited state than ground state, achieved by pumping energy in — makes stimulated emission dominate over absorption. The result is a coherent beam of light. Applications range from barcode scanners and fiber-optic communications (carrying the internet) to precision cutting in surgery and manufacturing, laser cooling of atoms to nano-Kelvin temperatures, and gravitational wave detection (LIGO uses 200kW of laser power in 4km arm cavities).', note: 'Theodore Maiman built the first working laser in 1960 using synthetic ruby.' },
+    semi: { label: 'Semiconductors', title: 'Semiconductors — quantum mechanics enables computing', body: 'Band theory (a quantum result) explains why silicon conducts only when enough thermal or light energy kicks electrons from the valence band across the ~1.1eV bandgap to the conduction band. Doping with phosphorus (n-type) or boron (p-type) creates controlled conductivity. The p-n junction is the foundation of diodes and transistors. A MOSFET — the transistor in every chip — uses a gate voltage to control a channel of current quantum-mechanically. Today\'s most advanced chips have ~2nm features (containing billions of transistors on a fingernail), where quantum tunnelling across gate oxides starts to limit further miniaturisation.', note: 'Shockley, Bardeen, Brattain (1947) — Nobel Prize 1956.' },
+    mri: { label: 'MRI', title: 'MRI — quantum mechanics in hospitals', body: 'Magnetic resonance imaging exploits nuclear spin. Hydrogen nuclei (protons) in the body precess around a strong magnetic field at the Larmor frequency (~64 MHz at 1.5 Tesla). A radio-frequency pulse tips the spins; as they relax back, they emit RF signals detected by the scanner. Different tissues relax at different rates (T1 and T2 relaxation times), creating contrast. Gradient fields encode spatial information. Unlike X-rays or CT, MRI uses no ionising radiation. A 3T clinical scanner uses about 14km of superconducting niobium-titanium wire, cooled to 4K by liquid helium. Functional MRI (fMRI) detects blood oxygenation changes as a proxy for brain activity.', note: '~40,000 MRI machines in service worldwide. Annual scans: >100 million.' },
+    qc: { label: 'Quantum Computing', title: 'Quantum computing — state of play 2025', body: 'A qubit can be in superposition of |0⟩ and |1⟩, and qubits can be entangled. This enables parallel computation over exponentially many states simultaneously. Shor\'s algorithm (1994) factorises N-digit numbers in polynomial time (vs exponential classically). Grover\'s algorithm provides quadratic speedup for database search. The challenge is decoherence: qubits must be isolated from the environment while still being controlled. As of 2025, the largest systems have ~1000+ noisy physical qubits, but fault-tolerant logical qubits (requiring ~1000 physical qubits each) have been demonstrated only at very small scales. The era of practical quantum advantage is approaching but not yet here.', note: 'IBM, Google, IonQ, and Quantinuum lead development; Microsoft pursues topological qubits.' },
+    crypto: { label: 'Quantum Crypto', title: 'Quantum cryptography — theoretically unbreakable', body: 'BB84 (Bennett & Brassard, 1984) is the first quantum key distribution protocol. Alice encodes bits in photon polarisations, randomly switching between two bases. Bob measures, also randomly. Any eavesdropping disturbs the quantum states (no-cloning theorem), leaving detectable errors. Alice and Bob can share a provably secure key over an authenticated classical channel. China demonstrated satellite-based QKD over 1200km (2017). Post-quantum cryptography (NIST standards finalised 2024) provides classical algorithms believed resistant to quantum attack — the most practical near-term solution for securing existing infrastructure.', note: 'CRYSTALS-Kyber (now FIPS 203) is the NIST post-quantum standard for key encapsulation.' }
+  }, ['laser', 'semi', 'mri', 'qc', 'crypto']);
+
+  // QUANTUM COMPUTING SCALE
+  makeCscale('qcomp-scale', [
+    { name: 'Word processing', pct: 2, val: 'Classical wins', col: '#27a060' },
+    { name: 'Database search', pct: 25, val: 'Grover √N', col: '#ef9f27' },
+    { name: 'Machine learning', pct: 35, val: 'Unclear', col: '#ef9f27' },
+    { name: 'Molecular simulation', pct: 70, val: 'Q wins', col: '#534AB7' },
+    { name: 'Integer factoring (RSA)', pct: 90, val: 'Shor O(n³)', col: '#534AB7' },
+    { name: 'Sampling problems', pct: 95, val: 'Demonstrated', col: '#791F1F' }
+  ]);
+
+  // MULTIVERSE SCALE
+  makeCscale('multiverse-scale', [
+    { name: 'String landscape', pct: 8, val: 'Speculative', col: '#791F1F' },
+    { name: 'Level IV (Tegmark)', pct: 10, val: 'Speculative', col: '#791F1F' },
+    { name: 'Inflationary (Level II)', pct: 20, val: 'Some evidence', col: '#ef9f27' },
+    { name: 'Bubble collisions', pct: 35, val: 'CMB tests', col: '#ef9f27' },
+    { name: 'Many-Worlds (Level III)', pct: 65, val: 'Follows from QM', col: '#534AB7' }
+  ]);
+
+  // STELLAR FATE BARS
+  makeBarChart('stellar-bars', [
+    { label: '0.5 M☉ (red dwarf)', val: 100, bg: '#ef4444', fg: '#fff', display: 'White dwarf · lifetime: >100 Gyr' },
+    { label: '1 M☉ (Sun)', val: 80, bg: '#f97316', fg: '#fff', display: 'White dwarf · ~10 Gyr' },
+    { label: '5 M☉', val: 45, bg: '#8b5cf6', fg: '#fff', display: 'White dwarf · ~100 Myr' },
+    { label: '10 M☉', val: 25, bg: '#3b82f6', fg: '#fff', display: 'Neutron star / SN · ~30 Myr' },
+    { label: '25 M☉', val: 12, bg: '#0C447C', fg: '#fff', display: 'Black hole / SN · ~7 Myr' },
+    { label: '>40 M☉', val: 5, bg: '#1c1c1a', fg: '#e8e6df', display: 'Black hole (direct) · <3 Myr' }
+  ], 100);
+
+  // FATE OF UNIVERSE EXPLORER
+  makeExplorer('fate-btns', 'fate-panel', {
+    heatdeath: { label: 'Heat Death', title: 'Heat Death — the most likely fate', body: 'If dark energy remains constant (a cosmological constant), the universe expands forever at an accelerating rate. Galaxies beyond our Local Group recede beyond our event horizon and become invisible. Over ~10¹⁴ years, stars exhaust their fuel. Over ~10⁴⁰ years, all matter decays or falls into black holes. Black holes evaporate via Hawking radiation (complete after ~10⁶⁶ to 10¹⁰⁶ years for the most massive). The universe approaches maximum entropy — a vast, cold, dark, near-uniform heat bath with no free energy to do work. This is the second law of thermodynamics taken to its ultimate conclusion.', note: 'Supported by current observations. The universe\'s fate depends entirely on the nature of dark energy.' },
+    bigrip: { label: 'Big Rip', title: 'Big Rip — if dark energy strengthens', body: 'If dark energy is "phantom energy" (equation of state parameter w < −1), it grows stronger over time. Eventually the expansion rate accelerates so fast that it tears apart galactic clusters (~60 Gyr from now), then galaxies, then solar systems, planets, molecules, and finally atoms — all in the final minutes. Even the fabric of spacetime shreds. Current measurements of w are consistent with −1 (cosmological constant) but have error bars that don\'t rule out w < −1. The Big Rip is possible but not favoured by current data.', note: 'Requires phantom dark energy — not confirmed by current observations.' },
+    bounce: { label: 'Big Bounce', title: 'Cyclic / Bouncing Cosmologies', body: 'In loop quantum cosmology, the quantum nature of spacetime prevents a true singularity. When the universe collapses (if it ever does), the Planck density is reached and quantum repulsion causes a bounce into a new expansion phase. In the Ekpyrotic / cyclic model (Steinhardt & Turok), two "brane" universes periodically collide, each collision producing a Big Bang-like event. These models struggle to explain why entropy is low in each new cycle (the entropy ratchet problem). Evidence is sparse — the CMB shows no confirmed imprints from pre-Big-Bang cycles, though some claim marginal signals.', note: 'Speculative; not ruled out; the entropy problem is severe.' }
+  }, ['heatdeath', 'bigrip', 'bounce']);
+
+  // COSMOS DISTBAR
+  makeDistbar('cosmos-distbar', 'cosmos-legend', [
+    { label: 'Dark Energy', pct: 68, bg: '#534AB7', fg: '#fff' },
+    { label: 'Dark Matter', pct: 27, bg: '#A9A4E8', fg: '#534AB7' },
+    { label: 'Baryonic Matter', pct: 5, bg: '#ef9f27', fg: '#fff' }
+  ]);
+
+  // WAVEFUNCTION SVG PATH
+  (function() {
+    var svg = document.getElementById('spacetime-svg');
+    if (!svg) return;
+    // Already done as static SVG
+  })();
+
+// Draw wavefunction paths
+  (function() {
+    var svgEl = document.querySelector('svg[viewBox="0 0 500 200"]');
+    if (!svgEl) return;
+    var W = 500, H = 200;
+    var baseline = 165;        // x-axis y-position in SVG coords
+    var peakHeight = 120;      // total height of |ψ|² at its peak
+    var cx = 250, sigma = 60;
+    var pathFill = '', pathLine = '', pathReal = '';
+    var points = [];
+    for (var x = 30; x <= 470; x += 2) {
+      var gauss = Math.exp(-Math.pow(x - cx, 2) / (2 * sigma * sigma));
+      var y = baseline - gauss * peakHeight;
+      points.push({x: x, y: y, g: gauss});
+    }
+    pathFill = 'M30,' + baseline;
+    points.forEach(function(p) { pathFill += ' L' + p.x + ',' + p.y; });
+    pathFill += ' L470,' + baseline + ' Z';
+
+    pathLine = 'M' + points[0].x + ',' + points[0].y;
+    points.slice(1).forEach(function(p) { pathLine += ' L' + p.x + ',' + p.y; });
+
+    // Re(ψ) oscillates centered on the *middle* of the |ψ|² envelope,
+    // with amplitude = half the envelope height. This keeps the wave
+    // strictly between the Gaussian curve (top) and the x-axis (bottom),
+    // touching each at its extrema but never crossing them.
+    var realPts = [];
+    for (var x2 = 30; x2 <= 470; x2 += 2) {
+      var gauss2 = Math.exp(-Math.pow(x2 - cx, 2) / (2 * sigma * sigma));
+      var envelope = gauss2 * peakHeight;     // Gaussian height at this x
+      var center = baseline - envelope / 2;   // middle of the envelope
+      var amplitude = envelope / 2;           // half the envelope -> fits inside
+      var osc = Math.cos((x2 - cx) * 0.18);
+      var y2 = center - amplitude * osc;      // SVG y grows downward
+      realPts.push({x: x2, y: y2});
+    }
+    pathReal = 'M' + realPts[0].x + ',' + realPts[0].y;
+    realPts.slice(1).forEach(function(p) { pathReal += ' L' + p.x + ',' + p.y; });
+
+    var fillEl = svgEl.getElementById ? svgEl.getElementById('wf-path') : svgEl.querySelector('#wf-path');
+    var lineEl = svgEl.getElementById ? svgEl.getElementById('wf-line') : svgEl.querySelector('#wf-line');
+    var realEl = svgEl.getElementById ? svgEl.getElementById('wf-real') : svgEl.querySelector('#wf-real');
+    if (fillEl) fillEl.setAttribute('d', pathFill);
+    if (lineEl) lineEl.setAttribute('d', pathLine);
+    if (realEl) realEl.setAttribute('d', pathReal);
+  })();
+
+});
+</script>

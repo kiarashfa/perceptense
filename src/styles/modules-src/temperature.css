@@ -1,0 +1,635 @@
+
+/* Bar chart rows — local variant with slightly wider label for this module */
+.trow { display: flex; align-items: center; gap: 0; margin-bottom: 4px; }
+.tl   { font-size: 11px; color: var(--color-text-secondary); width: 148px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
+.tb   { height: 20px; border-radius: 3px; display: flex; align-items: center; padding: 0 7px; min-width: 3px; overflow: hidden; }
+.tv   { font-size: 11px; font-weight: 500; white-space: nowrap; }
+
+/* Heat transfer cards */
+.ht-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1rem; }
+@media (max-width: 560px) { .ht-grid { grid-template-columns: 1fr; } }
+.ht-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 13px; }
+.ht-icon { font-size: 22px; margin-bottom: 6px; }
+.ht-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.ht-body  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
+.ht-ex    { font-size: 11px; color: var(--color-text-tertiary); margin-top: 5px; font-style: italic; }
+
+/* Thermal expansion calculator */
+.texp-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 10px; }
+.texp-field { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 110px; }
+.texp-label { font-size: 11px; color: var(--color-text-secondary); }
+.texp-result { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 13px; font-size: 13px; color: var(--color-text-primary); line-height: 1.6; margin-top: 4px; }
+
+/* Body temperature zones */
+.bzone-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); flex-wrap: wrap; }
+.bzone-row:last-child { border-bottom: none; }
+.bzone-temp { font-size: 13px; font-weight: 500; width: 68px; flex-shrink: 0; text-align: right; }
+.bzone-bar  { height: 16px; border-radius: 3px; flex-shrink: 0; }
+.bzone-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
+
+/* Cooking explorer */
+.cook-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.cook-tab  { font-size: 11px; padding: 3px 10px; cursor: pointer; }
+.cook-tab.active { background: var(--color-background-secondary); border-color: var(--color-border-primary); font-weight: 500; }
+.cook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.cook-item { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 11px; cursor: pointer; border: 0.5px solid transparent; transition: border-color 0.1s; }
+.cook-item:hover { border-color: var(--color-border-secondary); }
+.cook-item.selected { border-color: var(--color-border-primary); background: var(--color-background-primary); }
+.cook-item-name { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
+.cook-item-temp { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+.cook-detail { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; margin-top: 10px; min-height: 64px; }
+.cook-detail-name  { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.cook-detail-temps { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 6px; }
+.cook-detail-why   { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; }
+
+/* Estimation game */
+.game-scenario { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 13px 15px; margin-bottom: 10px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); line-height: 1.5; text-align: center; min-height: 56px; display: flex; align-items: center; justify-content: center; }
+.game-choices  { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.game-btn      { padding: 9px 8px; font-size: 13px; text-align: center; line-height: 1.3; }
+.game-btn.correct { background: var(--color-background-success) !important; border-color: var(--color-border-success) !important; color: var(--color-text-success) !important; }
+.game-btn.wrong   { background: var(--color-background-danger) !important; border-color: var(--color-border-danger) !important; color: var(--color-text-danger) !important; }
+.game-feedback { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; min-height: 40px; }
+.game-score    { font-size: 12px; color: var(--color-text-secondary); text-align: right; margin-bottom: 6px; }
+
+/* Scales comparison SVG wrapper */
+.svg-wrap { overflow-x: auto; margin-bottom: 1rem; }
+.svg-wrap svg { display: block; max-width: 100%; }
+
+/* === Shared-ready extracted styles === */
+
+.text-amber-500 {
+  color:#EF9F27;
+}
+
+.text-amber-700 {
+  color:#BA7517;
+}
+
+.text-amber-950 {
+  color:#412402;
+}
+
+.text-blue-500 {
+  color:#378ADD;
+}
+
+.text-blue-700 {
+  color:#185FA5;
+}
+
+.text-blue-950 {
+  color:#042C53;
+}
+
+.text-green-950 {
+  color:#04342C;
+}
+
+.text-indigo-200 {
+  color:#CECBF6;
+}
+
+.text-indigo-950 {
+  color:#26215C;
+}
+
+.text-orange-600 {
+  color:#D85A30;
+}
+
+.text-red-700 {
+  color:#A32D2D;
+}
+
+.text-teal-700 {
+  color:#1D9E75;
+}
+
+.text-white {
+  color:#fff;
+}
+
+.u-w-100pct {
+  width:100%;
+}
+
+/* === Module-specific extracted styles === */
+
+.temperature-label {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:12px;
+}
+
+.settemp-control {
+  font-size:11px;
+  padding:2px 8px;
+}
+
+.temperature-row-3 {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.temperature-text-2 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  white-space:nowrap;
+}
+
+.temperature-row-4 {
+  display:flex;
+  gap:10px;
+  align-items:baseline;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.temp-c {
+  font-size:26px;
+  font-weight:500;
+  color:var(--color-text-primary);
+}
+
+.temp-f {
+  font-size:16px;
+  color:var(--color-text-secondary);
+}
+
+.temp-k {
+  font-size:14px;
+  color:var(--color-text-secondary);
+}
+
+.temp-name {
+  font-size:15px;
+  font-weight:500;
+  margin-bottom:4px;
+}
+
+.tb-style {
+  width:5%;
+  background:#042C53;
+}
+
+.tv-style {
+  color:#E6F1FB;
+}
+
+.tb-style-2 {
+  width:10%;
+  background:#0C447C;
+}
+
+.tb-style-3 {
+  width:16%;
+  background:#185FA5;
+}
+
+.tb-style-4 {
+  width:22%;
+  background:#378ADD;
+}
+
+.tb-style-5 {
+  width:30%;
+  background:#85B7EB;
+}
+
+.tb-style-6 {
+  width:40%;
+  background:#9FE1CB;
+}
+
+.tb-style-7 {
+  width:50%;
+  background:#5DCAA5;
+}
+
+.tb-style-8 {
+  width:60%;
+  background:#EF9F27;
+}
+
+.tb-style-9 {
+  width:63%;
+  background:#BA7517;
+}
+
+.tb-style-10 {
+  width:70%;
+  background:#D85A30;
+}
+
+.tb-style-11 {
+  width:100%;
+  background:#A32D2D;
+}
+
+.temperature-text-3 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-top:10px;
+  line-height:1.5;
+}
+
+.temperature-span-style {
+  margin-top:3px;
+  display:inline-block;
+}
+
+.temperature-row-5 {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+
+.conv-val {
+  flex:1;
+  min-width:140px;
+  font-size:14px;
+}
+
+.conv-dir {
+  height:36px;
+  padding:0 10px;
+  border-radius:var(--border-radius-md);
+  border:0.5px solid var(--color-border-secondary);
+  background:var(--color-background-primary);
+  color:var(--color-text-primary);
+  font-size:13px;
+}
+
+.doconvert-control {
+  height:36px;
+  padding:0 18px;
+  font-size:13px;
+}
+
+.conv-result {
+  font-size:14px;
+  color:var(--color-text-primary);
+  margin-bottom:6px;
+  font-weight:500;
+}
+
+.conv-trick {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:1rem;
+}
+
+.temperature-panel {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:11px 14px;
+  margin-bottom:0;
+}
+
+.temperature-label-2 {
+  font-size:13px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:5px;
+}
+
+.temperature-text-4 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.7;
+}
+
+.temperature-media {
+  width:100%;
+  min-width:300px;
+}
+
+.tb-style-12 {
+  width:2%;
+  background:#26215C;
+  border:0.5px solid #534AB7;
+}
+
+.tv-style-6 {
+  color:#CECBF6;
+  margin-left:4px;
+  font-size:10px;
+}
+
+.tb-style-13 {
+  width:5%;
+  background:#3C3489;
+}
+
+.tv-style-7 {
+  color:#CECBF6;
+  font-size:10px;
+}
+
+.tb-style-14 {
+  width:12%;
+  background:#534AB7;
+}
+
+.tv-style-8 {
+  color:#fff;
+  font-size:10px;
+}
+
+.tb-style-15 {
+  width:22%;
+  background:#1D9E75;
+}
+
+.tb-style-16 {
+  width:27%;
+  background:#EF9F27;
+}
+
+.tv-style-9 {
+  color:#412402;
+  font-size:10px;
+}
+
+.tb-style-17 {
+  width:38%;
+  background:#BA7517;
+}
+
+.tb-style-18 {
+  width:50%;
+  background:#D85A30;
+}
+
+.tb-style-19 {
+  width:70%;
+  background:#A32D2D;
+}
+
+.tb-style-20 {
+  width:85%;
+  background:#791F1F;
+}
+
+.tb-style-21 {
+  width:100%;
+  background:#501313;
+}
+
+.tv-style-10 {
+  color:#FCEBEB;
+}
+
+.temperature-text-5 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin:10px 0 0;
+}
+
+.temperature-text-6 {
+  font-size:11px;
+  color:var(--color-text-secondary);
+  margin:6px 0 0;
+}
+
+.temperature-panel-2 {
+  background:var(--color-background-primary);
+  border:0.5px solid var(--color-border-tertiary);
+  border-radius:var(--border-radius-lg);
+  padding:13px 15px;
+  margin-bottom:1.2rem;
+}
+
+.temperature-text-7 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:0.8rem;
+}
+
+.tb-style-22 {
+  width:100%;
+  background:#26215C;
+}
+
+.tb-style-23 {
+  width:92%;
+  background:#3C3489;
+}
+
+.tb-style-24 {
+  width:83%;
+  background:#185FA5;
+}
+
+.tb-style-25 {
+  width:55%;
+  background:#378ADD;
+}
+
+.tb-style-26 {
+  width:35%;
+  background:#85B7EB;
+}
+
+.tb-style-27 {
+  width:7%;
+  background:#9FE1CB;
+}
+
+.tb-style-28 {
+  width:5%;
+  background:#5DCAA5;
+}
+
+.tb-style-29 {
+  width:3%;
+  background:#EF9F27;
+  min-width:28px;
+}
+
+.tb-style-30 {
+  width:2%;
+  background:#BA7517;
+  min-width:24px;
+}
+
+.temperature-text-8 {
+  font-size:13px;
+  color:var(--color-text-secondary);
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.temperature-row-6 {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.temperature-media-2 {
+  flex:1;
+  min-width:120px;
+}
+
+.rad-output {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:10px 13px;
+  font-size:13px;
+  color:var(--color-text-primary);
+  line-height:1.7;
+}
+
+.texp-mat {
+  height:36px;
+  padding:0 10px;
+  border-radius:var(--border-radius-md);
+  border:0.5px solid var(--color-border-secondary);
+  background:var(--color-background-primary);
+  color:var(--color-text-primary);
+  font-size:13px;
+  width:100%;
+}
+
+.temperature-label-3 {
+  font-size:12px;
+  font-weight:500;
+  color:var(--color-text-primary);
+  margin-bottom:6px;
+}
+
+.temperature-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));
+  gap:8px;
+}
+
+.temperature-panel-3 {
+  background:var(--color-background-secondary);
+  border-radius:var(--border-radius-md);
+  padding:9px 11px;
+  font-size:12px;
+  color:var(--color-text-secondary);
+  line-height:1.5;
+}
+
+.temperature-media-3 {
+  width:100%;
+  min-width:260px;
+}
+
+.bzone-bar-style {
+  width:28px;
+  background:#26215C;
+}
+
+.bzone-bar-style-2 {
+  width:22px;
+  background:#185FA5;
+}
+
+.bzone-bar-style-3 {
+  width:18px;
+  background:#378ADD;
+}
+
+.bzone-bar-style-4 {
+  width:40px;
+  background:#1D9E75;
+}
+
+.bzone-bar-style-5 {
+  width:18px;
+  background:#EF9F27;
+}
+
+.bzone-bar-style-6 {
+  width:24px;
+  background:#BA7517;
+}
+
+.bzone-bar-style-7 {
+  width:18px;
+  background:#D85A30;
+}
+
+.bzone-bar-style-8 {
+  width:22px;
+  background:#A32D2D;
+}
+
+.temperature-text-10 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-top:12px;
+  line-height:1.6;
+}
+
+.temperature-grid-2 {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(170px, 1fr));
+  gap:8px;
+}
+
+.tb-style-31 {
+  width:20%;
+  background:#EF9F27;
+}
+
+.tb-style-32 {
+  width:35%;
+  background:#BA7517;
+}
+
+.tb-style-33 {
+  width:52%;
+  background:#D85A30;
+}
+
+.tb-style-34 {
+  width:65%;
+  background:#993C1D;
+}
+
+.tb-style-35 {
+  width:80%;
+  background:#712B13;
+}
+
+.tb-style-36 {
+  width:90%;
+  background:#501313;
+}
+
+.tb-style-37 {
+  width:72%;
+  background:#A32D2D;
+}
+
+.temperature-text-11 {
+  font-size:12px;
+  color:var(--color-text-secondary);
+  margin-bottom:12px;
+}
+
+.temperature-row-7 {
+  display:flex;
+  justify-content:flex-end;
+  margin-top:10px;
+}
+
+.game-next-btn {
+  font-size:12px;
+  padding:4px 14px;
+  display:none;
+}
+  

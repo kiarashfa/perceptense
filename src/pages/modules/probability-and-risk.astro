@@ -1,0 +1,1288 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/probability-and-risk.css';
+
+const mod = modules.find((m) => m.id === 12)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+<div class="module-header">
+  <i class="fa-solid fa-dice module-header-icon"></i>
+  <h1 class="module-title module-heading">Module 12: Probability & Risk</h1>
+</div>
+    <p class="module-subtitle">Odds, chance, and how to think about risk</p>
+
+    <!-- ============================================================
+         PART A — FEEL THE SCALE
+    ============================================================ -->
+    <h2 class="sec" id="part-a-feel-the-scale-of-probability-first">Part A · feel the scale of probability first</h2>
+
+    <div class="content-panel">
+      <div class="inline-card-title">What does "1 in N" actually look like?</div>
+      <div class="probability-text-2">Each dot below is one person or one event. The red dot is the one that "happens."</div>
+
+      <div class="u-mb-lg">
+        <div class="mini-card-title">1 in 10 — e.g. chance of getting a cold in any given month</div>
+        <div class="dot-grid" id="dots-10"></div>
+      </div>
+      <div class="u-mb-lg">
+        <div class="mini-card-title">1 in 100 — e.g. chance of a serious car accident in a year of driving</div>
+        <div class="dot-grid" id="dots-100"></div>
+      </div>
+      <div class="u-mb-lg">
+        <div class="mini-card-title">1 in 1,000 — e.g. dying in a car accident this year (UK/Western Europe) — showing 200 dots as a sample</div>
+        <div class="dot-grid" id="dots-1000"></div>
+        <div class="probability-text-3">Finding the red dot in this grid takes effort — and this is only a fifth of the full crowd. In the real group of 1,000, it would be even harder.</div>
+      </div>
+
+      <div class="probability-panel">
+        <strong class="text-primary">The crowd test:</strong> "1 in 1,000" means: imagine 1,000 people in a sports stadium. One of them. That's it. "1 in a million" is 20 such stadiums. "1 in a billion" is 20,000 stadiums — the entire population of a large city.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART B — PROBABILITY SCALE
+    ============================================================ -->
+    <h2 class="sec" id="part-b-the-probability-scale-real-anchors">Part B · the probability scale — real anchors</h2>
+
+    <div class="content-panel">
+      <div class="anchor-row">
+        <span class="pill p-red">~1 in 2</span>
+        <div><div class="atext">Lifetime cancer diagnosis (Western countries)</div><div class="asub">Most cancers are treatable. This high number surprises people who think cancer is rare.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-coral">~1 in 4</span>
+        <div><div class="atext">Dying of heart disease (lifetime risk)</div><div class="asub">The single largest cause of death in most developed countries.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">~1 in 100</span>
+        <div><div class="atext">Being involved in a serious car accident in any given year</div><div class="asub">People drive daily and feel safe — but across a lifetime of driving, the cumulative risk is substantial.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-amber">~1 in 500</span>
+        <div><div class="atext">Dying in a road accident this year (UK)</div><div class="asub">Higher in countries with less safe roads. Lower for pedestrians in cities.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">~1 in 11,000</span>
+        <div><div class="atext">Dying on a single commercial flight</div><div class="asub">Flying is ~50–100× safer per km than driving. Yet people fear it far more.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-green">~1 in 1,000,000</span>
+        <div><div class="atext">Being struck by lightning in a year</div><div class="asub">Lifetime risk (~1 in 15,000) is much higher — which is why "1 in a million" feels wrong for lightning.</div></div>
+      </div>
+      <div class="anchor-row">
+        <span class="pill p-blue">~1 in 14,000,000</span>
+        <div><div class="atext">Winning a major lottery jackpot (UK National Lottery)</div><div class="asub">You are ~1,000× more likely to be struck by lightning this year than to win the jackpot.</div></div>
+      </div>
+    </div>
+
+    <!-- Visual: logarithmic risk spectrum -->
+    <div class="content-panel">
+      <div class="inline-card-title">The probability spectrum — logarithmic scale</div>
+      <div class="probability-text-2">Each step left is 10× more likely. The distance between lottery and lightning is the same as lightning and car accidents — but it feels very different.</div>
+      <svg class="probability-media" viewBox="0 0 760 90" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#E6F1FB"/>
+            <stop offset="40%" stop-color="#EAF3DE"/>
+            <stop offset="70%" stop-color="#FAEEDA"/>
+            <stop offset="100%" stop-color="#FCEBEB"/>
+          </linearGradient>
+        </defs>
+        <!-- Gradient bar -->
+        <rect x="20" y="18" width="720" height="22" rx="5" fill="url(#specGrad)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <!-- Tick marks and labels: positions mapped from log10(1/p) range ~[0.3, 7.15] over 720px -->
+        <!-- p=0.5 → log=0.3 → x≈20+720*(0.3/6.85)=20+31=51 -->
+        <!-- p=1/4 → log=0.6 → x≈20+720*(0.6/6.85)=20+63=83 -->
+        <!-- p=1/100 → log=2 → x≈20+720*(2/6.85)=20+210=230 -->
+        <!-- p=1/500 → log=2.7 → x≈20+720*(2.7/6.85)=20+284=304 -->
+        <!-- p=1/11000 → log=4.04 → x≈20+720*(4.04/6.85)=20+425=445 -->
+        <!-- p=1/1M → log=6 → x≈20+720*(6/6.85)=20+631=651 -->
+        <!-- p=1/14M → log=7.15 → x≈20+720*(7.15/6.85)=20+752=740 capped at 740 -->
+        <g font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">
+          <!-- Cancer ~1/2 -->
+          <line x1="51" y1="16" x2="51" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="51" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 2</text>
+          <text x="51" y="65">Cancer</text>
+          <text x="51" y="74">(lifetime)</text>
+
+          <!-- Heart disease ~1/4 -->
+          <line x1="83" y1="16" x2="83" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="83" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 4</text>
+          <text x="83" y="65">Heart</text>
+          <text x="83" y="74">disease</text>
+
+          <!-- Car accident 1/100 -->
+          <line x1="230" y1="16" x2="230" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="230" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 100</text>
+          <text x="230" y="65">Car</text>
+          <text x="230" y="74">accident/yr</text>
+
+          <!-- Road death 1/500 -->
+          <line x1="304" y1="16" x2="304" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="304" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 500</text>
+          <text x="304" y="65">Road</text>
+          <text x="304" y="74">death/yr</text>
+
+          <!-- Flying 1/11000 -->
+          <line x1="445" y1="16" x2="445" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="445" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 11k</text>
+          <text x="445" y="65">Single</text>
+          <text x="445" y="74">flight</text>
+
+          <!-- Lightning 1/1M -->
+          <line x1="651" y1="16" x2="651" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="651" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 1M</text>
+          <text x="651" y="65">Lightning</text>
+          <text x="651" y="74">strike/yr</text>
+
+          <!-- Lottery 1/14M -->
+          <line x1="736" y1="16" x2="736" y2="42" stroke="var(--color-text-tertiary)" stroke-width="0.8"/>
+          <text x="736" y="55" font-weight="500" fill="var(--color-text-primary)">1 in 14M</text>
+          <text x="736" y="65">Lottery</text>
+          <text x="736" y="74">jackpot</text>
+        </g>
+        <!-- Arrow labels -->
+        <text x="20" y="12" font-size="9" fill="var(--color-text-secondary)">← more likely</text>
+        <text x="680" y="12" font-size="9" fill="var(--color-text-secondary)">less likely →</text>
+      </svg>
+    </div>
+
+    <!-- ============================================================
+         PART C — RELATIVE VS ABSOLUTE RISK
+    ============================================================ -->
+    <h2 class="sec" id="part-c-the-biggest-trap-relative-vs-absolute-risk">Part C · the biggest trap — relative vs absolute risk</h2>
+
+    <div class="content-panel">
+      <div class="panel-title-spaced">Interactive: see how the same fact can be presented two very different ways</div>
+
+      <div class="probability-row-2">
+        <select class="risk-scenario" id="risk-scenario">
+          <option value="0">Drug reduces heart attack risk by 50%</option>
+          <option value="1">Processed meat "increases cancer risk by 18%"</option>
+          <option value="2">New vaccine is "95% effective"</option>
+          <option value="3">"Coffee doubles your risk of X"</option>
+        </select>
+      </div>
+
+      <div class="risk-display" id="risk-display"></div>
+    </div>
+
+    <div class="probability-panel-2">
+      <div class="probability-label-3">The rule to remember forever</div>
+      <div class="probability-text-4">
+        Whenever you hear a relative risk ("X% more likely"), always ask: <strong class="text-primary">"more likely than what?"</strong> — what is the base rate?<br>
+        A 100% increase sounds catastrophic. If the base rate is 0.001%, doubling it gives 0.002% — almost nothing.<br>
+        A 10% increase sounds small. If the base rate is 30%, adding 3 percentage points matters a lot.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART D — COGNITIVE BIASES
+    ============================================================ -->
+    <h2 class="sec" id="part-d-cognitive-biases-why-our-probability-intuition-fails">Part D · cognitive biases — why our probability intuition fails</h2>
+
+    <div class="card-grid-2 u-mb-lg">
+      <div class="card">
+        <p class="clabel">Availability bias</p>
+        <p class="cval">Vivid = likely</p>
+        <p class="cnote">We judge probability by how easily we can imagine it. Plane crashes make the news; car crashes don't. So we fear the wrong things. Sharks kill ~5 people/year worldwide. Vending machines kill more.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Base rate neglect</p>
+        <p class="cval">Ignoring the denominator</p>
+        <p class="cnote">A drug test is "99% accurate." You test positive. What's the chance you actually have the disease? If only 1 in 10,000 people have it, probably less than 1% — because false positives outnumber true positives. See Part E.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Gambler's fallacy</p>
+        <p class="cval">Coins have no memory</p>
+        <p class="cnote">After 10 heads in a row, the next flip is still 50/50. The coin doesn't "owe" you tails. Each independent event resets to its base probability. Casinos are built on this misunderstanding.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Conjunction fallacy</p>
+        <p class="cval">Specific ≠ more likely</p>
+        <p class="cnote">"She is a feminist bank teller" feels more probable than "she is a bank teller" — but it can't be, because the specific includes the general. Adding detail always reduces probability, never increases it.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Neglect of probability</p>
+        <p class="cval">0.01% feels like 0%</p>
+        <p class="cnote">People treat very small probabilities as zero and very large ones as certainty. A 1% chance of catastrophe deserves serious attention — but emotionally, it registers as "won't happen." This is why people underinsure for tail risks.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Optimism bias</p>
+        <p class="cval">"It won't happen to me"</p>
+        <p class="cnote">Most people rate their personal risk as below average for almost every negative event — car accidents, divorce, illness. This is statistically impossible for the majority. We are not special; we are averages.</p>
+      </div>
+    </div>
+
+    <!-- Biases visual -->
+    <div class="content-panel">
+      <div class="panel-title">How we perceive vs. how things actually are</div>
+      <svg class="probability-media-2" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- Actual probability curve (roughly correct) -->
+        <!-- Perceived curve (over-weights extremes, under-weights middle) -->
+        <!-- X axis: probability 0 to 1, Y axis: perceived weight -->
+        <defs>
+          <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+            <polygon points="0 0, 6 2, 0 4" fill="var(--color-text-tertiary)"/>
+          </marker>
+        </defs>
+        <!-- Axes -->
+        <line x1="50" y1="120" x2="630" y2="120" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arrowhead)"/>
+        <line x1="50" y1="120" x2="50" y2="20" stroke="var(--color-border-secondary)" stroke-width="1" marker-end="url(#arrowhead)"/>
+        <text x="340" y="145" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">Objective probability (0 → 1)</text>
+        <text x="22" y="72" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" transform="rotate(-90,22,72)">Perceived weight</text>
+        <!-- Diagonal = perfect calibration -->
+        <line x1="50" y1="120" x2="620" y2="28" stroke="var(--color-border-tertiary)" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="545" y="24" font-size="9" fill="var(--color-text-tertiary)">perfect</text>
+        <!-- Prospect theory probability weighting curve (approx SVG path) -->
+        <!-- starts high (overweight small probs), flattens through middle, rises again at end -->
+        <path d="M 50,120 C 80,40 120,38 180,58 C 260,82 360,82 460,72 C 530,64 580,40 620,28"
+              fill="none" stroke="#378ADD" stroke-width="2"/>
+        <text x="200" y="46" font-size="9" fill="#378ADD" font-weight="500">how we actually perceive it</text>
+        <!-- Annotation: overweight rare -->
+        <line x1="90" y1="60" x2="90" y2="110" stroke="var(--color-border-tertiary)" stroke-width="0.7" stroke-dasharray="3,2"/>
+        <text x="92" y="78" font-size="8.5" fill="var(--color-text-secondary)">overweight</text>
+        <text x="92" y="88" font-size="8.5" fill="var(--color-text-secondary)">rare events</text>
+        <!-- Annotation: underweight middle -->
+        <line x1="320" y1="82" x2="320" y2="66" stroke="var(--color-border-tertiary)" stroke-width="0.7" stroke-dasharray="3,2"/>
+        <text x="322" y="62" font-size="8.5" fill="var(--color-text-secondary)">underweight</text>
+        <text x="322" y="72" font-size="8.5" fill="var(--color-text-secondary)">middle range</text>
+      </svg>
+      <div class="probability-text-5">
+        Humans don't perceive probability linearly. We overweight very small probabilities (lottery tickets feel plausible; shark attacks feel imminent) and underweight moderate ones. This is why both insurance and gambling industries are profitable — they exploit opposite ends of the same bias.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART E — FALSE POSITIVE PROBLEM
+    ============================================================ -->
+    <h2 class="sec" id="part-e-the-false-positive-problem-most-surprising-result-in-probability">Part E · the false positive problem — most surprising result in probability</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">Adjust the sliders — what does a positive test really mean?</div>
+
+      <div class="probability-row-3">
+        <label class="probability-text-6">Disease prevalence:</label>
+        <input class="u-flex-1" type="range" id="u-flex-1" min="1" max="500" value="10" step="1">
+        <span class="prev-out" id="prev-out">1 in 100</span>
+      </div>
+      <div class="probability-row-4">
+        <label class="probability-text-6">Test accuracy:</label>
+        <input class="u-flex-1" type="range" id="acc-slider" min="80" max="99" value="99" step="1">
+        <span class="prev-out" id="acc-out">99%</span>
+      </div>
+
+      <div class="u-mb-md" id="u-mb-10px"></div>
+      <div class="fp-result" id="fp-result"></div>
+      <div class="muted-copy" id="fp-explain"></div>
+    </div>
+
+    <!-- Bayes tree diagram (static illustrative) -->
+    <div class="content-panel">
+      <div class="compact-card-title">How to think about it: the frequency tree</div>
+      <div class="probability-text-7">Imagine 10,000 people tested for a disease that affects 1 in 100, with a 99% accurate test.</div>
+      <svg class="probability-media-2" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Root -->
+        <rect x="280" y="8" width="120" height="32" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+        <text x="340" y="28" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-primary)">10,000 people</text>
+        <!-- Branch lines -->
+        <line x1="290" y1="40" x2="160" y2="90" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <line x1="390" y1="40" x2="520" y2="90" stroke="var(--color-border-secondary)" stroke-width="1"/>
+        <!-- Sick branch -->
+        <rect x="90" y="90" width="140" height="32" rx="6" fill="#FAECE7" stroke="#FAECE7" stroke-width="0.8"/>
+        <text x="160" y="108" text-anchor="middle" font-size="11" fill="#712B13">100 have disease</text>
+        <!-- Healthy branch -->
+        <rect x="450" y="90" width="140" height="32" rx="6" fill="#EAF3DE" stroke="#EAF3DE" stroke-width="0.8"/>
+        <text x="520" y="108" text-anchor="middle" font-size="11" fill="#27500A">9,900 healthy</text>
+        <!-- From sick -->
+        <line x1="130" y1="122" x2="90" y2="158" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+        <line x1="190" y1="122" x2="230" y2="158" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+        <!-- True positive -->
+        <rect x="32" y="158" width="116" height="32" rx="5" fill="#E1F5EE" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="90" y="173" text-anchor="middle" font-size="10" fill="#085041" font-weight="600">99 test positive ✓</text>
+        <text x="90" y="184" text-anchor="middle" font-size="9" fill="#085041">(true positive)</text>
+        <!-- False negative -->
+        <rect x="168" y="158" width="116" height="32" rx="5" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="226" y="173" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">1 tests negative</text>
+        <text x="226" y="184" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">(false negative)</text>
+        <!-- From healthy -->
+        <line x1="490" y1="122" x2="450" y2="158" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+        <line x1="550" y1="122" x2="590" y2="158" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+        <!-- False positive -->
+        <rect x="388" y="158" width="124" height="32" rx="5" fill="#FCEBEB" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="450" y="173" text-anchor="middle" font-size="10" fill="#791F1F" font-weight="600">99 test positive ✗</text>
+        <text x="450" y="184" text-anchor="middle" font-size="9" fill="#791F1F">(false positive)</text>
+        <!-- True negative -->
+        <rect x="532" y="158" width="124" height="32" rx="5" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="594" y="173" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">9,801 negative ✓</text>
+        <text x="594" y="184" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">(true negative)</text>
+        <!-- Branch labels -->
+        <text x="205" y="75" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">1 in 100</text>
+        <text x="475" y="75" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">99 in 100</text>
+      </svg>
+      <div class="probability-panel-3">
+        <strong class="text-primary">The key insight:</strong> Among all 198 positive tests, only 99 are genuine — exactly 50%. The false positives equal the true positives because the 1% error rate applied to 9,900 healthy people generates as many wrong flags as the 99% hit rate finds in 100 sick ones. Prevalence drives everything.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART F — BIRTHDAY PARADOX
+    ============================================================ -->
+    <h2 class="sec" id="part-f-the-birthday-paradox-probability-defies-intuition">Part F · the birthday paradox — probability defies intuition</h2>
+
+    <div class="content-panel">
+      <div class="inline-card-title">How many people in a room before two share a birthday?</div>
+      <div class="probability-text-7">Drag to find where the probability crosses 50% — most people guess far too high.</div>
+      <div class="probability-row-5">
+        <span class="muted-text-small">2</span>
+        <input class="u-flex-1" type="range" id="bday-slider" min="2" max="60" value="23" step="1">
+        <span class="muted-text-small">60</span>
+      </div>
+      <div class="probability-row-6">
+        <div class="bday-people" id="bday-people"></div>
+        <div class="bday-prob" id="bday-prob"></div>
+      </div>
+      <div class="probability-media-3">
+        <div class="bday-bar" id="bday-bar"></div>
+      </div>
+      <div class="muted-copy-tight" id="bday-note"></div>
+    </div>
+
+    <!-- Birthday paradox curve SVG -->
+    <div class="content-panel">
+      <div class="inline-card-title">The full curve — probability of a shared birthday</div>
+      <svg class="probability-media-2" id="bday-curve-svg" viewBox="0 0 620 160" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="probability-text-3">The curve is deceptively steep. It climbs rapidly because each new person can match any of the people already in the room — the number of possible pairs grows quadratically.</div>
+    </div>
+
+    <!-- ============================================================
+         PART G — REAL LIFE RISK
+    ============================================================ -->
+    <h2 class="sec" id="part-g-risk-in-real-life-the-numbers-that-actually-matter">Part G · risk in real life — the numbers that actually matter</h2>
+
+    <div class="card-grid-2 u-mb-lg">
+      <div class="card">
+        <p class="clabel">Lifetime risk of dying in a car (UK/EU)</p>
+        <p class="cval">~1 in 240</p>
+        <p class="cnote">Yet most people drive daily without conscious fear. We accept familiar risks far more readily than unfamiliar ones — even when unfamiliar risks are lower.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Lifetime risk of dying in a plane crash</p>
+        <p class="cval">~1 in 11,000</p>
+        <p class="cnote">About 45× safer than driving per journey. Per km travelled, flying is ~50–100× safer. Fear of flying is one of the most statistically unjustified common fears.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Risk of a serious side effect from a common vaccine</p>
+        <p class="cval">~1 in 100,000</p>
+        <p class="cnote">The disease being vaccinated against typically carries 100–10,000× greater risk of the same outcome. Vaccine risk must always be weighed against disease risk, not against zero.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Risk of dying from surgery (routine, healthy adult)</p>
+        <p class="cval">~1 in 100,000</p>
+        <p class="cnote">General anaesthesia alone: ~1 in 100,000. Surgical risk rises sharply with age, obesity, and pre-existing conditions.</p>
+      </div>
+    </div>
+
+    <!-- Visual comparison bar chart -->
+    <div class="content-panel">
+      <div class="panel-title">Annual death risk per 100,000 people — visual comparison</div>
+      <div id="risk-bars"></div>
+      <div class="probability-text-9">Bar width is proportional to risk on a linear scale within this comparison. Heart disease dominates everything else. The "all causes" bar at ~830/100k shows total mortality; most deaths cluster around a few causes.</div>
+    </div>
+
+    <!-- ============================================================
+         PART H — EXPECTED VALUE
+    ============================================================ -->
+    <h2 class="sec" id="part-h-expected-value-probability-impact">Part H · expected value — probability × impact</h2>
+
+    <div class="content-panel">
+      <div class="compact-card-title">What is expected value?</div>
+      <div class="probability-text-10">
+        Expected value (EV) is the probability-weighted average of all possible outcomes. It answers: "If I repeated this decision many times, what would the average outcome be?" It is the foundation of rational decision-making under uncertainty.
+      </div>
+      <div class="probability-panel-4">
+        <strong class="text-primary">Formula:</strong> EV = Σ (probability<sub>i</sub> × outcome<sub>i</sub>) for all possible outcomes i
+      </div>
+
+      <div class="panel-title-spaced">Build your own expected value table</div>
+      <div class="u-mb-sm" id="u-mb-8px"></div>
+      <button class="addevrow-control" onclick="addEVRow()">+ Add outcome</button>
+      <div class="ev-result" id="ev-result"></div>
+      <div class="muted-copy" id="ev-note"></div>
+    </div>
+
+    <div class="probability-panel-2">
+      <div class="probability-label-3">When EV is not enough: the role of variance</div>
+      <div class="probability-text-4">
+        Two choices can have identical expected values but feel very different. A 1% chance of winning £1,000 and a 100% chance of winning £10 both have EV = £10 — but they are not equivalent decisions. When a bad outcome is <em>unacceptable</em> (bankruptcy, death, irreversible harm), expected value undercounts the downside. This is why people buy insurance at negative expected value: they are paying to reduce variance, not to maximise EV.
+      </div>
+    </div>
+
+    <!-- EV examples -->
+    <div class="content-panel">
+      <div class="panel-title">Real-world expected value examples</div>
+
+      <div class="tab-group" id="ev-tabs">
+        <button class="tab-btn active" onclick="showEVExample(0,this)">Lottery ticket</button>
+        <button class="tab-btn" onclick="showEVExample(1,this)">Insurance</button>
+        <button class="tab-btn" onclick="showEVExample(2,this)">Casino roulette</button>
+      </div>
+      <div class="probability-text-4" id="ev-example-display"></div>
+    </div>
+
+    <!-- ============================================================
+         PART I — MONTY HALL PROBLEM
+    ============================================================ -->
+    <h2 class="sec" id="part-i-the-monty-hall-problem-why-switching-wins">Part I · the Monty Hall problem — why switching wins</h2>
+
+    <div class="content-panel">
+      <div class="inline-card-title">Play the game — then run 1,000 simulations</div>
+      <div class="probability-text-2">
+        You're on a game show. Behind one door is a car, behind the other two are goats. You pick a door. The host (who knows where the car is) opens a different door revealing a goat. Should you switch?
+      </div>
+
+      <div id="mh-game-area">
+        <div class="mh-doors" id="mh-doors"></div>
+        <div class="mh-message" id="mh-message"></div>
+        <div class="probability-row-7">
+          <button class="mh-stay-btn" id="mh-stay-btn" onclick="montyChoice('stay')">Stay with my door</button>
+          <button class="mh-switch-btn" id="mh-switch-btn" onclick="montyChoice('switch')">Switch doors</button>
+          <button class="is-hidden" id="is-hidden" onclick="montyReset()">Play again</button>
+        </div>
+      </div>
+
+      <div class="probability-div-style-2"></div>
+      <div class="panel-title-spaced">Simulation — run it yourself</div>
+      <div class="button-row">
+        <button onclick="runMontySimulation(100)">Run 100 games</button>
+        <button onclick="runMontySimulation(1000)">Run 1,000 games</button>
+        <button onclick="runMontySimulation(10000)">Run 10,000 games</button>
+        <button class="text-tertiary" onclick="resetMontySimulation()">Reset</button>
+      </div>
+      <div class="is-hidden" id="mh-sim-results">
+        <div id="mh-sim-bars"></div>
+        <div class="mh-sim-note" id="mh-sim-note"></div>
+      </div>
+    </div>
+
+    <div class="probability-panel-2">
+      <div class="probability-label-3">Why switching is correct (the intuition)</div>
+      <div class="probability-text-4">
+        When you first pick a door, you have a 1/3 chance of being right. That means there's a 2/3 chance the car is behind one of the other two doors. The host, who knows where the car is, then eliminates a losing door — but crucially, this doesn't change your initial 1/3 probability. The entire 2/3 probability "concentrates" onto the remaining unchosen door. Switching captures that 2/3. Staying keeps the original 1/3. The simulation above proves it empirically.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART J — LAW OF LARGE NUMBERS
+    ============================================================ -->
+    <h2 class="sec" id="part-j-the-law-of-large-numbers-why-randomness-evens-out">Part J · the law of large numbers — why randomness evens out</h2>
+
+    <div class="content-panel">
+      <div class="inline-card-title">Flip a coin many times — watch the proportion of heads converge</div>
+      <div class="probability-text-7">After just a few flips, the proportion swings wildly. But with thousands of flips, it converges inexorably toward 50%. This is the law of large numbers — not magic, but mathematics.</div>
+
+      <div class="button-row-spaced">
+        <button onclick="flipCoins(10)">Flip 10</button>
+        <button onclick="flipCoins(100)">Flip 100</button>
+        <button onclick="flipCoins(1000)">Flip 1,000</button>
+        <button onclick="flipCoins(10000)">Flip 10,000</button>
+        <button class="text-tertiary" onclick="resetCoins()">Reset</button>
+      </div>
+
+      <canvas class="lln-canvas" id="lln-canvas" width="800" height="180"></canvas>
+
+      <div class="probability-row-10">
+        <div class="lln-stats" id="lln-stats"></div>
+        <div class="muted-text-small" id="lln-note"></div>
+      </div>
+    </div>
+
+    <div class="card-grid-2 u-mb-lg">
+      <div class="card">
+        <p class="clabel">Law of Large Numbers</p>
+        <p class="cval">Results converge</p>
+        <p class="cnote">With enough trials, the sample average converges to the true expected value. This is why casinos never lose in the long run: their edge is small (2–5%) but applied across millions of bets, it is mathematically certain to accumulate.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Law of Small Numbers (fallacy)</p>
+        <p class="cval">Small samples lie</p>
+        <p class="cnote">People expect small samples to be representative. If you flip a coin 6 times and get 5 heads, you don't conclude the coin is biased — but in other domains (crime rates in small towns, drug trials with 20 patients), this error is made constantly.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART K — CONDITIONAL PROBABILITY & INDEPENDENCE
+    ============================================================ -->
+    <h2 class="sec" id="part-k-conditional-probability-when-events-are-not-independent">Part K · conditional probability — when events are not independent</h2>
+
+    <div class="content-panel">
+      <div class="compact-card-title">The multiplication trap: independent vs. dependent events</div>
+      <div class="probability-text-10">
+        When events are independent, you multiply probabilities. When they are not, you must condition on what has already happened. This distinction causes more probability errors than almost anything else.
+      </div>
+
+      <!-- Interactive: combined probability explorer -->
+      <div class="probability-row-11">
+        <label class="probability-text-11">Event A probability:</label>
+        <input class="pa-slider" type="range" id="pa-slider" min="1" max="99" value="50" step="1">
+        <span class="pa-out" id="pa-out">50%</span>
+      </div>
+      <div class="probability-row-11">
+        <label class="probability-text-11">Event B probability:</label>
+        <input class="pa-slider" type="range" id="pb-slider" min="1" max="99" value="50" step="1">
+        <span class="pa-out" id="pb-out">50%</span>
+      </div>
+      <div class="button-row">
+        <button class="tab-btn active" id="indep-btn" onclick="setIndependence(true)">Independent events</button>
+        <button class="tab-btn" id="dep-btn" onclick="setIndependence(false)">Dependent events</button>
+      </div>
+      <div class="risk-display" id="cond-result"></div>
+    </div>
+
+    <!-- Venn diagram SVG -->
+    <div class="content-panel">
+      <div class="inline-card-title">Visualising probability: Venn diagrams</div>
+      <div class="probability-grid">
+        <div>
+          <div class="probability-label-4">Independent: P(A∩B) = P(A)×P(B)</div>
+          <svg class="probability-media-2" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="75" cy="60" r="45" fill="#E6F1FB" fill-opacity="0.7" stroke="#378ADD" stroke-width="1.2"/>
+            <circle cx="125" cy="60" r="45" fill="#FAECE7" fill-opacity="0.7" stroke="#D85A30" stroke-width="1.2"/>
+            <!-- Overlap -->
+            <path d="M 100,22 A 45,45 0 0,1 100,98 A 45,45 0 0,1 100,22" fill="#EEEDFE" fill-opacity="0.8"/>
+            <text x="55" y="64" text-anchor="middle" font-size="11" fill="#0C447C" font-weight="600">A</text>
+            <text x="145" y="64" text-anchor="middle" font-size="11" fill="#712B13" font-weight="600">B</text>
+            <text x="100" y="64" text-anchor="middle" font-size="10" fill="#3C3489">A∩B</text>
+            <text x="100" y="112" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">overlap = P(A) × P(B)</text>
+          </svg>
+        </div>
+        <div>
+          <div class="probability-label-4">Mutually exclusive: P(A∩B) = 0</div>
+          <svg class="probability-media-2" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="65" cy="60" r="45" fill="#E6F1FB" fill-opacity="0.7" stroke="#378ADD" stroke-width="1.2"/>
+            <circle cx="135" cy="60" r="45" fill="#FAECE7" fill-opacity="0.7" stroke="#D85A30" stroke-width="1.2"/>
+            <text x="55" y="64" text-anchor="middle" font-size="11" fill="#0C447C" font-weight="600">A</text>
+            <text x="145" y="64" text-anchor="middle" font-size="11" fill="#712B13" font-weight="600">B</text>
+            <text x="100" y="112" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">no overlap — cannot both occur</text>
+          </svg>
+        </div>
+      </div>
+      <div class="probability-text-12">
+        <strong class="text-primary">Common error:</strong> "What's the chance of rain on both Saturday and Sunday?" — people often add (50% + 50% = 100%) rather than multiply (50% × 50% = 25%), forgetting the events are independent. Only mutually exclusive events add up.
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PART L — TEST YOURSELF
+    ============================================================ -->
+    <h2 class="sec" id="part-l-q-and-a">Part L · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. A headline reads: "New drug cuts heart attack risk by 50%." Should you be impressed?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Not necessarily — you need the base rate. If your annual risk of a heart attack was 2%, a 50% relative reduction brings it to 1%. That's a real 1 percentage point benefit — meaningful. But if your base risk was 0.2%, the drug brings it to 0.1% — an absolute reduction of just 0.1 percentage points. The drug would need to treat 1,000 people to prevent one heart attack. Whether that justifies the cost, side effects, and daily pill-taking depends entirely on that absolute number, not the 50% headline.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. You flip a fair coin and get 7 heads in a row. What is the probability the next flip is tails?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Exactly 50%. Each flip is independent — the coin has no memory of previous outcomes. The probability of 7 heads in a row happening was 1/128 (~0.78%), which was unlikely, but it happened. Now that it has happened, you are simply at flip #8, and the probability of tails is 50%. This is the gambler's fallacy: the feeling that "tails is due" is a cognitive error. Casinos thrive on it. Roulette wheels display recent results precisely to feed this illusion.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. A disease affects 1 in 1,000 people. A test for it is 99% accurate. You test positive. What is the approximate probability you actually have the disease?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">About 9%. This is the false positive paradox. Test 100,000 people: 100 actually have the disease, and the 99% test catches 99 of them (true positives). But 99,900 don't have it, and the 1% error rate gives 999 false positives. So among all ~1,098 positive results, only 99 are real — that's 99/1,098 ≈ 9%. This is why medical screening for rare diseases is complex: even very accurate tests produce mostly false positives when the disease is uncommon. Doctors follow up positive screening tests with confirmatory tests precisely because of this.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. You are choosing between two routes to work. Route A has a 10% chance of making you 10 minutes late. Route B has a 1% chance of making you 60 minutes late. Which is riskier in terms of expected delay?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">They are almost equal. Expected delay = probability × impact. Route A: 10% × 10 min = 1 minute expected delay per trip. Route B: 1% × 60 min = 0.6 minutes expected delay per trip. Route B is actually slightly better in pure expected value — but Route A's frequent small delays might be more manageable than Route B's rare catastrophic ones. This illustrates that expected value isn't always the right metric: variance (how unpredictable the outcome is) matters too, especially when a bad outcome is truly unacceptable.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. "Smokers are 15–30× more likely to get lung cancer than non-smokers." Is this a relative or absolute risk? What does it mean in practice?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">It's a relative risk — but the base rate is high enough that it translates to a large absolute risk too. About 0.1% of non-smokers develop lung cancer per year. A 20× increase means ~2% of heavy smokers develop it per year. Over 40 years of heavy smoking, roughly 1 in 10 to 1 in 6 heavy smokers will develop lung cancer. That's an enormous absolute risk — and this is before counting heart disease, stroke, and other cancers that smoking also dramatically increases. This is one of the clearest examples in medicine where both the relative risk (20×) and the absolute risk (~15% lifetime) are both genuinely large and alarming.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. On the Monty Hall problem: after the host reveals a goat, is the probability of winning really 2/3 if you switch — or is it 50/50?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">It is genuinely 2/3 if you switch, not 50/50. The key is that the host's action is not random — the host always opens a losing door and always knows where the car is. This asymmetry is what makes it non-obvious. When you picked your original door, you had 1/3 probability of being right. The other two doors together held 2/3. The host's reveal collapses the two doors into one — but the 2/3 stays attached to the "other side." If this feels wrong, run the simulation above: after 10,000 trials, switchers win ~67% and stayers win ~33%. The mathematics is unambiguous; the intuition misleads almost everyone, including professional mathematicians when the problem was first published.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. A financial advisor says: "Our fund has outperformed the market 8 years in a row." Is this evidence of skill?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">It depends entirely on how many funds you're looking at. If a fair coin beats the market roughly 50% of years, the probability of any one fund doing it 8 years in a row by luck is (0.5)⁸ = 1/256, or about 0.4%. That seems impressive — but if there are 5,000 active funds, you'd expect 5,000 × 0.004 ≈ 20 funds to have 8-year streaks purely by chance. This is survivorship bias combined with the law of large numbers working against us. The funds that went to zero aren't in the advertisement. Before attributing skill, ask: how many funds were there in total? What's the track record after the advertisement was made?</div>
+    </div>
+
+    
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+/* ========================================================
+   DOT GRIDS
+======================================================== */
+function buildDots(id, n, highlightIndex) {
+  const wrap = document.getElementById(id);
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  for (let i = 0; i < n; i++) {
+    const d = document.createElement('div');
+    d.className = 'dot';
+    d.style.background = (i === highlightIndex) ? '#E24B4A' : 'var(--color-background-secondary)';
+    d.style.border = (i === highlightIndex) ? 'none' : '0.5px solid var(--color-border-secondary)';
+    wrap.appendChild(d);
+  }
+}
+buildDots('dots-10', 10, 0);
+buildDots('dots-100', 100, 7);
+buildDots('dots-1000', 200, 113);
+
+/* ========================================================
+   RELATIVE vs ABSOLUTE RISK
+======================================================== */
+const riskScenarios = [
+  {
+    headline: 'Drug reduces heart attack risk by 50%',
+    relative: '50% reduction (relative risk)',
+    base: 'In a typical at-risk group, ~2% have a heart attack per year',
+    absolute: '2% → 1% — an absolute reduction of 1 percentage point',
+    nnt: '100 patients must take the drug for 1 year to prevent 1 heart attack (NNT = 100)',
+    verdict: 'Real but modest. Worth taking if side effects are low. Would you take a daily pill, with potential side effects, to reduce your personal risk from 2% to 1%? That is the actual decision.',
+    col: '#1D9E75'
+  },
+  {
+    headline: 'Processed meat increases colon cancer risk by 18%',
+    relative: '18% relative risk increase',
+    base: 'Lifetime colon cancer risk for an average person: ~5%',
+    absolute: '5% → 5.9% — an absolute increase of ~0.9 percentage points',
+    nnt: '~110 people would need to eat processed meat regularly for a lifetime for 1 additional case of colon cancer',
+    verdict: 'A real but small absolute risk. The 18% figure is technically accurate but creates false alarm. Other lifestyle factors (exercise, obesity, alcohol) have far larger absolute effects on cancer risk.',
+    col: '#EF9F27'
+  },
+  {
+    headline: 'Vaccine is 95% effective',
+    relative: '95% relative risk reduction in getting the disease',
+    base: 'In trials, ~1% of unvaccinated people got the disease',
+    absolute: '1% → 0.05% — an absolute reduction of 0.95 percentage points',
+    nnt: 'About 105 people vaccinated to prevent 1 case — but those prevented cases include severe illness and death',
+    verdict: 'For common or severe diseases, even modest absolute reductions are enormously valuable at population scale. Vaccinating 100 million people with NNT=105 prevents ~1 million cases.',
+    col: '#378ADD'
+  },
+  {
+    headline: '"Coffee doubles your risk of X"',
+    relative: '100% relative risk increase (2× = "doubles")',
+    base: 'Suppose X affects 0.5 per 100,000 people per year (very rare)',
+    absolute: '0.5 → 1 per 100,000 — still only 1 in 100,000',
+    nnt: '100,000 coffee drinkers would need to be tracked for a year to observe 0.5 extra cases',
+    verdict: '"Doubles the risk" of a rare event is often meaningless in absolute terms. Always ask the base rate before worrying about a relative risk increase.',
+    col: '#D85A30'
+  }
+];
+
+function updateRisk() {
+  const i = parseInt(document.getElementById('risk-scenario').value);
+  const s = riskScenarios[i];
+  document.getElementById('risk-display').innerHTML =
+    `<div style="font-size:15px; font-weight:500; color:var(--color-text-primary); margin-bottom:10px;">"${s.headline}"</div>` +
+    `<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What the headline says</div><div style="font-size:13px; color:#A32D2D; font-weight:500;">${s.relative}</div></div>` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Base rate (what you need to know)</div><div style="font-size:13px; color:var(--color-text-primary);">${s.base}</div></div>` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Absolute risk (the real story)</div><div style="font-size:13px; color:${s.col}; font-weight:500;">${s.absolute}</div></div>` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Number needed to treat (NNT)</div><div style="font-size:13px; color:var(--color-text-primary);">${s.nnt}</div></div>` +
+    `</div>` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:10px 12px; font-size:12px; color:var(--color-text-secondary); line-height:1.6;"><strong style="color:var(--color-text-primary);">Verdict: </strong>${s.verdict}</div>`;
+}
+
+/* ========================================================
+   FALSE POSITIVE SLIDER
+======================================================== */
+function updateFP() {
+  const prev = parseInt(document.getElementById('u-flex-1').value);
+  const acc  = parseInt(document.getElementById('acc-slider').value) / 100;
+  document.getElementById('prev-out').textContent = '1 in ' + prev;
+  document.getElementById('acc-out').textContent = (acc * 100).toFixed(0) + '%';
+
+  const pop = 100000;
+  const sick = Math.round(pop / prev);
+  const healthy = pop - sick;
+  const truePos  = Math.round(sick * acc);
+  const falsePos = Math.round(healthy * (1 - acc));
+  const total_pos = truePos + falsePos;
+  const ppv = total_pos > 0 ? (truePos / total_pos * 100) : 0;
+
+  document.getElementById('fp-result').textContent =
+    'If you test positive: ' + ppv.toFixed(1) + '% chance you actually have it.';
+  document.getElementById('fp-result').style.color = ppv < 30 ? '#A32D2D' : ppv < 70 ? '#BA7517' : '#27500A';
+
+  document.getElementById('fp-explain').innerHTML =
+    `In 100,000 tested people: <strong style="color:var(--color-text-primary);">${sick.toLocaleString()} have the disease</strong>, ${healthy.toLocaleString()} do not.<br>` +
+    `The test catches <strong style="color:#1D9E75;">${truePos.toLocaleString()} true positives</strong> but also flags <strong style="color:#A32D2D;">${falsePos.toLocaleString()} false positives</strong>.<br>` +
+    `Among all ${total_pos.toLocaleString()} positive results, only ${truePos.toLocaleString()} are real — <strong style="color:var(--color-text-primary);">${ppv.toFixed(1)}%</strong>.<br>` +
+    `<span style="font-size:11px;">Tip: try setting prevalence to 1 in 10,000 with a 99% accurate test. The result will shock you.</span>`;
+}
+
+/* ========================================================
+   BIRTHDAY PARADOX
+======================================================== */
+function bdayProb(n) {
+  let prob = 1;
+  for (let k = 0; k < n; k++) prob *= (365 - k) / 365;
+  return 1 - prob;
+}
+
+function updateBday() {
+  const n = parseInt(document.getElementById('bday-slider').value);
+  const pMatch = bdayProb(n) * 100;
+  document.getElementById('bday-people').textContent = n + ' people';
+  document.getElementById('bday-prob').textContent = pMatch.toFixed(1) + '% chance of a shared birthday';
+  document.getElementById('bday-bar').style.width = Math.min(pMatch, 100) + '%';
+  document.getElementById('bday-bar').style.background = pMatch >= 50 ? '#1D9E75' : '#378ADD';
+  let note = '';
+  if (pMatch < 50) note = `Still below 50%. ${23 - n} more people needed to cross the 50% threshold.`;
+  else if (n === 23) note = 'With just 23 people — barely more than a classroom — there is a 50.7% chance two share a birthday. Most people guess 183 (half of 365). The maths surprises almost everyone.';
+  else if (pMatch > 99) note = 'Almost certain. With 57+ people, a shared birthday exceeds 99%.';
+  else note = `${pMatch.toFixed(1)}% — already past the 50% threshold. It only took 23.`;
+  document.getElementById('bday-note').textContent = note;
+}
+
+/* Birthday curve SVG */
+function drawBdayCurve() {
+  const svg = document.getElementById('bday-curve-svg');
+  if (!svg) return;
+  const W = 620, H = 160, padL = 44, padR = 14, padT = 14, padB = 30;
+  const cW = W - padL - padR, cH = H - padT - padB;
+  let path = '';
+  for (let n = 2; n <= 60; n++) {
+    const p = bdayProb(n);
+    const x = padL + (n - 2) / 58 * cW;
+    const y = padT + (1 - p) * cH;
+    path += (n === 2 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+  }
+  // Area fill
+  const x2 = padL + cW, x0 = padL;
+  const areaPath = path + `L${x2},${padT+cH} L${x0},${padT+cH} Z`;
+
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="bdayGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#378ADD" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#378ADD" stop-opacity="0.03"/>
+      </linearGradient>
+    </defs>
+    <!-- Grid lines -->
+    <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${padT+cH}" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+    <line x1="${padL}" y1="${padT+cH}" x2="${padL+cW}" y2="${padT+cH}" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+    <line x1="${padL}" y1="${padT + cH*0.5}" x2="${padL+cW}" y2="${padT + cH*0.5}" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <line x1="${padL}" y1="${padT}" x2="${padL+cW}" y2="${padT}" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="3,3"/>
+    <!-- Y axis labels -->
+    <text x="${padL-4}" y="${padT+cH}" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)">0%</text>
+    <text x="${padL-4}" y="${padT+cH*0.5+4}" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)">50%</text>
+    <text x="${padL-4}" y="${padT+4}" text-anchor="end" font-size="9" fill="var(--color-text-tertiary)">100%</text>
+    <!-- X axis ticks -->
+    ${[10,20,23,30,40,50,60].map(n => {
+      const x = padL + (n-2)/58*cW;
+      return `<line x1="${x}" y1="${padT+cH}" x2="${x}" y2="${padT+cH+4}" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
+              <text x="${x}" y="${padT+cH+13}" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">${n}</text>`;
+    }).join('')}
+    <!-- Area -->
+    <path d="${areaPath}" fill="url(#bdayGrad)"/>
+    <!-- Curve -->
+    <path d="${path}" fill="none" stroke="#378ADD" stroke-width="2"/>
+    <!-- 50% marker at n=23 -->
+    ${(() => {
+      const x23 = padL + 21/58*cW;
+      const y23 = padT + (1 - bdayProb(23)) * cH;
+      return `<line x1="${x23}" y1="${padT}" x2="${x23}" y2="${padT+cH}" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3,2"/>
+              <circle cx="${x23}" cy="${y23}" r="4" fill="#1D9E75"/>
+              <text x="${x23+5}" y="${y23-5}" font-size="9" fill="#1D9E75" font-weight="600">23 people = 50.7%</text>`;
+    })()}
+    <!-- X axis label -->
+    <text x="${padL + cW/2}" y="${H}" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">Number of people in the room</text>
+  `;
+}
+
+/* ========================================================
+   RISK BARS (Part G)
+======================================================== */
+function drawRiskBars() {
+  const risks = [
+    { label: 'Heart disease', rate: 179, col: '#A32D2D' },
+    { label: 'Cancer (all)', rate: 149, col: '#D85A30' },
+    { label: 'Stroke', rate: 36, col: '#EF9F27' },
+    { label: 'Accidents', rate: 28, col: '#BA7517' },
+    { label: 'Respiratory', rate: 40, col: '#633806' },
+    { label: 'Road deaths (UK)', rate: 2.9, col: '#378ADD' },
+    { label: 'Drowning', rate: 1.1, col: '#0C447C' },
+    { label: 'Commercial flight', rate: 0.009, col: '#1D9E75' },
+  ];
+  const max = Math.max(...risks.map(r => r.rate));
+  const wrap = document.getElementById('risk-bars');
+  if (!wrap) return;
+  wrap.innerHTML = risks.map(r => {
+    const pct = (r.rate / max * 100).toFixed(1);
+    const display = r.rate < 1 ? r.rate.toFixed(3) : r.rate.toFixed(r.rate < 10 ? 1 : 0);
+    return `<div class="bar-row" style="margin-bottom:5px;">
+      <div class="bl" style="width:130px;">${r.label}</div>
+      <div style="flex:1; background:var(--color-background-secondary); border-radius:3px; height:20px; overflow:hidden;">
+        <div style="width:${pct}%; background:${r.col}; height:20px; border-radius:3px; display:flex; align-items:center; padding-left:6px; min-width:30px; transition:width 0.3s;">
+          <span style="font-size:10px; font-weight:600; color:#fff; white-space:nowrap;">${display}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+/* ========================================================
+   EXPECTED VALUE CALCULATOR
+======================================================== */
+let evRows = [
+  { prob: 50, outcome: 100 },
+  { prob: 30, outcome: -50 },
+  { prob: 20, outcome: 0 }
+];
+
+function renderEVRows() {
+  const wrap = document.getElementById('u-mb-8px');
+  wrap.innerHTML = evRows.map((r, i) => `
+    <div style="display:flex; gap:8px; align-items:center; margin-bottom:6px; flex-wrap:wrap;">
+      <input type="number" value="${r.prob}" min="0" max="100" step="1"
+        style="width:70px; font-size:13px;"
+        oninput="evRows[${i}].prob=parseFloat(this.value)||0;computeEV()"
+        placeholder="prob %">
+      <span style="font-size:12px; color:var(--color-text-secondary);">% chance of</span>
+      <input type="number" value="${r.outcome}" step="1"
+        style="width:90px; font-size:13px;"
+        oninput="evRows[${i}].outcome=parseFloat(this.value)||0;computeEV()"
+        placeholder="outcome">
+      <span style="font-size:12px; color:var(--color-text-secondary);">→ weighted: <strong style="color:var(--color-text-primary);">${(r.prob/100*r.outcome).toFixed(2)}</strong></span>
+      ${evRows.length > 1 ? `<button onclick="removeEVRow(${i})" style="font-size:11px; padding:2px 7px; color:var(--color-text-tertiary);">✕</button>` : ''}
+    </div>
+  `).join('');
+  computeEV();
+}
+
+function addEVRow() {
+  evRows.push({ prob: 0, outcome: 0 });
+  renderEVRows();
+}
+
+function removeEVRow(i) {
+  evRows.splice(i, 1);
+  renderEVRows();
+}
+
+function computeEV() {
+  const totalProb = evRows.reduce((s, r) => s + r.prob, 0);
+  const ev = evRows.reduce((s, r) => s + r.prob / 100 * r.outcome, 0);
+  const res = document.getElementById('ev-result');
+  const note = document.getElementById('ev-note');
+  res.textContent = `Expected value: ${ev.toFixed(2)}`;
+  res.style.color = ev > 0 ? '#1D9E75' : ev < 0 ? '#A32D2D' : 'var(--color-text-primary)';
+  const probWarn = Math.abs(totalProb - 100) > 0.5;
+  note.innerHTML = probWarn
+    ? `<span style="color:#BA7517;">⚠ Probabilities sum to ${totalProb.toFixed(1)}% — they should sum to 100% for a valid expected value.</span>`
+    : `Probabilities sum to ${totalProb.toFixed(1)}%. ${ev > 0 ? 'This is a positive expected value decision.' : ev < 0 ? 'This is a negative expected value decision — you lose on average.' : 'Break-even expected value.'}`;
+}
+
+/* ========================================================
+   EV EXAMPLES
+======================================================== */
+const evExamples = [
+  {
+    html: `<div style="margin-bottom:8px;"><strong style="color:var(--color-text-primary);">UK National Lottery jackpot (£2 ticket)</strong></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary);">Jackpot win (1 in 45M)</div>
+        <div style="font-size:13px; color:var(--color-text-primary);">~£4M × 1/45,000,000 = <strong>£0.089</strong></div>
+      </div>
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary);">All prizes combined</div>
+        <div style="font-size:13px; color:var(--color-text-primary);">Expected return: ~<strong>£0.45</strong></div>
+      </div>
+    </div>
+    <div style="font-size:12px; color:var(--color-text-secondary); line-height:1.6;">For every £2 ticket, you expect to get back about £0.45 on average — a loss of £1.55 per ticket. The lottery is a tax on probability innumeracy. The small prizes are designed to make you feel like you "nearly won" — classic gambler's fallacy bait. The rational reason to buy a ticket is entertainment value, not investment.</div>`
+  },
+  {
+    html: `<div style="margin-bottom:8px;"><strong style="color:var(--color-text-primary);">Home insurance (a negative EV purchase that makes sense)</strong></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary);">Annual premium</div>
+        <div style="font-size:13px; color:var(--color-text-primary);"><strong>£500/year</strong></div>
+      </div>
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary);">Expected payout (statistical)</div>
+        <div style="font-size:13px; color:var(--color-text-primary);"><strong>~£350/year</strong></div>
+      </div>
+    </div>
+    <div style="font-size:12px; color:var(--color-text-secondary); line-height:1.6;">Insurance has negative expected value by design — the insurer must profit. Yet buying it is rational because the loss it protects against (your house burning down) is catastrophic and irreversible — not just financially costly. EV is the right tool when you can repeat a bet many times. For one-off, life-altering outcomes, avoiding catastrophic variance matters more than maximising expected value.</div>`
+  },
+  {
+    html: `<div style="margin-bottom:8px;"><strong style="color:var(--color-text-primary);">European roulette (single number bet)</strong></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary);">Win (1/37 chance)</div>
+        <div style="font-size:13px; color:var(--color-text-primary);">+£35 × 1/37 = <strong>£0.946</strong></div>
+      </div>
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary);">Lose (36/37 chance)</div>
+        <div style="font-size:13px; color:var(--color-text-primary);">−£1 × 36/37 = <strong>−£0.973</strong></div>
+      </div>
+    </div>
+    <div style="font-size:12px; color:var(--color-text-secondary); line-height:1.6;">EV per £1 bet = £0.946 − £0.973 = <strong style="color:#A32D2D;">−£0.027</strong>. The house edge is 2.7% on every spin. It seems small — but if you make 500 bets at £10 each, the expected loss is 500 × £0.27 = £135. The casino applies this edge to millions of bets per day, making their revenue mathematically guaranteed despite individual wins and losses.</div>`
+  }
+];
+
+function showEVExample(i, btn) {
+  document.querySelectorAll('#ev-tabs .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('ev-example-display').innerHTML = evExamples[i].html;
+}
+
+/* ========================================================
+   MONTY HALL SIMULATOR
+======================================================== */
+let mhState = { stage: 'pick', carDoor: 0, chosen: -1, revealed: -1 };
+let mhSimStay = 0, mhSimSwitch = 0, mhSimTotal = 0;
+
+function montyReset() {
+  mhState = {
+    stage: 'pick',
+    carDoor: Math.floor(Math.random() * 3),
+    chosen: -1,
+    revealed: -1
+  };
+  renderMH();
+}
+
+function renderMH() {
+  const doorsEl = document.getElementById('mh-doors');
+  const msg = document.getElementById('mh-message');
+  const stayBtn = document.getElementById('mh-stay-btn');
+  const switchBtn = document.getElementById('mh-switch-btn');
+  const resetBtn = document.getElementById('is-hidden');
+  stayBtn.style.display = 'none';
+  switchBtn.style.display = 'none';
+  resetBtn.style.display = 'none';
+
+  doorsEl.innerHTML = '';
+  for (let i = 0; i < 3; i++) {
+    const door = document.createElement('div');
+    door.className = 'mh-door';
+    door.innerHTML = `<span class="mh-door-num">Door ${i+1}</span>`;
+
+    if (mhState.stage === 'pick') {
+      door.innerHTML += `<span style="font-size:32px;">🚪</span><span class="mh-door-label">Pick me?</span>`;
+      door.onclick = () => mhPick(i);
+    } else if (mhState.stage === 'reveal') {
+      if (i === mhState.revealed) {
+        door.classList.add('mh-revealed');
+        door.innerHTML += `<span style="font-size:32px;">🐐</span><span class="mh-door-label">Goat!</span>`;
+      } else if (i === mhState.chosen) {
+        door.classList.add('mh-chosen');
+        door.innerHTML += `<span style="font-size:32px;">🚪</span><span class="mh-door-label">Your choice</span>`;
+      } else {
+        door.innerHTML += `<span style="font-size:32px;">🚪</span><span class="mh-door-label">Switch?</span>`;
+      }
+    } else if (mhState.stage === 'result') {
+      const isCar = (i === mhState.carDoor);
+      const wasChosen = (i === mhState.chosen);
+      if (i === mhState.revealed) {
+        door.classList.add('mh-revealed');
+        door.innerHTML += `<span style="font-size:32px;">🐐</span><span class="mh-door-label">Goat</span>`;
+      } else if (isCar) {
+        door.classList.add('mh-winner');
+        door.innerHTML += `<span style="font-size:32px;">🚗</span><span class="mh-door-label">${wasChosen ? 'You won!' : 'Car was here'}</span>`;
+      } else {
+        door.classList.add('mh-loser');
+        door.innerHTML += `<span style="font-size:32px;">🐐</span><span class="mh-door-label">Goat</span>`;
+      }
+    }
+    doorsEl.appendChild(door);
+  }
+
+  if (mhState.stage === 'pick') {
+    msg.textContent = 'Step 1: Pick a door.';
+  } else if (mhState.stage === 'reveal') {
+    const otherDoor = [0,1,2].find(d => d !== mhState.chosen && d !== mhState.carDoor);
+    msg.innerHTML = `Step 2: The host opens Door ${mhState.revealed+1} revealing a goat.<br>Do you <strong>stay</strong> with Door ${mhState.chosen+1}, or <strong>switch</strong>?`;
+    stayBtn.style.display = 'inline-block';
+    switchBtn.style.display = 'inline-block';
+  } else if (mhState.stage === 'result') {
+    const won = (mhState.chosen === mhState.carDoor);
+    msg.innerHTML = won
+      ? `<strong style="color:#1D9E75;">🎉 You won the car!</strong>`
+      : `<strong style="color:#A32D2D;">🐐 You got a goat.</strong> The car was behind Door ${mhState.carDoor+1}.`;
+    resetBtn.style.display = 'inline-block';
+  }
+}
+
+function mhPick(i) {
+  mhState.chosen = i;
+  // Host reveals a goat: a door that is NOT chosen and NOT the car
+  const revealable = [0,1,2].filter(d => d !== i && d !== mhState.carDoor);
+  mhState.revealed = revealable[Math.floor(Math.random() * revealable.length)];
+  mhState.stage = 'reveal';
+  renderMH();
+}
+
+function montyChoice(action) {
+  if (action === 'stay') {
+    // keep chosen
+  } else {
+    // switch to the remaining door
+    mhState.chosen = [0,1,2].find(d => d !== mhState.chosen && d !== mhState.revealed);
+  }
+  mhState.stage = 'result';
+  renderMH();
+}
+
+function runMontySimulation(n) {
+  for (let i = 0; i < n; i++) {
+    const car = Math.floor(Math.random() * 3);
+    const picked = Math.floor(Math.random() * 3);
+    const revealable = [0,1,2].filter(d => d !== picked && d !== car);
+    const revealed = revealable[Math.floor(Math.random() * revealable.length)];
+    // Stay result
+    if (picked === car) mhSimStay++;
+    // Switch result
+    const switched = [0,1,2].find(d => d !== picked && d !== revealed);
+    if (switched === car) mhSimSwitch++;
+    mhSimTotal++;
+  }
+  renderMontySimulation();
+}
+
+function resetMontySimulation() {
+  mhSimStay = 0; mhSimSwitch = 0; mhSimTotal = 0;
+  document.getElementById('mh-sim-results').style.display = 'none';
+}
+
+function renderMontySimulation() {
+  if (!mhSimTotal) return;
+  const el = document.getElementById('mh-sim-results');
+  el.style.display = 'block';
+  const stayPct = (mhSimStay / mhSimTotal * 100).toFixed(1);
+  const switchPct = (mhSimSwitch / mhSimTotal * 100).toFixed(1);
+  document.getElementById('mh-sim-bars').innerHTML = `
+    <div class="sim-bar-wrap">
+      <div class="sim-bar-label">Always stay</div>
+      <div class="sim-bar-track">
+        <div class="sim-bar-fill" style="width:${stayPct}%; background:#A32D2D;">
+          <span class="sim-bar-val">${stayPct}% won</span>
+        </div>
+      </div>
+    </div>
+    <div class="sim-bar-wrap">
+      <div class="sim-bar-label">Always switch</div>
+      <div class="sim-bar-track">
+        <div class="sim-bar-fill" style="width:${switchPct}%; background:#1D9E75;">
+          <span class="sim-bar-val">${switchPct}% won</span>
+        </div>
+      </div>
+    </div>
+  `;
+  document.getElementById('mh-sim-note').textContent =
+    `After ${mhSimTotal.toLocaleString()} games: staying won ${mhSimStay.toLocaleString()} times, switching won ${mhSimSwitch.toLocaleString()} times. Theory predicts 33.3% vs 66.7%.`;
+}
+
+/* ========================================================
+   LAW OF LARGE NUMBERS — COIN FLIP CANVAS
+======================================================== */
+let llnFlips = [];
+let llnHeads = 0;
+
+function drawLLN() {
+  const canvas = document.getElementById('lln-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const pad = { l: 44, r: 14, t: 14, b: 28 };
+  const cW = W - pad.l - pad.r, cH = H - pad.t - pad.b;
+
+  // Get CSS vars
+  const style = getComputedStyle(document.documentElement);
+  const bg = style.getPropertyValue('--color-background-secondary').trim();
+  const textSec = style.getPropertyValue('--color-text-secondary').trim();
+  const textTer = style.getPropertyValue('--color-text-tertiary').trim();
+  const border = style.getPropertyValue('--color-border-tertiary').trim();
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Axes
+  ctx.strokeStyle = border;
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, pad.t + cH);
+  ctx.lineTo(pad.l + cW, pad.t + cH);
+  ctx.stroke();
+
+  // 50% line
+  ctx.setLineDash([4,3]);
+  ctx.strokeStyle = '#1D9E75';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(pad.l, pad.t + cH * 0.5);
+  ctx.lineTo(pad.l + cW, pad.t + cH * 0.5);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Y labels
+  ctx.fillStyle = textTer;
+  ctx.font = '10px system-ui';
+  ctx.textAlign = 'right';
+  ctx.fillText('100%', pad.l - 4, pad.t + 4);
+  ctx.fillText('50%', pad.l - 4, pad.t + cH * 0.5 + 4);
+  ctx.fillText('0%', pad.l - 4, pad.t + cH + 4);
+
+  if (llnFlips.length < 2) {
+    ctx.fillStyle = textSec;
+    ctx.textAlign = 'center';
+    ctx.font = '12px system-ui';
+    ctx.fillText('Press a button above to start flipping', pad.l + cW/2, pad.t + cH/2);
+    return;
+  }
+
+  // Draw proportion line
+  ctx.strokeStyle = '#378ADD';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  let cumHeads = 0;
+  for (let i = 0; i < llnFlips.length; i++) {
+    cumHeads += llnFlips[i];
+    const prop = cumHeads / (i + 1);
+    const x = pad.l + (i / (llnFlips.length - 1)) * cW;
+    const y = pad.t + (1 - prop) * cH;
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  // X axis label
+  ctx.fillStyle = textSec;
+  ctx.textAlign = 'center';
+  ctx.font = '10px system-ui';
+  ctx.fillText(`Number of flips (${llnFlips.length.toLocaleString()} total)`, pad.l + cW/2, H - 2);
+
+  // Final proportion
+  const finalProp = (llnHeads / llnFlips.length * 100).toFixed(1);
+  document.getElementById('lln-stats').textContent =
+    `${llnFlips.length.toLocaleString()} flips — ${llnHeads.toLocaleString()} heads (${finalProp}%)`;
+  document.getElementById('lln-note').textContent =
+    llnFlips.length >= 1000
+      ? `After ${llnFlips.length.toLocaleString()} flips, proportion is ${finalProp}% — converging on 50%.`
+      : 'Keep flipping to see convergence.';
+}
+
+function flipCoins(n) {
+  for (let i = 0; i < n; i++) {
+    const h = Math.random() < 0.5 ? 1 : 0;
+    llnFlips.push(h);
+    llnHeads += h;
+  }
+  drawLLN();
+}
+
+function resetCoins() {
+  llnFlips = []; llnHeads = 0;
+  drawLLN();
+  document.getElementById('lln-stats').textContent = '';
+  document.getElementById('lln-note').textContent = '';
+}
+
+/* ========================================================
+   CONDITIONAL PROBABILITY EXPLORER
+======================================================== */
+let isIndependent = true;
+
+function setIndependence(val) {
+  isIndependent = val;
+  document.getElementById('indep-btn').classList.toggle('active', val);
+  document.getElementById('dep-btn').classList.toggle('active', !val);
+  updateCond();
+}
+
+function updateCond() {
+  const pA = parseInt(document.getElementById('pa-slider').value) / 100;
+  const pB = parseInt(document.getElementById('pb-slider').value) / 100;
+  document.getElementById('pa-out').textContent = (pA * 100).toFixed(0) + '%';
+  document.getElementById('pb-out').textContent = (pB * 100).toFixed(0) + '%';
+
+  const pBoth = isIndependent ? pA * pB : Math.min(pA, pB) * 0.8; // dep: correlation
+  const pEither = Math.min(pA + pB - pBoth, 1);
+  const pAgivenB = isIndependent ? pA : Math.min(pA * 1.6, 1); // dependent: B raises A
+
+  const fmt = v => (v * 100).toFixed(1) + '%';
+  document.getElementById('cond-result').innerHTML = `
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A) — Event A alone</div>
+        <div style="font-size:14px; font-weight:600; color:var(--color-text-primary);">${fmt(pA)}</div>
+      </div>
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(B) — Event B alone</div>
+        <div style="font-size:14px; font-weight:600; color:var(--color-text-primary);">${fmt(pB)}</div>
+      </div>
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A and B) — both occur</div>
+        <div style="font-size:14px; font-weight:600; color:#378ADD;">${fmt(pBoth)}</div>
+      </div>
+      <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+        <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A or B) — at least one</div>
+        <div style="font-size:14px; font-weight:600; color:#1D9E75;">${fmt(pEither)}</div>
+      </div>
+    </div>
+    <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
+      <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A | B) — probability of A <em>given</em> B has occurred</div>
+      <div style="font-size:14px; font-weight:600; color:${isIndependent ? 'var(--color-text-primary)' : '#D85A30'};">${fmt(pAgivenB)}
+        <span style="font-size:11px; font-weight:400; color:var(--color-text-secondary);">
+          ${isIndependent ? '= P(A) — knowing B tells you nothing about A' : '≠ P(A) — B raises the probability of A'}
+        </span>
+      </div>
+    </div>
+    <div style="font-size:12px; color:var(--color-text-secondary); line-height:1.6; margin-top:8px;">
+      ${isIndependent
+        ? `<strong style="color:var(--color-text-primary);">Independent:</strong> P(A and B) = P(A) × P(B) = ${fmt(pA)} × ${fmt(pB)} = ${fmt(pA*pB)}. Knowing one event happened gives zero information about the other.`
+        : `<strong style="color:var(--color-text-primary);">Dependent:</strong> The events are correlated — if B occurs, A becomes more likely. This is the structure of most real-world risks: if you smoke (A), you are also more likely to have a poor diet (B), and the joint risk is not simply the product of individual risks.`}
+    </div>
+  `;
+}
+
+/* ========================================================
+   INIT
+======================================================== */
+document.getElementById('risk-scenario').addEventListener('change', updateRisk);
+document.getElementById('u-flex-1').addEventListener('input', updateFP);
+document.getElementById('acc-slider').addEventListener('input', updateFP);
+document.getElementById('bday-slider').addEventListener('input', updateBday);
+document.getElementById('pa-slider').addEventListener('input', updateCond);
+document.getElementById('pb-slider').addEventListener('input', updateCond);
+
+updateRisk();
+updateFP();
+updateBday();
+drawBdayCurve();
+drawRiskBars();
+renderEVRows();
+showEVExample(0, document.querySelector('#ev-tabs .tab-btn'));
+montyReset();
+updateCond();
+drawLLN();
+
+// Redraw canvas on theme change (MutationObserver)
+const observer = new MutationObserver(() => { drawLLN(); });
+observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    
+</script>

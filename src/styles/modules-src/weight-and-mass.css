@@ -1,0 +1,254 @@
+
+.verdict  { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 7px; border-radius: 99px; margin-left: 6px; }
+.v-anchor { background: var(--color-background-success); color: var(--color-text-success); }
+.v-trick  { background: var(--color-background-warning); color: var(--color-text-warning); }
+
+/* ── Part C: weight scale ── */
+.scale-wrap {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 16px 28px 10px;
+  margin-bottom: 1.2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scale-caption { font-size: 11px; color: var(--color-text-tertiary); text-align: center; margin-top: 6px; }
+
+/* ── Part D: unit converter ── */
+.conv-wrap {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 16px 18px;
+  margin-bottom: 1.2rem;
+}
+.conv-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.conv-row label { font-size: 12px; color: var(--color-text-secondary); width: 36px; flex-shrink: 0; }
+.conv-input { width: 120px !important; flex-shrink: 0; }
+.conv-unit-btn {
+  font-size: 12px; padding: 3px 10px; border-radius: 99px;
+  border: 0.5px solid var(--color-border-secondary);
+  background: none; color: var(--color-text-secondary); cursor: pointer; transition: background 0.1s;
+}
+.conv-unit-btn.active { background: var(--color-background-info); color: var(--color-text-info); border-color: var(--color-border-info); }
+.conv-results { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 4px; }
+@media (max-width: 480px) { .conv-results { grid-template-columns: 1fr; } }
+.conv-result-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 12px; }
+.conv-result-unit { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 1px; }
+.conv-result-val  { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
+.slider-section { margin-top: 14px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
+.slider-label-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; }
+.slider-context { font-size: 12px; color: var(--color-text-secondary); margin-top: 6px; min-height: 18px; }
+.slider-context strong { color: var(--color-text-primary); }
+
+/* ── Part E: game ── */
+.game-wrap {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 18px; margin-bottom: 1.2rem; min-height: 160px;
+}
+.game-score-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.game-score { font-size: 12px; color: var(--color-text-secondary); }
+.game-score span { font-weight: 600; color: var(--color-text-primary); }
+.game-question { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 14px; line-height: 1.5; }
+.game-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+@media (max-width: 420px) { .game-choices { grid-template-columns: 1fr; } }
+.game-choice {
+  background: var(--color-background-secondary); border: 1.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md); padding: 12px 14px; cursor: pointer;
+  font-size: 13px; color: var(--color-text-primary); text-align: left;
+  transition: border-color 0.12s, background 0.12s; line-height: 1.4;
+}
+.game-choice:hover   { border-color: var(--color-border-secondary); background: var(--color-background-tertiary); }
+.game-choice.correct { background: var(--color-background-success); border-color: var(--color-border-success); color: var(--color-text-success); }
+.game-choice.wrong   { background: var(--color-background-danger);  border-color: var(--color-border-danger);  color: var(--color-text-danger); }
+.game-choice.reveal  { background: var(--color-background-success); border-color: var(--color-border-success); color: var(--color-text-success); opacity: 0.55; }
+.game-choice:disabled { cursor: default; }
+.game-feedback { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; min-height: 20px; margin-bottom: 10px; }
+.game-feedback strong { color: var(--color-text-primary); }
+.game-next-btn { font-size: 13px; padding: 5px 16px; }
+.game-result { text-align: center; padding: 10px 0; }
+.game-result-score { font-size: 36px; font-weight: 600; color: var(--color-text-primary); line-height: 1; margin-bottom: 6px; }
+.game-result-msg { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 16px; }
+.game-restart-btn { font-size: 13px; padding: 6px 18px; }
+
+/* ── Part F: world grid ── */
+.world-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 1.2rem; }
+@media (max-width: 480px) { .world-grid { grid-template-columns: repeat(2, 1fr); } }
+.world-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 14px; }
+.world-icon  { font-size: 22px; margin-bottom: 5px; }
+.world-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 2px; }
+.world-val   { font-size: 17px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 3px; }
+.world-note  { font-size: 11px; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
+
+/* ── Planet weight calculator ── */
+.planet-calc {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 13px 15px;
+  margin-bottom: 1rem;
+}
+.planet-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.planet-input-row label { font-size: 12px; color: var(--color-text-secondary); }
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+}
+.planet-card {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 10px 11px 9px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.planet-color-bar {
+  height: 4px;
+  border-radius: 3px 3px 0 0;
+  margin-bottom: 8px;
+}
+.planet-card-name {
+  font-size: 11px; font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+.planet-card-val {
+  font-size: 22px; font-weight: 500;
+  color: var(--color-text-primary);
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.planet-card-unit { font-size: 11px; font-weight: 400; color: var(--color-text-tertiary); margin-left: 2px; }
+.planet-card-sub  { font-size: 10px; color: var(--color-text-tertiary); margin-top: 3px; line-height: 1.35; }
+
+.section-intro {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+.scale-canvas {
+  display: block;
+}
+.rules-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.rules-title {
+  margin-bottom: 10px;
+}
+.planet-mass-input {
+  width: 90px !important;
+}
+.planet-input-unit {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+.planet-note {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin: 10px 0 0;
+}
+.compact-pill {
+  min-width: auto;
+  padding: 3px 10px;
+}
+.planet-color-mercury { background: #9E9E9E; }
+.planet-color-venus { background: #D4A843; }
+.planet-color-earth { background: var(--accent); }
+.planet-color-moon { background: #D3D3D3; }
+.planet-color-mars { background: #C1440E; }
+.planet-color-jupiter { background: #C88B3A; }
+.planet-color-saturn { background: #B5A26A; }
+.planet-color-uranus { background: #7DE8E8; }
+.planet-color-neptune { background: #5B6FE4; }
+.planet-color-pluto { background: #6B6B6B; }
+
+/* ── Part H: density sense chart ── */
+.density-sense-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: start;
+}
+.estimate-steps {
+  display: grid;
+  gap: 10px;
+}
+.estimate-step {
+  border-left: 3px solid var(--color-border-tertiary);
+  padding-left: 10px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+.estimate-step strong {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+.density-chart {
+  min-width: 0;
+}
+.density-row {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr) 72px;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.density-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.25;
+}
+.density-track {
+  height: 20px;
+  background: var(--color-background-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.density-fill {
+  width: var(--w);
+  min-width: 8px;
+  height: 100%;
+  background: var(--bar);
+  border-radius: 4px;
+}
+.density-value {
+  font-size: 11px;
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+.estimate-note {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
+@media (max-width: 680px) {
+  .density-sense-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .scale-wrap { padding-left: 20px; padding-right: 20px; }
+  .density-row { grid-template-columns: 68px minmax(80px, 1fr) 62px; }
+  .density-label,
+  .density-value { font-size: 10px; }
+}
+  

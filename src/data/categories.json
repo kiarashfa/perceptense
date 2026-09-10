@@ -1,0 +1,34 @@
+[
+  {
+    "id": "numbers",
+    "label": "Numbers & Scale"
+  },
+  {
+    "id": "physical",
+    "label": "Earth & Space"
+  },
+  {
+    "id": "science",
+    "label": "Science & Tech"
+  },
+  {
+    "id": "body",
+    "label": "Body & Health"
+  },
+  {
+    "id": "society",
+    "label": "Society & Systems"
+  },
+  {
+    "id": "culture",
+    "label": "Culture & Arts"
+  },
+  {
+    "id": "mind",
+    "label": "Mind & Meaning"
+  },
+  {
+    "id": "life",
+    "label": "Life & Environment"
+  }
+]

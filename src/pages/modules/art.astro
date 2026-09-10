@@ -1,0 +1,1067 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import modules from '../../data/modules.json';
+import '../../styles/modules/art.css';
+
+const mod = modules.find((m) => m.id === 30)!;
+---
+
+<ModuleLayout mod={mod}>
+
+  
+    <div class="module-header">
+      <i class="fa-solid fa-palette module-header-icon"></i>
+      <h1 class="module-title module-heading">Module 30: Art</h1>
+    </div>
+    <p class="module-subtitle">Movements, techniques, and visual literacy</p>
+
+    <!-- ══════════════════════════════════════════════════
+         PART A · THE SEVEN ARTS
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-a-the-seven-arts-the-classical-taxonomy">Part A · the seven arts — the classical taxonomy</h2>
+
+    <div class="content-panel">
+      <div class="panel-title-spaced">The classical division</div>
+      <div class="art-grid">
+        <div class="art-panel">
+          <div class="art-label">I</div>
+          <div class="art-label-2">Architecture</div>
+          <div class="art-text">The art of designing built space. Utility + beauty. Parthenon, Hagia Sophia, Chartres Cathedral, Fallingwater.</div>
+        </div>
+        <div class="art-panel-2">
+          <div class="art-label-3">II</div>
+          <div class="art-label-4">Sculpture</div>
+          <div class="art-text-2">Three-dimensional form in space. Venus de Milo, Michelangelo's David, Rodin's Thinker, Brancusi's Bird in Space.</div>
+        </div>
+        <div class="art-panel-3">
+          <div class="art-label-5">III</div>
+          <div class="art-label-6">Painting</div>
+          <div class="art-text-3">Image-making on flat surfaces. The Mona Lisa, Sistine Chapel ceiling, Guernica, Starry Night, Les Demoiselles d'Avignon.</div>
+        </div>
+        <div class="art-panel-4">
+          <div class="art-label-7">IV</div>
+          <div class="art-label-8">Literature</div>
+          <div class="art-text-4">Written language as art. The Iliad, Divine Comedy, Hamlet, War and Peace, Ulysses, One Hundred Years of Solitude.</div>
+        </div>
+        <div class="art-panel-5">
+          <div class="art-label-9">V</div>
+          <div class="art-label-10">Music</div>
+          <div class="art-text-5">Organised sound in time. Bach's Well-Tempered Clavier, Beethoven's 9th, Miles Davis's Kind of Blue, The Beatles.</div>
+        </div>
+        <div class="art-panel-6">
+          <div class="art-label-11">VI</div>
+          <div class="art-label-12">Performing arts</div>
+          <div class="art-text-6">Theatre, dance, opera, mime — live art that exists in time and disappears. Shakespeare's theatre, Nureyev's ballet, Noh drama.</div>
+        </div>
+        <div class="art-panel-7">
+          <div class="art-label-13">VII</div>
+          <div class="art-label-14">Cinema / film</div>
+          <div class="art-text-7">The seventh art (added by Ricciotto Canudo, 1911). Moving image + time + narrative. Citizen Kane, Bicycle Thieves, 2001, Rashomon.</div>
+        </div>
+      </div>
+      <div class="art-panel-8">
+        The classical division originates from ancient Greece. The "Muses" governed nine arts including poetry, music, and dance. The six-art schema was formalised in the Italian Renaissance; film was added in the 20th century. Photography (sometimes the 8th art), comics/graphic novels (the 9th), and video games are claimed as subsequent additions. The taxonomy reveals as much about cultural values as about art itself.
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART B · MAJOR MOVEMENTS
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-b-the-major-movements-each-reacting-against-the-last">Part B · the major movements — each reacting against the last</h2>
+
+    <!-- Movement period chart -->
+    <div class="period-chart">
+      <div class="art-label-15">Approximate spans — Western painting movements, 1300–present</div>
+      <div class="pc-axis pcaxis" id="pcAxis"></div>
+      <div id="pcRows"></div>
+      <div class="art-text-8">Movements overlap; end dates indicate when each ceased to be the dominant avant-garde force, not when artists stopped working in the style.</div>
+    </div>
+
+    <div class="art-row">
+      <button class="showmovement-control" onclick="showMovement('renaissance')"      >Renaissance</button>
+      <button class="showmovement-control" onclick="showMovement('baroque')"          >Baroque</button>
+      <button class="showmovement-control" onclick="showMovement('neoclassicism')"    >Neoclassicism</button>
+      <button class="showmovement-control" onclick="showMovement('romanticism')"      >Romanticism</button>
+      <button class="showmovement-control" onclick="showMovement('realism')"          >Realism</button>
+      <button class="showmovement-control" onclick="showMovement('impressionism')"    >Impressionism</button>
+      <button class="showmovement-control" onclick="showMovement('postimpressionism')">Post-impressionism</button>
+      <button class="showmovement-control" onclick="showMovement('cubism')"           >Cubism</button>
+      <button class="showmovement-control" onclick="showMovement('surrealism')"       >Surrealism</button>
+      <button class="showmovement-control" onclick="showMovement('expressionism')"    >Expressionism</button>
+      <button class="showmovement-control" onclick="showMovement('abstract')"         >Abstract expressionism</button>
+      <button class="showmovement-control" onclick="showMovement('popart')"           >Pop art</button>
+      <button class="showmovement-control" onclick="showMovement('contemporary')"     >Contemporary / conceptual</button>
+    </div>
+    <div class="content-panel" id="movement-display"></div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART C · HOW TO READ A PAINTING
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-c-how-to-read-a-painting-what-art-historians-actually-look-at">Part C · how to read a painting — what art historians actually look at</h2>
+
+    <div class="art-grid-2">
+      <div class="card">
+        <p class="clabel">Composition</p>
+        <p class="cval">How elements are arranged in the frame</p>
+        <p class="cnote">The eye is led through a painting by lines, shapes, and tonal contrast. Rule of thirds (major elements at 1/3 positions). Triangular composition (Renaissance — stable, hierarchical). Diagonal composition (Baroque — dynamic, dramatic). Golden ratio. Symmetry implies order; asymmetry implies tension.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Light and shadow</p>
+        <p class="cval">Chiaroscuro — the drama of darkness and light</p>
+        <p class="cnote">Caravaggio and Rembrandt mastered chiaroscuro (Italian for "light-dark") — extreme contrast between light and shadow that creates drama and three-dimensionality. Where the light source is, how it falls, and what it reveals or hides are all compositional choices. Tenebrism (extreme chiaroscuro): dark background with pools of harsh light.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Colour</p>
+        <p class="cval">Hue, saturation, temperature — all carry meaning</p>
+        <p class="cnote">Warm colours (red, yellow, orange) advance; cool colours (blue, green) recede — creating depth. Colour symbolism varies by culture and period: blue (divinity — Virgin Mary's robe), red (passion/danger), gold (divine light in Byzantine icons). Impressionists used colour to capture light; Fauves used pure unmixed colour as emotional expression.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">The gaze</p>
+        <p class="cval">Who looks at whom — power dynamics in paint</p>
+        <p class="cnote">Who is looking where says everything. Direct gaze at the viewer: intimacy, challenge, or engagement (the Mona Lisa's ambiguous gaze). Averted gaze: vulnerability, modesty, or absorption. Laura Mulvey's "male gaze" theory: the classical nude positions the female body as an object for the (implicitly male) viewer. Manet's Olympia (1863) made this visible and uncomfortable by having the nude look back directly.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Symbolism and iconography</p>
+        <p class="cval">Every object meant something</p>
+        <p class="cnote">In medieval and Renaissance art, almost every object carries meaning (iconography). Skull = memento mori (remember you will die). Candle being snuffed = life ending. Hourglass = time passing. Peacock = immortality. Lily = purity (Virgin Mary). The discipline of iconography (Panofsky) reads these symbols to decode a painting's meaning. Learning to read symbols transforms what appears decorative into narrative.</p>
+      </div>
+      <div class="card">
+        <p class="clabel">Historical context</p>
+        <p class="cval">Art is never made in a vacuum</p>
+        <p class="cnote">Goya's The Third of May 1808 (1814) is incomprehensible without knowing the Napoleonic occupation of Spain. Picasso's Guernica (1937) requires knowing the bombing of a Basque town by Nazi aircraft. The location of a painting (church altarpiece vs private salon vs public museum) determines its meaning. Patronage: who commissioned it and for what purpose?</p>
+      </div>
+    </div>
+
+    <!-- Composition diagram explorer -->
+    <div class="content-panel">
+      <div class="panel-title">Classic composition types — what each communicates</div>
+      <div class="comp-grid">
+        <div class="comp-card">
+          <div class="comp-diagram" id="compTriangle">
+            <!-- Pure CSS triangle diagram -->
+            <div class="art-media"></div>
+            <div class="art-media-2"></div>
+            <div class="art-media-3"></div>
+            <div class="art-media-4"></div>
+          </div>
+          <div class="art-text-9">Triangular</div>
+          <div class="art-text-10">Stable, hierarchical, divine. Renaissance Madonnas. Central figure elevated above flanking figures. Conveys permanence and authority.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-diagram">
+            <div class="art-div-style"></div>
+            <div class="art-media-5"></div>
+            <div class="art-media-6"></div>
+            <div class="art-media-7"></div>
+            <div class="art-media-8"></div>
+            <div class="art-media-9"></div>
+          </div>
+          <div class="art-text-9">Rule of thirds</div>
+          <div class="art-text-10">Subject placed at intersection of dividing lines. More dynamic than dead-centre. Used intuitively by painters long before it was named.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-diagram">
+            <div class="art-div-style-2"></div>
+            <div class="art-media-10"></div>
+            <div class="art-media-11"></div>
+            <div class="art-media-12"></div>
+            <div class="art-media-13"></div>
+          </div>
+          <div class="art-text-9">Diagonal</div>
+          <div class="art-text-10">Dynamic, unstable, dramatic. Baroque hallmark — Caravaggio, Rubens. Implies movement, conflict, or imminent action. The eye travels along the diagonal axis.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-diagram">
+            <div class="art-row-2">
+              <div class="art-media-14">
+                <div class="art-media-15"></div>
+                <div class="art-media-16"></div>
+                <div class="art-media-17"></div>
+                <div class="art-media-18"></div>
+                <div class="art-media-19"></div>
+              </div>
+            </div>
+          </div>
+          <div class="art-text-9">Radial / circular</div>
+          <div class="art-text-10">All elements revolve around a central point. Creates unity and focus. Used in Last Supper compositions, altarpieces, and many Renaissance group scenes.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-diagram">
+            <div class="art-row-3">
+              <div class="art-media-20"></div>
+              <div class="art-media-21"></div>
+              <div class="art-text-11">sky</div>
+              <div class="art-text-12">foreground</div>
+              <div class="art-media-22"></div>
+              <div class="art-media-23"></div>
+            </div>
+          </div>
+          <div class="art-text-9">Horizontal bands</div>
+          <div class="art-text-10">Calm, expansive, eternal. Landscape painters (Constable, Dutch Golden Age). Horizon placement governs emphasis: low horizon = vast sky; high horizon = rich foreground.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colour symbolism reference -->
+    <div class="content-panel">
+      <div class="panel-title">Colour symbolism — Western art tradition</div>
+      <div class="colour-grid">
+        <div class="colour-swatch colour-swatch-style">
+          <div class="colour-swatch-name text-blue-900">Blue</div>
+          <div class="colour-swatch-note text-blue-700">Divinity, the Virgin Mary, heaven, truth, loyalty. Ultramarine (from lapis lazuli) was more expensive than gold — its use signalled a patron's wealth.</div>
+        </div>
+        <div class="colour-swatch colour-swatch-style-2">
+          <div class="colour-swatch-name text-red-900">Red</div>
+          <div class="colour-swatch-note text-red-700">Passion, love, sacrifice, danger, martyrdom. Christ's robe in Passion scenes. Also royal power (vermilion was costly). Warm and advancing — pulls the eye.</div>
+        </div>
+        <div class="colour-swatch colour-swatch-style-3">
+          <div class="colour-swatch-name text-amber-900">Gold</div>
+          <div class="colour-swatch-note text-orange-850">Divine light, the eternal, holiness. Byzantine icons use gold ground to remove figures from earthly time and space entirely. Not a colour but a metaphysical statement.</div>
+        </div>
+        <div class="colour-swatch colour-swatch-style-4">
+          <div class="colour-swatch-name text-green-800">Green</div>
+          <div class="colour-swatch-note colour-swatch-note-style-4">Hope, nature, spring, renewal, envy (Shakespeare's "green-eyed monster"). Verdigris was the most common green pigment but notoriously unstable — many painted greens have turned brown over centuries.</div>
+        </div>
+        <div class="colour-swatch colour-swatch-style-5">
+          <div class="colour-swatch-name text-hex-72243e">Purple / violet</div>
+          <div class="colour-swatch-note text-hex-993556">Royalty, penitence, mourning, mourning. Tyrian purple was the most expensive dye in antiquity. In painting, it signals the highest status — emperors and high clergy only.</div>
+        </div>
+        <div class="colour-swatch colour-swatch-style-6">
+          <div class="colour-swatch-name text-primary">White / black</div>
+          <div class="colour-swatch-note text-secondary">White = purity, death (in some Eastern traditions), light. Black = mourning, death, authority, the void. Goya's Black Paintings — monochrome as psychological state, not just colour choice.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART D · VALUE OF ART
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-d-what-determines-the-value-of-a-work-of-art">Part D · what determines the value of a work of art</h2>
+
+    <div class="content-panel">
+      <div class="panel-title">The art market — where economics and aesthetics collide</div>
+
+      <div class="art-grid-3">
+        <div class="art-panel-9">
+          <div class="art-label-16">1. Artist reputation (primary driver)</div>
+          <div class="art-text-13">The single most important determinant. A Picasso and an equally beautiful painting by an unknown artist occupy completely different markets. Reputation is built through: critical recognition, museum exhibitions, auction history, scholarship, cultural influence. The auction record itself becomes part of the artist's "price history" that justifies future prices.</div>
+        </div>
+        <div class="art-panel-10">
+          <div class="art-label-17">2. Provenance (ownership history)</div>
+          <div class="art-text-14">A documented chain of ownership from artist to present day adds value and authentication. Famous previous owners add prestige. Clean provenance (no theft, no Nazi looting) is legally and reputationally essential. Gaps in provenance raise suspicion. Many art restitution disputes (museums returning looted art) centre on provenance records.</div>
+        </div>
+        <div class="art-panel-11">
+          <div class="art-label-18">3. Rarity and period</div>
+          <div class="art-text-15">Works from an artist's most celebrated period command premiums. Late Rembrandt portraits vs early ones. A Picasso from his Blue Period vs a late work. When an artist has died, the supply is permanently fixed — prices can only go up if demand rises. A "last known in private hands" work commands a rarity premium.</div>
+        </div>
+        <div class="art-panel-12">
+          <div class="art-label-19">4. Condition</div>
+          <div class="art-text-16">Damage, restoration, fading, and overpainting all reduce value. A conservator's report is essential for major works. Sometimes excessive restoration (adding what was never there) is as damaging to value as deterioration. The "patina of age" is often valued — too-clean restorations can look wrong.</div>
+        </div>
+        <div class="art-panel-13">
+          <div class="art-label-20">5. Subject matter</div>
+          <div class="art-text-17">Within an artist's oeuvre, certain subjects command premiums. Picasso's women sell more than his landscapes. Monet's Water Lilies more than his Normandy houses. The nude retains permanent market appeal. Cultural figures or scenes that resonate with current buyers influence what sells well.</div>
+        </div>
+        <div class="art-panel-14">
+          <div class="art-label-21">6. Authentication</div>
+          <div class="art-text-18">Is it genuinely by the named artist? Scholarly authentication (catalogue raisonné — the definitive list of an artist's works), technical analysis (pigment dating, canvas analysis, X-ray), and expert opinion all matter. Forgery is a major industry: the art market has no equivalent of hallmarking.</div>
+        </div>
+      </div>
+
+      <!-- Record prices bar chart -->
+      <div class="art-label-22">Top auction records — selected works ($M at hammer)</div>
+      <div class="price-scale price-scale-style">
+        <div class="ps-row">
+          <div class="ps-artist">Salvator Mundi<br><span class="art-span-style">Leonardo (attr.)</span></div>
+          <div class="ps-bar-wrap">
+            <div class="ps-bar ps-bar-style">
+              <span class="ps-val text-indigo-900">$450M · Christie's 2017</span>
+            </div>
+          </div>
+        </div>
+        <div class="ps-row">
+          <div class="ps-artist">Shot Sage Blue Marilyn<br><span class="art-span-style">Warhol</span></div>
+          <div class="ps-bar-wrap">
+            <div class="ps-bar ps-bar-style-2">
+              <span class="ps-val text-red-900">$195M · Christie's 2022</span>
+            </div>
+          </div>
+        </div>
+        <div class="ps-row">
+          <div class="ps-artist">Les Femmes d'Alger<br><span class="art-span-style">Picasso</span></div>
+          <div class="ps-bar-wrap">
+            <div class="ps-bar ps-bar-style-3">
+              <span class="ps-val text-amber-900">$179M · Christie's 2015</span>
+            </div>
+          </div>
+        </div>
+        <div class="ps-row">
+          <div class="ps-artist">Interchange<br><span class="art-span-style">de Kooning</span></div>
+          <div class="ps-bar-wrap">
+            <div class="ps-bar ps-bar-style-4">
+              <span class="ps-val text-blue-900">$300M · private 2015</span>
+            </div>
+          </div>
+        </div>
+        <div class="ps-row">
+          <div class="ps-artist">Nafea Faa Ipoipo<br><span class="art-span-style">Gauguin</span></div>
+          <div class="ps-bar-wrap">
+            <div class="ps-bar ps-bar-style-5">
+              <span class="ps-val text-green-800">$300M · private 2015</span>
+            </div>
+          </div>
+        </div>
+        <div class="ps-row">
+          <div class="ps-artist">No. 6 (Violet, Green and Red)<br><span class="art-span-style">Rothko</span></div>
+          <div class="ps-bar-wrap">
+            <div class="ps-bar ps-bar-style-6">
+              <span class="ps-val text-hex-72243e">$186M · private 2014</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="art-panel-15">
+        <strong class="text-primary">Artistic value vs market value:</strong> These are genuinely independent. Vermeer's work commands extraordinary prices; his contemporary Jan Steen (far more prolific) is worth a fraction. Fra Angelico's frescoes in the Monastery of San Marco, Florence are among the most spiritually and artistically significant paintings in existence — they cannot be bought at any price. Basquiat paintings sell for $100M+ while many consider his work of modest artistic depth. The market rewards cultural meaning, scarcity, and collector fashion — not necessarily what art historians or critics consider finest.
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART E · SIX ESSENTIAL WORKS
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-e-six-essential-works-and-what-makes-each-significant">Part E · six essential works — and what makes each significant</h2>
+
+    <div class="button-row">
+      <button class="showwork-control" onclick="showWork('mona')"     >Mona Lisa</button>
+      <button class="showwork-control" onclick="showWork('sistine')"  >Sistine ceiling</button>
+      <button class="showwork-control" onclick="showWork('guernica')" >Guernica</button>
+      <button class="showwork-control" onclick="showWork('starry')"   >Starry Night</button>
+      <button class="showwork-control" onclick="showWork('olympia')"  >Olympia</button>
+      <button class="showwork-control" onclick="showWork('fountain')" >Fountain (Duchamp)</button>
+    </div>
+    <div class="content-panel" id="work-display"></div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART F (NEW) · THE SEVEN ELEMENTS OF ART
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-f-the-seven-elements-of-art-the-visual-vocabulary">Part F · the seven elements of art — the visual vocabulary</h2>
+
+    <div class="art-panel-16">
+      Before movements and history, there are the building blocks every visual work uses. Art educators identify seven fundamental elements: every painting, sculpture, and drawing can be analysed in terms of these seven. Click each to explore.
+    </div>
+
+    <div class="elem-grid">
+      <div class="elem-card active" onclick="showElement('line')">
+        <div class="elem-icon">〰</div>
+        <div class="elem-name">Line</div>
+        <div class="elem-sub">Direction &amp; energy</div>
+      </div>
+      <div class="elem-card" onclick="showElement('shape')">
+        <div class="elem-icon">◻</div>
+        <div class="elem-name">Shape</div>
+        <div class="elem-sub">2D enclosed area</div>
+      </div>
+      <div class="elem-card" onclick="showElement('form')">
+        <div class="elem-icon">◈</div>
+        <div class="elem-name">Form</div>
+        <div class="elem-sub">3D or illusion of it</div>
+      </div>
+      <div class="elem-card" onclick="showElement('space')">
+        <div class="elem-icon">⊡</div>
+        <div class="elem-name">Space</div>
+        <div class="elem-sub">Positive &amp; negative</div>
+      </div>
+      <div class="elem-card" onclick="showElement('colour')">
+        <div class="elem-icon">◉</div>
+        <div class="elem-name">Colour</div>
+        <div class="elem-sub">Hue, value, intensity</div>
+      </div>
+      <div class="elem-card" onclick="showElement('value')">
+        <div class="elem-icon">▨</div>
+        <div class="elem-name">Value</div>
+        <div class="elem-sub">Light vs dark</div>
+      </div>
+      <div class="elem-card" onclick="showElement('texture')">
+        <div class="elem-icon">▦</div>
+        <div class="elem-name">Texture</div>
+        <div class="elem-sub">Surface quality</div>
+      </div>
+    </div>
+
+    <div class="elem-detail elem-detail-panel show" id="elem-detail"></div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART G (NEW) · MEDIUM & TECHNIQUE EXPLORER
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-g-medium-and-technique-what-it-s-made-of-matters">Part G · medium &amp; technique — what it's made of matters</h2>
+
+    <div class="art-panel-17">
+      The physical medium — the stuff the artwork is made from — profoundly shapes what is possible. Oil paint allows glazing and decades of reworking. Fresco demands decisive, fast brushwork before plaster dries. Watercolour requires working light to dark. These constraints produced the distinctive look of each tradition.
+    </div>
+
+    <div class="medium-btn-wrap">
+      <button class="showmovement-control" onclick="showMedium('fresco')"     >Fresco</button>
+      <button class="showmovement-control" onclick="showMedium('tempera')"    >Egg tempera</button>
+      <button class="showmovement-control" onclick="showMedium('oil')"        >Oil paint</button>
+      <button class="showmovement-control" onclick="showMedium('watercolour')">Watercolour</button>
+      <button class="showmovement-control" onclick="showMedium('acrylic')"    >Acrylic</button>
+      <button class="showmovement-control" onclick="showMedium('engraving')"  >Engraving / etching</button>
+      <button class="showmovement-control" onclick="showMedium('screenprint')">Screen printing</button>
+      <button class="showmovement-control" onclick="showMedium('collage')"    >Collage / mixed media</button>
+    </div>
+    <div class="content-panel" id="medium-display"></div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART H (NEW) · SCALE EXPLORER
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-h-the-scale-of-famous-works-size-changes-everything">Part H · the scale of famous works — size changes everything</h2>
+
+    <div class="art-panel-17">
+      Scale is an artistic choice, not a practical one. The Mona Lisa is surprisingly small (the size of a large hardback book); Guernica is nearly 8 metres wide. Abstract Expressionists chose monumental scale to envelop the viewer. Move the slider to compare works at a consistent scale relative to an average adult figure (170 cm).
+    </div>
+
+    <div class="content-panel">
+      <div class="u-mb-md">
+        <label class="muted-text">Select a work:</label>
+        <div class="scalebuttons" id="scaleButtons"></div>
+      </div>
+      <div class="scaleviz" id="scaleViz"></div>
+      <div class="scaleinfo" id="scaleInfo"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART J (NEW) · COMING NEXT — TEASER CARDS
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-i-going-deeper-dedicated-modules-coming-next">Part I · going deeper — dedicated modules coming next</h2>
+
+    <div class="art-panel-16">
+      This module covers art as a broad discipline. Four upcoming modules take a deep dive into the specific arts that most shape cultural life — each with its own techniques, history, and vocabulary.
+    </div>
+
+    <div class="teaser-grid">
+      <a href="/perceptense/modules/painting/" class="teaser-card">
+        <div class="teaser-num">Module 31</div>
+        <div class="teaser-icon">🖼</div>
+        <div class="teaser-name">Painting</div>
+        <div class="teaser-desc">Technique in depth — pigments, supports, glazing, impasto, and how to look at any painting with trained eyes. From cave art to the present canvas.</div>
+        <div class="teaser-badge">Coming soon</div>
+      </a>
+      <a href="/perceptense/modules/literature/" class="teaser-card">
+        <div class="teaser-num">Module 32</div>
+        <div class="teaser-icon">📖</div>
+        <div class="teaser-name">Literature</div>
+        <div class="teaser-desc">Narrative structure, genre, the Western canon, unreliable narrators, and why certain books changed how we understand consciousness itself.</div>
+        <div class="teaser-badge">Coming soon</div>
+      </a>
+      <a href="/perceptense/modules/music/" class="teaser-card">
+        <div class="teaser-num">Module 33</div>
+        <div class="teaser-icon">🎵</div>
+        <div class="teaser-name">Music</div>
+        <div class="teaser-desc">Harmony, rhythm, form, and how to listen. From counterpoint to chord progressions — the theory that makes music make sense.</div>
+        <div class="teaser-badge">Coming soon</div>
+      </a>
+      <a href="/perceptense/modules/cinema/" class="teaser-card">
+        <div class="teaser-num">Module 34</div>
+        <div class="teaser-icon">🎬</div>
+        <div class="teaser-name">Cinema</div>
+        <div class="teaser-desc">The grammar of film — shot types, editing, mise-en-scène, auteur theory, and the hundred years of visual storytelling that shaped how everyone sees the world.</div>
+        <div class="teaser-badge">Coming soon</div>
+      </a>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         SCRIPTS
+    ══════════════════════════════════════════════════ -->
+
+    <!-- ══════════════════════════════════════════════════
+         PART I (NEW) · THE ART CANON QUIZ
+    ══════════════════════════════════════════════════ -->
+    <h2 class="sec" id="part-j-q-and-a">Part J · Q&A</h2>
+
+    <div class="qa">
+      <p class="qa-q">1. What is Impressionism reacting against, and why was it considered shocking in 1874?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Impressionism rejected the two central values of the academic tradition that dominated the French art world (centred on the annual Salon exhibition): finish (smooth, invisible brushwork — paint should look like no one applied it) and subject matter (classical mythology, historical narrative, and grand allegorical scenes). Academic painting aspired to timeless, universal truths. Monet, Renoir, Degas, Pissarro, and Sisley painted the ephemeral — a moment of light on water, a Sunday afternoon in the park, ballet rehearsals backstage — using visible, sketchy brushwork that captured the impression of a scene rather than its precise rendering. They painted outdoors (en plein air) rather than in the studio. The 1874 first exhibition was held independently after Salon rejection. A critic named the movement mockingly from Monet's "Impression, Sunrise" — and the name stuck. The shock was not just aesthetic but social: painting the middle class at leisure, the new boulevards, the racecourse — the commercial, democratic, transient modern world — rather than the gods and heroes of classical tradition.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">2. Duchamp's Fountain is a urinal. How did it become one of the most important works in art history?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">In 1917, Marcel Duchamp submitted a porcelain urinal signed "R. Mutt" to the Society of Independent Artists exhibition in New York — which had declared it would exhibit anything submitted. The exhibition committee rejected it anyway (Duchamp was on it). He called it Fountain. Its significance lies not in its appearance but in the question it posed: what is art? If art is whatever an artist designates as art and exhibits in an art context, then the concept of art as skilled craft or beautiful form is redundant. The "readymade" — an existing manufactured object nominated as art — transferred aesthetic authority entirely to the artist's concept and the institutional context (gallery, museum) rather than any physical property of the object. This was the conceptual revolution that made 20th-century art possible. It licensed: Jackson Pollock's dripped canvases, Warhol's Brillo boxes, Damien Hirst's shark, Tracey Emin's unmade bed, and every "what is art?" provocation since. A 2004 poll of 500 arts professionals named it the most influential artwork of the 20th century.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">3. What is the difference between Monet and Manet — and why do people constantly confuse them?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The names are genuinely similar — one letter different — and both were central to the revolution in 19th-century French painting, which is why the confusion is so persistent. Édouard Manet (1832–1883) was the older and more conventionally trained. He never exhibited with the Impressionists and resisted the label, though his work (Le Déjeuner sur l'herbe, Olympia) was enormously influential on them. His work is characterised by flattened pictorial space, confrontational figures, and deliberate lack of academic smoothness — he is the bridge between realism and Impressionism. Claude Monet (1840–1926) was the central figure of Impressionism. He gave the movement its name (inadvertently, through Impression, Sunrise). His defining project was capturing light's effect on surfaces — the same subject painted dozens of times at different times of day. Memory device: Monet = water (his Giverny pond, Water Lilies). Manet = people (his figures, Olympia, bar scenes). Or chronologically: Manet came first, Monet extended his revolution.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">4. What did the Renaissance fundamentally change about Western painting?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The Renaissance transformed three fundamental things. First, linear perspective (developed by Brunelleschi, theorised by Alberti, mastered by Leonardo): a mathematical system for representing three-dimensional space on a flat surface using a vanishing point. Medieval painting had no consistent spatial logic. Second, the human body: medieval figures were symbolic containers for souls. Renaissance figures (informed by the rediscovery of ancient Greek and Roman sculpture) have anatomically observed bodies — Michelangelo spent time dissecting corpses to understand anatomy. Third, light and shadow: the modelling of form through light (chiaroscuro) creates the illusion of three-dimensionality. Together these three innovations created the dominant tradition of Western painting — naturalistic representation of three-dimensional space populated by psychologically convincing figures — which persisted until the Impressionists began to question whether exact representation was the point of painting at all.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">5. Why is Picasso's Guernica (1937) considered a masterwork, and what does it actually depict?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Guernica was painted in response to the German Condor Legion's bombing of the Basque town of Guernica on April 26, 1937. The painting (349 × 776 cm, oil on canvas) depicts: a screaming horse (the Spanish Republic, in agony), a bull (brutality or darkness), a dead baby and screaming mother, a fallen soldier's shattered body, a terrified woman fleeing, a dismembered figure, a lamp surrounded by a jagged eye-shape. It is in black, white, and grey — the palette of newspaper photographs. What makes it a masterwork: the Cubist fragmentation makes the suffering not linear but total and disorienting. The composition has no exit — the eye cannot find rest. Picasso refused to allow it to return to Spain while Franco was alive. It lived at MoMA, New York until 1981. When a Nazi officer asked Picasso "Did you do this?" looking at a photograph, Picasso replied: "No, you did."</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">6. What is the "Salon des Refusés" and why does it matter for understanding modern art?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">The Salon des Refusés (Exhibition of the Rejected) was mounted in 1863 by Napoleon III after the official Salon jury rejected more than 2,000 works — prompting public outcry about the jury's arbitrariness. Napoleon ordered a parallel exhibition of the rejected works. It became one of the most consequential exhibitions in art history because it put Manet's Le Déjeuner sur l'herbe before the public, where it caused a scandal and ignited the debate about what painting could be. Its importance is structural: it revealed that the Salon's monopoly on legitimate artistic recognition was contingent and could be challenged. The Impressionist independent exhibitions of 1874–1886 followed the same logic — if the gatekeepers will not show our work, we will build our own exhibition. This idea (the avant-garde as a permanent rebellion against official taste) defines the entire trajectory of modern art. Every subsequent movement has partly defined itself by what it is rejecting.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">7. What is "negative space" and why do artists like Matisse use it as aggressively as positive form?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Negative space is the empty or background area around and between subjects — what is not depicted. In most representational art, negative space is simply background. In the work of artists like Matisse, Mondrian, and many Japanese ink painters, negative space becomes a positive compositional force of equal weight to the objects depicted. Matisse's cut-outs (Jazz series, 1947) are the extreme case — shapes of pure colour surrounded by white, where the white is as active as the colour. In Japanese Zen ink painting (sumi-e), vast areas of blank paper are not empty but full of meaning — the unpainted area creates the mood. In Western art, Michelangelo was famous for leaving parts of marble uncarved, the unfinished figure emerging from the stone — the "negative" stone is as expressive as the carved figure. For graphic designers, logo designers, and typographers, negative space is the professional's most powerful tool: the FedEx logo's hidden arrow, the IBM stripes creating letterforms. Training yourself to see negative space rather than only objects transforms how you read any visual composition.</div>
+    </div>
+
+    <div class="qa">
+      <p class="qa-q">8. How do you distinguish a Baroque painting from a Neoclassical one if you have no labels?</p>
+      <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
+      <div class="qa-ans">Five reliable diagnostic features: (1) Light — Baroque uses extreme chiaroscuro, often a single dramatic light source from outside the frame; Neoclassical tends toward even, diffuse light that illuminates everything clearly. (2) Lines — Baroque is all diagonals, curves, S-shapes, and dynamic movement; Neoclassical prefers horizontals, verticals, and right angles — the geometry of architecture rather than nature. (3) Emotional register — Baroque figures show open-mouthed agony, transport, or sensual pleasure; Neoclassical figures show stoic restraint, even when facing death (see David's Horatii taking their oath with rigid composure). (4) Subject — Baroque favours saints in ecstasy, dramatic Biblical scenes, and lush portraiture; Neoclassical favours ancient Roman and Greek heroes making civic moral choices. (5) Surface — Baroque paint is often loose and rich, with visible brushwork and textured surfaces; Neoclassical (especially Ingres) aims for a porcelain-smooth surface where the painter's hand is entirely invisible. When uncertain: if the painting feels like a sermon and makes you feel something before you understand it, Baroque. If it looks like a lecture about civic virtue and makes you think before you feel, Neoclassical.</div>
+    </div>
+
+    
+  
+  
+</ModuleLayout>
+
+<script is:inline>
+
+    /* ════════════════════════════════════
+       MOVEMENT DATA
+    ════════════════════════════════════ */
+    const movements = {
+      renaissance: { name:'Renaissance', period:'~1300–1600', places:'Florence, Venice, Rome', col:'#633806', bg:'#FAEEDA',
+        what:'Rebirth (rinascimento) of classical Greco-Roman culture. Humanist philosophy — humanity at the centre of the universe. The artist emerges as a creative genius (not an anonymous craftsman).',
+        reacted:'Against medieval flatness, symbolic rather than naturalistic representation, and the subordination of art entirely to religious function.',
+        key:'Perspective (Brunelleschi). Sfumato (Leonardo). Anatomy in paint (Michelangelo). Oil on canvas (van Eyck).',
+        artists:'Leonardo da Vinci (Mona Lisa, Last Supper), Michelangelo (Sistine ceiling, David), Raphael (School of Athens), Botticelli (Birth of Venus), Jan van Eyck.',
+        note:'The concept of "the artist as genius" was invented in the Renaissance — before, artists were anonymous craftsmen in guilds. Vasari\'s Lives of the Artists (1550) created the idea of art history as a sequence of great individual creators.' },
+      baroque: { name:'Baroque', period:'~1600–1750', places:'Italy, Spain, Flanders, France', col:'#3C3489', bg:'#EEEDFE',
+        what:'Drama, movement, and emotional intensity. Counter-Reformation propaganda — the Catholic Church used overwhelming sensory art to win back Protestants. Chiaroscuro extremes. Theatrical, exaggerated poses and expressions.',
+        reacted:'Against Renaissance harmony, restraint, and clarity. Against Protestant plainness. For Catholic emotional power.',
+        key:'Chiaroscuro/tenebrism. Dramatic diagonal composition. Intense emotion. Illusionistic ceiling painting. Portraiture as psychological study.',
+        artists:'Caravaggio (intense realism and drama), Rembrandt (psychological portraiture), Rubens (opulent sensuousness), Velázquez (Las Meninas), Bernini (Ecstasy of St Teresa), Vermeer (light in domestic interiors).',
+        note:'Las Meninas by Velázquez (1656) is possibly the most analysed painting in Western art — it inverts the relationship between painter, subject, and viewer in a way that prefigures modern ideas about representation.' },
+      neoclassicism: { name:'Neoclassicism', period:'~1750–1850', places:'France, Britain', col:'#085041', bg:'#E1F5EE',
+        what:'Return to the order, clarity, and moral seriousness of ancient Greece and Rome. The Enlightenment in paint — reason, civic virtue, and stoic moral exemplars.',
+        reacted:'Against Baroque and Rococo excess, decoration, and aristocratic frivolity. Against ornament for its own sake.',
+        key:'Clean lines. Moral subject matter (classical heroes making heroic choices). Restraint and clarity. Influence of excavations at Pompeii and Herculaneum (1738–48).',
+        artists:'Jacques-Louis David (Oath of the Horatii, Death of Marat), Antonio Canova (sculpture), Ingres (hyper-smooth surfaces, classical poses).',
+        note:'Neoclassicism was politically charged: David was the official painter of the French Revolution and Napoleonic propaganda. Neoclassical style signalled civic virtue and republican values.' },
+      romanticism: { name:'Romanticism', period:'~1790–1850', places:'Germany, France, Britain, Spain', col:'#712B13', bg:'#FAECE7',
+        what:'The primacy of emotion, individual experience, and the sublime natural world. Reaction against Enlightenment rationalism. The individual genius in conflict with society. The terrifying beauty of nature.',
+        reacted:'Against Neoclassical restraint and rationalism. Against the Industrial Revolution\'s mechanisation of life. For feeling over reason, wildness over order.',
+        key:'Sublime landscapes (nature as overwhelming and terrifying). Historical and literary subjects. Emotional intensity. The artist as sensitive genius.',
+        artists:'J.M.W. Turner (light and atmosphere), Caspar David Friedrich (solitary figures before immense landscapes), Delacroix (Liberty Leading the People), Goya (The Third of May, Black Paintings).',
+        note:'Goya\'s Black Paintings (Saturn Devouring His Son) represent the Romantic dark sublime taken to its most extreme — private, anguished, irrational, and terrifying. Painted directly on the walls of his house and not intended for exhibition.' },
+      realism: { name:'Realism', period:'~1840–1880', places:'France primarily', col:'#444441', bg:'#F1EFE8',
+        what:'Depicts the real world as it is, including the unglamorous, the poor, and the working class. Rejects idealised history painting and classical mythology. The contemporary peasant digging a ditch is a worthy subject for serious art.',
+        reacted:'Against Romanticism\'s emotionalism and Neoclassicism\'s idealisation. For the documentary honesty of depicting actual contemporary life.',
+        key:'Painting peasants, workers, and humble life as serious subjects. Social commentary. Refusal of idealisation. Visual accuracy without heroism.',
+        artists:'Gustave Courbet (The Stone Breakers, Burial at Ornans), Jean-François Millet (The Gleaners), Honoré Daumier.',
+        note:'Courbet\'s Burial at Ornans (1849-50) — a monumental canvas showing an ordinary provincial funeral as if it were a history painting — was considered scandalous. The scale reserved for great historical events was applied to an event of no historical significance.' },
+      impressionism: { name:'Impressionism', period:'1860s–1880s', places:'France (Paris)', col:'#0C447C', bg:'#E6F1FB',
+        what:'Capturing the fleeting impression of light, colour, and atmosphere — especially in landscape and modern urban/bourgeois life. Visible brushwork. Painting en plein air. The moment over the eternal.',
+        reacted:'Against academic painting\'s invisible brushwork, polished finish, and insistence on classical or historical subjects. For modern life, transient light, and subjective perception.',
+        key:'Visible brushwork. Pure colour unmixed on the canvas. Light and atmosphere over form. Modern subjects: parks, cafés, racing, water.',
+        artists:'Claude Monet (Impression: Sunrise, Water Lilies), Pierre-Auguste Renoir (Bal du moulin de la Galette), Edgar Degas (ballet, café scenes), Camille Pissarro, Alfred Sisley.',
+        note:'The name "Impressionism" was intended as an insult by critic Louis Leroy, mocking Monet\'s "Impression, Sunrise." All major art movements have been named by hostile critics: Baroque ("misshapen pearl"), Fauves ("wild beasts"), Cubism.' },
+      postimpressionism: { name:'Post-impressionism', period:'1880s–1900s', places:'France primarily', col:'#27500A', bg:'#EAF3DE',
+        what:'An umbrella term for diverse artists who built on Impressionism but pushed in different directions: structure (Cézanne), emotion (Van Gogh), symbolism (Gauguin), pointillism (Seurat).',
+        reacted:'Against Impressionism\'s focus on surface appearance and transient light — seeking deeper structure, emotional truth, or symbolic content.',
+        key:'Cézanne: geometry underlying appearances (opening to Cubism). Van Gogh: colour and brushwork as emotional expression (opening to Expressionism). Gauguin: primitivism and symbolic colour. Seurat: systematic colour science (Pointillism).',
+        artists:'Paul Cézanne (Mont Sainte-Victoire, The Card Players), Vincent van Gogh (Starry Night, Sunflowers), Paul Gauguin (Tahitian paintings), Georges Seurat (A Sunday on La Grande Jatte).',
+        note:'"Cézanne is the father of us all" — Picasso and Matisse both said this. His systematic analysis of volume and space as geometric planes directly generated Cubism.' },
+      cubism: { name:'Cubism', period:'1907–1920s', places:'Paris', col:'#534AB7', bg:'#EEEDFE',
+        what:'The first true revolution against Renaissance perspective. Objects are broken apart and reassembled showing multiple viewpoints simultaneously — front, side, and back at once.',
+        reacted:'Against the 500-year-old tradition of single-point perspective. For simultaneous multiple perspectives and the abandonment of a single fixed viewpoint.',
+        key:'Fragmented forms. Multiple viewpoints simultaneously. Reduction to geometric planes. Analytical Cubism (monochrome). Synthetic Cubism (collage, brighter colour).',
+        artists:'Pablo Picasso (Les Demoiselles d\'Avignon 1907, Guernica 1937), Georges Braque (co-inventor), Juan Gris, Fernand Léger.',
+        note:'Les Demoiselles d\'Avignon (1907) is considered the most important painting of the 20th century by most accounts. Picasso was influenced by African and Iberian masks encountered at the Trocadéro ethnographic museum.' },
+      surrealism: { name:'Surrealism', period:'1924–1940s', places:'Paris, then worldwide', col:'#D4537E', bg:'#FBEAF0',
+        what:'Access to the unconscious mind as a source of authentic artistic truth. Dream imagery. Irrational juxtapositions. Automatism (drawing/writing without conscious control). Influenced by Freud.',
+        reacted:'Against reason, logic, and bourgeois rationalist values — which Surrealists blamed for the carnage of WWI. For the irrational, the dream, the liberated unconscious.',
+        key:'Dream imagery. The uncanny (familiar things made strange). Automatic writing and drawing. Strange juxtapositions.',
+        artists:'Salvador Dalí (The Persistence of Memory — melting watches), René Magritte (The Treachery of Images — "Ceci n\'est pas une pipe"), Max Ernst, Joan Miró, Frida Kahlo (associated).',
+        note:'Magritte\'s "Ceci n\'est pas une pipe" is a philosophical statement about representation: the painting is not a pipe — it is an image of a pipe. This idea became foundational for semiotics and postmodern art theory.' },
+      expressionism: { name:'Expressionism', period:'1905–1930s', places:'Germany and Austria primarily', col:'#712B13', bg:'#FAECE7',
+        what:'The external world is distorted to express internal emotional states. The artist\'s subjective response to reality, not accurate representation of it. Anxiety, alienation, and existential dread made visible.',
+        reacted:'Against Impressionism\'s visual accuracy and pleasant subject matter. For psychological depth and emotional truth over comfortable surfaces.',
+        key:'Distorted forms. Harsh, non-naturalistic colour. Angular, agitated lines. Urban alienation. Anxiety and menace as subjects.',
+        artists:'Edvard Munch (The Scream), Ernst Ludwig Kirchner (Die Brücke group), Egon Schiele (raw psychological self-portraits), Oskar Kokoschka.',
+        note:'Expressionism was the art the Nazis labelled "Degenerate Art" (Entartete Kunst) in their 1937 exhibition — 16,000 works confiscated and over 5,000 destroyed. The 1937 Degenerate Art exhibition was, ironically, the most visited exhibition in the history of art.' },
+      abstract: { name:'Abstract expressionism', period:'1940s–1950s', places:'New York', col:'#0C447C', bg:'#E6F1FB',
+        what:'Pure abstraction as the vehicle for profound emotional and spiritual content. No representation at all. Painting as a direct record of the painter\'s physical and psychological engagement with the canvas.',
+        reacted:'Against European tradition, representation, and the hidden artist\'s hand. Against illustration of pre-existing ideas. For direct physical engagement.',
+        key:'Action painting (Pollock — gestural, physicality of making) vs Colour Field (Rothko — large fields of colour producing emotional responses). Scale is important — paintings intended to surround the viewer.',
+        artists:'Jackson Pollock (drip paintings), Mark Rothko (colour field), Willem de Kooning, Franz Kline, Lee Krasner, Helen Frankenthaler.',
+        note:'Pollock\'s drip paintings have been shown by physicist Richard Taylor to contain fractal patterns matching those found in nature — suggesting his apparently chaotic technique produced mathematically structured results.' },
+      popart: { name:'Pop art', period:'1950s–1960s', places:'UK then USA', col:'#A32D2D', bg:'#FCEBEB',
+        what:'High art appropriates the imagery of mass culture: advertising, consumer products, comic books, celebrity photography. The boundaries between "high" and "low" culture are challenged or dissolved.',
+        reacted:'Against Abstract Expressionism\'s seriousness and elitism. For the visible, commercial, and culturally democratic imagery of consumer society.',
+        key:'Commercial imagery used in art. Screen printing. Celebrity and commodity as subjects. Repetition and seriality. Bright colour. Irony (sometimes ambiguous — Warhol was deliberately unclear).',
+        artists:'Andy Warhol (Marilyn, Campbell\'s Soup Cans), Roy Lichtenstein (comic-book imagery), Jasper Johns (Flags, Targets), Robert Rauschenberg, Richard Hamilton (UK proto-Pop).',
+        note:'Warhol was deliberately ambiguous: "What\'s great about this country is that America started the tradition where the richest consumers buy essentially the same things as the poorest." Celebration of democracy, or devastating critique of it?' },
+      contemporary: { name:'Contemporary / conceptual art', period:'1960s–present', places:'Global', col:'#2C2C2A', bg:'#F1EFE8',
+        what:'The idea (concept) is the artwork. The physical object, if any, is secondary. Art can be: an instruction, a performance, a photograph, an empty room, a legal contract, a body, a relationship.',
+        reacted:'Against the object as the centre of art. Against the idea that craft, beauty, or visual pleasure are necessary. Against the commodification of art as expensive physical objects.',
+        key:'Conceptual art (Sol LeWitt: ideas alone are artworks). Minimalism. Performance art. Land art. Institutional critique. Relational aesthetics.',
+        artists:'Joseph Beuys (locked in a room with a coyote for 3 days), Yoko Ono (instruction art), Marina Abramović (The Artist is Present — sat silently in MoMA for 3 months), Damien Hirst (shark), Ai Weiwei.',
+        note:'The central question conceptual art poses is still unanswered: if the concept is all that matters, what is the role of craftsmanship, visual pleasure, and the unique physical object? The market has resolved it by paying enormous sums for conceptual objects anyway, restoring the commodity status conceptualism sought to undermine.' }
+    };
+
+    function showMovement(key, clickedElement = null) {
+      const m = movements[key];
+      document.getElementById('movement-display').innerHTML = `
+        <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:10px; flex-wrap:wrap;">
+          <div style="font-size:15px; font-weight:500; color:var(--color-text-primary);">${m.name}</div>
+          <div style="font-size:11px; color:var(--color-text-secondary);">${m.period}</div>
+          <div style="font-size:11px; font-weight:500; background:${m.bg}; color:${m.col}; border-radius:99px; padding:2px 9px;">${m.places}</div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:10px; margin-bottom:8px;">
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What it was</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.what}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What it reacted against</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.reacted}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Key techniques / ideas</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.key}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Key artists and works</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.artists}</div></div>
+        </div>
+        <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px; font-size:12px; color:var(--color-text-secondary); line-height:1.5;">${m.note}</div>`;
+      
+      // Update button styling if clicked from a button
+      if (clickedElement) {
+        document.querySelectorAll('[onclick^="showMovement"]').forEach(btn => {
+          btn.style.background = '';
+          btn.style.fontWeight = 'normal';
+        });
+        clickedElement.style.background = 'var(--color-background-secondary)';
+        clickedElement.style.fontWeight = '600';
+      }
+    }
+
+    /* ════════════════════════════════════
+       WORKS DATA
+    ════════════════════════════════════ */
+    const works = {
+      mona: { title:'Mona Lisa', artist:'Leonardo da Vinci', date:'c.1503–1519', location:'Louvre, Paris', col:'#633806', bg:'#FAEEDA',
+        what:'Oil on poplar panel, 77 × 53 cm. Portrait of Lisa Gherardini, wife of Florentine merchant Francesco del Giocondo (hence "La Gioconda" in Italian). Possibly the world\'s most recognised painting.',
+        significance:'The sfumato technique (smoke-like blurring of edges) creates the famous ambiguous smile — it changes depending on where you look. Leonardo described sfumato as making forms appear "without lines or borders, in the manner of smoke." The sitter\'s eyes appear to follow the viewer — a technique used in many Renaissance portraits.',
+        context:'Took decades to complete; Leonardo carried it to France when he moved there in 1516. Became the world\'s most famous painting largely due to its theft from the Louvre in 1911 (by Vincenzo Peruggia, who kept it in his apartment for 2 years) — the theft created global press attention that permanently installed it as THE painting.',
+        value:'Priceless. Insured for $100M in 1962 (for transit). Not for sale — it is French national property. Some argue it is not the greatest painting in the Louvre (its neighbours, Veronese\'s Wedding at Cana and Delacroix\'s Liberty Leading the People, are arguably more impressive) but its cultural status is unassailable.' },
+      sistine: { title:'Sistine Chapel ceiling', artist:'Michelangelo', date:'1508–1512', location:'Vatican City, Rome', col:'#3C3489', bg:'#EEEDFE',
+        what:'Fresco on a curved ceiling, 40 × 13 metres. Nine central scenes from Genesis (Creation of Adam is the most reproduced). Surrounded by the Prophets and Sibyls, the Ancestors of Christ, and the ignudi (nude youths). Total area: ~500m².',
+        significance:'Michelangelo protested the commission from Pope Julius II, claiming he was not a painter. He then invented or perfected the technique of painting on fresh plaster (true fresco). The 300+ figures demonstrate unprecedented command of the human figure in foreshortened, dynamic poses. The Creation of Adam — God and Adam reaching toward each other — is the defining image of human potential reaching toward the divine.',
+        context:'Painted under extraordinary physical strain. Julius II was an impatient patron. The work took 4 years. Michelangelo added the Last Judgement on the altar wall 25 years later (1536–41), a darker, more tortured work reflecting the trauma of the Sack of Rome.',
+        value:'Part of the Vatican\'s collection — inestimable and non-saleable. What makes it important beyond beauty: the sheer scale of human ambition it represents, the physical endurance it required, and the fact that it changed the direction of Western painting for 200 years.' },
+      guernica: { title:'Guernica', artist:'Pablo Picasso', date:'1937', location:'Museo Reina Sofía, Madrid', col:'#2C2C2A', bg:'#F1EFE8',
+        what:'Oil on canvas, 349 × 776 cm. A massive black, white, and grey canvas depicting the aftermath of the bombing of Guernica, Spain, by Nazi German and Fascist Italian forces on April 26, 1937.',
+        significance:'The most powerful anti-war statement in Western painting. The Cubist vocabulary — fragmented, simultaneous perspectives — creates total chaos. There is no heroism, no narrative arc, no resolution. Only screaming, dismemberment, fire, and darkness. The monochrome palette deliberately evokes newspaper war photography.',
+        context:'Painted in Picasso\'s Paris studio in about 35 days for the Spanish Republic\'s pavilion at the 1937 Paris International Exposition. Kept at MoMA until Spanish democracy was restored. Returned to Spain in 1981. A tapestry reproduction outside the UN Security Council was covered with a blue curtain when Colin Powell made his WMD presentation in 2003.',
+        value:'Belongs to the Spanish state — not for sale. When a Nazi officer asked "Did you do this?" looking at a photo, Picasso replied: "No, you did."' },
+      starry: { title:'The Starry Night', artist:'Vincent van Gogh', date:'1889', location:'MoMA, New York', col:'#0C447C', bg:'#E6F1FB',
+        what:'Oil on canvas, 73.7 × 92.1 cm. Painted at the Saint-Paul-de-Mausole asylum in Saint-Rémy-de-Provence, from Van Gogh\'s room window (with the addition of a village he imagined).',
+        significance:'The swirling, turbulent sky is not a record of what Van Gogh saw but of what he felt. NASA has noted that the painting\'s spiral patterns closely resemble turbulent fluid flow, suggesting Van Gogh\'s brushwork unconsciously captured a scientifically accurate fluid dynamic. Rolling undulations, blazing stars, the cypress tree reaching upward — all express a psychological state rather than optical reality.',
+        context:'Van Gogh described it in a letter to his brother Theo as a failure. He sold only one painting in his lifetime. He painted 2,100 artworks in about 10 years. His public rediscovery came posthumously. The mythology of his suffering (ear, poverty, mental illness) has created one of Western culture\'s most powerful art narratives.',
+        value:'MoMA acquired it in 1941. Not for sale. Estimated theoretical value: $1 billion+. Its reproduction on everything from mugs to phone cases has made it possibly the most commercially exploited painting in history.' },
+      olympia: { title:'Olympia', artist:'Édouard Manet', date:'1863', location:'Musée d\'Orsay, Paris', col:'#712B13', bg:'#FAECE7',
+        what:'Oil on canvas, 130 × 190 cm. A nude woman (Victorine Meurent) reclines on a bed attended by a Black maid and a black cat. Exhibited at the Salon of 1865, where it caused a scandal.',
+        significance:'The shock was not nudity — academic nude painting was common. The shock was: she looks back. Titian\'s Venus of Urbino (1538), which Manet directly referenced, has a sleeping Venus who doesn\'t know she\'s observed. Manet\'s Olympia stares directly at the viewer with an expression that is confrontational — she is not a passive object of the gaze but an autonomous agent who acknowledges being looked at.',
+        context:'The name "Olympia" was a common name for prostitutes in Paris. The Black maid (Laure, also a real model) was painted with unusual individuality for the period. T.J. Clark\'s The Painting of Modern Life argues Olympia is the defining image of the class and gender structures of modernity.',
+        value:'National property of France. Considered the most important painting of the 19th century by many art historians.' },
+      fountain: { title:'Fountain', artist:'Marcel Duchamp', date:'1917 (replica 1964)', location:'Various (replicas in Tate Modern, MoMA, etc.)', col:'#444441', bg:'#F1EFE8',
+        what:'A commercially manufactured porcelain urinal, turned on its side, signed "R. Mutt 1917." The original was lost; 17 replicas were authorised by Duchamp in 1964 and are now in major museums.',
+        significance:'The readymade: an existing manufactured object nominated as art by the artist. The question it poses: what is art? If art is whatever an artist designates as art in an art context, then the concept of art as craft, skill, or beauty is overthrown. All subsequent conceptual art follows from this gesture.',
+        context:'Duchamp submitted it to the Society of Independent Artists in 1917, which had declared it would exhibit anything submitted. They rejected it anyway. He published photographs and a defence essay in The Blind Man journal. The work was "lost" — probably thrown away as garbage.',
+        value:'A 2004 poll of 500 arts professionals voted it the most influential artwork of the 20th century. The original would be priceless if it existed. The significance is entirely conceptual — the physical object is a $5 piece of plumbing hardware. This paradox is precisely the point.' }
+    };
+
+    function showWork(key, clickedElement = null) {
+      const w = works[key];
+      document.getElementById('work-display').innerHTML = `
+        <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:10px; flex-wrap:wrap;">
+          <div style="font-size:15px; font-weight:500; color:var(--color-text-primary);">${w.title}</div>
+          <div style="font-size:11px; font-weight:500; background:${w.bg}; color:${w.col}; border-radius:99px; padding:2px 9px;">${w.artist}, ${w.date}</div>
+          <div style="font-size:11px; color:var(--color-text-secondary);">${w.location}</div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:10px;">
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What it is</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${w.what}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Why it matters</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${w.significance}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Historical context</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${w.context}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Value and significance</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${w.value}</div></div>
+        </div>`;
+      
+      // Update button styling
+      if (clickedElement) {
+        document.querySelectorAll('[onclick^="showWork"]').forEach(btn => {
+          btn.style.background = '';
+          btn.style.fontWeight = 'normal';
+        });
+        clickedElement.style.background = 'var(--color-background-secondary)';
+        clickedElement.style.fontWeight = '600';
+      }
+    }
+
+    /* ════════════════════════════════════
+       MOVEMENT PERIOD CHART
+       Year range: 1300–2025 → 725 years
+    ════════════════════════════════════ */
+    const pcData = [
+      { name:'Renaissance',         start:1300, end:1600, col:'#FAEEDA', tcol:'#633806' },
+      { name:'Baroque',             start:1600, end:1750, col:'#EEEDFE', tcol:'#3C3489' },
+      { name:'Neoclassicism',       start:1750, end:1850, col:'#E1F5EE', tcol:'#085041' },
+      { name:'Romanticism',         start:1790, end:1860, col:'#FAECE7', tcol:'#712B13' },
+      { name:'Realism',             start:1840, end:1880, col:'#F1EFE8', tcol:'#444441' },
+      { name:'Impressionism',       start:1860, end:1890, col:'#E6F1FB', tcol:'#0C447C' },
+      { name:'Post-impressionism',  start:1880, end:1910, col:'#EAF3DE', tcol:'#27500A' },
+      { name:'Expressionism',       start:1905, end:1940, col:'#FCEBEB', tcol:'#791F1F' },
+      { name:'Cubism',              start:1907, end:1930, col:'#EEEDFE', tcol:'#3C3489' },
+      { name:'Surrealism',          start:1924, end:1960, col:'#FBEAF0', tcol:'#D4537E' },
+      { name:'Abstract Exp.',       start:1940, end:1965, col:'#E6F1FB', tcol:'#0C447C' },
+      { name:'Pop art',             start:1955, end:1975, col:'#FCEBEB', tcol:'#A32D2D' },
+      { name:'Contemporary',        start:1960, end:2025, col:'#F1EFE8', tcol:'#444441' },
+    ];
+
+    function buildPeriodChart() {
+      const minY = 1300, maxY = 2025, range = maxY - minY;
+      const ticks = [1300,1400,1500,1600,1700,1800,1900,2000];
+      const axisEl = document.getElementById('pcAxis');
+      const rowsEl = document.getElementById('pcRows');
+      // Build axis
+      ticks.forEach(t => {
+        const pct = ((t - minY) / range * 100).toFixed(2);
+        axisEl.innerHTML += `<span class="pc-axis-mark" style="left:${pct}%">${t}</span>`;
+      });
+      // Build rows
+      pcData.forEach(d => {
+        const left = ((d.start - minY) / range * 100).toFixed(2);
+        const width = ((d.end - d.start) / range * 100).toFixed(2);
+        rowsEl.innerHTML += `
+          <div class="pc-row">
+            <div class="pc-label">${d.name}</div>
+            <div class="pc-track">
+              <div class="pc-fill" style="left:${left}%; width:${width}%; background:${d.col}; border:0.5px solid ${d.tcol}33;">
+                <span class="pc-fill-label" style="color:${d.tcol};">${d.start}–${d.end}</span>
+              </div>
+            </div>
+          </div>`;
+      });
+    }
+    buildPeriodChart();
+
+    /* ════════════════════════════════════
+       ELEMENTS OF ART
+    ════════════════════════════════════ */
+    const elements = {
+      line: {
+        title: 'Line',
+        sub: 'The most fundamental element — a moving point',
+        body: `A line is a mark that has length and direction. It can be straight, curved, diagonal, horizontal, or vertical — and each carries a different psychological charge.<br><br>
+          <strong style="color:var(--color-text-primary);">Horizontal lines</strong> imply calm, rest, and stability — the horizon, a sleeping figure, a landscape at peace.<br>
+          <strong style="color:var(--color-text-primary);">Vertical lines</strong> imply height, power, and aspiration — columns, standing figures, towers.<br>
+          <strong style="color:var(--color-text-primary);">Diagonal lines</strong> imply movement, tension, and instability — the most dynamic. Baroque painters used them relentlessly.<br>
+          <strong style="color:var(--color-text-primary);">Curved lines</strong> suggest organic form, natural growth, sensuality, or grace — the S-curve (contrapposto in sculpture) suggests a relaxed, living body.<br><br>
+          <strong style="color:var(--color-text-primary);">Contour lines</strong> define edges. <strong style="color:var(--color-text-primary);">Implied lines</strong> are created by the edges of shapes or the direction of a figure's gaze — leading the eye without being drawn. Many great paintings use implied lines to create compositional structure the viewer feels but cannot immediately identify.`,
+        example: 'Mondrian used only horizontal and vertical lines — his rejection of diagonals was a philosophical stance about the structure of the cosmos. The diagonal line in Velázquez\'s Las Meninas (the princess\'s gaze, the foreground figures) creates narrative movement in a painting that is otherwise strikingly static.'
+      },
+      shape: {
+        title: 'Shape',
+        sub: '2D enclosed areas — geometric or organic',
+        body: `Shape is a two-dimensional enclosed area. Two categories:<br><br>
+          <strong style="color:var(--color-text-primary);">Geometric shapes</strong> (circles, squares, triangles, rectangles): made by humans, imply order, structure, clarity, and rationality. Classical architecture, Neoclassical painting, and modernist design all rely on geometric shapes.<br>
+          <strong style="color:var(--color-text-primary);">Organic / biomorphic shapes</strong>: irregular, curving, derived from nature. They imply life, growth, unpredictability. Matisse's cut-outs, Arp's sculptures, Miró's paintings all use organic shapes.<br><br>
+          <strong style="color:var(--color-text-primary);">Positive shape</strong> is the object depicted; <strong style="color:var(--color-text-primary);">negative shape</strong> is the space around and between objects. Advanced artists treat both with equal attention.<br><br>
+          In Malevich's Suprematist compositions (Black Square, 1915), the shape is literally everything — the entire content of the work is a geometric shape on a white ground. This was one of the most radical reductions in the history of art.`,
+        example: 'The triangular composition of Leonardo\'s Virgin of the Rocks uses triangular shape to create visual stability and divine hierarchy. The three figures (Virgin, angel, infant Christ) form the points of a stable equilateral triangle — stability and order encoded in shape.'
+      },
+      form: {
+        title: 'Form',
+        sub: '3D volume, or its illusion on a flat surface',
+        body: `Form is three-dimensional — height, width, and depth. In sculpture and architecture, form is literal. In painting and drawing, it is an illusion created through:<br><br>
+          <strong style="color:var(--color-text-primary);">Shading (modelling)</strong>: applying light and dark tones to a shape makes it appear three-dimensional.<br>
+          <strong style="color:var(--color-text-primary);">Foreshortening</strong>: showing a figure or object from an angle that creates the illusion of recession into the picture plane. Mantegna's Dead Christ (c.1480) — foreshortened view from the feet — remains one of the most technically daring uses of foreshortening in painting.<br>
+          <strong style="color:var(--color-text-primary);">Aerial (atmospheric) perspective</strong>: distant objects appear lighter, cooler, and less detailed — as Leonardo used in the Mona Lisa's background.<br><br>
+          Cézanne's great insight was to make the structure of three-dimensional form (the geometry underneath appearances) visible in a new way — treating every surface as a geometric plane with its own colour and angle. This led directly to Cubism's literal multiple-viewpoint representation of form.`,
+        example: 'Michelangelo described his sculptural process as "releasing the figure imprisoned in the marble" — as if the three-dimensional form pre-existed and the sculptor\'s task was to reveal it. This captures something real about the phenomenology of sculptural form: we experience it as occupying space, not as surface.'
+      },
+      space: {
+        title: 'Space',
+        sub: 'Positive, negative, and pictorial depth',
+        body: `Space in art has several dimensions:<br><br>
+          <strong style="color:var(--color-text-primary);">Pictorial space</strong>: the illusion of depth on a flat surface. Created through: linear perspective, overlapping, aerial perspective, size variation (larger = closer), placement (higher = farther in a traditional picture plane).<br>
+          <strong style="color:var(--color-text-primary);">Positive space</strong>: the space occupied by objects in the composition.<br>
+          <strong style="color:var(--color-text-primary);">Negative space</strong>: the empty space around and between objects — not empty at all in the hands of a skilled artist, but an active compositional force.<br>
+          <strong style="color:var(--color-text-primary);">Shallow vs deep space</strong>: medieval painting is deliberately flat (no recession) — figures exist in a spiritual rather than physical space. Renaissance painting opened up deep pictorial space through perspective. Cézanne deliberately compressed space again — the background and foreground were on the same plane — which led to Cubism's destruction of conventional pictorial space entirely.<br><br>
+          Japanese Zen painting uses extreme negative space as its most powerful expressive tool — a single brushstroke of a bird on a vast white field.`,
+        example: 'In Manet\'s The Bar at the Folies-Bergère (1882), the spatial logic is deliberately violated: the barmaid appears directly before us, but the mirror behind her shows an impossible reflection — the conversation with a man visible in the mirror is spatially inconsistent with her position facing us. Manet uses disturbed space to create psychological unease.'
+      },
+      colour: {
+        title: 'Colour',
+        sub: 'Hue, value, saturation — the most emotionally direct element',
+        body: `Colour has three properties:<br><br>
+          <strong style="color:var(--color-text-primary);">Hue</strong>: the colour itself (red, blue, green, etc.).<br>
+          <strong style="color:var(--color-text-primary);">Value</strong>: the lightness or darkness of a colour (light blue vs dark blue).<br>
+          <strong style="color:var(--color-text-primary);">Saturation / intensity</strong>: the purity or brilliance of a colour vs its greyness.<br><br>
+          <strong style="color:var(--color-text-primary);">Colour temperature</strong>: warm colours (red, yellow, orange) appear to advance toward the viewer; cool colours (blue, violet, green) appear to recede — creating depth without perspective. Impressionists exploited this systematically.<br><br>
+          <strong style="color:var(--color-text-primary);">Complementary colours</strong> (opposite on the colour wheel: red/green, blue/orange, yellow/violet) placed adjacent vibrate visually. Seurat's Pointillism placed complementary dots next to each other, arguing the eye would optically mix them into a more brilliant colour than any mixed pigment could produce.<br><br>
+          Van Gogh used colour expressively rather than descriptively — his yellows are not the colour of sunflowers but the feeling of sunflowers, or the feeling of his own mental state in that moment.`,
+        example: 'Rothko chose colours for their specific emotional resonance. He claimed people wept in front of his paintings — and documented instances where they did. His Seagram Murals (originally commissioned for a restaurant, then withdrawn by Rothko when he learned they were for the wealthy) use deep maroon and black: he said he intended to paint "something that will ruin the appetite of every son-of-a-bitch who ever eats in that room."'
+      },
+      value: {
+        title: 'Value',
+        sub: 'The light-dark scale — the foundation of visual structure',
+        body: `Value refers to the relative lightness or darkness of a colour or tone — the spectrum from pure white to pure black, with all the greys between. It is the most structurally fundamental of all the elements because:<br><br>
+          <strong style="color:var(--color-text-primary);">Value creates form</strong>: the way light falls on a three-dimensional object creates value gradations — highlight, halftone, core shadow, reflected light, cast shadow. Draw these correctly and a flat circle becomes a sphere.<br>
+          <strong style="color:var(--color-text-primary);">Value creates depth</strong>: generally, lighter values advance and darker values recede — though Rembrandt used the opposite, with dark backgrounds and illuminated foreground subjects.<br>
+          <strong style="color:var(--color-text-primary);">Value creates mood</strong>: high-key compositions (mostly light values) feel airy, optimistic, or ethereal. Low-key compositions (mostly dark values) feel dramatic, heavy, or melancholic.<br><br>
+          A useful test: convert any painting to black and white. If it still reads clearly — if you can understand the composition and space — the value structure is sound. Many amateur painters struggle because they don't establish value before colour.`,
+        example: 'Rembrandt\'s self-portraits use value as psychological instrument — the face emerges from darkness, the background providing no information, forcing the viewer to focus entirely on the illuminated face. In the late self-portraits, this isolation in a dark field reads as meditation on ageing, loneliness, and mortality — achieved entirely through value structure, not subject matter.'
+      },
+      texture: {
+        title: 'Texture',
+        sub: 'Actual and implied surface quality',
+        body: `Texture in art operates in two modes:<br><br>
+          <strong style="color:var(--color-text-primary);">Actual texture</strong>: the physical surface quality of the work itself. Oil paint can be applied as smooth glazes (Vermeer, Ingres) or thick impasto with knife or brush marks visible (Van Gogh, Rembrandt's later work, Pollock). The physical texture of Pollock's drip paintings — the actual accumulated layers of paint, sand, cigarette ends — is inseparable from their meaning.<br>
+          <strong style="color:var(--color-text-primary);">Implied (visual) texture</strong>: the illusion of surface quality represented in the painting. Jan van Eyck's hyper-detailed depiction of velvet, fur, and jewels in the Arnolfini Portrait creates the illusion of multiple textures on a flat painted surface.<br><br>
+          The degree of visible brushwork (texture of paint application) is itself a stylistic and ideological choice: academic painting hid the brushwork entirely (the surface should look like polished enamel — no trace of labour). Impressionists made brushwork visible. Expressionists made it aggressively expressive. Minimalists eliminated it entirely to create neutral surfaces.`,
+        example: 'Jan van Eyck\'s The Arnolfini Portrait (1434) depicts an interior scene with extraordinary textural detail: the convex mirror on the wall (with tiny reflected figures), the fur trim on the robes, the wooden floor, the oranges on the windowsill. This is not mere technical virtuosity but a theological statement: the material world is the manifestation of divine creation and therefore worthy of this minute attention.'
+      }
+    };
+
+    function showElement(key, clickedElement = null) {
+      // Update card active state
+      document.querySelectorAll('.elem-card').forEach(c => c.classList.remove('active'));
+      if (clickedElement) {
+        clickedElement.classList.add('active');
+      } else {
+        // Find the card by its onclick content
+        document.querySelectorAll('.elem-card').forEach(card => {
+          const onclick = card.getAttribute('onclick');
+          if (onclick && onclick.includes(`'${key}'`)) {
+            card.classList.add('active');
+          }
+        });
+      }
+      
+      const e = elements[key];
+      const detail = document.getElementById('elem-detail');
+      detail.innerHTML = `
+        <div style="font-size:13px; font-weight:500; color:var(--color-text-primary); margin-bottom:3px;">${e.title} — ${e.sub}</div>
+        <div style="font-size:12px; color:var(--color-text-primary); line-height:1.65; margin-bottom:10px;">${e.body}</div>
+        <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px; font-size:12px; color:var(--color-text-secondary); line-height:1.5;">
+          <strong style="color:var(--color-text-primary);">Key example:</strong> ${e.example}
+        </div>`;
+      detail.classList.add('show');
+    }
+
+    /* ════════════════════════════════════
+       MEDIUM & TECHNIQUE
+    ════════════════════════════════════ */
+    const mediums = {
+      fresco: {
+        name: 'Fresco', period: 'Ancient – Renaissance (and beyond)', col: '#0C447C', bg: '#E6F1FB',
+        how: 'True fresco (buon fresco) is painted onto freshly laid wet plaster. The pigments bond chemically with the plaster as it dries, becoming part of the wall itself. A limited section (giornata — one day\'s work) is plastered at a time. Dry fresco (secco) is painted onto dry plaster; it is less durable and Michelangelo\'s own figures on the Sistine altar wall (painted secco) have deteriorated more than the ceiling done in buon fresco.',
+        constraints: 'Must paint quickly before plaster dries (typically 6–12 hours per section). No reworking allowed. Cannot achieve very fine detail. Palette limited to pigments that survive the alkaline environment. Forces confident, decisive brushwork.',
+        artists: 'Giotto (Arena Chapel, Padua — the first major fresco cycle, 1304–06), Masaccio (Brancacci Chapel), Raphael (School of Athens, Vatican Stanze), Michelangelo (Sistine ceiling), Rivera (Mexican murals — 20th-century revival).',
+        note: 'The Sistine Chapel ceiling covers approximately 500m² — Michelangelo\'s giornate can be identified by the seams in the plaster. He initially used assistants to help plaster but dismissed them and worked almost entirely alone. The fresco took 4 years.'
+      },
+      tempera: {
+        name: 'Egg tempera', period: 'Medieval – Early Renaissance', col: '#633806', bg: '#FAEEDA',
+        how: 'Pigment mixed with egg yolk as the binder. Applied in thin, hatched strokes — because tempera dries within minutes and cannot be blended on the surface. Multiple thin layers create depth and luminosity. Works on wooden panels primed with gesso (white ground).',
+        constraints: 'Cannot blend; all modelling must be done by cross-hatching. Dries quickly. Limited reworking. Brilliant, jewel-like colours. Fragile — cannot be rolled up. Not suitable for large scale without enormous effort.',
+        artists: 'Duccio di Buoninsegna, Giotto, Cimabue, Fra Angelico (the Annunciation, San Marco monastery), Botticelli (Birth of Venus — tempera on canvas, rare for him), Andrew Wyeth (20th-century revival — Christina\'s World).',
+        note: 'The reason Byzantine and early medieval panel paintings have that characteristic dry, precise, geometric quality is partly the medium: egg tempera literally cannot produce the soft blended transitions of oil. The Renaissance\'s "discovery" of softness and atmospheric depth is partly the discovery of oil paint.'
+      },
+      oil: {
+        name: 'Oil paint', period: '15th century – present day', col: '#085041', bg: '#E1F5EE',
+        how: 'Pigment suspended in linseed, walnut, or poppy oil. The oil dries slowly (oxidising, not evaporating) — hours to days — allowing extended working time, blending, reworking, overpainting, and glazing (applying transparent layers that create depth and luminosity). Can be applied thin (glazing) or thick (impasto). Works on canvas, wood, or almost any prepared surface.',
+        constraints: 'Slow drying can be a problem (though also an asset). Oil can yellow over centuries. Early oil paintings are prone to cracking if paint layers are not applied correctly (fat over lean — each successive layer must have more oil than the last). Canvas can rot if inadequately primed.',
+        artists: 'Jan van Eyck (among the first masters), Leonardo, Titian, Velázquez, Rembrandt, Vermeer, Monet, Van Gogh, Picasso — essentially every major Western painter from 1450 to 1950.',
+        note: 'Oil\'s dominance for 500 years is due to one killer feature: time. The painter can return over days, weeks, even years. Glazing — applying translucent layers over dried layers — creates colour effects impossible with any other medium. Titian\'s glazed flesh tones have never been matched.'
+      },
+      watercolour: {
+        name: 'Watercolour', period: '18th century – present (earlier for drawing)', col: '#712B13', bg: '#FAECE7',
+        how: 'Pigment mixed with gum arabic, applied with water to white paper. The paper\'s white surface provides the light. Because paint is transparent, you cannot paint light over dark — must work light to dark, preserving the whites by leaving unpainted paper. Cannot be corrected; overworking muddies the colour.',
+        constraints: 'No second chances — overworking destroys the freshness. Cannot achieve dark rich darks easily. Cannot overpaint whites (must preserve them from the start). Paper must be stretched or it warps. The most technically demanding medium because errors cannot be concealed.',
+        artists: 'J.M.W. Turner (transformed watercolour from a sketch medium to a complete art form — his late watercolours are abstract in all but name), Winslow Homer, Paul Klee, Cézanne (many late sketches), John Singer Sargent, David Hockney.',
+        note: 'Turner\'s late watercolours (Venice, Swiss Alps, 1840s) are some of the most technically astonishing works in Western art — pure light, atmosphere, and colour with almost no defined form. They were so ahead of their time that Impressionism can be seen as catching up with what Turner had already done in the 1840s.'
+      },
+      acrylic: {
+        name: 'Acrylic paint', period: '1950s – present', col: '#444441', bg: '#F1EFE8',
+        how: 'Pigment suspended in an acrylic polymer emulsion. Dries quickly to a water-resistant film. Can mimic oil paint (applied thickly) or watercolour (diluted with water). Can be layered over itself in minutes. Does not yellow. Infinitely flexible in technique.',
+        constraints: 'Dries faster than oil — makes blending harder. Colour shifts slightly as it dries. Cannot achieve the translucent, glowing depth of oil glazing as easily. Plastic quality to the dried paint film.',
+        artists: 'David Hockney (used extensively from 1960s), Mark Rothko (late works), Roy Lichtenstein, Andy Warhol, Gerhard Richter (uses both oil and acrylic), Damien Hirst (spot paintings).',
+        note: 'Acrylic\'s invention democratised serious painting — it is cheaper, easier to use, does not require mineral spirits, and is faster. It is the dominant medium of contemporary art education and studio practice, though many painters still choose oil for its unique optical qualities.'
+      },
+      engraving: {
+        name: 'Engraving / etching', period: '15th century – present', col: '#3C3489', bg: '#EEEDFE',
+        how: 'Intaglio printmaking: image incised into a metal plate (copper or zinc). Engraving uses a burin (cutting tool) to carve lines directly. Etching uses acid: the plate is coated with wax, the artist draws through the wax with a needle, and the acid bites where the wax is removed. Ink is pressed into the incised lines and the plate printed onto paper — each print is a "multiple original."',
+        constraints: 'Technically demanding. Cannot be altered easily. Each print in the edition is identical (the medium is multiplicative — its whole point is reproduction). Lines are the primary expressive unit.',
+        artists: 'Dürer (master of engraving — Melencolia I, 1514), Rembrandt (master of etching — 300+ prints exploring every technique), Goya (Los Caprichos, Disasters of War), Piranesi (Views of Rome), Hogarth, Picasso.',
+        note: 'Rembrandt\'s etchings are as technically accomplished and as emotionally profound as his paintings — in some ways more so, because the medium demands absolute precision and cannot hide behind colour or surface richness. His printing of "Three Crosses" shows him reworking the plate entirely between states — the first state shows crucifixion in diffuse light; the fourth state is plunged in dramatic darkness.'
+      },
+      screenprint: {
+        name: 'Screen printing', period: '1960s – present (as fine art)', col: '#A32D2D', bg: '#FCEBEB',
+        how: 'A stencil is created on a silk or synthetic mesh screen. Ink is pushed through the open areas of the stencil with a squeegee onto the surface below. Each colour requires a separate screen. The process produces flat, even fields of colour — unlike any other medium.',
+        constraints: 'Flat colour — no tonal gradation within a single pass. Requires separate screen per colour. Registration (aligning multiple layers) is the key technical challenge. The aesthetic is commercial, graphic, and flat — its art use exploits this deliberately.',
+        artists: 'Andy Warhol (Marilyn Monroe, Mao series), Robert Rauschenberg (combined screen printing with painting), Shepard Fairey (Hope poster, Barack Obama 2008), Banksy.',
+        note: 'Warhol\'s choice of screen printing for his celebrity series was not arbitrary — the medium is identical to commercial advertising production. By using the same process as billboard printing to make "fine art," he collapsed the distinction between art and commodity production. The slightly misregistered, varying ink layers in different prints in the same series are features, not bugs: imperfect reproduction questioning the premise of the unique original.'
+      },
+      collage: {
+        name: 'Collage / mixed media', period: '1912 – present', col: '#D4537E', bg: '#FBEAF0',
+        how: 'Assembling works from diverse materials: paper, fabric, photographs, newsprint, found objects, paint, sand, wire — anything. Cubist papier collé (pasted paper) was the invention point. The medium deliberately incorporates the real world (a newspaper fragment is a real newspaper fragment, not a representation of one) into a representation.',
+        constraints: 'Preservation challenges: materials deteriorate at different rates. Gluing and mounting are archival problems. Hard to transport. Physically fragile.',
+        artists: 'Picasso and Braque (papier collé, 1912), Kurt Schwitters (Merz collages — assembled from tram tickets and rubbish), Hannah Höch (Dada photomontage), Max Ernst, Robert Rauschenberg ("Combines"), Kara Walker (silhouette cut-paper works).',
+        note: 'The insertion of a real newspaper fragment into a Cubist painting (Picasso, Le Journal, 1912) was a philosophical provocation: if reality can be directly included in a painting, what is the status of representation? This question resonates through all subsequent art that incorporates found objects, photographs, or text.'
+      }
+    };
+
+    function showMedium(key, clickedElement = null) {
+      const m = mediums[key];
+      document.getElementById('medium-display').innerHTML = `
+        <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:10px; flex-wrap:wrap;">
+          <div style="font-size:15px; font-weight:500; color:var(--color-text-primary);">${m.name}</div>
+          <div style="font-size:11px; font-weight:500; background:${m.bg}; color:${m.col}; border-radius:99px; padding:2px 9px;">${m.period}</div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:10px; margin-bottom:8px;">
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">How it works</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.how}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Constraints &amp; properties</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.constraints}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Key artists</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.artists}</div></div>
+          <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Key insight</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${m.note}</div></div>
+        </div>`;
+      
+      // Update button styling
+      if (clickedElement) {
+        document.querySelectorAll('[onclick^="showMedium"]').forEach(btn => {
+          btn.style.background = '';
+          btn.style.fontWeight = 'normal';
+        });
+        clickedElement.style.background = 'var(--color-background-secondary)';
+        clickedElement.style.fontWeight = '600';
+      }
+    }
+
+    /* ════════════════════════════════════
+       SCALE VISUALISER
+    ════════════════════════════════════ */
+    const scaleWorks = [
+      { name:'Mona Lisa',           w:53,  h:77,  note:'Smaller than you think — about the size of a large hardback book. Crowds in the Louvre often express surprise at how intimate the actual scale is.' },
+      { name:'Starry Night',        w:92,  h:74,  note:'Comfortably viewed in a single glance. The swirling sky feels vast, but the canvas is modest — the scale is psychological rather than physical.' },
+      { name:'Guernica',            w:776, h:349, note:'Nearly 8 metres wide — the widest painting most people will ever stand before. The scale is essential: it surrounds your peripheral vision and implicates you in the scene.' },
+      { name:'Sistine ceiling',     w:1300,h:4000,note:'40 metres long × 13 metres wide. So large it required Michelangelo to invent a special curved scaffold. The individual figures, seen up close, are over life-size.' },
+      { name:'Water Lilies (large)',w:1730,h:660, note:'Monet\'s largest Water Lilies cycle at the Orangerie, Paris: eight panels forming a total surface of ~200m². The scale was conceived to "offer an asylum of peaceful meditation." You stand inside the painting.' },
+      { name:'Rothko Chapel (each)',w:140, h:460, note:'14 large paintings in an octagonal non-denominational chapel in Houston. Each panel is approximately 1.4m × 4.6m. Rothko was involved in every design decision; he died two months before it opened.' },
+      { name:'Olympia',             w:190, h:130, note:'Roughly the size of a single bed. Intended for the Salon, this scale — large for a nude, normal for a history painting — was part of the provocation.' },
+      { name:'Fountain (Duchamp)',  w:36,  h:48,  note:'A standard urinal. The scale is utterly ordinary — domestic plumbing hardware. In a museum context, this ordinariness is exactly the point.' },
+    ];
+
+    function buildScaleViz() {
+      const btns = document.getElementById('scaleButtons');
+      scaleWorks.forEach((w, i) => {
+        const btn = document.createElement('button');
+        btn.textContent = w.name;
+        btn.style.cssText = 'font-size:11px; padding:3px 9px;';
+        btn.onclick = (e) => renderScale(i, e.currentTarget);
+        btns.appendChild(btn);
+      });
+      // Wait for buttons to be added before rendering first one
+      setTimeout(() => {
+        renderScale(0, btns.children[0]);
+      }, 0);
+    }
+
+    function renderScale(idx, btn) {
+      document.querySelectorAll('#scaleButtons button').forEach(b => {
+        b.style.background = '';
+        b.style.fontWeight = 'normal';
+      });
+      if (btn) {
+        btn.style.background = 'var(--color-background-secondary)';
+        btn.style.fontWeight = '600';
+      }
+      
+      const w = scaleWorks[idx];
+      // person height in cm: 170. Max display height: 180px
+      const personH = 170;
+      const maxDisplayH = 180;
+      const scale = maxDisplayH / Math.max(personH, w.h);
+      const personDisplayH = Math.round(personH * scale);
+      const workDisplayH = Math.min(Math.round(w.h * scale), 300);
+      const workDisplayW = Math.min(Math.round(w.w * scale), 320);
+
+      const viz = document.getElementById('scaleViz');
+      viz.innerHTML = `
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px; flex-shrink:0;">
+          <div style="width:18px; height:${personDisplayH}px; background:var(--color-border-secondary); border-radius:2px; position:relative;">
+            <div style="position:absolute; top:-8px; left:50%; transform:translateX(-50%); width:14px; height:14px; border-radius:50%; background:var(--color-border-secondary);"></div>
+          </div>
+          <div style="font-size:9px; color:var(--color-text-tertiary);">170 cm</div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+          <div style="width:${Math.max(workDisplayW, 40)}px; height:${Math.max(workDisplayH, 30)}px; background:#E6F1FB; border:1.5px solid #85B7EB; border-radius:2px; display:flex; align-items:center; justify-content:center;">
+            <span style="font-size:9px; color:#0C447C; text-align:center; padding:2px 4px;">${w.name}</span>
+          </div>
+          <div style="font-size:9px; color:var(--color-text-tertiary);">${w.w} × ${w.h} cm</div>
+        </div>`;
+      document.getElementById('scaleInfo').textContent = w.note;
+    }
+
+    /* ════════════════════════════════════
+       FIX BUTTON ONCLICK HANDLERS
+    ════════════════════════════════════ */
+    // Override the inline onclick handlers to pass the event
+    document.addEventListener('DOMContentLoaded', function() {
+      // Fix movement buttons
+      document.querySelectorAll('[onclick^="showMovement"]').forEach(btn => {
+        const match = btn.getAttribute('onclick').match(/showMovement\('([^']+)'\)/);
+        if (match) {
+          const key = match[1];
+          btn.onclick = (e) => showMovement(key, e.currentTarget);
+        }
+      });
+      
+      // Fix work buttons
+      document.querySelectorAll('[onclick^="showWork"]').forEach(btn => {
+        const match = btn.getAttribute('onclick').match(/showWork\('([^']+)'\)/);
+        if (match) {
+          const key = match[1];
+          btn.onclick = (e) => showWork(key, e.currentTarget);
+        }
+      });
+      
+      // Fix element cards
+      document.querySelectorAll('.elem-card').forEach(card => {
+        const match = card.getAttribute('onclick').match(/showElement\('([^']+)'\)/);
+        if (match) {
+          const key = match[1];
+          card.onclick = (e) => showElement(key, e.currentTarget);
+        }
+      });
+      
+      // Fix medium buttons
+      document.querySelectorAll('[onclick^="showMedium"]').forEach(btn => {
+        const match = btn.getAttribute('onclick').match(/showMedium\('([^']+)'\)/);
+        if (match) {
+          const key = match[1];
+          btn.onclick = (e) => showMedium(key, e.currentTarget);
+        }
+      });
+    });
+
+    /* ════════════════════════════════════
+       INIT DEFAULTS
+    ════════════════════════════════════ */
+    // Initialize all displays after DOM is ready
+    window.addEventListener('DOMContentLoaded', function() {
+      showMovement('impressionism');
+      showWork('mona');
+      showElement('line');
+      showMedium('oil');
+      buildScaleViz();
+    });
+    
+</script>
