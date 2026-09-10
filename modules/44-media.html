@@ -806,6 +806,15 @@
   window.addEventListener('DOMContentLoaded', function() {
 
     // ────────────────────────────────────────────────────
+    // Q&A reveal
+    // ────────────────────────────────────────────────────
+    window.toggleQA = function (btn) {
+      const ans = btn.nextElementSibling;
+      const showing = ans.classList.toggle('show');
+      btn.textContent = showing ? 'hide' : 'show answer';
+    };
+
+    // ────────────────────────────────────────────────────
     // TIMELINE — media history
     // ────────────────────────────────────────────────────
     const pcData = [

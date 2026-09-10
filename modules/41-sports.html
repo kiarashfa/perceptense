@@ -1122,6 +1122,13 @@
   <script>
   window.addEventListener('DOMContentLoaded', function() {
 
+    // ─── Q&A reveal ───
+    window.toggleQA = function (btn) {
+      const ans = btn.nextElementSibling;
+      const showing = ans.classList.toggle('show');
+      btn.textContent = showing ? 'hide' : 'show answer';
+    };
+
     // ─── Utility ───
     function barRow(label, val, maxVal, colour, unit) {
       const pct = Math.min(100, (val / maxVal) * 100);
