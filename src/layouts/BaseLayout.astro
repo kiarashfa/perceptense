@@ -58,11 +58,6 @@ const analyticsId = import.meta.env.PUBLIC_GA_ID;
     <link rel="apple-touch-icon" sizes="180x180" href={`${base}/assets/favicons/apple-touch-icon.png`} />
     <link rel="manifest" href={`${base}/assets/favicons/site.webmanifest`} />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      crossorigin="anonymous"
-    />
     <!-- Linked rather than imported so it precedes every bundled module
          stylesheet; module rules are written to win ties against it. -->
     <link rel="stylesheet" href={`${base}/styles/shared.css?v=${sharedCssHash}`} />

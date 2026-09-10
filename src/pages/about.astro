@@ -4,6 +4,7 @@ import { site, path, pageTitle } from '../lib/site';
 import modules from '../data/modules.json';
 import categories from '../data/categories.json';
 import '../styles/about.css';
+import '../styles/icons/about.css';
 
 const pathname = path('about');
 const url = new URL(pathname, Astro.site).href;
@@ -296,7 +297,7 @@ const structuredData = [
 
       <div class="author-card">
         <div class="author-header">
-          <img class="author-avatar" src="https://raw.githubusercontent.com/kiarashfa/website/main/assets/imgs/MyPic.png" alt="Kiarash Farajzadehahary">
+          <img class="author-avatar" src="../images/author.webp" alt="Kiarash Farajzadehahary">
           <div>
             <div class="author-name">Kiarash Farajzadehahary</div>
             <div class="author-role">Scientist &middot; developer &middot; designer &middot; curious engineer</div>
@@ -321,7 +322,7 @@ const structuredData = [
 
           <div class="author-links">
             <a class="author-link" href="https://kiarashfa.github.io/website/" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i>Personal site</a>
-            <a class="author-link" href="mailto:mymail@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
+            <a class="author-link" href="mailto:KiarashFa@Gmail.com"><i class="fa-solid fa-envelope"></i>Email</a>
             <a class="author-link" href="https://github.com/kiarashfa" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
           </div>
 

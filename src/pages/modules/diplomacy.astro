@@ -2,6 +2,7 @@
 import ModuleLayout from '../../layouts/ModuleLayout.astro';
 import modules from '../../data/modules.json';
 import '../../styles/modules/diplomacy.css';
+import '../../styles/icons/diplomacy.css';
 
 const mod = modules.find((m) => m.id === 18)!;
 ---
@@ -1188,9 +1189,9 @@ const FL_REGION_LABELS = {
     el.className = 'fl-item';
     el.dataset.region = c.region;
     el.dataset.name = c.name.toLowerCase();
-    el.innerHTML = '<img class="fl-img" src="https://flagcdn.com/w40/' + c.iso + '.png" alt="' + c.name + '" loading="lazy"><span class="fl-name">' + c.name + '</span>';
+    el.innerHTML = '<img class="fl-img" src="../../flags/' + c.iso + '.png" alt="' + c.name + '" loading="lazy"><span class="fl-name">' + c.name + '</span>';
     el.addEventListener('click', function() {
-      detImg.src = 'https://flagcdn.com/w80/' + c.iso + '.png';
+      detImg.src = '../../flags/' + c.iso + '.png';
       detImg.alt = c.name;
       detName.textContent = c.name;
       detMeta.textContent = 'ISO: ' + c.iso.toUpperCase() + ' \u00b7 ' + FL_REGION_LABELS[c.region];

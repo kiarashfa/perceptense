@@ -23,3 +23,5 @@ Thumbs.db
 # generated from src/styles/modules-src by the css step
 src/styles/modules/
 public/styles/
+src/styles/icons/
+src/styles/icons-base.css
