@@ -1,0 +1,21 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# local working notes
+memory.md
+CLAUDE.md
+
+# environment
+.env
+.env.production
+.env.local
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
