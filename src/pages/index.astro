@@ -1,11 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ModuleBrowser from '../components/ModuleBrowser.astro';
 import { site, path } from '../lib/site';
 import modules from '../data/modules.json';
-import categories from '../data/categories.json';
+import '../styles/home.css';
 
 const pathname = path();
-const origin = Astro.site!.origin;
+const home = new URL(pathname, Astro.site).href;
+
+/** Modules given a thumbnail on the homepage. */
+const FEATURED: Record<number, string> = {
+  8: 'Thumb_Speed.png',
+  10: 'Thumb_History.png',
+  30: 'Thumb_Art.png',
+};
+const featured = modules.filter((m) => m.id in FEATURED);
 
 const structuredData = [
   {
@@ -13,20 +22,20 @@ const structuredData = [
     '@type': 'WebSite',
     name: site.brand,
     alternateName: site.tagline,
-    url: new URL(pathname, Astro.site).href,
+    url: home,
     description: site.description,
     inLanguage: site.locale,
+    author: { '@type': 'Person', name: site.author },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: `${site.brand} — ${site.tagline}`,
     description: site.description,
-    url: new URL(pathname, Astro.site).href,
+    url: home,
     provider: { '@type': 'Person', name: site.author },
     isAccessibleForFree: true,
     inLanguage: site.locale,
-    numberOfCredits: modules.length,
     hasCourseInstance: {
       '@type': 'CourseInstance',
       courseMode: 'online',
@@ -46,30 +55,71 @@ const structuredData = [
   title={`${site.brand} — ${site.tagline}`}
   description={site.description}
   pathname={pathname}
+  bodyClass="home"
   structuredData={structuredData}
 >
-  <div class="page-wrap">
-    <h1>{site.tagline}</h1>
-    <p class="lede">{site.description}</p>
+  <div class="home-wrap">
+    <div class="hero">
+      <svg class="hero-graphic" viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg">
+      <!-- Connection lines -->
+      <line x1="40" y1="70" x2="100" y2="30" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+      <line x1="100" y1="30" x2="140" y2="60" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+      <line x1="140" y1="60" x2="180" y2="25" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+      <line x1="180" y1="25" x2="240" y2="55" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+      <line x1="100" y1="30" x2="180" y2="25" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+      <line x1="40" y1="70" x2="140" y2="60" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+      <line x1="140" y1="60" x2="240" y2="55" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+      <line x1="70" y1="95" x2="140" y2="60" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+      <line x1="140" y1="60" x2="210" y2="90" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+      <line x1="70" y1="95" x2="40" y2="70" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+      <line x1="210" y1="90" x2="240" y2="55" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
+      <!-- Nodes -->
+      <circle cx="40"  cy="70" r="5"   fill="#4E99A3" opacity="0.7"/>
+      <circle cx="100" cy="30" r="6.5" fill="#4E99A3" opacity="0.85"/>
+      <circle cx="140" cy="60" r="8"   fill="#4E99A3" opacity="1"/>
+      <circle cx="180" cy="25" r="5.5" fill="#4E99A3" opacity="0.75"/>
+      <circle cx="240" cy="55" r="6"   fill="#4E99A3" opacity="0.8"/>
+      <circle cx="70"  cy="95" r="4"   fill="#4E99A3" opacity="0.55"/>
+      <circle cx="210" cy="90" r="4.5" fill="#4E99A3" opacity="0.6"/>
+      <!-- Decorative small dots -->
+      <circle cx="60"  cy="45" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
+      <circle cx="120" cy="80" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
+      <circle cx="160" cy="45" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
+      <circle cx="200" cy="70" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
+      <circle cx="260" cy="40" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
+      <circle cx="20"  cy="50" r="1.2" fill="var(--color-text-tertiary)" opacity="0.2"/>
+      <circle cx="220" cy="40" r="1.2" fill="var(--color-text-tertiary)" opacity="0.2"/>
+      </svg>
 
-    <h2>Topics</h2>
-    <ul class="topic-chips">
-      {categories.map((c) => (
-        <li><a href={path('topics', c.id)}>{c.label}</a></li>
-      ))}
-    </ul>
+      <div class="hero-overtitle">A self-directed course</div>
+      <h1 class="hero-title">Have a Sense<br />About Everything</h1>
+      <p class="hero-sub">Interactive modules covering everything that shapes daily life.</p>
+    </div>
 
-    <h2>All 50 modules</h2>
-    <ol class="module-list">
-      {modules.map((m) => (
-        <li class="module-list-item">
-          <a href={path('modules', m.slug)}>
-            <span class="module-list-num">{String(m.id).padStart(2, '0')}</span>
-            <span class="module-list-name">{m.name}</span>
-            <span class="module-list-blurb">{m.blurb}</span>
+    <div class="feat-section">
+      <div class="feat-label">Featured modules</div>
+      <div class="feat-grid">
+        {featured.map((m) => (
+          <a href={path('modules', m.slug)} class="feat-card">
+            <img
+              src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/thumbnails/${FEATURED[m.id]}`}
+              alt=""
+              class="feat-img"
+              loading="lazy"
+              decoding="async"
+              width="300"
+              height="300"
+            />
+            <div class="feat-body">
+              <div class="feat-num">Module {m.id}</div>
+              <div class="feat-name">{m.name}</div>
+              <p class="feat-desc">{m.blurb}</p>
+            </div>
           </a>
-        </li>
-      ))}
-    </ol>
+        ))}
+      </div>
+    </div>
+
+    <ModuleBrowser />
   </div>
 </BaseLayout>

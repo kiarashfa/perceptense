@@ -1,0 +1,141 @@
+---
+import { path } from '../lib/site';
+import modules from '../data/modules.json';
+import categories from '../data/categories.json';
+
+const byId = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+---
+<div class="search-section">
+  <div class="search-wrap">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+    <label class="sr-only" for="search">Search modules</label>
+    <input type="text" class="search-input" id="search" placeholder="Search modules..." autocomplete="off" />
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-cat="all">All</button>
+    {categories.map((c) => (
+      <button class="filter-btn" data-cat={c.id} set:html={c.label} />
+    ))}
+  </div>
+
+  <div class="result-count" id="resultCount">{modules.length} modules</div>
+</div>
+
+<div class="mod-list" id="modList">
+  <div class="mod-header-row" id="sortHeader">
+    <button class="sort-btn active" data-sort="num" title="Sort by number">
+      <span>#</span><span class="sort-arrow">^</span>
+    </button>
+    <span></span>
+    <button class="sort-btn" data-sort="name" title="Sort by name">
+      <span>Module</span><span class="sort-arrow">^</span>
+    </button>
+    <button class="sort-btn" data-sort="cat" title="Sort by category">
+      <span>Category</span><span class="sort-arrow">^</span>
+    </button>
+  </div>
+
+  {modules.map((m) => (
+    <a
+      href={path('modules', m.slug)}
+      class="mod-item"
+      data-cat={m.category}
+      data-num={m.id}
+      data-search={m.keywords.join(' ')}
+    >
+      <span class="mod-num">{String(m.id).padStart(2, '0')}</span>
+      <span class="mod-icon"><i class={m.faIcon} aria-hidden="true"></i></span>
+      <div class="mod-body">
+        <div class="mod-name">{m.name}</div>
+        <p class="mod-desc">{m.blurb}</p>
+      </div>
+      <span class="mod-tag" data-cat={m.category}>{byId[m.category]}</span>
+    </a>
+  ))}
+</div>
+
+<div class="no-results" id="noResults">No modules match your search.</div>
+
+<script>
+  const search = document.getElementById('search') as HTMLInputElement | null;
+  const list = document.getElementById('modList');
+  const items = Array.from(document.querySelectorAll<HTMLElement>('.mod-item'));
+  const filterButtons = Array.from(document.querySelectorAll<HTMLElement>('.filter-btn'));
+  const sortButtons = Array.from(document.querySelectorAll<HTMLElement>('.sort-btn'));
+  const resultCount = document.getElementById('resultCount');
+  const noResults = document.getElementById('noResults');
+
+  if (search && list && resultCount && noResults) {
+    let activeCategory = 'all';
+    let sortKey = 'num';
+    let ascending = true;
+
+    const textOf = (el: HTMLElement) =>
+      `${el.dataset.search ?? ''} ${el.querySelector('.mod-name')?.textContent ?? ''}`.toLowerCase();
+
+    function applyFilters() {
+      const query = search!.value.toLowerCase().trim();
+      let visible = 0;
+      for (const item of items) {
+        const matchesCategory = activeCategory === 'all' || item.dataset.cat === activeCategory;
+        const matchesQuery = !query || textOf(item).includes(query);
+        const show = matchesCategory && matchesQuery;
+        item.hidden = !show;
+        if (show) visible++;
+      }
+      resultCount!.textContent = `${visible} ${visible === 1 ? 'module' : 'modules'}`;
+      noResults!.hidden = visible !== 0;
+    }
+
+    function applySort() {
+      const sorted = [...items].sort((a, b) => {
+        if (sortKey === 'num') {
+          const diff = Number(a.dataset.num) - Number(b.dataset.num);
+          return ascending ? diff : -diff;
+        }
+        const pick = (el: HTMLElement) =>
+          (sortKey === 'name'
+            ? el.querySelector('.mod-name')?.textContent
+            : el.querySelector('.mod-tag')?.textContent) ?? '';
+        const diff = pick(a).localeCompare(pick(b));
+        if (diff !== 0) return ascending ? diff : -diff;
+        return Number(a.dataset.num) - Number(b.dataset.num);
+      });
+      for (const item of sorted) list!.appendChild(item);
+    }
+
+    search.addEventListener('input', applyFilters);
+
+    for (const button of filterButtons) {
+      button.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+        activeCategory = button.dataset.cat ?? 'all';
+        applyFilters();
+      });
+    }
+
+    for (const button of sortButtons) {
+      button.addEventListener('click', () => {
+        const key = button.dataset.sort ?? 'num';
+        ascending = key === sortKey ? !ascending : true;
+        sortKey = key;
+        for (const b of sortButtons) {
+          b.classList.remove('active');
+          const arrow = b.querySelector('.sort-arrow');
+          if (arrow) arrow.textContent = '^';
+        }
+        button.classList.add('active');
+        const arrow = button.querySelector('.sort-arrow');
+        if (arrow) arrow.textContent = ascending ? '^' : 'v';
+        applySort();
+      });
+    }
+
+    applyFilters();
+  }
+</script>
