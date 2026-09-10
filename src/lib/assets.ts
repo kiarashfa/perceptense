@@ -1,4 +1,6 @@
+import fontsCss from '../styles/fonts.css?raw';
 import sharedCss from '../styles/shared.css?raw';
+import iconsBaseCss from '../styles/icons-base.css?raw';
 import chromeCss from '../styles/chrome.css?raw';
 
 /**
@@ -19,4 +21,4 @@ function fnv1a(input: string): string {
   return hash.toString(16).padStart(8, '0');
 }
 
-export const sharedCssHash = fnv1a(sharedCss + chromeCss);
+export const sharedCssHash = fnv1a(fontsCss + sharedCss + iconsBaseCss + chromeCss);

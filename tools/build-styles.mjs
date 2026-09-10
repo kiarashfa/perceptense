@@ -21,7 +21,9 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 // Concatenated in this order into one linked stylesheet: the design system
 // first, then the site chrome that builds on its tokens.
 const SHARED_PARTS = [
+  path.join(ROOT, 'src/styles/fonts.css'),
   path.join(ROOT, 'src/styles/shared.css'),
+  path.join(ROOT, 'src/styles/icons-base.css'),
   path.join(ROOT, 'src/styles/chrome.css'),
 ];
 const SHARED_OUT = path.join(ROOT, 'public/styles/shared.css');
