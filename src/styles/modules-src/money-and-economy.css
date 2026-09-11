@@ -52,10 +52,6 @@
 .fx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
 .fx-flag { font-size: 18px; margin-bottom: 3px; }
 .fx-amount { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
-
-/* --- Big number visual --- */
-.dot-legend { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 6px; flex-wrap: wrap; }
-.dot-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
 .u-text-hex-4e99a3 { color: var(--accent); }
 .u-bg-background-primary { background: var(--color-background-primary); }
 .u-border-0-5px-solid-border-tertiary { border: 0.5px solid var(--color-border-tertiary); }

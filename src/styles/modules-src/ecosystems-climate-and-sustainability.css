@@ -14,7 +14,6 @@
 /* === cycle diagram colours === */
 .cycle-node { fill:var(--color-background-secondary); stroke:var(--color-border-secondary); stroke-width:1; }
 .cycle-text { font-size:10px; fill:var(--color-text-primary); font-family:var(--font-sans); }
-.cycle-arrow { fill:var(--color-text-secondary); }
 .cycle-path { stroke:var(--color-text-secondary); stroke-width:1.5; fill:none; marker-end:url(#arr); }
 .cycle-path-green { stroke:#1D9E75; stroke-width:1.5; fill:none; marker-end:url(#arr-green); }
 .cycle-path-blue  { stroke:#185FA5; stroke-width:1.5; fill:none; marker-end:url(#arr-blue); }
@@ -52,21 +51,11 @@
 .slider-output { font-size:22px; font-weight:500; color:var(--color-text-primary); }
 .slider-sub { font-size:12px; color:var(--color-text-secondary); }
 
-/* === energy card === */
-.energy-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px; margin-bottom:6px; }
-.energy-label { font-size:12px; font-weight:500; color:var(--color-text-primary); margin-bottom:3px; }
-.energy-body { font-size:11px; color:var(--color-text-secondary); line-height:1.5; }
-
 /* === calc inputs === */
 .calc-row { display:flex; gap:8px; flex-wrap:wrap; align-items:flex-end; margin-bottom:10px; }
 .calc-field { display:flex; flex-direction:column; gap:4px; flex:1; min-width:140px; }
 .calc-field label { font-size:11px; color:var(--color-text-secondary); }
 .calc-result { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:11px 13px; font-size:13px; color:var(--color-text-primary); line-height:1.7; }
-
-/* === boundary ring diagram === */
-.boundary-legend { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:6px; margin-top:10px; }
-.boundary-item { display:flex; align-items:flex-start; gap:8px; font-size:11px; color:var(--color-text-secondary); line-height:1.4; }
-.boundary-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; margin-top:3px; }
 
 /* === species interaction grid === */
 .interact-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:8px; margin-bottom:10px; }

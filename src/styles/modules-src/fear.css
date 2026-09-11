@@ -51,16 +51,6 @@
       padding: 9px 11px;
       margin-top: 10px;
     }
-
-    /* ── Period chart ── */
-    .pc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-      overflow-x: auto;
-    }
     .pc-track-area { min-width: 480px; }
     .pc-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .pc-label { font-size: 11px; color: var(--color-text-secondary); width: 145px; flex-shrink: 0; text-align: right; line-height: 1.3; }
@@ -118,15 +108,6 @@
     }
     .elem-detail-panel.show { display: block; }
     .elem-detail-title { font-size: 14px; font-weight: 500; color: var(--accent); margin-bottom: 6px; }
-
-    /* ── Slider ── */
-    .slider-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-    }
     .slider-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 4px; }
     .slider-output {
       background: var(--accent-bg);
@@ -140,15 +121,6 @@
     }
     .slider-val-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
     .slider-big-val { font-size: 20px; font-weight: 600; color: var(--accent); }
-
-    /* ── Calculator ── */
-    .calc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-    }
     .calc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 10px; }
     .calc-field label { display: block; font-size: 11px; color: var(--color-text-secondary); margin-bottom: 3px; }
     .calc-output {

@@ -23,9 +23,6 @@
 .bzone-temp { font-size: 13px; font-weight: 500; width: 68px; flex-shrink: 0; text-align: right; }
 .bzone-bar  { height: 16px; border-radius: 3px; flex-shrink: 0; }
 .bzone-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
-
-/* Cooking explorer */
-.cook-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .cook-tab  { font-size: 11px; padding: 3px 10px; cursor: pointer; }
 .cook-tab.active { background: var(--color-background-secondary); border-color: var(--color-border-primary); font-weight: 500; }
 .cook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }

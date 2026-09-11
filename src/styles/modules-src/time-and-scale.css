@@ -58,14 +58,6 @@
 /* ── Dot grid ── */
 .dot-grid { display: flex; flex-wrap: wrap; gap: 2px; line-height: 1; }
 .dot-grid span { width: 6px; height: 6px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-/* ── Planet age calc ── */
-.planet-calc {
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  padding: 13px 15px;
-  margin-bottom: 1rem;
-}
 .planet-input-row {
   display: flex;
   align-items: center;
@@ -201,7 +193,6 @@
 .u-items-end { align-items: end; }
 .u-ls-0-05em { letter-spacing: 0.05em; }
 .u-align-center { text-align: center; }
-.u-pb-4px { padding-bottom: 4px; }
 .u-w-100px { width: 100px; }
 .u-p-14px-12px { padding: 14px 12px; }
 .u-p-0-4px { padding: 0 4px; }

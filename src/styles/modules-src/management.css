@@ -24,16 +24,6 @@
       padding: 13px 15px;
       min-height: 80px;
     }
-
-    /* ── Period / timeline chart ── */
-    .pc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-      overflow-x: auto;
-    }
     .pc-title {
       font-size: 13px;
       font-weight: 500;
@@ -89,15 +79,6 @@
       font-size: 10px;
       color: var(--color-text-tertiary);
       transform: translateX(-50%);
-    }
-
-    /* ── Comparison scale (dot on track) ── */
-    .cscale-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
     }
     .cscale-poles {
       display: flex;
@@ -239,15 +220,6 @@
       font-size: 11px;
       color: var(--color-text-tertiary);
     }
-
-    /* ── Calculator ── */
-    .calc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-    }
     .calc-row {
       display: flex;
       flex-wrap: wrap;
@@ -282,28 +254,6 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 8px;
       margin-bottom: 1rem;
-    }
-    .force-card {
-      background: var(--color-background-secondary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-md);
-      padding: 11px 13px;
-    }
-    .force-icon {
-      font-size: 18px;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-    .force-name {
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 4px;
-    }
-    .force-desc {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      line-height: 1.5;
     }
 
     /* ── Stage flow (SVG-free CSS cycle) ── */

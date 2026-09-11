@@ -76,22 +76,8 @@
       margin: 0;
     }
 
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
-
     .cgrid {
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .micro-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin-bottom: 1rem;
     }
 
     .explorer-buttons {
@@ -429,10 +415,6 @@
     }
 
     @media (max-width: 500px) {
-      .page-wrap {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
 
       .bl {
         width: 96px;

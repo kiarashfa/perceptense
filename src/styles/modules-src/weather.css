@@ -165,13 +165,6 @@
       margin-bottom: 6px;
       overflow: hidden;
     }
-    .pressure-marker {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--color-text-primary);
-    }
     .pressure-label-row {
       display: flex;
       justify-content: space-between;

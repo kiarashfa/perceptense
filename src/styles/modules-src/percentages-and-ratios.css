@@ -1,6 +1,3 @@
-
-/* ── trick cards (Part B) ── */
-.trick-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
 .trick-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 .trick-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
 .trick-badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; white-space: nowrap; }
@@ -28,13 +25,6 @@
 .rec-table tr:last-child td { border-bottom: none; }
 .rec-table .td-loss { color: var(--color-text-danger); font-weight: 500; }
 .rec-table .td-need { color: var(--color-text-warning); font-weight: 500; }
-
-/* ── discount-stacking explorer (new in Part C) ── */
-.disc-stack-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
-.disc-tag { font-size: 13px; font-weight: 500; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 4px 10px; border: 0.5px solid var(--color-border-tertiary); }
-
-/* ── "what's your sense?" quiz tabs ── */
-.sense-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
 .sense-tab { font-size: 12px; padding: 4px 12px; cursor: pointer; }
 .sense-tab.active { background: var(--color-background-secondary); border-color: var(--color-border-primary); font-weight: 500; }
 
@@ -44,9 +34,6 @@
 .gini-bar-fill { height: 100%; border-radius: 4px; }
 .gini-label { font-size: 11px; color: var(--color-text-secondary); min-width: 110px; }
 .gini-val { font-size: 12px; font-weight: 500; color: var(--color-text-primary); min-width: 32px; text-align: right; }
-
-/* ── annotated number line (Part A) ── */
-.numline-wrap { margin: 10px 0; }
 
 /* ── real-world anchors section ── */
 .anchor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 8px; margin-bottom: 1rem; }

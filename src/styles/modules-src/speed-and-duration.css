@@ -174,17 +174,12 @@
 .u-m-8px-0-0 { margin: 8px 0 0; }
 .u-mb-1-2rem { margin-bottom: 1.2rem; }
 .u-text-text-success { color: var(--color-text-success); }
-.u-mt-2px { margin-top: 2px; }
-.u-lh-1-3 { line-height: 1.3; }
-.u-w-16px { width: 16px; }
-.u-minw-0 { min-width: 0; }
 .u-p-3px-9px { padding: 3px 9px; }
 .u-text-text-danger { color: var(--color-text-danger); }
 
 /* --- Runtime generated element classes --- */
 .clickable-row { cursor: pointer; }
 .car-note-row { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; padding: 5px 4px 8px 52px; border-bottom: 0.5px solid var(--color-border-tertiary); }
-.dest-note { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; }
 .gwr-record-card { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); padding: 9px 10px; cursor: pointer; transition: box-shadow 0.1s; }
 .gwr-record-cat { font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; }
 .gwr-record-speed { font-size: 14px; font-weight: 500; }

@@ -12,8 +12,14 @@ renders or what scripts can find:
   * in those static regions the name appears only inside class="..." attributes,
     so no attribute, comment or expression mentions it
 
+--dead reports the other half of the same problem: single-class rules whose name
+appears nowhere in the page at all — not in the markup, not in a script, not in
+a style block — so nothing they declare can ever reach an element.
+
     python tools/consolidate_css.py            # report only
     python tools/consolidate_css.py --apply    # rewrite pages and stylesheets
+    python tools/consolidate_css.py --dead     # report unreachable rules
+    python tools/consolidate_css.py --dead --apply
 """
 from __future__ import annotations
 
@@ -98,6 +104,20 @@ def blank_class_attrs(text: str) -> str:
     return re.sub(r'\bclass="[^"]*"', 'class=""', text)
 
 
+DYNAMIC = re.compile(r'([A-Za-z][\w-]*)(?:\$\{|["\']\s*\+)')
+
+
+def dynamic_prefixes(page: str) -> set[str]:
+    """Literal fragments the page glues a value onto to build a class name.
+
+    Six modules assemble class names at runtime — `planet-color-${p.name}`,
+    'bar-' + kind. The finished name never appears in the source, so a rule it
+    matches looks unreachable and a rename would never reach the generated
+    element. Anything starting with one of these fragments is left alone.
+    """
+    return {m.group(1) for m in DYNAMIC.finditer(page)}
+
+
 def class_positions_outside_class_attr(text: str, name: str) -> bool:
     """True when the class name occurs anywhere other than inside class="...".
 
@@ -111,8 +131,92 @@ def class_positions_outside_class_attr(text: str, name: str) -> bool:
     return False
 
 
+def drop_rule(css: str, name: str) -> str:
+    """Delete the single rule whose selector is exactly .name.
+
+    Located through iter_rules rather than by pattern, so a rule introduced by a
+    comment is cut like any other; matching on '}' as the left boundary silently
+    skipped those and left the rule in place.
+    """
+    for selector, _decls, (start, end) in iter_rules(css):
+        if selector != f'.{name}':
+            continue
+        line_start = css.rfind('\n', 0, start) + 1
+        owns_line = not css[line_start:start].strip()
+        if owns_line:
+            start = line_start
+        while end < len(css) and css[end] in ' \t':
+            end += 1
+        if owns_line:
+            # take the line ending too, so no blank line is left behind
+            if css[end:end + 2] == '\r\n':
+                end += 2
+            elif css[end:end + 1] == '\n':
+                end += 1
+        else:
+            # the rule shared a line: keep the line, drop the gap before it
+            while start > line_start and css[start - 1] in ' \t':
+                start -= 1
+        return css[:start] + css[end:]
+    return css
+
+
+def sweep_dead(apply: bool) -> int:
+    """Remove single-class rules no element in the page could ever match."""
+    found: dict[str, list[str]] = defaultdict(list)
+    for css_file in sorted(MODULE_CSS.glob('*.css')):
+        slug = css_file.stem
+        page = PAGES / f'{slug}.astro'
+        if not page.exists():
+            continue
+        css = read(css_file)
+        raw = read(page)
+        built = dynamic_prefixes(raw)
+
+        occurrences: dict[str, int] = defaultdict(int)
+        for selector, _decls, _span in iter_rules(css):
+            m = SINGLE_CLASS.match(selector)
+            if m:
+                occurrences[m.group(1)] += 1
+
+        for name, count in occurrences.items():
+            if count != 1:
+                continue
+            if any(name.startswith(p) for p in built):
+                continue
+            # the one mention in the stylesheet must be this rule's own selector,
+            # so no compound selector or media query variant depends on the name
+            if len(re.findall(r'(?<![\w-])\.' + re.escape(name) + r'(?![\w-])', css)) != 1:
+                continue
+            if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', raw):
+                continue
+            found[slug].append(name)
+
+    total = sum(len(v) for v in found.values())
+    print(f'modules affected     : {len(found)}')
+    print(f'unreachable rules    : {total}')
+    print()
+    for slug, names in sorted(found.items(), key=lambda kv: -len(kv[1]))[:10]:
+        print(f'  {slug:44} {len(names):3}   {", ".join(names[:4])}')
+
+    if not apply:
+        print('\nreport only; pass --apply to rewrite')
+        return 0
+
+    for slug, names in found.items():
+        css_file = MODULE_CSS / f'{slug}.css'
+        css = read(css_file)
+        for name in names:
+            css = drop_rule(css, name)
+        write(css_file, css)
+    print(f'\nrewritten: {len(found)} stylesheet(s)')
+    return 0
+
+
 def main(argv: list[str]) -> int:
     apply = '--apply' in argv
+    if '--dead' in argv:
+        return sweep_dead(apply)
 
     # Utility classes are never merge targets: folding a meaningful name like
     # .diagram-svg into .u-shrink-0 removes a rule but moves a styling decision
@@ -165,6 +269,9 @@ def main(argv: list[str]) -> int:
             if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', style):
                 skipped['named in a style block'] += 1
                 continue
+            if any(name.startswith(p) for p in dynamic_prefixes(raw)):
+                skipped['assembled at runtime'] += 1
+                continue
             # A class a script builds can move too, but only when the script
             # mentions it purely as markup — never as a selector, a classList
             # argument, or a string it compares against.
@@ -216,9 +323,7 @@ def main(argv: list[str]) -> int:
                 (re.sub(r'\bclass="([^"]*)"', swap, text) if kind != 'style' else text, kind)
                 for text, kind in parts
             ]
-            css = re.sub(
-                r'(^|\})(\s*)\.' + re.escape(name) + r'\s*\{[^{}]*\}',
-                lambda m: m.group(1), css, count=1)
+            css = drop_rule(css, name)
 
         rewritten = ''.join(text for text, _ in parts)
         if region(markup, 'style') != region(rewritten, 'style'):

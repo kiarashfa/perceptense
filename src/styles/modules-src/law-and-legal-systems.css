@@ -92,12 +92,6 @@
       gap: 10px;
       margin-bottom: 1rem;
     }
-    .micro-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 8px;
-      margin-bottom: 1rem;
-    }
     .note-card {
       background: var(--color-background-secondary);
       border: 0.5px solid var(--color-border-tertiary);
@@ -397,28 +391,11 @@
       line-height: 1.5;
       margin-top: 8px;
     }
-
-    .tagline {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
     .tiny-label {
       color: var(--color-text-secondary);
       font-size: 11px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-    }
-
-    /* --- Tax bracket visualiser --- */
-    .bracket-vis {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      margin-bottom: 1rem;
-      padding: 13px 15px;
     }
     .bracket-slider-row {
       display: flex;
@@ -480,15 +457,6 @@
       padding: 10px 12px;
       font-size: 12px;
       line-height: 1.7;
-    }
-
-    /* --- Tariff flow diagram --- */
-    .tariff-flow {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      margin-bottom: 1rem;
-      padding: 13px 15px;
     }
 
     /* --- Tax timeline (compact) --- */

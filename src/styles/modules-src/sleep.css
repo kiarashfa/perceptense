@@ -102,9 +102,6 @@
       color: var(--color-text-primary, #1a1a1a);
     }
     .hygiene-score-label { font-size: 12px; color: var(--color-text-secondary, #666); }
-
-    /* Nap guide */
-    .nap-btn-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
     .nap-display {
       background: var(--color-background-secondary, #f5f5f5);
       border-radius: var(--border-radius-md, 8px);

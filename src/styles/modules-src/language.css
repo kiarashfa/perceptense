@@ -52,7 +52,6 @@
       transform: translateX(-50%);
       white-space: nowrap;
     }
-    .pc-rows { position: relative; }
     .pc-row {
       display: flex;
       align-items: center;
@@ -93,11 +92,6 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .pc-note {
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      margin-top: 6px;
     }
 
     /* ── Comparison scale (dot on track) ── */
@@ -303,16 +297,6 @@
       padding: 12px 14px;
       font-size: 13px;
       color: var(--color-text-warning);
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-    .success-block {
-      background: var(--color-background-success);
-      border: 0.5px solid var(--color-border-success);
-      border-radius: var(--border-radius-md);
-      padding: 12px 14px;
-      font-size: 13px;
-      color: var(--color-text-success);
       margin-bottom: 10px;
       line-height: 1.6;
     }

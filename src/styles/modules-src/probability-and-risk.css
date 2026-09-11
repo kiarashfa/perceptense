@@ -135,55 +135,6 @@
   border-bottom: none;
 }
 
-/* LLN canvas area */
-.lln-wrap {
-  width: 100%;
-  overflow: hidden;
-}
-
-/* Risk spectrum bar */
-.spectrum-track {
-  position: relative;
-  height: 28px;
-  border-radius: 6px;
-  overflow: visible;
-  margin: 8px 0 24px;
-}
-.spectrum-marker {
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.spectrum-dot {
-  width: 10px;
-  height: 28px;
-  border-radius: 2px;
-}
-.spectrum-mlabel {
-  font-size: 9px;
-  color: var(--color-text-secondary);
-  text-align: center;
-  max-width: 60px;
-  line-height: 1.2;
-  margin-top: 4px;
-}
-
-/* Conditional prob boxes */
-.tree-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: 500;
-  min-width: 48px;
-  text-align: center;
-}
-
 /* Tab buttons */
 .tab-group {
   display: flex;

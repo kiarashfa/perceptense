@@ -1,6 +1,3 @@
-
-/* === VEHICLE CARDS (Part B) === */
-.vehicle-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
 .vh { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 4px; }
 .vname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
 .vtag { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
@@ -8,9 +5,6 @@
 .vslabel { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 2px; }
 .vsval { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
 .vsnote { font-size: 11px; color: var(--color-text-secondary); margin: 2px 0 0; }
-
-/* === BRIDGE SPAN EXPLORER (Part A deepening) === */
-.bridge-tab-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .bridge-tab { font-size: 12px; padding: 4px 12px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: none; color: var(--color-text-secondary); cursor: pointer; transition: background 0.1s, color 0.1s; }
 .bridge-tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); }
 .bridge-panel { display: none; }
@@ -157,9 +151,6 @@
 
 .u-w-8-pct { width: 8%; }
 .u-w-4-pct { width: 4%; }
-
-/* === ARCHITECTURE STYLE EXPLORER (Part J) === */
-.arch-style-tab-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .arch-style-tab { font-size: 12px; padding: 4px 12px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: none; color: var(--color-text-secondary); cursor: pointer; transition: background 0.1s, color 0.1s; font-family: var(--font-sans); }
 .arch-style-tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); }
 .arch-style-panel { display: none; }
@@ -178,9 +169,6 @@
 .bldg-icon { font-size: 28px; margin-bottom: 6px; }
 .bldg-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 2px; }
 .bldg-loc { font-size: 11px; color: var(--color-text-tertiary); margin: 0 0 6px; }
-
-/* === URBAN PLANNING ZONE EXPLORER (Part K) === */
-.zone-tab-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .zone-tab { font-size: 12px; padding: 4px 12px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: none; color: var(--color-text-secondary); cursor: pointer; transition: background 0.1s, color 0.1s; font-family: var(--font-sans); }
 .zone-tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); border-color: var(--color-border-primary); }
 .zone-panel { display: none; }

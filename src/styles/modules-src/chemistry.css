@@ -1,6 +1,3 @@
-
-/* --- Functional group cards --- */
-.fg-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
 .fg-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 .fg-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
 .fg-formula { font-size: 13px; font-family: monospace; font-weight: 500; }
@@ -13,29 +10,9 @@
 @media (max-width: 520px) {
   .fg-grid { grid-template-columns: 1fr; }
   .part-a-grid { grid-template-columns: 1fr !important; }
-  .react-grid { grid-template-columns: 1fr !important; }
   .bonds-grid { grid-template-columns: 1fr !important; }
 }
-
-/* --- Reaction arrow --- */
-.rxn-arrow {
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px; color: var(--color-text-tertiary); padding: 0 4px;
-  flex-shrink: 0;
-}
-
-/* --- Electronegativity scale bar --- */
-.en-bar-wrap { margin: 10px 0; }
-.en-track { height: 14px; border-radius: 99px; background: linear-gradient(to right, #E6F1FB 0%, var(--accent) 40%, #EF9F27 70%, #D85A30 100%); position: relative; margin-bottom: 6px; }
-.en-marker { position: absolute; top: -4px; width: 2px; height: 22px; background: var(--color-text-primary); border-radius: 2px; transform: translateX(-50%); }
-.en-label { position: absolute; top: 20px; font-size: 10px; color: var(--color-text-secondary); transform: translateX(-50%); white-space: nowrap; }
-
-/* --- Bond type cards --- */
-.bond-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
 .bond-desc { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin: 0; }
-
-/* --- Reaction explorer --- */
-.rxn-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; }
 .rxn-display { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 11px 14px; font-family: monospace; font-size: 13px; color: var(--color-text-primary); margin: 10px 0; line-height: 1.8; }
 .rxn-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
 .rxn-tag { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }

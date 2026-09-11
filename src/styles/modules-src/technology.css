@@ -58,14 +58,6 @@
       white-space: nowrap;
       overflow: hidden;
     }
-
-    /* ── Explorer panel ── */
-    .explorer-btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
     .explorer-btn {
       font-size: 12px;
       padding: 4px 11px;
@@ -224,15 +216,6 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
-
-    /* ── Slider widget ── */
-    .slider-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-    }
     .slider-end-labels {
       display: flex;
       justify-content: space-between;
@@ -276,15 +259,6 @@
       font-size: 12px;
       line-height: 1.5;
       margin-top: 9px;
-    }
-
-    /* ── Calculator ── */
-    .calc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
     }
     .calc-row {
       display: flex;

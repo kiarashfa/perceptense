@@ -121,9 +121,6 @@
     .dist-legend { display:flex; flex-wrap:wrap; gap:8px; }
     .dist-item { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--color-text-secondary); }
     .dist-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
-
-    /* ── Slider widget ── */
-    .slider-wrap { background:var(--color-background-primary); border:0.5px solid var(--color-border-tertiary); border-radius:var(--border-radius-lg); padding:13px 15px; margin-bottom:1rem; }
     .slider-labels { display:flex; justify-content:space-between; font-size:10px; color:var(--color-text-tertiary); margin-top:4px; }
     .slider-out { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:10px 13px; margin-top:10px; font-size:12px; color:var(--color-text-primary); line-height:1.5; min-height:52px; }
 
@@ -173,22 +170,6 @@
     .world-tab.active { background:var(--color-background-secondary); color:var(--color-text-primary); font-weight:600; }
     .world-panel { display:none; }
     .world-panel.show { display:block; }
-
-    /* ── Schematic SVG containers ── */
-    .schematic-wrap {
-      background:var(--color-background-primary);
-      border:0.5px solid var(--color-border-tertiary);
-      border-radius:var(--border-radius-lg);
-      padding:13px 15px; margin-bottom:1rem; overflow-x:auto;
-    }
-
-    /* ── Viewing score indicator ── */
-    .watch-score-out {
-      background:var(--color-background-secondary);
-      border-radius:var(--border-radius-md);
-      padding:12px 14px; margin-top:10px;
-      font-size:12px; color:var(--color-text-primary); line-height:1.6;
-    }
 
     @media (max-width:500px) {
       .pc-label { width:90px; font-size:10px; }

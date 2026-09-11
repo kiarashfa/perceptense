@@ -75,14 +75,6 @@
   .dn-label { width: 110px; font-size: 11px; }
   .dn-val   { width: 64px; font-size: 10px; }
 }
-
-/* ── Ocean comparison ── */
-.ocean-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 5px;
-}
 .oc-lbl { font-size: 12px; color: var(--color-text-secondary); width: 160px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
 @media (max-width: 480px) {
   .oc-lbl { width: 110px; font-size: 11px; }
@@ -100,14 +92,6 @@
 .lat-deg { font-size: 12px; font-weight: 500; color: var(--color-text-info); min-width: 36px; text-align: center; padding: 2px 6px; background: var(--color-background-info); border-radius: 5px; flex-shrink: 0; line-height: 1.6; }
 .lat-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.55; }
 .lat-text strong { color: var(--color-text-primary); }
-
-/* ── Continents ── */
-.cont-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 5px;
-}
 .ct-lbl { font-size: 12px; color: var(--color-text-secondary); width: 160px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
 .ct-bar { height: 22px; border-radius: 3px; display: flex; align-items: center; padding: 0 8px; }
 @media (max-width: 480px) {

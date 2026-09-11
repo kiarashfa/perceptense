@@ -403,14 +403,6 @@
       stroke-width: 1.4;
       fill: none;
     }
-
-    /* ── Chart ── */
-    .chart-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 10px;
-    }
     .chart-note {
       font-size: 11px;
       color: var(--color-text-tertiary);

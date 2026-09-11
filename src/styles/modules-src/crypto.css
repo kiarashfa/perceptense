@@ -79,14 +79,8 @@
     .dist-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
     .dist-leg-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--color-text-secondary); }
     .dist-leg-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
-
-    /* Range slider output */
-    .slider-wrap { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 1rem; }
     .slider-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-top: 4px; }
     .slider-output { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 10px 0 4px; font-variant-numeric: tabular-nums; }
-
-    /* Calculator */
-    .calc-wrap { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 1rem; }
     .calc-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; align-items: flex-end; }
     .calc-field { display: flex; flex-direction: column; gap: 4px; min-width: 130px; flex: 1; }
     .calc-field label { font-size: 11px; color: var(--color-text-secondary); }
@@ -98,9 +92,7 @@
 
     /* Coloured info/warning blocks */
     .info-block { background: var(--color-background-info); border: 0.5px solid var(--color-border-info); border-radius: var(--border-radius-lg); padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--color-text-info); margin-bottom: 1rem; }
-    .warning-block { background: var(--color-background-warning); border: 0.5px solid var(--color-border-warning); border-radius: var(--border-radius-lg); padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--color-text-warning); margin-bottom: 1rem; }
     .danger-block { background: var(--color-background-danger); border: 0.5px solid var(--color-border-danger); border-radius: var(--border-radius-lg); padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--color-text-danger); margin-bottom: 1rem; }
-    .success-block { background: var(--color-background-success); border: 0.5px solid var(--color-border-success); border-radius: var(--border-radius-lg); padding: 12px 14px; font-size: 13px; line-height: 1.6; color: var(--color-text-success); margin-bottom: 1rem; }
 
     /* Mental model cards (from alt) */
     .model-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 1rem; }

@@ -1,8 +1,4 @@
 
-.verdict  { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 7px; border-radius: 99px; margin-left: 6px; }
-.v-anchor { background: var(--color-background-success); color: var(--color-text-success); }
-.v-trick  { background: var(--color-background-warning); color: var(--color-text-warning); }
-
 /* ── Part C: weight scale ── */
 .scale-wrap {
   background: var(--color-background-primary);
@@ -82,15 +78,6 @@
 .world-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 2px; }
 .world-val   { font-size: 17px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 3px; }
 .world-note  { font-size: 11px; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
-
-/* ── Planet weight calculator ── */
-.planet-calc {
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  padding: 13px 15px;
-  margin-bottom: 1rem;
-}
 .planet-input-row {
   display: flex;
   align-items: center;
@@ -130,7 +117,6 @@
   font-variant-numeric: tabular-nums;
   line-height: 1.1;
 }
-.planet-card-unit { font-size: 11px; font-weight: 400; color: var(--color-text-tertiary); margin-left: 2px; }
 .planet-card-sub  { font-size: 10px; color: var(--color-text-tertiary); margin-top: 3px; line-height: 1.35; }
 
 .section-intro {
