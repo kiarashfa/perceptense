@@ -25,3 +25,4 @@ src/styles/modules/
 public/styles/
 src/styles/icons/
 src/styles/icons-base.css
+__pycache__/
