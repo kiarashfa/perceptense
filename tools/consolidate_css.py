@@ -7,8 +7,10 @@ renders or what scripts can find:
   * its declaration block is identical to a shared component's
   * the class name appears nowhere else in that module's stylesheet, so no
     compound selector depends on it
-  * the class name appears in the page only inside class="..." attributes, so no
-    script queries it and no attribute or string mentions it
+  * no script or style block names it at all — six modules build their markup as
+    strings, and only the static regions are ever rewritten
+  * in those static regions the name appears only inside class="..." attributes,
+    so no attribute, comment or expression mentions it
 
     python tools/consolidate_css.py            # report only
     python tools/consolidate_css.py --apply    # rewrite pages and stylesheets
@@ -118,7 +120,14 @@ def main(argv: list[str]) -> int:
         if not page.exists():
             continue
         css = read(css_file)
-        markup = read(page)
+        raw = read(page)
+        # Only non-script regions are ever rewritten, so every check has to be
+        # made against exactly that text. Checking the whole page instead lets a
+        # class that a script builds ('<div class="war-stat">' inside a template
+        # literal) read as an ordinary class attribute: the rule gets deleted
+        # and the generated element keeps a name nothing styles any more.
+        markup = markup_only(raw)
+        scripts = ''.join(t for t, is_markup in split_markup(raw) if not is_markup)
 
         occurrences: dict[str, int] = defaultdict(int)
         rules: dict[str, tuple[dict, tuple[int, int]]] = {}
@@ -139,6 +148,9 @@ def main(argv: list[str]) -> int:
             others = re.findall(r'(?<![\w-])\.' + re.escape(name) + r'(?![\w-])', css)
             if len(others) != 1:
                 skipped['used by another selector'] += 1
+                continue
+            if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', scripts):
+                skipped['named in a script or style block'] += 1
                 continue
             if class_positions_outside_class_attr(markup, name):
                 skipped['referenced outside a class attribute'] += 1

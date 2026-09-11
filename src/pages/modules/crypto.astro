@@ -21,12 +21,12 @@ const mod = modules.find((m) => m.id === 38)!;
     <h2 class="sec" id="part-a-the-problem-crypto-solves-trust-without-intermediaries">Part A · the problem crypto solves — trust without intermediaries</h2>
 
     <div class="model-grid" style="margin-bottom:1rem;">
-      <div class="model-card">
+      <div class="card">
         <div class="model-eyebrow">Why this matters</div>
         <div class="model-heading">Crypto is a coordination technology, not magic money</div>
         <div class="model-body">The core idea is stark: can strangers maintain one shared ledger without a bank, state, or platform owner deciding what is true? Bitcoin answered with proof-of-work. Ethereum added programmable contracts. DeFi, stablecoins, NFTs, DAOs, and the regulatory fight are all consequences of that first design move.</div>
       </div>
-      <div class="model-card">
+      <div class="card">
         <div class="model-eyebrow">Mental model</div>
         <div class="model-heading">A database with economic armour</div>
         <div class="model-body">A blockchain is not efficient in the ordinary software sense. It repeats work across thousands of machines on purpose, because redundancy is the price of not trusting one operator. The question is always whether censorship resistance, open settlement, and self-custody are worth that cost in a given use case.</div>
@@ -177,13 +177,13 @@ const mod = modules.find((m) => m.id === 38)!;
       <div class="cnote">The subsidy halves every 210,000 blocks. In 2009, miners earned 50 BTC per block; by 2140, the reward rounds to 0 satoshis. From that point, transaction fees must be sufficient to compensate miners — this is the long-run security debate. The chart uses a proportional scale, so the 3.125 BTC era (2024) appears vanishingly small against the original 50 BTC era.</div>
     </div>
 
-    <div class="slider-wrap">
+    <div class="content-panel">
       <div class="clabel">Bitcoin halving supply model — explore the cumulative schedule</div>
       <p style="font-size:13px; color:var(--color-text-secondary); margin:6px 0 12px;">Drag to see how much BTC will have been mined by each halving event.</p>
       <input type="range" id="halving-slider" min="1" max="32" value="4" oninput="updateHalving(this.value)">
       <div class="slider-labels"><span>Halving #1 (2012)</span><span>Halving #32 (~2140, last)</span></div>
       <div class="slider-output" id="halving-output">...</div>
-      <div class="slider-sub" id="halving-sub">...</div>
+      <div class="muted-copy-tight" id="halving-sub">...</div>
     </div>
 
     <!-- ── PART D ── -->
@@ -242,7 +242,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="danger-block">The word "yield" is dangerous in DeFi. Sometimes it means real fees paid by traders or borrowers. Sometimes it means token emissions that dilute existing holders. Sometimes it means hidden leverage that will unwind violently. The right question is never "what APY?" It is: who is paying me, why, in what asset, and what can break?</div>
 
-    <div class="calc-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Impermanent loss calculator — 50/50 liquidity pool</div>
       <p style="font-size:13px; color:var(--color-text-secondary); margin:0 0 12px;">Impermanent loss is the cost of providing liquidity when the price ratio of the two pooled tokens changes. Enter the price change of one asset to see how much worse off you are compared to simply holding — before accounting for any trading fees earned.</p>
       <div class="calc-row">
@@ -346,7 +346,7 @@ const mod = modules.find((m) => m.id === 38)!;
       <div class="cnote">Bitcoin's ~150 TWh annual consumption is frequently cited as its environmental cost, but context matters. Roughly 50-60% of Bitcoin mining used renewable energy as of 2023 (Bitcoin Mining Council voluntary surveys). Proof-of-stake Ethereum uses ~0.01 TWh/year after The Merge. Gold mining uses an estimated 130 TWh/year and produces significant physical waste. The global banking system consumes an estimated 260 TWh/year. Whether Bitcoin's energy use is "worth it" depends entirely on whether you accept its value proposition.</div>
     </div>
 
-    <div class="calc-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Dollar-cost averaging calculator — Bitcoin accumulation</div>
       <div class="calc-row">
         <div class="calc-field">

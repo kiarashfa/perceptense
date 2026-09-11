@@ -49,29 +49,11 @@
       color: var(--color-text-primary);
       line-height: 1.25;
     }
-    .teaser-desc {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      line-height: 1.5;
-    }
-
-    .logic-card {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-    }
     .logic-title {
       font-size: 14px;
       font-weight: 600;
       color: var(--color-text-primary);
       margin-bottom: 6px;
-    }
-    .logic-copy {
-      font-size: 13px;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
     }
     .logic-note {
       background: var(--color-background-info);
@@ -227,14 +209,6 @@
       color: var(--color-text-secondary);
       margin-top: 2px;
       line-height: 1.4;
-    }
-.period-chart {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-      overflow-x: auto;
     }
     .pc-inner {
       min-width: 560px;
@@ -441,14 +415,6 @@
       border-radius: 2px;
       border: 0.5px solid var(--color-border-tertiary);
       flex-shrink: 0;
-    }
-
-    .truth-explorer {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
     }
     .truth-table-wrap {
       overflow-x: auto;

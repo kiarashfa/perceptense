@@ -151,7 +151,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Editing types explorer -->
     <div class="content-panel">
       <div class="panel-title">Editing — the art of the cut</div>
-      <div class="mov-tabs" id="editTabs"></div>
+      <div class="button-row-compact" id="editTabs"></div>
       <div class="editpanel" id="editPanel"></div>
     </div>
 
@@ -162,7 +162,7 @@ const mod = modules.find((m) => m.id === 34)!;
 
     <!-- Mise-en-scène: lighting schematic SVG -->
     <h2 class="sec" id="mise-en-scene-everything-in-the-frame">mise-en-scène — everything in the frame</h2>
-    <div class="schematic-wrap">
+    <div class="scroll-panel">
       <div class="panel-title">Three-point lighting — the standard setup</div>
       <svg class="cinema-media" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
         <!-- Background -->
@@ -205,7 +205,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- ══════════════════════════════════════════════════
 
     <!-- Sound design range slider -->
-    <div class="slider-wrap">
+    <div class="content-panel">
       <div class="inline-card-title">Sound design — from diegetic to non-diegetic</div>
       <div class="cinema-text-7">Move the slider to explore how sound relates to the world of the film.</div>
       <input class="u-w-100pct" type="range" id="soundSlider" min="1" max="5" value="1" oninput="updateSoundSlider(this.value)">
@@ -229,7 +229,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Movement explorer panel -->
     <div class="content-panel">
       <div class="panel-title">Major movements — click to explore</div>
-      <div class="mov-tabs" id="movTabs"></div>
+      <div class="button-row-compact" id="movTabs"></div>
       <div class="movpanel" id="movPanel"></div>
     </div>
 
@@ -324,7 +324,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- World cinema tradition explorer -->
     <div class="content-panel">
       <div class="panel-title">National traditions — what each brings to cinema</div>
-      <div class="world-tabs" id="worldTabs"></div>
+      <div class="button-row-compact" id="worldTabs"></div>
       <div class="movpanel" id="worldPanel"></div>
     </div>
 
@@ -378,7 +378,7 @@ const mod = modules.find((m) => m.id === 34)!;
     </div>
 
     <!-- Rewatch value slider -->
-    <div class="slider-wrap">
+    <div class="content-panel">
       <div class="inline-card-title">How many times to watch a film</div>
       <div class="cinema-text-7">Move the slider to see what rewatching a specific number of times typically reveals.</div>
       <input class="u-w-100pct" type="range" id="rewatchSlider" min="1" max="5" value="1" oninput="updateRewatchSlider(this.value)">
@@ -390,7 +390,7 @@ const mod = modules.find((m) => m.id === 34)!;
     </div>
 
     <!-- Film analysis schematic / decision tree SVG -->
-    <div class="schematic-wrap">
+    <div class="scroll-panel">
       <div class="panel-title">The analyst's loop — a framework for reading any film</div>
       <svg class="cinema-media" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg">
         <rect width="600" height="340" fill="var(--color-background-secondary)" rx="8"/>

@@ -565,15 +565,15 @@ const mod = modules.find((m) => m.id === 5)!;
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Einstein allegedly called compound interest "the eighth wonder of the world"</div>
       <div class="u-fs-11px text-secondary u-mb-md">The attribution is probably apocryphal — but the math is not. Small consistent growth over long time creates extraordinary results.</div>
       <div class="slider-row">
-        <div class="slider-desc"><span>Initial investment</span><span class="slider-val" id="ciPLabel">$10,000</span></div>
+        <div class="bar-label"><span>Initial investment</span><span class="slider-val" id="ciPLabel">$10,000</span></div>
         <input type="range" id="ciPrincipal" min="1000" max="100000" step="1000" value="10000" oninput="calcCI()">
       </div>
       <div class="slider-row">
-        <div class="slider-desc"><span>Annual return rate</span><span class="slider-val" id="ciRLabel">7%</span></div>
+        <div class="bar-label"><span>Annual return rate</span><span class="slider-val" id="ciRLabel">7%</span></div>
         <input type="range" id="ciRate" min="1" max="20" step="0.5" value="7" oninput="calcCI()">
       </div>
       <div class="slider-row">
-        <div class="slider-desc"><span>Years invested</span><span class="slider-val" id="ciYLabel">30 years</span></div>
+        <div class="bar-label"><span>Years invested</span><span class="slider-val" id="ciYLabel">30 years</span></div>
         <input type="range" id="ciYears" min="5" max="50" step="1" value="30" oninput="calcCI()">
       </div>
       <div class="ci-grid">

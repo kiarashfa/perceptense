@@ -46,7 +46,6 @@
 .ci-val { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
 .ci-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
 .slider-row { margin-bottom: 10px; }
-.slider-desc { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 3px; }
 .slider-val { color: var(--color-text-primary); font-weight: 500; }
 
 /* --- Exchange rate explorer --- */

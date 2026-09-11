@@ -503,11 +503,6 @@
       gap: 8px;
       margin-bottom: 1rem;
     }
-    .tax-era-card {
-      background: var(--color-background-secondary);
-      border-radius: var(--border-radius-md);
-      padding: 10px 12px;
-    }
     .tax-era-year {
       color: var(--tax-accent);
       font-size: 13px;

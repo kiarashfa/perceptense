@@ -324,12 +324,6 @@
       margin-bottom: 10px;
     }
 
-    .field-label {
-      color: var(--color-text-secondary);
-      font-size: 11px;
-      margin-bottom: 3px;
-    }
-
     .calc-output {
       background: var(--color-background-secondary);
       min-height: 54px;

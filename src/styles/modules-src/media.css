@@ -94,7 +94,6 @@
     /* ── Standard card overrides ── */
     .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
     .clabel { font-size: 11px; font-weight: 500; letter-spacing: 0.03em; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 3px; }
-    .cval { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
     .cnote { font-size: 12px; color: var(--color-text-secondary); margin-top: 5px; line-height: 1.5; }
 
     /* ── Bar chart ── */

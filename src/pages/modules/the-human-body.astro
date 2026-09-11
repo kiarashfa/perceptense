@@ -41,27 +41,27 @@ const mod = modules.find((m) => m.id === 2)!;
     <div class="content-panel">
       <div class="panel-title">Hair growth: how long to reach each length?</div>
 
-      <div class="timeline-row">
+      <div class="bar-row">
         <span class="tl-label">Buzz cut (1 cm)</span>
         <div class="tl-bar tl-bar-buzz"><span class="tl-val">~1 mo</span></div>
       </div>
-      <div class="timeline-row">
+      <div class="bar-row">
         <span class="tl-label">Ear-length (10 cm)</span>
         <div class="tl-bar tl-bar-ear"><span class="tl-val">8 mo</span></div>
       </div>
-      <div class="timeline-row">
+      <div class="bar-row">
         <span class="tl-label">Chin-length (20 cm)</span>
         <div class="tl-bar tl-bar-chin"><span class="tl-val">16 mo</span></div>
       </div>
-      <div class="timeline-row">
+      <div class="bar-row">
         <span class="tl-label">Shoulder (35 cm)</span>
         <div class="tl-bar tl-bar-shoulder"><span class="tl-val">~2.5 yr</span></div>
       </div>
-      <div class="timeline-row">
+      <div class="bar-row">
         <span class="tl-label">Mid-back (55 cm)</span>
         <div class="tl-bar tl-bar-midback"><span class="tl-val">~4 yr</span></div>
       </div>
-      <div class="timeline-row">
+      <div class="bar-row">
         <span class="tl-label">Waist-length (70 cm)</span>
         <div class="tl-bar tl-bar-waist"><span class="tl-val">~5 yr</span></div>
       </div>
@@ -231,13 +231,13 @@ const mod = modules.find((m) => m.id === 2)!;
     <div class="content-panel">
       <div class="panel-title">How much do your organs weigh?</div>
 
-      <div class="organ-row"><span class="organ-lbl">Skin</span><div class="bb bar-info organ-skin"><span class="bv bar-info-text">~4–5 kg — the heaviest organ by far</span></div></div>
-      <div class="organ-row"><span class="organ-lbl">Liver</span><div class="bb bar-info organ-liver"><span class="bv bar-info-text">~1.5 kg</span></div></div>
-      <div class="organ-row"><span class="organ-lbl">Brain</span><div class="bb bar-info organ-brain"><span class="bv bar-info-text">~1.3–1.4 kg</span></div></div>
-      <div class="organ-row"><span class="organ-lbl">Lungs (×2)</span><div class="bb bar-info organ-lungs"><span class="bv bar-info-text">~1.0–1.2 kg</span></div></div>
-      <div class="organ-row"><span class="organ-lbl">Heart</span><div class="bb bar-info organ-heart"><span class="bv bar-info-text">~300 g</span></div></div>
-      <div class="organ-row"><span class="organ-lbl">Kidneys (×2)</span><div class="bb bar-info organ-kidneys"><span class="bv bar-info-text">~270 g</span></div></div>
-      <div class="organ-row"><span class="organ-lbl">Spleen</span><div class="bb bar-info organ-spleen"><span class="bv bar-info-text">~150 g</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Skin</span><div class="bb bar-info organ-skin"><span class="bv bar-info-text">~4–5 kg — the heaviest organ by far</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Liver</span><div class="bb bar-info organ-liver"><span class="bv bar-info-text">~1.5 kg</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Brain</span><div class="bb bar-info organ-brain"><span class="bv bar-info-text">~1.3–1.4 kg</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Lungs (×2)</span><div class="bb bar-info organ-lungs"><span class="bv bar-info-text">~1.0–1.2 kg</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Heart</span><div class="bb bar-info organ-heart"><span class="bv bar-info-text">~300 g</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Kidneys (×2)</span><div class="bb bar-info organ-kidneys"><span class="bv bar-info-text">~270 g</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Spleen</span><div class="bb bar-info organ-spleen"><span class="bv bar-info-text">~150 g</span></div></div>
       <p class="panel-note">Skin is consistently the largest organ, yet rarely thought of as one. It covers ~1.5–2 m² and regenerates completely about every 2–4 weeks.</p>
     </div>
 
@@ -449,27 +449,27 @@ const mod = modules.find((m) => m.id === 2)!;
       <div class="sense-row">
         <span class="sense-icon-col">👁️</span>
         <span class="sense-lbl-col">Vision</span>
-        <div class="sense-bar-col sense-vision"><span class="sense-val-col text-info">A candle flame visible at 48 km on a clear night</span></div>
+        <div class="sense-bar-col sense-vision"><span class="bv text-info">A candle flame visible at 48 km on a clear night</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">👃</span>
         <span class="sense-lbl-col">Smell</span>
-        <div class="sense-bar-col sense-smell"><span class="sense-val-col text-success">1 drop of perfume diffused in a 3-room apartment</span></div>
+        <div class="sense-bar-col sense-smell"><span class="bv text-success">1 drop of perfume diffused in a 3-room apartment</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">👂</span>
         <span class="sense-lbl-col">Hearing</span>
-        <div class="sense-bar-col sense-hearing"><span class="sense-val-col text-warning">A watch ticking at 6 metres in a quiet room</span></div>
+        <div class="sense-bar-col sense-hearing"><span class="bv text-warning">A watch ticking at 6 metres in a quiet room</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">👅</span>
         <span class="sense-lbl-col">Taste</span>
-        <div class="sense-bar-col sense-taste"><span class="sense-val-col text-secondary">1 tsp of sugar in 8 L of water</span></div>
+        <div class="sense-bar-col sense-taste"><span class="bv text-secondary">1 tsp of sugar in 8 L of water</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">✋</span>
         <span class="sense-lbl-col">Touch</span>
-        <div class="sense-bar-col sense-touch"><span class="sense-val-col text-secondary">A bee wing falling on cheek from 1 cm</span></div>
+        <div class="sense-bar-col sense-touch"><span class="bv text-secondary">A bee wing falling on cheek from 1 cm</span></div>
       </div>
       <p class="panel-note">From Miller's "Plans and the Structure of Behavior" (1960) and updated sensory research. These are theoretical absolute thresholds under ideal conditions.</p>
     </div>
@@ -477,7 +477,7 @@ const mod = modules.find((m) => m.id === 2)!;
     <!-- Reaction time interactive game -->
     <div class="content-panel">
       <div class="panel-title panel-title-tight">🎮 Reaction time tester</div>
-      <p class="panel-subtitle">Click the button, wait for the green signal, then click as fast as you can. The average human visual reaction time is <strong class="primary-emphasis">200–250 ms</strong>.</p>
+      <p class="panel-subtitle">Click the button, wait for the green signal, then click as fast as you can. The average human visual reaction time is <strong class="text-primary">200–250 ms</strong>.</p>
       <div class="rt-game">
         <div class="rt-screen rt-wait" id="rtScreen" onclick="handleRtClick()">
           Click here to begin

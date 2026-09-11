@@ -97,7 +97,7 @@ const mod = modules.find((m) => m.id === 36)!;
     </div>
 
     <!-- Timeline: Management thought periods -->
-    <div class="pc-wrap">
+    <div class="scroll-panel">
       <div class="pc-title">Eras of management thought — approximate influence periods</div>
       <div id="pc-chart"></div>
       <div id="pc-axis" class="pc-axis" style="height:18px;"></div>
@@ -322,7 +322,7 @@ const mod = modules.find((m) => m.id === 36)!;
     </div>
 
     <!-- Financial ratios calculator -->
-    <div class="calc-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Financial ratio calculator — enter figures to compute key ratios</div>
       <div class="calc-row">
         <div class="calc-field">
@@ -369,7 +369,7 @@ const mod = modules.find((m) => m.id === 36)!;
     </div>
 
     <!-- Unit economics calculator — richer version with monthly inputs -->
-    <div class="calc-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Unit economics calculator — LTV, payback period, and LTV:CAC ratio</div>
       <div class="calc-row">
         <div class="calc-field">
@@ -488,7 +488,7 @@ const mod = modules.find((m) => m.id === 36)!;
     </div>
 
     <!-- Segmentation types — comparison scale -->
-    <div class="cscale-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:8px;">Segmentation approaches — placement on the specificity spectrum</div>
       <div class="cscale-poles">
         <span>Broad / demographic</span>
@@ -594,7 +594,7 @@ const mod = modules.find((m) => m.id === 36)!;
     </div>
 
     <!-- Leadership styles — comparison scale -->
-    <div class="cscale-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:8px;">Leadership styles — placement on the control-to-autonomy spectrum</div>
       <div class="cscale-poles">
         <span>High control / directive</span>
@@ -674,16 +674,16 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- VC funding stages -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Venture capital funding stages — typical round sizes and dilution</div>
-      <div class="fund-row"><div class="fund-label">Pre-seed</div><div class="fund-bar" style="width:10%; background:#A8CEE9;"><span class="fund-val" style="color:var(--color-text-primary);">$100K–$2M / 5–15% dilution</span></div></div>
-      <div class="fund-row"><div class="fund-label">Seed</div><div class="fund-bar" style="width:25%; background:#6FA8DC;"><span class="fund-val" style="color:#fff;">$1M–$5M / 15–25%</span></div></div>
-      <div class="fund-row"><div class="fund-label">Series A</div><div class="fund-bar" style="width:45%; background:#5594D6;"><span class="fund-val" style="color:#fff;">$5M–$25M / 20–30%</span></div></div>
-      <div class="fund-row"><div class="fund-label">Series B</div><div class="fund-bar" style="width:65%; background:#3B7FCC;"><span class="fund-val" style="color:#fff;">$20M–$100M / 15–25%</span></div></div>
-      <div class="fund-row"><div class="fund-label">Series C+</div><div class="fund-bar" style="width:85%; background:#2A5FA8;"><span class="fund-val" style="color:#fff;">$100M+ / 10–20% per round</span></div></div>
+      <div class="fund-row"><div class="fund-label">Pre-seed</div><div class="fund-bar" style="width:10%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">$100K–$2M / 5–15% dilution</span></div></div>
+      <div class="fund-row"><div class="fund-label">Seed</div><div class="fund-bar" style="width:25%; background:#6FA8DC;"><span class="bv" style="color:#fff;">$1M–$5M / 15–25%</span></div></div>
+      <div class="fund-row"><div class="fund-label">Series A</div><div class="fund-bar" style="width:45%; background:#5594D6;"><span class="bv" style="color:#fff;">$5M–$25M / 20–30%</span></div></div>
+      <div class="fund-row"><div class="fund-label">Series B</div><div class="fund-bar" style="width:65%; background:#3B7FCC;"><span class="bv" style="color:#fff;">$20M–$100M / 15–25%</span></div></div>
+      <div class="fund-row"><div class="fund-label">Series C+</div><div class="fund-bar" style="width:85%; background:#2A5FA8;"><span class="bv" style="color:#fff;">$100M+ / 10–20% per round</span></div></div>
       <p class="muted-copy" style="margin-top:8px;">VC economics follow a power law: a single fund-returning investment (a "fund maker") must return the entire fund to be worth the portfolio. A $200M fund needs at least one exit producing $200M+ in proceeds. This explains why VCs push for aggressive growth — the 20 companies that do not break out are write-offs; only the outliers matter.</p>
     </div>
 
     <!-- Equity dilution calculator -->
-    <div class="calc-wrap">
+    <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Equity dilution calculator — see how multiple rounds affect founder ownership</div>
       <div class="calc-row">
         <div class="calc-field">

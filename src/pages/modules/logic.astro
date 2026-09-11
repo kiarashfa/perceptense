@@ -21,13 +21,13 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="teaser-card">
         <div class="teaser-num">Overview</div>
         <div class="teaser-name">A map of reasoning itself</div>
-        <div class="teaser-desc">Logic studies what follows from what. It is the discipline of separating the structure of an argument from the topic, tone, and social pressure around it. In this module, students move from validity and soundness into symbolic logic, fallacies, formal systems, probability, decision theory, paradoxes, and practical critical thinking.</div>
+        <div class="muted-copy-tight">Logic studies what follows from what. It is the discipline of separating the structure of an argument from the topic, tone, and social pressure around it. In this module, students move from validity and soundness into symbolic logic, fallacies, formal systems, probability, decision theory, paradoxes, and practical critical thinking.</div>
       </div>
     </div>
 
-    <div class="logic-card">
+    <div class="content-panel">
       <div class="logic-title">Form over content</div>
-      <div class="logic-copy">Logic's central insight is that validity depends on form, not subject matter. "All A are B; C is A; therefore C is B" keeps the same structure whether A means mammals, legal contracts, integers, or fictional creatures. A valid argument guarantees only this: if the premises are true, the conclusion cannot be false. A sound argument is stronger because it is valid and its premises are actually true.</div>
+      <div class="muted-copy-large">Logic's central insight is that validity depends on form, not subject matter. "All A are B; C is A; therefore C is B" keeps the same structure whether A means mammals, legal contracts, integers, or fictional creatures. A valid argument guarantees only this: if the premises are true, the conclusion cannot be false. A sound argument is stronger because it is valid and its premises are actually true.</div>
     </div>
 
     <div class="explorer-buttons" aria-label="Logic foundations">
@@ -39,9 +39,9 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
     <div id="logic-core-display" class="explorer-panel"></div>
 
-    <div class="logic-card">
+    <div class="content-panel">
       <div class="logic-title">The historical hinge</div>
-      <div class="logic-copy">Aristotle, writing around 350 BCE, made the syllogism famous: all humans are mortal; Socrates is human; therefore Socrates is mortal. The Stoics then developed propositional logic, with if-then arguments closer to modern computing. George Boole turned logic into algebra in 1847. Gottlob Frege's 1879 <span class="mono">Begriffsschrift</span> added quantifiers and variables, which is why modern logic can say "for every number there is a larger number" without pretending every argument is about Socrates. The short version: logic moved from classifying sentences to designing languages precise enough for mathematics and machines.</div>
+      <div class="muted-copy-large">Aristotle, writing around 350 BCE, made the syllogism famous: all humans are mortal; Socrates is human; therefore Socrates is mortal. The Stoics then developed propositional logic, with if-then arguments closer to modern computing. George Boole turned logic into algebra in 1847. Gottlob Frege's 1879 <span class="mono">Begriffsschrift</span> added quantifiers and variables, which is why modern logic can say "for every number there is a larger number" without pretending every argument is about Socrates. The short version: logic moved from classifying sentences to designing languages precise enough for mathematics and machines.</div>
     </div>
 
     <h2 class="sec" id="part-b-classical-logic-the-foundations">Part B - classical logic: the foundations</h2>
@@ -101,9 +101,9 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
     <div id="logic-element-detail" class="elem-detail elem-detail-panel"></div>
 
-    <div class="truth-explorer">
+    <div class="content-panel">
       <div class="chart-title">Truth table explorer</div>
-      <div class="logic-copy">Select a connective and watch how the truth value changes. The table columns use a fixed layout so the shape stays stable while students compare operators.</div>
+      <div class="muted-copy-large">Select a connective and watch how the truth value changes. The table columns use a fixed layout so the shape stays stable while students compare operators.</div>
       <div class="explorer-buttons" aria-label="Truth table explorer">
         <button onclick="showTruthTable('and', this)">AND</button>
         <button onclick="showTruthTable('or', this)">OR</button>
@@ -181,7 +181,7 @@ const mod = modules.find((m) => m.id === 47)!;
     <div class="logic-warning">A bias is not automatically a fallacy. Confirmation bias is a psychological tendency to seek friendly evidence; a fallacy is a defect in an argument. They overlap when a person turns selective attention into a conclusion, as in "I found three stories that confirm my belief, so the belief is established."</div>
 
     <h2 class="sec" id="part-d-formal-systems-and-their-limits-godel-hilbert-and-turing">Part D - formal systems and their limits: Godel, Hilbert, and Turing</h2>
-    <div id="logic-timeline" class="period-chart"></div>
+    <div id="logic-timeline" class="scroll-panel"></div>
 
     <div class="cgrid">
       <div class="card">
@@ -254,9 +254,9 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="chart-note">Illustrative distribution, not a universal law. It reminds you that probability, utility, and strategic interaction are different questions that people often collapse into one vague word: "rational."</div>
     </div>
 
-    <div class="logic-card">
+    <div class="content-panel">
       <div class="logic-title">Decision theory and game theory are not the same game</div>
-      <div class="logic-copy">Decision theory asks what one agent should choose under uncertainty, usually by expected utility: probability multiplied by value. Pascal's wager is a famous early version, though its assumptions are heavily disputed. Game theory adds other agents whose choices respond to yours. In the prisoner's dilemma, defection dominates in a one-shot version, yet cooperation can win in repeated play because reputation changes the payoff landscape.</div>
+      <div class="muted-copy-large">Decision theory asks what one agent should choose under uncertainty, usually by expected utility: probability multiplied by value. Pascal's wager is a famous early version, though its assumptions are heavily disputed. Game theory adds other agents whose choices respond to yours. In the prisoner's dilemma, defection dominates in a one-shot version, yet cooperation can win in repeated play because reputation changes the payoff landscape.</div>
       <div class="matrix" aria-label="Prisoner's dilemma payoff matrix">
         <div></div><div class="m-head">Other cooperates</div><div class="m-head">Other defects</div>
         <div class="m-head">You cooperate</div><div>You: 3<br>Other: 3</div><div>You: 0<br>Other: 5</div>
@@ -325,9 +325,9 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="chart-note">Assumes the standard rules: the host knows where the car is, always opens a goat door, and always offers the switch. Change those rules and the calculation changes.</div>
     </div>
 
-    <div class="logic-card">
+    <div class="content-panel">
       <div class="logic-title">Monty Hall simulator</div>
-      <div class="logic-copy">Pick a door. The host will reveal one empty door and offer the switch. Manual plays update the policy you choose; auto-play tests both stay and switch on the same random setups.</div>
+      <div class="muted-copy-large">Pick a door. The host will reveal one empty door and offer the switch. Manual plays update the policy you choose; auto-play tests both stay and switch on the same random setups.</div>
       <div id="mh-doors" class="mh-doors" aria-label="Monty Hall doors"></div>
       <div id="mh-status" class="mh-status">Pick a door to begin.</div>
       <div id="mh-actions" class="mh-actions"></div>
@@ -400,9 +400,9 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
     <div id="phil-paradox-display" class="explorer-panel"></div>
 
-    <div class="logic-card">
+    <div class="content-panel">
       <div class="logic-title">The useful habit: ask which assumption breaks</div>
-      <div class="logic-copy">The Sorites paradox pressures vague predicates like "heap" and "bald." The Ship of Theseus pressures identity through time. The Fermi paradox pressures estimates about life, technology, and detectability in a galaxy with roughly 100 to 400 billion stars. Olbers' paradox looked at a dark night sky and refuted an infinite, eternal, static universe before modern cosmology supplied the mechanism: the observable universe has finite age and is expanding.</div>
+      <div class="muted-copy-large">The Sorites paradox pressures vague predicates like "heap" and "bald." The Ship of Theseus pressures identity through time. The Fermi paradox pressures estimates about life, technology, and detectability in a galaxy with roughly 100 to 400 billion stars. Olbers' paradox looked at a dark night sky and refuted an infinite, eternal, static universe before modern cosmology supplied the mechanism: the observable universe has finite age and is expanding.</div>
     </div>
 
     <h2 class="sec" id="part-j-decision-making-and-critical-thinking-logic-applied-to-real-choices">Part J - decision making and critical thinking: logic applied to real choices</h2>
@@ -411,12 +411,12 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="teaser-card">
         <div class="teaser-num">The gap</div>
         <div class="teaser-name">From valid arguments to good decisions</div>
-        <div class="teaser-desc">Logic tells you when conclusions follow. Decision theory tells you what to choose under uncertainty. Critical thinking bridges both: it is the applied discipline of catching the errors, biases, and framing effects that corrupt reasoning before a real stake is won or lost.</div>
+        <div class="muted-copy-tight">Logic tells you when conclusions follow. Decision theory tells you what to choose under uncertainty. Critical thinking bridges both: it is the applied discipline of catching the errors, biases, and framing effects that corrupt reasoning before a real stake is won or lost.</div>
       </div>
       <div class="teaser-card">
         <div class="teaser-num">The tools</div>
         <div class="teaser-name">Frameworks you can actually use</div>
-        <div class="teaser-desc">Pre-mortems, decision matrices, steelmanning, hypothesis testing, and the outside view all reduce reliance on intuition in situations where intuition is known to be unreliable. Each tool targets a different failure mode.</div>
+        <div class="muted-copy-tight">Pre-mortems, decision matrices, steelmanning, hypothesis testing, and the outside view all reduce reliance on intuition in situations where intuition is known to be unreliable. Each tool targets a different failure mode.</div>
       </div>
     </div>
 
