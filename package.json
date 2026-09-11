@@ -6,7 +6,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run data && npm run icons && npm run css && astro build",
+    "build": "npm run data && npm run icons && npm run css && astro build && npm run redirects",
     "preview": "astro preview",
     "check": "astro check",
     "data": "python tools/build_data.py",
@@ -21,7 +21,8 @@
     "verify:visual": "node tools/visual/geometry.mjs",
     "shots": "node tools/visual/shoot.mjs",
     "icons": "python tools/build_icon_css.py",
-    "icons:fetch": "python tools/build_icons.py && python tools/build_icon_css.py && python tools/wire_icons.py"
+    "icons:fetch": "python tools/build_icons.py && python tools/build_icon_css.py && python tools/wire_icons.py",
+    "redirects": "python tools/build_redirects.py"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.7.4",
