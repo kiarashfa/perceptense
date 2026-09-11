@@ -857,7 +857,7 @@ function showCars(btn, cat) {
       '<span class="car-rank">' + (i + 1) + '</span>' +
       '<div class="car-name-wrap">' +
         '<div class="car-name">' + c.name + '</div>' +
-        '<div class="car-sub">' + c.sub + '</div>' +
+        '<div class="muted-text-small">' + c.sub + '</div>' +
       '</div>' +
       '<div class="car-bar-wrap">' +
         '<div class="car-bar-track"><div class="car-bar-fill"></div></div>' +
@@ -986,7 +986,7 @@ coasters.forEach((c, i) => {
   row.className = 'coaster-row' + (i === coasters.length - 1 ? ' last' : '');
   row.innerHTML =
     '<span class="coaster-rank">#' + c.rank + '</span>' +
-    '<div class="coaster-main"><div class="coaster-name">' + c.name + '</div><div class="coaster-meta">' + c.park + ' · ' + c.location + '</div></div>' +
+    '<div class="coaster-main"><div class="coaster-name">' + c.name + '</div><div class="muted-text-small">' + c.park + ' · ' + c.location + '</div></div>' +
     '<div class="coaster-speed-wrap"><span class="coaster-speed">' + c.speed + '</span><span class="coaster-speed-unit"> km/h</span></div>';
   row.querySelector('.coaster-speed').style.color = c.color;
   row.addEventListener('mouseenter', () => { row.style.background = 'var(--color-background-secondary)'; });

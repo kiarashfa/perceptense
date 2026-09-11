@@ -117,11 +117,6 @@
       color: var(--color-text-primary);
       margin-bottom: 6px;
     }
-    .panel-body {
-      font-size: 13px;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
-    }
     .panel-meta {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

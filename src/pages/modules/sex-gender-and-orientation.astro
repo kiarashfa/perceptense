@@ -1724,15 +1724,15 @@ const mod = modules.find((m) => m.id === 23)!;
       document.getElementById('sti-display').innerHTML = `
         <div style="margin-bottom:8px;">
           <span class="sti-badge ${typeCls}">${typeLabel}</span>
-          <span class="sti-badge sti-badge-prevention" style="margin-left:4px;">${s.agent}</span>
+          <span class="sti-badge p-blue" style="margin-left:4px;">${s.agent}</span>
         </div>
         <div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:10px;">${s.name}</div>
         <div class="sti-row">
-          <div class="sti-cell"><div class="sti-cell-label">Transmission</div><div class="sti-cell-val">${s.transmission}</div></div>
-          <div class="sti-cell"><div class="sti-cell-label">Symptoms</div><div class="sti-cell-val">${s.symptoms}</div></div>
-          <div class="sti-cell"><div class="sti-cell-label">Testing</div><div class="sti-cell-val">${s.testing}</div></div>
-          <div class="sti-cell"><div class="sti-cell-label">Treatment</div><div class="sti-cell-val">${s.treatment}</div></div>
-          <div class="sti-cell"><div class="sti-cell-label">Prevention</div><div class="sti-cell-val">${s.prevention}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Transmission</div><div class="sti-cell-val">${s.transmission}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Symptoms</div><div class="sti-cell-val">${s.symptoms}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Testing</div><div class="sti-cell-val">${s.testing}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Treatment</div><div class="sti-cell-val">${s.treatment}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Prevention</div><div class="sti-cell-val">${s.prevention}</div></div>
         </div>`;
     }
 

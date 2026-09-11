@@ -627,10 +627,6 @@
   background:#FAEEDA;
   color:#633806;
 }
-.sti-badge-prevention {
-  background:#E6F1FB;
-  color:#0C447C;
-}
 .sti-row {
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -639,11 +635,6 @@
 }
 @media (max-width:600px) {
   .sti-row { grid-template-columns:1fr 1fr; }
-}
-.sti-cell {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:8px 10px;
 }
 .sti-cell-label {
   font-size:10px;

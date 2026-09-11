@@ -50,9 +50,7 @@
 
 /* --- Exchange rate explorer --- */
 .fx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
-.fx-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 11px; }
 .fx-flag { font-size: 18px; margin-bottom: 3px; }
-.fx-currency { font-size: 11px; color: var(--color-text-secondary); }
 .fx-amount { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
 
 /* --- Big number visual --- */

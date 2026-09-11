@@ -214,7 +214,6 @@
       padding: 11px 13px;
     }
     .reg-card-title { font-size: 12px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 4px; }
-    .reg-card-body { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
     .reg-badge {
       display: inline-block;
       font-size: 10px;

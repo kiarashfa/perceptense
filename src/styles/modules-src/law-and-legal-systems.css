@@ -80,11 +80,6 @@
       font-weight: 600;
       margin-bottom: 6px;
     }
-    .explorer-body {
-      color: var(--color-text-secondary);
-      font-size: 12px;
-      line-height: 1.6;
-    }
     .mini-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));

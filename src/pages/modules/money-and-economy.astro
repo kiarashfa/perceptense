@@ -1159,9 +1159,9 @@ const mod = modules.find((m) => m.id === 5)!;
       var m = FX_META[code];
       var converted = inUSD * rates[code];
       html +=
-        '<div class="fx-card">' +
+        '<div class="sub-card">' +
           '<div class="fx-flag">' + m.flag + ' <span class="u-fs-11px u-fw-500 text-secondary">' + code + '</span></div>' +
-          '<div class="fx-currency">' + m.name + '</div>' +
+          '<div class="muted-text-small">' + m.name + '</div>' +
           '<div class="fx-amount">' + m.symbol + fxFmt(converted, code) + '</div>' +
         '</div>';
     }

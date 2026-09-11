@@ -27,11 +27,6 @@
       padding: 13px 15px;
       font-size: 13px; line-height: 1.65; color: var(--color-text-primary);
     }
-    .explorer-panel-title {
-      font-size: 13px; font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 6px;
-    }
 
     /* Timeline / period chart */
     .pc-outer { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 1rem; }

@@ -505,7 +505,7 @@ const mod = modules.find((m) => m.id === 38)!;
         btn.onclick = function() {
           btnsEl.querySelectorAll('.explorer-btn').forEach(function(b){ b.classList.remove('active'); });
           btn.classList.add('active');
-          panelEl.innerHTML = '<div class="explorer-panel-title">' + data[k].title + '</div>' + data[k].body;
+          panelEl.innerHTML = '<div class="compact-card-title">' + data[k].title + '</div>' + data[k].body;
         };
         btnsEl.appendChild(btn);
       });

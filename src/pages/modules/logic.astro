@@ -1086,7 +1086,7 @@ const mod = modules.find((m) => m.id === 47)!;
         const item = logicElements[key];
         const detail = document.getElementById('logic-element-detail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
       };
 
       window.showFallacy = function(key, btn) {
@@ -1104,7 +1104,7 @@ const mod = modules.find((m) => m.id === 47)!;
         const item = infinity[key];
         const detail = document.getElementById('infinity-detail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
       };
 
       window.showProbParadox = function(key, btn) {
@@ -1267,7 +1267,7 @@ const mod = modules.find((m) => m.id === 47)!;
       };
 
       function renderPanel(item) {
-        let html = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+        let html = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
         if (item.meta) {
           html += '<div class="panel-meta">' + item.meta.map(function(m) {
             return '<div class="panel-chip">' + m + '</div>';
@@ -1491,7 +1491,7 @@ const mod = modules.find((m) => m.id === 47)!;
         const item = ctTools[key];
         const detail = document.getElementById('ct-tool-detail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="panel-body">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
       };
 
       window.showArgReconstruct = function(key, btn) {

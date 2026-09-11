@@ -143,12 +143,6 @@
       padding: 2px 8px;
     }
 
-    .detail-body {
-      color: var(--color-text-secondary);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
     .detail-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
@@ -163,13 +157,6 @@
       font-size: 12px;
       line-height: 1.45;
       padding: 8px 9px;
-    }
-
-    .chart-title {
-      color: var(--color-text-primary);
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: 10px;
     }
 
     .chart-card .bb {

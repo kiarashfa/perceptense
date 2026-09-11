@@ -24,17 +24,6 @@
       padding: 13px 15px;
       min-height: 80px;
     }
-    .exp-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 6px;
-    }
-    .exp-body {
-      font-size: 13px;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
-    }
 
     /* ── Period / timeline chart ── */
     .pc-wrap {
@@ -116,12 +105,6 @@
       font-size: 11px;
       color: var(--color-text-tertiary);
       margin-bottom: 6px;
-    }
-    .cscale-row {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 5px;
     }
     .cscale-name {
       font-size: 12px;

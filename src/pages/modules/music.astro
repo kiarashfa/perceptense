@@ -1513,20 +1513,20 @@ const mod = modules.find((m) => m.id === 33)!;
         '<div class="instr-detail-header">'
         + '<div class="instr-detail-big-icon">' + instr.emoji + '</div>'
         + '<div><div class="instr-detail-title">' + instr.name + '</div>'
-        + '<div class="instr-detail-subtitle">' + instr.subtitle + ' &nbsp;|&nbsp; ' + instr.origin + '</div></div>'
+        + '<div class="muted-text-small">' + instr.subtitle + ' &nbsp;|&nbsp; ' + instr.origin + '</div></div>'
         + '</div>'
         + '<div class="instr-detail-grid">'
-        + '<div class="instr-detail-cell"><div class="instr-detail-cell-label">Family / Classification</div><div class="instr-detail-cell-val">' + instr.family + '</div></div>'
-        + '<div class="instr-detail-cell"><div class="instr-detail-cell-label">Inventor / Origin</div><div class="instr-detail-cell-val">' + instr.inventor + '</div></div>'
-        + '<div class="instr-detail-cell"><div class="instr-detail-cell-label">Construction</div><div class="instr-detail-cell-val">' + instr.construction + '</div></div>'
-        + '<div class="instr-detail-cell"><div class="instr-detail-cell-label">Playing Range</div><div class="instr-detail-cell-val">' + instr.range
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Family / Classification</div><div class="instr-detail-cell-val">' + instr.family + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Inventor / Origin</div><div class="instr-detail-cell-val">' + instr.inventor + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Construction</div><div class="instr-detail-cell-val">' + instr.construction + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Playing Range</div><div class="instr-detail-cell-val">' + instr.range
         + '<div class="range-bar-wrap"><div class="range-bar-track">'
         + '<div class="range-bar-fill" style="left:' + rangeLeft + '%;width:' + rangeWidth + '%;background:' + instr.rangeColor + ';opacity:0.75;"></div>'
         + '</div><div class="range-bar-poles"><span>A0 (piano low)</span><span>C8 (piano high)</span></div></div>'
         + '</div></div>'
-        + '<div class="instr-detail-cell"><div class="instr-detail-cell-label">Key Techniques</div><div class="instr-detail-cell-val">' + instr.technique + '</div></div>'
-        + '<div class="instr-detail-cell" style="grid-column:1/-1"><div class="instr-detail-cell-label">Legendary Artists</div><div class="instr-detail-cell-val">' + instr.legendary + '</div></div>'
-        + '<div class="instr-detail-cell" style="grid-column:1/-1"><div class="instr-detail-cell-label">Essential Listening</div><div class="instr-detail-cell-val">' + instr.works + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Key Techniques</div><div class="instr-detail-cell-val">' + instr.technique + '</div></div>'
+        + '<div class="sub-card" style="grid-column:1/-1"><div class="instr-detail-cell-label">Legendary Artists</div><div class="instr-detail-cell-val">' + instr.legendary + '</div></div>'
+        + '<div class="sub-card" style="grid-column:1/-1"><div class="instr-detail-cell-label">Essential Listening</div><div class="instr-detail-cell-val">' + instr.works + '</div></div>'
         + '</div>'
         + '<div class="muted-copy u-mt-md">' + instr.history + '</div>';
       detail.classList.add('show');

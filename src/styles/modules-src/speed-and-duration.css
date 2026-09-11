@@ -64,7 +64,6 @@
 .car-rank { font-size: 11px; color: var(--color-text-tertiary); width: 18px; flex-shrink: 0; text-align: right; }
 .car-name-wrap { flex: 1; min-width: 0; }
 .car-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
-.car-sub  { font-size: 11px; color: var(--color-text-secondary); }
 .car-bar-wrap { width: 120px; flex-shrink: 0; }
 .car-bar-track { background: var(--color-background-secondary); border-radius: 3px; height: 8px; overflow: hidden; }
 .car-bar-fill { height: 8px; border-radius: 3px; transition: width 0.4s ease; }
@@ -195,7 +194,6 @@
 .coaster-rank { font-size: 11px; color: var(--color-text-tertiary); width: 16px; flex-shrink: 0; text-align: right; }
 .coaster-main { flex: 1; min-width: 0; }
 .coaster-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
-.coaster-meta { font-size: 11px; color: var(--color-text-secondary); }
 .coaster-speed-wrap { text-align: right; flex-shrink: 0; }
 .coaster-speed { font-size: 15px; font-weight: 500; }
 .coaster-speed-unit { font-size: 10px; color: var(--color-text-secondary); }

@@ -567,7 +567,7 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#medBtns .exp-btn').forEach(function(b){ b.classList.remove('active'); });
     btn.classList.add('active');
     var m = media[key];
-    var boxHtml = m.boxes.map(function(b){ return '<div class="exp-box"><div class="exp-box-label">'+b.l+'</div><div class="exp-box-val">'+b.v+'</div></div>'; }).join('');
+    var boxHtml = m.boxes.map(function(b){ return '<div class="sub-card-roomy"><div class="exp-box-label">'+b.l+'</div><div class="exp-box-val">'+b.v+'</div></div>'; }).join('');
     document.getElementById('medPanel').innerHTML =
       '<div class="exp-panel-title">'+m.title+'</div>'+
       '<div class="exp-panel-sub">'+m.sub+'</div>'+
@@ -728,11 +728,11 @@ window.addEventListener('DOMContentLoaded', function() {
       '<div class="mvt-name">'+m.name+'</div>'+
       '<div class="mvt-dates">'+m.dates+'</div>'+
       '<div class="mvt-fact-grid">'+
-        '<div class="mvt-fact"><div class="mvt-fact-label">Reacting against</div><div class="mvt-fact-val">'+m.reacting+'</div></div>'+
-        '<div class="mvt-fact"><div class="mvt-fact-label">What it invented</div><div class="mvt-fact-val">'+m.invented+'</div></div>'+
-        '<div class="mvt-fact"><div class="mvt-fact-label">Key figures</div><div class="mvt-fact-val">'+m.figures+'</div></div>'+
+        '<div class="sub-card"><div class="mvt-fact-label">Reacting against</div><div class="mvt-fact-val">'+m.reacting+'</div></div>'+
+        '<div class="sub-card"><div class="mvt-fact-label">What it invented</div><div class="mvt-fact-val">'+m.invented+'</div></div>'+
+        '<div class="sub-card"><div class="mvt-fact-label">Key figures</div><div class="mvt-fact-val">'+m.figures+'</div></div>'+
       '</div>'+
-      '<div class="mvt-fact" style="margin-bottom:10px"><div class="mvt-fact-label">Defining example</div><div class="mvt-fact-val">'+m.example+'</div></div>'+
+      '<div class="sub-card" style="margin-bottom:10px"><div class="mvt-fact-label">Defining example</div><div class="mvt-fact-val">'+m.example+'</div></div>'+
       '<div style="font-size:12px;color:var(--color-text-secondary);background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:10px 12px;line-height:1.6"><strong>Common misconception corrected:</strong> '+m.myth+'</div>';
   };
   showMvt('renaissance', mvtBtnsEl.querySelector('.mvt-btn'));
@@ -824,13 +824,13 @@ window.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.work-btn').forEach(function(b){ b.classList.remove('active'); });
     btn.classList.add('active');
     var w = works[key];
-    var boxHtml = w.boxes.map(function(b){ return '<div class="work-box"><div class="work-box-label">'+b.l+'</div><div class="work-box-val">'+b.v+'</div></div>'; }).join('');
+    var boxHtml = w.boxes.map(function(b){ return '<div class="sub-card"><div class="work-box-label">'+b.l+'</div><div class="work-box-val">'+b.v+'</div></div>'; }).join('');
     workPanelEl.innerHTML =
       '<div class="work-title">'+w.title+'</div>'+
       '<div class="work-meta">'+w.meta+'</div>'+
       '<div class="work-grid">'+boxHtml+'</div>'+
       '<div style="font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px">What to actually look at</div>'+
-      '<div class="work-look">'+w.look+'</div>';
+      '<div class="muted-copy-large">'+w.look+'</div>';
   };
   showWork('monalisa', workBtnsEl.querySelector('.work-btn'));
 

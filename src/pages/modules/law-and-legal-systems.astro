@@ -892,7 +892,7 @@ const mod = modules.find((m) => m.id === 39)!;
           btn.classList.remove('active');
         });
         buttonEl.classList.add('active');
-        document.getElementById(displayId).innerHTML = '<div class="explorer-title">' + item.title + '</div><div class="explorer-body">' + item.body + '</div>';
+        document.getElementById(displayId).innerHTML = '<div class="explorer-title">' + item.title + '</div><div class="muted-copy">' + item.body + '</div>';
       }
 
       document.querySelectorAll('#traditionButtons button').forEach(function(button) {
@@ -952,7 +952,7 @@ const mod = modules.find((m) => m.id === 39)!;
         card.classList.add('active');
         const detail = document.getElementById('privateDetail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="explorer-title">' + item.title + '</div><div class="explorer-body">' + item.body + '</div>';
+        detail.innerHTML = '<div class="explorer-title">' + item.title + '</div><div class="muted-copy">' + item.body + '</div>';
       }
 
       document.querySelectorAll('#privateCards .elem-card').forEach(function(card) {

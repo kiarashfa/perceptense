@@ -1266,7 +1266,7 @@ function showWar(idx) {
   if (w.stats.length) {
     html += `<div class="war-stat-grid">`;
     w.stats.forEach(s => {
-      html += `<div class="war-stat"><div class="war-stat-label">${s.label}</div><div class="war-stat-val">${s.val}</div></div>`;
+      html += `<div class="sub-card-compact"><div class="war-stat-label">${s.label}</div><div class="war-stat-val">${s.val}</div></div>`;
     });
     html += `</div>`;
   }
@@ -1313,7 +1313,7 @@ function showWar(idx) {
     w.figures.forEach(f => {
       html += `<tr>
         <td class="profile-table-name">${f.name}</td>
-        <td class="profile-table-note">${f.role}</td>
+        <td class="text-secondary">${f.role}</td>
       </tr>`;
     });
     html += `</tbody></table></div>`;
@@ -1668,7 +1668,7 @@ function showIranEra(idx) {
   if (era.stats.length) {
     html += `<div class="war-stat-grid">`;
     era.stats.forEach(s => {
-      html += `<div class="war-stat"><div class="war-stat-label">${s.label}</div><div class="war-stat-val">${s.val}</div></div>`;
+      html += `<div class="sub-card-compact"><div class="war-stat-label">${s.label}</div><div class="war-stat-val">${s.val}</div></div>`;
     });
     html += `</div>`;
   }
@@ -1703,7 +1703,7 @@ function showIranEra(idx) {
     era.rulers.forEach(r => {
       html += `<tr>
         <td class="profile-table-name">${r.name}</td>
-        <td class="profile-table-note">${r.note}</td>
+        <td class="text-secondary">${r.note}</td>
       </tr>`;
     });
     html += `</tbody></table></div>`;

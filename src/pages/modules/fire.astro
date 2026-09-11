@@ -64,7 +64,7 @@ const mod = modules.find((m) => m.id === 48)!;
     </div>
 
     <div class="diagram-card">
-      <div class="chart-title">The FIRE loop: how claims move through the economy</div>
+      <div class="panel-title">The FIRE loop: how claims move through the economy</div>
       <div class="diagram-scroll">
         <svg viewBox="0 0 760 320" role="img" aria-label="A diagram showing households, banks, insurers, capital markets, real estate, businesses, and government connected by money, risk, and collateral flows">
           <defs>
@@ -352,7 +352,7 @@ const mod = modules.find((m) => m.id === 48)!;
 
     <div id="crisis-chart" class="pc-chart">
       <div class="pc-inner">
-        <div class="chart-title">Selected crisis and regulation timeline, 1933 to 2024</div>
+        <div class="panel-title">Selected crisis and regulation timeline, 1933 to 2024</div>
         <div id="pc-rows"></div>
         <div id="pc-axis" class="pc-axis"></div>
         <div class="chart-note">Bars show rough periods when rules, institutions, or crisis phases were central. They are historical guides, not legal date boundaries.</div>
@@ -600,7 +600,7 @@ const mod = modules.find((m) => m.id === 48)!;
             <div class="detail-title">${item.title}</div>
             <div class="detail-tag">${item.tag}</div>
           </div>
-          <div class="detail-body">${item.body}</div>
+          <div class="muted-copy-large">${item.body}</div>
           ${item.points ? `<div class="detail-list">${item.points.map(point => `<div>${point}</div>`).join('')}</div>` : ''}
         `;
 
@@ -635,7 +635,7 @@ const mod = modules.find((m) => m.id === 48)!;
             <div class="detail-title">${item.title}</div>
             <div class="detail-tag">${item.tag}</div>
           </div>
-          <div class="detail-body">${item.body}</div>
+          <div class="muted-copy-large">${item.body}</div>
         `;
         target.classList.add('show');
         document.querySelectorAll('.elem-card').forEach(card => card.classList.remove('active'));
@@ -663,7 +663,7 @@ const mod = modules.find((m) => m.id === 48)!;
         document.getElementById('rate-output').textContent = rate.toFixed(2) + '%';
         document.getElementById('rate-payment').innerHTML = `
           <div class="detail-title">${formatMoney(payment)} per month</div>
-          <div class="detail-body">At ${rate.toFixed(2)}%, principal and interest on $400,000 is ${formatMoney(payment)}. Compared with a 3.00% loan at ${formatMoney(lowPayment)}, the monthly difference is ${formatMoney(payment - lowPayment)}. Taxes, insurance, HOA fees, and repairs are not included.</div>
+          <div class="muted-copy-large">At ${rate.toFixed(2)}%, principal and interest on $400,000 is ${formatMoney(payment)}. Compared with a 3.00% loan at ${formatMoney(lowPayment)}, the monthly difference is ${formatMoney(payment - lowPayment)}. Taxes, insurance, HOA fees, and repairs are not included.</div>
         `;
       }
 
@@ -686,7 +686,7 @@ const mod = modules.find((m) => m.id === 48)!;
         const ltv = principal / price * 100;
         output.innerHTML = `
           <div class="detail-title">${formatMoney(payment)} monthly principal and interest</div>
-          <div class="detail-body">Loan amount: ${formatMoney(principal)}. Loan-to-value: ${ltv.toFixed(1)}%. Total interest over ${years} years: ${formatMoney(interest)}. This excludes taxes, insurance, mortgage insurance, repairs, and closing costs, which are often the numbers that surprise first-time buyers.</div>
+          <div class="muted-copy-large">Loan amount: ${formatMoney(principal)}. Loan-to-value: ${ltv.toFixed(1)}%. Total interest over ${years} years: ${formatMoney(interest)}. This excludes taxes, insurance, mortgage insurance, repairs, and closing costs, which are often the numbers that surprise first-time buyers.</div>
         `;
       };
 
@@ -700,7 +700,7 @@ const mod = modules.find((m) => m.id === 48)!;
         ];
         const max = Math.max(...rows.map(row => row.value));
         document.getElementById('gdp-chart').innerHTML = `
-          <div class="chart-title">Selected US private and public industry shares of GDP, rough recent order of magnitude</div>
+          <div class="panel-title">Selected US private and public industry shares of GDP, rough recent order of magnitude</div>
           ${rows.map(row => `
             <div class="bar-row">
               <div class="bl">${row.label}</div>
@@ -722,7 +722,7 @@ const mod = modules.find((m) => m.id === 48)!;
           { label: 'Other', value: 10, color: 'var(--color-border-danger)' }
         ];
         document.getElementById('wealth-dist').innerHTML = `
-          <div class="chart-title">Simplified household wealth distribution by asset type</div>
+          <div class="panel-title">Simplified household wealth distribution by asset type</div>
           <div class="dist-wrap">
             <div class="dist-bar">
               ${rows.map(row => `<div class="dist-seg" style="width:${row.value}%; background:${row.color};">${row.value >= 9 ? row.value + '%' : ''}</div>`).join('')}
@@ -745,7 +745,7 @@ const mod = modules.find((m) => m.id === 48)!;
           { label: 'Car dealer F&I room', value: 88 }
         ];
         document.getElementById('conflict-scale').innerHTML = `
-          <div class="chart-title">Intermediary conflict scale</div>
+          <div class="panel-title">Intermediary conflict scale</div>
           <div class="scale-poles"><span>mostly advice-paid</span><span>mostly transaction-paid</span></div>
           ${rows.map(row => `
             <div class="cscale-row">

@@ -176,11 +176,6 @@
       gap: 8px;
       margin-bottom: 13px;
     }
-    .war-stat {
-      background: var(--color-background-secondary);
-      border-radius: var(--border-radius-md);
-      padding: 8px 10px;
-    }
     .war-stat-label { font-size: 10px; color: var(--color-text-secondary); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.05em; }
     .war-stat-val   { font-size: 13px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; }
 
@@ -236,7 +231,6 @@
       font-weight: 500;
       color: var(--color-text-primary);
     }
-    .profile-table-note { color: var(--color-text-secondary); }
     .war-country-list {
       display: flex;
       flex-wrap: wrap;

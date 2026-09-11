@@ -781,7 +781,7 @@ const mod = modules.find((m) => m.id === 34)!;
       camMoves.forEach((m, i) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${m.icon}"></i></div><div class="elem-card-label">${m.label}</div><div class="elem-card-sub">${m.sub}</div>`;
+        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${m.icon}"></i></div><div class="elem-card-label">${m.label}</div><div class="muted-text-small">${m.sub}</div>`;
         card.onclick = function() {
           const detail = document.getElementById('camDetail');
           const wasActive = card.classList.contains('active');
@@ -929,7 +929,7 @@ const mod = modules.find((m) => m.id === 34)!;
       genres.forEach((g, i) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${g.icon}"></i></div><div class="elem-card-label">${g.label}</div><div class="elem-card-sub">${g.sub}</div>`;
+        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${g.icon}"></i></div><div class="elem-card-label">${g.label}</div><div class="muted-text-small">${g.sub}</div>`;
         card.onclick = function() {
           const detail = document.getElementById('genreDetail');
           const wasActive = card.classList.contains('active');
@@ -1161,7 +1161,7 @@ const mod = modules.find((m) => m.id === 34)!;
       watchLayers.forEach((w) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${w.icon}"></i></div><div class="elem-card-label">${w.label}</div><div class="elem-card-sub">${w.sub}</div>`;
+        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${w.icon}"></i></div><div class="elem-card-label">${w.label}</div><div class="muted-text-small">${w.sub}</div>`;
         card.onclick = function() {
           const detail = document.getElementById('watchDetail');
           const wasActive = card.classList.contains('active');

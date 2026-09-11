@@ -64,26 +64,38 @@ def block_key(decls: dict) -> tuple:
 SCRIPT_OR_STYLE = re.compile(r'<(script|style)\b[^>]*>[\s\S]*?</\1>', re.I)
 
 
-def split_markup(page: str) -> list[tuple[str, bool]]:
-    """Split a page into (text, is_markup) parts, isolating script and style.
+def split_parts(page: str) -> list[tuple[str, str]]:
+    """Split a page into (text, kind) parts, where kind is markup/script/style.
 
-    Scripts contain strings such as '<div class="x">' that look exactly like
-    markup; rewriting inside them corrupts the JavaScript.
+    The three are treated differently. Scripts contain strings such as
+    '<div class="x">' that look exactly like markup, so a blind rewrite
+    corrupts the JavaScript; only the class attributes inside them may move,
+    and only once nothing else in the script names the class. Style blocks are
+    never rewritten — a name in one is a rule that depends on it.
     """
-    parts: list[tuple[str, bool]] = []
+    parts: list[tuple[str, str]] = []
     last = 0
     for m in SCRIPT_OR_STYLE.finditer(page):
         if m.start() > last:
-            parts.append((page[last:m.start()], True))
-        parts.append((m.group(0), False))
+            parts.append((page[last:m.start()], 'markup'))
+        parts.append((m.group(0), m.group(1).lower()))
         last = m.end()
     if last < len(page):
-        parts.append((page[last:], True))
+        parts.append((page[last:], 'markup'))
     return parts
 
 
+def region(page: str, kind: str) -> str:
+    return ''.join(t for t, k in split_parts(page) if k == kind)
+
+
 def markup_only(page: str) -> str:
-    return ''.join(t for t, is_markup in split_markup(page) if is_markup)
+    return region(page, 'markup')
+
+
+def blank_class_attrs(text: str) -> str:
+    """The text with every class attribute emptied, for before/after comparison."""
+    return re.sub(r'\bclass="[^"]*"', 'class=""', text)
 
 
 def class_positions_outside_class_attr(text: str, name: str) -> bool:
@@ -127,7 +139,8 @@ def main(argv: list[str]) -> int:
         # literal) read as an ordinary class attribute: the rule gets deleted
         # and the generated element keeps a name nothing styles any more.
         markup = markup_only(raw)
-        scripts = ''.join(t for t, is_markup in split_markup(raw) if not is_markup)
+        script = region(raw, 'script')
+        style = region(raw, 'style')
 
         occurrences: dict[str, int] = defaultdict(int)
         rules: dict[str, tuple[dict, tuple[int, int]]] = {}
@@ -149,13 +162,17 @@ def main(argv: list[str]) -> int:
             if len(others) != 1:
                 skipped['used by another selector'] += 1
                 continue
-            if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', scripts):
-                skipped['named in a script or style block'] += 1
+            if re.search(r'(?<![\w-])' + re.escape(name) + r'(?![\w-])', style):
+                skipped['named in a style block'] += 1
                 continue
-            if class_positions_outside_class_attr(markup, name):
+            # A class a script builds can move too, but only when the script
+            # mentions it purely as markup — never as a selector, a classList
+            # argument, or a string it compares against.
+            if class_positions_outside_class_attr(markup + script, name):
                 skipped['referenced outside a class attribute'] += 1
                 continue
-            if not re.search(r'\bclass="[^"]*(?<![\w-])' + re.escape(name) + r'(?![\w-])', markup):
+            if not re.search(r'\bclass="[^"]*(?<![\w-])' + re.escape(name) + r'(?![\w-])',
+                             markup + script):
                 skipped['not used in the markup'] += 1
                 continue
             planned[slug].append((name, target))
@@ -181,7 +198,7 @@ def main(argv: list[str]) -> int:
         markup = read(page)
         css = read(css_file)
 
-        parts = split_markup(markup)
+        parts = split_parts(markup)
         for name, target in pairs:
             def swap(m: re.Match) -> str:
                 classes = m.group(1).split()
@@ -196,18 +213,21 @@ def main(argv: list[str]) -> int:
                 return f'class="{" ".join(out)}"'
 
             parts = [
-                (re.sub(r'\bclass="([^"]*)"', swap, text) if is_markup else text, is_markup)
-                for text, is_markup in parts
+                (re.sub(r'\bclass="([^"]*)"', swap, text) if kind != 'style' else text, kind)
+                for text, kind in parts
             ]
             css = re.sub(
                 r'(^|\})(\s*)\.' + re.escape(name) + r'\s*\{[^{}]*\}',
                 lambda m: m.group(1), css, count=1)
 
         rewritten = ''.join(text for text, _ in parts)
-        before = [t for t, is_markup in split_markup(markup) if not is_markup]
-        after = [t for t, is_markup in split_markup(rewritten) if not is_markup]
-        if before != after:
-            raise SystemExit(f'{slug}: a script or style block changed; refusing to write')
+        if region(markup, 'style') != region(rewritten, 'style'):
+            raise SystemExit(f'{slug}: a style block changed; refusing to write')
+        # Scripts may differ only inside class attributes. Blanking those out
+        # proves every other byte of JavaScript survived intact.
+        if (blank_class_attrs(region(markup, 'script'))
+                != blank_class_attrs(region(rewritten, 'script'))):
+            raise SystemExit(f'{slug}: a script changed outside a class attribute; refusing to write')
 
         markup = rewritten
         write(page, markup)

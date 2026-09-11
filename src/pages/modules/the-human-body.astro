@@ -792,7 +792,7 @@ const mod = modules.find((m) => m.id === 2)!;
       row.innerHTML =
         '<span class="hr-zone-lbl">' + z.label + '</span>' +
         '<div class="hr-zone-bar hr-zone-scaled ' + z.barClass + '">' +
-        '<span class="hr-zone-txt hr-zone-light-text">' + lo + '–' + hi + ' bpm — ' + z.name + '</span>' +
+        '<span class="bv hr-zone-light-text">' + lo + '–' + hi + ' bpm — ' + z.name + '</span>' +
         '</div>';
       container.appendChild(row);
     });

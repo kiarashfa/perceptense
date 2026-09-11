@@ -63,7 +63,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showEra('analytics',this)">Analytics &amp; AI</button>
       </div>
       <div class="explorer-panel" id="era-panel">
-        <div class="exp-body" style="color:var(--color-text-tertiary);">Select an era above to explore management thought through history.</div>
+        <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select an era above to explore management thought through history.</div>
       </div>
     </div>
 
@@ -82,7 +82,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showMBA('roi',this)">ROI debate</button>
       </div>
       <div class="explorer-panel" id="mba-panel">
-        <div class="exp-body" style="color:var(--color-text-tertiary);">Select a lens above to see what the MBA is actually training.</div>
+        <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select a lens above to see what the MBA is actually training.</div>
       </div>
     </div>
 
@@ -205,7 +205,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showStrategy('disrupt',this)">Disruption</button>
       </div>
       <div class="explorer-panel" id="strategy-panel">
-        <div class="exp-body" style="color:var(--color-text-tertiary);">Select a strategic move to see what it means in practice.</div>
+        <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select a strategic move to see what it means in practice.</div>
       </div>
     </div>
 
@@ -553,7 +553,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showQuality('kaizen',this)">Kaizen</button>
       </div>
       <div class="explorer-panel" id="quality-panel">
-        <div class="exp-body" style="color:var(--color-text-tertiary);">Select an approach above to explore its principles and applications.</div>
+        <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select an approach above to explore its principles and applications.</div>
       </div>
     </div>
 
@@ -639,7 +639,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showBias('availability',this)">Availability</button>
       </div>
       <div class="explorer-panel" id="bias-panel">
-        <div class="exp-body" style="color:var(--color-text-tertiary);">Select a bias above to learn how it distorts management decisions.</div>
+        <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select a bias above to learn how it distorts management decisions.</div>
       </div>
     </div>
 
@@ -854,8 +854,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showEra = function(key, btn) {
       const d = ERAS[key];
       document.getElementById('era-panel').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.querySelectorAll('#era-btns button').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
     };
@@ -883,8 +883,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showMBA = function(key, btn) {
       const d = MBA_ITEMS[key];
       document.getElementById('mba-panel').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.querySelectorAll('#mba-btns button').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
     };
@@ -953,8 +953,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showForce = function(key, card) {
       const d = FORCES[key];
       document.getElementById('force-detail').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.getElementById('force-detail').classList.add('show');
       document.querySelectorAll('#forces-grid .elem-card').forEach(function(c) { c.classList.remove('active'); });
       card.classList.add('active');
@@ -987,8 +987,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showStrategy = function(key, btn) {
       const d = STRATEGY_ITEMS[key];
       document.getElementById('strategy-panel').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.querySelectorAll('#strategy-btns button').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
     };
@@ -1020,8 +1020,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showQuality = function(key, btn) {
       const d = QUALITY[key];
       document.getElementById('quality-panel').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.querySelectorAll('#quality-btns button').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
     };
@@ -1040,7 +1040,7 @@ const mod = modules.find((m) => m.id === 36)!;
     var segHtml = '';
     SEG_ITEMS.forEach(function(item) {
       segHtml +=
-        '<div class="cscale-row">' +
+        '<div class="bar-row">' +
         '<div class="cscale-name">' + item.name + '</div>' +
         '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pct + '%;"></div></div>' +
         '</div>';
@@ -1060,7 +1060,7 @@ const mod = modules.find((m) => m.id === 36)!;
     var leadHtml = '';
     LEAD_ITEMS.forEach(function(item) {
       leadHtml +=
-        '<div class="cscale-row">' +
+        '<div class="bar-row">' +
         '<div class="cscale-name">' + item.name + '</div>' +
         '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pct + '%;"></div></div>' +
         '</div>';
@@ -1098,8 +1098,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showBias = function(key, btn) {
       const d = BIASES[key];
       document.getElementById('bias-panel').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.querySelectorAll('#bias-btns button').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
     };
@@ -1139,8 +1139,8 @@ const mod = modules.find((m) => m.id === 36)!;
     window.showBizModel = function(key, card) {
       const d = BIZ_MODELS[key];
       document.getElementById('biz-detail').innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="compact-card-title">' + d.title + '</div>' +
+        '<div class="muted-copy-large">' + d.body + '</div>';
       document.getElementById('biz-detail').classList.add('show');
       document.querySelectorAll('#biz-grid .elem-card').forEach(function(c) { c.classList.remove('active'); });
       card.classList.add('active');
