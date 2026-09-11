@@ -209,19 +209,6 @@
     .teaser-num { font-size: 10px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
     .teaser-icon { font-size: 26px; }
     .teaser-name { font-size: 14px; font-weight: 600; color: var(--color-text-primary); line-height: 1.25; }
-    .teaser-badge {
-      font-size: 10px;
-      font-weight: 500;
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 99px;
-      background: var(--color-background-secondary);
-      color: var(--color-text-tertiary);
-      border: 0.5px solid var(--color-border-tertiary);
-      align-self: flex-start;
-      margin-top: 2px;
-    }
-
     /* ── Price scale ── */
     .price-scale {
       background: var(--color-background-primary);
