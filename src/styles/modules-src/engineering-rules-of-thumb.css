@@ -13,7 +13,7 @@
 .fail-timeline { position: relative; padding-left: 24px; }
 .fail-timeline::before { content:''; position:absolute; left:8px; top:6px; bottom:6px; width:1px; background: var(--color-border-tertiary); }
 .mat-label { font-size:11px; color:var(--color-text-secondary); width:120px; flex-shrink:0; text-align:right; padding-right:8px; line-height:1.3; }
-.mat-bar { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 7px; }
+.mat-bar { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 7px; min-width: fit-content; }
 .mat-val { font-size:10px; font-weight:500; white-space:nowrap; }
 
 .text-indigo-900 {
@@ -135,5 +135,38 @@
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   min-height:80px;
+}
+
+/* Scatter-plot dots and pie-chart wedges/legend swatches sit directly on
+   the page background at opacity 0.8-0.9 — the light literal values
+   (ef9f27/85b7eb/97c459/f09595/b8a6f0) fail 3:1 there even before the
+   opacity fade is applied (~2.0-2.2:1 raw). Light uses each family's
+   darkest established shade (already always used at full opacity, so it
+   clears 3:1 comfortably even faded); dark keeps the original literal,
+   which already passes fine against the dark page background. */
+.eng-c-amber  { fill: #633806; color: #633806; }
+.eng-c-blue   { fill: #0C447C; color: #0C447C; }
+.eng-c-green  { fill: #27500A; color: #27500A; }
+.eng-c-red    { fill: #791F1F; color: #791F1F; }
+.eng-c-purple { fill: #3C3489; color: #3C3489; }
+html[data-theme="dark"] .eng-c-amber  { fill: #ef9f27; color: #ef9f27; }
+html[data-theme="dark"] .eng-c-blue   { fill: #85b7eb; color: #85b7eb; }
+html[data-theme="dark"] .eng-c-green  { fill: #97c459; color: #97c459; }
+html[data-theme="dark"] .eng-c-red    { fill: #f09595; color: #f09595; }
+html[data-theme="dark"] .eng-c-purple { fill: #b8a6f0; color: #b8a6f0; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .eng-c-amber  { fill: #ef9f27; color: #ef9f27; }
+  html[data-theme="auto"] .eng-c-blue   { fill: #85b7eb; color: #85b7eb; }
+  html[data-theme="auto"] .eng-c-green  { fill: #97c459; color: #97c459; }
+  html[data-theme="auto"] .eng-c-red    { fill: #f09595; color: #f09595; }
+  html[data-theme="auto"] .eng-c-purple { fill: #b8a6f0; color: #b8a6f0; }
+}
+
+/* "✓ want this" label is real text (4.5:1), not a decorative dot — same
+   light value works since it was already chosen well above the 3:1 floor. */
+.eng-c-green-text { fill: #27500A; }
+html[data-theme="dark"] .eng-c-green-text { fill: #97c459; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .eng-c-green-text { fill: #97c459; }
 }
   
