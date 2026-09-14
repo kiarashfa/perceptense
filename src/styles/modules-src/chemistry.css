@@ -165,6 +165,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 .ph-bar-text {
   font-size: 11px;
   color: var(--tint-color);
+  white-space: nowrap;
 }
 .ph-bar-text-blush {
   --tint-color: #FCEBEB;
