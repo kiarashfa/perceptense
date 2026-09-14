@@ -10,7 +10,6 @@
     "preview": "astro preview",
     "check": "astro check",
     "data": "python tools/build_data.py",
-    "port": "python tools/port.py",
     "css": "node tools/build-styles.mjs",
     "og": "python tools/build_og_fonts.py && node tools/build-og.mjs",
     "verify": "npm run verify:drift && npm run verify:handlers && npm run verify:crawl && npm run verify:seo",
