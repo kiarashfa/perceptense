@@ -107,8 +107,8 @@ body {
     }
     /* Open state: pieces drift apart, ink turns teal,
        inserted letters fade in greyed, + appears */
-    .etym.open .etym-left  { transform: translateX(-5px); color: #4E99A3; }
-    .etym.open .etym-right { transform: translateX(5px); color: #4E99A3; }
+    .etym.open .etym-left  { transform: translateX(-5px); color: var(--accent-text); }
+    .etym.open .etym-right { transform: translateX(5px); color: var(--accent-text); }
     .etym.open .etym-piece .add {
       color: var(--color-text-tertiary);
       opacity: 1;
@@ -225,7 +225,7 @@ body {
       flex: 0 0 30px;
       background: var(--color-border-tertiary);
     }
-    .tot-tag b { color: #4E99A3; font-weight: 600; }
+    .tot-tag b { color: var(--accent-text); font-weight: 600; }
     .tot-prompt {
       font-family: Georgia, serif;
       font-size: clamp(22px, 3.4vw, 30px);
@@ -455,7 +455,7 @@ body {
       color: var(--color-text-primary);
     }
     .calc-result b {
-      color: #4E99A3;
+      color: var(--accent-text);
       font-weight: 600;
       font-variant-numeric: tabular-nums;
     }
@@ -586,7 +586,7 @@ body {
       font-weight: 600;
       letter-spacing: 0.10em;
       text-transform: uppercase;
-      color: #4E99A3;
+      color: var(--accent-text);
       line-height: 1.4;
     }
     .author-bio {
@@ -702,7 +702,7 @@ body {
       line-height: 1.5;
       min-height: 38px;
     }
-    .monty-step b { color: #4E99A3; font-weight: 600; }
+    .monty-step b { color: var(--accent-text); font-weight: 600; }
     .monty-doors {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

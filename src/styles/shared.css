@@ -15,7 +15,7 @@
 
   --color-text-primary: #1a1a18;
   --color-text-secondary: #5f5e5a;
-  --color-text-tertiary: #888780;
+  --color-text-tertiary: #787770;
   --color-text-info: #0c447c;
   --color-text-success: #27500a;
   --color-text-warning: #633806;
@@ -42,6 +42,7 @@
   --accent: #4E99A3;
   --accent-bg: color-mix(in srgb, var(--accent) 12%, var(--color-background-primary));
   --accent-border: color-mix(in srgb, var(--accent) 45%, var(--color-border-tertiary));
+  --accent-text: #417F88;
 }
 
 /* === MODULE ACCENT REGISTRY === */
@@ -108,7 +109,7 @@ html[data-module="50"] { --accent: #1D9E75; }
 
     --color-text-primary: #e8e6df;
     --color-text-secondary: #a8a69e;
-    --color-text-tertiary: #6e6c65;
+    --color-text-tertiary: #86837B;
     --color-text-info: #85b7eb;
     --color-text-success: #97c459;
     --color-text-warning: #ef9f27;
@@ -117,6 +118,8 @@ html[data-module="50"] { --accent: #1D9E75; }
     --color-border-primary: rgba(255,255,255,0.4);
     --color-border-secondary: rgba(255,255,255,0.25);
     --color-border-tertiary: rgba(255,255,255,0.12);
+
+    --accent-text: var(--accent);
   }
 }
 
@@ -606,7 +609,7 @@ html[data-theme="light"] {
   --color-background-danger: #fcebeb;
   --color-text-primary: #1a1a18;
   --color-text-secondary: #5f5e5a;
-  --color-text-tertiary: #888780;
+  --color-text-tertiary: #787770;
   --color-text-info: #0c447c;
   --color-text-success: #27500a;
   --color-text-warning: #633806;
@@ -614,6 +617,7 @@ html[data-theme="light"] {
   --color-border-primary: rgba(0,0,0,0.4);
   --color-border-secondary: rgba(0,0,0,0.3);
   --color-border-tertiary: rgba(0,0,0,0.15);
+  --accent-text: #417F88;
 }
 html[data-theme="dark"] {
   --color-background-primary: #1c1c1a;
@@ -625,11 +629,12 @@ html[data-theme="dark"] {
   --color-background-danger: #2a0a0a;
   --color-text-primary: #e8e6df;
   --color-text-secondary: #a8a69e;
-  --color-text-tertiary: #6e6c65;
+  --color-text-tertiary: #86837B;
   --color-text-info: #85b7eb;
   --color-text-success: #97c459;
   --color-text-warning: #ef9f27;
   --color-text-danger: #f09595;
+  --accent-text: var(--accent);
   --color-border-primary: rgba(255,255,255,0.4);
   --color-border-secondary: rgba(255,255,255,0.25);
   --color-border-tertiary: rgba(255,255,255,0.12);

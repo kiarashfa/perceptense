@@ -30,7 +30,7 @@ body {
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #4E99A3;
+      color: var(--accent-text);
       margin-bottom: 0.6rem;
     }
     .hero-title {
@@ -120,7 +120,7 @@ body {
     .feat-num {
       font-size: 10px;
       font-weight: 600;
-      color: #4E99A3;
+      color: var(--accent-text);
       letter-spacing: 0.06em;
       text-transform: uppercase;
       margin-bottom: 4px;
