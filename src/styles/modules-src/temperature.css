@@ -13,6 +13,29 @@
 .bzone-row:last-child { border-bottom: none; }
 .bzone-temp { font-size: 13px; font-weight: 500; width: 68px; flex-shrink: 0; text-align: right; }
 .bzone-bar  { height: 16px; border-radius: 3px; flex-shrink: 0; }
+
+/* bzone-temp labels sit on the page background, not a fixed badge — the
+   shared text-<colour> utilities they use are tuned for light mode only
+   (by design, see memory.md), so give this module's own zone labels a
+   dark-mode-safe pairing without touching the shared classes. */
+html[data-theme="dark"] .bzone-temp.u-text-hex-26215c { color: #CECBF6; }
+html[data-theme="dark"] .bzone-temp.text-blue-700     { color: #85B7EB; }
+html[data-theme="dark"] .bzone-temp.text-blue-500     { color: #B5D4F4; }
+html[data-theme="dark"] .bzone-temp.text-teal-700     { color: #9FE1CB; }
+html[data-theme="dark"] .bzone-temp.text-amber-500    { color: #EF9F27; }
+html[data-theme="dark"] .bzone-temp.text-amber-700    { color: #F5C563; }
+html[data-theme="dark"] .bzone-temp.text-orange-600   { color: #ED5411; }
+html[data-theme="dark"] .bzone-temp.text-red-700      { color: #F09595; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .bzone-temp.u-text-hex-26215c { color: #CECBF6; }
+  html[data-theme="auto"] .bzone-temp.text-blue-700     { color: #85B7EB; }
+  html[data-theme="auto"] .bzone-temp.text-blue-500     { color: #B5D4F4; }
+  html[data-theme="auto"] .bzone-temp.text-teal-700     { color: #9FE1CB; }
+  html[data-theme="auto"] .bzone-temp.text-amber-500    { color: #EF9F27; }
+  html[data-theme="auto"] .bzone-temp.text-amber-700    { color: #F5C563; }
+  html[data-theme="auto"] .bzone-temp.text-orange-600   { color: #ED5411; }
+  html[data-theme="auto"] .bzone-temp.text-red-700      { color: #F09595; }
+}
 .cook-tab  { font-size: 11px; padding: 3px 10px; cursor: pointer; }
 .cook-tab.active { background: var(--color-background-secondary); border-color: var(--color-border-primary); font-weight: 500; }
 .cook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
@@ -41,11 +64,20 @@
 /* === Shared-ready extracted styles === */
 
 .text-amber-500 {
-  color:#EF9F27;
+  color:#633806;
 }
 
 .text-white {
   color:#fff;
+}
+
+.tv-dark2 {
+  color: #1a1a18;
+}
+
+.tv-dark2-small {
+  color: #1a1a18;
+  font-size: 10px;
 }
 
 .u-w-100pct {
