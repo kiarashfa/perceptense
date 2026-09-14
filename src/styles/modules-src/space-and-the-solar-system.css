@@ -64,6 +64,8 @@
       min-width: 38px;
       padding-top: 1px;
     }
+    html[data-theme="dark"] .tl-year { color: #e15c1a; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .tl-year { color: #e15c1a; } }
 
     /* ── SpaceX launcher cards ── */
     .launcher-grid {
@@ -110,7 +112,11 @@
       flex-shrink: 0;
       color: var(--accent);
     }
+    html[data-theme="dark"] .xmod-icon { color: #e15c1a; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .xmod-icon { color: #e15c1a; } }
     .xmod-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+    html[data-theme="dark"] .xmod-label { color: #e15c1a; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .xmod-label { color: #e15c1a; } }
     .xmod-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
     .mag-label {
       font-size: 11px;
@@ -127,7 +133,7 @@
       display: flex;
       align-items: center;
       padding: 0 7px;
-      min-width: 4px;
+      min-width: fit-content;
       transition: width 0.3s ease;
     }
 
@@ -225,7 +231,7 @@
 
 .sun-layer-range-deep {
   font-size:11px;
-  color:#FFAA88;
+  color:#FFD0B8;
 }
 
 .sun-layer-desc {
@@ -235,7 +241,7 @@
   color: var(--tint-color);
 }
 .sun-layer-desc-deep {
-  --tint-color: #FFAA88;
+  --tint-color: #FFD0B8;
 }
 
 .sun-layer-radiative {
@@ -249,16 +255,16 @@
 }
 
 .sun-layer-name-convective {
-  --tint-color: #FFEEDD;
+  --tint-color: #2b0f00;
 }
 
 .sun-layer-range-convective {
   font-size:11px;
-  color:#FFCC99;
+  color:#2b0f00;
 }
 
 .sun-layer-desc-convective {
-  --tint-color: #FFCC99;
+  --tint-color: #2b0f00;
 }
 
 .sun-layer-photosphere {
@@ -267,16 +273,16 @@
 }
 
 .sun-layer-name-photosphere {
-  --tint-color: #FFF0CC;
+  --tint-color: #2b0f00;
 }
 
 .sun-layer-range-photosphere {
   font-size:11px;
-  color:#FFE0AA;
+  color:#2b0f00;
 }
 
 .sun-layer-desc-photosphere {
-  --tint-color: #FFE0AA;
+  --tint-color: #2b0f00;
 }
 
 .sun-layer-corona {
@@ -286,16 +292,16 @@
 }
 
 .sun-layer-name-corona {
-  --tint-color: #FFF5E0;
+  --tint-color: #2b0f00;
 }
 
 .sun-layer-range-corona {
   font-size:11px;
-  color:#FFE8BB;
+  color:#2b0f00;
 }
 
 .sun-layer-desc-corona {
-  --tint-color: #FFE8BB;
+  --tint-color: #2b0f00;
 }
 
 .star-dot-style {
@@ -576,7 +582,7 @@
 
 .band-range-light {
   font-size:11px;
-  color:#B5D4F4;
+  color:#C0DBF5;
 }
 
 .band-desc {
@@ -608,7 +614,7 @@
 }
 
 .band-desc-mid {
-  --tint-color: #B5D4F4;
+  --tint-color: #C0DBF5;
 }
 
 .atm-band-pale-blue {
@@ -693,6 +699,9 @@
   background: var(--data-background);
   width: var(--data-width);
 }
+.ordinary-matter-bar-text {
+  color: #000;
+}
 
 .spacex-intro-card {
   background:var(--color-background-secondary);
@@ -739,6 +748,8 @@
   padding-top: 1px;
   flex-shrink: 0;
 }
+html[data-theme="dark"] .neighbor-dist { color: #e15c1a; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .neighbor-dist { color: #e15c1a; } }
 
 /* ── Black hole anatomy layers ── */
 .bh-layer {
@@ -767,7 +778,7 @@
 .bh-zone-eh    .bh-layer-sub, .bh-zone-eh .bh-layer-dist { color: #C8B8FF; }
 .bh-zone-photo .bh-layer-name, .bh-zone-photo .bh-layer-sub, .bh-zone-photo .bh-layer-dist { color: #F0E8FF; }
 .bh-zone-isco  .bh-layer-name, .bh-zone-isco  .bh-layer-sub, .bh-zone-isco  .bh-layer-dist { color: #FFF0FF; }
-.bh-zone-accr  .bh-layer-name, .bh-zone-accr  .bh-layer-sub, .bh-zone-accr  .bh-layer-dist { color: #FFF8FF; }
+.bh-zone-accr  .bh-layer-name, .bh-zone-accr  .bh-layer-sub, .bh-zone-accr  .bh-layer-dist { color: #1A0030; }
 .bh-zone-jets  .bh-layer-name, .bh-zone-jets  .bh-layer-sub, .bh-zone-jets  .bh-layer-dist { color: #1A0030; }
 
 /* ── Wormhole diagram layers ── */
@@ -811,4 +822,15 @@
   border-left: 3px solid #7B3FD8;
 }
 .bhtype-mass { font-size: 11px; color: #7B3FD8; font-weight: 500; margin-bottom: 4px; }
-  
+html[data-theme="dark"] .bhtype-card { border-left-color: #A878E8; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .bhtype-card { border-left-color: #A878E8; } }
+html[data-theme="dark"] .bhtype-mass { color: #A878E8; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .bhtype-mass { color: #A878E8; } }
+
+.star-temp.text-accent { color: var(--accent); }
+html[data-theme="dark"] .item-name.text-accent,
+html[data-theme="dark"] .star-temp.text-accent { color: #e15c1a; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .item-name.text-accent,
+  html[data-theme="auto"] .star-temp.text-accent { color: #e15c1a; }
+}

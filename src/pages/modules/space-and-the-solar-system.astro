@@ -386,15 +386,15 @@ const mod = modules.find((m) => m.id === 26)!;
           </div>
           <div class="data-row">
             <span class="mag-label">Intragalactic gas &amp; dust</span>
-            <div class="mag-bar mag-bar-data" style="--data-background: #5DCAA5; --data-width: 18%"><span class="bar-value white-text">~18%</span></div>
+            <div class="mag-bar mag-bar-data" style="--data-background: #5DCAA5; --data-width: 18%"><span class="bar-value ordinary-matter-bar-text">~18%</span></div>
           </div>
           <div class="data-row">
             <span class="mag-label">Stars</span>
-            <div class="mag-bar mag-bar-data" style="--data-background: #EF9F27; --data-width: 8%"><span class="bar-value white-text">~8%</span></div>
+            <div class="mag-bar mag-bar-data" style="--data-background: #EF9F27; --data-width: 8%"><span class="bar-value ordinary-matter-bar-text">~8%</span></div>
           </div>
           <div class="data-row">
             <span class="mag-label">Everything else<br><span class="text-tiny">(planets, you, etc.)</span></span>
-            <div class="mag-bar mag-bar-data" style="--data-background: #D85A30; --data-width: 2%"><span class="bar-value white-text">&lt;1%</span></div>
+            <div class="mag-bar mag-bar-data" style="--data-background: #D85A30; --data-width: 2%"><span class="bar-value ordinary-matter-bar-text">&lt;1%</span></div>
           </div>
         </div>
         <div class="desc-small">Everything you can see, touch, and measure -- all galaxies, stars, planets, people, and light -- accounts for just <strong class="text-primary">~5% of the universe's total energy content.</strong> Dark matter doesn't interact with light (we detect it only via gravity). Dark energy is the name given to the force driving the universe's accelerating expansion. Both are among the deepest unsolved problems in physics.</div>
@@ -987,13 +987,14 @@ const mod = modules.find((m) => m.id === 26)!;
     const el = document.getElementById('planet-bar-chart');
     const maxD = 139820; // Jupiter
     const cols = {mercury:'#888780',venus:'#BA7517',earth:'#378ADD',mars:'#D85A30',jupiter:'#D85A30',saturn:'#EF9F27',uranus:'#5DCAA5',neptune:'#185FA5'};
+    const barText = {mercury:'#000',venus:'#000',earth:'#000',mars:'#000',jupiter:'#000',saturn:'#000',uranus:'#000',neptune:'#fff'};
     let html = '';
     for (const [k, p] of Object.entries(planets)) {
       const pct = (p.diam_km / maxD * 100).toFixed(1);
       html += `<div class="data-row">
         <span class="mag-label">${p.name}</span>
-        <div class="mag-bar" style="background:${cols[k]};width:${pct}%;opacity:0.85;">
-          <span class="bar-value" style="color:white;font-size:10px;">${p.diam_km.toLocaleString()} km</span>
+        <div class="mag-bar" style="background:${cols[k]};width:${pct}%;opacity:0.9;">
+          <span class="bar-value" style="color:${barText[k]};font-size:10px;">${p.diam_km.toLocaleString()} km</span>
         </div>
       </div>`;
     }
