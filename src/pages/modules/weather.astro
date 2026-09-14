@@ -29,19 +29,19 @@ const mod = modules.find((m) => m.id === 25)!;
         <div class="atm-alt">500 km+</div>
         <div><div class="atm-name">Exosphere</div><div class="atm-note">Fades into space. Satellites orbit here. Negligible density.</div></div>
       </div>
-      <div class="atm-layer atm-layer-style-2">
+      <div class="atm-layer atm-layer-thermosphere">
         <div class="atm-alt">80–500 km</div>
         <div><div class="atm-name">Thermosphere / Ionosphere</div><div class="atm-note">Extremely thin, very high temperatures. Aurora borealis forms here. ISS orbits at ~400 km.</div></div>
       </div>
-      <div class="atm-layer atm-layer-style-3">
+      <div class="atm-layer atm-layer-mesosphere">
         <div class="atm-alt">50–80 km</div>
         <div><div class="atm-name">Mesosphere</div><div class="atm-note">Coldest part of the atmosphere (–90°C). Meteors burn up here. Noctilucent clouds form at the top.</div></div>
       </div>
-      <div class="atm-layer atm-layer-style-4">
+      <div class="atm-layer atm-layer-stratosphere">
         <div class="atm-alt">12–50 km</div>
         <div><div class="atm-name">Stratosphere</div><div class="atm-note">Ozone layer (20–30 km) absorbs UV. Temperature rises with altitude. Very stable — no weather, but aircraft cruise here. Commercial planes fly at 10–12 km, just at the tropopause.</div></div>
       </div>
-      <div class="atm-layer atm-layer-style-5">
+      <div class="atm-layer atm-layer-troposphere">
         <div class="atm-alt">0–12 km</div>
         <div><div class="atm-name">Troposphere ← all weather here</div><div class="atm-note">Contains 75% of atmospheric mass and ~99% of water vapour. Temperature falls ~6.5°C/km. Ends at the tropopause (higher in tropics ~16 km, lower at poles ~8 km).</div></div>
       </div>
@@ -91,24 +91,24 @@ const mod = modules.find((m) => m.id === 25)!;
     </div>
 
     <div class="grid-2">
-      <div class="weather-panel-2">
-        <div class="weather-label-2">High pressure (anticyclone)</div>
+      <div class="high-pressure-panel">
+        <div class="high-pressure-title">High pressure (anticyclone)</div>
         <div class="weather-text">Air sinks from above → warms as it descends (compression) → reduces relative humidity → clouds evaporate → fair weather. Winds spiral outward (clockwise in N. Hemisphere).</div>
         <div class="weather-row">
-          <div class="weather-panel-3">Typical weather: clear skies, sunshine, light winds</div>
-          <div class="weather-panel-3">In summer: heatwaves (blocking high pressure traps warm air)</div>
-          <div class="weather-panel-3">In winter: cold, frost, fog (clear skies = rapid radiative cooling)</div>
-          <div class="weather-panel-3">Typical pressure: 1,020–1,040+ hPa (standard sea level: 1,013 hPa)</div>
+          <div class="high-pressure-chip">Typical weather: clear skies, sunshine, light winds</div>
+          <div class="high-pressure-chip">In summer: heatwaves (blocking high pressure traps warm air)</div>
+          <div class="high-pressure-chip">In winter: cold, frost, fog (clear skies = rapid radiative cooling)</div>
+          <div class="high-pressure-chip">Typical pressure: 1,020–1,040+ hPa (standard sea level: 1,013 hPa)</div>
         </div>
       </div>
-      <div class="weather-panel-4">
-        <div class="weather-label-3">Low pressure (cyclone / depression)</div>
-        <div class="weather-text-2">Air rises → cools as it ascends → relative humidity increases → water vapour condenses → clouds form → precipitation. Winds spiral inward (anticlockwise in N. Hemisphere).</div>
+      <div class="low-pressure-panel">
+        <div class="low-pressure-title">Low pressure (cyclone / depression)</div>
+        <div class="low-pressure-desc">Air rises → cools as it ascends → relative humidity increases → water vapour condenses → clouds form → precipitation. Winds spiral inward (anticlockwise in N. Hemisphere).</div>
         <div class="weather-row">
-          <div class="weather-panel-5">Typical weather: cloud, rain, strong winds</div>
-          <div class="weather-panel-5">Deep lows: storms, gales, heavy rain</div>
-          <div class="weather-panel-5">Tropical cyclones: extreme low pressure, catastrophic winds</div>
-          <div class="weather-panel-5">Typical pressure: 980–1,010 hPa. Severe storm: below 960 hPa</div>
+          <div class="low-pressure-chip">Typical weather: cloud, rain, strong winds</div>
+          <div class="low-pressure-chip">Deep lows: storms, gales, heavy rain</div>
+          <div class="low-pressure-chip">Tropical cyclones: extreme low pressure, catastrophic winds</div>
+          <div class="low-pressure-chip">Typical pressure: 980–1,010 hPa. Severe storm: below 960 hPa</div>
         </div>
       </div>
     </div>
@@ -329,13 +329,13 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
       <div class="comfort-bar u-mb-xs">
         <div class="comfort-seg comfort-seg-style">Dry</div>
-        <div class="comfort-seg comfort-seg-style-2">Comfort</div>
-        <div class="comfort-seg comfort-seg-style-3">Comfort</div>
-        <div class="comfort-seg comfort-seg-style-4">Sticky</div>
-        <div class="comfort-seg comfort-seg-style-5">Oppressive</div>
-        <div class="comfort-seg comfort-seg-style-6">Dangerous</div>
+        <div class="comfort-seg comfort-seg-cool">Comfort</div>
+        <div class="comfort-seg comfort-seg-mild">Comfort</div>
+        <div class="comfort-seg comfort-seg-sticky">Sticky</div>
+        <div class="comfort-seg comfort-seg-oppressive">Oppressive</div>
+        <div class="comfort-seg comfort-seg-dangerous">Dangerous</div>
       </div>
-      <div class="weather-row-2">
+      <div class="dew-point-scale">
         <span>&lt;5°C</span><span>5–10°C</span><span>10–15°C</span><span>15–18°C</span><span>18–21°C</span><span>&gt;21°C</span>
       </div>
       <div class="weather-row">
@@ -357,13 +357,13 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="panel-title-spaced">Forecast probability of precipitation (PoP) — the most misunderstood number in meteorology</div>
 
       <div class="grid-2 u-mb-sm">
-        <div class="weather-panel-6">
-          <div class="weather-label-4">What 60% does NOT mean</div>
-          <div class="weather-text-4">It does NOT mean "it will rain for 60% of the day." It does NOT mean "60% of the area will get rain." It does NOT mean "there's a 60% chance it rains somewhere at some point."</div>
+        <div class="pop-myth-panel">
+          <div class="pop-myth-title">What 60% does NOT mean</div>
+          <div class="pop-myth-desc">It does NOT mean "it will rain for 60% of the day." It does NOT mean "60% of the area will get rain." It does NOT mean "there's a 60% chance it rains somewhere at some point."</div>
         </div>
-        <div class="weather-panel-7">
-          <div class="weather-label-5">What 60% actually means</div>
-          <div class="weather-text-5">PoP = C × A, where C = confidence (probability that rain occurs) and A = area coverage fraction. A 60% PoP means: 60% probability that ≥0.25mm of precipitation falls at any specific point in the forecast area during the forecast period.</div>
+        <div class="pop-meaning-panel">
+          <div class="pop-meaning-title">What 60% actually means</div>
+          <div class="pop-meaning-desc">PoP = C × A, where C = confidence (probability that rain occurs) and A = area coverage fraction. A 60% PoP means: 60% probability that ≥0.25mm of precipitation falls at any specific point in the forecast area during the forecast period.</div>
         </div>
       </div>
 
@@ -379,7 +379,7 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
 
       <!-- New: forecast skill by lead time visual -->
-      <div class="weather-label-7">How far ahead can we reliably forecast? (approximate skill levels)</div>
+      <div class="panel-subtitle">How far ahead can we reliably forecast? (approximate skill levels)</div>
       <div id="skill-bars"></div>
       <div class="callout btn-row-style">
         <strong>The 10-day limit:</strong> Chaotic sensitivity to initial conditions (the "butterfly effect") means deterministic weather forecasts become essentially useless beyond ~10 days. Modern ensemble forecasts (running the model ~50 times with slightly different starting conditions) can give probabilistic guidance out to ~2 weeks, but uncertainty grows rapidly. For periods beyond 2 weeks, only broad seasonal tendencies can be forecast — not specific weather events.
@@ -392,7 +392,7 @@ const mod = modules.find((m) => m.id === 25)!;
     <h2 class="sec" id="part-h-severe-weather-tropical-cyclones-tornadoes-and-other-extremes">Part H · severe weather — tropical cyclones, tornadoes, and other extremes</h2>
 
     <!-- Storm comparison table -->
-    <div class="card card-style-2">
+    <div class="card card-scroll">
       <div class="panel-title">Major severe weather types compared</div>
       <table class="storm-table">
         <thead>
@@ -522,51 +522,51 @@ const mod = modules.find((m) => m.id === 25)!;
     <div class="content-panel">
       <div class="panel-title-spaced">The most important distinction in climate science</div>
       <div class="grid-2 u-mb-md">
-        <div class="weather-panel-9">
-          <div class="weather-label-8">Weather</div>
-          <div class="weather-text-7">The state of the atmosphere at a specific place and time. Highly variable — day to day, week to week, year to year. Cannot be reliably forecast more than ~10 days ahead. A single hot summer, cold winter, or unusual storm is weather.</div>
+        <div class="weather-def-panel">
+          <div class="weather-def-title">Weather</div>
+          <div class="weather-def-desc">The state of the atmosphere at a specific place and time. Highly variable — day to day, week to week, year to year. Cannot be reliably forecast more than ~10 days ahead. A single hot summer, cold winter, or unusual storm is weather.</div>
         </div>
-        <div class="weather-panel-10">
-          <div class="weather-label-9">Climate</div>
-          <div class="weather-text-8">The statistical average of weather over long periods — the WMO standard is 30 years. Climate describes the pattern, not any individual event. "Climate is what you expect; weather is what you get."</div>
+        <div class="climate-def-panel">
+          <div class="climate-def-title">Climate</div>
+          <div class="climate-def-desc">The statistical average of weather over long periods — the WMO standard is 30 years. Climate describes the pattern, not any individual event. "Climate is what you expect; weather is what you get."</div>
         </div>
       </div>
 
-      <div class="weather-panel-11">
-        <div class="weather-label-7">Global temperature anomaly — the trend (illustrative)</div>
+      <div class="anomaly-panel">
+        <div class="panel-subtitle">Global temperature anomaly — the trend (illustrative)</div>
         <div class="u-mb-sm">
-          <div class="weather-row-3">
+          <div class="anomaly-bars">
             <div class="weather-media"></div>
-            <div class="weather-media-2"></div>
-            <div class="weather-media-3"></div>
-            <div class="weather-media-4"></div>
-            <div class="weather-media-5"></div>
-            <div class="weather-media-6"></div>
-            <div class="weather-media-7"></div>
-            <div class="weather-media-8"></div>
-            <div class="weather-media-9"></div>
-            <div class="weather-media-10"></div>
-            <div class="weather-media-11"></div>
-            <div class="weather-media-12"></div>
-            <div class="weather-media-13"></div>
-            <div class="weather-media-14"></div>
-            <div class="weather-media-15"></div>
-            <div class="weather-media-16"></div>
-            <div class="weather-media-17"></div>
-            <div class="weather-media-18"></div>
-            <div class="weather-media-19"></div>
-            <div class="weather-media-20"></div>
-            <div class="weather-media-21"></div>
-            <div class="weather-media-22"></div>
+            <div class="anomaly-bar-a"></div>
+            <div class="anomaly-bar-b"></div>
+            <div class="anomaly-bar-c"></div>
+            <div class="anomaly-bar-d"></div>
+            <div class="anomaly-bar-e"></div>
+            <div class="anomaly-bar-f"></div>
+            <div class="anomaly-bar-g"></div>
+            <div class="anomaly-bar-h"></div>
+            <div class="anomaly-bar-i"></div>
+            <div class="anomaly-bar-j"></div>
+            <div class="anomaly-bar-k"></div>
+            <div class="anomaly-bar-l"></div>
+            <div class="anomaly-bar-m"></div>
+            <div class="anomaly-bar-n"></div>
+            <div class="anomaly-bar-o"></div>
+            <div class="anomaly-bar-p"></div>
+            <div class="anomaly-bar-q"></div>
+            <div class="anomaly-bar-r"></div>
+            <div class="anomaly-bar-s"></div>
+            <div class="anomaly-bar-t"></div>
+            <div class="anomaly-bar-u"></div>
           </div>
-          <div class="weather-row-4">
+          <div class="anomaly-axis">
             <span>1900</span><span>1930</span><span>1960</span><span>1990</span><span>2010</span><span>2024</span>
           </div>
         </div>
         <div class="muted-copy">Global average surface temperature has risen approximately +1.1–1.2°C since the pre-industrial baseline (1850–1900). The 10 warmest years on record globally have all occurred since 2005. 2023 and 2024 set successive all-time global temperature records.</div>
       </div>
 
-      <div class="callout callout-style-2">
+      <div class="callout callout-flush">
         <strong>The loaded dice analogy (James Hansen, NASA):</strong> Before climate change, rolling a die gave roughly equal chances of a hot, average, or cold summer. Climate change loads the die — you still get variety (some cool summers), but hot summers come up far more often. Statistical attribution science can now calculate how much more likely a specific heatwave was due to climate change. For recent European heatwaves, the multiplier has ranged from 2× to 5×.
       </div>
     </div>
@@ -589,7 +589,7 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
       <div class="instrument-display" id="map-symbol-display"></div>
 
-      <div class="callout callout-style-3">
+      <div class="callout callout-spaced">
         <strong>The 5-step map reading process:</strong>
         (1) Find the pressure centres (L and H) to understand the broad flow.
         (2) Identify fronts and their direction of travel.

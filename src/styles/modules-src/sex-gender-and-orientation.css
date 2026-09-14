@@ -195,64 +195,64 @@
   margin-bottom:6px;
 }
 
-.gender-text-2 {
+.concept-note-blue {
   font-size:11px;
   color:#185FA5;
 }
 
-.gender-panel-2 {
+.concept-panel-purple {
   background:#EEEDFE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #AFA9EC;
 }
 
-.gender-label-2 {
+.concept-title-purple {
   font-size:13px;
   font-weight:500;
   color:#26215C;
   margin-bottom:4px;
 }
 
-.gender-text-3 {
+.concept-desc-purple {
   font-size:12px;
   color:#3C3489;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.gender-text-4 {
+.concept-note-purple {
   font-size:11px;
   color:#534AB7;
 }
 
-.gender-panel-3 {
+.concept-panel-green {
   background:#E1F5EE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #5DCAA5;
 }
 
-.gender-label-3 {
+.concept-title-green {
   font-size:13px;
   font-weight:500;
   color:#04342C;
   margin-bottom:4px;
 }
 
-.gender-text-5 {
+.concept-desc-green {
   font-size:12px;
   color:#085041;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.gender-text-6 {
+.concept-note-green {
   font-size:11px;
   color:#0F6E56;
 }
 
-.gender-panel-4 {
+.key-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -261,7 +261,7 @@
   line-height:1.6;
 }
 
-.gender-label-4 {
+.axes-heading {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -283,22 +283,22 @@
   stop-opacity:0.4;
 }
 
-.gender-stop-style-2 {
+.stop-lavender {
   stop-color:#EEEDFE;
   stop-opacity:0.9;
 }
 
-.gender-stop-style-3 {
+.stop-teal-soft {
   stop-color:#5DCAA5;
   stop-opacity:0.5;
 }
 
-.gender-stop-style-4 {
+.stop-mint {
   stop-color:#E1F5EE;
   stop-opacity:0.9;
 }
 
-.gender-text-7 {
+.figure-kicker {
   font-size:10px;
   font-weight:600;
   letter-spacing:0.06em;
@@ -307,7 +307,7 @@
   margin-bottom:10px;
 }
 
-.gender-media-2 {
+.wide-timeline-svg {
   width:100%;
   min-width:480px;
   height:auto;
@@ -326,122 +326,122 @@
   text-align:center;
 }
 
-.gender-label-5 {
+.kinsey-num-pale {
   font-size:13px;
   font-weight:500;
   color:#E6F1FB;
 }
 
-.gender-text-8 {
+.kinsey-desc-pale-blue {
   font-size:10px;
   color:#B5D4F4;
   margin-top:2px;
   line-height:1.3;
 }
 
-.gender-card-2 {
+.kinsey-cell-mostly-hetero {
   flex:1;
   background:#185FA5;
   padding:8px 6px;
   text-align:center;
 }
 
-.gender-label-6 {
+.kinsey-num {
   font-size:13px;
   font-weight:500;
   color:#fff;
 }
 
-.gender-text-9 {
+.kinsey-desc-light {
   font-size:10px;
   color:#E6F1FB;
   margin-top:2px;
   line-height:1.3;
 }
 
-.gender-card-3 {
+.kinsey-cell-hetero-leaning {
   flex:1;
   background:#378ADD;
   padding:8px 6px;
   text-align:center;
 }
 
-.gender-card-4 {
+.kinsey-cell-equal {
   flex:1;
   background:#888780;
   padding:8px 6px;
   text-align:center;
 }
 
-.gender-text-10 {
+.kinsey-desc-stone {
   font-size:10px;
   color:#F1EFE8;
   margin-top:2px;
   line-height:1.3;
 }
 
-.gender-card-5 {
+.kinsey-cell-homo-leaning {
   flex:1;
   background:#D4537E;
   padding:8px 6px;
   text-align:center;
 }
 
-.gender-text-11 {
+.kinsey-desc-blush {
   font-size:10px;
   color:#FBEAF0;
   margin-top:2px;
   line-height:1.3;
 }
 
-.gender-card-6 {
+.kinsey-cell-mostly-homo {
   flex:1;
   background:#993556;
   padding:8px 6px;
   text-align:center;
 }
 
-.gender-card-7 {
+.kinsey-cell-exclusively-homo {
   flex:1;
   background:#4B1528;
   padding:8px 6px;
   text-align:center;
 }
 
-.gender-label-7 {
+.kinsey-num-pink {
   font-size:13px;
   font-weight:500;
   color:#F4C0D1;
 }
 
-.gender-text-12 {
+.kinsey-desc-pink {
   font-size:10px;
   color:#ED93B1;
   margin-top:2px;
   line-height:1.3;
 }
 
-.gender-panel-7 {
+.prevalence-card {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 11px;
   text-align:center;
 }
 
-.gender-label-9 {
+.stat-figure {
   font-size:20px;
   font-weight:500;
   color:var(--color-text-primary);
 }
 
-.gender-text-13 {
+.prevalence-label {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:3px;
   line-height:1.4;
 }
 
-.gender-label-10 {
+.dot-chart-heading {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -449,7 +449,7 @@
   margin-top:4px;
 }
 
-.gender-row-2 {
+.dot-legend {
   display:flex;
   flex-wrap:wrap;
   gap:10px;
@@ -460,11 +460,11 @@
   background:#0C447C;
 }
 
-.law-dot-style-4 {
+.law-dot-pink {
   background:#D4537E;
 }
 
-.gender-panel-8 {
+.measurement-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -474,7 +474,7 @@
   margin-top:10px;
 }
 
-.gender-media-3 {
+.generation-chart {
   width:100%;
   height:auto;
   display:block;
@@ -487,7 +487,7 @@
   gap:10px;
 }
 
-.gender-panel-9 {
+.trend-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -496,14 +496,14 @@
   line-height:1.5;
 }
 
-.gender-text-14 {
+.two-axis-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.55;
   margin-bottom:12px;
 }
 
-.gender-text-15 {
+.axis-heading {
   font-size:11px;
   font-weight:600;
   color:var(--color-text-secondary);
@@ -544,15 +544,15 @@
   min-height:60px;
 }
 
-.law-dot-style-6 {
+.law-dot-grey {
   background:#888780;
 }
 
-.law-dot-style-7 {
+.law-dot-maroon {
   background:#4B1528;
 }
 
-.gender-media-4 {
+.legal-status-chart {
   width:100%;
   height:auto;
   display:block;

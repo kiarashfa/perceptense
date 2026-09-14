@@ -27,81 +27,81 @@ const mod = modules.find((m) => m.id === 24)!;
         <div class="fitness-label">Aerobic exercise</div>
         <div class="fitness-text">"With oxygen." At moderate intensities where oxygen supply meets demand. Fat and glycogen are the fuels. Can be sustained for long periods.</div>
         <div class="fitness-row">
-          <div class="fitness-panel-2"><strong>Fuel:</strong> Fat (primary at low intensity) + glycogen</div>
-          <div class="fitness-panel-2"><strong>Heart rate:</strong> 50–80% of max HR (roughly 220 − age)</div>
-          <div class="fitness-panel-2"><strong>Duration:</strong> Minutes to hours. Improves cardiovascular fitness, endurance, fat metabolism.</div>
-          <div class="fitness-panel-2"><strong>Examples:</strong> Walking, jogging, cycling, swimming, rowing, elliptical</div>
+          <div class="aerobic-chip"><strong>Fuel:</strong> Fat (primary at low intensity) + glycogen</div>
+          <div class="aerobic-chip"><strong>Heart rate:</strong> 50–80% of max HR (roughly 220 − age)</div>
+          <div class="aerobic-chip"><strong>Duration:</strong> Minutes to hours. Improves cardiovascular fitness, endurance, fat metabolism.</div>
+          <div class="aerobic-chip"><strong>Examples:</strong> Walking, jogging, cycling, swimming, rowing, elliptical</div>
         </div>
-        <div class="fitness-text-2">Benefits: improved VO2 max, heart health, mitochondrial density, fat oxidation capacity, mood (endorphins, BDNF), longevity. The single best-studied intervention for long-term health is regular moderate aerobic exercise.</div>
+        <div class="aerobic-benefits">Benefits: improved VO2 max, heart health, mitochondrial density, fat oxidation capacity, mood (endorphins, BDNF), longevity. The single best-studied intervention for long-term health is regular moderate aerobic exercise.</div>
       </div>
-      <div class="fitness-panel-3">
-        <div class="fitness-label-2">Anaerobic exercise</div>
-        <div class="fitness-text-3">"Without oxygen." At high intensities where oxygen demand exceeds supply. Glucose is the primary fuel. Cannot be sustained long — produces lactate and fatigue.</div>
+      <div class="anaerobic-panel">
+        <div class="anaerobic-title">Anaerobic exercise</div>
+        <div class="anaerobic-desc">"Without oxygen." At high intensities where oxygen demand exceeds supply. Glucose is the primary fuel. Cannot be sustained long — produces lactate and fatigue.</div>
         <div class="fitness-row">
-          <div class="fitness-panel-4"><strong>Fuel:</strong> Glucose (glycolysis) + ATP-PCr system (very short bursts)</div>
-          <div class="fitness-panel-4"><strong>Heart rate:</strong> 80–100% of max HR. Can only be sustained seconds to ~2 minutes.</div>
-          <div class="fitness-panel-4"><strong>Duration:</strong> Seconds (sprint, max lift) to ~2 min. Builds strength, power, muscle mass.</div>
-          <div class="fitness-panel-4"><strong>Examples:</strong> Weightlifting, sprinting, HIIT, plyometrics, max-effort anything</div>
+          <div class="anaerobic-chip"><strong>Fuel:</strong> Glucose (glycolysis) + ATP-PCr system (very short bursts)</div>
+          <div class="anaerobic-chip"><strong>Heart rate:</strong> 80–100% of max HR. Can only be sustained seconds to ~2 minutes.</div>
+          <div class="anaerobic-chip"><strong>Duration:</strong> Seconds (sprint, max lift) to ~2 min. Builds strength, power, muscle mass.</div>
+          <div class="anaerobic-chip"><strong>Examples:</strong> Weightlifting, sprinting, HIIT, plyometrics, max-effort anything</div>
         </div>
-        <div class="fitness-text-4">Benefits: increased muscle mass, strength, bone density, metabolic rate, testosterone and growth hormone response, insulin sensitivity. After heavy resistance exercise, metabolic rate stays elevated for hours (EPOC — excess post-exercise oxygen consumption).</div>
+        <div class="anaerobic-benefits">Benefits: increased muscle mass, strength, bone density, metabolic rate, testosterone and growth hormone response, insulin sensitivity. After heavy resistance exercise, metabolic rate stays elevated for hours (EPOC — excess post-exercise oxygen consumption).</div>
       </div>
     </div>
 
-    <div class="fitness-panel-5">
+    <div class="lactate-note">
       <strong class="text-primary">The lactate threshold:</strong> The intensity at which lactate production exceeds the body's ability to clear it — the transition from aerobic to predominantly anaerobic. Training this threshold (tempo runs, sustained efforts just below max) is the most powerful tool for improving athletic performance. World-class endurance athletes have extremely high lactate thresholds — they operate aerobically at intensities that would be anaerobic for most people.
     </div>
 
     <!-- Heart rate zone visual -->
     <div class="content-panel">
-      <div class="fitness-label-3">The five heart rate training zones — what's happening physiologically</div>
+      <div class="hr-zones-title">The five heart rate training zones — what's happening physiologically</div>
 
-      <div class="fitness-row-2">
-        <div class="fitness-text-5">Zone 1</div>
+      <div class="zone-row">
+        <div class="zone-name">Zone 1</div>
         <div class="fitness-media">
-          <div class="fitness-row-3">
-            <span class="fitness-text-6">50–60% max HR</span>
+          <div class="zone-fill-recovery">
+            <span class="zone-pct-teal">50–60% max HR</span>
           </div>
         </div>
-        <div class="fitness-text-7">Active recovery. Fat is dominant fuel. Can hold a full conversation.</div>
+        <div class="zone-desc">Active recovery. Fat is dominant fuel. Can hold a full conversation.</div>
       </div>
-      <div class="fitness-row-2">
-        <div class="fitness-text-5">Zone 2</div>
+      <div class="zone-row">
+        <div class="zone-name">Zone 2</div>
         <div class="fitness-media">
-          <div class="fitness-row-4">
-            <span class="fitness-text-6">60–70% max HR</span>
+          <div class="zone-fill-aerobic-base">
+            <span class="zone-pct-teal">60–70% max HR</span>
           </div>
         </div>
-        <div class="fitness-text-7">Aerobic base. Builds mitochondria and fat metabolism. "Endurance zone." Can hold a conversation.</div>
+        <div class="zone-desc">Aerobic base. Builds mitochondria and fat metabolism. "Endurance zone." Can hold a conversation.</div>
       </div>
-      <div class="fitness-row-2">
-        <div class="fitness-text-5">Zone 3</div>
+      <div class="zone-row">
+        <div class="zone-name">Zone 3</div>
         <div class="fitness-media">
-          <div class="fitness-row-5">
-            <span class="fitness-text-8">70–80% max HR</span>
+          <div class="zone-fill-tempo">
+            <span class="zone-pct-amber">70–80% max HR</span>
           </div>
         </div>
-        <div class="fitness-text-7">Tempo/threshold. Glycogen is major fuel. Short sentences only. The zone where lactate begins accumulating.</div>
+        <div class="zone-desc">Tempo/threshold. Glycogen is major fuel. Short sentences only. The zone where lactate begins accumulating.</div>
       </div>
-      <div class="fitness-row-2">
-        <div class="fitness-text-5">Zone 4</div>
+      <div class="zone-row">
+        <div class="zone-name">Zone 4</div>
         <div class="fitness-media">
-          <div class="fitness-row-6">
-            <span class="fitness-text-9">80–90% max HR</span>
+          <div class="zone-fill-threshold">
+            <span class="zone-pct-coral">80–90% max HR</span>
           </div>
         </div>
-        <div class="fitness-text-7">Hard aerobic / above threshold. Can't speak comfortably. VO2 max improvement zone.</div>
+        <div class="zone-desc">Hard aerobic / above threshold. Can't speak comfortably. VO2 max improvement zone.</div>
       </div>
-      <div class="fitness-row-7">
-        <div class="fitness-text-5">Zone 5</div>
+      <div class="zone-row-last">
+        <div class="zone-name">Zone 5</div>
         <div class="fitness-media">
-          <div class="fitness-row-8">
-            <span class="fitness-text-10">90–100% max HR</span>
+          <div class="zone-fill-max">
+            <span class="zone-pct-red">90–100% max HR</span>
           </div>
         </div>
-        <div class="fitness-text-7">Max effort. Sprints, all-out intervals. Anaerobic. Seconds to a couple of minutes only.</div>
+        <div class="zone-desc">Max effort. Sprints, all-out intervals. Anaerobic. Seconds to a couple of minutes only.</div>
       </div>
 
-      <div class="fitness-panel-6">
+      <div class="polarised-note">
         <strong class="text-primary">The 80/20 rule:</strong> Elite endurance athletes spend roughly 80% of training time in Zones 1–2 and only 20% at Zone 4–5. Most recreational athletes do the opposite — they go moderately hard every session (Zone 3–4), which accumulates fatigue without developing either the aerobic base or the high-end capacity effectively. Zone 2 is boring but transformative over months. Zone 3 is the "grey zone" — hard enough to be fatiguing, not hard enough to maximise adaptation.
       </div>
     </div>
@@ -113,27 +113,27 @@ const mod = modules.find((m) => m.id === 24)!;
 
     <div class="content-panel">
       <div class="panel-title">Calculate your estimated daily energy needs</div>
-      <div class="fitness-row-9">
-        <div class="fitness-row-10">
+      <div class="tdee-inputs">
+        <div class="field-wide">
           <label class="muted-text-small">Weight (kg)</label>
           <input class="u-fs-13px" type="number" id="u-fs-13px" value="75">
         </div>
-        <div class="fitness-row-10">
+        <div class="field-wide">
           <label class="muted-text-small">Height (cm)</label>
           <input class="u-fs-13px" type="number" id="met-height" value="175">
         </div>
-        <div class="fitness-row-11">
+        <div class="field-narrow">
           <label class="muted-text-small">Age</label>
           <input class="u-fs-13px" type="number" id="met-age" value="30">
         </div>
-        <div class="fitness-row-11">
+        <div class="field-narrow">
           <label class="muted-text-small">Sex</label>
           <select class="met-sex" id="met-sex">
             <option value="m">Male</option>
             <option value="f">Female</option>
           </select>
         </div>
-        <div class="fitness-row-12">
+        <div class="field-select">
           <label class="muted-text-small">Activity level</label>
           <select class="met-sex" id="met-activity">
             <option value="1.2">Sedentary (desk job, no exercise)</option>
@@ -146,7 +146,7 @@ const mod = modules.find((m) => m.id === 24)!;
         <button class="calcmet-control" onclick="calcMet()">Calculate</button>
       </div>
       <div class="met-result" id="met-result"></div>
-      <div class="fitness-panel-7">
+      <div class="calorie-balance-note">
         <strong class="text-primary">The calorie balance equation:</strong> Weight change = calories in − calories out. 1 kg of body fat ≈ 7,700 kcal stored energy. A 500 kcal/day deficit = ~0.5 kg/week loss. A 500 kcal/day surplus = ~0.5 kg/week gain. This is the physics — but metabolism adapts (BMR drops with sustained deficit, rises with sustained surplus), so the relationship is not perfectly linear over time.
       </div>
     </div>
@@ -154,15 +154,15 @@ const mod = modules.find((m) => m.id === 24)!;
     <!-- Body composition visual -->
     <div class="content-panel">
       <div class="inline-card-title">Body composition explorer — adjust sliders to see the breakdown</div>
-      <div class="fitness-text-12">Body composition is more informative than bodyweight alone. Two people with the same weight can have radically different physiques depending on muscle-to-fat ratio.</div>
+      <div class="panel-intro">Body composition is more informative than bodyweight alone. Two people with the same weight can have radically different physiques depending on muscle-to-fat ratio.</div>
 
-      <div class="fitness-grid-2">
+      <div class="composition-sliders">
         <div>
-          <div class="fitness-text-13">Body fat % — <span id="bf-val">18</span>%</div>
+          <div class="slider-label">Body fat % — <span id="bf-val">18</span>%</div>
           <input type="range" id="bf-slider" min="5" max="45" value="18" oninput="updateBComp()">
         </div>
         <div>
-          <div class="fitness-text-13">Body weight — <span id="bw-val">75</span> kg</div>
+          <div class="slider-label">Body weight — <span id="bw-val">75</span> kg</div>
           <input type="range" id="bw-slider" min="45" max="130" value="75" oninput="updateBComp()">
         </div>
       </div>
@@ -201,30 +201,30 @@ const mod = modules.find((m) => m.id === 24)!;
     <div class="content-panel">
       <div class="panel-title">The universal rule for resistance training</div>
       <div class="two-col-grid">
-        <div class="fitness-panel-8">
-          <div class="fitness-label-5">Inhale on the eccentric phase</div>
-          <div class="fitness-text-14">The eccentric is the lowering/lengthening/easier phase — where you're resisting gravity. Breathe in here. Examples: lowering the bar to chest in bench press; descending into a squat; lowering yourself on a pull-up; descending in a deadlift.</div>
+        <div class="inhale-panel">
+          <div class="inhale-title">Inhale on the eccentric phase</div>
+          <div class="inhale-desc">The eccentric is the lowering/lengthening/easier phase — where you're resisting gravity. Breathe in here. Examples: lowering the bar to chest in bench press; descending into a squat; lowering yourself on a pull-up; descending in a deadlift.</div>
         </div>
-        <div class="fitness-panel-9">
-          <div class="fitness-label-6">Exhale on the concentric phase</div>
-          <div class="fitness-text-15">The concentric is the lifting/shortening/harder phase — where you're doing the work against gravity. Breathe out here. Examples: pressing the bar up in bench; standing up from a squat; pulling yourself up on a pull-up; lifting the bar in a deadlift.</div>
+        <div class="exhale-panel">
+          <div class="exhale-title">Exhale on the concentric phase</div>
+          <div class="exhale-desc">The concentric is the lifting/shortening/harder phase — where you're doing the work against gravity. Breathe out here. Examples: pressing the bar up in bench; standing up from a squat; pulling yourself up on a pull-up; lifting the bar in a deadlift.</div>
         </div>
       </div>
-      <div class="fitness-panel-10">
+      <div class="iap-note">
         <strong class="text-primary">Why this matters — intra-abdominal pressure (IAP):</strong> Exhaling during the hardest part of a lift (concentric) reduces intra-abdominal pressure, which reduces spinal stability — making the lift weaker and increasing injury risk. The technical technique for heavy lifting is the Valsalva manoeuvre: take a deep breath, brace your core hard (like you're about to be punched), hold the breath through the sticking point of the lift (the hardest moment), then exhale as you complete the rep. This creates maximum IAP and spinal stability.
       </div>
-      <div class="fitness-grid-4">
+      <div class="breathing-cue-grid">
         <div class="sub-card">
           <div class="detail-label">Squat breathing cue</div>
-          <div class="fitness-text-17">Inhale and brace before descent. Hold breath through the bottom and begin exhale as you drive up. Complete exhale at top. Reset breath each rep for heavy sets.</div>
+          <div class="cue-text">Inhale and brace before descent. Hold breath through the bottom and begin exhale as you drive up. Complete exhale at top. Reset breath each rep for heavy sets.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Deadlift breathing cue</div>
-          <div class="fitness-text-17">Stand tall, take a deep breath, brace 360° around your torso. Initiate the pull. Begin exhale as bar passes knees. Exhale fully at lockout. Lower the bar, reset.</div>
+          <div class="cue-text">Stand tall, take a deep breath, brace 360° around your torso. Initiate the pull. Begin exhale as bar passes knees. Exhale fully at lockout. Lower the bar, reset.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Light/cardio breathing</div>
-          <div class="fitness-text-17">For lighter weights and cardio: breathe naturally in rhythm with the movement. Don't hold breath. For running: try 2-count or 3-count breathing (inhale for 2–3 strides, exhale for 2–3 strides).</div>
+          <div class="cue-text">For lighter weights and cardio: breathe naturally in rhythm with the movement. Don't hold breath. For running: try 2-count or 3-count breathing (inhale for 2–3 strides, exhale for 2–3 strides).</div>
         </div>
       </div>
     </div>
@@ -236,12 +236,12 @@ const mod = modules.find((m) => m.id === 24)!;
 
     <div class="content-panel">
       <div class="panel-title">Protein target calculator — enter your weight</div>
-      <div class="fitness-row-13">
-        <div class="fitness-row-14">
+      <div class="calc-inputs">
+        <div class="field-medium">
           <label class="muted-text-small">Body weight (kg)</label>
           <input class="u-fs-13px" type="number" id="prot-weight" value="75">
         </div>
-        <div class="fitness-row-14">
+        <div class="field-medium">
           <label class="muted-text-small">Goal</label>
           <select class="met-sex" id="prot-goal">
             <option value="maintain">Maintain / general health</option>
@@ -255,22 +255,22 @@ const mod = modules.find((m) => m.id === 24)!;
       <div class="prot-result" id="prot-result"></div>
 
       <div class="panel-title-spaced">The science of muscle growth — what actually drives it</div>
-      <div class="fitness-grid-5">
+      <div class="hypertrophy-grid">
         <div class="sub-card">
           <div class="detail-label">The signal: mechanical tension</div>
-          <div class="fitness-text-18">Mechanical tension (load on the muscle, especially under stretch) is the primary driver of hypertrophy. When a loaded muscle is stretched under tension (the eccentric phase), mechanosensors in the muscle fibre detect this and trigger the anabolic signalling cascade (mTOR pathway).</div>
+          <div class="mechanism-text">Mechanical tension (load on the muscle, especially under stretch) is the primary driver of hypertrophy. When a loaded muscle is stretched under tension (the eccentric phase), mechanosensors in the muscle fibre detect this and trigger the anabolic signalling cascade (mTOR pathway).</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">The process: muscle protein synthesis</div>
-          <div class="fitness-text-18">Exercise triggers muscle protein synthesis (MPS) — the construction of new protein to repair and add to muscle fibres. MPS is elevated for 24–48h after resistance exercise. Without adequate dietary protein, the body can't build the new tissue regardless of training stimulus.</div>
+          <div class="mechanism-text">Exercise triggers muscle protein synthesis (MPS) — the construction of new protein to repair and add to muscle fibres. MPS is elevated for 24–48h after resistance exercise. Without adequate dietary protein, the body can't build the new tissue regardless of training stimulus.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">The limit: genetics and testosterone</div>
-          <div class="fitness-text-18">Natural muscle gain: ~0.5–1 kg/month for beginners, ~0.25–0.5 kg/month intermediate, ~0.1–0.25 kg/month advanced. Men gain faster than women (testosterone). Genetic ceiling exists — "natural" bodybuilders hit a ceiling set by their genetics and hormone profile.</div>
+          <div class="mechanism-text">Natural muscle gain: ~0.5–1 kg/month for beginners, ~0.25–0.5 kg/month intermediate, ~0.1–0.25 kg/month advanced. Men gain faster than women (testosterone). Genetic ceiling exists — "natural" bodybuilders hit a ceiling set by their genetics and hormone profile.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Protein timing — does it matter?</div>
-          <div class="fitness-text-18">The "anabolic window" (eat protein immediately post-workout) is largely a myth for people eating adequate daily protein. Total daily intake matters far more than timing. That said, distributing protein over 3–4 meals maximises MPS — each meal should contain ~20–40g protein to optimally stimulate MPS.</div>
+          <div class="mechanism-text">The "anabolic window" (eat protein immediately post-workout) is largely a myth for people eating adequate daily protein. Total daily intake matters far more than timing. That said, distributing protein over 3–4 meals maximises MPS — each meal should contain ~20–40g protein to optimally stimulate MPS.</div>
         </div>
       </div>
     </div>
@@ -369,7 +369,7 @@ const mod = modules.find((m) => m.id === 24)!;
           </tr>
         </tbody>
       </table>
-      <div class="fitness-panel-13">
+      <div class="proximity-note">
         <strong class="text-primary">The range is less important than proximity to failure.</strong> Research by James Krieger and others shows hypertrophy occurs across all rep ranges (6–30) when sets are taken close to failure (1–3 reps in reserve). A set of 20 reps with 2 reps left in the tank is roughly as effective for muscle growth as a set of 8 reps with 2 reps in reserve — as long as the load is sufficient. What this means practically: don't worry too much about hitting exact rep targets. Stop when form breaks down or 1–2 reps remain, whatever the number.
       </div>
     </div>
@@ -377,25 +377,25 @@ const mod = modules.find((m) => m.id === 24)!;
     <!-- 1RM calculator -->
     <div class="content-panel">
       <div class="panel-title">One-rep max (1RM) estimator — and what each percentage means for training</div>
-      <div class="fitness-row-13">
-        <div class="fitness-row-14">
+      <div class="calc-inputs">
+        <div class="field-medium">
           <label class="muted-text-small">Weight lifted (kg)</label>
           <input class="u-fs-13px" type="number" id="orm-weight" value="100">
         </div>
-        <div class="fitness-row-10">
+        <div class="field-wide">
           <label class="muted-text-small">Reps completed</label>
           <input class="u-fs-13px" type="number" id="orm-reps" value="5" min="1" max="30">
         </div>
         <button class="calcmet-control" onclick="calcORM()">Estimate 1RM</button>
       </div>
       <div id="orm-result"></div>
-      <div class="fitness-text-19">Formula: Brzycki (1RM = weight × 36 / (37 − reps)). Most accurate for 1–10 reps. Estimates become less reliable above 10 reps. Never attempt a true 1RM without a spotter and substantial training experience.</div>
+      <div class="formula-note">Formula: Brzycki (1RM = weight × 36 / (37 − reps)). Most accurate for 1–10 reps. Estimates become less reliable above 10 reps. Never attempt a true 1RM without a spotter and substantial training experience.</div>
     </div>
 
     <!-- Training programme explorer -->
     <div class="content-panel">
       <div class="inline-card-title">Training programme structures — which split is right for you?</div>
-      <div class="fitness-text-12">How you distribute training across the week matters less than total weekly volume per muscle group. The best split is the one you'll actually do consistently.</div>
+      <div class="panel-intro">How you distribute training across the week matters less than total weekly volume per muscle group. The best split is the one you'll actually do consistently.</div>
 
       <div class="button-row-compact" id="prog-tabs">
         <button onclick="showProg('fullbody')" class="active">Full body (3×/week)</button>
@@ -411,7 +411,7 @@ const mod = modules.find((m) => m.id === 24)!;
     ═══════════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-cardio-programming-distance-intervals-and-the-vo2-max">Part H · cardio programming — distance, intervals, and the VO2 max</h2>
 
-    <div class="fitness-grid-6">
+    <div class="vo2-card-grid">
       <div class="card">
         <p class="clabel">VO2 max — what it actually measures</p>
         <p class="cval">mL of O₂ per kg per minute</p>
@@ -437,19 +437,19 @@ const mod = modules.find((m) => m.id === 24)!;
     <!-- Calorie burn estimator -->
     <div class="content-panel">
       <div class="panel-title">Cardio calorie burn estimator — compare activities</div>
-      <div class="fitness-row-13">
-        <div class="fitness-row-10">
+      <div class="calc-inputs">
+        <div class="field-wide">
           <label class="muted-text-small">Body weight (kg)</label>
           <input class="u-fs-13px" type="number" id="cardio-weight" value="75">
         </div>
-        <div class="fitness-row-10">
+        <div class="field-wide">
           <label class="muted-text-small">Duration (minutes)</label>
           <input class="u-fs-13px" type="number" id="cardio-dur" value="30">
         </div>
         <button class="calcmet-control" onclick="calcCardio()">Estimate</button>
       </div>
       <div id="cardio-result"></div>
-      <div class="fitness-text-19">MET-based estimates (metabolic equivalents). Accuracy ±20% — heart rate, fitness level, and individual metabolism all affect the true number. These figures do not include EPOC.</div>
+      <div class="formula-note">MET-based estimates (metabolic equivalents). Accuracy ±20% — heart rate, fitness level, and individual metabolism all affect the true number. These figures do not include EPOC.</div>
     </div>
 
     <!-- ══════════════════════════════════════════════════════════
@@ -459,10 +459,10 @@ const mod = modules.find((m) => m.id === 24)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Select a muscle group to explore</div>
-      <div class="fitness-text-20">Understanding which muscle does what helps you train with intent, not just go through the motions.</div>
+      <div class="muscle-intro">Understanding which muscle does what helps you train with intent, not just go through the motions.</div>
 
       <!-- Schematic SVG body diagram — anterior & posterior -->
-      <div class="fitness-row-15">
+      <div class="muscle-map-row">
 
         <!-- Anterior (front) -->
         <svg class="fitness-svg-style" viewBox="0 0 140 280" width="140" height="280" xmlns="http://www.w3.org/2000/svg">
@@ -554,7 +554,7 @@ const mod = modules.find((m) => m.id === 24)!;
         </svg>
       </div>
 
-      <div class="fitness-text-21">Tap / hover any muscle to explore it</div>
+      <div class="muscle-hint">Tap / hover any muscle to explore it</div>
       <div class="muscle-display" id="muscle-display"></div>
     </div>
 
@@ -563,54 +563,54 @@ const mod = modules.find((m) => m.id === 24)!;
     ═══════════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-common-myths-and-what-the-evidence-actually-says">Part J · common myths &amp; what the evidence actually says</h2>
 
-    <div class="fitness-grid-7">
+    <div class="myth-card-grid">
 
       <div class="content-card-static">
         <div class="bar-row-tight">
-          <span class="fitness-text-22">❌</span>
+          <span class="myth-icon">❌</span>
           <div class="item-title">"Lifting makes women bulky"</div>
         </div>
-        <div class="fitness-text-23">Women have ~10–20× less testosterone than men and significantly less growth hormone. The hormonal environment for dramatic muscle growth simply doesn't exist. Female competitive bodybuilders achieve their physique after years of specific, high-volume training often combined with performance-enhancing drugs. Resistance training for women produces strength, bone density, improved body composition, and metabolic benefit — not bulk.</div>
+        <div class="myth-desc">Women have ~10–20× less testosterone than men and significantly less growth hormone. The hormonal environment for dramatic muscle growth simply doesn't exist. Female competitive bodybuilders achieve their physique after years of specific, high-volume training often combined with performance-enhancing drugs. Resistance training for women produces strength, bone density, improved body composition, and metabolic benefit — not bulk.</div>
       </div>
 
       <div class="content-card-static">
         <div class="bar-row-tight">
-          <span class="fitness-text-22">❌</span>
+          <span class="myth-icon">❌</span>
           <div class="item-title">"You can spot-reduce fat"</div>
         </div>
-        <div class="fitness-text-23">Doing 500 sit-ups will not burn the fat on your stomach. Fat loss is systemic — the body decides where to draw down fat stores based on genetics and hormones, not which muscles you work. The stomach, hips, and thighs tend to store fat preferentially (especially in women) and are the last places to lean out. Core exercises build core muscles; they do not "burn" overlying fat. Only a calorie deficit reduces fat, and where it comes off first is not controllable.</div>
+        <div class="myth-desc">Doing 500 sit-ups will not burn the fat on your stomach. Fat loss is systemic — the body decides where to draw down fat stores based on genetics and hormones, not which muscles you work. The stomach, hips, and thighs tend to store fat preferentially (especially in women) and are the last places to lean out. Core exercises build core muscles; they do not "burn" overlying fat. Only a calorie deficit reduces fat, and where it comes off first is not controllable.</div>
       </div>
 
       <div class="content-card-static">
         <div class="bar-row-tight">
-          <span class="fitness-text-22">❌</span>
+          <span class="myth-icon">❌</span>
           <div class="item-title">"Muscle turns into fat when you stop training"</div>
         </div>
-        <div class="fitness-text-23">Muscle and fat are different tissues — one cannot convert into the other. When you stop training: muscle undergoes atrophy (the fibres shrink) due to lack of mechanical stimulus. Simultaneously, if you continue eating the same amount without the energy expenditure of training, you gain fat. These two things happen at the same time, giving the appearance of one "turning into" the other. They are independent processes.</div>
+        <div class="myth-desc">Muscle and fat are different tissues — one cannot convert into the other. When you stop training: muscle undergoes atrophy (the fibres shrink) due to lack of mechanical stimulus. Simultaneously, if you continue eating the same amount without the energy expenditure of training, you gain fat. These two things happen at the same time, giving the appearance of one "turning into" the other. They are independent processes.</div>
       </div>
 
       <div class="content-card-static">
         <div class="bar-row-tight">
-          <span class="fitness-text-22">❌</span>
+          <span class="myth-icon">❌</span>
           <div class="item-title">"Cardio kills your gains"</div>
         </div>
-        <div class="fitness-text-23">The "interference effect" (cardio blunting muscle growth) exists but is heavily overstated by the fitness internet. Meta-analyses show that concurrent training (cardio + weights in the same program) reduces hypertrophy by only ~5–10% compared to resistance training alone — and only when cardio volume is excessive (long sessions, same day as lifting, same muscle groups). 3–4 moderate cardio sessions per week alongside resistance training does not meaningfully impair muscle growth and improves health markers significantly.</div>
+        <div class="myth-desc">The "interference effect" (cardio blunting muscle growth) exists but is heavily overstated by the fitness internet. Meta-analyses show that concurrent training (cardio + weights in the same program) reduces hypertrophy by only ~5–10% compared to resistance training alone — and only when cardio volume is excessive (long sessions, same day as lifting, same muscle groups). 3–4 moderate cardio sessions per week alongside resistance training does not meaningfully impair muscle growth and improves health markers significantly.</div>
       </div>
 
       <div class="content-card-static">
         <div class="bar-row-tight">
-          <span class="fitness-text-22">❌</span>
+          <span class="myth-icon">❌</span>
           <div class="item-title">"You need to feel the burn / soreness to have trained well"</div>
         </div>
-        <div class="fitness-text-23">The burn (metabolic acidosis from lactate accumulation) and soreness (DOMS from eccentric damage) are both side effects of training, not measures of effectiveness. An experienced lifter can have a highly productive session with minimal soreness. Chasing the burn leads to prioritising metabolic stress over mechanical tension, which is a less effective stimulus for strength and hypertrophy. Quality of movement and progressive overload matter far more than how much something hurts.</div>
+        <div class="myth-desc">The burn (metabolic acidosis from lactate accumulation) and soreness (DOMS from eccentric damage) are both side effects of training, not measures of effectiveness. An experienced lifter can have a highly productive session with minimal soreness. Chasing the burn leads to prioritising metabolic stress over mechanical tension, which is a less effective stimulus for strength and hypertrophy. Quality of movement and progressive overload matter far more than how much something hurts.</div>
       </div>
 
       <div class="content-card-static">
         <div class="bar-row-tight">
-          <span class="fitness-text-22">❌</span>
+          <span class="myth-icon">❌</span>
           <div class="item-title">"Static stretching before exercise prevents injury"</div>
         </div>
-        <div class="fitness-text-23">Static stretching (hold a stretch for 30–60 seconds) before exercise has been shown to temporarily reduce muscle force output, reduce peak power, and reduce sprint performance — the opposite of what you want before lifting or sprinting. The evidence for injury prevention from pre-exercise static stretching is weak. The effective warm-up approach: dynamic movements (arm circles, leg swings, bodyweight squats, light sets of the exercise you're about to perform). Static stretching is valuable — just save it for after training, or as a standalone flexibility session.</div>
+        <div class="myth-desc">Static stretching (hold a stretch for 30–60 seconds) before exercise has been shown to temporarily reduce muscle force output, reduce peak power, and reduce sprint performance — the opposite of what you want before lifting or sprinting. The evidence for injury prevention from pre-exercise static stretching is weak. The effective warm-up approach: dynamic movements (arm circles, leg swings, bodyweight squats, light sets of the exercise you're about to perform). Static stretching is valuable — just save it for after training, or as a standalone flexibility session.</div>
       </div>
 
     </div>

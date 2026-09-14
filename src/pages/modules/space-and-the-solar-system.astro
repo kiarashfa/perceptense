@@ -25,93 +25,93 @@ const mod = modules.find((m) => m.id === 26)!;
     <div class="space-panel">
       <div class="space-label">The Sun -- our star</div>
       <div class="space-grid">
-        <div class="space-panel-2"><p class="space-text">Diameter</p><p class="space-label-2">1,392,700 km -- 109× Earth's diameter</p></div>
-        <div class="space-panel-2"><p class="space-text">Mass</p><p class="space-label-2">1.989 × 10³⁰ kg -- 333,000× Earth's mass</p></div>
-        <div class="space-panel-2"><p class="space-text">Surface temperature</p><p class="space-label-2">~5,500°C (corona: 1–3 million °C -- hotter than surface, still unexplained)</p></div>
-        <div class="space-panel-2"><p class="space-text">Distance from Earth</p><p class="space-label-2">~150 million km = 1 AU. Light travel time: 8 min 20 sec.</p></div>
-        <div class="space-panel-2"><p class="space-text">Composition</p><p class="space-label-2">~74% hydrogen, ~25% helium, 1% heavier elements</p></div>
-        <div class="space-panel-2"><p class="space-text">Age / remaining life</p><p class="space-label-2">4.6 billion years old. ~5 billion years of hydrogen fuel remaining.</p></div>
+        <div class="sun-fact"><p class="space-text">Diameter</p><p class="sun-fact-value">1,392,700 km -- 109× Earth's diameter</p></div>
+        <div class="sun-fact"><p class="space-text">Mass</p><p class="sun-fact-value">1.989 × 10³⁰ kg -- 333,000× Earth's mass</p></div>
+        <div class="sun-fact"><p class="space-text">Surface temperature</p><p class="sun-fact-value">~5,500°C (corona: 1–3 million °C -- hotter than surface, still unexplained)</p></div>
+        <div class="sun-fact"><p class="space-text">Distance from Earth</p><p class="sun-fact-value">~150 million km = 1 AU. Light travel time: 8 min 20 sec.</p></div>
+        <div class="sun-fact"><p class="space-text">Composition</p><p class="sun-fact-value">~74% hydrogen, ~25% helium, 1% heavier elements</p></div>
+        <div class="sun-fact"><p class="space-text">Age / remaining life</p><p class="sun-fact-value">4.6 billion years old. ~5 billion years of hydrogen fuel remaining.</p></div>
       </div>
-      <div class="space-text-2">The Sun contains 99.86% of all mass in the solar system. Its gravity holds everything from Mercury to the Oort Cloud (~2 light-years away). The Sun is a G-type main-sequence star -- perfectly average by stellar standards, which is fortunate: massive stars burn fast and go supernova.</div>
+      <div class="sun-mass-note">The Sun contains 99.86% of all mass in the solar system. Its gravity holds everything from Mercury to the Oort Cloud (~2 light-years away). The Sun is a G-type main-sequence star -- perfectly average by stellar standards, which is fortunate: massive stars burn fast and go supernova.</div>
     </div>
 
     <!-- Sun structure diagram -->
     <div class="content-panel">
-      <div class="space-label-3">The Sun's internal layers</div>
+      <div class="panel-heading">The Sun's internal layers</div>
       <div class="space-row">
         <div class="space-card">
-          <div class="space-row-2">
-            <span class="space-text-3">Core</span>
-            <span class="space-text-4">0–25% of radius · ~15 million °C</span>
+          <div class="layer-header">
+            <span class="sun-layer-name-deep">Core</span>
+            <span class="sun-layer-range-deep">0–25% of radius · ~15 million °C</span>
           </div>
-          <div class="space-text-5">Nuclear fusion occurs here: 4 hydrogen nuclei fuse into 1 helium nucleus, releasing enormous energy as gamma rays. The core fuses ~620 million tonnes of hydrogen per second. Density is ~150 g/cm³ -- 150× water.</div>
+          <div class="sun-layer-desc-deep">Nuclear fusion occurs here: 4 hydrogen nuclei fuse into 1 helium nucleus, releasing enormous energy as gamma rays. The core fuses ~620 million tonnes of hydrogen per second. Density is ~150 g/cm³ -- 150× water.</div>
         </div>
-        <div class="space-card-2">
-          <div class="space-row-2">
-            <span class="space-text-3">Radiative zone</span>
-            <span class="space-text-4">25–70% of radius · ~7 million °C</span>
+        <div class="sun-layer-radiative">
+          <div class="layer-header">
+            <span class="sun-layer-name-deep">Radiative zone</span>
+            <span class="sun-layer-range-deep">25–70% of radius · ~7 million °C</span>
           </div>
-          <div class="space-text-5">Energy from the core travels outward as photons, but the plasma is so dense that photons are constantly absorbed and re-emitted -- a single photon takes 100,000–170,000 years to cross this zone. This is why sunlight you see today was "created" at the Sun's core over 100,000 years ago.</div>
+          <div class="sun-layer-desc-deep">Energy from the core travels outward as photons, but the plasma is so dense that photons are constantly absorbed and re-emitted -- a single photon takes 100,000–170,000 years to cross this zone. This is why sunlight you see today was "created" at the Sun's core over 100,000 years ago.</div>
         </div>
-        <div class="space-card-3">
-          <div class="space-row-2">
-            <span class="space-text-6">Convective zone</span>
-            <span class="space-text-7">70–100% of radius · ~2 million → 5,500°C</span>
+        <div class="sun-layer-convective">
+          <div class="layer-header">
+            <span class="sun-layer-name-convective">Convective zone</span>
+            <span class="sun-layer-range-convective">70–100% of radius · ~2 million → 5,500°C</span>
           </div>
-          <div class="space-text-8">Heat is transported by convection -- hot plasma rises, cools at the surface, sinks back down in giant cells. Granules (convection cells ~1,000 km wide) are visible at the surface, each lasting ~10 minutes. The Sun's surface (photosphere) is the visible "surface" we see from Earth.</div>
+          <div class="sun-layer-desc-convective">Heat is transported by convection -- hot plasma rises, cools at the surface, sinks back down in giant cells. Granules (convection cells ~1,000 km wide) are visible at the surface, each lasting ~10 minutes. The Sun's surface (photosphere) is the visible "surface" we see from Earth.</div>
         </div>
-        <div class="space-card-4">
-          <div class="space-row-2">
-            <span class="space-text-9">Photosphere</span>
-            <span class="space-text-10">500 km thick · ~5,500°C</span>
+        <div class="sun-layer-photosphere">
+          <div class="layer-header">
+            <span class="sun-layer-name-photosphere">Photosphere</span>
+            <span class="sun-layer-range-photosphere">500 km thick · ~5,500°C</span>
           </div>
-          <div class="space-text-11">The visible surface. Sunspots are cooler regions (~3,800°C) where intense magnetic fields suppress convection -- they appear dark only by contrast. Sunspot activity follows an 11-year cycle that affects space weather on Earth.</div>
+          <div class="sun-layer-desc-photosphere">The visible surface. Sunspots are cooler regions (~3,800°C) where intense magnetic fields suppress convection -- they appear dark only by contrast. Sunspot activity follows an 11-year cycle that affects space weather on Earth.</div>
         </div>
-        <div class="space-panel-3">
-          <div class="space-row-2">
-            <span class="space-text-12">Chromosphere &amp; Corona</span>
-            <span class="space-text-13">Above surface · up to 3 million °C</span>
+        <div class="sun-layer-corona">
+          <div class="layer-header">
+            <span class="sun-layer-name-corona">Chromosphere &amp; Corona</span>
+            <span class="sun-layer-range-corona">Above surface · up to 3 million °C</span>
           </div>
-          <div class="space-text-14">The chromosphere (pink during solar eclipses) extends ~2,000 km above the photosphere. The corona -- the Sun's wispy outer atmosphere -- extends millions of km and is inexplicably hotter than the surface. The solar wind originates here: a stream of charged particles that fills the solar system and drives auroras on Earth.</div>
+          <div class="sun-layer-desc-corona">The chromosphere (pink during solar eclipses) extends ~2,000 km above the photosphere. The corona -- the Sun's wispy outer atmosphere -- extends millions of km and is inexplicably hotter than the surface. The solar wind originates here: a stream of charged particles that fills the solar system and drives auroras on Earth.</div>
         </div>
       </div>
     </div>
 
     <!-- Star type comparison -->
     <div class="content-panel">
-      <div class="space-label-3">The Sun in context -- stellar classification (Morgan–Keenan)</div>
+      <div class="panel-heading">The Sun in context -- stellar classification (Morgan–Keenan)</div>
       <div class="star-row">
         <div class="star-dot star-dot-style"></div>
         <div class="star-info"><div class="star-name">O-type -- Blue supergiant (e.g. Rigel)</div><div class="star-sub">50× Sun's mass, 300,000× luminosity. Burns fuel in just millions of years. Ends as a supernova.</div></div>
         <div class="star-temp">30,000–50,000 K</div>
       </div>
       <div class="star-row">
-        <div class="star-dot star-dot-style-2"></div>
+        <div class="star-dot star-dot-b-type"></div>
         <div class="star-info"><div class="star-name">B-type -- Blue-white (e.g. Spica)</div><div class="star-sub">2–16× Sun's mass. Very bright, short-lived. Responsible for much of a galaxy's UV output.</div></div>
         <div class="star-temp">10,000–30,000 K</div>
       </div>
       <div class="star-row">
-        <div class="star-dot star-dot-style-3"></div>
+        <div class="star-dot star-dot-a-type"></div>
         <div class="star-info"><div class="star-name">A-type -- White (e.g. Sirius, Vega)</div><div class="star-sub">1.4–2× Sun's mass. Sirius is the brightest star in our night sky. Too short-lived for complex life to evolve.</div></div>
         <div class="star-temp">7,500–10,000 K</div>
       </div>
       <div class="star-row">
-        <div class="star-dot star-dot-style-4"></div>
+        <div class="star-dot star-dot-f-type"></div>
         <div class="star-info"><div class="star-name">F-type -- Yellow-white (e.g. Procyon)</div><div class="star-sub">~1.2× Sun's mass. Slightly hotter and shorter-lived than the Sun. Some are in habitable zone candidates.</div></div>
         <div class="star-temp">6,000–7,500 K</div>
       </div>
       <div class="star-row star-row-style">
-        <div class="star-dot star-dot-style-5"></div>
+        <div class="star-dot star-dot-sun"></div>
         <div class="star-info"><div class="star-name text-teal-500">G-type -- Yellow dwarf ← The Sun (also: Alpha Centauri A)</div><div class="star-sub">~1× solar mass. Long-lived (~10 billion years). Stable output. Our Sun is 4.6 Gyr old, halfway through its life. Ideal for complex life.</div></div>
         <div class="star-temp text-teal-500">5,200–6,000 K</div>
       </div>
       <div class="star-row">
-        <div class="star-dot star-dot-style-6"></div>
+        <div class="star-dot star-dot-k-type"></div>
         <div class="star-info"><div class="star-name">K-type -- Orange dwarf (e.g. Epsilon Eridani)</div><div class="star-sub">0.5–0.8× Sun's mass. Dimmer but very long-lived. Increasingly considered top candidates for life-hosting systems.</div></div>
         <div class="star-temp">3,700–5,200 K</div>
       </div>
       <div class="star-row">
-        <div class="star-dot star-dot-style-7"></div>
+        <div class="star-dot star-dot-m-type"></div>
         <div class="star-info"><div class="star-name">M-type -- Red dwarf (e.g. Proxima Centauri)</div><div class="star-sub">Most common star type (~75% of all stars). 0.08–0.5× solar mass. Extremely long-lived (trillions of years). Prone to intense flares that may sterilise nearby planets.</div></div>
         <div class="star-temp">2,400–3,700 K</div>
       </div>
@@ -134,42 +134,42 @@ const mod = modules.find((m) => m.id === 26)!;
     </div>
 
     <div class="content-card">
-      <div class="space-label-4">Scale visualisation -- relative planet sizes (not to orbital distance scale)</div>
-      <div class="space-row-4">
+      <div class="scale-heading">Scale visualisation -- relative planet sizes (not to orbital distance scale)</div>
+      <div class="planet-scale-row">
         <div class="u-text-center">
           <div class="space-media"></div>
-          <div class="space-text-15">Mer</div>
+          <div class="planet-abbr">Mer</div>
         </div>
         <div class="u-text-center">
-          <div class="space-media-2"></div>
-          <div class="space-text-15">Ven</div>
+          <div class="planet-dot-venus"></div>
+          <div class="planet-abbr">Ven</div>
         </div>
         <div class="u-text-center">
-          <div class="space-media-3"></div>
-          <div class="space-text-15">Ear</div>
+          <div class="planet-dot-earth"></div>
+          <div class="planet-abbr">Ear</div>
         </div>
         <div class="u-text-center">
-          <div class="space-media-4"></div>
-          <div class="space-text-15">Mar</div>
+          <div class="planet-dot-mars"></div>
+          <div class="planet-abbr">Mar</div>
         </div>
-        <div class="space-media-5"></div>
-        <div class="space-text-16">belt</div>
-        <div class="space-media-5"></div>
+        <div class="belt-gap"></div>
+        <div class="belt-label">belt</div>
+        <div class="belt-gap"></div>
         <div class="u-text-center">
-          <div class="space-media-6"></div>
-          <div class="space-text-15">Jupiter</div>
-        </div>
-        <div class="u-text-center">
-          <div class="space-media-7"></div>
-          <div class="space-text-15">Saturn (rings not shown)</div>
+          <div class="planet-dot-jupiter"></div>
+          <div class="planet-abbr">Jupiter</div>
         </div>
         <div class="u-text-center">
-          <div class="space-media-8"></div>
-          <div class="space-text-15">Uranus</div>
+          <div class="planet-dot-saturn"></div>
+          <div class="planet-abbr">Saturn (rings not shown)</div>
         </div>
         <div class="u-text-center">
-          <div class="space-media-9"></div>
-          <div class="space-text-15">Neptune</div>
+          <div class="planet-dot-uranus"></div>
+          <div class="planet-abbr">Uranus</div>
+        </div>
+        <div class="u-text-center">
+          <div class="planet-dot-neptune"></div>
+          <div class="planet-abbr">Neptune</div>
         </div>
       </div>
       <div class="muted-text-small">Inner planets (Mercury–Mars) shown at 10px per Earth diameter. Gas giants scaled at ~1/11th for fit. If Jupiter were truly to scale relative to Earth above, it would be 1,120px wide.</div>
@@ -179,9 +179,9 @@ const mod = modules.find((m) => m.id === 26)!;
 
     <!-- Planet comparison bars -->
     <div class="content-panel">
-      <div class="space-label-5">Planetary comparison -- diameter relative to Earth</div>
+      <div class="comparison-heading">Planetary comparison -- diameter relative to Earth</div>
       <div id="planet-bar-chart"></div>
-      <div class="space-text-18">Bar width proportional to diameter. Earth = 12,742 km baseline.</div>
+      <div class="comparison-note">Bar width proportional to diameter. Earth = 12,742 km baseline.</div>
     </div>
 
     <!-- ===========================
@@ -189,7 +189,7 @@ const mod = modules.find((m) => m.id === 26)!;
     =========================== -->
     <h2 class="sec" id="part-c-beyond-the-planets-the-outer-solar-system">Part C · beyond the planets -- the outer solar system</h2>
 
-    <div class="space-grid-2">
+    <div class="outer-system-grid">
       <div class="card">
         <p class="clabel">Asteroid belt</p>
         <p class="cval">Between Mars and Jupiter (~2.2–3.2 AU)</p>
@@ -218,11 +218,11 @@ const mod = modules.find((m) => m.id === 26)!;
     <h2 class="sec" id="part-d-earth-s-moon-everything-worth-knowing">Part D · Earth's Moon -- everything worth knowing</h2>
 
     <div class="content-panel">
-      <div class="space-grid-3">
-        <div class="space-panel-5"><p class="clabel u-text-center">Distance from Earth</p><p class="space-label-6">384,400 km</p><p class="space-text-19">Light: 1.3 sec. Varies: 356,500 (perigee) to 406,700 km (apogee)</p></div>
-        <div class="space-panel-5"><p class="clabel u-text-center">Diameter</p><p class="space-label-6">3,474 km</p><p class="space-text-19">27% of Earth's. Largest moon relative to its planet (except Charon/Pluto)</p></div>
-        <div class="space-panel-5"><p class="clabel u-text-center">Orbital period</p><p class="space-label-6">27.3 days</p><p class="space-text-19">Sidereal (relative to stars). Lunar month (new moon to new moon): 29.5 days</p></div>
-        <div class="space-panel-5"><p class="clabel u-text-center">Rotation period</p><p class="space-label-6">27.3 days</p><p class="space-text-19">Same as orbital period -- tidally locked. We always see the same face.</p></div>
+      <div class="moon-facts-grid">
+        <div class="moon-fact"><p class="clabel u-text-center">Distance from Earth</p><p class="moon-fact-value">384,400 km</p><p class="moon-fact-note">Light: 1.3 sec. Varies: 356,500 (perigee) to 406,700 km (apogee)</p></div>
+        <div class="moon-fact"><p class="clabel u-text-center">Diameter</p><p class="moon-fact-value">3,474 km</p><p class="moon-fact-note">27% of Earth's. Largest moon relative to its planet (except Charon/Pluto)</p></div>
+        <div class="moon-fact"><p class="clabel u-text-center">Orbital period</p><p class="moon-fact-value">27.3 days</p><p class="moon-fact-note">Sidereal (relative to stars). Lunar month (new moon to new moon): 29.5 days</p></div>
+        <div class="moon-fact"><p class="clabel u-text-center">Rotation period</p><p class="moon-fact-value">27.3 days</p><p class="moon-fact-note">Same as orbital period -- tidally locked. We always see the same face.</p></div>
       </div>
 
       <div class="two-col-grid">
@@ -236,51 +236,51 @@ const mod = modules.find((m) => m.id === 26)!;
         </div>
       </div>
 
-      <div class="space-label-8">The 8 lunar phases -- one complete cycle = 29.5 days</div>
-      <div class="space-row-5">
-        <div class="space-panel-7">
-          <div class="space-media-10"></div>
-          <div class="space-label-9">New Moon</div>
+      <div class="phases-heading">The 8 lunar phases -- one complete cycle = 29.5 days</div>
+      <div class="phases-row">
+        <div class="phase-card">
+          <div class="phase-new"></div>
+          <div class="phase-name">New Moon</div>
           <div class="muted-text-tiny">Day 0 -- invisible.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-11"></div>
-          <div class="space-label-9">Waxing crescent</div>
+        <div class="phase-card">
+          <div class="phase-waxing-crescent"></div>
+          <div class="phase-name">Waxing crescent</div>
           <div class="muted-text-tiny">Days 1–6. Right side lit.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-12"></div>
-          <div class="space-label-9">First quarter</div>
+        <div class="phase-card">
+          <div class="phase-first-quarter"></div>
+          <div class="phase-name">First quarter</div>
           <div class="muted-text-tiny">Day 7. Right half lit.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-13"></div>
-          <div class="space-label-9">Waxing gibbous</div>
+        <div class="phase-card">
+          <div class="phase-waxing-gibbous"></div>
+          <div class="phase-name">Waxing gibbous</div>
           <div class="muted-text-tiny">Days 8–13. Mostly lit.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-14"></div>
-          <div class="space-label-9">Full Moon</div>
+        <div class="phase-card">
+          <div class="phase-full"></div>
+          <div class="phase-name">Full Moon</div>
           <div class="muted-text-tiny">Day 14–15. Fully lit.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-15"></div>
-          <div class="space-label-9">Waning gibbous</div>
+        <div class="phase-card">
+          <div class="phase-waning-gibbous"></div>
+          <div class="phase-name">Waning gibbous</div>
           <div class="muted-text-tiny">Days 16–21. Left side lit.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-16"></div>
-          <div class="space-label-9">Last quarter</div>
+        <div class="phase-card">
+          <div class="phase-last-quarter"></div>
+          <div class="phase-name">Last quarter</div>
           <div class="muted-text-tiny">Day 22. Left half lit.</div>
         </div>
-        <div class="space-panel-7">
-          <div class="space-media-17"></div>
-          <div class="space-label-9">Waning crescent</div>
+        <div class="phase-card">
+          <div class="phase-waning-crescent"></div>
+          <div class="phase-name">Waning crescent</div>
           <div class="muted-text-tiny">Days 23–29. Sliver left.</div>
         </div>
       </div>
 
-      <div class="space-panel-8">
+      <div class="moon-motion-note">
         <strong class="text-primary">The Moon's movement through space is complex:</strong> It orbits Earth (27.3 days). Earth + Moon orbit the Sun together (365.25 days). The Moon's path around the Sun is always convex -- it always curves toward the Sun, never loops backward, despite appearances. The Moon is also very slowly drifting away from Earth at ~3.8 cm/year (measured by laser retroreflectors left by Apollo missions).
       </div>
     </div>
@@ -292,44 +292,44 @@ const mod = modules.find((m) => m.id === 26)!;
 
     <div class="content-panel">
       <div class="panel-title">From the ground to space -- altitude and what happens at each level</div>
-      <div class="space-row-6">
-        <div class="space-panel-9">
-          <div class="space-row-2">
-            <span class="space-label-10">Exosphere</span>
-            <span class="space-text-21">700 km to ~10,000 km</span>
+      <div class="atm-stack">
+        <div class="atm-band-navy">
+          <div class="layer-header">
+            <span class="layer-name-light">Exosphere</span>
+            <span class="band-range-light">700 km to ~10,000 km</span>
           </div>
-          <div class="space-text-22">The outermost layer -- atmosphere so thin it merges imperceptibly into interplanetary space. Molecules can escape Earth's gravity. Satellites in very high orbits (GPS: ~20,200 km) orbit here. No weather phenomena. Temperature "definition" breaks down -- molecules travel huge distances between collisions.</div>
+          <div class="band-desc-light">The outermost layer -- atmosphere so thin it merges imperceptibly into interplanetary space. Molecules can escape Earth's gravity. Satellites in very high orbits (GPS: ~20,200 km) orbit here. No weather phenomena. Temperature "definition" breaks down -- molecules travel huge distances between collisions.</div>
         </div>
-        <div class="space-panel-10">
-          <div class="space-row-2">
-            <span class="space-label-10">Thermosphere</span>
-            <span class="space-text-21">80–700 km</span>
+        <div class="atm-band-deep-blue">
+          <div class="layer-header">
+            <span class="layer-name-light">Thermosphere</span>
+            <span class="band-range-light">80–700 km</span>
           </div>
-          <div class="space-text-22">ISS orbits here (~400 km). Temperature rises dramatically with altitude (up to 2,500°C) -- but air is so thin there are almost no molecules to transfer heat. Auroras (Northern/Southern Lights) occur here -- solar wind particles excite atmospheric atoms. Re-entry vehicles experience intense heating here from air compression.</div>
+          <div class="band-desc-light">ISS orbits here (~400 km). Temperature rises dramatically with altitude (up to 2,500°C) -- but air is so thin there are almost no molecules to transfer heat. Auroras (Northern/Southern Lights) occur here -- solar wind particles excite atmospheric atoms. Re-entry vehicles experience intense heating here from air compression.</div>
         </div>
-        <div class="space-panel-11">
-          <div class="space-row-2">
-            <span class="space-label-10">Mesosphere</span>
-            <span class="space-text-21">50–80 km</span>
+        <div class="atm-band-blue">
+          <div class="layer-header">
+            <span class="layer-name-light">Mesosphere</span>
+            <span class="band-range-light">50–80 km</span>
           </div>
-          <div class="space-text-23">Temperature drops to −90°C at the mesopause (top) -- coldest natural temperature on Earth. Most meteors burn up here (friction with air molecules). Noctilucent clouds form near the top at ~82 km -- rare, beautiful electric-blue clouds of ice crystals, only visible at twilight. Too high for aircraft, too low for satellites -- the "ignorosphere."</div>
+          <div class="band-desc-mid">Temperature drops to −90°C at the mesopause (top) -- coldest natural temperature on Earth. Most meteors burn up here (friction with air molecules). Noctilucent clouds form near the top at ~82 km -- rare, beautiful electric-blue clouds of ice crystals, only visible at twilight. Too high for aircraft, too low for satellites -- the "ignorosphere."</div>
         </div>
-        <div class="space-panel-12">
-          <div class="space-row-2">
-            <span class="space-label-11">Stratosphere</span>
-            <span class="space-text-24">12–50 km</span>
+        <div class="atm-band-pale-blue">
+          <div class="layer-header">
+            <span class="layer-name-dark">Stratosphere</span>
+            <span class="band-range-dark">12–50 km</span>
           </div>
-          <div class="space-text-25">Contains the ozone layer (~15–35 km) which absorbs UV radiation -- essential for life on Earth. Temperature increases with altitude here (the opposite of the troposphere) because ozone absorbs UV energy. Very dry, no weather. Commercial aircraft fly at ~10–12 km (just below/at the tropopause). Concorde flew at ~18 km in the lower stratosphere. Weather balloons reach ~30–40 km.</div>
+          <div class="band-desc-dark">Contains the ozone layer (~15–35 km) which absorbs UV radiation -- essential for life on Earth. Temperature increases with altitude here (the opposite of the troposphere) because ozone absorbs UV energy. Very dry, no weather. Commercial aircraft fly at ~10–12 km (just below/at the tropopause). Concorde flew at ~18 km in the lower stratosphere. Weather balloons reach ~30–40 km.</div>
         </div>
-        <div class="space-panel-13">
-          <div class="space-row-2">
-            <span class="space-label-11">Troposphere</span>
-            <span class="space-text-26">0–12 km (8 km at poles, 16 km at equator)</span>
+        <div class="atm-band-ice">
+          <div class="layer-header">
+            <span class="layer-name-dark">Troposphere</span>
+            <span class="band-range-blue">0–12 km (8 km at poles, 16 km at equator)</span>
           </div>
-          <div class="space-text-27">All weather happens here. Contains ~75% of the atmosphere's mass and ~99% of its water vapour. Temperature decreases ~6.5°C per km. Mount Everest (8,849 m) is near the top. Beyond the tropopause (the boundary), temperature stops falling -- this inversion "caps" convection and prevents weather systems from penetrating into the stratosphere.</div>
+          <div class="band-desc-blue">All weather happens here. Contains ~75% of the atmosphere's mass and ~99% of its water vapour. Temperature decreases ~6.5°C per km. Mount Everest (8,849 m) is near the top. Beyond the tropopause (the boundary), temperature stops falling -- this inversion "caps" convection and prevents weather systems from penetrating into the stratosphere.</div>
         </div>
       </div>
-      <div class="space-panel-14">The Kármán line (100 km) is the internationally recognised boundary of space -- the point where the atmosphere is too thin for aircraft to generate lift and orbital mechanics take over.</div>
+      <div class="karman-note">The Kármán line (100 km) is the internationally recognised boundary of space -- the point where the atmosphere is too thin for aircraft to generate lift and orbital mechanics take over.</div>
     </div>
 
     <!-- ===========================
@@ -339,8 +339,8 @@ const mod = modules.find((m) => m.id === 26)!;
 
     <div class="content-panel">
       <div class="panel-title">Distances from Earth's surface -- drag to explore</div>
-      <div class="space-row-7">
-        <label class="space-text-28">Altitude:</label>
+      <div class="altitude-slider-row">
+        <label class="altitude-label">Altitude:</label>
         <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="18" value="3" step="1">
       </div>
       <div class="dist-display" id="dist-display"></div>
@@ -351,12 +351,12 @@ const mod = modules.find((m) => m.id === 26)!;
     =========================== -->
     <h2 class="sec" id="part-g-the-universe-s-composition-what-everything-is-made-of">Part G · the universe's composition -- what everything is made of</h2>
 
-    <div class="space-grid-5">
+    <div class="composition-grid">
       <!-- Composition visual -->
       <div class="content-card-static">
-        <div class="space-label-3">Composition of the observable universe</div>
+        <div class="panel-heading">Composition of the observable universe</div>
         <!-- SVG pie chart approximation using stacked sections -->
-        <svg class="space-media-18" viewBox="0 0 200 200">
+        <svg class="universe-pie" viewBox="0 0 200 200">
           <!-- Dark energy ~68%: 0–244.8° (in SVG path terms) -->
           <circle cx="100" cy="100" r="80" fill="none" stroke="#3C3489" stroke-width="50"
             stroke-dasharray="341 660" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
@@ -372,13 +372,13 @@ const mod = modules.find((m) => m.id === 26)!;
         </svg>
         <div class="composition-legend">
           <div class="comp-item"><div class="comp-dot bg-indigo-900"></div>Dark energy -- 68%</div>
-          <div class="comp-item"><div class="comp-dot comp-dot-style-2"></div>Dark matter -- 27%</div>
+          <div class="comp-item"><div class="comp-dot comp-dot-dark-matter"></div>Dark matter -- 27%</div>
           <div class="comp-item"><div class="comp-dot bg-teal-500"></div>Ordinary matter -- 5%</div>
         </div>
       </div>
       <!-- What ordinary matter is -->
       <div class="content-card-static">
-        <div class="space-label-3">Of that 5% ordinary matter…</div>
+        <div class="panel-heading">Of that 5% ordinary matter…</div>
         <div class="u-mb-sm">
           <div class="mag-row">
             <span class="mag-label">Intergalactic gas</span>
@@ -386,25 +386,25 @@ const mod = modules.find((m) => m.id === 26)!;
           </div>
           <div class="mag-row">
             <span class="mag-label">Intragalactic gas &amp; dust</span>
-            <div class="mag-bar mag-bar-style-2"><span class="mag-val text-white">~18%</span></div>
+            <div class="mag-bar mag-bar-galactic-gas"><span class="mag-val text-white">~18%</span></div>
           </div>
           <div class="mag-row">
             <span class="mag-label">Stars</span>
-            <div class="mag-bar mag-bar-style-3"><span class="mag-val text-white">~8%</span></div>
+            <div class="mag-bar mag-bar-stars"><span class="mag-val text-white">~8%</span></div>
           </div>
           <div class="mag-row">
-            <span class="mag-label">Everything else<br><span class="space-text-29">(planets, you, etc.)</span></span>
-            <div class="mag-bar mag-bar-style-4"><span class="mag-val text-white">&lt;1%</span></div>
+            <span class="mag-label">Everything else<br><span class="mag-label-aside">(planets, you, etc.)</span></span>
+            <div class="mag-bar mag-bar-everything-else"><span class="mag-val text-white">&lt;1%</span></div>
           </div>
         </div>
-        <div class="space-text-30">Everything you can see, touch, and measure -- all galaxies, stars, planets, people, and light -- accounts for just <strong class="text-primary">~5% of the universe's total energy content.</strong> Dark matter doesn't interact with light (we detect it only via gravity). Dark energy is the name given to the force driving the universe's accelerating expansion. Both are among the deepest unsolved problems in physics.</div>
+        <div class="matter-note">Everything you can see, touch, and measure -- all galaxies, stars, planets, people, and light -- accounts for just <strong class="text-primary">~5% of the universe's total energy content.</strong> Dark matter doesn't interact with light (we detect it only via gravity). Dark energy is the name given to the force driving the universe's accelerating expansion. Both are among the deepest unsolved problems in physics.</div>
       </div>
     </div>
 
     <!-- Cosmic timeline -->
     <div class="content-panel">
-      <div class="space-label-3">The cosmic calendar -- if the universe's age were one year</div>
-      <div class="space-text-31">Carl Sagan's concept: compress 13.8 billion years into 1 calendar year. Each second = ~437 years.</div>
+      <div class="panel-heading">The cosmic calendar -- if the universe's age were one year</div>
+      <div class="calendar-intro">Carl Sagan's concept: compress 13.8 billion years into 1 calendar year. Each second = ~437 years.</div>
       <div class="tl-item">
         <span class="tl-year">Jan 1</span>
         <div class="tl-body"><div class="tl-name">Big Bang -- the universe begins</div><div class="muted-copy-tight">13.8 billion years ago. Time, space, and all matter created. Temperature: 10³² K. Cosmic inflation expands the universe by a factor of 10²⁶ in a fraction of a second.</div></div>
@@ -454,19 +454,19 @@ const mod = modules.find((m) => m.id === 26)!;
     =========================== -->
     <h2 class="sec" id="part-i-spacex-the-private-space-revolution">Part I · SpaceX -- the private space revolution</h2>
 
-    <div class="space-panel-16">
+    <div class="spacex-intro-card">
       <div class="inline-card-title">Founded 2002 by Elon Musk with $100 million of his own capital</div>
       <div class="muted-copy">SpaceX entered an industry dominated by governments and legacy contractors, with the explicit goal of making humanity multiplanetary. Its core innovation was vertical integration (building almost everything in-house) and reusability -- the two factors that have driven launch costs from ~$50,000/kg (Space Shuttle) toward a target of &lt;$100/kg with Starship. As of 2025, SpaceX conducts more orbital launches per year than all other countries combined.</div>
     </div>
 
     <!-- Launch Vehicles - Tabbed Version -->
-    <div class="space-label-13">Launch vehicles</div>
+    <div class="launch-vehicles-heading">Launch vehicles</div>
     
     <div class="tab-bar" id="launcher-tabs"></div>
     <div class="tab-panel launcher-panel" id="launcher-panel"></div>
 
     <!-- SpaceX mission tabs -->
-    <div class="space-text-32">Key missions &amp; programmes</div>
+    <div class="missions-heading">Key missions &amp; programmes</div>
     <div class="tab-bar" id="spacex-tabs"></div>
     <div class="tab-panel u-mb-lg" id="spacex-panel"></div>
 
@@ -591,41 +591,41 @@ const mod = modules.find((m) => m.id === 26)!;
     <div class="content-panel">
       <div class="panel-title">The cosmic distance ladder -- how we measure the universe</div>
       <div class="muted-copy u-mb-md">Astronomers cannot use a single method for all distances. Instead they build a hierarchy of overlapping techniques, each calibrated against the one below it.</div>
-      <div class="space-row-6">
-        <div class="space-panel-9">
-          <div class="space-row-2">
-            <span class="space-label-10">Radar ranging</span>
-            <span class="space-text-21">Up to ~2 AU</span>
+      <div class="atm-stack">
+        <div class="atm-band-navy">
+          <div class="layer-header">
+            <span class="layer-name-light">Radar ranging</span>
+            <span class="band-range-light">Up to ~2 AU</span>
           </div>
-          <div class="space-text-22">Bouncing radio waves off nearby planets and measuring the round-trip time gives exact distances in the inner Solar System. Used to calibrate the Astronomical Unit precisely to within metres.</div>
+          <div class="band-desc-light">Bouncing radio waves off nearby planets and measuring the round-trip time gives exact distances in the inner Solar System. Used to calibrate the Astronomical Unit precisely to within metres.</div>
         </div>
-        <div class="space-panel-10">
-          <div class="space-row-2">
-            <span class="space-label-10">Stellar parallax</span>
-            <span class="space-text-21">Up to ~10,000 light-years</span>
+        <div class="atm-band-deep-blue">
+          <div class="layer-header">
+            <span class="layer-name-light">Stellar parallax</span>
+            <span class="band-range-light">Up to ~10,000 light-years</span>
           </div>
-          <div class="space-text-22">As Earth orbits the Sun, nearby stars appear to shift slightly against background stars. The angle of shift reveals distance geometrically. The Gaia spacecraft measured parallax for over 1 billion stars with extraordinary precision.</div>
+          <div class="band-desc-light">As Earth orbits the Sun, nearby stars appear to shift slightly against background stars. The angle of shift reveals distance geometrically. The Gaia spacecraft measured parallax for over 1 billion stars with extraordinary precision.</div>
         </div>
-        <div class="space-panel-11">
-          <div class="space-row-2">
-            <span class="space-label-10">Cepheid variable stars</span>
-            <span class="space-text-21">Up to ~100 million light-years</span>
+        <div class="atm-band-blue">
+          <div class="layer-header">
+            <span class="layer-name-light">Cepheid variable stars</span>
+            <span class="band-range-light">Up to ~100 million light-years</span>
           </div>
-          <div class="space-text-23">Cepheid stars pulsate with a period precisely linked to their intrinsic luminosity. Measure the period, know the true brightness, compare to apparent brightness, and you have the distance. Henrietta Swan Leavitt discovered this relationship in 1908, unlocking the scale of the universe.</div>
+          <div class="band-desc-mid">Cepheid stars pulsate with a period precisely linked to their intrinsic luminosity. Measure the period, know the true brightness, compare to apparent brightness, and you have the distance. Henrietta Swan Leavitt discovered this relationship in 1908, unlocking the scale of the universe.</div>
         </div>
-        <div class="space-panel-12">
-          <div class="space-row-2">
-            <span class="space-label-11">Type Ia supernovae</span>
-            <span class="space-text-24">Up to ~10 billion light-years</span>
+        <div class="atm-band-pale-blue">
+          <div class="layer-header">
+            <span class="layer-name-dark">Type Ia supernovae</span>
+            <span class="band-range-dark">Up to ~10 billion light-years</span>
           </div>
-          <div class="space-text-25">White dwarf stars that explode after accreting enough mass always reach the same intrinsic peak brightness -- a "standard candle." This allowed astronomers to discover in 1998 that the expansion of the universe is accelerating (earning a Nobel Prize in 2011), implying the existence of dark energy.</div>
+          <div class="band-desc-dark">White dwarf stars that explode after accreting enough mass always reach the same intrinsic peak brightness -- a "standard candle." This allowed astronomers to discover in 1998 that the expansion of the universe is accelerating (earning a Nobel Prize in 2011), implying the existence of dark energy.</div>
         </div>
-        <div class="space-panel-13">
-          <div class="space-row-2">
-            <span class="space-label-11">Cosmic Microwave Background / Hubble's Law</span>
-            <span class="space-text-26">Billions of light-years</span>
+        <div class="atm-band-ice">
+          <div class="layer-header">
+            <span class="layer-name-dark">Cosmic Microwave Background / Hubble's Law</span>
+            <span class="band-range-blue">Billions of light-years</span>
           </div>
-          <div class="space-text-27">The universe's expansion means distant galaxies are redshifted in proportion to their distance (Hubble's Law: v = H₀ x d). The CMB maps the entire observable universe as it was 380,000 years after the Big Bang. Together these fix the universe's age at 13.8 billion years and size at 93 billion light-years (diameter of the observable universe).</div>
+          <div class="band-desc-blue">The universe's expansion means distant galaxies are redshifted in proportion to their distance (Hubble's Law: v = H₀ x d). The CMB maps the entire observable universe as it was 380,000 years after the Big Bang. Together these fix the universe's age at 13.8 billion years and size at 93 billion light-years (diameter of the observable universe).</div>
         </div>
       </div>
     </div>
@@ -801,14 +801,14 @@ const mod = modules.find((m) => m.id === 26)!;
     <!-- Wormhole vs BH comparison -->
     <div class="content-panel">
       <div class="panel-title">Wormhole vs. black hole -- key differences</div>
-      <div class="space-row-6">
-        <div class="space-panel-9">
-          <div class="space-label-10">Black hole</div>
-          <div class="space-text-22">One-way. Once you cross the event horizon, you cannot leave -- not even information can escape. General relativity predicts a singularity at the centre where density becomes infinite and current physics breaks down. Black holes are confirmed to exist via multiple independent lines of evidence. They destroy information (possibly -- this is the "information paradox").</div>
+      <div class="atm-stack">
+        <div class="atm-band-navy">
+          <div class="layer-name-light">Black hole</div>
+          <div class="band-desc-light">One-way. Once you cross the event horizon, you cannot leave -- not even information can escape. General relativity predicts a singularity at the centre where density becomes infinite and current physics breaks down. Black holes are confirmed to exist via multiple independent lines of evidence. They destroy information (possibly -- this is the "information paradox").</div>
         </div>
-        <div class="space-panel-11">
-          <div class="space-label-10">Wormhole</div>
-          <div class="space-text-22">Hypothetically two-way (if traversable). Both mouths have horizons in the non-traversable Schwarzschild case, but a traversable wormhole requires the exotic matter to prevent horizon formation. Information is preserved -- it exits the other mouth. Wormholes have never been observed. The ER=EPR conjecture (2013, Maldacena and Susskind) proposes that quantum entanglement and wormholes may be the same phenomenon -- connecting quantum mechanics and general relativity in a profound way.</div>
+        <div class="atm-band-blue">
+          <div class="layer-name-light">Wormhole</div>
+          <div class="band-desc-light">Hypothetically two-way (if traversable). Both mouths have horizons in the non-traversable Schwarzschild case, but a traversable wormhole requires the exotic matter to prevent horizon formation. Information is preserved -- it exits the other mouth. Wormholes have never been observed. The ER=EPR conjecture (2013, Maldacena and Susskind) proposes that quantum entanglement and wormholes may be the same phenomenon -- connecting quantum mechanics and general relativity in a profound way.</div>
         </div>
       </div>
       <div class="warning-block u-mt-md">

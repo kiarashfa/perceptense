@@ -59,64 +59,64 @@
   line-height:1.5;
 }
 
-.fashion-panel-2 {
+.tier-luxury {
   background:#185FA5;
   border-radius:var(--border-radius-md);
   padding:10px 14px;
 }
 
-.fashion-label-2 {
+.tier-title-luxury {
   font-size:12px;
   font-weight:500;
   color:#E6F1FB;
   margin-bottom:2px;
 }
 
-.fashion-text-2 {
+.tier-desc-luxury {
   font-size:11px;
   color:#B5D4F4;
   line-height:1.5;
 }
 
-.fashion-panel-3 {
+.tier-premium {
   background:#1D9E75;
   border-radius:var(--border-radius-md);
   padding:10px 14px;
 }
 
-.fashion-label-3 {
+.tier-title-premium {
   font-size:12px;
   font-weight:500;
   color:#E1F5EE;
   margin-bottom:2px;
 }
 
-.fashion-text-3 {
+.tier-desc-premium {
   font-size:11px;
   color:#9FE1CB;
   line-height:1.5;
 }
 
-.fashion-panel-4 {
+.tier-high-street {
   background:#633806;
   border-radius:var(--border-radius-md);
   padding:10px 14px;
 }
 
-.fashion-label-4 {
+.tier-title-high-street {
   font-size:12px;
   font-weight:500;
   color:#FAEEDA;
   margin-bottom:2px;
 }
 
-.fashion-text-4 {
+.tier-desc-high-street {
   font-size:11px;
   color:#EF9F27;
   line-height:1.5;
 }
 
-.fashion-panel-5 {
+.couture-irony-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -125,7 +125,7 @@
   line-height:1.6;
 }
 
-.fashion-label-5 {
+.chart-kicker {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -134,7 +134,7 @@
   letter-spacing:0.06em;
 }
 
-.fashion-media-2 {
+.chart-svg {
   width:100%;
   display:block;
 }
@@ -146,85 +146,85 @@
   margin-bottom:1rem;
 }
 
-.fashion-panel-7 {
+.group-panel-lvmh {
   background:#EEEDFE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #AFA9EC;
 }
 
-.fashion-label-6 {
+.group-title-lvmh {
   font-size:13px;
   font-weight:500;
   color:#26215C;
   margin-bottom:4px;
 }
 
-.fashion-text-5 {
+.group-owner-lvmh {
   font-size:11px;
   color:#3C3489;
   margin-bottom:6px;
 }
 
-.fashion-text-6 {
+.group-brands-lvmh {
   font-size:11px;
   color:#534AB7;
   line-height:1.6;
 }
 
-.fashion-panel-8 {
+.group-panel-kering {
   background:#FAECE7;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #F0997B;
 }
 
-.fashion-label-7 {
+.group-title-kering {
   font-size:13px;
   font-weight:500;
   color:#4A1B0C;
   margin-bottom:4px;
 }
 
-.fashion-text-7 {
+.group-owner-kering {
   font-size:11px;
   color:#712B13;
   margin-bottom:6px;
 }
 
-.fashion-text-8 {
+.group-brands-kering {
   font-size:11px;
   color:#993C1D;
   line-height:1.6;
 }
 
-.fashion-panel-9 {
+.group-panel-richemont {
   background:#E6F1FB;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #85B7EB;
 }
 
-.fashion-label-8 {
+.group-title-richemont {
   font-size:13px;
   font-weight:500;
   color:#042C53;
   margin-bottom:4px;
 }
 
-.fashion-text-9 {
+.group-owner-richemont {
   font-size:11px;
   color:#0C447C;
   margin-bottom:6px;
 }
 
-.fashion-text-10 {
+.group-brands-richemont {
   font-size:11px;
   color:#185FA5;
   line-height:1.6;
 }
 
-.fashion-panel-10 {
+.independents-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -234,7 +234,7 @@
   margin-bottom:1rem;
 }
 
-.fashion-row-2 {
+.brand-buttons {
   display:flex;
   gap:7px;
   flex-wrap:wrap;
@@ -246,7 +246,7 @@
   padding:3px 9px;
 }
 
-.fashion-row-3 {
+.size-controls {
   display:flex;
   gap:10px;
   flex-wrap:wrap;
@@ -298,7 +298,7 @@
   padding:11px 13px;
 }
 
-.fashion-text-11 {
+.size-table {
   width:100%;
   font-size:12px;
   border-collapse:collapse;
@@ -316,20 +316,20 @@
   color:var(--color-text-secondary);
 }
 
-.fashion-spacing-2 {
+.size-table-head {
   text-align:center;
   padding:6px 8px;
   font-weight:500;
   color:var(--color-text-secondary);
 }
 
-.fashion-text-12 {
+.formality-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:8px;
 }
 
-.fashion-media-3 {
+.formality-scale {
   width:100%;
   display:block;
   margin-bottom:4px;
@@ -340,20 +340,20 @@
   padding:3px 10px;
 }
 
-.fashion-grid-2 {
+.two-card-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
   margin-bottom:1rem;
 }
 
-.fashion-media-4 {
+.knot-diagram {
   width:100%;
   display:block;
   margin-bottom:8px;
 }
 
-.fashion-grid-3 {
+.knot-notes-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:8px;
@@ -361,20 +361,20 @@
   color:var(--color-text-secondary);
 }
 
-.fashion-panel-11 {
+.knot-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:7px 9px;
 }
 
-.fashion-grid-4 {
+.fast-fashion-card-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:12px;
   margin-bottom:1rem;
 }
 
-.fashion-label-9 {
+.seasons-heading {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -383,26 +383,26 @@
   letter-spacing:0.06em;
 }
 
-.fashion-grid-5 {
+.seasons-compare {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
 }
 
-.fashion-label-10 {
+.calendar-label {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
   margin-bottom:6px;
 }
 
-.fashion-row-5 {
+.calendar-column {
   display:flex;
   flex-direction:column;
   gap:4px;
 }
 
-.fashion-panel-12 {
+.season-chip {
   background:#1D9E75;
   border-radius:3px;
   padding:5px 9px;
@@ -410,38 +410,38 @@
   color:#E1F5EE;
 }
 
-.fashion-text-13 {
+.calendar-cadence {
   font-size:11px;
   color:var(--color-text-tertiary);
   padding:3px 0;
 }
 
-.fashion-row-6 {
+.drop-swatches {
   display:flex;
   gap:3px;
   flex-wrap:wrap;
 }
 
-.fashion-media-5 {
+.drop-swatch {
   background:#633806;
   border-radius:3px;
   width:22px;
   height:16px;
 }
 
-.fashion-text-14 {
+.drop-cadence {
   font-size:11px;
   color:var(--color-text-tertiary);
   padding:5px 0;
 }
 
-.fashion-text-15 {
+.explorer-intro {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
 }
 
-.fashion-panel-13 {
+.fabric-care-rule {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 11px;
@@ -456,7 +456,7 @@
   padding:11px 13px;
 }
 
-.fashion-text-16 {
+.colour-picker-label {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:6px;
@@ -466,39 +466,39 @@
   background:#1B3A5C;
 }
 
-.swatch-style-2 {
+.swatch-charcoal {
   background:#3D3D3D;
 }
 
-.swatch-style-3 {
+.swatch-camel {
   background:#9B6B3C;
 }
 
-.swatch-style-4 {
+.swatch-burgundy {
   background:#8B2B2B;
 }
 
-.swatch-style-5 {
+.swatch-forest {
   background:#1A5C3A;
 }
 
-.swatch-style-6 {
+.swatch-plum {
   background:#6B4F8C;
 }
 
-.swatch-style-7 {
+.swatch-rust {
   background:#C4702A;
 }
 
-.swatch-style-8 {
+.swatch-steel-blue {
   background:#4A7FA5;
 }
 
-.swatch-style-9 {
+.swatch-sand {
   background:#D4B483;
 }
 
-.swatch-style-10 {
+.swatch-black {
   background:#2D2D2D;
 }
 
@@ -513,7 +513,7 @@
   font-size:10px;
 }
 
-.fashion-row-8 {
+.suit-colour-chips {
   display:flex;
   gap:8px;
   flex-wrap:wrap;
@@ -522,35 +522,35 @@
   color:var(--color-text-secondary);
 }
 
-.fashion-panel-15 {
+.suit-chip-charcoal {
   background:#2C2C2A;
   color:#E8E6DF;
   border-radius:3px;
   padding:2px 8px;
 }
 
-.fashion-panel-16 {
+.suit-chip-black {
   background:#1A1A18;
   color:#E8E6DF;
   border-radius:3px;
   padding:2px 8px;
 }
 
-.fashion-text-17 {
+.rule-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:8px;
   line-height:1.6;
 }
 
-.fashion-text-18 {
+.section-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.6;
   margin-bottom:10px;
 }
 
-.fashion-label-12 {
+.section-kicker {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -559,65 +559,65 @@
   margin-bottom:6px;
 }
 
-.fashion-grid-6 {
+.concentration-grid {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:8px;
   margin-bottom:0;
 }
 
-.fashion-panel-17 {
+.scent-panel-indigo {
   background:#26215C;
   border-radius:var(--border-radius-md);
   padding:9px 11px;
 }
 
-.fashion-text-19 {
+.scent-title-indigo {
   font-size:11px;
   font-weight:600;
   color:#CECBF6;
   margin-bottom:3px;
 }
 
-.fashion-text-20 {
+.scent-desc-indigo {
   font-size:10px;
   color:#AFA9EC;
   line-height:1.5;
 }
 
-.fashion-panel-18 {
+.scent-panel-blue {
   background:#185FA5;
   border-radius:var(--border-radius-md);
   padding:9px 11px;
 }
 
-.fashion-text-21 {
+.scent-title-blue {
   font-size:11px;
   font-weight:600;
   color:#E6F1FB;
   margin-bottom:3px;
 }
 
-.fashion-text-22 {
+.scent-desc-blue {
   font-size:10px;
   color:#B5D4F4;
   line-height:1.5;
 }
 
-.fashion-panel-19 {
+.scent-panel-teal {
   background:#1D9E75;
   border-radius:var(--border-radius-md);
   padding:9px 11px;
 }
 
-.fashion-text-23 {
+.scent-title-teal {
   font-size:11px;
   font-weight:600;
   color:#E1F5EE;
   margin-bottom:3px;
 }
 
-.fashion-text-24 {
+.scent-desc-teal {
   font-size:10px;
   color:#9FE1CB;
   line-height:1.5;

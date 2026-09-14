@@ -221,7 +221,7 @@
   margin-bottom:8px;
 }
 
-.space-panel-2 {
+.sun-fact {
   background:#FAC775;
   border-radius:var(--border-radius-md);
   padding:8px 10px;
@@ -233,20 +233,20 @@
   margin:0 0 2px;
 }
 
-.space-label-2 {
+.sun-fact-value {
   font-size:13px;
   font-weight:500;
   color:#412402;
   margin:0;
 }
 
-.space-text-2 {
+.sun-mass-note {
   font-size:12px;
   color:#633806;
   line-height:1.6;
 }
 
-.space-label-3 {
+.panel-heading {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
@@ -266,7 +266,7 @@
   padding:9px 14px;
 }
 
-.space-row-2 {
+.layer-header {
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -274,93 +274,93 @@
   gap:4px;
 }
 
-.space-text-3 {
+.sun-layer-name-deep {
   font-size:12px;
   font-weight:600;
   color:#FFDDCC;
 }
 
-.space-text-4 {
+.sun-layer-range-deep {
   font-size:11px;
   color:#FFAA88;
 }
 
-.space-text-5 {
+.sun-layer-desc-deep {
   font-size:11px;
   color:#FFAA88;
   margin-top:3px;
   line-height:1.4;
 }
 
-.space-card-2 {
+.sun-layer-radiative {
   background:#A83400;
   padding:9px 14px;
 }
 
-.space-card-3 {
+.sun-layer-convective {
   background:#D85A20;
   padding:9px 14px;
 }
 
-.space-text-6 {
+.sun-layer-name-convective {
   font-size:12px;
   font-weight:600;
   color:#FFEEDD;
 }
 
-.space-text-7 {
+.sun-layer-range-convective {
   font-size:11px;
   color:#FFCC99;
 }
 
-.space-text-8 {
+.sun-layer-desc-convective {
   font-size:11px;
   color:#FFCC99;
   margin-top:3px;
   line-height:1.4;
 }
 
-.space-card-4 {
+.sun-layer-photosphere {
   background:#EF8020;
   padding:9px 14px;
 }
 
-.space-text-9 {
+.sun-layer-name-photosphere {
   font-size:12px;
   font-weight:600;
   color:#FFF0CC;
 }
 
-.space-text-10 {
+.sun-layer-range-photosphere {
   font-size:11px;
   color:#FFE0AA;
 }
 
-.space-text-11 {
+.sun-layer-desc-photosphere {
   font-size:11px;
   color:#FFE0AA;
   margin-top:3px;
   line-height:1.4;
 }
 
-.space-panel-3 {
+.sun-layer-corona {
   background:#F59A30;
   border-radius:0 0 var(--border-radius-md) var(--border-radius-md);
   padding:9px 14px;
 }
 
-.space-text-12 {
+.sun-layer-name-corona {
   font-size:12px;
   font-weight:600;
   color:#FFF5E0;
 }
 
-.space-text-13 {
+.sun-layer-range-corona {
   font-size:11px;
   color:#FFE8BB;
 }
 
-.space-text-14 {
+.sun-layer-desc-corona {
   font-size:11px;
   color:#FFE8BB;
   margin-top:3px;
@@ -373,19 +373,19 @@
   background:#B0CCFF;
 }
 
-.star-dot-style-2 {
+.star-dot-b-type {
   width:7px;
   height:7px;
   background:#C8D8FF;
 }
 
-.star-dot-style-3 {
+.star-dot-a-type {
   width:7px;
   height:7px;
   background:#D8E8FF;
 }
 
-.star-dot-style-4 {
+.star-dot-f-type {
   width:6px;
   height:6px;
   background:#FFF0CC;
@@ -399,20 +399,20 @@
   margin:-2px;
 }
 
-.star-dot-style-5 {
+.star-dot-sun {
   width:10px;
   height:10px;
   background:#FFE060;
   border:2px solid var(--accent);
 }
 
-.star-dot-style-6 {
+.star-dot-k-type {
   width:6px;
   height:6px;
   background:#FFB830;
 }
 
-.star-dot-style-7 {
+.star-dot-m-type {
   width:5px;
   height:5px;
   background:#FF6030;
@@ -423,14 +423,14 @@
   padding:3px 9px;
 }
 
-.space-label-4 {
+.scale-heading {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:8px;
 }
 
-.space-row-4 {
+.planet-scale-row {
   display:flex;
   align-items:center;
   gap:4px;
@@ -446,12 +446,12 @@
   margin:0 auto 2px;
 }
 
-.space-text-15 {
+.planet-abbr {
   font-size:9px;
   color:var(--color-text-secondary);
 }
 
-.space-media-2 {
+.planet-dot-venus {
   width:9px;
   height:9px;
   background:#BA7517;
@@ -459,7 +459,7 @@
   margin:0 auto 2px;
 }
 
-.space-media-3 {
+.planet-dot-earth {
   width:10px;
   height:10px;
   background:#378ADD;
@@ -467,7 +467,7 @@
   margin:0 auto 2px;
 }
 
-.space-media-4 {
+.planet-dot-mars {
   width:5px;
   height:5px;
   background:#D85A30;
@@ -475,7 +475,7 @@
   margin:0 auto 2px;
 }
 
-.space-media-5 {
+.belt-gap {
   width:8px;
   height:1px;
   background:var(--color-border-tertiary);
@@ -483,13 +483,13 @@
   align-self:center;
 }
 
-.space-text-16 {
+.belt-label {
   font-size:9px;
   color:var(--color-text-secondary);
   align-self:center;
 }
 
-.space-media-6 {
+.planet-dot-jupiter {
   width:112px;
   height:112px;
   background:#D85A30;
@@ -498,7 +498,7 @@
   opacity:0.7;
 }
 
-.space-media-7 {
+.planet-dot-saturn {
   width:94px;
   height:94px;
   background:#EF9F27;
@@ -508,7 +508,7 @@
   border:2px solid #BA7517;
 }
 
-.space-media-8 {
+.planet-dot-uranus {
   width:40px;
   height:40px;
   background:#5DCAA5;
@@ -517,7 +517,7 @@
   opacity:0.8;
 }
 
-.space-media-9 {
+.planet-dot-neptune {
   width:38px;
   height:38px;
   background:#185FA5;
@@ -526,68 +526,68 @@
   opacity:0.8;
 }
 
-.space-label-5 {
+.comparison-heading {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:12px;
 }
 
-.space-text-18 {
+.comparison-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:6px;
 }
 
-.space-grid-2 {
+.outer-system-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:15px;
   margin-bottom:1.5rem;
 }
 
-.space-grid-3 {
+.moon-facts-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:15px;
   margin-bottom:10px;
 }
 
-.space-panel-5 {
+.moon-fact {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 11px;
   text-align:center;
 }
 
-.space-label-6 {
+.moon-fact-value {
   font-size:18px;
   font-weight:500;
   color:var(--color-text-primary);
   margin:0;
 }
 
-.space-text-19 {
+.moon-fact-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin:3px 0 0;
 }
 
-.space-label-8 {
+.phases-heading {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:6px;
 }
 
-.space-row-5 {
+.phases-row {
   display:flex;
   gap:4px;
   flex-wrap:wrap;
   margin-bottom:10px;
 }
 
-.space-panel-7 {
+.phase-card {
   flex:1;
   min-width:80px;
   background:var(--color-background-secondary);
@@ -596,7 +596,7 @@
   text-align:center;
 }
 
-.space-media-10 {
+.phase-new {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -605,13 +605,13 @@
   border:1px solid var(--color-border-secondary);
 }
 
-.space-label-9 {
+.phase-name {
   font-size:10px;
   font-weight:500;
   color:var(--color-text-primary);
 }
 
-.space-media-11 {
+.phase-waxing-crescent {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -619,7 +619,7 @@
   margin:0 auto 4px;
 }
 
-.space-media-12 {
+.phase-first-quarter {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -627,7 +627,7 @@
   margin:0 auto 4px;
 }
 
-.space-media-13 {
+.phase-waxing-gibbous {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -635,7 +635,7 @@
   margin:0 auto 4px;
 }
 
-.space-media-14 {
+.phase-full {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -643,7 +643,7 @@
   margin:0 auto 4px;
 }
 
-.space-media-15 {
+.phase-waning-gibbous {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -651,7 +651,7 @@
   margin:0 auto 4px;
 }
 
-.space-media-16 {
+.phase-last-quarter {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -659,7 +659,7 @@
   margin:0 auto 4px;
 }
 
-.space-media-17 {
+.phase-waning-crescent {
   width:20px;
   height:20px;
   border-radius:50%;
@@ -667,7 +667,7 @@
   margin:0 auto 4px;
 }
 
-.space-panel-8 {
+.moon-motion-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -676,84 +676,84 @@
   line-height:1.6;
 }
 
-.space-row-6 {
+.atm-stack {
   display:flex;
   flex-direction:column;
   gap:0;
   margin-bottom:10px;
 }
 
-.space-panel-9 {
+.atm-band-navy {
   background:#042C53;
   border-radius:var(--border-radius-md) var(--border-radius-md) 0 0;
   padding:10px 14px;
 }
 
-.space-label-10 {
+.layer-name-light {
   font-size:12px;
   font-weight:500;
   color:#E6F1FB;
 }
 
-.space-text-21 {
+.band-range-light {
   font-size:11px;
   color:#B5D4F4;
 }
 
-.space-text-22 {
+.band-desc-light {
   font-size:11px;
   color:#85B7EB;
   margin-top:4px;
   line-height:1.4;
 }
 
-.space-panel-10 {
+.atm-band-deep-blue {
   background:#0C447C;
   padding:10px 14px;
   border-left:0.5px solid #042C53;
   border-right:0.5px solid #042C53;
 }
 
-.space-panel-11 {
+.atm-band-blue {
   background:#185FA5;
   padding:10px 14px;
   border-left:0.5px solid #042C53;
   border-right:0.5px solid #042C53;
 }
 
-.space-text-23 {
+.band-desc-mid {
   font-size:11px;
   color:#B5D4F4;
   margin-top:4px;
   line-height:1.4;
 }
 
-.space-panel-12 {
+.atm-band-pale-blue {
   background:#B5D4F4;
   padding:10px 14px;
   border-left:0.5px solid #85B7EB;
   border-right:0.5px solid #85B7EB;
 }
 
-.space-label-11 {
+.layer-name-dark {
   font-size:12px;
   font-weight:500;
   color:#042C53;
 }
 
-.space-text-24 {
+.band-range-dark {
   font-size:11px;
   color:#0C447C;
 }
 
-.space-text-25 {
+.band-desc-dark {
   font-size:11px;
   color:#0C447C;
   margin-top:4px;
   line-height:1.4;
 }
 
-.space-panel-13 {
+.atm-band-ice {
   background:#E6F1FB;
   border-radius:0 0 var(--border-radius-md) var(--border-radius-md);
   padding:10px 14px;
@@ -761,19 +761,19 @@
   border-top:none;
 }
 
-.space-text-26 {
+.band-range-blue {
   font-size:11px;
   color:#185FA5;
 }
 
-.space-text-27 {
+.band-desc-blue {
   font-size:11px;
   color:#185FA5;
   margin-top:4px;
   line-height:1.4;
 }
 
-.space-panel-14 {
+.karman-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 11px;
@@ -781,14 +781,14 @@
   color:var(--color-text-secondary);
 }
 
-.space-row-7 {
+.altitude-slider-row {
   display:flex;
   align-items:center;
   gap:12px;
   margin-bottom:10px;
 }
 
-.space-text-28 {
+.altitude-label {
   font-size:12px;
   color:var(--color-text-secondary);
   min-width:80px;
@@ -803,21 +803,21 @@
   padding:11px 13px;
 }
 
-.space-grid-5 {
+.composition-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
   gap:10px;
   margin-bottom:1rem;
 }
 
-.space-media-18 {
+.universe-pie {
   width:100%;
   max-width:200px;
   display:block;
   margin:0 auto 10px;
 }
 
-.comp-dot-style-2 {
+.comp-dot-dark-matter {
   background:#878BE8;
 }
 
@@ -826,32 +826,32 @@
   width:72%;
 }
 
-.mag-bar-style-2 {
+.mag-bar-galactic-gas {
   background:#5DCAA5;
   width:18%;
 }
 
-.mag-bar-style-3 {
+.mag-bar-stars {
   background:#EF9F27;
   width:8%;
 }
 
-.space-text-29 {
+.mag-label-aside {
   font-size:10px;
 }
 
-.mag-bar-style-4 {
+.mag-bar-everything-else {
   background:#D85A30;
   width:2%;
 }
 
-.space-text-30 {
+.matter-note {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.5;
 }
 
-.space-text-31 {
+.calendar-intro {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -861,7 +861,7 @@
   border-bottom:none;
 }
 
-.space-panel-16 {
+.spacex-intro-card {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-lg);
   padding:12px 15px;
@@ -869,7 +869,7 @@
   border:0.5px solid var(--color-border-tertiary);
 }
 
-.space-label-13 {
+.launch-vehicles-heading {
   font-size:13px;
   font-weight:500;
   color:var(--color-text-primary);
@@ -880,7 +880,7 @@
   margin-bottom:1.5rem;
 }
 
-.space-text-32 {
+.missions-heading {
   font-size:11px;
   font-weight:600;
   text-transform:uppercase;

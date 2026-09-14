@@ -105,27 +105,27 @@
   background:#C0DD97;
 }
 
-.tl-bar-style-2 {
+.tl-bar-one-billion {
   width:12%;
   background:#97C459;
 }
 
-.tl-bar-style-3 {
+.tl-bar-two-billion {
   width:25%;
   background:#639922;
 }
 
-.tl-bar-style-4 {
+.tl-bar-four-billion {
   width:49%;
   background:#3B6D11;
 }
 
-.tl-bar-style-5 {
+.tl-bar-six-billion {
   width:73%;
   background:#27500A;
 }
 
-.tl-bar-style-6 {
+.tl-bar-full-dark {
   width:100%;
   background:#173404;
 }
@@ -136,7 +136,7 @@
   margin:10px 0 0;
 }
 
-.demographics-label-2 {
+.live-counter-title {
   font-size:13px;
   font-weight:500;
   color:var(--color-text-primary);
@@ -149,7 +149,7 @@
   gap:10px;
 }
 
-.demographics-text-2 {
+.counter-label {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:4px;
@@ -173,17 +173,17 @@
   color:var(--color-text-info);
 }
 
-.demographics-text-3 {
+.rate-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:8px;
 }
 
-.card-style-2 {
+.card-spaced {
   margin-bottom:1.2rem;
 }
 
-.demographics-label-3 {
+.card-heading {
   font-size:13px;
   font-weight:500;
   margin-bottom:12px;
@@ -195,97 +195,97 @@
   background:#3B6D11;
 }
 
-.region-fill-style-2 {
+.region-fill-east-asia {
   width:23.2%;
   background:#27500A;
 }
 
-.region-fill-style-3 {
+.region-fill-sub-saharan-africa {
   width:15.9%;
   background:#639922;
 }
 
-.region-fill-style-4 {
+.region-fill-southeast-asia {
   width:8.4%;
   background:#97C459;
 }
 
-.region-fill-style-5 {
+.region-fill-latin-america {
   width:7.9%;
   background:var(--accent);
 }
 
-.region-fill-style-6 {
+.region-fill-europe {
   width:7.4%;
   background:#085041;
 }
 
-.region-fill-style-7 {
+.region-fill-north-africa-me {
   width:6.1%;
   background:#ef9f27;
 }
 
-.region-fill-style-8 {
+.region-fill-north-america {
   width:4.7%;
   background:#C0DD97;
 }
 
-.region-fill-style-9 {
+.region-fill-top {
   width:98%;
   background:#27500A;
 }
 
-.region-fill-style-10 {
+.region-fill-usa {
   width:23%;
   background:#3B6D11;
 }
 
-.region-fill-style-11 {
+.region-fill-indonesia {
   width:19%;
   background:#639922;
 }
 
-.region-fill-style-12 {
+.region-fill-pakistan {
   width:17%;
   background:#639922;
 }
 
-.region-fill-style-13 {
+.region-fill-brazil {
   width:14.5%;
   background:#97C459;
 }
 
-.region-fill-style-14 {
+.region-fill-nigeria {
   width:13.5%;
   background:#97C459;
 }
 
-.region-fill-style-15 {
+.region-fill-bangladesh {
   width:11%;
   background:#C0DD97;
 }
 
-.region-fill-style-16 {
+.region-fill-russia {
   width:9.5%;
   background:#C0DD97;
 }
 
-.region-fill-style-17 {
+.region-fill-ethiopia {
   width:8.6%;
   background:#C0DD97;
 }
 
-.demographics-text-4 {
+.chart-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 10px;
 }
 
-.fertil-rate-style-3 {
+.fertil-rate-green {
   color:#97C459;
 }
 
-.fertil-rate-style-4 {
+.fertil-rate-blue {
   color:#85b7eb;
 }
 
@@ -296,7 +296,7 @@
   margin-top:10px;
 }
 
-.demographics-row-2 {
+.dot-legend-item {
   display:flex;
   align-items:center;
   gap:6px;
@@ -312,7 +312,7 @@
   display:inline-block;
 }
 
-.demographics-media-2 {
+.dot-legend-working-age {
   width:10px;
   height:10px;
   border-radius:50%;
@@ -320,7 +320,7 @@
   display:inline-block;
 }
 
-.demographics-media-3 {
+.dot-legend-elderly {
   width:10px;
   height:10px;
   border-radius:50%;
@@ -328,7 +328,7 @@
   display:inline-block;
 }
 
-.demographics-text-5 {
+.age-projection-note {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:8px 0 0;
@@ -339,42 +339,42 @@
   background:#3B6D11;
 }
 
-.life-fill-style-2 {
+.life-fill-germany {
   width:93%;
   background:#639922;
 }
 
-.life-fill-style-3 {
+.life-fill-usa {
   width:88%;
   background:#97C459;
 }
 
-.life-fill-style-4 {
+.life-fill-brazil {
   width:80%;
   background:#C0DD97;
 }
 
-.life-fill-style-5 {
+.life-fill-india {
   width:75%;
   background:var(--accent);
 }
 
-.life-fill-style-6 {
+.life-fill-global {
   width:73%;
   background:#0C447C;
 }
 
-.life-fill-style-7 {
+.life-fill-nigeria {
   width:63%;
   background:#ef9f27;
 }
 
-.life-fill-style-8 {
+.life-fill-chad {
   width:57%;
   background:#f09595;
 }
 
-.demographics-row-3 {
+.split-row {
   display:flex;
   align-items:center;
   gap:10px;
@@ -382,13 +382,13 @@
   flex-wrap:wrap;
 }
 
-.demographics-text-6 {
+.split-year {
   font-size:12px;
   color:var(--color-text-secondary);
   width:50px;
 }
 
-.demographics-row-4 {
+.split-bar {
   flex:1;
   display:flex;
   border-radius:4px;
@@ -396,7 +396,7 @@
   height:22px;
 }
 
-.demographics-row-5 {
+.split-urban-early {
   width:3%;
   background:var(--accent);
   display:flex;
@@ -404,7 +404,7 @@
   justify-content:center;
 }
 
-.demographics-row-6 {
+.split-rural-early {
   width:97%;
   background:var(--color-background-secondary);
   display:flex;
@@ -412,7 +412,7 @@
   padding-left:8px;
 }
 
-.demographics-row-7 {
+.split-urban-postwar {
   width:30%;
   background:var(--accent);
   display:flex;
@@ -420,12 +420,12 @@
   padding-left:7px;
 }
 
-.demographics-text-8 {
+.split-value {
   font-size:11px;
   color:#fff;
 }
 
-.demographics-row-8 {
+.split-rural-postwar {
   width:70%;
   background:var(--color-background-secondary);
   display:flex;
@@ -433,7 +433,7 @@
   padding-left:8px;
 }
 
-.demographics-row-9 {
+.split-urban-milestone {
   width:50%;
   background:var(--accent);
   display:flex;
@@ -441,12 +441,12 @@
   padding-left:7px;
 }
 
-.demographics-media-4 {
+.split-rural-milestone {
   width:50%;
   background:var(--color-background-secondary);
 }
 
-.demographics-row-10 {
+.split-urban-today {
   width:57%;
   background:#085041;
   display:flex;
@@ -454,7 +454,7 @@
   padding-left:7px;
 }
 
-.demographics-row-11 {
+.split-rural-today {
   width:43%;
   background:var(--color-background-secondary);
   display:flex;
@@ -462,14 +462,14 @@
   padding-left:8px;
 }
 
-.demographics-row-12 {
+.split-row-projected {
   display:flex;
   align-items:center;
   gap:10px;
   flex-wrap:wrap;
 }
 
-.demographics-row-13 {
+.split-bar-projected {
   flex:1;
   display:flex;
   border-radius:4px;
@@ -478,7 +478,7 @@
   opacity:0.7;
 }
 
-.demographics-row-14 {
+.split-urban-projected {
   width:68%;
   background:#173404;
   display:flex;
@@ -486,7 +486,7 @@
   padding-left:7px;
 }
 
-.demographics-media-5 {
+.split-rural-projected {
   width:32%;
   background:var(--color-background-secondary);
 }
@@ -496,78 +496,78 @@
   background:#0C447C;
 }
 
-.mc-fill-style-2 {
+.mc-fill-delhi {
   width:97%;
   background:#27500A;
 }
 
-.mc-fill-style-3 {
+.mc-fill-shanghai {
   width:78%;
   background:#3B6D11;
 }
 
-.mc-fill-style-4 {
+.mc-fill-dhaka {
   width:70%;
   background:#639922;
 }
 
-.mc-fill-style-5 {
+.mc-fill-sao-paulo {
   width:68%;
   background:#639922;
 }
 
-.mc-fill-style-6 {
+.mc-fill-mexico-city {
   width:65%;
   background:#97C459;
 }
 
-.mc-fill-style-7 {
+.mc-fill-cairo {
   width:62%;
   background:#97C459;
 }
 
-.mc-fill-style-8 {
+.mc-fill-mumbai {
   width:59%;
   background:#C0DD97;
 }
 
-.mc-fill-style-9 {
+.mc-fill-beijing {
   width:57%;
   background:#C0DD97;
 }
 
-.mc-fill-style-10 {
+.mc-fill-osaka {
   width:54%;
   background:#C0DD97;
 }
 
-.demographics-text-9 {
+.projection-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 12px;
 }
 
-.tl-bar-style-7 {
+.tl-bar-now {
   width:79%;
   background:var(--accent);
 }
 
-.tl-bar-style-8 {
+.tl-bar-medium-mid-century {
   width:91%;
   background:#3B6D11;
 }
 
-.tl-bar-style-9 {
+.tl-bar-low-century {
   width:68%;
   background:#85b7eb;
 }
 
-.tl-bar-style-10 {
+.tl-bar-medium-century {
   width:100%;
   background:#27500A;
 }
 
-.tl-bar-style-11 {
+.tl-bar-high-century {
   width:125%;
   max-width:100%;
   background:#173404;

@@ -51,20 +51,20 @@ const mod = modules.find((m) => m.id === 21)!;
           <div class="fashion-label">Haute couture — hand-crafted, made-to-measure, one client at a time</div>
           <div class="fashion-text">Chanel, Dior, Valentino, Givenchy. A single couture dress: €10,000–€200,000+. Legally protected designation in France. Only ~16 full member houses (plus correspondent members). Shows twice yearly in Paris. Serves roughly 2,000–4,000 clients worldwide. Exists primarily as marketing for the brand's perfume, beauty, and accessories lines — which actually make money.</div>
         </div>
-        <div class="fashion-panel-2">
-          <div class="fashion-label-2">Luxury / ready-to-wear — designed in-house, manufactured to high standards, high price</div>
-          <div class="fashion-text-2">Louis Vuitton, Gucci, Hermès, Prada, Burberry, Versace, Saint Laurent. Items: €500–€5,000+. Sold in own boutiques and high-end department stores. Quality materials and construction; distinct brand identity. The "aspirational luxury" tier where most luxury revenue is made.</div>
+        <div class="tier-luxury">
+          <div class="tier-title-luxury">Luxury / ready-to-wear — designed in-house, manufactured to high standards, high price</div>
+          <div class="tier-desc-luxury">Louis Vuitton, Gucci, Hermès, Prada, Burberry, Versace, Saint Laurent. Items: €500–€5,000+. Sold in own boutiques and high-end department stores. Quality materials and construction; distinct brand identity. The "aspirational luxury" tier where most luxury revenue is made.</div>
         </div>
-        <div class="fashion-panel-3">
-          <div class="fashion-label-3">Premium / contemporary — quality above high street, accessible luxury</div>
-          <div class="fashion-text-3">Ralph Lauren, Tommy Hilfiger, Hugo Boss, Calvin Klein (mainline), Ted Baker, Reiss. Items: €80–€800. Good quality, brand recognition, sold in department stores and own shops. The sweet spot for most aspirational shoppers.</div>
+        <div class="tier-premium">
+          <div class="tier-title-premium">Premium / contemporary — quality above high street, accessible luxury</div>
+          <div class="tier-desc-premium">Ralph Lauren, Tommy Hilfiger, Hugo Boss, Calvin Klein (mainline), Ted Baker, Reiss. Items: €80–€800. Good quality, brand recognition, sold in department stores and own shops. The sweet spot for most aspirational shoppers.</div>
         </div>
-        <div class="fashion-panel-4">
-          <div class="fashion-label-4">High street / fast fashion — trend-driven, low-cost, high-volume, rapid cycles</div>
-          <div class="fashion-text-4">Zara, H&amp;M, Uniqlo, Mango, Primark. Items: €5–€100. Dozens of "micro-seasons" per year (Zara releases new stock twice weekly). Global supply chains. Environmental and labour concerns. Zara's model (design-to-shelf in ~2 weeks vs industry's 6 months) revolutionised the industry.</div>
+        <div class="tier-high-street">
+          <div class="tier-title-high-street">High street / fast fashion — trend-driven, low-cost, high-volume, rapid cycles</div>
+          <div class="tier-desc-high-street">Zara, H&amp;M, Uniqlo, Mango, Primark. Items: €5–€100. Dozens of "micro-seasons" per year (Zara releases new stock twice weekly). Global supply chains. Environmental and labour concerns. Zara's model (design-to-shelf in ~2 weeks vs industry's 6 months) revolutionised the industry.</div>
         </div>
       </div>
-      <div class="fashion-panel-5">
+      <div class="couture-irony-note">
         <strong class="text-primary">The great irony:</strong> Haute couture exists to fund perfume. A Chanel No.5 perfume (€120) funds the €200,000 dress that funds the brand's prestige that sells the perfume. The entire pyramid depends on each level signalling upward aspiration.
       </div>
     </div>
@@ -76,8 +76,8 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Revenue comparison bar chart SVG -->
     <div class="content-card">
-      <div class="fashion-label-5">Revenue comparison — 2023 (€B)</div>
-      <svg class="fashion-media-2" viewBox="0 0 540 110" xmlns="http://www.w3.org/2000/svg">
+      <div class="chart-kicker">Revenue comparison — 2023 (€B)</div>
+      <svg class="chart-svg" viewBox="0 0 540 110" xmlns="http://www.w3.org/2000/svg">
         <!-- LVMH bar -->
         <rect x="90" y="10" width="370" height="24" rx="3" fill="#534AB7" opacity="0.85"/>
         <text x="86" y="26" text-anchor="end" font-size="11" font-weight="500" fill="var(--color-text-secondary)">LVMH</text>
@@ -94,23 +94,23 @@ const mod = modules.find((m) => m.id === 21)!;
     </div>
 
     <div class="fashion-grid">
-      <div class="fashion-panel-7">
-        <div class="fashion-label-6">LVMH</div>
-        <div class="fashion-text-5">Louis Vuitton Moët Hennessy. Largest luxury group. Bernard Arnault (France), world's richest person ~2021–2023.</div>
-        <div class="fashion-text-6">Louis Vuitton, Dior, Givenchy, Celine, Loewe, Fendi, Bulgari, TAG Heuer, Dom Pérignon, Moët &amp; Chandon, Hennessy. 75 houses. Revenue ~€86B (2023).</div>
+      <div class="group-panel-lvmh">
+        <div class="group-title-lvmh">LVMH</div>
+        <div class="group-owner-lvmh">Louis Vuitton Moët Hennessy. Largest luxury group. Bernard Arnault (France), world's richest person ~2021–2023.</div>
+        <div class="group-brands-lvmh">Louis Vuitton, Dior, Givenchy, Celine, Loewe, Fendi, Bulgari, TAG Heuer, Dom Pérignon, Moët &amp; Chandon, Hennessy. 75 houses. Revenue ~€86B (2023).</div>
       </div>
-      <div class="fashion-panel-8">
-        <div class="fashion-label-7">Kering</div>
-        <div class="fashion-text-7">François-Henri Pinault (France). Second-largest luxury fashion group. His wife: Salma Hayek.</div>
-        <div class="fashion-text-8">Gucci, Saint Laurent, Bottega Veneta, Balenciaga, Alexander McQueen, Brioni, Pomellato. Revenue ~€18B (2023).</div>
+      <div class="group-panel-kering">
+        <div class="group-title-kering">Kering</div>
+        <div class="group-owner-kering">François-Henri Pinault (France). Second-largest luxury fashion group. His wife: Salma Hayek.</div>
+        <div class="group-brands-kering">Gucci, Saint Laurent, Bottega Veneta, Balenciaga, Alexander McQueen, Brioni, Pomellato. Revenue ~€18B (2023).</div>
       </div>
-      <div class="fashion-panel-9">
-        <div class="fashion-label-8">Richemont</div>
-        <div class="fashion-text-9">Johann Rupert (South Africa). Specialises in watches and jewellery.</div>
-        <div class="fashion-text-10">Cartier, Van Cleef &amp; Arpels, IWC, Jaeger-LeCoultre, Piaget, Panerai, Dunhill, Chloé. Revenue ~€20B (2023).</div>
+      <div class="group-panel-richemont">
+        <div class="group-title-richemont">Richemont</div>
+        <div class="group-owner-richemont">Johann Rupert (South Africa). Specialises in watches and jewellery.</div>
+        <div class="group-brands-richemont">Cartier, Van Cleef &amp; Arpels, IWC, Jaeger-LeCoultre, Piaget, Panerai, Dunhill, Chloé. Revenue ~€20B (2023).</div>
       </div>
     </div>
-    <div class="fashion-panel-10">
+    <div class="independents-note">
       <strong class="text-primary">Independents:</strong> Hermès (Hermès family, publicly traded but family-controlled), Chanel (Wertheimer family, private — no public financials), Prada (Miuccia Prada and Patrizio Bertelli family), Versace (sold to Capri Holdings, the Michael Kors parent group), Burberry (UK listed), Ralph Lauren (Ralph Lauren Corporation, NYSE).
     </div>
 
@@ -119,7 +119,7 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-c-top-20-brands-click-to-explore">Part C · top 20 brands — click to explore</h2>
 
-    <div class="fashion-row-2">
+    <div class="brand-buttons">
       <button class="showbrand-control" onclick="showBrand('lv')"        >Louis Vuitton</button>
       <button class="showbrand-control" onclick="showBrand('chanel')"    >Chanel</button>
       <button class="showbrand-control" onclick="showBrand('hermes')"    >Hermès</button>
@@ -150,7 +150,7 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-panel">
       <div class="panel-title">Convert any clothing or shoe size between systems</div>
-      <div class="fashion-row-3">
+      <div class="size-controls">
         <select class="size-cat" id="size-cat" onchange="updateFromOptions()">
           <option value="clothing-women">Women's clothing</option>
           <option value="clothing-men">Men's clothing</option>
@@ -174,15 +174,15 @@ const mod = modules.find((m) => m.id === 21)!;
     <div class="content-panel">
       <div class="panel-title-spaced">XS – XXL to measurements — what the labels actually mean</div>
       <div class="u-overflow-x-auto">
-        <table class="fashion-text-11">
+        <table class="size-table">
           <thead><tr class="fashion-tr-style">
             <th class="fashion-spacing">Label</th>
-            <th class="fashion-spacing-2">Women chest (cm)</th>
-            <th class="fashion-spacing-2">Men chest (cm)</th>
-            <th class="fashion-spacing-2">EU women</th>
-            <th class="fashion-spacing-2">EU men</th>
-            <th class="fashion-spacing-2">US women</th>
-            <th class="fashion-spacing-2">US men</th>
+            <th class="size-table-head">Women chest (cm)</th>
+            <th class="size-table-head">Men chest (cm)</th>
+            <th class="size-table-head">EU women</th>
+            <th class="size-table-head">EU men</th>
+            <th class="size-table-head">US women</th>
+            <th class="size-table-head">US men</th>
           </tr></thead>
           <tbody id="size-table-body"></tbody>
         </table>
@@ -196,8 +196,8 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Formality scale SVG -->
     <div class="content-card">
-      <div class="fashion-text-12">Formality scale — from most to least formal</div>
-      <svg class="fashion-media-3" viewBox="0 0 560 52" xmlns="http://www.w3.org/2000/svg">
+      <div class="formality-intro">Formality scale — from most to least formal</div>
+      <svg class="formality-scale" viewBox="0 0 560 52" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="formalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#26215C"/>
@@ -239,7 +239,7 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-f-tie-vs-bow-tie-and-how-to-wear-both">Part F · tie vs bow tie — and how to wear both</h2>
 
-    <div class="fashion-grid-2">
+    <div class="two-card-grid">
       <div class="card">
         <p class="clabel">Necktie (regular tie)</p>
         <p class="cval">Business and formal events</p>
@@ -255,7 +255,7 @@ const mod = modules.find((m) => m.id === 21)!;
     <!-- Tie knot visual comparison -->
     <div class="content-panel">
       <div class="panel-title">Tie knot comparison — size, formality, and collar pairing</div>
-      <svg class="fashion-media-4" viewBox="0 0 540 165" xmlns="http://www.w3.org/2000/svg">
+      <svg class="knot-diagram" viewBox="0 0 540 165" xmlns="http://www.w3.org/2000/svg">
         <!-- Four-in-hand -->
         <g transform="translate(40,25)">
           <polygon points="30,0 42,30 36,120 24,120 18,30" fill="#185FA5" opacity="0.85"/>
@@ -289,10 +289,10 @@ const mod = modules.find((m) => m.id === 21)!;
         <text x="10" y="16" font-size="9" fill="var(--color-text-tertiary)">← more casual</text>
         <text x="380" y="16" font-size="9" fill="var(--color-text-tertiary)">more formal →</text>
       </svg>
-      <div class="fashion-grid-3">
-        <div class="fashion-panel-11"><strong class="text-primary">Four-in-hand:</strong> Everyday business. Works with any collar. The slight asymmetry is a feature, not a bug.</div>
-        <div class="fashion-panel-11"><strong class="text-primary">Half Windsor:</strong> Smart business. Suits medium-spread collars. The most versatile formal knot.</div>
-        <div class="fashion-panel-11"><strong class="text-primary">Full Windsor:</strong> Most formal. Requires a wide-spread collar. Fills the collar gap completely.</div>
+      <div class="knot-notes-grid">
+        <div class="knot-note"><strong class="text-primary">Four-in-hand:</strong> Everyday business. Works with any collar. The slight asymmetry is a feature, not a bug.</div>
+        <div class="knot-note"><strong class="text-primary">Half Windsor:</strong> Smart business. Suits medium-spread collars. The most versatile formal knot.</div>
+        <div class="knot-note"><strong class="text-primary">Full Windsor:</strong> Most formal. Requires a wide-spread collar. Fills the collar gap completely.</div>
       </div>
     </div>
 
@@ -301,7 +301,7 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-g-fast-fashion-what-it-is-and-why-it-matters">Part G · fast fashion — what it is and why it matters</h2>
 
-    <div class="fashion-grid-4">
+    <div class="fast-fashion-card-grid">
       <div class="card">
         <p class="clabel">The Zara model</p>
         <p class="cval">Design to shelf in ~2 weeks</p>
@@ -326,45 +326,45 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Fast fashion timeline -->
     <div class="content-panel">
-      <div class="fashion-label-9">Industry seasons: then vs now</div>
-      <div class="fashion-grid-5">
+      <div class="seasons-heading">Industry seasons: then vs now</div>
+      <div class="seasons-compare">
         <div>
-          <div class="fashion-label-10">Traditional fashion calendar (pre-1990s)</div>
-          <div class="fashion-row-5">
-            <div class="fashion-panel-12">Spring / Summer collection</div>
-            <div class="fashion-panel-12">Autumn / Winter collection</div>
-            <div class="fashion-text-13">→ 2 seasons per year</div>
+          <div class="calendar-label">Traditional fashion calendar (pre-1990s)</div>
+          <div class="calendar-column">
+            <div class="season-chip">Spring / Summer collection</div>
+            <div class="season-chip">Autumn / Winter collection</div>
+            <div class="calendar-cadence">→ 2 seasons per year</div>
           </div>
         </div>
         <div>
-          <div class="fashion-label-10">Fast fashion (Zara today) — new stock twice weekly</div>
-          <div class="fashion-row-6">
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
-            <div class="fashion-media-5"></div>
+          <div class="calendar-label">Fast fashion (Zara today) — new stock twice weekly</div>
+          <div class="drop-swatches">
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
+            <div class="drop-swatch"></div>
           </div>
-          <div class="fashion-text-14">→ ~100+ micro-drops per year</div>
+          <div class="drop-cadence">→ ~100+ micro-drops per year</div>
         </div>
       </div>
     </div>
@@ -376,7 +376,7 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Select a fabric to explore its properties</div>
-      <div class="fashion-text-15">Natural fibres come from plants or animals. Synthetic fibres are petroleum-derived. Understanding fabric is the fastest way to judge quality.</div>
+      <div class="explorer-intro">Natural fibres come from plants or animals. Synthetic fibres are petroleum-derived. Understanding fabric is the fastest way to judge quality.</div>
       <div class="button-row-compact" id="fabric-tabs">
         <button class="fabric-tab active" onclick="showFabric('cotton')">Cotton</button>
         <button class="fabric-tab" onclick="showFabric('linen')">Linen</button>
@@ -394,8 +394,8 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Fabric natural vs synthetic overview SVG -->
     <div class="content-panel">
-      <div class="fashion-label-5">Natural vs synthetic — key trade-offs at a glance</div>
-      <svg class="fashion-media-2" viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg">
+      <div class="chart-kicker">Natural vs synthetic — key trade-offs at a glance</div>
+      <svg class="chart-svg" viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg">
         <!-- Headers -->
         <text x="140" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-primary)">Natural fibres</text>
         <text x="420" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-primary)">Synthetic fibres</text>
@@ -437,7 +437,7 @@ const mod = modules.find((m) => m.id === 21)!;
     <!-- Laundry care symbols -->
     <div class="content-panel">
       <div class="inline-card-title">Care label symbols — what they actually mean</div>
-      <div class="fashion-text-15">These symbols appear on every garment's care label. A bar under a symbol means "gentle." A cross means "do not."</div>
+      <div class="explorer-intro">These symbols appear on every garment's care label. A bar under a symbol means "gentle." A cross means "do not."</div>
       <div class="care-grid">
         <div class="care-item"><div class="care-sym">🪣</div><div class="care-label">Wash (tub = machine wash)</div></div>
         <div class="care-item"><div class="care-sym">🤚</div><div class="care-label">Hand wash only</div></div>
@@ -452,7 +452,7 @@ const mod = modules.find((m) => m.id === 21)!;
         <div class="care-item"><div class="care-sym">↕️</div><div class="care-label">Hang to dry</div></div>
         <div class="care-item"><div class="care-sym">📐</div><div class="care-label">Dry flat (knits &amp; wool)</div></div>
       </div>
-      <div class="fashion-panel-13">
+      <div class="fabric-care-rule">
         <strong class="text-primary">The one rule to remember:</strong> wool and silk almost always require cold water and either hand wash or dry clean. Merino wool is a notable exception — it's often machine washable on cold/delicate. Cashmere should always be hand-washed or dry cleaned; it will felt irreversibly in a hot machine cycle.
       </div>
     </div>
@@ -484,27 +484,27 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-panel">
       <div class="inline-card-title">The wardrobe colour wheel — select a base colour to see harmonious pairings</div>
-      <div class="fashion-text-15">Fashion colour rules differ from art — neutrals (navy, grey, black, white, camel, cream) combine with almost anything. The rules below apply to accent and statement colours.</div>
+      <div class="explorer-intro">Fashion colour rules differ from art — neutrals (navy, grey, black, white, camel, cream) combine with almost anything. The rules below apply to accent and statement colours.</div>
 
       <div class="u-mb-md">
-        <div class="fashion-text-16">Choose a base colour:</div>
+        <div class="colour-picker-label">Choose a base colour:</div>
         <div class="swatch-row" id="colour-swatches">
           <div class="swatch selected swatch-style" data-colour="navy" title="Navy"></div>
-          <div class="swatch swatch-style-2" data-colour="charcoal" title="Charcoal"></div>
-          <div class="swatch swatch-style-3" data-colour="camel" title="Camel/Tan"></div>
-          <div class="swatch swatch-style-4" data-colour="burgundy" title="Burgundy"></div>
-          <div class="swatch swatch-style-5" data-colour="forest" title="Forest green"></div>
-          <div class="swatch swatch-style-6" data-colour="plum" title="Plum/Purple"></div>
-          <div class="swatch swatch-style-7" data-colour="rust" title="Rust/Terracotta"></div>
-          <div class="swatch swatch-style-8" data-colour="dustyblue" title="Dusty blue"></div>
-          <div class="swatch swatch-style-9" data-colour="cream" title="Cream/Ivory"></div>
-          <div class="swatch swatch-style-10" data-colour="black" title="Black"></div>
+          <div class="swatch swatch-charcoal" data-colour="charcoal" title="Charcoal"></div>
+          <div class="swatch swatch-camel" data-colour="camel" title="Camel/Tan"></div>
+          <div class="swatch swatch-burgundy" data-colour="burgundy" title="Burgundy"></div>
+          <div class="swatch swatch-forest" data-colour="forest" title="Forest green"></div>
+          <div class="swatch swatch-plum" data-colour="plum" title="Plum/Purple"></div>
+          <div class="swatch swatch-rust" data-colour="rust" title="Rust/Terracotta"></div>
+          <div class="swatch swatch-steel-blue" data-colour="dustyblue" title="Dusty blue"></div>
+          <div class="swatch swatch-sand" data-colour="cream" title="Cream/Ivory"></div>
+          <div class="swatch swatch-black" data-colour="black" title="Black"></div>
         </div>
       </div>
       <div class="colour-result" id="colour-result"></div>
     </div>
 
-    <div class="fashion-grid-2">
+    <div class="two-card-grid">
       <div class="card">
         <p class="clabel">The 60-30-10 rule</p>
         <p class="cval">A reliable proportion guide</p>
@@ -522,10 +522,10 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-k-the-suit-anatomy-fit-and-reading-quality">Part K · the suit — anatomy, fit, and reading quality</h2>
 
-    <div class="fashion-grid-2">
+    <div class="two-card-grid">
       <div class="content-card-static">
         <div class="panel-title-spaced">Suit fit — the hierarchy of importance</div>
-        <div class="fashion-row-5">
+        <div class="calendar-column">
           <div class="anchor-row">
             <span class="pill p-red p-red-style">Critical</span>
             <div><div class="atext">Shoulder seam</div><div class="asub">Must sit exactly at the end of your shoulder — no overhang, no pulling. Cannot be fixed by a tailor affordably.</div></div>
@@ -550,7 +550,7 @@ const mod = modules.find((m) => m.id === 21)!;
       </div>
       <div class="content-card-static">
         <div class="panel-title-spaced">Reading suit quality — what to look for</div>
-        <div class="fashion-row-5">
+        <div class="calendar-column">
           <div class="anchor-row">
             <span class="pill p-purple p-red-style">Lining</span>
             <div><div class="atext">Half vs full lining</div><div class="asub">Full lining: more structured, warmer, easier to put on. Half lining: breathes better, more relaxed, usually Italian. Unlined: summer suits, very casual.</div></div>
@@ -573,8 +573,8 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Suit colours SVG chart -->
     <div class="content-panel">
-      <div class="fashion-label-5">Suit colour guide — versatility vs formality</div>
-      <svg class="fashion-media-2" viewBox="0 0 540 120" xmlns="http://www.w3.org/2000/svg">
+      <div class="chart-kicker">Suit colour guide — versatility vs formality</div>
+      <svg class="chart-svg" viewBox="0 0 540 120" xmlns="http://www.w3.org/2000/svg">
         <!-- Axes -->
         <text x="10" y="12" font-size="9" fill="var(--color-text-tertiary)">← more casual</text>
         <text x="430" y="12" font-size="9" fill="var(--color-text-tertiary)">more formal →</text>
@@ -592,11 +592,11 @@ const mod = modules.find((m) => m.id === 21)!;
         <!-- extra row below -->
       </svg>
       <!-- separate from SVG to avoid overflow -->
-      <div class="fashion-row-8">
-        <span class="fashion-panel-15">Charcoal grey — most formal suit colour after black; business standard</span>
-        <span class="fashion-panel-16">Black — funerals, weddings, black-tie (not standard business)</span>
+      <div class="suit-colour-chips">
+        <span class="suit-chip-charcoal">Charcoal grey — most formal suit colour after black; business standard</span>
+        <span class="suit-chip-black">Black — funerals, weddings, black-tie (not standard business)</span>
       </div>
-      <div class="fashion-text-17"><strong class="text-primary">The rule:</strong> Navy or charcoal grey should be your first suit. A navy suit is the most versatile item in menswear — equally at home in a job interview, a smart wedding, or a business dinner. Buy black last.</div>
+      <div class="rule-note"><strong class="text-primary">The rule:</strong> Navy or charcoal grey should be your first suit. A navy suit is the most versatile item in menswear — equally at home in a job interview, a smart wedding, or a business dinner. Buy black last.</div>
     </div>
 
     <!-- =====================================================================
@@ -606,10 +606,10 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-card">
       <div class="inline-card-title">Why perfume is fashion's most profitable product</div>
-      <div class="fashion-text-18">Fragrance is the entry point to luxury. A bottle of Chanel No.5 costs a fraction of the dress it funds, yet carries the same brand DNA. The global fragrance market exceeds €50B per year. For major fashion houses, perfume and beauty can generate 30–50% of total revenue while requiring far less capital than garment production. Understanding fragrance — its families, longevity, and houses — is part of understanding fashion.</div>
+      <div class="section-intro">Fragrance is the entry point to luxury. A bottle of Chanel No.5 costs a fraction of the dress it funds, yet carries the same brand DNA. The global fragrance market exceeds €50B per year. For major fashion houses, perfume and beauty can generate 30–50% of total revenue while requiring far less capital than garment production. Understanding fragrance — its families, longevity, and houses — is part of understanding fashion.</div>
 
       <!-- Fragrance family SVG -->
-      <div class="fashion-label-12">The fragrance wheel — major families</div>
+      <div class="section-kicker">The fragrance wheel — major families</div>
       <svg class="fashion-media" viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
         <rect x="0"   y="20" width="100" height="80" rx="6" fill="#1D9E75"  opacity="0.82"/>
         <text x="50"  y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#E1F5EE">Fresh</text>
@@ -636,19 +636,19 @@ const mod = modules.find((m) => m.id === 21)!;
       </svg>
 
       <!-- Concentration tiers -->
-      <div class="fashion-label-12">Concentration — what the terms on the bottle mean</div>
-      <div class="fashion-grid-6">
-        <div class="fashion-panel-17">
-          <div class="fashion-text-19">Eau de Cologne (EDC)</div>
-          <div class="fashion-text-20">2–4% concentration. Lightest. Lasts 1–2 hours. Best for hot weather or a quick refresh. Splash-on tradition.</div>
+      <div class="section-kicker">Concentration — what the terms on the bottle mean</div>
+      <div class="concentration-grid">
+        <div class="scent-panel-indigo">
+          <div class="scent-title-indigo">Eau de Cologne (EDC)</div>
+          <div class="scent-desc-indigo">2–4% concentration. Lightest. Lasts 1–2 hours. Best for hot weather or a quick refresh. Splash-on tradition.</div>
         </div>
-        <div class="fashion-panel-18">
-          <div class="fashion-text-21">Eau de Toilette (EDT)</div>
-          <div class="fashion-text-22">5–15% concentration. The most common type. Lasts 3–5 hours. Suitable for daytime and everyday wear.</div>
+        <div class="scent-panel-blue">
+          <div class="scent-title-blue">Eau de Toilette (EDT)</div>
+          <div class="scent-desc-blue">5–15% concentration. The most common type. Lasts 3–5 hours. Suitable for daytime and everyday wear.</div>
         </div>
-        <div class="fashion-panel-19">
-          <div class="fashion-text-23">Eau de Parfum (EDP)</div>
-          <div class="fashion-text-24">15–20% concentration. Richer, longer-lasting (5–8 hours). More expensive. Works well for evenings and cooler weather.</div>
+        <div class="scent-panel-teal">
+          <div class="scent-title-teal">Eau de Parfum (EDP)</div>
+          <div class="scent-desc-teal">15–20% concentration. Richer, longer-lasting (5–8 hours). More expensive. Works well for evenings and cooler weather.</div>
         </div>
       </div>
     </div>
@@ -667,7 +667,7 @@ const mod = modules.find((m) => m.id === 21)!;
     <div class="content-panel" id="perfume-display"></div>
 
     <!-- Fragrance application guide -->
-    <div class="fashion-grid-2">
+    <div class="two-card-grid">
       <div class="card">
         <p class="clabel">Where to apply</p>
         <p class="cval">Pulse points — warmth diffuses the scent</p>
@@ -687,22 +687,22 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-card">
       <div class="inline-card-title">Why watches still matter in the age of smartphones</div>
-      <div class="fashion-text-18">A mechanical watch is the only luxury object that works without electricity, appreciates in value, and is worn daily on the body. Unlike a car or a bag, a fine watch is a micro-engineering marvel — a hand-wound movement can contain 300–500 individual components, some thinner than a human hair, assembled by hand under magnification. The Swiss watch industry exports ~CHF 25B in watches per year, roughly 95% of world production by value. Switzerland dominates not because of geography but because of 250 years of compounding craft knowledge.</div>
+      <div class="section-intro">A mechanical watch is the only luxury object that works without electricity, appreciates in value, and is worn daily on the body. Unlike a car or a bag, a fine watch is a micro-engineering marvel — a hand-wound movement can contain 300–500 individual components, some thinner than a human hair, assembled by hand under magnification. The Swiss watch industry exports ~CHF 25B in watches per year, roughly 95% of world production by value. Switzerland dominates not because of geography but because of 250 years of compounding craft knowledge.</div>
 
       <!-- Movement type explainer SVG -->
-      <div class="fashion-label-12">Three movement types</div>
-      <div class="fashion-grid-6">
-        <div class="fashion-panel-17">
-          <div class="fashion-text-19">Mechanical (manual wind)</div>
-          <div class="fashion-text-20">Wound by hand via the crown. No battery. The purist's choice. Requires winding every 1–3 days. Patek Philippe calibres, vintage Rolex.</div>
+      <div class="section-kicker">Three movement types</div>
+      <div class="concentration-grid">
+        <div class="scent-panel-indigo">
+          <div class="scent-title-indigo">Mechanical (manual wind)</div>
+          <div class="scent-desc-indigo">Wound by hand via the crown. No battery. The purist's choice. Requires winding every 1–3 days. Patek Philippe calibres, vintage Rolex.</div>
         </div>
-        <div class="fashion-panel-18">
-          <div class="fashion-text-21">Automatic (self-winding)</div>
-          <div class="fashion-text-22">Wound by a rotor that spins with wrist movement. The dominant luxury movement type. Stays wound during regular wear. Most modern Swiss watches.</div>
+        <div class="scent-panel-blue">
+          <div class="scent-title-blue">Automatic (self-winding)</div>
+          <div class="scent-desc-blue">Wound by a rotor that spins with wrist movement. The dominant luxury movement type. Stays wound during regular wear. Most modern Swiss watches.</div>
         </div>
-        <div class="fashion-panel-19">
-          <div class="fashion-text-23">Quartz (battery)</div>
-          <div class="fashion-text-24">Regulated by a vibrating quartz crystal. Extremely accurate (±15 sec/year vs ±5 sec/day for mechanical). Seiko's 1969 Astron started the Quartz Crisis that nearly destroyed Swiss industry.</div>
+        <div class="scent-panel-teal">
+          <div class="scent-title-teal">Quartz (battery)</div>
+          <div class="scent-desc-teal">Regulated by a vibrating quartz crystal. Extremely accurate (±15 sec/year vs ±5 sec/day for mechanical). Seiko's 1969 Astron started the Quartz Crisis that nearly destroyed Swiss industry.</div>
         </div>
       </div>
     </div>
@@ -726,8 +726,8 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Price tier context -->
     <div class="content-panel">
-      <div class="fashion-label-5">Watch price tiers — what you're actually paying for</div>
-      <svg class="fashion-media-2" viewBox="0 0 560 148" xmlns="http://www.w3.org/2000/svg">
+      <div class="chart-kicker">Watch price tiers — what you're actually paying for</div>
+      <svg class="chart-svg" viewBox="0 0 560 148" xmlns="http://www.w3.org/2000/svg">
         <!-- Tier bars -->
         <rect x="0" y="4"   width="40"  height="18" rx="3" fill="#888780"/>
         <text x="46" y="17"  font-size="10" fill="var(--color-text-secondary)">Under €500 — Seiko Presage entry, fashion watches. Quartz or basic mechanical.</text>
@@ -747,7 +747,7 @@ const mod = modules.find((m) => m.id === 21)!;
         <rect x="0" y="134" width="440" height="18" rx="3" fill="#791F1F" opacity="0.85"/>
         <text x="446" y="147" font-size="10" fill="var(--color-text-secondary)">€150k+ — Patek Grand Complications, Tourbillons, bespoke. Horological art.</text>
       </svg>
-      <div class="fashion-text-17"><strong class="text-primary">The key insight:</strong> Below ~€2,000 you're largely paying for brand and design. Between €2,000–€10,000 you're paying for in-house or certified movements. Above €10,000 you're paying for finishing, complications, and waiting lists. The Rolex "premium" on secondary market (paying above retail) exists because demand permanently outstrips production — not because Rolex is the most technically advanced watchmaker.</div>
+      <div class="rule-note"><strong class="text-primary">The key insight:</strong> Below ~€2,000 you're largely paying for brand and design. Between €2,000–€10,000 you're paying for in-house or certified movements. Above €10,000 you're paying for finishing, complications, and waiting lists. The Rolex "premium" on secondary market (paying above retail) exists because demand permanently outstrips production — not because Rolex is the most technically advanced watchmaker.</div>
     </div>
 
     <!-- =====================================================================

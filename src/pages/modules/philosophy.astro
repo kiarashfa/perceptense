@@ -49,7 +49,7 @@ const mod = modules.find((m) => m.id === 28)!;
 
     <!-- Visual: disciplines born from philosophy -->
     <div class="card u-mb-lg">
-      <div class="philosophy-label-2">How disciplines were born from philosophy</div>
+      <div class="disciplines-kicker">How disciplines were born from philosophy</div>
       <div id="phil-born-bars"></div>
       <div class="philosophy-text">Bar width = rough century of disciplinary independence from philosophy</div>
     </div>
@@ -60,43 +60,43 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-b-the-six-branches-of-philosophy">Part B · the six branches of philosophy</h2>
 
-    <div class="philosophy-grid-2">
-      <div class="philosophy-panel-3">
-        <div class="philosophy-label-3">Metaphysics</div>
-        <div class="philosophy-text-2">"What exists?"</div>
-        <div class="philosophy-text-3">Does God exist? Do numbers exist? Do we have free will? What is time? What is consciousness? What makes you the same person you were 10 years ago?</div>
+    <div class="card-grid-auto">
+      <div class="branch-panel-metaphysics">
+        <div class="branch-title-metaphysics">Metaphysics</div>
+        <div class="branch-question-metaphysics">"What exists?"</div>
+        <div class="branch-desc-metaphysics">Does God exist? Do numbers exist? Do we have free will? What is time? What is consciousness? What makes you the same person you were 10 years ago?</div>
       </div>
-      <div class="philosophy-panel-4">
-        <div class="philosophy-label-4">Epistemology</div>
-        <div class="philosophy-text-4">"What can we know?"</div>
-        <div class="philosophy-text-5">What is knowledge (justified true belief)? How do we know anything beyond immediate experience? Can we trust our senses? Is there a priori knowledge?</div>
+      <div class="branch-panel-epistemology">
+        <div class="branch-title-epistemology">Epistemology</div>
+        <div class="branch-question-epistemology">"What can we know?"</div>
+        <div class="branch-desc-epistemology">What is knowledge (justified true belief)? How do we know anything beyond immediate experience? Can we trust our senses? Is there a priori knowledge?</div>
       </div>
-      <div class="philosophy-panel-5">
-        <div class="philosophy-label-5">Ethics (moral philosophy)</div>
-        <div class="philosophy-text-6">"How should we live?"</div>
-        <div class="philosophy-text-7">What makes actions right or wrong? Are moral facts objective or culturally relative? What do we owe each other? What are our obligations to future generations?</div>
+      <div class="branch-panel-ethics">
+        <div class="branch-title-ethics">Ethics (moral philosophy)</div>
+        <div class="branch-question-ethics">"How should we live?"</div>
+        <div class="branch-desc-ethics">What makes actions right or wrong? Are moral facts objective or culturally relative? What do we owe each other? What are our obligations to future generations?</div>
       </div>
-      <div class="philosophy-panel-6">
-        <div class="philosophy-label-6">Political philosophy</div>
-        <div class="philosophy-text-8">"How should we organise society?"</div>
-        <div class="philosophy-text-9">What justifies political authority? What are the limits of government? What is justice? Are there natural rights? Is democracy intrinsically valuable or only instrumentally?</div>
+      <div class="branch-panel-political">
+        <div class="branch-title-political">Political philosophy</div>
+        <div class="branch-question-political">"How should we organise society?"</div>
+        <div class="branch-desc-political">What justifies political authority? What are the limits of government? What is justice? Are there natural rights? Is democracy intrinsically valuable or only instrumentally?</div>
       </div>
-      <div class="philosophy-panel-7">
-        <div class="philosophy-label-7">Aesthetics</div>
-        <div class="philosophy-text-10">"What is beauty and art?"</div>
-        <div class="philosophy-text-11">Is beauty objective or subjective? What makes something art? Can there be bad taste? What is the relationship between art and morality?</div>
+      <div class="branch-panel-aesthetics">
+        <div class="branch-title-aesthetics">Aesthetics</div>
+        <div class="branch-question-aesthetics">"What is beauty and art?"</div>
+        <div class="branch-desc-aesthetics">Is beauty objective or subjective? What makes something art? Can there be bad taste? What is the relationship between art and morality?</div>
       </div>
-      <div class="philosophy-panel-8">
-        <div class="philosophy-label-8">Logic</div>
-        <div class="philosophy-text-12">"What counts as valid reasoning?"</div>
-        <div class="philosophy-text-13">The study of correct inference. Formal logic (Aristotle → mathematical logic → computation) underpins mathematics, computer science, and all rigorous argument.</div>
+      <div class="branch-panel-logic">
+        <div class="branch-title-logic">Logic</div>
+        <div class="branch-question-logic">"What counts as valid reasoning?"</div>
+        <div class="branch-desc-logic">The study of correct inference. Formal logic (Aristotle → mathematical logic → computation) underpins mathematics, computer science, and all rigorous argument.</div>
       </div>
     </div>
 
     <!-- Ethics Spectrum Interactive -->
     <div class="spectrum-wrap">
       <div class="mini-card-title">Ethical framework spectrum — where does your intuition land?</div>
-      <div class="philosophy-text-14">Drag to explore the spectrum from pure rule-following to pure outcome-maximising.</div>
+      <div class="slider-intro">Drag to explore the spectrum from pure rule-following to pure outcome-maximising.</div>
       <input class="ethicsslider" type="range" id="ethicsSlider" min="0" max="100" value="50">
       <div class="philosophy-row">
         <span>Deontology<br>(rules first)</span>
@@ -129,7 +129,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-d-late-antiquity-and-medieval-philosophy-4th17th-century">Part D · late antiquity &amp; medieval philosophy (4th–17th century)</h2>
 
-    <div class="philosophy-panel-9">
+    <div class="context-note">
       After Aristotle's death, Greek philosophy spread across the Roman world. When Rome fell, Aristotle's major works were preserved in the Islamic world and reintroduced to Europe in the 12th century — triggering Scholasticism: the project of synthesising Greek philosophy with Christian (and Islamic and Jewish) theology. Medieval philosophers were not mere theologians doing philosophy — they developed original logic, metaphysics, and theory of knowledge.
     </div>
 
@@ -142,7 +142,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-e-early-modern-philosophy-17thearly-18th-century">Part E · early modern philosophy (17th–early 18th century)</h2>
 
-    <div class="philosophy-panel-9">
+    <div class="context-note">
       The Scientific Revolution shattered the Aristotelian-scholastic worldview. New questions arose: If the medieval synthesis was wrong, what can we know? What is the right method? Descartes, Spinoza, and Leibniz (the Rationalists) said reason. Locke, Berkeley, and Hume (the Empiricists) said experience. Their debate set the agenda for modern philosophy — and was not resolved until Kant.
     </div>
 
@@ -155,7 +155,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-enlightenment-and-19th-century-transformations">Part F · enlightenment &amp; 19th-century transformations</h2>
 
-    <div class="philosophy-panel-9">
+    <div class="context-note">
       The 18th and 19th centuries saw philosophy reshape politics, economics, religion, and history. The Enlightenment produced modern democracy, human rights, and capitalism. German Idealism produced the most ambitious philosophical system ever attempted. The 19th century ended with Nietzsche announcing the death of God — and philosophy fracturing into the analytic and continental traditions.
     </div>
 
@@ -168,7 +168,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-g-20th-century-and-contemporary-philosophy">Part G · 20th-century &amp; contemporary philosophy</h2>
 
-    <div class="philosophy-panel-9">
+    <div class="context-note">
       The 20th century split Western philosophy into two traditions: analytic (dominant in Britain, USA, and Australia — logical rigour, philosophy of language, mind, and science) and continental (dominant in France and Germany — phenomenology, existentialism, critical theory, poststructuralism). Both engage with the same problems; they differ radically in method and style.
     </div>
 
@@ -199,7 +199,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-logical-fallacies-everyone-should-know">Part J · logical fallacies everyone should know</h2>
 
-    <div class="philosophy-text-15">A fallacy is an argument that appears to support a conclusion but doesn't actually succeed. Recognising them is one of the most practically useful skills philosophy gives you.</div>
+    <div class="fallacy-intro">A fallacy is an argument that appears to support a conclusion but doesn't actually succeed. Recognising them is one of the most practically useful skills philosophy gives you.</div>
 
     <div class="fallacy-grid">
       <div class="fallacy-card">
@@ -282,7 +282,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-essential-philosophical-vocabulary">Part K · essential philosophical vocabulary</h2>
 
-    <div class="philosophy-grid-2">
+    <div class="card-grid-auto">
       <div class="card">
         <p class="clabel">A priori vs a posteriori</p>
         <p class="cval">Before vs after experience</p>
@@ -353,16 +353,16 @@ const mod = modules.find((m) => m.id === 28)!;
         <thead>
           <tr>
             <th class="philosophy-media">Framework</th>
-            <th class="philosophy-media-2">Core claim</th>
-            <th class="philosophy-media-2">Key thinkers</th>
-            <th class="philosophy-media-3">Strengths</th>
-            <th class="philosophy-media-3">Weaknesses</th>
-            <th class="philosophy-media-3">Applied to trolley problem</th>
+            <th class="col-narrow">Core claim</th>
+            <th class="col-narrow">Key thinkers</th>
+            <th class="col-wide">Strengths</th>
+            <th class="col-wide">Weaknesses</th>
+            <th class="col-wide">Applied to trolley problem</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Consequentialism</strong><br><span class="philosophy-text-16">Utilitarianism</span></td>
+            <td><strong>Consequentialism</strong><br><span class="school-subname">Utilitarianism</span></td>
             <td>Right action = maximises overall good (welfare, happiness, preference satisfaction)</td>
             <td>Bentham, Mill, Singer, Sidgwick</td>
             <td>Impartial (every person counts equally); outcome-focused (what actually matters); quantifiable</td>
@@ -370,7 +370,7 @@ const mod = modules.find((m) => m.id === 28)!;
             <td>Pull the lever, push the person — the arithmetic is the same in both cases; five lives outweigh one</td>
           </tr>
           <tr>
-            <td><strong>Deontology</strong><br><span class="philosophy-text-16">Kantian ethics</span></td>
+            <td><strong>Deontology</strong><br><span class="school-subname">Kantian ethics</span></td>
             <td>Right action = follows moral rules / duties, regardless of consequences</td>
             <td>Kant, Ross, Korsgaard</td>
             <td>Respects rights and dignity; consistent; non-manipulable; matches strong moral intuitions about murder</td>
@@ -378,7 +378,7 @@ const mod = modules.find((m) => m.id === 28)!;
             <td>Pull the lever (a foreseen side-effect); but do not push the person (using them as a means violates their dignity)</td>
           </tr>
           <tr>
-            <td><strong>Virtue ethics</strong><br><span class="philosophy-text-16">Aristotelian</span></td>
+            <td><strong>Virtue ethics</strong><br><span class="school-subname">Aristotelian</span></td>
             <td>Right action = what a virtuous person would do; focus on character, not rules or outcomes</td>
             <td>Aristotle, Aquinas, MacIntyre, Foot</td>
             <td>Accommodates moral complexity; rich account of the good life; emphasises moral development; handles agent-relative obligations</td>
@@ -399,7 +399,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <div class="content-panel u-mb-lg">
       <div class="panel-title-spaced">Metaethics: what are moral claims actually doing?</div>
       <div class="muted-copy-large u-mb-md">Before we ask <em>what is right</em>, metaethics asks: what kind of thing is a moral claim? Are moral statements true or false? Are moral properties real features of the world, or something we project onto it?</div>
-      <div class="philosophy-grid-2">
+      <div class="card-grid-auto">
         <div class="sub-card-roomy">
           <div class="philosophy-label">Moral realism</div>
           <div class="muted-copy-tight u-mt-sm">Moral facts exist independently of what anyone thinks or feels. "Torturing innocents for fun is wrong" is as objectively true as "2+2=4." Key figures: Plato (the Form of the Good), G.E. Moore (moral properties are non-natural but real), Derek Parfit (reasons are part of the fabric of the universe). The challenge: how do we perceive moral facts? What kind of thing is a moral property?</div>
@@ -429,7 +429,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <!-- Applied ethics domains -->
     <h2 class="sec sec-style" id="applied-ethics-where-philosophy-meets-real-decisions">Applied ethics -- where philosophy meets real decisions</h2>
 
-    <div class="philosophy-panel-9">
+    <div class="context-note">
       Applied ethics takes the tools of moral philosophy into specific domains where real choices have to be made: medicine, technology, the environment, animals, global poverty. The most important feature of applied ethics is that abstract frameworks produce sharply different recommendations -- and the disagreements reveal which framework we are actually relying on.
     </div>
 
@@ -465,7 +465,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <!-- Interactive: Moral reasoning styles self-check -->
     <div class="spectrum-wrap u-mb-lg">
       <div class="mini-card-title">How do you weigh moral evidence? -- an interactive self-check</div>
-      <div class="philosophy-text-14 u-mt-sm">For each pair, drag toward the approach that feels most compelling to you as a way of settling moral disputes.</div>
+      <div class="slider-intro u-mt-sm">For each pair, drag toward the approach that feels most compelling to you as a way of settling moral disputes.</div>
 
       <div id="moralcheck-items"></div>
 
@@ -477,7 +477,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <!-- Key applied ethics concepts visual -->
     <div class="content-panel u-mb-lg">
       <div class="panel-title-spaced">Five essential concepts in contemporary ethics</div>
-      <div class="philosophy-grid-2">
+      <div class="card-grid-auto">
         <div class="sub-card-roomy">
           <div class="philosophy-label">The doctrine of double effect</div>
           <div class="muted-copy-tight u-mt-sm">Originating in Aquinas, developed by modern just war theorists: it is sometimes permissible to cause a harm as a foreseen but unintended side-effect of bringing about a good result, even if it would be impermissible to cause that harm intentionally. Four conditions: (1) the action itself is not intrinsically wrong; (2) the agent intends the good effect; (3) the bad effect is foreseen but not intended; (4) there is proportionate reason. Used in: medical ethics (giving pain-relieving doses that may hasten death), military ethics (civilian casualties from legitimate military operations).</div>

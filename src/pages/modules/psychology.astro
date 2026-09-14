@@ -38,7 +38,7 @@ const mod = modules.find((m) => m.id === 27)!;
           <div class="muted-copy-tight">Clinical, cognitive, developmental, social, neuropsychology, forensic, educational, industrial/organisational, health psychology. Each uses different methods and addresses different questions.</div>
         </div>
       </div>
-      <div class="psychology-panel-2">
+      <div class="disciplines-note">
         <strong class="text-primary">Psychology vs psychiatry vs psychotherapy:</strong> Psychiatry is a medical speciality — psychiatrists are medical doctors (MDs) who can prescribe medication and make diagnoses. Psychology is a research and clinical discipline — clinical psychologists (usually PhD or PsyD) provide therapy and psychological assessment but in most countries cannot prescribe medication. Psychotherapy is the practice of using psychological methods to treat mental health problems — it can be practised by psychiatrists, psychologists, or trained psychotherapists/counsellors with various levels of qualification.
       </div>
     </div>
@@ -49,8 +49,8 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-b-the-founding-figures-click-to-explore">Part B · the founding figures — click to explore</h2>
 
     <!-- Interactive timeline -->
-    <div class="psychology-panel-3">
-      <div class="psychology-label-2">Key moments in psychology's history — tap a year</div>
+    <div class="bordered-panel">
+      <div class="panel-kicker">Key moments in psychology's history — tap a year</div>
       <div class="psych-timeline">
         <div class="psych-timeline-inner">
           <div class="tl-line"></div>
@@ -96,8 +96,8 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-d-therapy-types-what-each-is-for">Part D · therapy types — what each is for</h2>
 
     <!-- NEW: Evidence comparison matrix -->
-    <div class="psychology-panel-4">
-      <div class="psychology-label-2">Evidence strength by condition</div>
+    <div class="therapy-matrix-panel">
+      <div class="panel-kicker">Evidence strength by condition</div>
       <table class="therapy-matrix">
         <thead>
           <tr>
@@ -168,7 +168,7 @@ const mod = modules.find((m) => m.id === 27)!;
           </tr>
         </tbody>
       </table>
-      <div class="psychology-text-2">LT = long-term format. Evidence ratings reflect current meta-analytic consensus; individual outcomes vary. This is an educational summary, not clinical guidance.</div>
+      <div class="matrix-note">LT = long-term format. Evidence ratings reflect current meta-analytic consensus; individual outcomes vary. This is an educational summary, not clinical guidance.</div>
     </div>
 
     <div class="button-row">
@@ -188,26 +188,26 @@ const mod = modules.find((m) => m.id === 27)!;
     ═══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-e-who-s-who-in-mental-health-the-professional-hierarchy">Part E · who's who in mental health — the professional hierarchy</h2>
 
-    <div class="psychology-grid-2">
-      <div class="psychology-panel-5">
-        <div class="psychology-label-3">Psychiatrist (MD)</div>
-        <div class="psychology-text-3">Medical doctor who specialised in psychiatry. Can diagnose mental disorders, prescribe medication (antidepressants, antipsychotics, mood stabilisers), and provide therapy. The highest level of medical authority in mental health.</div>
-        <div class="psychology-text-4">Training: medical degree (5–6 years) + psychiatric residency (4–5 years). Can admit patients to hospital. Most appropriate for: severe mental illness (schizophrenia, bipolar disorder), medication management, complex cases.</div>
+    <div class="professionals-grid">
+      <div class="pro-panel-psychiatrist">
+        <div class="pro-title-psychiatrist">Psychiatrist (MD)</div>
+        <div class="pro-desc-psychiatrist">Medical doctor who specialised in psychiatry. Can diagnose mental disorders, prescribe medication (antidepressants, antipsychotics, mood stabilisers), and provide therapy. The highest level of medical authority in mental health.</div>
+        <div class="pro-training-psychiatrist">Training: medical degree (5–6 years) + psychiatric residency (4–5 years). Can admit patients to hospital. Most appropriate for: severe mental illness (schizophrenia, bipolar disorder), medication management, complex cases.</div>
       </div>
-      <div class="psychology-panel-6">
-        <div class="psychology-label-4">Clinical psychologist (PhD/PsyD)</div>
-        <div class="psychology-text-5">Doctoral-level specialist trained in psychological assessment, diagnosis, and therapy. Cannot prescribe medication in most countries. Strong emphasis on research and evidence-based practice.</div>
-        <div class="psychology-text-6">Training: undergraduate + doctoral programme (4–7 years) + supervised clinical hours. Can diagnose using DSM/ICD. Most appropriate for: depression, anxiety, PTSD, eating disorders, personality disorders, neuropsychological assessment.</div>
+      <div class="pro-panel-psychologist">
+        <div class="pro-title-psychologist">Clinical psychologist (PhD/PsyD)</div>
+        <div class="pro-desc-psychologist">Doctoral-level specialist trained in psychological assessment, diagnosis, and therapy. Cannot prescribe medication in most countries. Strong emphasis on research and evidence-based practice.</div>
+        <div class="pro-training-psychologist">Training: undergraduate + doctoral programme (4–7 years) + supervised clinical hours. Can diagnose using DSM/ICD. Most appropriate for: depression, anxiety, PTSD, eating disorders, personality disorders, neuropsychological assessment.</div>
       </div>
-      <div class="psychology-panel-7">
-        <div class="psychology-label-5">Psychotherapist / counsellor</div>
-        <div class="psychology-text-7">Practises psychotherapy using psychological methods. Training and regulation varies widely by country and approach. "Psychotherapist" is not legally protected in all jurisdictions.</div>
-        <div class="psychology-text-8">Training: varies from 2-year diploma to master's degree. Most appropriate for: relationship issues, life transitions, mild-moderate depression and anxiety, bereavement.</div>
+      <div class="pro-panel-psychotherapist">
+        <div class="pro-title-psychotherapist">Psychotherapist / counsellor</div>
+        <div class="pro-desc-psychotherapist">Practises psychotherapy using psychological methods. Training and regulation varies widely by country and approach. "Psychotherapist" is not legally protected in all jurisdictions.</div>
+        <div class="pro-training-psychotherapist">Training: varies from 2-year diploma to master's degree. Most appropriate for: relationship issues, life transitions, mild-moderate depression and anxiety, bereavement.</div>
       </div>
-      <div class="psychology-panel-8">
-        <div class="psychology-label-6">Neuropsychologist</div>
-        <div class="psychology-text-9">Specialist in the relationship between brain function and behaviour. Assesses cognitive deficits from brain injury, stroke, dementia, or developmental conditions. Doctoral level.</div>
-        <div class="psychology-text-10">Most appropriate for: dementia assessment, post-stroke evaluation, traumatic brain injury, ADHD and learning disorder assessment, pre-surgical neurological evaluation.</div>
+      <div class="pro-panel-neuropsychologist">
+        <div class="pro-title-neuropsychologist">Neuropsychologist</div>
+        <div class="pro-desc-neuropsychologist">Specialist in the relationship between brain function and behaviour. Assesses cognitive deficits from brain injury, stroke, dementia, or developmental conditions. Doctoral level.</div>
+        <div class="pro-use-neuropsychologist">Most appropriate for: dementia assessment, post-stroke evaluation, traumatic brain injury, ADHD and learning disorder assessment, pre-surgical neurological evaluation.</div>
       </div>
     </div>
 
@@ -217,10 +217,10 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-f-essential-psychological-concepts-everyone-should-know">Part F · essential psychological concepts everyone should know</h2>
 
     <!-- NEW: Cognitive bias frequency chart -->
-    <div class="psychology-panel-3">
-      <div class="psychology-label-7">How often each bias type appears in everyday decisions (research-based estimates)</div>
+    <div class="bordered-panel">
+      <div class="chart-kicker">How often each bias type appears in everyday decisions (research-based estimates)</div>
       <div id="biasChart"></div>
-      <div class="psychology-text-11">Bar width reflects frequency across everyday decision-making contexts, based on meta-analytic research. All biases overlap substantially.</div>
+      <div class="bias-chart-note">Bar width reflects frequency across everyday decision-making contexts, based on meta-analytic research. All biases overlap substantially.</div>
     </div>
 
     <div class="psychology-row">
@@ -243,55 +243,55 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-g-memory-how-it-actually-works">Part G · memory — how it actually works</h2>
 
     <!-- Atkinson-Shiffrin visual flow -->
-    <div class="psychology-panel-3">
-      <div class="psychology-label-7">The memory pipeline (Atkinson-Shiffrin model)</div>
-      <div class="psychology-row-3">
-        <div class="psychology-panel-9">
-          <div class="psychology-text-12">Sensory register</div>
-          <div class="psychology-text-13">Duration: &lt;1 second (iconic) / 3–4 s (echoic)<br>Capacity: very large<br>Mostly unconscious</div>
+    <div class="bordered-panel">
+      <div class="chart-kicker">The memory pipeline (Atkinson-Shiffrin model)</div>
+      <div class="memory-pipeline">
+        <div class="memory-stage-sensory">
+          <div class="stage-name-blue">Sensory register</div>
+          <div class="stage-detail">Duration: &lt;1 second (iconic) / 3–4 s (echoic)<br>Capacity: very large<br>Mostly unconscious</div>
         </div>
-        <div class="psychology-text-14">→</div>
-        <div class="psychology-panel-10">
-          <div class="psychology-text-12">Working memory</div>
-          <div class="psychology-text-15">Duration: 15–30 s without rehearsal<br>Capacity: 7±2 chunks (Miller)<br>Active, conscious processing</div>
+        <div class="pipeline-arrow">→</div>
+        <div class="memory-stage-working">
+          <div class="stage-name-blue">Working memory</div>
+          <div class="stage-detail-blue">Duration: 15–30 s without rehearsal<br>Capacity: 7±2 chunks (Miller)<br>Active, conscious processing</div>
         </div>
-        <div class="psychology-text-14">→</div>
-        <div class="psychology-panel-11">
-          <div class="psychology-text-16">Long-term memory</div>
-          <div class="psychology-text-17">Duration: potentially lifelong<br>Capacity: effectively unlimited<br>Encoded through rehearsal &amp; meaning</div>
+        <div class="pipeline-arrow">→</div>
+        <div class="memory-stage-long-term">
+          <div class="stage-name-green">Long-term memory</div>
+          <div class="stage-detail-green">Duration: potentially lifelong<br>Capacity: effectively unlimited<br>Encoded through rehearsal &amp; meaning</div>
         </div>
       </div>
-      <div class="psychology-text-18">The pipeline is not one-way: retrieval from LTM feeds back into working memory. Elaborative rehearsal (connecting new material to existing knowledge) is far more effective than maintenance rehearsal (repetition alone).</div>
+      <div class="pipeline-note">The pipeline is not one-way: retrieval from LTM feeds back into working memory. Elaborative rehearsal (connecting new material to existing knowledge) is far more effective than maintenance rehearsal (repetition alone).</div>
     </div>
 
     <!-- Long-term memory types -->
-    <div class="psychology-label-8">Long-term memory sub-types</div>
-    <div class="psychology-grid-3">
-      <div class="psychology-panel-12">
-        <div class="psychology-text-19">Episodic</div>
-        <div class="psychology-text-20">Personal events and experiences, with a sense of time and place ("mental time travel"). What you had for breakfast. Your first day at school.</div>
-        <div class="psychology-panel-13">Hippocampus-dependent · reconstructive · highly fallible</div>
+    <div class="subsection-title">Long-term memory sub-types</div>
+    <div class="memory-types-grid">
+      <div class="memory-type-card">
+        <div class="memory-type-name">Episodic</div>
+        <div class="memory-type-desc">Personal events and experiences, with a sense of time and place ("mental time travel"). What you had for breakfast. Your first day at school.</div>
+        <div class="memory-tag-episodic">Hippocampus-dependent · reconstructive · highly fallible</div>
       </div>
-      <div class="psychology-panel-12">
-        <div class="psychology-text-19">Semantic</div>
-        <div class="psychology-text-20">General world knowledge, facts, concepts, meanings — detached from personal experience. The capital of France. What a dog is. How grammar works.</div>
-        <div class="psychology-panel-14">Network of concepts · stable · culturally shared</div>
+      <div class="memory-type-card">
+        <div class="memory-type-name">Semantic</div>
+        <div class="memory-type-desc">General world knowledge, facts, concepts, meanings — detached from personal experience. The capital of France. What a dog is. How grammar works.</div>
+        <div class="memory-tag-semantic">Network of concepts · stable · culturally shared</div>
       </div>
-      <div class="psychology-panel-12">
-        <div class="psychology-text-19">Procedural</div>
-        <div class="psychology-text-20">Skills and habits — "knowing how." Riding a bike, touch-typing, driving. Largely unconscious; once consolidated, very resistant to forgetting.</div>
-        <div class="psychology-panel-15">Basal ganglia · cerebellum · highly robust</div>
+      <div class="memory-type-card">
+        <div class="memory-type-name">Procedural</div>
+        <div class="memory-type-desc">Skills and habits — "knowing how." Riding a bike, touch-typing, driving. Largely unconscious; once consolidated, very resistant to forgetting.</div>
+        <div class="memory-tag-procedural">Basal ganglia · cerebellum · highly robust</div>
       </div>
-      <div class="psychology-panel-12">
-        <div class="psychology-text-19">Prospective</div>
-        <div class="psychology-text-20">Memory for future intentions — "remembering to remember." Taking medication at 8pm. Passing on a message. Often fails without external cues.</div>
-        <div class="psychology-panel-16">Frontal lobe · event-based vs time-based</div>
+      <div class="memory-type-card">
+        <div class="memory-type-name">Prospective</div>
+        <div class="memory-type-desc">Memory for future intentions — "remembering to remember." Taking medication at 8pm. Passing on a message. Often fails without external cues.</div>
+        <div class="memory-tag-prospective">Frontal lobe · event-based vs time-based</div>
       </div>
     </div>
 
     <!-- Memory failure interactive explorer -->
     <div class="content-panel">
-      <div class="psychology-label-9">Why memory fails — the seven sins of memory (Schacter)</div>
+      <div class="list-kicker">Why memory fails — the seven sins of memory (Schacter)</div>
       <div class="psychology-row">
         <button class="showmemsin-control" onclick="showMemSin('transience')"   >Transience</button>
         <button class="showmemsin-control" onclick="showMemSin('absentmind')"   >Absent-mindedness</button>
@@ -311,22 +311,22 @@ const mod = modules.find((m) => m.id === 27)!;
     ═══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-personality-the-big-five-model">Part H · personality — the Big Five model</h2>
 
-    <div class="psychology-grid-4">
+    <div class="ocean-layout">
       <div>
         <div class="content-card">
-          <div class="psychology-label-10">The OCEAN model — drag sliders to explore trait descriptions</div>
+          <div class="ocean-title">The OCEAN model — drag sliders to explore trait descriptions</div>
           <div id="b5Sliders"></div>
           <div class="b5-desc" id="b5Desc">Move a slider to see what that trait level looks like in real life.</div>
         </div>
       </div>
       <div>
-        <div class="psychology-panel-18">
-          <div class="psychology-label-11">Key facts about the Big Five</div>
-          <div class="psychology-text-21">
+        <div class="big-five-facts">
+          <div class="facts-title">Key facts about the Big Five</div>
+          <div class="big-five-body">
             <p class="psychology-spacing">The Big Five (or OCEAN) is the most empirically supported model of personality. Unlike MBTI, it is dimensional (not categorical), cross-culturally replicable, and strongly predictive.</p>
             <p class="psychology-spacing"><strong class="text-primary">Stability:</strong> traits are moderately heritable (~50%) and stable across adulthood, though gradual change occurs. People tend to become more Conscientious and Agreeable with age.</p>
             <p class="psychology-spacing"><strong class="text-primary">Predictive validity:</strong> Conscientiousness predicts job performance and longevity. Neuroticism predicts mental health risk. Openness predicts creative achievement.</p>
-            <p class="psychology-spacing-2"><strong class="text-primary">MBTI vs Big Five:</strong> MBTI's test-retest reliability is ~50% — about half of people get a different type if retested a few weeks later. Big Five scores are stable and replicate across cultures. Use OCEAN for anything predictive; MBTI at best for casual self-reflection.</p>
+            <p class="fact-paragraph-flush"><strong class="text-primary">MBTI vs Big Five:</strong> MBTI's test-retest reliability is ~50% — about half of people get a different type if retested a few weeks later. Big Five scores are stable and replicate across cultures. Use OCEAN for anything predictive; MBTI at best for casual self-reflection.</p>
           </div>
         </div>
       </div>
@@ -339,7 +339,7 @@ const mod = modules.find((m) => m.id === 27)!;
 
     <!-- Yerkes-Dodson curve (SVG) -->
     <div class="yerkes-wrap">
-      <div class="psychology-label-9">The Yerkes-Dodson inverted-U: arousal vs performance</div>
+      <div class="list-kicker">The Yerkes-Dodson inverted-U: arousal vs performance</div>
       <svg class="yerkes-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
         <!-- axes -->
         <line x1="50" y1="170" x2="490" y2="170" stroke="var(--color-border-secondary)" stroke-width="1"/>
@@ -369,26 +369,26 @@ const mod = modules.find((m) => m.id === 27)!;
       </svg>
     </div>
 
-    <div class="psychology-grid-5">
-      <div class="psychology-panel-19">
-        <div class="psychology-text-22">Under-aroused zone</div>
-        <div class="psychology-text-23">Boredom, disengagement, poor attention. Performance is low not from overwhelm but from insufficient motivation. Common during repetitive tasks.</div>
+    <div class="arousal-zones-grid">
+      <div class="zone-panel-under">
+        <div class="zone-title-under">Under-aroused zone</div>
+        <div class="zone-desc-under">Boredom, disengagement, poor attention. Performance is low not from overwhelm but from insufficient motivation. Common during repetitive tasks.</div>
       </div>
-      <div class="psychology-panel-20">
-        <div class="psychology-text-24">Optimal zone</div>
-        <div class="psychology-text-25">Focused attention, appropriate urgency, high-quality output. This is also the state associated with Csikszentmihalyi's flow. The optimal point varies by task complexity.</div>
+      <div class="zone-panel-optimal">
+        <div class="zone-title-optimal">Optimal zone</div>
+        <div class="zone-desc-optimal">Focused attention, appropriate urgency, high-quality output. This is also the state associated with Csikszentmihalyi's flow. The optimal point varies by task complexity.</div>
       </div>
-      <div class="psychology-panel-21">
-        <div class="psychology-text-26">Over-aroused zone</div>
-        <div class="psychology-text-27">Anxiety, tunnel vision, executive function impairment. Stress hormones (cortisol, adrenaline) narrow attention and impair working memory — fine for running from a tiger, terrible for a job interview.</div>
+      <div class="zone-panel-over">
+        <div class="zone-title-over">Over-aroused zone</div>
+        <div class="zone-desc-over">Anxiety, tunnel vision, executive function impairment. Stress hormones (cortisol, adrenaline) narrow attention and impair working memory — fine for running from a tiger, terrible for a job interview.</div>
       </div>
     </div>
 
     <!-- Stress response interactive -->
     <div class="content-panel">
-      <div class="psychology-label-11">Emotion regulation strategies — how well do they actually work?</div>
+      <div class="facts-title">Emotion regulation strategies — how well do they actually work?</div>
       <div class="reg-grid" id="regGrid"></div>
-      <div class="psychology-text-28">Effectiveness ratings based on meta-analytic studies. Short-term vs long-term effects often differ dramatically — notably for suppression and rumination.</div>
+      <div class="regulation-note">Effectiveness ratings based on meta-analytic studies. Short-term vs long-term effects often differ dramatically — notably for suppression and rumination.</div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════
@@ -396,29 +396,29 @@ const mod = modules.find((m) => m.id === 27)!;
     ═══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-emotions-what-they-are-and-how-they-work">Part J · emotions — what they are and how they work</h2>
 
-    <div class="psychology-panel-3">
+    <div class="bordered-panel">
       <div class="mini-card-title">Three competing theories of emotion</div>
-      <div class="psychology-grid-6">
+      <div class="emotion-theories-grid">
         <div class="sub-card">
-          <div class="psychology-text-29">James-Lange (1884)</div>
-          <div class="psychology-text-30">We feel emotion because we perceive our own bodily changes. "We don't tremble because we're afraid — we're afraid because we tremble." Physical state → emotional experience.</div>
+          <div class="theory-name">James-Lange (1884)</div>
+          <div class="theory-desc">We feel emotion because we perceive our own bodily changes. "We don't tremble because we're afraid — we're afraid because we tremble." Physical state → emotional experience.</div>
         </div>
         <div class="sub-card">
-          <div class="psychology-text-29">Cannon-Bard (1927)</div>
-          <div class="psychology-text-30">The thalamus sends signals simultaneously to the cortex (producing subjective feeling) and the body (producing physiological response). Emotion and physiology happen together, not in sequence.</div>
+          <div class="theory-name">Cannon-Bard (1927)</div>
+          <div class="theory-desc">The thalamus sends signals simultaneously to the cortex (producing subjective feeling) and the body (producing physiological response). Emotion and physiology happen together, not in sequence.</div>
         </div>
         <div class="sub-card">
-          <div class="psychology-text-29">Schachter-Singer (1962)</div>
-          <div class="psychology-text-30">Two-factor theory: physiological arousal + cognitive label = emotion. The same arousal can become fear, excitement, or anger depending on what we attribute it to — misattribution of arousal is common.</div>
+          <div class="theory-name">Schachter-Singer (1962)</div>
+          <div class="theory-desc">Two-factor theory: physiological arousal + cognitive label = emotion. The same arousal can become fear, excitement, or anger depending on what we attribute it to — misattribution of arousal is common.</div>
         </div>
         <div class="sub-card">
-          <div class="psychology-text-29">Constructed emotion (Barrett, 2017)</div>
-          <div class="psychology-text-30">Emotions are not discrete biological programs but predictions constructed by the brain from interoceptive signals + past experience + context. Challenges Ekman's universality claim. Currently influential.</div>
+          <div class="theory-name">Constructed emotion (Barrett, 2017)</div>
+          <div class="theory-desc">Emotions are not discrete biological programs but predictions constructed by the brain from interoceptive signals + past experience + context. Challenges Ekman's universality claim. Currently influential.</div>
         </div>
       </div>
     </div>
 
-    <div class="psychology-label-8">Ekman's basic emotions — tap to explore</div>
+    <div class="subsection-title">Ekman's basic emotions — tap to explore</div>
     <div class="emotion-grid" id="emotionGrid"></div>
     <div class="emotion-detail" id="emotionDetail"><span class="text-tertiary">Select an emotion above.</span></div>
 
@@ -427,7 +427,7 @@ const mod = modules.find((m) => m.id === 27)!;
     ═══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-landmark-studies-in-social-psychology">Part K · landmark studies in social psychology</h2>
 
-    <div class="psychology-panel-22">
+    <div class="social-psych-intro">
       Social psychology studies how situations shape behaviour — often far more powerfully than personality or character. The findings below are uncomfortable precisely because they reveal that "good people" reliably behave in disturbing ways under certain conditions.
     </div>
 

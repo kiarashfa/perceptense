@@ -110,7 +110,7 @@
   margin-bottom:8px;
 }
 
-.fitness-panel-2 {
+.aerobic-chip {
   background:#9FE1CB;
   border-radius:3px;
   padding:5px 8px;
@@ -118,34 +118,34 @@
   color:#04342C;
 }
 
-.fitness-text-2 {
+.aerobic-benefits {
   font-size:11px;
   color:#085041;
   line-height:1.5;
 }
 
-.fitness-panel-3 {
+.anaerobic-panel {
   background:#FAECE7;
   border:0.5px solid #F0997B;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
 }
 
-.fitness-label-2 {
+.anaerobic-title {
   font-size:14px;
   font-weight:500;
   color:#4A1B0C;
   margin-bottom:6px;
 }
 
-.fitness-text-3 {
+.anaerobic-desc {
   font-size:12px;
   color:#712B13;
   margin-bottom:8px;
   line-height:1.6;
 }
 
-.fitness-panel-4 {
+.anaerobic-chip {
   background:#F5C4B3;
   border-radius:3px;
   padding:5px 8px;
@@ -153,13 +153,13 @@
   color:#4A1B0C;
 }
 
-.fitness-text-4 {
+.anaerobic-benefits {
   font-size:11px;
   color:#712B13;
   line-height:1.5;
 }
 
-.fitness-panel-5 {
+.lactate-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -169,21 +169,21 @@
   margin-bottom:1rem;
 }
 
-.fitness-label-3 {
+.hr-zones-title {
   font-size:13px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:12px;
 }
 
-.fitness-row-2 {
+.zone-row {
   display:flex;
   align-items:center;
   gap:10px;
   margin-bottom:5px;
 }
 
-.fitness-text-5 {
+.zone-name {
   font-size:10px;
   color:var(--color-text-tertiary);
   width:80px;
@@ -198,7 +198,7 @@
   overflow:hidden;
 }
 
-.fitness-row-3 {
+.zone-fill-recovery {
   width:50%;
   height:100%;
   background:#9FE1CB;
@@ -207,13 +207,13 @@
   padding-left:8px;
 }
 
-.fitness-text-6 {
+.zone-pct-teal {
   font-size:10px;
   font-weight:600;
   color:#04342C;
 }
 
-.fitness-text-7 {
+.zone-desc {
   font-size:11px;
   color:var(--color-text-secondary);
   width:200px;
@@ -221,7 +221,7 @@
   line-height:1.35;
 }
 
-.fitness-row-4 {
+.zone-fill-aerobic-base {
   width:62%;
   height:100%;
   background:#5DCAA5;
@@ -230,7 +230,7 @@
   padding-left:8px;
 }
 
-.fitness-row-5 {
+.zone-fill-tempo {
   width:74%;
   height:100%;
   background:#EF9F27;
@@ -239,13 +239,13 @@
   padding-left:8px;
 }
 
-.fitness-text-8 {
+.zone-pct-amber {
   font-size:10px;
   font-weight:600;
   color:#2A1A03;
 }
 
-.fitness-row-6 {
+.zone-fill-threshold {
   width:86%;
   height:100%;
   background:#F0997B;
@@ -254,20 +254,20 @@
   padding-left:8px;
 }
 
-.fitness-text-9 {
+.zone-pct-coral {
   font-size:10px;
   font-weight:600;
   color:#4A1B0C;
 }
 
-.fitness-row-7 {
+.zone-row-last {
   display:flex;
   align-items:center;
   gap:10px;
   margin-bottom:12px;
 }
 
-.fitness-row-8 {
+.zone-fill-max {
   width:100%;
   height:100%;
   background:#F09595;
@@ -276,13 +276,13 @@
   padding-left:8px;
 }
 
-.fitness-text-10 {
+.zone-pct-red {
   font-size:10px;
   font-weight:600;
   color:#791F1F;
 }
 
-.fitness-panel-6 {
+.polarised-note {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.6;
@@ -291,7 +291,7 @@
   padding:10px 12px;
 }
 
-.fitness-row-9 {
+.tdee-inputs {
   display:flex;
   gap:10px;
   flex-wrap:wrap;
@@ -299,7 +299,7 @@
   margin-bottom:12px;
 }
 
-.fitness-row-10 {
+.field-wide {
   display:flex;
   flex-direction:column;
   gap:4px;
@@ -307,7 +307,7 @@
   min-width:100px;
 }
 
-.fitness-row-11 {
+.field-narrow {
   display:flex;
   flex-direction:column;
   gap:4px;
@@ -325,7 +325,7 @@
   font-size:13px;
 }
 
-.fitness-row-12 {
+.field-select {
   display:flex;
   flex-direction:column;
   gap:4px;
@@ -348,7 +348,7 @@
   padding:11px 13px;
 }
 
-.fitness-panel-7 {
+.calorie-balance-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -358,21 +358,21 @@
   margin-top:8px;
 }
 
-.fitness-text-12 {
+.panel-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
   line-height:1.5;
 }
 
-.fitness-grid-2 {
+.composition-sliders {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:16px;
   margin-bottom:14px;
 }
 
-.fitness-text-13 {
+.slider-label {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:4px;
@@ -394,47 +394,47 @@
   line-height:1.6;
 }
 
-.fitness-panel-8 {
+.inhale-panel {
   background:#E1F5EE;
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   border:0.5px solid #5DCAA5;
 }
 
-.fitness-label-5 {
+.inhale-title {
   font-size:13px;
   font-weight:500;
   color:#04342C;
   margin-bottom:4px;
 }
 
-.fitness-text-14 {
+.inhale-desc {
   font-size:12px;
   color:#085041;
   line-height:1.5;
 }
 
-.fitness-panel-9 {
+.exhale-panel {
   background:#FAECE7;
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   border:0.5px solid #F0997B;
 }
 
-.fitness-label-6 {
+.exhale-title {
   font-size:13px;
   font-weight:500;
   color:#4A1B0C;
   margin-bottom:4px;
 }
 
-.fitness-text-15 {
+.exhale-desc {
   font-size:12px;
   color:#712B13;
   line-height:1.5;
 }
 
-.fitness-panel-10 {
+.iap-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -444,19 +444,19 @@
   margin-bottom:8px;
 }
 
-.fitness-grid-4 {
+.breathing-cue-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
   gap:8px;
 }
 
-.fitness-text-17 {
+.cue-text {
   font-size:12px;
   color:var(--color-text-primary);
   line-height:1.4;
 }
 
-.fitness-row-13 {
+.calc-inputs {
   display:flex;
   gap:10px;
   align-items:flex-end;
@@ -464,7 +464,7 @@
   margin-bottom:12px;
 }
 
-.fitness-row-14 {
+.field-medium {
   display:flex;
   flex-direction:column;
   gap:4px;
@@ -482,19 +482,19 @@
   margin-bottom:10px;
 }
 
-.fitness-grid-5 {
+.hypertrophy-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
   gap:10px;
 }
 
-.fitness-text-18 {
+.mechanism-text {
   font-size:12px;
   color:var(--color-text-primary);
   line-height:1.5;
 }
 
-.fitness-panel-13 {
+.proximity-note {
   margin-top:10px;
   font-size:12px;
   color:var(--color-text-secondary);
@@ -504,27 +504,27 @@
   padding:9px 11px;
 }
 
-.fitness-text-19 {
+.formula-note {
   margin-top:8px;
   font-size:11px;
   color:var(--color-text-tertiary);
   line-height:1.5;
 }
 
-.fitness-grid-6 {
+.vo2-card-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
   gap:12px;
   margin-bottom:1rem;
 }
 
-.fitness-text-20 {
+.muscle-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
 }
 
-.fitness-row-15 {
+.muscle-map-row {
   display:flex;
   gap:20px;
   justify-content:center;
@@ -540,7 +540,7 @@
   cursor:pointer;
 }
 
-.fitness-text-21 {
+.muscle-hint {
   font-size:11px;
   color:var(--color-text-tertiary);
   text-align:center;
@@ -554,18 +554,18 @@
   min-height:80px;
 }
 
-.fitness-grid-7 {
+.myth-card-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:10px;
   margin-bottom:1rem;
 }
 
-.fitness-text-22 {
+.myth-icon {
   font-size:16px;
 }
 
-.fitness-text-23 {
+.myth-desc {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.55;

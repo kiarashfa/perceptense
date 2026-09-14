@@ -52,41 +52,41 @@ const teasers = modules
       <div class="art-grid">
         <div class="art-panel">
           <div class="art-label">I</div>
-          <div class="art-label-2">Architecture</div>
+          <div class="art-name-architecture">Architecture</div>
           <div class="art-text">The art of designing built space. Utility + beauty. Parthenon, Hagia Sophia, Chartres Cathedral, Fallingwater.</div>
         </div>
-        <div class="art-panel-2">
-          <div class="art-label-3">II</div>
-          <div class="art-label-4">Sculpture</div>
-          <div class="art-text-2">Three-dimensional form in space. Venus de Milo, Michelangelo's David, Rodin's Thinker, Brancusi's Bird in Space.</div>
+        <div class="art-card-sculpture">
+          <div class="art-numeral-sculpture">II</div>
+          <div class="art-name-sculpture">Sculpture</div>
+          <div class="art-desc-sculpture">Three-dimensional form in space. Venus de Milo, Michelangelo's David, Rodin's Thinker, Brancusi's Bird in Space.</div>
         </div>
-        <div class="art-panel-3">
-          <div class="art-label-5">III</div>
-          <div class="art-label-6">Painting</div>
-          <div class="art-text-3">Image-making on flat surfaces. The Mona Lisa, Sistine Chapel ceiling, Guernica, Starry Night, Les Demoiselles d'Avignon.</div>
+        <div class="art-card-painting">
+          <div class="art-numeral-painting">III</div>
+          <div class="art-name-painting">Painting</div>
+          <div class="art-desc-painting">Image-making on flat surfaces. The Mona Lisa, Sistine Chapel ceiling, Guernica, Starry Night, Les Demoiselles d'Avignon.</div>
         </div>
-        <div class="art-panel-4">
-          <div class="art-label-7">IV</div>
-          <div class="art-label-8">Literature</div>
-          <div class="art-text-4">Written language as art. The Iliad, Divine Comedy, Hamlet, War and Peace, Ulysses, One Hundred Years of Solitude.</div>
+        <div class="art-card-literature">
+          <div class="art-numeral-literature">IV</div>
+          <div class="art-name-literature">Literature</div>
+          <div class="art-desc-literature">Written language as art. The Iliad, Divine Comedy, Hamlet, War and Peace, Ulysses, One Hundred Years of Solitude.</div>
         </div>
-        <div class="art-panel-5">
-          <div class="art-label-9">V</div>
-          <div class="art-label-10">Music</div>
-          <div class="art-text-5">Organised sound in time. Bach's Well-Tempered Clavier, Beethoven's 9th, Miles Davis's Kind of Blue, The Beatles.</div>
+        <div class="art-card-music">
+          <div class="art-numeral-music">V</div>
+          <div class="art-name-music">Music</div>
+          <div class="art-desc-music">Organised sound in time. Bach's Well-Tempered Clavier, Beethoven's 9th, Miles Davis's Kind of Blue, The Beatles.</div>
         </div>
-        <div class="art-panel-6">
-          <div class="art-label-11">VI</div>
-          <div class="art-label-12">Performing arts</div>
-          <div class="art-text-6">Theatre, dance, opera, mime — live art that exists in time and disappears. Shakespeare's theatre, Nureyev's ballet, Noh drama.</div>
+        <div class="art-card-performing">
+          <div class="art-numeral-performing">VI</div>
+          <div class="art-name-performing">Performing arts</div>
+          <div class="art-desc-performing">Theatre, dance, opera, mime — live art that exists in time and disappears. Shakespeare's theatre, Nureyev's ballet, Noh drama.</div>
         </div>
-        <div class="art-panel-7">
-          <div class="art-label-13">VII</div>
-          <div class="art-label-14">Cinema / film</div>
-          <div class="art-text-7">The seventh art (added by Ricciotto Canudo, 1911). Moving image + time + narrative. Citizen Kane, Bicycle Thieves, 2001, Rashomon.</div>
+        <div class="art-card-cinema">
+          <div class="art-numeral-cinema">VII</div>
+          <div class="art-name-cinema">Cinema / film</div>
+          <div class="art-desc-cinema">The seventh art (added by Ricciotto Canudo, 1911). Moving image + time + narrative. Citizen Kane, Bicycle Thieves, 2001, Rashomon.</div>
         </div>
       </div>
-      <div class="art-panel-8">
+      <div class="taxonomy-note">
         The classical division originates from ancient Greece. The "Muses" governed nine arts including poetry, music, and dance. The six-art schema was formalised in the Italian Renaissance; film was added in the 20th century. Photography (sometimes the 8th art), comics/graphic novels (the 9th), and video games are claimed as subsequent additions. The taxonomy reveals as much about cultural values as about art itself.
       </div>
     </div>
@@ -98,10 +98,10 @@ const teasers = modules
 
     <!-- Movement period chart -->
     <div class="scroll-panel">
-      <div class="art-label-15">Approximate spans — Western painting movements, 1300–present</div>
+      <div class="movements-chart-title">Approximate spans — Western painting movements, 1300–present</div>
       <div class="pc-axis pcaxis" id="pcAxis"></div>
       <div id="pcRows"></div>
-      <div class="art-text-8">Movements overlap; end dates indicate when each ceased to be the dominant avant-garde force, not when artists stopped working in the style.</div>
+      <div class="movements-note">Movements overlap; end dates indicate when each ceased to be the dominant avant-garde force, not when artists stopped working in the style.</div>
     </div>
 
     <div class="art-row">
@@ -126,7 +126,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-c-how-to-read-a-painting-what-art-historians-actually-look-at">Part C · how to read a painting — what art historians actually look at</h2>
 
-    <div class="art-grid-2">
+    <div class="reading-card-grid">
       <div class="card">
         <p class="clabel">Composition</p>
         <p class="cval">How elements are arranged in the frame</p>
@@ -167,64 +167,64 @@ const teasers = modules
           <div class="comp-diagram" id="compTriangle">
             <!-- Pure CSS triangle diagram -->
             <div class="art-media"></div>
-            <div class="art-media-2"></div>
-            <div class="art-media-3"></div>
-            <div class="art-media-4"></div>
+            <div class="triangle-apex"></div>
+            <div class="triangle-base-left"></div>
+            <div class="triangle-base-right"></div>
           </div>
-          <div class="art-text-9">Triangular</div>
-          <div class="art-text-10">Stable, hierarchical, divine. Renaissance Madonnas. Central figure elevated above flanking figures. Conveys permanence and authority.</div>
+          <div class="composition-name">Triangular</div>
+          <div class="composition-desc">Stable, hierarchical, divine. Renaissance Madonnas. Central figure elevated above flanking figures. Conveys permanence and authority.</div>
         </div>
         <div class="comp-card">
           <div class="comp-diagram">
             <div class="art-div-style"></div>
-            <div class="art-media-5"></div>
-            <div class="art-media-6"></div>
-            <div class="art-media-7"></div>
-            <div class="art-media-8"></div>
-            <div class="art-media-9"></div>
+            <div class="thirds-line-v-left"></div>
+            <div class="thirds-line-v-right"></div>
+            <div class="thirds-line-h-top"></div>
+            <div class="thirds-line-h-bottom"></div>
+            <div class="thirds-focus"></div>
           </div>
-          <div class="art-text-9">Rule of thirds</div>
-          <div class="art-text-10">Subject placed at intersection of dividing lines. More dynamic than dead-centre. Used intuitively by painters long before it was named.</div>
+          <div class="composition-name">Rule of thirds</div>
+          <div class="composition-desc">Subject placed at intersection of dividing lines. More dynamic than dead-centre. Used intuitively by painters long before it was named.</div>
         </div>
         <div class="comp-card">
           <div class="comp-diagram">
-            <div class="art-div-style-2"></div>
-            <div class="art-media-10"></div>
-            <div class="art-media-11"></div>
-            <div class="art-media-12"></div>
-            <div class="art-media-13"></div>
+            <div class="diagonal-axes"></div>
+            <div class="diagonal-arrow-start"></div>
+            <div class="diagonal-arrow-end"></div>
+            <div class="diagonal-dot-high"></div>
+            <div class="diagonal-dot-low"></div>
           </div>
-          <div class="art-text-9">Diagonal</div>
-          <div class="art-text-10">Dynamic, unstable, dramatic. Baroque hallmark — Caravaggio, Rubens. Implies movement, conflict, or imminent action. The eye travels along the diagonal axis.</div>
+          <div class="composition-name">Diagonal</div>
+          <div class="composition-desc">Dynamic, unstable, dramatic. Baroque hallmark — Caravaggio, Rubens. Implies movement, conflict, or imminent action. The eye travels along the diagonal axis.</div>
         </div>
         <div class="comp-card">
           <div class="comp-diagram">
-            <div class="art-row-2">
-              <div class="art-media-14">
-                <div class="art-media-15"></div>
-                <div class="art-media-16"></div>
-                <div class="art-media-17"></div>
-                <div class="art-media-18"></div>
-                <div class="art-media-19"></div>
+            <div class="radial-layout">
+              <div class="radial-ring">
+                <div class="radial-core"></div>
+                <div class="radial-dot-top"></div>
+                <div class="radial-dot-bottom"></div>
+                <div class="radial-dot-left"></div>
+                <div class="radial-dot-right"></div>
               </div>
             </div>
           </div>
-          <div class="art-text-9">Radial / circular</div>
-          <div class="art-text-10">All elements revolve around a central point. Creates unity and focus. Used in Last Supper compositions, altarpieces, and many Renaissance group scenes.</div>
+          <div class="composition-name">Radial / circular</div>
+          <div class="composition-desc">All elements revolve around a central point. Creates unity and focus. Used in Last Supper compositions, altarpieces, and many Renaissance group scenes.</div>
         </div>
         <div class="comp-card">
           <div class="comp-diagram">
-            <div class="art-row-3">
-              <div class="art-media-20"></div>
-              <div class="art-media-21"></div>
-              <div class="art-text-11">sky</div>
-              <div class="art-text-12">foreground</div>
-              <div class="art-media-22"></div>
-              <div class="art-media-23"></div>
+            <div class="horizon-layout">
+              <div class="horizon-line-upper"></div>
+              <div class="horizon-line-lower"></div>
+              <div class="horizon-label-sky">sky</div>
+              <div class="horizon-label-foreground">foreground</div>
+              <div class="horizon-dot-main"></div>
+              <div class="horizon-dot-faint"></div>
             </div>
           </div>
-          <div class="art-text-9">Horizontal bands</div>
-          <div class="art-text-10">Calm, expansive, eternal. Landscape painters (Constable, Dutch Golden Age). Horizon placement governs emphasis: low horizon = vast sky; high horizon = rich foreground.</div>
+          <div class="composition-name">Horizontal bands</div>
+          <div class="composition-desc">Calm, expansive, eternal. Landscape painters (Constable, Dutch Golden Age). Horizon placement governs emphasis: low horizon = vast sky; high horizon = rich foreground.</div>
         </div>
       </div>
     </div>
@@ -237,23 +237,23 @@ const teasers = modules
           <div class="colour-swatch-name text-blue-900">Blue</div>
           <div class="colour-swatch-note text-blue-700">Divinity, the Virgin Mary, heaven, truth, loyalty. Ultramarine (from lapis lazuli) was more expensive than gold — its use signalled a patron's wealth.</div>
         </div>
-        <div class="colour-swatch colour-swatch-style-2">
+        <div class="colour-swatch colour-swatch-red">
           <div class="colour-swatch-name text-red-900">Red</div>
           <div class="colour-swatch-note text-red-700">Passion, love, sacrifice, danger, martyrdom. Christ's robe in Passion scenes. Also royal power (vermilion was costly). Warm and advancing — pulls the eye.</div>
         </div>
-        <div class="colour-swatch colour-swatch-style-3">
+        <div class="colour-swatch colour-swatch-gold">
           <div class="colour-swatch-name text-amber-900">Gold</div>
           <div class="colour-swatch-note text-orange-850">Divine light, the eternal, holiness. Byzantine icons use gold ground to remove figures from earthly time and space entirely. Not a colour but a metaphysical statement.</div>
         </div>
-        <div class="colour-swatch colour-swatch-style-4">
+        <div class="colour-swatch colour-swatch-green">
           <div class="colour-swatch-name text-green-800">Green</div>
-          <div class="colour-swatch-note colour-swatch-note-style-4">Hope, nature, spring, renewal, envy (Shakespeare's "green-eyed monster"). Verdigris was the most common green pigment but notoriously unstable — many painted greens have turned brown over centuries.</div>
+          <div class="colour-swatch-note colour-swatch-note-green">Hope, nature, spring, renewal, envy (Shakespeare's "green-eyed monster"). Verdigris was the most common green pigment but notoriously unstable — many painted greens have turned brown over centuries.</div>
         </div>
-        <div class="colour-swatch colour-swatch-style-5">
+        <div class="colour-swatch colour-swatch-purple">
           <div class="colour-swatch-name text-hex-72243e">Purple / violet</div>
           <div class="colour-swatch-note text-hex-993556">Royalty, penitence, mourning, mourning. Tyrian purple was the most expensive dye in antiquity. In painting, it signals the highest status — emperors and high clergy only.</div>
         </div>
-        <div class="colour-swatch colour-swatch-style-6">
+        <div class="colour-swatch colour-swatch-white-black">
           <div class="colour-swatch-name text-primary">White / black</div>
           <div class="colour-swatch-note text-secondary">White = purity, death (in some Eastern traditions), light. Black = mourning, death, authority, the void. Goya's Black Paintings — monochrome as psychological state, not just colour choice.</div>
         </div>
@@ -268,35 +268,35 @@ const teasers = modules
     <div class="content-panel">
       <div class="panel-title">The art market — where economics and aesthetics collide</div>
 
-      <div class="art-grid-3">
-        <div class="art-panel-9">
-          <div class="art-label-16">1. Artist reputation (primary driver)</div>
-          <div class="art-text-13">The single most important determinant. A Picasso and an equally beautiful painting by an unknown artist occupy completely different markets. Reputation is built through: critical recognition, museum exhibitions, auction history, scholarship, cultural influence. The auction record itself becomes part of the artist's "price history" that justifies future prices.</div>
+      <div class="value-factor-grid">
+        <div class="factor-panel-reputation">
+          <div class="factor-title-reputation">1. Artist reputation (primary driver)</div>
+          <div class="factor-desc-reputation">The single most important determinant. A Picasso and an equally beautiful painting by an unknown artist occupy completely different markets. Reputation is built through: critical recognition, museum exhibitions, auction history, scholarship, cultural influence. The auction record itself becomes part of the artist's "price history" that justifies future prices.</div>
         </div>
-        <div class="art-panel-10">
-          <div class="art-label-17">2. Provenance (ownership history)</div>
-          <div class="art-text-14">A documented chain of ownership from artist to present day adds value and authentication. Famous previous owners add prestige. Clean provenance (no theft, no Nazi looting) is legally and reputationally essential. Gaps in provenance raise suspicion. Many art restitution disputes (museums returning looted art) centre on provenance records.</div>
+        <div class="factor-panel-provenance">
+          <div class="factor-title-provenance">2. Provenance (ownership history)</div>
+          <div class="factor-desc-provenance">A documented chain of ownership from artist to present day adds value and authentication. Famous previous owners add prestige. Clean provenance (no theft, no Nazi looting) is legally and reputationally essential. Gaps in provenance raise suspicion. Many art restitution disputes (museums returning looted art) centre on provenance records.</div>
         </div>
-        <div class="art-panel-11">
-          <div class="art-label-18">3. Rarity and period</div>
-          <div class="art-text-15">Works from an artist's most celebrated period command premiums. Late Rembrandt portraits vs early ones. A Picasso from his Blue Period vs a late work. When an artist has died, the supply is permanently fixed — prices can only go up if demand rises. A "last known in private hands" work commands a rarity premium.</div>
+        <div class="factor-panel-rarity">
+          <div class="factor-title-rarity">3. Rarity and period</div>
+          <div class="factor-desc-rarity">Works from an artist's most celebrated period command premiums. Late Rembrandt portraits vs early ones. A Picasso from his Blue Period vs a late work. When an artist has died, the supply is permanently fixed — prices can only go up if demand rises. A "last known in private hands" work commands a rarity premium.</div>
         </div>
-        <div class="art-panel-12">
-          <div class="art-label-19">4. Condition</div>
-          <div class="art-text-16">Damage, restoration, fading, and overpainting all reduce value. A conservator's report is essential for major works. Sometimes excessive restoration (adding what was never there) is as damaging to value as deterioration. The "patina of age" is often valued — too-clean restorations can look wrong.</div>
+        <div class="factor-panel-condition">
+          <div class="factor-title-condition">4. Condition</div>
+          <div class="factor-desc-condition">Damage, restoration, fading, and overpainting all reduce value. A conservator's report is essential for major works. Sometimes excessive restoration (adding what was never there) is as damaging to value as deterioration. The "patina of age" is often valued — too-clean restorations can look wrong.</div>
         </div>
-        <div class="art-panel-13">
-          <div class="art-label-20">5. Subject matter</div>
-          <div class="art-text-17">Within an artist's oeuvre, certain subjects command premiums. Picasso's women sell more than his landscapes. Monet's Water Lilies more than his Normandy houses. The nude retains permanent market appeal. Cultural figures or scenes that resonate with current buyers influence what sells well.</div>
+        <div class="factor-panel-subject">
+          <div class="factor-title-subject">5. Subject matter</div>
+          <div class="factor-desc-subject">Within an artist's oeuvre, certain subjects command premiums. Picasso's women sell more than his landscapes. Monet's Water Lilies more than his Normandy houses. The nude retains permanent market appeal. Cultural figures or scenes that resonate with current buyers influence what sells well.</div>
         </div>
-        <div class="art-panel-14">
-          <div class="art-label-21">6. Authentication</div>
-          <div class="art-text-18">Is it genuinely by the named artist? Scholarly authentication (catalogue raisonné — the definitive list of an artist's works), technical analysis (pigment dating, canvas analysis, X-ray), and expert opinion all matter. Forgery is a major industry: the art market has no equivalent of hallmarking.</div>
+        <div class="factor-panel-authentication">
+          <div class="factor-title-authentication">6. Authentication</div>
+          <div class="factor-desc-authentication">Is it genuinely by the named artist? Scholarly authentication (catalogue raisonné — the definitive list of an artist's works), technical analysis (pigment dating, canvas analysis, X-ray), and expert opinion all matter. Forgery is a major industry: the art market has no equivalent of hallmarking.</div>
         </div>
       </div>
 
       <!-- Record prices bar chart -->
-      <div class="art-label-22">Top auction records — selected works ($M at hammer)</div>
+      <div class="auction-chart-title">Top auction records — selected works ($M at hammer)</div>
       <div class="content-panel price-scale-style">
         <div class="ps-row">
           <div class="ps-artist">Salvator Mundi<br><span class="art-span-style">Leonardo (attr.)</span></div>
@@ -309,7 +309,7 @@ const teasers = modules
         <div class="ps-row">
           <div class="ps-artist">Shot Sage Blue Marilyn<br><span class="art-span-style">Warhol</span></div>
           <div class="ps-bar-wrap">
-            <div class="ps-bar ps-bar-style-2">
+            <div class="ps-bar ps-bar-warhol">
               <span class="ps-val text-red-900">$195M · Christie's 2022</span>
             </div>
           </div>
@@ -317,7 +317,7 @@ const teasers = modules
         <div class="ps-row">
           <div class="ps-artist">Les Femmes d'Alger<br><span class="art-span-style">Picasso</span></div>
           <div class="ps-bar-wrap">
-            <div class="ps-bar ps-bar-style-3">
+            <div class="ps-bar ps-bar-picasso">
               <span class="ps-val text-amber-900">$179M · Christie's 2015</span>
             </div>
           </div>
@@ -325,7 +325,7 @@ const teasers = modules
         <div class="ps-row">
           <div class="ps-artist">Interchange<br><span class="art-span-style">de Kooning</span></div>
           <div class="ps-bar-wrap">
-            <div class="ps-bar ps-bar-style-4">
+            <div class="ps-bar ps-bar-de-kooning">
               <span class="ps-val text-blue-900">$300M · private 2015</span>
             </div>
           </div>
@@ -333,7 +333,7 @@ const teasers = modules
         <div class="ps-row">
           <div class="ps-artist">Nafea Faa Ipoipo<br><span class="art-span-style">Gauguin</span></div>
           <div class="ps-bar-wrap">
-            <div class="ps-bar ps-bar-style-5">
+            <div class="ps-bar ps-bar-gauguin">
               <span class="ps-val text-green-800">$300M · private 2015</span>
             </div>
           </div>
@@ -341,14 +341,14 @@ const teasers = modules
         <div class="ps-row">
           <div class="ps-artist">No. 6 (Violet, Green and Red)<br><span class="art-span-style">Rothko</span></div>
           <div class="ps-bar-wrap">
-            <div class="ps-bar ps-bar-style-6">
+            <div class="ps-bar ps-bar-rothko">
               <span class="ps-val text-hex-72243e">$186M · private 2014</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="art-panel-15">
+      <div class="value-distinction-note">
         <strong class="text-primary">Artistic value vs market value:</strong> These are genuinely independent. Vermeer's work commands extraordinary prices; his contemporary Jan Steen (far more prolific) is worth a fraction. Fra Angelico's frescoes in the Monastery of San Marco, Florence are among the most spiritually and artistically significant paintings in existence — they cannot be bought at any price. Basquiat paintings sell for $100M+ while many consider his work of modest artistic depth. The market rewards cultural meaning, scarcity, and collector fashion — not necessarily what art historians or critics consider finest.
       </div>
     </div>
@@ -373,7 +373,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-the-seven-elements-of-art-the-visual-vocabulary">Part F · the seven elements of art — the visual vocabulary</h2>
 
-    <div class="art-panel-16">
+    <div class="section-intro">
       Before movements and history, there are the building blocks every visual work uses. Art educators identify seven fundamental elements: every painting, sculpture, and drawing can be analysed in terms of these seven. Click each to explore.
     </div>
 
@@ -422,7 +422,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-g-medium-and-technique-what-it-s-made-of-matters">Part G · medium &amp; technique — what it's made of matters</h2>
 
-    <div class="art-panel-17">
+    <div class="section-overview">
       The physical medium — the stuff the artwork is made from — profoundly shapes what is possible. Oil paint allows glazing and decades of reworking. Fresco demands decisive, fast brushwork before plaster dries. Watercolour requires working light to dark. These constraints produced the distinctive look of each tradition.
     </div>
 
@@ -443,7 +443,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-the-scale-of-famous-works-size-changes-everything">Part H · the scale of famous works — size changes everything</h2>
 
-    <div class="art-panel-17">
+    <div class="section-overview">
       Scale is an artistic choice, not a practical one. The Mona Lisa is surprisingly small (the size of a large hardback book); Guernica is nearly 8 metres wide. Abstract Expressionists chose monumental scale to envelop the viewer. Move the slider to compare works at a consistent scale relative to an average adult figure (170 cm).
     </div>
 
@@ -461,7 +461,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-i-going-deeper-the-dedicated-modules">Part I · going deeper — the dedicated modules</h2>
 
-    <div class="art-panel-16">
+    <div class="section-intro">
       This module covers art as a broad discipline. Four dedicated modules take a deep dive into the specific arts that most shape cultural life — each with its own techniques, history, and vocabulary.
     </div>
 

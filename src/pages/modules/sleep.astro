@@ -27,83 +27,83 @@ const mod = modules.find((m) => m.id === 22)!;
       <div class="sleep-text">Each cycle lasts roughly 90 minutes. The composition changes across the night: early cycles are dominated by deep sleep (N3); later cycles contain more REM. This is why the last 2 hours of sleep are disproportionately rich in dreaming — and why cutting sleep short costs you mostly REM, not deep sleep.</div>
 
       <div class="sleep-row">
-        <div class="sleep-text-2">A single 90-minute cycle — stages in order</div>
-        <div class="sleep-row-2">
-          <div class="sleep-row-3"><span class="sleep-label-2">N1 (5 min)</span></div>
-          <div class="sleep-row-4"><span class="sleep-label-3">N2 (20–25 min)</span></div>
-          <div class="sleep-row-5"><span class="sleep-label-4">N3 deep (20–40 min)</span></div>
-          <div class="sleep-row-6"><span class="sleep-label-3">N2 brief</span></div>
-          <div class="sleep-row-7"><span class="sleep-label-3">REM (10–60 min)</span></div>
+        <div class="cycle-caption">A single 90-minute cycle — stages in order</div>
+        <div class="cycle-bar">
+          <div class="cycle-block-n1"><span class="stage-label-n1">N1 (5 min)</span></div>
+          <div class="cycle-block-n2"><span class="stage-label-white">N2 (20–25 min)</span></div>
+          <div class="cycle-block-n3"><span class="stage-label-n3">N3 deep (20–40 min)</span></div>
+          <div class="cycle-block-n2-brief"><span class="stage-label-white">N2 brief</span></div>
+          <div class="cycle-block-rem"><span class="stage-label-white">REM (10–60 min)</span></div>
         </div>
-        <div class="sleep-row-8">
-          <span class="sleep-row-9"><span class="sleep-media"></span>N1 light</span>
-          <span class="sleep-row-9"><span class="sleep-media-2"></span>N2 true sleep</span>
-          <span class="sleep-row-9"><span class="sleep-media-3"></span>N3 deep/slow-wave</span>
-          <span class="sleep-row-9"><span class="sleep-media-4"></span>REM (dreaming)</span>
-        </div>
-      </div>
-
-      <div class="sleep-panel-2">
-        <div class="sleep-label-5">How the cycle composition shifts across a full night</div>
-        <div class="sleep-row-10">
-          <div>
-            <div class="sleep-text-3">Cycle 1 (~11pm–12:30am)</div>
-            <div class="sleep-row-11">
-              <div class="sleep-div-style"></div>
-              <div class="sleep-div-style-2"></div>
-              <div class="sleep-div-style-3"></div>
-              <div class="sleep-div-style-4"></div>
-            </div>
-            <div class="sleep-text-4">Heavy deep sleep, minimal REM</div>
-          </div>
-          <div>
-            <div class="sleep-text-3">Cycle 2 (~12:30–2am)</div>
-            <div class="sleep-row-11">
-              <div class="sleep-div-style"></div>
-              <div class="sleep-div-style-2"></div>
-              <div class="sleep-div-style-5"></div>
-              <div class="sleep-div-style-6"></div>
-            </div>
-            <div class="sleep-text-4">Still substantial deep sleep, more REM</div>
-          </div>
-          <div>
-            <div class="sleep-text-3">Cycle 3 (~2–3:30am)</div>
-            <div class="sleep-row-11">
-              <div class="sleep-div-style"></div>
-              <div class="sleep-div-style-2"></div>
-              <div class="sleep-div-style-7"></div>
-              <div class="sleep-div-style-8"></div>
-            </div>
-            <div class="sleep-text-4">Deep sleep diminishing, REM growing</div>
-          </div>
-          <div>
-            <div class="sleep-text-3">Cycle 4–5 (~3:30–7am)</div>
-            <div class="sleep-row-11">
-              <div class="sleep-div-style"></div>
-              <div class="sleep-div-style-2"></div>
-              <div class="sleep-div-style-9"></div>
-              <div class="sleep-div-style-10"></div>
-            </div>
-            <div class="sleep-text-4">Almost entirely REM — the dream-heavy second half of sleep</div>
-          </div>
+        <div class="cycle-legend">
+          <span class="cycle-legend-item"><span class="sleep-media"></span>N1 light</span>
+          <span class="cycle-legend-item"><span class="legend-swatch-n2"></span>N2 true sleep</span>
+          <span class="cycle-legend-item"><span class="legend-swatch-n3"></span>N3 deep/slow-wave</span>
+          <span class="cycle-legend-item"><span class="legend-swatch-rem"></span>REM (dreaming)</span>
         </div>
       </div>
 
-      <div class="sleep-panel-3">
+      <div class="cycle-shift-panel">
+        <div class="cycle-shift-title">How the cycle composition shifts across a full night</div>
+        <div class="cycle-shift-list">
+          <div>
+            <div class="cycle-shift-label">Cycle 1 (~11pm–12:30am)</div>
+            <div class="cycle-shift-bar">
+              <div class="sleep-div-style"></div>
+              <div class="cycle-seg-n2"></div>
+              <div class="cycle-seg-deep-long"></div>
+              <div class="cycle-seg-rem-short"></div>
+            </div>
+            <div class="cycle-shift-note">Heavy deep sleep, minimal REM</div>
+          </div>
+          <div>
+            <div class="cycle-shift-label">Cycle 2 (~12:30–2am)</div>
+            <div class="cycle-shift-bar">
+              <div class="sleep-div-style"></div>
+              <div class="cycle-seg-n2"></div>
+              <div class="cycle-seg-deep-mid"></div>
+              <div class="cycle-seg-rem-mid"></div>
+            </div>
+            <div class="cycle-shift-note">Still substantial deep sleep, more REM</div>
+          </div>
+          <div>
+            <div class="cycle-shift-label">Cycle 3 (~2–3:30am)</div>
+            <div class="cycle-shift-bar">
+              <div class="sleep-div-style"></div>
+              <div class="cycle-seg-n2"></div>
+              <div class="cycle-seg-deep-short"></div>
+              <div class="cycle-seg-rem-long"></div>
+            </div>
+            <div class="cycle-shift-note">Deep sleep diminishing, REM growing</div>
+          </div>
+          <div>
+            <div class="cycle-shift-label">Cycle 4–5 (~3:30–7am)</div>
+            <div class="cycle-shift-bar">
+              <div class="sleep-div-style"></div>
+              <div class="cycle-seg-n2"></div>
+              <div class="cycle-seg-deep-trace"></div>
+              <div class="cycle-seg-rem-max"></div>
+            </div>
+            <div class="cycle-shift-note">Almost entirely REM — the dream-heavy second half of sleep</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alarm-note">
         <strong class="sleep-strong-style">The alarm clock problem:</strong> Most people set an alarm that cuts off the final 1–2 cycles. This disproportionately removes REM sleep — the stage most critical for emotional regulation, creativity, and memory consolidation. Waking up mid-REM (when you were dreaming) produces the grogginess called sleep inertia. The 90-minute rule: if you need to wake at 7am, count back in 90-minute increments — bedtimes of 11:30pm, 10pm, or 8:30pm all align with cycle boundaries and produce gentler waking.
       </div>
     </div>
 
     <!-- ─── Interactive: Bedtime calculator ─── -->
     <div class="sleep-panel">
-      <div class="sleep-label-6">Bedtime calculator — align with 90-min cycle boundaries</div>
+      <div class="tool-title">Bedtime calculator — align with 90-min cycle boundaries</div>
       <div class="calc-grid">
         <div>
-          <div class="sleep-text-5">Wake-up time</div>
+          <div class="field-label">Wake-up time</div>
           <input class="wake-time" type="time" id="wake-time" value="07:00">
         </div>
         <div>
-          <div class="sleep-text-5">Cycles wanted</div>
+          <div class="field-label">Cycles wanted</div>
           <select class="wake-time" id="cycles-wanted">
             <option value="4">4 cycles (~6 hrs) — minimum</option>
             <option value="5" selected>5 cycles (~7.5 hrs) — good</option>
@@ -121,7 +121,7 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-b-the-four-sleep-stages-what-happens-in-each">Part B · the four sleep stages — what happens in each</h2>
 
     <!-- N1 -->
-    <div class="sleep-panel-4">
+    <div class="stage-panel-n1">
       <div class="sh"><span class="sname text-blue-950">Stage N1 — light sleep / hypnagogic state</span><span class="sbadge sbadge-style">1–7 min, ~5% of sleep</span></div>
       <div class="sgrid">
         <div class="sbox sbox-style"><p class="sl text-blue-900">Brain waves</p><p class="sv text-blue-950">Alpha waves slow to theta waves. Easily awakened — "not really asleep yet."</p></div>
@@ -132,41 +132,41 @@ const mod = modules.find((m) => m.id === 22)!;
     </div>
 
     <!-- N2 -->
-    <div class="sleep-panel-5">
-      <div class="sh"><span class="sname text-indigo-950">Stage N2 — true sleep</span><span class="sbadge sbadge-style-2">20–30 min per cycle, ~45–50% of total sleep</span></div>
+    <div class="stage-panel-n2">
+      <div class="sh"><span class="sname text-indigo-950">Stage N2 — true sleep</span><span class="sbadge sbadge-n2">20–30 min per cycle, ~45–50% of total sleep</span></div>
       <div class="sgrid">
-        <div class="sbox sbox-style-2"><p class="sl text-indigo-900">Brain waves</p><p class="sv text-indigo-950">Sleep spindles (bursts of 12–14 Hz oscillations, 0.5–2 sec) and K-complexes (sharp negative waves). Both are unique to N2.</p></div>
-        <div class="sbox sbox-style-2"><p class="sl text-indigo-900">What happens</p><p class="sv text-indigo-950">Heart rate and body temperature drop. Sensory processing significantly reduced. Sleep spindles are thought to be the brain "gating" sensory input to maintain sleep.</p></div>
-        <div class="sbox sbox-style-2"><p class="sl text-indigo-900">Memory function</p><p class="sv text-indigo-950">Sleep spindles correlate strongly with motor memory consolidation. Learning a new physical skill (playing piano, typing) improves after N2-rich sleep.</p></div>
+        <div class="sbox sbox-n2"><p class="sl text-indigo-900">Brain waves</p><p class="sv text-indigo-950">Sleep spindles (bursts of 12–14 Hz oscillations, 0.5–2 sec) and K-complexes (sharp negative waves). Both are unique to N2.</p></div>
+        <div class="sbox sbox-n2"><p class="sl text-indigo-900">What happens</p><p class="sv text-indigo-950">Heart rate and body temperature drop. Sensory processing significantly reduced. Sleep spindles are thought to be the brain "gating" sensory input to maintain sleep.</p></div>
+        <div class="sbox sbox-n2"><p class="sl text-indigo-900">Memory function</p><p class="sv text-indigo-950">Sleep spindles correlate strongly with motor memory consolidation. Learning a new physical skill (playing piano, typing) improves after N2-rich sleep.</p></div>
       </div>
       <p class="snote text-indigo-700">A 20-minute "power nap" that stays in N2 (not reaching N3) leaves you refreshed, not groggy. The groggy nap problem is when you enter N3 and wake mid-cycle. The 20-minute cap is the practical application of this.</p>
     </div>
 
     <!-- N3 -->
-    <div class="sleep-panel-6">
-      <div class="sh"><span class="sname text-indigo-200">Stage N3 — deep sleep / slow-wave sleep (SWS)</span><span class="sbadge sbadge-style-3">20–40 min early, near zero later, ~20% of total</span></div>
+    <div class="stage-panel-n3">
+      <div class="sh"><span class="sname text-indigo-200">Stage N3 — deep sleep / slow-wave sleep (SWS)</span><span class="sbadge sbadge-n3">20–40 min early, near zero later, ~20% of total</span></div>
       <div class="sgrid">
-        <div class="sbox bg-indigo-900"><p class="sl sl-style-3">Brain waves</p><p class="sv text-indigo-200">Delta waves — the slowest, highest-amplitude brain waves. Less than 1 Hz. The brain is maximally synchronised and "quiet."</p></div>
-        <div class="sbox bg-indigo-900"><p class="sl sl-style-3">Physical repair</p><p class="sv text-indigo-200">Growth hormone (GH) is secreted in its largest pulse of the day. Tissue repair, muscle growth, and immune strengthening all peak here. The body physically heals itself.</p></div>
-        <div class="sbox bg-indigo-900"><p class="sl sl-style-3">Brain cleaning</p><p class="sv text-indigo-200">The glymphatic system (the brain's waste clearance network) is most active during N3. Cerebrospinal fluid flushes metabolic waste including amyloid-beta proteins associated with Alzheimer's disease.</p></div>
+        <div class="sbox bg-indigo-900"><p class="sl sl-n3">Brain waves</p><p class="sv text-indigo-200">Delta waves — the slowest, highest-amplitude brain waves. Less than 1 Hz. The brain is maximally synchronised and "quiet."</p></div>
+        <div class="sbox bg-indigo-900"><p class="sl sl-n3">Physical repair</p><p class="sv text-indigo-200">Growth hormone (GH) is secreted in its largest pulse of the day. Tissue repair, muscle growth, and immune strengthening all peak here. The body physically heals itself.</p></div>
+        <div class="sbox bg-indigo-900"><p class="sl sl-n3">Brain cleaning</p><p class="sv text-indigo-200">The glymphatic system (the brain's waste clearance network) is most active during N3. Cerebrospinal fluid flushes metabolic waste including amyloid-beta proteins associated with Alzheimer's disease.</p></div>
       </div>
-      <p class="snote sl-style-3">N3 is the hardest stage to wake from — if woken, severe disorientation (sleep inertia) lasts 15–30 minutes. Sleepwalking and sleep talking occur in N3, not REM, explaining why sleepwalkers have no memory and are hard to rouse. Children spend proportionally more time in N3, explaining the depth of childhood sleep and growth hormone peaks.</p>
+      <p class="snote sl-n3">N3 is the hardest stage to wake from — if woken, severe disorientation (sleep inertia) lasts 15–30 minutes. Sleepwalking and sleep talking occur in N3, not REM, explaining why sleepwalkers have no memory and are hard to rouse. Children spend proportionally more time in N3, explaining the depth of childhood sleep and growth hormone peaks.</p>
     </div>
 
     <!-- REM -->
-    <div class="sleep-panel-7">
-      <div class="sh"><span class="sname sname-style-4">REM — Rapid Eye Movement sleep</span><span class="sbadge sbadge-style-4">10–60 min per cycle, ~20–25% of total — dreams here</span></div>
+    <div class="stage-panel-rem">
+      <div class="sh"><span class="sname sname-rem">REM — Rapid Eye Movement sleep</span><span class="sbadge sbadge-rem">10–60 min per cycle, ~20–25% of total — dreams here</span></div>
       <div class="sgrid">
-        <div class="sbox sbox-style-4"><p class="sl text-hex-72243e">Brain waves</p><p class="sv sname-style-4">Almost identical to waking brain — fast, low-amplitude, desynchronised. The brain is as active as when awake. Eyes dart rapidly (hence the name). Body is in voluntary muscle paralysis (atonia).</p></div>
-        <div class="sbox sbox-style-4"><p class="sl text-hex-72243e">Dreaming</p><p class="sv sname-style-4">90–95% of vivid, narrative dreams occur in REM. Muscle atonia prevents acting out dreams. REM sleep behaviour disorder: atonia fails — people physically act out their dreams.</p></div>
-        <div class="sbox sbox-style-4"><p class="sl text-hex-72243e">Functions</p><p class="sv sname-style-4">Emotional memory processing — reactivating memories but stripping the emotional charge: "overnight therapy." Creativity and insight through novel connections. Social and emotional learning.</p></div>
+        <div class="sbox sbox-rem"><p class="sl text-hex-72243e">Brain waves</p><p class="sv sname-rem">Almost identical to waking brain — fast, low-amplitude, desynchronised. The brain is as active as when awake. Eyes dart rapidly (hence the name). Body is in voluntary muscle paralysis (atonia).</p></div>
+        <div class="sbox sbox-rem"><p class="sl text-hex-72243e">Dreaming</p><p class="sv sname-rem">90–95% of vivid, narrative dreams occur in REM. Muscle atonia prevents acting out dreams. REM sleep behaviour disorder: atonia fails — people physically act out their dreams.</p></div>
+        <div class="sbox sbox-rem"><p class="sl text-hex-72243e">Functions</p><p class="sv sname-rem">Emotional memory processing — reactivating memories but stripping the emotional charge: "overnight therapy." Creativity and insight through novel connections. Social and emotional learning.</p></div>
       </div>
       <p class="snote text-hex-993556">REM is the most psychologically active stage. Norepinephrine (the stress chemical) is almost completely absent during REM — the only time in the 24-hour cycle when this happens. This is why REM is thought to provide emotional "overnight therapy": distressing memories are reprocessed in a neurochemically calm state.</p>
     </div>
 
     <!-- Stage comparison table -->
-    <div class="sleep-panel-8">
-      <div class="sleep-label-7">Stage comparison at a glance</div>
+    <div class="stage-compare-panel">
+      <div class="panel-heading">Stage comparison at a glance</div>
       <table class="comp-table">
         <thead>
           <tr>
@@ -186,21 +186,21 @@ const mod = modules.find((m) => m.id === 22)!;
             <td>Easily re-entered; minimal impact</td>
           </tr>
           <tr>
-            <td><span class="sleep-span-style-2">N2</span></td>
+            <td><span class="stage-name-n2">N2</span></td>
             <td>~45–50%</td>
             <td>Motor memory, sensory gating</td>
             <td>Spindles, K-complexes</td>
             <td>Impaired skill learning, lighter sleep</td>
           </tr>
           <tr>
-            <td><span class="sleep-panel-9">N3</span></td>
+            <td><span class="stage-tag-n3">N3</span></td>
             <td>~20%</td>
             <td>Physical repair, glymphatic flush</td>
             <td>Delta waves, near-silent</td>
             <td>Poor immunity, impaired tissue repair, Alzheimer's risk</td>
           </tr>
           <tr>
-            <td><span class="sleep-span-style-3">REM</span></td>
+            <td><span class="stage-name-rem">REM</span></td>
             <td>~20–25%</td>
             <td>Emotional processing, creativity</td>
             <td>Near-waking activity</td>
@@ -256,29 +256,29 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-d-the-sleep-hormones-your-body-s-chemical-clock">Part D · the sleep hormones — your body's chemical clock</h2>
 
     <div class="sleep-panel">
-      <div class="sleep-label-8">Interactive hormone timeline — drag to explore the 24-hour cycle</div>
-      <div class="sleep-row-12">
-        <label class="sleep-text-6">Time of day:</label>
+      <div class="hormone-timeline-title">Interactive hormone timeline — drag to explore the 24-hour cycle</div>
+      <div class="hormone-slider-row">
+        <label class="hormone-slider-label">Time of day:</label>
         <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="23" value="23" step="1">
         <span class="time-out" id="time-out"></span>
       </div>
       <div class="hormone-display" id="hormone-display"></div>
       <div class="sleep-grid">
-        <div class="sleep-panel-10">
-          <div class="sleep-label-9">Melatonin</div>
-          <div class="sleep-text-7">The "darkness hormone." Produced by the pineal gland when light fades (~2 hours before natural sleep time). Tells the body it's night. Does not cause sleep — signals its appropriateness. Peaks ~2–3am, fades as light returns. Suppressed by blue light (phone screens) — equivalent to a miniature sunrise signal.</div>
+        <div class="hormone-card">
+          <div class="hormone-name">Melatonin</div>
+          <div class="hormone-desc">The "darkness hormone." Produced by the pineal gland when light fades (~2 hours before natural sleep time). Tells the body it's night. Does not cause sleep — signals its appropriateness. Peaks ~2–3am, fades as light returns. Suppressed by blue light (phone screens) — equivalent to a miniature sunrise signal.</div>
         </div>
-        <div class="sleep-panel-10">
-          <div class="sleep-label-9">Adenosine</div>
-          <div class="sleep-text-7">The "sleep pressure" chemical. Produced as a by-product of brain activity — it accumulates steadily from the moment you wake. After ~16 hours, high adenosine creates overwhelming sleepiness. Sleep clears it. Caffeine works by blocking adenosine receptors (not reducing it) — when caffeine wears off, the accumulated adenosine floods in (the "crash").</div>
+        <div class="hormone-card">
+          <div class="hormone-name">Adenosine</div>
+          <div class="hormone-desc">The "sleep pressure" chemical. Produced as a by-product of brain activity — it accumulates steadily from the moment you wake. After ~16 hours, high adenosine creates overwhelming sleepiness. Sleep clears it. Caffeine works by blocking adenosine receptors (not reducing it) — when caffeine wears off, the accumulated adenosine floods in (the "crash").</div>
         </div>
-        <div class="sleep-panel-10">
-          <div class="sleep-label-9">Cortisol</div>
-          <div class="sleep-text-7">The "wake-up" hormone. Rises sharply in the last 2 hours of sleep and peaks ~30 min after waking (the "cortisol awakening response"). This is what enables alertness on waking. Chronic sleep deprivation keeps cortisol elevated, causing chronic stress responses, impaired immunity, and metabolic disruption. Cortisol follows the opposite arc to melatonin across the 24-hour cycle.</div>
+        <div class="hormone-card">
+          <div class="hormone-name">Cortisol</div>
+          <div class="hormone-desc">The "wake-up" hormone. Rises sharply in the last 2 hours of sleep and peaks ~30 min after waking (the "cortisol awakening response"). This is what enables alertness on waking. Chronic sleep deprivation keeps cortisol elevated, causing chronic stress responses, impaired immunity, and metabolic disruption. Cortisol follows the opposite arc to melatonin across the 24-hour cycle.</div>
         </div>
-        <div class="sleep-panel-10">
-          <div class="sleep-label-9">Growth hormone (GH)</div>
-          <div class="sleep-text-7">~70–80% of daily GH secretion occurs during the first slow-wave (N3) sleep episode — typically within 1 hour of falling asleep. GH drives tissue repair, muscle growth, fat metabolism, and immune function. This is why "sleep for gains" is physiologically real — skipping sleep cuts the primary GH pulse. Children and teenagers have dramatically higher GH secretion, explaining deep sleep and physical growth.</div>
+        <div class="hormone-card">
+          <div class="hormone-name">Growth hormone (GH)</div>
+          <div class="hormone-desc">~70–80% of daily GH secretion occurs during the first slow-wave (N3) sleep episode — typically within 1 hour of falling asleep. GH drives tissue repair, muscle growth, fat metabolism, and immune function. This is why "sleep for gains" is physiologically real — skipping sleep cuts the primary GH pulse. Children and teenagers have dramatically higher GH secretion, explaining deep sleep and physical growth.</div>
         </div>
       </div>
     </div>
@@ -286,14 +286,14 @@ const mod = modules.find((m) => m.id === 22)!;
     <!-- ─── Caffeine half-life interactive ─── -->
     <div class="sleep-panel">
       <div class="sleep-label">Caffeine half-life calculator — when is it safe to drink coffee?</div>
-      <div class="sleep-text-8">Caffeine's half-life is ~5–6 hours. If you drink coffee at 3pm, about 25% remains in your system at midnight — blocking adenosine receptors and degrading sleep quality even if you fall asleep normally.</div>
-      <div class="sleep-row-13">
+      <div class="caffeine-intro">Caffeine's half-life is ~5–6 hours. If you drink coffee at 3pm, about 25% remains in your system at midnight — blocking adenosine receptors and degrading sleep quality even if you fall asleep normally.</div>
+      <div class="caffeine-inputs">
         <div>
-          <div class="sleep-text-9">Coffee time</div>
+          <div class="caffeine-field-label">Coffee time</div>
           <input class="caf-time" type="time" id="caf-time" value="14:00">
         </div>
         <div>
-          <div class="sleep-text-9">Mg of caffeine</div>
+          <div class="caffeine-field-label">Mg of caffeine</div>
           <select class="caf-time" id="caf-mg">
             <option value="80">Espresso (80 mg)</option>
             <option value="95" selected>Drip coffee (95 mg)</option>
@@ -302,7 +302,7 @@ const mod = modules.find((m) => m.id === 22)!;
           </select>
         </div>
         <div>
-          <div class="sleep-text-9">Bedtime</div>
+          <div class="caffeine-field-label">Bedtime</div>
           <input class="caf-time" type="time" id="bed-time-caf" value="23:00">
         </div>
         <button onclick="window.calcCaffeine()">Calculate</button>
@@ -319,18 +319,18 @@ const mod = modules.find((m) => m.id === 22)!;
 
     <div class="sleep-panel">
       <div class="button-row-spaced">
-        <button class="window-control-2" onclick="window.showDepriv('mild')"   >Mild (6 hrs/night)</button>
-        <button class="window-control-2" onclick="window.showDepriv('24')"     >24 hours awake</button>
-        <button class="window-control-2" onclick="window.showDepriv('48')"     >48 hours awake</button>
-        <button class="window-control-2" onclick="window.showDepriv('72')"     >72 hours awake</button>
-        <button class="window-control-2" onclick="window.showDepriv('chronic')">Chronic insufficiency</button>
+        <button class="window-button" onclick="window.showDepriv('mild')"   >Mild (6 hrs/night)</button>
+        <button class="window-button" onclick="window.showDepriv('24')"     >24 hours awake</button>
+        <button class="window-button" onclick="window.showDepriv('48')"     >48 hours awake</button>
+        <button class="window-button" onclick="window.showDepriv('72')"     >72 hours awake</button>
+        <button class="window-button" onclick="window.showDepriv('chronic')">Chronic insufficiency</button>
       </div>
       <div class="depriv-display" id="depriv-display"></div>
     </div>
 
     <!-- ─── Visual: Impairment scale ─── -->
     <div class="sleep-panel">
-      <div class="sleep-label-7">Cognitive impairment vs. equivalent blood alcohol — the parallel that justifies concern</div>
+      <div class="panel-heading">Cognitive impairment vs. equivalent blood alcohol — the parallel that justifies concern</div>
       <svg class="chart-svg u-mb-xs" viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg">
         <!-- Y axis labels -->
         <text x="0" y="24" font-size="10" fill="#666">Hours awake</text>
@@ -355,7 +355,7 @@ const mod = modules.find((m) => m.id === 22)!;
         <!-- divider -->
         <line x1="55" y1="28" x2="55" y2="155" stroke="#e0e0e0" stroke-width="0.5"/>
       </svg>
-      <div class="sleep-text-10">Sources: Williamson & Feyer (2000), Dawson & Reid (1997). Impairment measured via psychomotor vigilance tasks — reaction time, sustained attention, and cognitive throughput.</div>
+      <div class="deprivation-sources">Sources: Williamson & Feyer (2000), Dawson & Reid (1997). Impairment measured via psychomotor vigilance tasks — reaction time, sustained attention, and cognitive throughput.</div>
     </div>
 
 
@@ -364,7 +364,7 @@ const mod = modules.find((m) => m.id === 22)!;
     ════════════════════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-chronotypes-and-daydreaming">Part F · chronotypes and daydreaming</h2>
 
-    <div class="sleep-grid-2">
+    <div class="chronotype-grid">
       <div class="card">
         <p class="clabel">Chronotype — your natural sleep timing</p>
         <p class="cval">Partly genetic, age-dependent</p>
@@ -389,7 +389,7 @@ const mod = modules.find((m) => m.id === 22)!;
 
     <!-- Chronotype population distribution — visual -->
     <div class="sleep-panel">
-      <div class="sleep-label-7">Chronotype distribution across the population</div>
+      <div class="panel-heading">Chronotype distribution across the population</div>
       <svg class="chart-svg" viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
         <!-- Bell curve path approximation -->
         <defs>
@@ -428,7 +428,7 @@ const mod = modules.find((m) => m.id === 22)!;
         <text x="440" y="78" font-size="10" fill="#999">cluster near</text>
         <text x="440" y="91" font-size="10" fill="#999">the middle</text>
       </svg>
-      <div class="sleep-text-11">Approximate distribution based on Munich Chronotype Questionnaire (MCTQ) population data (Roenneberg et al.). Teenager chronotypes shift significantly toward the owl end and return toward intermediate in the mid-twenties.</div>
+      <div class="source-note">Approximate distribution based on Munich Chronotype Questionnaire (MCTQ) population data (Roenneberg et al.). Teenager chronotypes shift significantly toward the owl end and return toward intermediate in the mid-twenties.</div>
     </div>
 
 
@@ -438,8 +438,8 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-g-sleep-hygiene-the-evidence-behind-each-rule">Part G · sleep hygiene — the evidence behind each rule</h2>
 
     <div class="sleep-panel">
-      <div class="sleep-row-15">
-        <div class="sleep-label-10">Sleep hygiene checklist — tick what you already do</div>
+      <div class="checklist-header">
+        <div class="checklist-title">Sleep hygiene checklist — tick what you already do</div>
         <div>
           <span class="hygiene-score" id="hygiene-score">0</span>
           <span class="hygiene-score-label"> / 10</span>
@@ -453,7 +453,7 @@ const mod = modules.find((m) => m.id === 22)!;
     </div>
 
     <!-- Sleep hygiene: the real science behind each item -->
-    <div class="sleep-grid-3">
+    <div class="hygiene-card-grid">
       <div class="card">
         <p class="clabel">Light exposure timing</p>
         <p class="cval">Morning light: the master reset</p>
@@ -483,17 +483,17 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-h-the-science-of-napping-types-timing-and-the-nappuccino">Part H · the science of napping — types, timing, and the nappuccino</h2>
 
     <div class="sleep-panel">
-      <div class="sleep-label-6">Interactive nap guide — choose a nap type</div>
+      <div class="tool-title">Interactive nap guide — choose a nap type</div>
       <div class="button-row-compact">
-        <button class="window-control-2" onclick="window.showNap('power')">Power nap (10–20 min)</button>
-        <button class="window-control-2" onclick="window.showNap('full')" >Full cycle nap (90 min)</button>
-        <button class="window-control-2" onclick="window.showNap('nappuccino')">The nappuccino</button>
-        <button class="window-control-2" onclick="window.showNap('avoid')">When not to nap</button>
+        <button class="window-button" onclick="window.showNap('power')">Power nap (10–20 min)</button>
+        <button class="window-button" onclick="window.showNap('full')" >Full cycle nap (90 min)</button>
+        <button class="window-button" onclick="window.showNap('nappuccino')">The nappuccino</button>
+        <button class="window-button" onclick="window.showNap('avoid')">When not to nap</button>
       </div>
       <div class="nap-display" id="nap-display">Select a nap type above to learn about it.</div>
     </div>
 
-    <div class="sleep-grid-4">
+    <div class="nap-card-grid">
       <div class="card">
         <p class="clabel">Are naps a sign of laziness?</p>
         <p class="cval">No — they are biologically programmed</p>
@@ -518,7 +518,7 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-i-sleep-across-the-lifespan-how-needs-and-architecture-change">Part I · sleep across the lifespan — how needs and architecture change</h2>
 
     <div class="sleep-panel">
-      <div class="sleep-label-7">Daily sleep needs and REM proportion by age group</div>
+      <div class="panel-heading">Daily sleep needs and REM proportion by age group</div>
       <svg class="chart-svg" viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg">
         <!-- Grid lines -->
         <line x1="80" y1="20" x2="80" y2="165" stroke="#e0e0e0" stroke-width="0.5"/>
@@ -571,10 +571,10 @@ const mod = modules.find((m) => m.id === 22)!;
         <rect x="490" y="58" width="10" height="10" rx="2" fill="#D4537E" opacity="0.7"/>
         <text x="504" y="68" font-size="10" fill="#666">REM portion</text>
       </svg>
-      <div class="sleep-text-11">Based on NSF and AASM guidelines. REM % is approximate and varies between individuals and measurement methods. The dramatic decline in REM from infancy to adulthood (50% → 20%) may reflect the role of REM in the developing brain's synaptic consolidation during early neural growth.</div>
+      <div class="source-note">Based on NSF and AASM guidelines. REM % is approximate and varies between individuals and measurement methods. The dramatic decline in REM from infancy to adulthood (50% → 20%) may reflect the role of REM in the developing brain's synaptic consolidation during early neural growth.</div>
     </div>
 
-    <div class="sleep-grid-4">
+    <div class="nap-card-grid">
       <div class="card">
         <p class="clabel">Why newborns sleep so much — and 50% is REM</p>
         <p class="cval">REM drives brain development in infants</p>

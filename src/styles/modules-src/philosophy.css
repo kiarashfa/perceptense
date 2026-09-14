@@ -194,7 +194,7 @@
   margin-bottom:3px;
 }
 
-.philosophy-label-2 {
+.disciplines-kicker {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -209,176 +209,176 @@
   margin-top:6px;
 }
 
-.philosophy-grid-2 {
+.card-grid-auto {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
   gap:10px;
   margin-bottom:1rem;
 }
 
-.philosophy-panel-3 {
+.branch-panel-metaphysics {
   background:#EEEDFE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #AFA9EC;
 }
 
-.philosophy-label-3 {
+.branch-title-metaphysics {
   font-size:13px;
   font-weight:500;
   color:#26215C;
   margin-bottom:4px;
 }
 
-.philosophy-text-2 {
+.branch-question-metaphysics {
   font-size:12px;
   color:#3C3489;
   margin-bottom:6px;
   font-style:italic;
 }
 
-.philosophy-text-3 {
+.branch-desc-metaphysics {
   font-size:12px;
   color:#534AB7;
   line-height:1.5;
 }
 
-.philosophy-panel-4 {
+.branch-panel-epistemology {
   background:#E6F1FB;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #85B7EB;
 }
 
-.philosophy-label-4 {
+.branch-title-epistemology {
   font-size:13px;
   font-weight:500;
   color:#042C53;
   margin-bottom:4px;
 }
 
-.philosophy-text-4 {
+.branch-question-epistemology {
   font-size:12px;
   color:#0C447C;
   margin-bottom:6px;
   font-style:italic;
 }
 
-.philosophy-text-5 {
+.branch-desc-epistemology {
   font-size:12px;
   color:#185FA5;
   line-height:1.5;
 }
 
-.philosophy-panel-5 {
+.branch-panel-ethics {
   background:#E1F5EE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #5DCAA5;
 }
 
-.philosophy-label-5 {
+.branch-title-ethics {
   font-size:13px;
   font-weight:500;
   color:#04342C;
   margin-bottom:4px;
 }
 
-.philosophy-text-6 {
+.branch-question-ethics {
   font-size:12px;
   color:#085041;
   margin-bottom:6px;
   font-style:italic;
 }
 
-.philosophy-text-7 {
+.branch-desc-ethics {
   font-size:12px;
   color:#0F6E56;
   line-height:1.5;
 }
 
-.philosophy-panel-6 {
+.branch-panel-political {
   background:#FAEEDA;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #EF9F27;
 }
 
-.philosophy-label-6 {
+.branch-title-political {
   font-size:13px;
   font-weight:500;
   color:#412402;
   margin-bottom:4px;
 }
 
-.philosophy-text-8 {
+.branch-question-political {
   font-size:12px;
   color:#633806;
   margin-bottom:6px;
   font-style:italic;
 }
 
-.philosophy-text-9 {
+.branch-desc-political {
   font-size:12px;
   color:#854F0B;
   line-height:1.5;
 }
 
-.philosophy-panel-7 {
+.branch-panel-aesthetics {
   background:#FBEAF0;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #ED93B1;
 }
 
-.philosophy-label-7 {
+.branch-title-aesthetics {
   font-size:13px;
   font-weight:500;
   color:#4B1528;
   margin-bottom:4px;
 }
 
-.philosophy-text-10 {
+.branch-question-aesthetics {
   font-size:12px;
   color:#72243E;
   margin-bottom:6px;
   font-style:italic;
 }
 
-.philosophy-text-11 {
+.branch-desc-aesthetics {
   font-size:12px;
   color:#993556;
   line-height:1.5;
 }
 
-.philosophy-panel-8 {
+.branch-panel-logic {
   background:#F1EFE8;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #D3D1C7;
 }
 
-.philosophy-label-8 {
+.branch-title-logic {
   font-size:13px;
   font-weight:500;
   color:#2C2C2A;
   margin-bottom:4px;
 }
 
-.philosophy-text-12 {
+.branch-question-logic {
   font-size:12px;
   color:#444441;
   margin-bottom:6px;
   font-style:italic;
 }
 
-.philosophy-text-13 {
+.branch-desc-logic {
   font-size:12px;
   color:#5F5E5A;
   line-height:1.5;
 }
 
-.philosophy-text-14 {
+.slider-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
@@ -406,7 +406,7 @@
   line-height:1.6;
 }
 
-.philosophy-panel-9 {
+.context-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 13px;
@@ -416,7 +416,7 @@
   margin-bottom:10px;
 }
 
-.philosophy-text-15 {
+.fallacy-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -436,15 +436,15 @@
   width:14%;
 }
 
-.philosophy-media-2 {
+.col-narrow {
   width:16%;
 }
 
-.philosophy-media-3 {
+.col-wide {
   width:18%;
 }
 
-.philosophy-text-16 {
+.school-subname {
   color:var(--color-text-tertiary);
   font-size:11px;
 }

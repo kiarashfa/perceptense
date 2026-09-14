@@ -246,7 +246,7 @@
   margin-bottom:3px;
 }
 
-.psychology-panel-2 {
+.disciplines-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -255,7 +255,7 @@
   line-height:1.6;
 }
 
-.psychology-panel-3 {
+.bordered-panel {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-lg);
@@ -263,7 +263,7 @@
   margin-bottom:12px;
 }
 
-.psychology-label-2 {
+.panel-kicker {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -289,7 +289,7 @@
   padding:3px 10px;
 }
 
-.psychology-panel-4 {
+.therapy-matrix-panel {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-lg);
@@ -298,129 +298,129 @@
   overflow-x:auto;
 }
 
-.psychology-text-2 {
+.matrix-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:6px;
   line-height:1.5;
 }
 
-.psychology-grid-2 {
+.professionals-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:10px;
   margin-bottom:1rem;
 }
 
-.psychology-panel-5 {
+.pro-panel-psychiatrist {
   background:#EEEDFE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #AFA9EC;
 }
 
-.psychology-label-3 {
+.pro-title-psychiatrist {
   font-size:13px;
   font-weight:500;
   color:#26215C;
   margin-bottom:5px;
 }
 
-.psychology-text-3 {
+.pro-desc-psychiatrist {
   font-size:12px;
   color:#3C3489;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.psychology-text-4 {
+.pro-training-psychiatrist {
   font-size:11px;
   color:#534AB7;
   line-height:1.4;
 }
 
-.psychology-panel-6 {
+.pro-panel-psychologist {
   background:#E6F1FB;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #85B7EB;
 }
 
-.psychology-label-4 {
+.pro-title-psychologist {
   font-size:13px;
   font-weight:500;
   color:#042C53;
   margin-bottom:5px;
 }
 
-.psychology-text-5 {
+.pro-desc-psychologist {
   font-size:12px;
   color:#0C447C;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.psychology-text-6 {
+.pro-training-psychologist {
   font-size:11px;
   color:#185FA5;
   line-height:1.4;
 }
 
-.psychology-panel-7 {
+.pro-panel-psychotherapist {
   background:#E1F5EE;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #5DCAA5;
 }
 
-.psychology-label-5 {
+.pro-title-psychotherapist {
   font-size:13px;
   font-weight:500;
   color:#04342C;
   margin-bottom:5px;
 }
 
-.psychology-text-7 {
+.pro-desc-psychotherapist {
   font-size:12px;
   color:#085041;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.psychology-text-8 {
+.pro-training-psychotherapist {
   font-size:11px;
   color:#0F6E56;
   line-height:1.4;
 }
 
-.psychology-panel-8 {
+.pro-panel-neuropsychologist {
   background:#FAEEDA;
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   border:0.5px solid #EF9F27;
 }
 
-.psychology-label-6 {
+.pro-title-neuropsychologist {
   font-size:13px;
   font-weight:500;
   color:#412402;
   margin-bottom:5px;
 }
 
-.psychology-text-9 {
+.pro-desc-neuropsychologist {
   font-size:12px;
   color:#633806;
   line-height:1.6;
   margin-bottom:6px;
 }
 
-.psychology-text-10 {
+.pro-use-neuropsychologist {
   font-size:11px;
   color:#854F0B;
   line-height:1.4;
 }
 
-.psychology-label-7 {
+.chart-kicker {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -429,7 +429,7 @@
   margin-bottom:12px;
 }
 
-.psychology-text-11 {
+.bias-chart-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:8px;
@@ -441,7 +441,7 @@
   padding:3px 9px;
 }
 
-.psychology-row-3 {
+.memory-pipeline {
   display:flex;
   align-items:center;
   gap:4px;
@@ -450,7 +450,7 @@
   padding-bottom:4px;
 }
 
-.psychology-panel-9 {
+.memory-stage-sensory {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 12px;
@@ -458,27 +458,27 @@
   flex-shrink:0;
 }
 
-.psychology-text-12 {
+.stage-name-blue {
   font-size:11px;
   font-weight:600;
   color:#0C447C;
   margin-bottom:3px;
 }
 
-.psychology-text-13 {
+.stage-detail {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.45;
 }
 
-.psychology-text-14 {
+.pipeline-arrow {
   color:var(--color-text-tertiary);
   font-size:16px;
   flex-shrink:0;
   padding:0 2px;
 }
 
-.psychology-panel-10 {
+.memory-stage-working {
   background:#E6F1FB;
   border-radius:var(--border-radius-md);
   padding:9px 12px;
@@ -487,13 +487,13 @@
   border:0.5px solid #85B7EB;
 }
 
-.psychology-text-15 {
+.stage-detail-blue {
   font-size:11px;
   color:#185FA5;
   line-height:1.45;
 }
 
-.psychology-panel-11 {
+.memory-stage-long-term {
   background:#EAF3DE;
   border-radius:var(--border-radius-md);
   padding:9px 12px;
@@ -502,61 +502,61 @@
   border:0.5px solid #97c459;
 }
 
-.psychology-text-16 {
+.stage-name-green {
   font-size:11px;
   font-weight:600;
   color:#27500A;
   margin-bottom:3px;
 }
 
-.psychology-text-17 {
+.stage-detail-green {
   font-size:11px;
   color:#3B6D11;
   line-height:1.45;
 }
 
-.psychology-text-18 {
+.pipeline-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:8px;
 }
 
-.psychology-label-8 {
+.subsection-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-secondary);
   margin-bottom:8px;
 }
 
-.psychology-grid-3 {
+.memory-types-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(165px, 1fr));
   gap:8px;
   margin-bottom:12px;
 }
 
-.psychology-panel-12 {
+.memory-type-card {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-lg);
   padding:11px 13px;
 }
 
-.psychology-text-19 {
+.memory-type-name {
   font-size:12px;
   font-weight:600;
   color:var(--color-text-primary);
   margin-bottom:4px;
 }
 
-.psychology-text-20 {
+.memory-type-desc {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.5;
   margin-bottom:5px;
 }
 
-.psychology-panel-13 {
+.memory-tag-episodic {
   font-size:10px;
   background:#EEEDFE;
   color:#3C3489;
@@ -565,7 +565,7 @@
   display:inline-block;
 }
 
-.psychology-panel-14 {
+.memory-tag-semantic {
   font-size:10px;
   background:#E6F1FB;
   color:#0C447C;
@@ -574,7 +574,7 @@
   display:inline-block;
 }
 
-.psychology-panel-15 {
+.memory-tag-procedural {
   font-size:10px;
   background:#E1F5EE;
   color:#085041;
@@ -583,7 +583,7 @@
   display:inline-block;
 }
 
-.psychology-panel-16 {
+.memory-tag-prospective {
   font-size:10px;
   background:#FAEEDA;
   color:#633806;
@@ -592,7 +592,7 @@
   display:inline-block;
 }
 
-.psychology-label-9 {
+.list-kicker {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -615,21 +615,21 @@
   border-radius:var(--border-radius-md);
 }
 
-.psychology-grid-4 {
+.ocean-layout {
   display:grid;
   grid-template-columns:4fr 2fr;
   gap:12px;
   margin-bottom:1rem;
 }
 
-.psychology-label-10 {
+.ocean-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:10px;
 }
 
-.psychology-panel-18 {
+.big-five-facts {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-lg);
@@ -639,14 +639,14 @@
   box-sizing:border-box;
 }
 
-.psychology-label-11 {
+.facts-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:8px;
 }
 
-.psychology-text-21 {
+.big-five-body {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.65;
@@ -656,105 +656,105 @@
   margin:0 0 7px;
 }
 
-.psychology-spacing-2 {
+.fact-paragraph-flush {
   margin:0;
 }
 
-.psychology-grid-5 {
+.arousal-zones-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));
   gap:8px;
   margin-bottom:12px;
 }
 
-.psychology-panel-19 {
+.zone-panel-under {
   background:#FAEEDA;
   border-radius:var(--border-radius-lg);
   padding:11px 13px;
   border:0.5px solid #EF9F27;
 }
 
-.psychology-text-22 {
+.zone-title-under {
   font-size:12px;
   font-weight:600;
   color:#412402;
   margin-bottom:4px;
 }
 
-.psychology-text-23 {
+.zone-desc-under {
   font-size:12px;
   color:#633806;
   line-height:1.5;
 }
 
-.psychology-panel-20 {
+.zone-panel-optimal {
   background:#EAF3DE;
   border-radius:var(--border-radius-lg);
   padding:11px 13px;
   border:0.5px solid #97c459;
 }
 
-.psychology-text-24 {
+.zone-title-optimal {
   font-size:12px;
   font-weight:600;
   color:#1A3804;
   margin-bottom:4px;
 }
 
-.psychology-text-25 {
+.zone-desc-optimal {
   font-size:12px;
   color:#27500A;
   line-height:1.5;
 }
 
-.psychology-panel-21 {
+.zone-panel-over {
   background:#FCEBEB;
   border-radius:var(--border-radius-lg);
   padding:11px 13px;
   border:0.5px solid #f09595;
 }
 
-.psychology-text-26 {
+.zone-title-over {
   font-size:12px;
   font-weight:600;
   color:#550A0A;
   margin-bottom:4px;
 }
 
-.psychology-text-27 {
+.zone-desc-over {
   font-size:12px;
   color:#791F1F;
   line-height:1.5;
 }
 
-.psychology-text-28 {
+.regulation-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   line-height:1.5;
   margin-top:2px;
 }
 
-.psychology-grid-6 {
+.emotion-theories-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:8px;
   margin-top:8px;
 }
 
-.psychology-text-29 {
+.theory-name {
   font-size:11px;
   font-weight:600;
   color:var(--color-text-primary);
   margin-bottom:3px;
 }
 
-.psychology-text-30 {
+.theory-desc {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.5;
 }
 
-.psychology-panel-22 {
+.social-psych-intro {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 13px;
