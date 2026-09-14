@@ -58,6 +58,28 @@
 .dn-label { font-size: 12px; color: var(--color-text-secondary); width: 150px; flex-shrink: 0; line-height: 1.3; }
 .dn-dots  { flex: 1; display: flex; flex-wrap: wrap; gap: 2px; align-content: flex-start; }
 .dn-dot   { width: 6px; height: 6px; border-radius: 50%; }
+.dn-c1 { background: #E8503A; }
+.dn-c2 { background: #E6722C; }
+.dn-c3 { background: #C38515; }
+.dn-c4 { background: #AE8E13; }
+.dn-c5 { background: #4D96E2; }
+.dn-c6 { background: #378ADD; }
+.dn-c7 { background: #185FA5; }
+.dn-c8 { background: #0C447C; }
+html[data-theme="dark"] .dn-c2 { background: #E87C3A; }
+html[data-theme="dark"] .dn-c3 { background: #E8A427; }
+html[data-theme="dark"] .dn-c4 { background: #E8C027; }
+html[data-theme="dark"] .dn-c5 { background: #85B7EB; }
+html[data-theme="dark"] .dn-c7 { background: #1B6AB9; }
+html[data-theme="dark"] .dn-c8 { background: #1369C0; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .dn-c2 { background: #E87C3A; }
+  html[data-theme="auto"] .dn-c3 { background: #E8A427; }
+  html[data-theme="auto"] .dn-c4 { background: #E8C027; }
+  html[data-theme="auto"] .dn-c5 { background: #85B7EB; }
+  html[data-theme="auto"] .dn-c7 { background: #1B6AB9; }
+  html[data-theme="auto"] .dn-c8 { background: #1369C0; }
+}
 .dn-val   { font-size: 11px; color: var(--color-text-tertiary); white-space: nowrap; width: 80px; text-align: right; flex-shrink: 0; }
 @media (max-width: 480px) {
   .dn-label { width: 110px; font-size: 11px; }
@@ -89,13 +111,13 @@
 .u-text-white { color: #fff; }
 .u-bg-blue-700 { background: #185FA5; }
 .u-w-56-pct { width: 56%; }
-.u-bg-blue-500 { background: #378ADD; }
+.u-bg-blue-500 { background: #2276CA; }
 .u-w-3-d-2-pct { width: 3.2%; }
 .u-bg-blue-200 { background: #B5D4F4; }
 .u-w-2-d-2-pct { width: 2.2%; }
 .u-w-1-d-4-pct { width: 1.4%; }
 .u-w-68-pct { width: 68%; }
-.u-bg-blue-400 { background: #5BA0D8; }
+.u-bg-blue-400 { background: #2C79B7; }
 .u-bg-blue-100 { background: #CCDFF4; }
 .u-fw-400 { font-weight: 400; }
 .u-p-3px-12px { padding: 3px 12px; }
@@ -123,7 +145,7 @@
 .u-w-5-d-5-pct { width: 5.5%; }
 .u-w-0-d-1-pct { width: 0.1%; }
 .u-w-42-pct { width: 42%; }
-.u-bg-green-600 { background: #1D9E75; }
+.u-bg-green-600 { background: #188260; }
 .u-bg-green-900 { background: #085041; }
 .u-w-22-pct { width: 22%; }
 .u-bg-green-400 { background: #5DCAA5; }
@@ -195,4 +217,35 @@
 .u-w-13-pct { width: 13%; }
 .u-min-w-280px { min-width: 280px; }
 .u-min-w-300px { min-width: 300px; }
+
+/* --- Theme-safe SVG text colours (ocean depth, latitude/city charts) --- */
+.geo-c-green { fill: #188260; }
+.geo-c-green-dark { fill: #0F6E56; }
+.geo-c-amber { fill: #9A6910; }
+.geo-c-blue { fill: #185FA5; }
+.geo-c-blue-light { fill: #2276CA; }
+.geo-c-purple { fill: #533AB7; }
+.geo-c-lblue { fill: #2175CC; }
+.geo-c-blue2 { fill: #2C79B7; }
+.geo-c-purple2 { fill: #6D63D8; }
+html[data-theme="dark"] .geo-c-green { fill: #1D9E75; }
+html[data-theme="dark"] .geo-c-green-dark { fill: #159978; }
+html[data-theme="dark"] .geo-c-amber { fill: #E8A427; }
+html[data-theme="dark"] .geo-c-blue { fill: #2E88E1; }
+html[data-theme="dark"] .geo-c-blue-light { fill: #378ADD; }
+html[data-theme="dark"] .geo-c-purple { fill: #8C79D5; }
+html[data-theme="dark"] .geo-c-lblue { fill: #85B7EB; }
+html[data-theme="dark"] .geo-c-blue2 { fill: #5BA0D8; }
+html[data-theme="dark"] .geo-c-purple2 { fill: #7F77DD; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .geo-c-green { fill: #1D9E75; }
+  html[data-theme="auto"] .geo-c-green-dark { fill: #159978; }
+  html[data-theme="auto"] .geo-c-amber { fill: #E8A427; }
+  html[data-theme="auto"] .geo-c-blue { fill: #2E88E1; }
+  html[data-theme="auto"] .geo-c-blue-light { fill: #378ADD; }
+  html[data-theme="auto"] .geo-c-purple { fill: #8C79D5; }
+  html[data-theme="auto"] .geo-c-lblue { fill: #85B7EB; }
+  html[data-theme="auto"] .geo-c-blue2 { fill: #5BA0D8; }
+  html[data-theme="auto"] .geo-c-purple2 { fill: #7F77DD; }
+}
   

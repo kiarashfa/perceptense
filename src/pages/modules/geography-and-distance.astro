@@ -578,7 +578,7 @@ const mod = modules.find((m) => m.id === 3)!;
           </defs>
           <!-- Water surface -->
           <line x1="0" y1="20" x2="560" y2="20" stroke="#85B7EB" stroke-width="1.5"/>
-          <text x="4" y="15" font-size="9" fill="#185FA5">sea level</text>
+          <text x="4" y="15" font-size="9" class="geo-c-blue">sea level</text>
           <!-- Depth scale: 0=20px, 11000m=185px → 1m = 165/11000 = 0.015px -->
           <!-- 200m (sunlight zone) = 20+3=23px -->
           <!-- 1000m avg ocean = 20+15=35px -->
@@ -588,36 +588,36 @@ const mod = modules.find((m) => m.id === 3)!;
 
           <!-- Sunlight zone 0–200m -->
           <rect x="20" y="20" width="120" height="3" fill="#9FE1CB" opacity="0.6"/>
-          <text x="82" y="18" text-anchor="middle" font-size="8.5" fill="#1D9E75">Sunlight zone (0–200 m)</text>
+          <text x="82" y="9" text-anchor="middle" font-size="8.5" class="geo-c-green">Sunlight zone (0–200 m)</text>
 
           <!-- Column shapes for visual depth comparison -->
           <!-- Atlantic avg 3,300m → 20+49.5=70 -->
           <rect x="30" y="20" width="80" height="49" fill="url(#oceanGrad)" rx="2" opacity="0.8"/>
           <text x="70" y="75" text-anchor="middle" font-size="8.5" fill="#fff">Atlantic avg</text>
-          <text x="70" y="85" text-anchor="middle" font-size="8" fill="#85B7EB">3,300 m</text>
+          <text x="70" y="85" text-anchor="middle" font-size="8" class="geo-c-lblue">3,300 m</text>
 
           <!-- Pacific avg 4,000m → 20+60=80 -->
           <rect x="130" y="20" width="80" height="60" fill="url(#oceanGrad)" rx="2" opacity="0.9"/>
           <text x="170" y="87" text-anchor="middle" font-size="8.5" fill="#fff">Pacific avg</text>
-          <text x="170" y="97" text-anchor="middle" font-size="8" fill="#85B7EB">4,000 m</text>
+          <text x="170" y="97" text-anchor="middle" font-size="8" class="geo-c-lblue">4,000 m</text>
 
           <!-- Puerto Rico Trench 8,376m (Atlantic deepest) → 20+125.6=146 -->
           <rect x="240" y="20" width="40" height="126" fill="#0C447C" rx="2"/>
-          <text x="260" y="153" text-anchor="middle" font-size="8.5" fill="#85B7EB">Puerto Rico</text>
-          <text x="260" y="163" text-anchor="middle" font-size="8" fill="#85B7EB">Trench</text>
-          <text x="260" y="173" text-anchor="middle" font-size="8" fill="#85B7EB">8,376 m</text>
+          <text x="260" y="153" text-anchor="middle" font-size="8.5" class="geo-c-lblue">Puerto Rico</text>
+          <text x="260" y="163" text-anchor="middle" font-size="8" class="geo-c-lblue">Trench</text>
+          <text x="260" y="173" text-anchor="middle" font-size="8" class="geo-c-lblue">8,376 m</text>
 
           <!-- Mariana Trench 10,935m → 163px + 20 = 183 -->
           <rect x="310" y="20" width="40" height="163" fill="#042C53" rx="2"/>
-          <text x="330" y="189" text-anchor="middle" font-size="8.5" fill="#5BA0D8">Mariana</text>
-          <text x="330" y="199" text-anchor="middle" font-size="7.5" fill="#5BA0D8">Trench 10,935 m</text>
+          <text x="330" y="189" text-anchor="middle" font-size="8.5" class="geo-c-blue2">Mariana</text>
+          <text x="330" y="199" text-anchor="middle" font-size="7.5" class="geo-c-blue2">Trench 10,935 m</text>
 
           <!-- Everest for comparison: 8,849m → 20+132=152, shown inverted as a mountain above sea -->
           <polygon points="440,20 460,-112 480,20" fill="#CECBF6" stroke="#AFA9EC" stroke-width="0.5"/>
           <!-- clip to keep above sea line -->
           <rect x="430" y="0" width="60" height="20" fill="var(--color-background-primary)" opacity="0.7"/>
-          <text x="460" y="14" text-anchor="middle" font-size="7.5" fill="#7F77DD">Everest (8,849 m)</text>
-          <text x="460" y="24" text-anchor="middle" font-size="7" fill="#7F77DD">above sea level</text>
+          <text x="460" y="14" text-anchor="middle" font-size="7.5" class="geo-c-purple2">Everest (8,849 m)</text>
+          <text x="460" y="24" text-anchor="middle" font-size="7" class="geo-c-purple2">above sea level</text>
           <line x1="420" y1="20" x2="500" y2="20" stroke="#AFA9EC" stroke-width="0.75" stroke-dasharray="3 2"/>
 
           <!-- depth tick marks on right -->
@@ -724,54 +724,54 @@ const mod = modules.find((m) => m.id === 3)!;
           <text x="1" y="73" font-size="8" fill="var(--color-text-tertiary)">60°</text>
           <!-- 66.5° y=57 -->
           <line x1="28" y1="57" x2="540" y2="57" stroke="#378ADD" stroke-width="0.75" stroke-dasharray="4 3" opacity="0.5"/>
-          <text x="1" y="60" font-size="7.5" fill="#378ADD">66°</text>
+          <text x="1" y="60" font-size="7.5" class="geo-c-blue-light">66°</text>
           <!-- 90° y=10 -->
           <text x="1" y="13" font-size="8" fill="var(--color-text-tertiary)">90°</text>
           <text x="3" y="203" font-size="8" fill="var(--color-text-tertiary)">N lat</text>
 
           <!-- Cities: dot at x position, y = 190 - lat*2 -->
           <!-- Singapore 1.3° y=187.4 ≈ 187 -->
-          <circle cx="80" cy="187" r="3" fill="#1D9E75"/>
-          <text x="80" y="182" text-anchor="middle" font-size="8.5" fill="#1D9E75">Singapore</text>
+          <circle cx="80" cy="187" r="3" class="geo-c-green"/>
+          <text x="80" y="182" text-anchor="middle" font-size="8.5" class="geo-c-green">Singapore</text>
           <text x="80" y="174" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">1.3°N</text>
 
           <!-- Bangkok 13.7° y=162.6 ≈ 163 -->
-          <circle cx="140" cy="163" r="3" fill="#1D9E75"/>
-          <text x="140" y="158" text-anchor="middle" font-size="8.5" fill="#1D9E75">Bangkok</text>
+          <circle cx="140" cy="163" r="3" class="geo-c-green"/>
+          <text x="140" y="158" text-anchor="middle" font-size="8.5" class="geo-c-green">Bangkok</text>
           <text x="140" y="150" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">13.7°N</text>
 
           <!-- Mexico City 19° y=152 -->
-          <circle cx="200" cy="152" r="3" fill="#0F6E56"/>
-          <text x="200" y="147" text-anchor="middle" font-size="8.5" fill="#0F6E56">Mexico City</text>
+          <circle cx="200" cy="152" r="3" class="geo-c-green-dark"/>
+          <text x="200" y="147" text-anchor="middle" font-size="8.5" class="geo-c-green-dark">Mexico City</text>
           <text x="200" y="139" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">19.4°N</text>
 
           <!-- Cairo 30° y=130 -->
-          <circle cx="260" cy="130" r="3" fill="#E8A427"/>
-          <text x="260" y="125" text-anchor="middle" font-size="8.5" fill="#E8A427">Cairo</text>
+          <circle cx="260" cy="130" r="3" class="geo-c-amber"/>
+          <text x="260" y="125" text-anchor="middle" font-size="8.5" class="geo-c-amber">Cairo</text>
           <text x="260" y="117" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">30.1°N</text>
 
           <!-- Tokyo / LA 34-35° y=120 -->
-          <circle cx="320" cy="120" r="3" fill="#185FA5"/>
-          <text x="320" y="115" text-anchor="middle" font-size="8.5" fill="#185FA5">Tokyo / LA</text>
+          <circle cx="320" cy="120" r="3" class="geo-c-blue"/>
+          <text x="320" y="115" text-anchor="middle" font-size="8.5" class="geo-c-blue">Tokyo / LA</text>
           <text x="320" y="107" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">34–35°N</text>
 
           <!-- NYC 40.7° y=109 -->
-          <circle cx="380" cy="109" r="3" fill="#185FA5"/>
-          <text x="380" y="104" text-anchor="middle" font-size="8.5" fill="#185FA5">New York</text>
+          <circle cx="380" cy="109" r="3" class="geo-c-blue"/>
+          <text x="380" y="104" text-anchor="middle" font-size="8.5" class="geo-c-blue">New York</text>
           <text x="380" y="96" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">40.7°N</text>
 
           <!-- London 51.5° y=87 -->
-          <circle cx="440" cy="87" r="3" fill="#378ADD"/>
-          <text x="440" y="82" text-anchor="middle" font-size="8.5" fill="#378ADD">London</text>
+          <circle cx="440" cy="87" r="3" class="geo-c-blue-light"/>
+          <text x="440" y="82" text-anchor="middle" font-size="8.5" class="geo-c-blue-light">London</text>
           <text x="440" y="74" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">51.5°N</text>
 
           <!-- Oslo 59.9° y=70 -->
-          <circle cx="500" cy="70" r="3" fill="#533AB7"/>
-          <text x="500" y="65" text-anchor="middle" font-size="8.5" fill="#533AB7">Oslo</text>
+          <circle cx="500" cy="70" r="3" class="geo-c-purple"/>
+          <text x="500" y="65" text-anchor="middle" font-size="8.5" class="geo-c-purple">Oslo</text>
           <text x="500" y="57" text-anchor="middle" font-size="7.5" fill="var(--color-text-tertiary)">59.9°N</text>
 
           <!-- Arctic circle label -->
-          <text x="320" y="54" text-anchor="middle" font-size="8" fill="#378ADD" opacity="0.7">← Arctic Circle (66.5°N)</text>
+          <text x="320" y="54" text-anchor="middle" font-size="8" class="geo-c-blue-light" opacity="0.7">← Arctic Circle (66.5°N)</text>
         </svg>
       </div>
       <p class="u-fs-12px text-secondary u-m-6px-0-0 u-lh-1-5">Surprise: Tokyo and Los Angeles are at nearly the same latitude (35°N). London is further north than most of Canada's major cities — it sits at the same latitude as central Newfoundland. New York is further south than Madrid.</p>
@@ -1036,16 +1036,16 @@ const mod = modules.find((m) => m.id === 3)!;
 
   /* ── Population density dot panels ── */
   var DENSITY_DATA = [
-    { label: 'Bangladesh',   density: 1325, color: '#E8503A' },
-    { label: 'Netherlands',  density: 518,  color: '#E8503A' },
-    { label: 'UK',           density: 275,  color: '#E87C3A' },
-    { label: 'India',        density: 464,  color: '#E87C3A' },
-    { label: 'Germany',      density: 235,  color: '#E8A427' },
-    { label: 'France',       density: 119,  color: '#E8C027' },
-    { label: 'USA',          density: 36,   color: '#85B7EB' },
-    { label: 'Russia',       density: 9,    color: '#378ADD' },
-    { label: 'Australia',    density: 3,    color: '#185FA5' },
-    { label: 'Mongolia',     density: 2,    color: '#0C447C' }
+    { label: 'Bangladesh',   density: 1325, cls: 'dn-c1' },
+    { label: 'Netherlands',  density: 518,  cls: 'dn-c1' },
+    { label: 'UK',           density: 275,  cls: 'dn-c2' },
+    { label: 'India',        density: 464,  cls: 'dn-c2' },
+    { label: 'Germany',      density: 235,  cls: 'dn-c3' },
+    { label: 'France',       density: 119,  cls: 'dn-c4' },
+    { label: 'USA',          density: 36,   cls: 'dn-c5' },
+    { label: 'Russia',       density: 9,    cls: 'dn-c6' },
+    { label: 'Australia',    density: 3,    cls: 'dn-c7' },
+    { label: 'Mongolia',     density: 2,    cls: 'dn-c8' }
   ];
 
   (function buildDensityPanel() {
@@ -1067,8 +1067,7 @@ const mod = modules.find((m) => m.id === 3)!;
       var numDots = Math.max(1, Math.round((d.density / maxDensity) * maxDots));
       for (var i = 0; i < numDots; i++) {
         var dot = document.createElement('div');
-        dot.className = 'dn-dot';
-        dot.style.background = d.color;
+        dot.className = 'dn-dot ' + d.cls;
         dotsWrap.appendChild(dot);
       }
 
