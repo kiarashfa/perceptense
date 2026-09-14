@@ -3,6 +3,26 @@
 .taste-bar-label { font-size:11px; color:var(--color-text-secondary); width:72px; flex-shrink:0; text-align:right; }
 .taste-bar-track { flex:1; background:var(--color-background-secondary); border-radius:3px; height:8px; overflow:hidden; }
 
+.wine-fill-body { background:#A32D2D; }
+html[data-theme="dark"] .wine-fill-body { background:#cc4646; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-fill-body { background:#cc4646; } }
+
+.wine-fill-tannin { background:#712B13; }
+html[data-theme="dark"] .wine-fill-tannin { background:#cd4e22; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-fill-tannin { background:#cd4e22; } }
+
+.wine-fill-acidity { background:#27500A; }
+html[data-theme="dark"] .wine-fill-acidity { background:#428611; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-fill-acidity { background:#428611; } }
+
+.wine-fill-fruit { background:#633806; }
+html[data-theme="dark"] .wine-fill-fruit { background:#b0640b; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-fill-fruit { background:#b0640b; } }
+
+.wine-fill-oak { background:#854F0B; }
+html[data-theme="dark"] .wine-fill-oak { background:#ab650e; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-fill-oak { background:#ab650e; } }
+
 /* ABV calculator */
 .calc-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px; }
 @media(max-width:480px){ .calc-row { grid-template-columns:1fr; } }
@@ -188,6 +208,9 @@
   font-size:9px;
   color:rgba(255,255,255,0.9);
 }
+.scale-end-label-light {
+  color:#1a1a18;
+}
 
 .scale-desc {
   font-size:10px;
@@ -244,6 +267,7 @@
   background:#3C2415;
   border-radius:2px;
   display:inline-block;
+  border:1px solid var(--color-text-tertiary);
 }
 
 .swatch-steamed-milk {
@@ -252,6 +276,7 @@
   background:#D4A679;
   border-radius:2px;
   display:inline-block;
+  border:1px solid var(--color-text-tertiary);
 }
 
 .swatch-milk-foam {
@@ -260,6 +285,7 @@
   background:#F5E6D3;
   border-radius:2px;
   display:inline-block;
+  border:1px solid var(--color-text-tertiary);
 }
 
 .swatch-hot-water {
@@ -268,6 +294,7 @@
   background:#B8D4E8;
   border-radius:2px;
   display:inline-block;
+  border:1px solid var(--color-text-tertiary);
 }
 
 .coffee-grid {
@@ -315,3 +342,62 @@
   margin-bottom:8px;
 }
   
+.wm-belt-band { fill:#EAF3DE; opacity:0.4; }
+html[data-theme="dark"] .wm-belt-band { fill:#132605; opacity:0.6; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-belt-band { fill:#132605; opacity:0.6; } }
+
+.wm-belt-label { fill:#27500A; }
+html[data-theme="dark"] .wm-belt-label { fill:#4d9d14; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-belt-label { fill:#4d9d14; } }
+
+.wm-c-red { fill:#A32D2D; }
+html[data-theme="dark"] .wm-c-red { fill:#d66a6a; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-red { fill:#d66a6a; } }
+
+.wm-c-orange { fill:#b84823; }
+html[data-theme="dark"] .wm-c-orange { fill:#dc6b45; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-orange { fill:#dc6b45; } }
+
+.wm-c-amber { fill:#9a610b; }
+html[data-theme="dark"] .wm-c-amber { fill:#ef9f27; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-amber { fill:#ef9f27; } }
+
+.wm-c-indigo { fill:#534AB7; }
+html[data-theme="dark"] .wm-c-indigo { fill:#8a84ce; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-indigo { fill:#8a84ce; } }
+
+.wm-c-indigo2 { fill:#4A3A7A; }
+html[data-theme="dark"] .wm-c-indigo2 { fill:#9484c4; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-indigo2 { fill:#9484c4; } }
+
+.wm-c-blue { fill:#185FA5; }
+html[data-theme="dark"] .wm-c-blue { fill:#3b90e3; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-blue { fill:#3b90e3; } }
+
+.wm-c-green { fill:#3B6D11; }
+html[data-theme="dark"] .wm-c-green { fill:#559e19; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-green { fill:#559e19; } }
+
+.wm-c-green2 { fill:#27500A; }
+html[data-theme="dark"] .wm-c-green2 { fill:#4d9d14; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-green2 { fill:#4d9d14; } }
+
+.wm-c-brown { fill:#633806; }
+html[data-theme="dark"] .wm-c-brown { fill:#d2770d; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-brown { fill:#d2770d; } }
+
+.wm-c-portugal { fill:#993C1D; }
+html[data-theme="dark"] .wm-c-portugal { fill:#c04b24; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-portugal { fill:#c04b24; } }
+
+.wm-c-greece { fill:#854F0B; }
+html[data-theme="dark"] .wm-c-greece { fill:#a6630e; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-c-greece { fill:#a6630e; } }
+
+.wm-wash-fill { opacity:0.6; }
+html[data-theme="dark"] .wm-wash-fill { opacity:0.15; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-wash-fill { opacity:0.15; } }
+
+.wm-spirit-fill { opacity:0.8; }
+html[data-theme="dark"] .wm-spirit-fill { opacity:0.15; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wm-spirit-fill { opacity:0.15; } }

@@ -96,7 +96,7 @@ const mod = modules.find((m) => m.id === 20)!;
       <svg class="drinks-media" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
         <!-- Wash container -->
         <rect x="20" y="60" width="80" height="70" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
-        <rect x="24" y="90" width="72" height="36" rx="4" fill="#B8D4E8" opacity="0.6"/>
+        <rect x="24" y="90" width="72" height="36" rx="4" fill="#B8D4E8" opacity="0.6" class="wm-wash-fill"/>
         <text x="60" y="78" text-anchor="middle" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui">Fermented</text>
         <text x="60" y="91" text-anchor="middle" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui">wash</text>
         <text x="60" y="113" text-anchor="middle" font-size="10" fill="var(--color-text-info)" font-family="system-ui">~8% ABV</text>
@@ -121,7 +121,7 @@ const mod = modules.find((m) => m.id === 20)!;
         <polygon points="380,96 388,100 380,104" fill="var(--color-border-secondary)"/>
         <!-- New spirit container -->
         <rect x="388" y="70" width="72" height="60" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
-        <rect x="392" y="100" width="64" height="26" rx="4" fill="#F5E6D3" opacity="0.8"/>
+        <rect x="392" y="100" width="64" height="26" rx="4" fill="#F5E6D3" opacity="0.8" class="wm-spirit-fill"/>
         <text x="424" y="88" text-anchor="middle" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui">New make</text>
         <text x="424" y="101" text-anchor="middle" font-size="11" fill="var(--color-text-secondary)" font-family="system-ui">spirit</text>
         <text x="424" y="119" text-anchor="middle" font-size="10" fill="var(--color-text-warning)" font-family="system-ui">60–80%+</text>
@@ -223,7 +223,7 @@ const mod = modules.find((m) => m.id === 20)!;
             <!-- IBU scale bar -->
             <div class="ibu-gradient">
               <div class="ibu-scale-labels">
-                <span class="scale-end-label">0</span>
+                <span class="scale-end-label scale-end-label-light">0</span>
                 <span class="scale-end-label">100+</span>
               </div>
             </div>
@@ -484,56 +484,56 @@ const mod = modules.find((m) => m.id === 20)!;
         <line x1="0" y1="109" x2="680" y2="109" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
         <text x="4" y="107" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui">EQ</text>
         <!-- Wine belt shading N -->
-        <rect x="0" y="55" width="680" height="45" rx="0" fill="#EAF3DE" opacity="0.4"/>
+        <rect x="0" y="55" width="680" height="45" rx="0" fill="#EAF3DE" opacity="0.4" class="wm-belt-band"/>
         <!-- Wine belt shading S -->
-        <rect x="0" y="118" width="680" height="47" rx="0" fill="#EAF3DE" opacity="0.4"/>
-        <text x="340" y="82" text-anchor="middle" font-size="10" fill="#27500A" font-family="system-ui" opacity="0.7">Northern wine belt (30–50°N)</text>
-        <text x="340" y="148" text-anchor="middle" font-size="10" fill="#27500A" font-family="system-ui" opacity="0.7">Southern wine belt (30–50°S)</text>
+        <rect x="0" y="118" width="680" height="47" rx="0" fill="#EAF3DE" opacity="0.4" class="wm-belt-band"/>
+        <text x="340" y="82" text-anchor="middle" font-size="10" fill="#27500A" font-family="system-ui" class="wm-belt-label">Northern wine belt (30–50°N)</text>
+        <text x="340" y="124" text-anchor="middle" font-size="10" fill="#27500A" font-family="system-ui" class="wm-belt-label">Southern wine belt (30–50°S)</text>
 
         <!-- Regions — Northern hemisphere -->
         <!-- France -->
-        <circle cx="290" cy="68" r="5" fill="#A32D2D"/>
-        <text x="290" y="62" text-anchor="middle" font-size="9" font-weight="500" fill="#A32D2D" font-family="system-ui">France</text>
+        <circle cx="290" cy="68" r="5" fill="#A32D2D" class="wm-c-red"/>
+        <text x="290" y="62" text-anchor="middle" font-size="9" font-weight="500" fill="#A32D2D" font-family="system-ui" class="wm-c-red">France</text>
         <!-- Italy -->
-        <circle cx="315" cy="74" r="4" fill="#D85A30"/>
-        <text x="315" y="68" text-anchor="middle" font-size="8" fill="#D85A30" font-family="system-ui">Italy</text>
+        <circle cx="315" cy="74" r="4" fill="#b84823" class="wm-c-orange"/>
+        <text x="315" y="68" text-anchor="middle" font-size="8" fill="#b84823" font-family="system-ui" class="wm-c-orange">Italy</text>
         <!-- Spain -->
-        <circle cx="272" cy="78" r="4" fill="#EF9F27"/>
-        <text x="265" y="73" text-anchor="middle" font-size="8" fill="#EF9F27" font-family="system-ui">Spain</text>
+        <circle cx="272" cy="78" r="4" fill="#9a610b" class="wm-c-amber"/>
+        <text x="265" y="73" text-anchor="middle" font-size="8" fill="#9a610b" font-family="system-ui" class="wm-c-amber">Spain</text>
         <!-- Germany -->
-        <circle cx="305" cy="60" r="3.5" fill="#534AB7"/>
-        <text x="305" y="55" text-anchor="middle" font-size="8" fill="#534AB7" font-family="system-ui">Germany</text>
+        <circle cx="305" cy="60" r="3.5" fill="#534AB7" class="wm-c-indigo"/>
+        <text x="305" y="55" text-anchor="middle" font-size="8" fill="#534AB7" font-family="system-ui" class="wm-c-indigo">Germany</text>
         <!-- Portugal -->
-        <circle cx="260" cy="80" r="3.5" fill="#993C1D"/>
+        <circle cx="260" cy="80" r="3.5" fill="#993C1D" class="wm-c-portugal"/>
         <!-- California -->
-        <circle cx="95" cy="76" r="4.5" fill="#185FA5"/>
-        <text x="95" y="70" text-anchor="middle" font-size="9" font-weight="500" fill="#185FA5" font-family="system-ui">California</text>
+        <circle cx="95" cy="76" r="4.5" fill="#185FA5" class="wm-c-blue"/>
+        <text x="95" y="70" text-anchor="middle" font-size="9" font-weight="500" fill="#185FA5" font-family="system-ui" class="wm-c-blue">California</text>
         <!-- Washington/Oregon -->
-        <circle cx="80" cy="64" r="3" fill="#3B6D11"/>
-        <text x="55" y="61" font-size="8" fill="#3B6D11" font-family="system-ui">Pacific NW</text>
+        <circle cx="80" cy="64" r="3" fill="#3B6D11" class="wm-c-green"/>
+        <text x="55" y="61" font-size="8" fill="#3B6D11" font-family="system-ui" class="wm-c-green">Pacific NW</text>
         <!-- Argentina is S hemisphere -->
         <!-- Greece -->
-        <circle cx="330" cy="80" r="3" fill="#854F0B"/>
+        <circle cx="330" cy="80" r="3" fill="#854F0B" class="wm-c-greece"/>
         <!-- Georgia/Caucasus -->
-        <circle cx="370" cy="72" r="3.5" fill="#4A3A7A"/>
-        <text x="370" y="67" text-anchor="middle" font-size="8" fill="#4A3A7A" font-family="system-ui">Georgia</text>
+        <circle cx="370" cy="72" r="3.5" fill="#4A3A7A" class="wm-c-indigo2"/>
+        <text x="370" y="67" text-anchor="middle" font-size="8" fill="#4A3A7A" font-family="system-ui" class="wm-c-indigo2">Georgia</text>
 
         <!-- Southern hemisphere -->
         <!-- Argentina -->
-        <circle cx="185" cy="148" r="5" fill="#A32D2D"/>
-        <text x="185" y="142" text-anchor="middle" font-size="9" font-weight="500" fill="#A32D2D" font-family="system-ui">Argentina</text>
+        <circle cx="185" cy="148" r="5" fill="#A32D2D" class="wm-c-red"/>
+        <text x="185" y="142" text-anchor="middle" font-size="9" font-weight="500" fill="#A32D2D" font-family="system-ui" class="wm-c-red">Argentina</text>
         <!-- Chile -->
-        <circle cx="168" cy="150" r="4" fill="#D85A30"/>
-        <text x="155" y="145" text-anchor="middle" font-size="8" fill="#D85A30" font-family="system-ui">Chile</text>
+        <circle cx="168" cy="150" r="4" fill="#b84823" class="wm-c-orange"/>
+        <text x="155" y="145" text-anchor="middle" font-size="8" fill="#b84823" font-family="system-ui" class="wm-c-orange">Chile</text>
         <!-- Australia -->
-        <circle cx="555" cy="152" r="5" fill="#185FA5"/>
-        <text x="555" y="146" text-anchor="middle" font-size="9" font-weight="500" fill="#185FA5" font-family="system-ui">Australia</text>
+        <circle cx="555" cy="152" r="5" fill="#185FA5" class="wm-c-blue"/>
+        <text x="555" y="146" text-anchor="middle" font-size="9" font-weight="500" fill="#185FA5" font-family="system-ui" class="wm-c-blue">Australia</text>
         <!-- New Zealand -->
-        <circle cx="605" cy="160" r="3.5" fill="#27500A"/>
-        <text x="605" y="154" text-anchor="middle" font-size="8" fill="#27500A" font-family="system-ui">NZ</text>
+        <circle cx="605" cy="160" r="3.5" fill="#27500A" class="wm-c-green2"/>
+        <text x="605" y="154" text-anchor="middle" font-size="8" fill="#27500A" font-family="system-ui" class="wm-c-green2">NZ</text>
         <!-- South Africa -->
-        <circle cx="355" cy="153" r="4" fill="#633806"/>
-        <text x="355" y="147" text-anchor="middle" font-size="9" font-weight="500" fill="#633806" font-family="system-ui">S. Africa</text>
+        <circle cx="355" cy="153" r="4" fill="#633806" class="wm-c-brown"/>
+        <text x="355" y="147" text-anchor="middle" font-size="9" font-weight="500" fill="#633806" font-family="system-ui" class="wm-c-brown">S. Africa</text>
 
         <!-- Legend -->
         <text x="340" y="200" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui">Old World (Europe, N. Africa, Levant) = tradition, appellation laws, terroir focus. New World (Americas, AUS, NZ, S. Africa) = variety-focused labelling, innovation.</text>
@@ -884,7 +884,7 @@ function showCocktail(key) {
   let recipeHtml = c.recipe.map(r => `<div style="display:flex; justify-content:space-between; align-items:baseline; padding:4px 0; border-bottom:0.5px solid var(--color-border-tertiary);"><span style="font-size:12px; color:var(--color-text-secondary);">${r[0]}</span><span style="font-size:13px; font-weight:500; color:var(--color-text-primary);">${r[1]}</span></div>`).join('');
   document.getElementById('cocktail-display').innerHTML = `
     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-      <div style="width:12px; height:12px; border-radius:50%; background:${c.col}; flex-shrink:0;"></div>
+      <div style="width:12px; height:12px; border-radius:50%; background:${c.col}; border:1px solid var(--color-text-tertiary); flex-shrink:0;"></div>
       <div style="font-size:15px; font-weight:500; color:var(--color-text-primary);">${c.name}</div>
       <div style="font-size:11px; color:var(--color-text-secondary);">${c.family}</div>
     </div>
@@ -1105,28 +1105,28 @@ const wines = {
 function showWine(key) {
   const w = wines[key];
   // Colour indicator
-  const typeColor = w.type === 'Red' ? '#7A1E1E' : w.type === 'White' ? '#C9A84C' : w.type === 'Pink' ? '#E8A0A0' : w.type === 'Sparkling' ? '#E8D090' : '#888';
+  const typeColor = w.type === 'Red' ? '#7A1E1E' : w.type === 'White' ? '#7f6726' : w.type === 'Pink' ? '#cd3232' : w.type === 'Sparkling' ? '#86691c' : '#888';
   const typeBg    = w.type === 'Red' ? '#FCEBEB' : w.type === 'White' ? '#FAEEDA' : w.type === 'Pink' ? '#FCF0F0' : w.type === 'Sparkling' ? '#F9F6E8' : 'var(--color-background-secondary)';
 
   const barDims = [
-    { label:'Body',    val:w.profile.body,    col:'#A32D2D' },
-    { label:'Tannin',  val:w.profile.tannin,  col:'#712B13' },
-    { label:'Acidity', val:w.profile.acidity, col:'#27500A' },
-    { label:'Fruit',   val:w.profile.fruit,   col:'#633806' },
-    { label:'Oak',     val:w.profile.oak,     col:'#854F0B' },
+    { label:'Body',    val:w.profile.body,    cls:'wine-fill-body' },
+    { label:'Tannin',  val:w.profile.tannin,  cls:'wine-fill-tannin' },
+    { label:'Acidity', val:w.profile.acidity, cls:'wine-fill-acidity' },
+    { label:'Fruit',   val:w.profile.fruit,   cls:'wine-fill-fruit' },
+    { label:'Oak',     val:w.profile.oak,     cls:'wine-fill-oak' },
   ];
   const profileHtml = barDims.map(b => `
     <div class="data-row-compact">
       <div class="taste-bar-label">${b.label}</div>
       <div class="taste-bar-track">
-        <div class="animated-fill" style="width:${b.val * 20}%; background:${b.col};"></div>
+        <div class="animated-fill ${b.cls}" style="width:${b.val * 20}%;"></div>
       </div>
       <div style="font-size:10px; color:var(--color-text-tertiary); width:16px; text-align:right; flex-shrink:0;">${b.val}/5</div>
     </div>`).join('');
 
   document.getElementById('wine-display').innerHTML = `
     <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap;">
-      <div style="width:12px; height:12px; border-radius:50%; background:${w.col}; flex-shrink:0;"></div>
+      <div style="width:12px; height:12px; border-radius:50%; background:${w.col}; border:1px solid var(--color-text-tertiary); flex-shrink:0;"></div>
       <div style="font-size:15px; font-weight:500; color:var(--color-text-primary);">${w.name}</div>
       <div style="font-size:11px; font-weight:500; background:${typeBg}; color:${typeColor}; border-radius:99px; padding:2px 9px;">${w.type}</div>
       <div style="font-size:11px; color:var(--color-text-secondary);">Serve at ${w.temp} · ABV ${w.abv}</div>
