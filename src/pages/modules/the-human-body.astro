@@ -551,7 +551,7 @@ const mod = modules.find((m) => m.id === 2)!;
 
       <div class="chrom-layout">
         <!-- SVG showing X and Y side by side at scale -->
-        <svg class="chromosome-svg" viewBox="0 0 200 200" width="180">
+        <svg class="chromosome-svg" viewBox="0 0 200 216" width="180">
           <!-- X chromosome (larger) -->
           <g transform="translate(40,10)">
             <!-- X arms -->
@@ -560,7 +560,7 @@ const mod = modules.find((m) => m.id === 2)!;
             <rect x="0"  y="68" width="50" height="16"  rx="8" fill="#185FA5"/>
             <!-- centromere pinch -->
             <ellipse cx="25" cy="76" rx="10" ry="7" fill="#185FA5"/>
-            <text x="25" y="166" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#378ADD">X</text>
+            <text x="25" y="166" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" class="chrom-x-label-svg">X</text>
             <text x="25" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~155 Mbp</text>
             <text x="25" y="189" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~800–900 genes</text>
           </g>
@@ -570,12 +570,12 @@ const mod = modules.find((m) => m.id === 2)!;
             <rect x="16" y="46" width="14" height="20" rx="7" fill="#97C459" opacity="0.85"/>
             <rect x="6"  y="36" width="34" height="12" rx="6" fill="#4E7A1A"/>
             <ellipse cx="23" cy="42" rx="8" ry="5.5" fill="#4E7A1A"/>
-            <text x="23" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#97C459">Y</text>
+            <text x="23" y="82" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" class="chrom-y-label-svg">Y</text>
             <text x="23" y="94" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~57 Mbp</text>
             <text x="23" y="105" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-secondary)">~70 genes</text>
           </g>
           <!-- Scale note -->
-          <text x="100" y="198" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-tertiary)">Drawn roughly to scale</text>
+          <text x="100" y="212" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="var(--color-text-tertiary)">Drawn roughly to scale</text>
         </svg>
 
         <!-- Comparison table -->
@@ -742,7 +742,7 @@ const mod = modules.find((m) => m.id === 2)!;
         root.style.setProperty('--tl-t3', '#fff');
         root.style.setProperty('--tl-c4', '#185fa5');
         root.style.setProperty('--tl-t4', '#fff');
-        root.style.setProperty('--tl-c5', '#378add');
+        root.style.setProperty('--tl-c5', '#2378ce');
         root.style.setProperty('--tl-t5', '#fff');
         root.style.setProperty('--tl-c6', '#85b7eb');
         root.style.setProperty('--tl-t6', '#0c2540');
@@ -751,7 +751,7 @@ const mod = modules.find((m) => m.id === 2)!;
         root.style.setProperty('--tl-t1', '#0C447C');
         root.style.setProperty('--tl-c2', '#85B7EB');
         root.style.setProperty('--tl-t2', '#0C447C');
-        root.style.setProperty('--tl-c3', '#378ADD');
+        root.style.setProperty('--tl-c3', '#2378CE');
         root.style.setProperty('--tl-t3', '#fff');
         root.style.setProperty('--tl-c4', '#185FA5');
         root.style.setProperty('--tl-t4', '#fff');

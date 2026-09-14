@@ -28,10 +28,10 @@
 .hr-zone-lbl  { font-size: 12px; color: var(--color-text-secondary); width: 80px; flex-shrink: 0; text-align: right; }
 .hr-zone-bar  { height: 20px; border-radius: 3px; display: flex; align-items: center; padding: 0 8px; transition: width 0.3s ease; }
 .hr-zone-scaled { width: 36%; }
-.hr-zone-recovery { background: var(--accent); }
-.hr-zone-base { background: #378ADD; }
+.hr-zone-recovery { background: color-mix(in srgb, var(--accent) 92%, black); }
+.hr-zone-base { background: #2378CE; }
 .hr-zone-aerobic { background: #185FA5; }
-.hr-zone-threshold { background: #EF9F27; }
+.hr-zone-threshold { background: #A6690C; }
 .hr-zone-max { background: #c0392b; }
 .hr-zone-light-text { color: #fff; }
 
@@ -40,7 +40,7 @@
 .rt-screen { height: 90px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; user-select: none; margin-bottom: 10px; }
 .rt-screen.rt-wait  { background: var(--color-background-secondary); color: var(--color-text-secondary); }
 .rt-screen.rt-ready { background: #c0392b; color: #fff; }
-.rt-screen.rt-go    { background: #27ae60; color: #fff; font-size: 18px; }
+.rt-screen.rt-go    { background: #1E874B; color: #fff; font-size: 18px; }
 .rt-screen.rt-done  { background: var(--color-background-info); color: var(--color-text-info); }
 .rt-stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .rt-stat  { background: var(--color-background-secondary); border-radius: 8px; padding: 8px 14px; }
@@ -319,7 +319,7 @@
 .chrom-x-head {
   background: var(--color-background-secondary);
   font-weight: 600;
-  color: #378ADD;
+  color: #2172C4;
   text-align: center;
 }
 .chrom-y-head {
@@ -354,10 +354,12 @@
 .punnett-axis-blue {
   text-align: right;
   padding-right: 8px;
-  color: #378ADD;
 }
-.punnett-x-head { color: var(--accent); }
-.punnett-y-head { color: #97C459; }
+.punnett th.punnett-axis-blue { color: #2172C4; }
+.punnett th.punnett-x-head { color: #CF2D53; }
+.punnett th.punnett-y-head { color: #597A2C; }
+.chrom-x-label-svg { fill: #2172C4; }
+.chrom-y-label-svg { fill: #4E7A1A; }
 .punnett-sub {
   font-size: 10px;
   font-weight: 400;
@@ -383,7 +385,7 @@
 .tl-bar-buzz .tl-val { color: var(--tl-t1,#0C447C); }
 .tl-bar-ear { width: 18%; background: var(--tl-c2,#85B7EB); }
 .tl-bar-ear .tl-val { color: var(--tl-t2,#0C447C); }
-.tl-bar-chin { width: 32%; background: var(--tl-c3,#378ADD); }
+.tl-bar-chin { width: 32%; background: var(--tl-c3,#2378CE); }
 .tl-bar-chin .tl-val { color: var(--tl-t3,#fff); }
 .tl-bar-shoulder { width: 52%; background: var(--tl-c4,#185FA5); }
 .tl-bar-shoulder .tl-val { color: var(--tl-t4,#fff); }
@@ -400,5 +402,23 @@
   .tl-label { width: 90px; }
   .diagram-wrap { flex-direction: column; }
   .compat-table th, .compat-table td { width: 36px; height: 32px; font-size: 11px; }
+}
+
+/* --- Dark-mode text contrast for chromosome/Punnett diagrams --- */
+html[data-theme="dark"] .chrom-x-head,
+html[data-theme="dark"] .chrom-x-label-svg { color: #3F8FDE; fill: #3F8FDE; }
+html[data-theme="dark"] .chrom-y-head,
+html[data-theme="dark"] .chrom-y-label-svg { color: #659E22; fill: #659E22; }
+html[data-theme="dark"] .punnett th.punnett-axis-blue { color: #3F8FDE; }
+html[data-theme="dark"] .punnett th.punnett-y-head { color: #97C459; }
+html[data-theme="dark"] .punnett th.punnett-x-head { color: #DE6783; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .chrom-x-head,
+  html[data-theme="auto"] .chrom-x-label-svg { color: #3F8FDE; fill: #3F8FDE; }
+  html[data-theme="auto"] .chrom-y-head,
+  html[data-theme="auto"] .chrom-y-label-svg { color: #659E22; fill: #659E22; }
+  html[data-theme="auto"] .punnett th.punnett-axis-blue { color: #3F8FDE; }
+  html[data-theme="auto"] .punnett th.punnett-y-head { color: #97C459; }
+  html[data-theme="auto"] .punnett th.punnett-x-head { color: #DE6783; }
 }
   
