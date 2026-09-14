@@ -252,7 +252,7 @@
 
 /* === Module-specific extracted styles === */
 
-.literature-text-2 {
+.deep-dive-kicker {
   font-size:10px;
   font-weight:600;
   letter-spacing:0.1em;
@@ -281,73 +281,73 @@
   margin-bottom:4px;
 }
 
-.literature-text-3 {
+.trait-desc-density {
   font-size:12px;
   color:#534AB7;
   line-height:1.5;
 }
 
-.literature-panel-2 {
+.trait-panel-ambiguity {
   background:var(--color-background-success);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid var(--color-border-success);
 }
 
-.literature-label-2 {
+.trait-title-ambiguity {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-success);
   margin-bottom:4px;
 }
 
-.literature-text-4 {
+.trait-desc-ambiguity {
   font-size:12px;
   color:var(--color-text-success);
   line-height:1.5;
 }
 
-.literature-panel-3 {
+.trait-panel-form {
   background:var(--color-background-warning);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid var(--color-border-warning);
 }
 
-.literature-label-3 {
+.trait-title-form {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-warning);
   margin-bottom:4px;
 }
 
-.literature-text-5 {
+.trait-desc-form {
   font-size:12px;
   color:var(--color-text-warning);
   line-height:1.5;
 }
 
-.literature-panel-4 {
+.trait-panel-durability {
   background:var(--color-background-info);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid var(--color-border-info);
 }
 
-.literature-label-4 {
+.trait-title-durability {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-info);
   margin-bottom:4px;
 }
 
-.literature-text-6 {
+.trait-desc-durability {
   font-size:12px;
   color:var(--color-text-info);
   line-height:1.5;
 }
 
-.literature-text-7 {
+.chart-intro {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -357,23 +357,23 @@
   left:0%;
 }
 
-.pc-axis-mark-style-2 {
+.pc-axis-mark-second {
   left:20%;
 }
 
-.pc-axis-mark-style-3 {
+.pc-axis-mark-third {
   left:45%;
 }
 
-.pc-axis-mark-style-4 {
+.pc-axis-mark-fourth {
   left:65%;
 }
 
-.pc-axis-mark-style-5 {
+.pc-axis-mark-fifth {
   left:80%;
 }
 
-.pc-axis-mark-style-6 {
+.pc-axis-mark-last {
   left:100%;
 }
 
@@ -383,31 +383,31 @@
   background:var(--accent-bg);
 }
 
-.pc-fill-style-2 {
+.pc-fill-drama {
   left:5%;
   width:55%;
   background:var(--color-background-warning);
 }
 
-.pc-fill-style-3 {
+.pc-fill-poetry {
   left:0%;
   width:80%;
   background:var(--color-background-info);
 }
 
-.pc-fill-style-4 {
+.pc-fill-novel {
   left:58%;
   width:42%;
   background:var(--color-background-success);
 }
 
-.pc-fill-style-5 {
+.pc-fill-essay {
   left:40%;
   width:60%;
   background:#FAECE7;
 }
 
-.pc-fill-style-6 {
+.pc-fill-short-story {
   left:68%;
   width:32%;
   background:var(--color-background-danger);
@@ -418,39 +418,39 @@
   background:#8A6DB5;
 }
 
-.literature-text-8 {
+.seg-label {
   font-size:10px;
   color:white;
   font-weight:600;
 }
 
-.dist-seg-style-2 {
+.dist-seg-short-story {
   width:15%;
   background:var(--accent);
 }
 
-.dist-seg-style-3 {
+.dist-seg-nonfiction {
   width:12%;
   background:#E07B5A;
 }
 
-.dist-seg-style-4 {
+.dist-seg-drama {
   width:10%;
   background:#5DCAA5;
 }
 
-.dist-seg-style-5 {
+.dist-seg-poetry {
   width:7%;
   background:#EF9F27;
 }
 
-.literature-text-9 {
+.seg-label-small {
   font-size:9px;
   color:white;
   font-weight:600;
 }
 
-.dist-seg-style-6 {
+.dist-seg-other {
   width:4%;
   background:#AFA9EC;
 }
@@ -459,32 +459,32 @@
   background:#8A6DB5;
 }
 
-.dist-leg-dot-style-3 {
+.dist-leg-dot-coral {
   background:#E07B5A;
 }
 
-.dist-leg-dot-style-4 {
+.dist-leg-dot-teal {
   background:#5DCAA5;
 }
 
-.dist-leg-dot-style-6 {
+.dist-leg-dot-lavender {
   background:#AFA9EC;
 }
 
-.literature-text-11 {
+.metre-intro {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
 }
 
-.literature-text-12 {
+.poem-citation {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-bottom:5px;
   font-style:italic;
 }
 
-.literature-text-13 {
+.form-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -504,49 +504,49 @@
   height:auto;
 }
 
-.literature-text-14 {
+.tragedy-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:6px;
 }
 
-.literature-text-15 {
+.spectrum-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:4px;
 }
 
-.dist-seg-style-7 {
+.dist-seg-freud {
   width:28%;
   background:#534AB7;
 }
 
-.dist-seg-style-8 {
+.dist-seg-wwi {
   width:22%;
   background:var(--accent);
 }
 
-.dist-seg-style-9 {
+.dist-seg-impressionism {
   width:18%;
   background:#E07B5A;
 }
 
-.dist-seg-style-10 {
+.dist-seg-bergson {
   width:16%;
   background:#5DCAA5;
 }
 
-.dist-seg-style-11 {
+.dist-seg-nietzsche {
   width:10%;
   background:#EF9F27;
 }
 
-.dist-seg-style-12 {
+.dist-seg-influence-other {
   width:6%;
   background:#AFA9EC;
 }
 
-.dist-leg-dot-style-7 {
+.dist-leg-dot-indigo {
   background:#534AB7;
 }
   

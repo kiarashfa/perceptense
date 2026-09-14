@@ -207,7 +207,7 @@
 
 /* === Module-specific extracted styles === */
 
-.music-text-2 {
+.deep-dive-kicker {
   font-size:10px;
   font-weight:600;
   letter-spacing:0.1em;
@@ -222,13 +222,13 @@
   gap:8px;
 }
 
-.music-text-4 {
+.card-body {
   font-size:12px;
   color:var(--color-text-primary);
   line-height:1.5;
 }
 
-.music-text-5 {
+.scale-caption {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:6px;
@@ -242,20 +242,20 @@
   margin-top:4px;
 }
 
-.music-panel-2 {
+.rhythm-demo {
   margin-top:12px;
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
 }
 
-.music-text-6 {
+.rhythm-caption {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:8px;
 }
 
-.music-row-2 {
+.rhythm-buttons {
   display:flex;
   gap:8px;
   flex-wrap:wrap;
@@ -271,23 +271,23 @@
   left:0%;
 }
 
-.pc-axis-mark-style-2 {
+.pc-axis-mark-second {
   left:25%;
 }
 
-.pc-axis-mark-style-3 {
+.pc-axis-mark-third {
   left:50%;
 }
 
-.pc-axis-mark-style-4 {
+.pc-axis-mark-fourth {
   left:72%;
 }
 
-.pc-axis-mark-style-5 {
+.pc-axis-mark-fifth {
   left:88%;
 }
 
-.pc-axis-mark-style-6 {
+.pc-axis-mark-last {
   left:100%;
 }
 
@@ -297,25 +297,25 @@
   background:var(--color-background-warning);
 }
 
-.pc-fill-style-2 {
+.pc-fill-baroque {
   left:25%;
   width:25%;
   background:var(--color-background-info);
 }
 
-.pc-fill-style-3 {
+.pc-fill-classical {
   left:50%;
   width:16%;
   background:var(--color-background-success);
 }
 
-.pc-fill-style-4 {
+.pc-fill-romantic {
   left:66%;
   width:22%;
   background:#EEEDFE;
 }
 
-.pc-fill-style-5 {
+.pc-fill-twentieth-century {
   left:88%;
   width:12%;
   background:var(--color-background-danger);
@@ -334,29 +334,29 @@
   left:3%;
 }
 
-.cscale-dot-style-2 {
+.cscale-dot-folk-song {
   left:12%;
 }
 
-.cscale-dot-style-3 {
+.cscale-dot-pop-song {
   left:28%;
 }
 
-.cscale-dot-style-4 {
+.cscale-dot-mozart-quartet {
   left:48%;
 }
 
-.cscale-dot-style-5 {
+.cscale-dot-ligeti {
   left:97%;
 }
 
-.music-text-7 {
+.texture-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:6px;
 }
 
-.music-text-8 {
+.chart-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:8px;
@@ -367,41 +367,41 @@
   background:var(--color-background-info);
 }
 
-.bb-style-2 {
+.bb-arabic-maqam {
   width:48%;
   background:var(--color-background-warning);
 }
 
-.bb-style-3 {
+.bb-turkish-makam {
   width:51%;
   background:var(--color-background-warning);
 }
 
-.bb-style-4 {
+.bb-indian-raga {
   width:44%;
   background:var(--color-background-success);
 }
 
-.bb-style-5 {
+.bb-pentatonic {
   width:10%;
   background:var(--color-background-secondary);
 }
 
-.bb-style-6 {
+.bb-gamelan-slendro {
   width:10%;
   background:#E8F5F2;
 }
 
-.bv-style-2 {
+.bv-teal {
   color:#1A6B5A;
 }
 
-.bb-style-7 {
+.bb-gamelan-pelog {
   width:14%;
   background:#E8F5F2;
 }
 
-.music-text-9 {
+.chart-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -420,28 +420,28 @@
   margin-left:130px;
 }
 
-.pc-axis-mark-style-7 {
+.pc-axis-mark-jazz-second {
   left:22%;
 }
 
-.pc-axis-mark-style-8 {
+.pc-axis-mark-jazz-third {
   left:44%;
 }
 
-.pc-axis-mark-style-9 {
+.pc-axis-mark-jazz-fourth {
   left:67%;
 }
 
-.pc-axis-mark-style-10 {
+.pc-axis-mark-jazz-fifth {
   left:89%;
 }
 
-.cscale-dot-style-6 {
+.cscale-dot-robert-johnson {
   left:8%;
   background:#555;
 }
 
-.cscale-dot-style-7 {
+.cscale-dot-elvis {
   left:14%;
   background:#c0392b;
 }
@@ -450,88 +450,88 @@
   color:#c0392b;
 }
 
-.cscale-dot-style-8 {
+.cscale-dot-beatles-early {
   left:22%;
   background:#2980b9;
 }
 
-.cscale-val-style-2 {
+.cscale-val-blue {
   color:#2980b9;
 }
 
-.cscale-dot-style-9 {
+.cscale-dot-beatles-late {
   left:45%;
   background:#2980b9;
 }
 
-.cscale-dot-style-10 {
+.cscale-dot-ellington {
   left:65%;
   background:#8e44ad;
 }
 
-.cscale-val-style-3 {
+.cscale-val-purple {
   color:#8e44ad;
 }
 
-.cscale-dot-style-11 {
+.cscale-dot-parker {
   left:80%;
   background:var(--accent);
 }
 
-.cscale-val-style-4 {
+.cscale-val-accent {
   color:var(--accent);
 }
 
-.cscale-dot-style-12 {
+.cscale-dot-coltrane {
   left:93%;
   background:#16a085;
 }
 
-.cscale-val-style-5 {
+.cscale-val-teal {
   color:#16a085;
 }
 
-.music-text-10 {
+.complexity-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:4px;
 }
 
-.bb-style-8 {
+.bb-beethoven-fifth {
   width:33%;
   background:var(--color-background-success);
 }
 
-.bb-style-9 {
+.bb-kind-of-blue {
   width:45%;
   background:var(--color-background-info);
 }
 
-.bb-style-10 {
+.bb-goldberg {
   width:50%;
   background:var(--color-background-warning);
 }
 
-.bb-style-11 {
+.bb-rite-of-spring {
   width:35%;
   background:var(--color-background-danger);
 }
 
-.bb-style-12 {
+.bb-la-mer {
   width:25%;
   background:#E8F5F2;
 }
 
-.bb-style-13 {
+.bb-love-supreme {
   width:34%;
   background:#F0EBF8;
 }
 
-.bv-style-3 {
+.bv-violet {
   color:#7B5AB5;
 }
 
-.bb-style-14 {
+.bb-mozart-fortieth {
   width:29%;
   background:var(--color-background-success);
 }

@@ -332,27 +332,27 @@
   flex-shrink:0;
 }
 
-.language-text-2 {
+.module-intro {
   margin:0 0 8px;
   font-size:13px;
   line-height:1.6;
   color:var(--color-text-secondary);
 }
 
-.language-text-3 {
+.module-outline {
   margin:0;
   font-size:12px;
   color:var(--color-text-secondary);
 }
 
-.language-text-4 {
+.card-body {
   margin:0 0 8px;
   font-size:12px;
   line-height:1.5;
   color:var(--color-text-secondary);
 }
 
-.language-text-5 {
+.explorer-placeholder {
   color:var(--color-text-tertiary);
   font-size:12px;
 }
@@ -367,47 +367,47 @@
   background:var(--accent);
 }
 
-.bb-style-2 {
+.bb-mandarin {
   width:80%;
   background:var(--accent);
 }
 
-.bb-style-3 {
+.bb-hindi {
   width:57%;
   background:var(--accent);
 }
 
-.bb-style-4 {
+.bb-spanish {
   width:53%;
   background:var(--accent);
 }
 
-.bb-style-5 {
+.bb-french {
   width:40%;
   background:var(--accent);
 }
 
-.bb-style-6 {
+.bb-arabic {
   width:38%;
   background:var(--accent);
 }
 
-.bb-style-7 {
+.bb-bengali {
   width:24%;
   background:var(--accent);
 }
 
-.bb-style-8 {
+.bb-russian {
   width:22%;
   background:var(--accent);
 }
 
-.bb-style-9 {
+.bb-portuguese {
   width:21%;
   background:var(--accent);
 }
 
-.bb-style-10 {
+.bb-urdu {
   width:17%;
   background:var(--accent);
 }
@@ -416,18 +416,18 @@
   font-family:var(--font-sans);
 }
 
-.language-text-6 {
+.levels-prompt {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 8px;
 }
 
-.bb-style-11 {
+.bb-tonal {
   width:70%;
   background:#D4884A;
 }
 
-.bb-style-12 {
+.bb-non-tonal {
   width:30%;
   background:var(--color-background-secondary);
   border:0.5px solid var(--color-border-tertiary);
@@ -437,61 +437,61 @@
   left:5%;
 }
 
-.cscale-dot-style-2 {
+.cscale-dot-english {
   left:20%;
 }
 
-.cscale-dot-style-3 {
+.cscale-dot-french {
   left:38%;
 }
 
-.cscale-dot-style-4 {
+.cscale-dot-russian {
   left:58%;
 }
 
-.cscale-dot-style-5 {
+.cscale-dot-turkish {
   left:72%;
 }
 
-.cscale-dot-style-6 {
+.cscale-dot-inuktitut {
   left:93%;
 }
 
-.bb-style-13 {
+.bb-sov {
   width:45%;
   background:var(--accent);
 }
 
-.bb-style-14 {
+.bb-svo {
   width:42%;
   background:var(--accent);
 }
 
-.bb-style-15 {
+.bb-vso {
   width:9%;
   background:var(--accent);
 }
 
-.bb-style-16 {
+.bb-rare-orders {
   width:4%;
   background:var(--color-background-secondary);
   border:0.5px solid var(--color-border-tertiary);
 }
 
-.language-text-7 {
+.age-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 8px;
 }
 
-.language-text-8 {
+.translation-intro {
   margin:0 0 6px;
   font-size:12px;
   line-height:1.5;
   color:var(--color-text-secondary);
 }
 
-.language-text-9 {
+.loss-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 10px;

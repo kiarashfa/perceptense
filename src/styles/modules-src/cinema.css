@@ -216,7 +216,7 @@
 
 /* === Module-specific extracted styles === */
 
-.cinema-text-2 {
+.deep-dive-kicker {
   font-size:10px;
   font-weight:600;
   letter-spacing:0.1em;
@@ -256,23 +256,23 @@
   left:0%;
 }
 
-.pc-axis-mark-style-2 {
+.pc-axis-mark-second {
   left:20%;
 }
 
-.pc-axis-mark-style-3 {
+.pc-axis-mark-third {
   left:38%;
 }
 
-.pc-axis-mark-style-4 {
+.pc-axis-mark-fourth {
   left:58%;
 }
 
-.pc-axis-mark-style-5 {
+.pc-axis-mark-fifth {
   left:78%;
 }
 
-.pc-axis-mark-style-6 {
+.pc-axis-mark-last {
   left:100%;
 }
 
@@ -282,43 +282,43 @@
   background:#F1EFE8;
 }
 
-.pc-fill-style-2 {
+.pc-fill-studio-system {
   left:20%;
   width:35%;
   background:#FAEEDA;
 }
 
-.pc-fill-style-3 {
+.pc-fill-neorealism {
   left:35%;
   width:15%;
   background:#FCEBEB;
 }
 
-.pc-fill-style-4 {
+.pc-fill-new-wave {
   left:42%;
   width:16%;
   background:#E6F1FB;
 }
 
-.pc-fill-style-5 {
+.pc-fill-new-hollywood {
   left:58%;
   width:12%;
   background:#EAF3DE;
 }
 
-.pc-fill-style-6 {
+.pc-fill-contemporary {
   left:78%;
   width:22%;
   background:#EEEDFE;
 }
 
-.cinema-text-3 {
+.chart-intro {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
 }
 
-.cinema-text-4 {
+.axis-title {
   font-size:11px;
   font-weight:600;
   color:var(--color-text-secondary);
@@ -330,49 +330,49 @@
   background:var(--accent);
 }
 
-.cscale-dot-style-2 {
+.cscale-dot-kubrick {
   left:55%;
   background:#E07B5A;
 }
 
-.cscale-dot-style-3 {
+.cscale-dot-godard {
   left:88%;
   background:#8A6DB5;
 }
 
-.cscale-dot-style-4 {
+.cscale-dot-tarkovsky-style {
   left:80%;
   background:#0C447C;
 }
 
-.cscale-dot-style-5 {
+.cscale-dot-hitchcock {
   left:35%;
   background:#633806;
 }
 
-.cinema-text-5 {
+.axis-title-spaced {
   font-size:11px;
   font-weight:600;
   color:var(--color-text-secondary);
   margin:14px 0 6px;
 }
 
-.cscale-dot-style-6 {
+.cscale-dot-michael-bay {
   left:3%;
   background:#E07B5A;
 }
 
-.cscale-dot-style-7 {
+.cscale-dot-scorsese-pace {
   left:30%;
   background:var(--accent);
 }
 
-.cscale-dot-style-8 {
+.cscale-dot-wong-kar-wai-pace {
   left:65%;
   background:#8A6DB5;
 }
 
-.cscale-dot-style-9 {
+.cscale-dot-tarkovsky-pace {
   left:96%;
   background:#0C447C;
 }
@@ -386,7 +386,7 @@
   line-height:1.6;
 }
 
-.cinema-label-2 {
+.subsection-title {
   margin-bottom:0.5rem;
   font-size:13px;
   font-weight:500;
@@ -400,14 +400,14 @@
   margin:0 auto;
 }
 
-.cinema-text-6 {
+.diagram-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:8px;
   margin-bottom:0;
 }
 
-.cinema-text-7 {
+.slider-intro {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -419,57 +419,57 @@
   padding:12px 14px;
 }
 
-.cinema-text-8 {
+.careers-note {
   font-size:10px;
   color:var(--color-text-tertiary);
   margin-top:6px;
 }
 
-.cinema-text-9 {
+.source-note {
   font-size:10px;
   color:var(--color-text-tertiary);
   margin-top:8px;
 }
 
-.cinema-label-3 {
+.box-office-title {
   font-size:13px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:2px;
 }
 
-.cinema-text-10 {
+.inflation-note {
   font-size:10px;
   color:var(--color-text-tertiary);
   margin-bottom:10px;
 }
 
-.cscale-dot-style-10 {
+.cscale-dot-lumet {
   left:8%;
   background:var(--accent);
 }
 
-.cscale-dot-style-11 {
+.cscale-dot-wilder {
   left:14%;
   background:#E07B5A;
 }
 
-.cscale-dot-style-12 {
+.cscale-dot-scorsese-auteur {
   left:38%;
   background:#5DCAA5;
 }
 
-.cscale-dot-style-13 {
+.cscale-dot-wong-kar-wai-auteur {
   left:72%;
   background:#8A6DB5;
 }
 
-.cscale-dot-style-14 {
+.cscale-dot-malick {
   left:88%;
   background:#0C447C;
 }
 
-.cscale-dot-style-15 {
+.cscale-dot-tarkovsky-auteur {
   left:93%;
   background:#791F1F;
 }

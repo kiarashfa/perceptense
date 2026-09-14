@@ -23,15 +23,15 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Overview card -->
     <div class="card u-mb-md">
       <p class="clabel">about this module</p>
-      <p class="language-text-2">Language is the most sophisticated thing human beings do. Every time you speak or read, you are performing a feat of combinatorial computation that no other species can replicate and that linguists have spent a century struggling to explain. There are roughly 7,000 living languages, structured in wildly different ways, yet they share deep organisational principles that suggest something profound about the human mind. This module gives you the conceptual toolkit to think clearly about what language actually is.</p>
-      <p class="language-text-3">Six parts cover: the features that make language unique (A), its structural levels from sound to meaning (B), how we acquire and vary it (C), language and thought (D), major world languages in depth (E), and language in the digital age (F).</p>
+      <p class="module-intro">Language is the most sophisticated thing human beings do. Every time you speak or read, you are performing a feat of combinatorial computation that no other species can replicate and that linguists have spent a century struggling to explain. There are roughly 7,000 living languages, structured in wildly different ways, yet they share deep organisational principles that suggest something profound about the human mind. This module gives you the conceptual toolkit to think clearly about what language actually is.</p>
+      <p class="module-outline">Six parts cover: the features that make language unique (A), its structural levels from sound to meaning (B), how we acquire and vary it (C), language and thought (D), major world languages in depth (E), and language in the digital age (F).</p>
     </div>
 
     <!-- Design features -->
     <h2 class="sec" id="what-makes-language-language">what makes language language</h2>
     <div class="card u-mb-md">
       <p class="clabel">design features of human language</p>
-      <p class="language-text-4">The linguist Charles Hockett identified 13 "design features" that characterise human language, three of which are found in no other communication system. <span class="u-fw-500">Displacement</span> lets us talk about things not present in time or space — you can describe yesterday, tomorrow, or Alpha Centauri. <span class="u-fw-500">Productivity</span> (also called openness) means there is no upper limit on new sentences: every utterance you produce has almost certainly never been said before in exactly that form. <span class="u-fw-500">Duality of patterning</span> means meaningless units (sounds) combine into meaningful units (words) which then combine into larger meaningful units (sentences) — a two-level combinatorial system that gives language its explosive expressive power. Bee dances have displacement. Birdsong has productivity of a kind. No other system has all three together.</p>
+      <p class="card-body">The linguist Charles Hockett identified 13 "design features" that characterise human language, three of which are found in no other communication system. <span class="u-fw-500">Displacement</span> lets us talk about things not present in time or space — you can describe yesterday, tomorrow, or Alpha Centauri. <span class="u-fw-500">Productivity</span> (also called openness) means there is no upper limit on new sentences: every utterance you produce has almost certainly never been said before in exactly that form. <span class="u-fw-500">Duality of patterning</span> means meaningless units (sounds) combine into meaningful units (words) which then combine into larger meaningful units (sentences) — a two-level combinatorial system that gives language its explosive expressive power. Bee dances have displacement. Birdsong has productivity of a kind. No other system has all three together.</p>
     </div>
 
     <h2 class="sec" id="animal-communication-vs-language-an-explorer">animal communication vs. language — an explorer</h2>
@@ -43,7 +43,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showAnimal('bird',this)">Songbird vocalisations</button>
     </div>
     <div class="explorer-panel" id="animal-panel">
-      <p class="language-text-5">Select a communication system above to compare it with human language.</p>
+      <p class="explorer-placeholder">Select a communication system above to compare it with human language.</p>
     </div>
 
     <!-- Language numbers -->
@@ -75,15 +75,15 @@ const mod = modules.find((m) => m.id === 40)!;
     <div class="card u-mb-md">
       <p class="clabel">top 10 languages by total speakers (L1 + L2, 2024 estimate)</p>
       <div class="bar-row"><div class="bl">English</div><div class="bb bb-style"><span class="bv text-white">1.46 billion</span></div></div>
-      <div class="bar-row"><div class="bl">Mandarin</div><div class="bb bb-style-2"><span class="bv text-white">1.16 billion</span></div></div>
-      <div class="bar-row"><div class="bl">Hindi</div><div class="bb bb-style-3"><span class="bv text-white">820 million</span></div></div>
-      <div class="bar-row"><div class="bl">Spanish</div><div class="bb bb-style-4"><span class="bv text-white">760 million</span></div></div>
-      <div class="bar-row"><div class="bl">French</div><div class="bb bb-style-5"><span class="bv text-white">580 million</span></div></div>
-      <div class="bar-row"><div class="bl">Modern Arabic</div><div class="bb bb-style-6"><span class="bv text-white">550 million</span></div></div>
-      <div class="bar-row"><div class="bl">Bengali</div><div class="bb bb-style-7"><span class="bv text-white">340 million</span></div></div>
-      <div class="bar-row"><div class="bl">Russian</div><div class="bb bb-style-8"><span class="bv text-white">320 million</span></div></div>
-      <div class="bar-row"><div class="bl">Portuguese</div><div class="bb bb-style-9"><span class="bv text-white">310 million</span></div></div>
-      <div class="bar-row"><div class="bl">Urdu</div><div class="bb bb-style-10"><span class="bv text-white">240 million</span></div></div>
+      <div class="bar-row"><div class="bl">Mandarin</div><div class="bb bb-mandarin"><span class="bv text-white">1.16 billion</span></div></div>
+      <div class="bar-row"><div class="bl">Hindi</div><div class="bb bb-hindi"><span class="bv text-white">820 million</span></div></div>
+      <div class="bar-row"><div class="bl">Spanish</div><div class="bb bb-spanish"><span class="bv text-white">760 million</span></div></div>
+      <div class="bar-row"><div class="bl">French</div><div class="bb bb-french"><span class="bv text-white">580 million</span></div></div>
+      <div class="bar-row"><div class="bl">Modern Arabic</div><div class="bb bb-arabic"><span class="bv text-white">550 million</span></div></div>
+      <div class="bar-row"><div class="bl">Bengali</div><div class="bb bb-bengali"><span class="bv text-white">340 million</span></div></div>
+      <div class="bar-row"><div class="bl">Russian</div><div class="bb bb-russian"><span class="bv text-white">320 million</span></div></div>
+      <div class="bar-row"><div class="bl">Portuguese</div><div class="bb bb-portuguese"><span class="bv text-white">310 million</span></div></div>
+      <div class="bar-row"><div class="bl">Urdu</div><div class="bb bb-urdu"><span class="bv text-white">240 million</span></div></div>
       <p class="cnote u-mt-sm">Bars show total speakers (L1 native + L2 fluent). English leads on this measure; Mandarin leads on native speakers alone (~940 million).</p>
     </div>
 
@@ -91,7 +91,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="language-families-how-languages-are-related">language families — how languages are related</h2>
     <div class="card u-mb-md">
       <p class="clabel">the major language families</p>
-      <p class="language-text-4">Languages descended from a shared ancestor are grouped into families. The comparative method — matching regular sound correspondences across languages — lets linguists reconstruct ancestor languages (proto-languages) spoken thousands of years ago, long before writing existed. The Indo-European family is the most studied: its proto-ancestor, Proto-Indo-European (PIE), was spoken on the Pontic-Caspian steppe around 4,000 BCE and eventually gave rise to over 400 languages including English, Hindi, Russian, and Greek.</p>
+      <p class="card-body">Languages descended from a shared ancestor are grouped into families. The comparative method — matching regular sound correspondences across languages — lets linguists reconstruct ancestor languages (proto-languages) spoken thousands of years ago, long before writing existed. The Indo-European family is the most studied: its proto-ancestor, Proto-Indo-European (PIE), was spoken on the Pontic-Caspian steppe around 4,000 BCE and eventually gave rise to over 400 languages including English, Hindi, Russian, and Greek.</p>
     </div>
 
     <!-- Distribution bar: speakers by family -->
@@ -188,7 +188,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Isolates and curiosities -->
     <div class="card u-mb-md">
       <p class="clabel">language isolates — the ones with no known relatives</p>
-      <p class="language-text-4">Some languages resist all attempts at family classification. <span class="u-fw-500">Basque</span>, spoken by 750,000 people in the Pyrenees, is the oldest living language in Europe — predating the arrival of Indo-European languages from the steppe by thousands of years. <span class="u-fw-500">Korean</span> is likely an isolate (the Altaic hypothesis linking it to Japanese has been largely abandoned). <span class="u-fw-500">Zuni</span> in New Mexico and <span class="u-fw-500">Ainu</span> in Japan have no established relatives either. These languages are windows into utterly separate evolutionary lineages of human thought.</p>
+      <p class="card-body">Some languages resist all attempts at family classification. <span class="u-fw-500">Basque</span>, spoken by 750,000 people in the Pyrenees, is the oldest living language in Europe — predating the arrival of Indo-European languages from the steppe by thousands of years. <span class="u-fw-500">Korean</span> is likely an isolate (the Altaic hypothesis linking it to Japanese has been largely abandoned). <span class="u-fw-500">Zuni</span> in New Mexico and <span class="u-fw-500">Ainu</span> in Japan have no established relatives either. These languages are windows into utterly separate evolutionary lineages of human thought.</p>
     </div>
 
     <!-- ── PART B ── -->
@@ -196,7 +196,7 @@ const mod = modules.find((m) => m.id === 40)!;
 
     <!-- Multi-card explorer: levels of linguistic structure -->
     <h2 class="sec" id="the-levels-of-linguistic-structure">the levels of linguistic structure</h2>
-    <p class="language-text-6">Click a level to explore it:</p>
+    <p class="levels-prompt">Click a level to explore it:</p>
     <div class="elem-grid" id="level-grid"></div>
     <div class="elem-detail" id="level-detail"></div>
 
@@ -204,14 +204,14 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="phonetics-and-phonology-the-sounds-of-language">phonetics and phonology — the sounds of language</h2>
     <div class="card u-mb-md">
       <p class="clabel">phonemes, allophones, and the IPA</p>
-      <p class="language-text-4">A phoneme is the smallest unit of sound that distinguishes meaning in a language. English has roughly 44 phonemes despite only 26 letters — one reason English spelling is notoriously unreliable. The International Phonetic Alphabet (IPA), standardised in 1888, gives a unique symbol to every possible human speech sound across all languages. A key insight: phonemes are not physical sounds but abstract categories. The "p" in "pin" and "spin" are acoustically different (the first is aspirated, with a puff of air; the second is not), yet English speakers hear them as the same sound. In Hindi, these two sounds are distinct phonemes — they can distinguish meaning, as in "phal" (fruit) vs "pal" (moment). Languages divide the continuous acoustic space of sound into different categories.</p>
+      <p class="card-body">A phoneme is the smallest unit of sound that distinguishes meaning in a language. English has roughly 44 phonemes despite only 26 letters — one reason English spelling is notoriously unreliable. The International Phonetic Alphabet (IPA), standardised in 1888, gives a unique symbol to every possible human speech sound across all languages. A key insight: phonemes are not physical sounds but abstract categories. The "p" in "pin" and "spin" are acoustically different (the first is aspirated, with a puff of air; the second is not), yet English speakers hear them as the same sound. In Hindi, these two sounds are distinct phonemes — they can distinguish meaning, as in "phal" (fruit) vs "pal" (moment). Languages divide the continuous acoustic space of sound into different categories.</p>
     </div>
 
     <!-- Tone languages bar -->
     <div class="card u-mb-md">
       <p class="clabel">tonal languages — more common than you think</p>
-      <div class="bar-row"><div class="bl">Tonal languages</div><div class="bb bb-style-11"><span class="bv text-white">~70% of world's languages</span></div></div>
-      <div class="bar-row"><div class="bl">Non-tonal languages</div><div class="bb bb-style-12"><span class="bv text-secondary">~30%</span></div></div>
+      <div class="bar-row"><div class="bl">Tonal languages</div><div class="bb bb-tonal"><span class="bv text-white">~70% of world's languages</span></div></div>
+      <div class="bar-row"><div class="bl">Non-tonal languages</div><div class="bb bb-non-tonal"><span class="bv text-secondary">~30%</span></div></div>
       <p class="cnote">Mandarin uses 4 tones; Cantonese has 6; Vietnamese has 6; Hmong has 8. English and most European languages are non-tonal. Tone languages are concentrated in sub-Saharan Africa, Southeast Asia, and Mesoamerica.</p>
     </div>
 
@@ -221,27 +221,27 @@ const mod = modules.find((m) => m.id === 40)!;
       <p class="clabel">morphological types — a comparison scale</p>
       <div class="cscale-poles"><span>Analytic (no inflection)</span><span>Synthetic (moderate)</span><span>Polysynthetic (extreme)</span></div>
       <div class="cscale-row"><div class="cscale-name">Mandarin</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">English</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-2"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">French</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-3"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Russian</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-4"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Turkish</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-5"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Inuktitut</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-6"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">English</div><div class="cscale-track"><div class="cscale-dot cscale-dot-english"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">French</div><div class="cscale-track"><div class="cscale-dot cscale-dot-french"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Russian</div><div class="cscale-track"><div class="cscale-dot cscale-dot-russian"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Turkish</div><div class="cscale-track"><div class="cscale-dot cscale-dot-turkish"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Inuktitut</div><div class="cscale-track"><div class="cscale-dot cscale-dot-inuktitut"></div></div></div>
       <p class="cnote">Turkish "evlerinizden" (from your houses) packs five morphemes into one word. The Inuktitut word "ᑕᑯᒃᓴᐅᓂᕐᒧᑦ" can encode what English needs an entire sentence to express.</p>
     </div>
 
     <div class="card u-mb-md">
       <p class="clabel">the Inuktitut example — a case study in polysynthesis</p>
-      <p class="language-text-4">A famous Yupik (related to Inuktitut) example: "Tuntussuqatarniksaitengqiggtuq" means "He had not yet said again that he was going to hunt reindeer." That is a single grammatical word composed of many morphemes, each adding a layer of meaning. This is not just "packing more in" — it reflects a fundamentally different logic of how meaning is organised. No approach is cognitively superior; they are equally expressive but differently structured. Languages tend to drift between types over centuries: English was far more inflected in Old English (870 CE) than today, having shed most of its case endings.</p>
+      <p class="card-body">A famous Yupik (related to Inuktitut) example: "Tuntussuqatarniksaitengqiggtuq" means "He had not yet said again that he was going to hunt reindeer." That is a single grammatical word composed of many morphemes, each adding a layer of meaning. This is not just "packing more in" — it reflects a fundamentally different logic of how meaning is organised. No approach is cognitively superior; they are equally expressive but differently structured. Languages tend to drift between types over centuries: English was far more inflected in Old English (870 CE) than today, having shed most of its case endings.</p>
     </div>
 
     <!-- Syntax -->
     <h2 class="sec" id="syntax-word-order-and-sentence-structure">syntax — word order and sentence structure</h2>
     <div class="card u-mb-md">
       <p class="clabel">basic word order types across world's languages</p>
-      <div class="bar-row"><div class="bl">SOV (Subject-Object-Verb)</div><div class="bb bb-style-13"><span class="bv text-white">~45% of languages</span></div></div>
-      <div class="bar-row"><div class="bl">SVO (Subject-Verb-Object)</div><div class="bb bb-style-14"><span class="bv text-white">~42%</span></div></div>
-      <div class="bar-row"><div class="bl">VSO</div><div class="bb bb-style-15"><span class="bv text-white">~9%</span></div></div>
-      <div class="bar-row"><div class="bl">VOS / OVS / OSV</div><div class="bb bb-style-16"><span class="bv text-secondary">~4%</span></div></div>
+      <div class="bar-row"><div class="bl">SOV (Subject-Object-Verb)</div><div class="bb bb-sov"><span class="bv text-white">~45% of languages</span></div></div>
+      <div class="bar-row"><div class="bl">SVO (Subject-Verb-Object)</div><div class="bb bb-svo"><span class="bv text-white">~42%</span></div></div>
+      <div class="bar-row"><div class="bl">VSO</div><div class="bb bb-vso"><span class="bv text-white">~9%</span></div></div>
+      <div class="bar-row"><div class="bl">VOS / OVS / OSV</div><div class="bb bb-rare-orders"><span class="bv text-secondary">~4%</span></div></div>
       <p class="cnote">English and Mandarin are SVO ("She eats rice"). Japanese, Turkish, and Korean are SOV ("She rice eats"). Classical Arabic and Welsh are VSO ("Eats she rice"). Free word-order languages (Latin, Russian, Hungarian) use case endings rather than position to signal grammatical roles.</p>
     </div>
 
@@ -253,7 +253,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="semantics-and-pragmatics-what-we-mean-vs-what-we-say">semantics and pragmatics — what we mean vs what we say</h2>
     <div class="card u-mb-md">
       <p class="clabel">Grice's cooperative principle and its four maxims</p>
-      <p class="language-text-4">The philosopher Paul Grice argued in 1975 that conversation works because speakers tacitly agree to be cooperative — and that we infer meaning from apparent violations of this agreement. His four maxims: be truthful (Quality), say as much but not more than needed (Quantity), be relevant (Relation), and be clear (Manner). When someone says "Can you pass the salt?" they are technically asking a yes/no question about physical ability. But because we understand that a cooperative speaker would not ask something so trivially answerable, we infer the real intent: please pass the salt. This gap between sentence meaning and speaker meaning — what Grice called "conversational implicature" — explains most of how language actually functions in social life.</p>
+      <p class="card-body">The philosopher Paul Grice argued in 1975 that conversation works because speakers tacitly agree to be cooperative — and that we infer meaning from apparent violations of this agreement. His four maxims: be truthful (Quality), say as much but not more than needed (Quantity), be relevant (Relation), and be clear (Manner). When someone says "Can you pass the salt?" they are technically asking a yes/no question about physical ability. But because we understand that a cooperative speaker would not ask something so trivially answerable, we infer the real intent: please pass the salt. This gap between sentence meaning and speaker meaning — what Grice called "conversational implicature" — explains most of how language actually functions in social life.</p>
     </div>
 
     <!-- Writing systems -->
@@ -266,7 +266,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showWriting('abugida',this)">Abugida</button>
     </div>
     <div class="explorer-panel" id="writing-panel">
-      <p class="language-text-5">Select a writing system type above to learn about its structure and examples.</p>
+      <p class="explorer-placeholder">Select a writing system type above to learn about its structure and examples.</p>
     </div>
 
     <!-- ── PART C ── -->
@@ -285,14 +285,14 @@ const mod = modules.find((m) => m.id === 40)!;
 
     <div class="card u-mb-md">
       <p class="clabel">the nativist vs. empiricist debate</p>
-      <p class="language-text-4">Chomsky's nativism holds that children are born with an innate language acquisition device (LAD) containing the principles of Universal Grammar — which is why acquisition is so fast, uniform, and robust to impoverished input ("poverty of the stimulus"). The behaviourist alternative (Skinner's "Verbal Behaviour," 1957) held that language is learned through reinforcement and imitation. Chomsky's 1959 review of Skinner is one of the most cited academic papers ever written and largely demolished the behaviourist account. The modern debate is more nuanced: statistical learning and input frequency clearly matter, but so does something innately linguistic in the human brain. The strongest evidence for the nativist position is the emergence of new sign languages — when deaf children in Nicaragua were brought together for the first time in the 1980s, they spontaneously created a new, fully grammatical sign language (Nicaraguan Sign Language) without any adult model.</p>
+      <p class="card-body">Chomsky's nativism holds that children are born with an innate language acquisition device (LAD) containing the principles of Universal Grammar — which is why acquisition is so fast, uniform, and robust to impoverished input ("poverty of the stimulus"). The behaviourist alternative (Skinner's "Verbal Behaviour," 1957) held that language is learned through reinforcement and imitation. Chomsky's 1959 review of Skinner is one of the most cited academic papers ever written and largely demolished the behaviourist account. The modern debate is more nuanced: statistical learning and input frequency clearly matter, but so does something innately linguistic in the human brain. The strongest evidence for the nativist position is the emergence of new sign languages — when deaf children in Nicaragua were brought together for the first time in the 1980s, they spontaneously created a new, fully grammatical sign language (Nicaraguan Sign Language) without any adult model.</p>
     </div>
 
     <!-- Second language slider -->
     <h2 class="sec" id="second-language-acquisition-the-age-effect">second language acquisition — the age effect</h2>
     <div class="card u-mb-md">
       <p class="clabel">critical period hypothesis — explore the effect of age on ultimate attainment</p>
-      <p class="language-text-7">Adjust your age of first exposure to a second language:</p>
+      <p class="age-intro">Adjust your age of first exposure to a second language:</p>
       <input type="range" id="age-slider" min="0" max="60" value="12" oninput="updateAgeSlider(this.value)">
       <div class="slider-labels"><span>Birth (simultaneous)</span><span>Age 30</span><span>Age 60+</span></div>
       <div class="slider-val-display" id="age-val">Age 12</div>
@@ -303,19 +303,19 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="sociolinguistics-language-as-social-identity">sociolinguistics — language as social identity</h2>
     <div class="card u-mb-md">
       <p class="clabel">dialect vs accent vs register</p>
-      <p class="language-text-4">An accent is a difference in pronunciation only. A dialect involves differences in vocabulary and grammar as well as pronunciation. There is no linguistic basis for calling one variety "the" language and another a dialect — the old joke is that "a language is a dialect with an army and a navy." Mandarin and Cantonese are officially dialects of Chinese but are mutually unintelligible; Serbian and Croatian are officially different languages but are largely mutually intelligible. The distinction is political, not linguistic. Register is the style variation within a single speaker's repertoire: the same person uses different vocabulary, sentence complexity, and politeness markers when talking to their employer versus their friends — code-switching not between languages but between modes of the same language.</p>
+      <p class="card-body">An accent is a difference in pronunciation only. A dialect involves differences in vocabulary and grammar as well as pronunciation. There is no linguistic basis for calling one variety "the" language and another a dialect — the old joke is that "a language is a dialect with an army and a navy." Mandarin and Cantonese are officially dialects of Chinese but are mutually unintelligible; Serbian and Croatian are officially different languages but are largely mutually intelligible. The distinction is political, not linguistic. Register is the style variation within a single speaker's repertoire: the same person uses different vocabulary, sentence complexity, and politeness markers when talking to their employer versus their friends — code-switching not between languages but between modes of the same language.</p>
     </div>
 
     <div class="card u-mb-md">
       <p class="clabel">William Labov and the social stratification of language</p>
-      <p class="language-text-4">William Labov's 1963 study of Martha's Vineyard showed that islanders who strongly identified with their community raised the vowels in words like "right" and "house" — an unconscious phonological marker of local identity. His 1966 New York City study found that the pronunciation of post-vocalic "r" (the r in "car" or "fourth") correlated with social class and, crucially, with social aspiration: lower-middle-class speakers were more hypercorrect in formal speech than upper-middle-class speakers, overcorrecting toward the prestige form they associated with upward mobility. Language encodes social meaning at every phoneme.</p>
+      <p class="card-body">William Labov's 1963 study of Martha's Vineyard showed that islanders who strongly identified with their community raised the vowels in words like "right" and "house" — an unconscious phonological marker of local identity. His 1966 New York City study found that the pronunciation of post-vocalic "r" (the r in "car" or "fourth") correlated with social class and, crucially, with social aspiration: lower-middle-class speakers were more hypercorrect in formal speech than upper-middle-class speakers, overcorrecting toward the prestige form they associated with upward mobility. Language encodes social meaning at every phoneme.</p>
     </div>
 
     <!-- Language change -->
     <h2 class="sec" id="how-languages-change-and-die">how languages change — and die</h2>
     <div class="card u-mb-md">
       <p class="clabel">mechanisms of language change</p>
-      <p class="language-text-4">Languages change constantly through four main mechanisms. <span class="u-fw-500">Sound change</span> is regular and systematic: Grimm's Law (c. 500 BCE) shifted all Proto-Indo-European stops in Germanic — every PIE "p" became an "f," which is why Latin "pater" corresponds to English "father." <span class="u-fw-500">Semantic shift</span> changes word meanings: "nice" once meant foolish (from Latin "nescius," ignorant); "awful" meant inspiring awe; "bimbo" was a common term for a male idiot in 1920s American slang. <span class="u-fw-500">Borrowing</span> is the largest source of new vocabulary: English borrowed wholesale from French (after 1066), Latin (Renaissance), and now borrows from global English back-formations. <span class="u-fw-500">Grammaticalisation</span> turns content words into function words: the English future auxiliary "will" derives from Old English "willan" (to want).</p>
+      <p class="card-body">Languages change constantly through four main mechanisms. <span class="u-fw-500">Sound change</span> is regular and systematic: Grimm's Law (c. 500 BCE) shifted all Proto-Indo-European stops in Germanic — every PIE "p" became an "f," which is why Latin "pater" corresponds to English "father." <span class="u-fw-500">Semantic shift</span> changes word meanings: "nice" once meant foolish (from Latin "nescius," ignorant); "awful" meant inspiring awe; "bimbo" was a common term for a male idiot in 1920s American slang. <span class="u-fw-500">Borrowing</span> is the largest source of new vocabulary: English borrowed wholesale from French (after 1066), Latin (Renaissance), and now borrows from global English back-formations. <span class="u-fw-500">Grammaticalisation</span> turns content words into function words: the English future auxiliary "will" derives from Old English "willan" (to want).</p>
     </div>
 
     <div class="warn-block">
@@ -329,26 +329,26 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="does-language-shape-thought-the-whorfian-hypothesis">does language shape thought? — the whorfian hypothesis</h2>
     <div class="card u-mb-md">
       <p class="clabel">strong vs weak Whorfianism</p>
-      <p class="language-text-4">Benjamin Lee Whorf, a fire prevention engineer turned amateur linguist, proposed that the language you speak determines the thoughts you can have — what you cannot name, you cannot think. This strong version is almost certainly false: thought is not identical with language, as demonstrated by deaf people who think without spoken language, mathematicians who think in notation, and the fact that new words can be coined for previously unnamed concepts (which you could presumably already think). The weak version — that language influences (not determines) certain kinds of cognition — is supported by good evidence. Russian speakers, who have separate basic words for light blue ("goluboy") and dark blue ("siniy"), are measurably faster at discriminating these colours in the region of perceptual space between the two categories. The effect is real but modest — it biases perception, it does not imprison thought.</p>
+      <p class="card-body">Benjamin Lee Whorf, a fire prevention engineer turned amateur linguist, proposed that the language you speak determines the thoughts you can have — what you cannot name, you cannot think. This strong version is almost certainly false: thought is not identical with language, as demonstrated by deaf people who think without spoken language, mathematicians who think in notation, and the fact that new words can be coined for previously unnamed concepts (which you could presumably already think). The weak version — that language influences (not determines) certain kinds of cognition — is supported by good evidence. Russian speakers, who have separate basic words for light blue ("goluboy") and dark blue ("siniy"), are measurably faster at discriminating these colours in the region of perceptual space between the two categories. The effect is real but modest — it biases perception, it does not imprison thought.</p>
     </div>
 
     <div class="card u-mb-md">
       <p class="clabel">the Pirahã challenge — a language without numbers or recursion?</p>
-      <p class="language-text-4">Daniel Everett's decades-long fieldwork with the Pirahã people of Brazil produced startling claims: that Pirahã has no numbers beyond "one/two/many," no colour terms, no creation myths, and possibly no recursion in its syntax. The Pirahã apparently could not learn to count even after eight months of training. If this is right — and many linguists dispute Everett's analyses — it suggests that the content of a culture's language and the cognitive capabilities emphasised in it co-evolve. Lera Boroditsky's cross-linguistic studies offer cleaner experimental evidence: Kuuk Thaayorre speakers, who use absolute compass directions rather than relative terms like left/right, have extraordinarily fine-grained spatial orientation abilities, always knowing which direction is north even in windowless rooms.</p>
+      <p class="card-body">Daniel Everett's decades-long fieldwork with the Pirahã people of Brazil produced startling claims: that Pirahã has no numbers beyond "one/two/many," no colour terms, no creation myths, and possibly no recursion in its syntax. The Pirahã apparently could not learn to count even after eight months of training. If this is right — and many linguists dispute Everett's analyses — it suggests that the content of a culture's language and the cognitive capabilities emphasised in it co-evolve. Lera Boroditsky's cross-linguistic studies offer cleaner experimental evidence: Kuuk Thaayorre speakers, who use absolute compass directions rather than relative terms like left/right, have extraordinarily fine-grained spatial orientation abilities, always knowing which direction is north even in windowless rooms.</p>
     </div>
 
     <!-- Metaphor -->
     <h2 class="sec" id="metaphor-and-conceptual-structure">metaphor and conceptual structure</h2>
     <div class="card u-mb-md">
       <p class="clabel">Lakoff and Johnson's conceptual metaphor theory</p>
-      <p class="language-text-4">In "Metaphors We Live By" (1980), George Lakoff and Mark Johnson argued that metaphor is not a poetic decoration but the basic structure of conceptual thought. We do not merely speak of arguments using war metaphors — we actually conceptualise arguments as war: we attack positions, demolish arguments, shoot down ideas, defend our views. An alternative conceptual metaphor — ARGUMENT IS A DANCE — would produce entirely different linguistic and cognitive responses: we would seek harmony, find satisfying moves, create something together. Political language exploits conceptual metaphors systematically. "Tax relief" frames taxation as an affliction from which citizens need rescuing. "Illegal alien" frames undocumented immigrants as threats from outside. The frame shapes what policy options seem natural.</p>
+      <p class="card-body">In "Metaphors We Live By" (1980), George Lakoff and Mark Johnson argued that metaphor is not a poetic decoration but the basic structure of conceptual thought. We do not merely speak of arguments using war metaphors — we actually conceptualise arguments as war: we attack positions, demolish arguments, shoot down ideas, defend our views. An alternative conceptual metaphor — ARGUMENT IS A DANCE — would produce entirely different linguistic and cognitive responses: we would seek harmony, find satisfying moves, create something together. Political language exploits conceptual metaphors systematically. "Tax relief" frames taxation as an affliction from which citizens need rescuing. "Illegal alien" frames undocumented immigrants as threats from outside. The frame shapes what policy options seem natural.</p>
     </div>
 
     <!-- Language and power -->
     <h2 class="sec" id="language-and-power-framing-euphemism-and-control">language and power — framing, euphemism, and control</h2>
     <div class="card u-mb-md">
       <p class="clabel">Orwell's diagnosis — and its limits</p>
-      <p class="language-text-4">George Orwell's 1946 essay "Politics and the English Language" argued that political language is designed to make lies sound truthful and murder respectable. His examples remain instructive: "pacification" for bombing villages; "transfer of population" for mass forced displacement. The appendix to 1984 describes Newspeak — a language engineered to make dissent literally unthinkable by eliminating the vocabulary required to formulate it. The insight is real but partly overstated: people subjected to Newspeak-like language control (Soviet Russia, Maoist China) managed to think and communicate resistance anyway, through irony, private language, and subtext. Language constrains thought at the edges; it does not fully determine it.</p>
+      <p class="card-body">George Orwell's 1946 essay "Politics and the English Language" argued that political language is designed to make lies sound truthful and murder respectable. His examples remain instructive: "pacification" for bombing villages; "transfer of population" for mass forced displacement. The appendix to 1984 describes Newspeak — a language engineered to make dissent literally unthinkable by eliminating the vocabulary required to formulate it. The insight is real but partly overstated: people subjected to Newspeak-like language control (Soviet Russia, Maoist China) managed to think and communicate resistance anyway, through irony, private language, and subtext. Language constrains thought at the edges; it does not fully determine it.</p>
     </div>
 
     <!-- Translation explorer -->
@@ -362,7 +362,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showUntrans('wabi_sabi',this)">Wabi-sabi</button>
     </div>
     <div class="explorer-panel" id="untrans-panel">
-      <p class="language-text-5">Select a word above to explore what translation cannot capture.</p>
+      <p class="explorer-placeholder">Select a word above to explore what translation cannot capture.</p>
     </div>
 
     <!-- ── PART E ── -->
@@ -380,7 +380,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showLang('japanese',this)">Japanese</button>
     </div>
     <div class="explorer-panel" id="lang-panel">
-      <p class="language-text-5">Select a language above for a detailed profile.</p>
+      <p class="explorer-placeholder">Select a language above for a detailed profile.</p>
     </div>
 
     <!-- History of English timeline -->
@@ -397,7 +397,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Diglossia in Arabic -->
     <div class="card u-mb-md">
       <p class="clabel">Arabic diglossia — one language, two registers</p>
-      <p class="language-text-4">Arabic is the clearest living example of diglossia: the coexistence of two varieties of the same language used in different social contexts. Modern Standard Arabic (MSA/Fusha), derived directly from Classical Quranic Arabic, is used in newspapers, formal speeches, legal documents, and education across all 22 Arab-majority countries. But nobody grows up speaking MSA at home. Every Arab child learns a regional dialect as their first language — Egyptian, Moroccan Darija, Gulf Arabic, Levantine — which differ from MSA and from each other as much as Spanish differs from Portuguese. An educated Egyptian and an educated Moroccan can communicate in MSA but may struggle to follow each other's everyday dialect speech. The Quran's status means Classical Arabic has been uniquely preserved for 1,400 years — it is still largely comprehensible to modern Arabic speakers in a way that Chaucer's English is not to modern English speakers.</p>
+      <p class="card-body">Arabic is the clearest living example of diglossia: the coexistence of two varieties of the same language used in different social contexts. Modern Standard Arabic (MSA/Fusha), derived directly from Classical Quranic Arabic, is used in newspapers, formal speeches, legal documents, and education across all 22 Arab-majority countries. But nobody grows up speaking MSA at home. Every Arab child learns a regional dialect as their first language — Egyptian, Moroccan Darija, Gulf Arabic, Levantine — which differ from MSA and from each other as much as Spanish differs from Portuguese. An educated Egyptian and an educated Moroccan can communicate in MSA but may struggle to follow each other's everyday dialect speech. The Quran's status means Classical Arabic has been uniquely preserved for 1,400 years — it is still largely comprehensible to modern Arabic speakers in a way that Chaucer's English is not to modern English speakers.</p>
     </div>
 
     <!-- ── PART F ── -->
@@ -415,21 +415,21 @@ const mod = modules.find((m) => m.id === 40)!;
 
     <div class="card u-mb-md">
       <p class="clabel">what machine translation still fails at</p>
-      <p class="language-text-8">Google Translate and DeepL produce impressive output for high-resource language pairs (English-French, English-Spanish) but still fail in characteristic ways. <span class="u-fw-500">Idiom and metaphor</span> are handled by pattern-matching, not understanding — "kick the bucket" may or may not be correctly translated depending on whether the idiom appeared frequently in training data. <span class="u-fw-500">Pragmatic register</span> — the difference between a formal and an informal tone in Japanese honorifics — is often flattened. <span class="u-fw-500">Low-resource languages</span> (Yoruba, Navajo, Tibetan) translate poorly because there is little training data. <span class="u-fw-500">Ambiguity resolution</span> requiring world knowledge is still problematic: "I saw the man with the telescope" has two readings that require context to disambiguate.</p>
+      <p class="translation-intro">Google Translate and DeepL produce impressive output for high-resource language pairs (English-French, English-Spanish) but still fail in characteristic ways. <span class="u-fw-500">Idiom and metaphor</span> are handled by pattern-matching, not understanding — "kick the bucket" may or may not be correctly translated depending on whether the idiom appeared frequently in training data. <span class="u-fw-500">Pragmatic register</span> — the difference between a formal and an informal tone in Japanese honorifics — is often flattened. <span class="u-fw-500">Low-resource languages</span> (Yoruba, Navajo, Tibetan) translate poorly because there is little training data. <span class="u-fw-500">Ambiguity resolution</span> requiring world knowledge is still problematic: "I saw the man with the telescope" has two readings that require context to disambiguate.</p>
     </div>
 
     <!-- LLMs and language -->
     <h2 class="sec" id="llms-and-language-what-ai-knows-about-language">LLMs and language — what AI "knows" about language</h2>
     <div class="card u-mb-md">
       <p class="clabel">word embeddings and distributional semantics</p>
-      <p class="language-text-4">Modern language AI builds on the distributional hypothesis, articulated by linguist John Firth in 1957: "You shall know a word by the company it keeps." Word2Vec (2013) and its successors represent words as vectors in high-dimensional space, where semantically similar words cluster near each other. In this geometry, the vector for "king" minus "man" plus "woman" is approximately the vector for "queen." Large language models extend this to context-sensitive representations — the same word "bank" has different vector representations in "river bank" and "bank account." The crucial question debated since Emily Bender and Timnit Gebru's 2021 "stochastic parrots" paper is whether this distributional knowledge amounts to anything like understanding, or whether it is extraordinarily sophisticated pattern matching without grounding in the world.</p>
+      <p class="card-body">Modern language AI builds on the distributional hypothesis, articulated by linguist John Firth in 1957: "You shall know a word by the company it keeps." Word2Vec (2013) and its successors represent words as vectors in high-dimensional space, where semantically similar words cluster near each other. In this geometry, the vector for "king" minus "man" plus "woman" is approximately the vector for "queen." Large language models extend this to context-sensitive representations — the same word "bank" has different vector representations in "river bank" and "bank account." The crucial question debated since Emily Bender and Timnit Gebru's 2021 "stochastic parrots" paper is whether this distributional knowledge amounts to anything like understanding, or whether it is extraordinarily sophisticated pattern matching without grounding in the world.</p>
     </div>
 
     <!-- Language endangerment calculator -->
     <h2 class="sec" id="language-loss-a-projection-calculator">language loss — a projection calculator</h2>
     <div class="card u-mb-md">
       <p class="clabel">how long before a language community reaches crisis level?</p>
-      <p class="language-text-9">Enter a language community's current speaker count and annual decline rate to estimate when it reaches 50 speakers (the UNESCO threshold for "critically endangered"):</p>
+      <p class="loss-intro">Enter a language community's current speaker count and annual decline rate to estimate when it reaches 50 speakers (the UNESCO threshold for "critically endangered"):</p>
       <div class="calc-row">
         <div>
           <p class="calc-label">Current speaker count</p>
@@ -447,12 +447,12 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Revitalisation -->
     <div class="card u-mb-md">
       <p class="clabel">the Hebrew miracle — the only successful language revitalisation</p>
-      <p class="language-text-4">Hebrew is the only language in history to be revived from a purely liturgical state to a full first language of a nation. By 1880, Hebrew had not been a spoken vernacular for approximately 1,800 years — it existed only in religious texts and scholarly correspondence. Eliezer Ben-Yehuda, who immigrated to Palestine in 1881, decided that a Jewish state required a Jewish language and raised his son Ben-Zion as the first native Hebrew speaker in millennia. Modern Hebrew required over 30,000 new words for concepts that did not exist in Biblical Hebrew. Today, 9 million people speak it as a first language. Linguists consider this achievement unrepeated and perhaps unrepeatable: it required a unique combination of ideological motivation, a concentrated immigrant population, and deliberate institutional support that no other revitalisation effort has fully replicated.</p>
+      <p class="card-body">Hebrew is the only language in history to be revived from a purely liturgical state to a full first language of a nation. By 1880, Hebrew had not been a spoken vernacular for approximately 1,800 years — it existed only in religious texts and scholarly correspondence. Eliezer Ben-Yehuda, who immigrated to Palestine in 1881, decided that a Jewish state required a Jewish language and raised his son Ben-Zion as the first native Hebrew speaker in millennia. Modern Hebrew required over 30,000 new words for concepts that did not exist in Biblical Hebrew. Today, 9 million people speak it as a first language. Linguists consider this achievement unrepeated and perhaps unrepeatable: it required a unique combination of ideological motivation, a concentrated immigrant population, and deliberate institutional support that no other revitalisation effort has fully replicated.</p>
     </div>
 
     <div class="card u-mb-md">
       <p class="clabel">Welsh and Irish — partial success stories</p>
-      <p class="language-text-4">Welsh is the most successful modern language revitalisation still underway. From a low of about 20% of the Wales population speaking Welsh in 1991, active government policy — bilingual education, S4C Welsh television (launched 1982), Welsh Language Acts, and a cultural renaissance — has stabilised speakers at about 29% (2021 census). Welsh is now required in all schools to age 16. Irish is a more cautionary example: despite being a co-official language of Ireland since 1922, it has continued to decline as a community language, with only about 73,000 native daily speakers in the Gaeltacht regions, despite 40% of the population claiming some knowledge. The difference is that Welsh policy actually created new speakers; Irish policy largely failed to.</p>
+      <p class="card-body">Welsh is the most successful modern language revitalisation still underway. From a low of about 20% of the Wales population speaking Welsh in 1991, active government policy — bilingual education, S4C Welsh television (launched 1982), Welsh Language Acts, and a cultural renaissance — has stabilised speakers at about 29% (2021 census). Welsh is now required in all schools to age 16. Irish is a more cautionary example: despite being a co-official language of Ireland since 1922, it has continued to decline as a community language, with only about 73,000 native daily speakers in the Gaeltacht regions, despite 40% of the population claiming some knowledge. The difference is that Welsh policy actually created new speakers; Irish policy largely failed to.</p>
     </div>
 
     <!-- Distribution: endangered languages by region -->

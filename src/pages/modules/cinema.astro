@@ -14,7 +14,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <div class="module-header">
       <i class="fa-solid fa-film module-header-icon-accent"></i>
       <div>
-        <div class="cinema-text-2">Module 34 — Deep Dive</div>
+        <div class="deep-dive-kicker">Module 34 — Deep Dive</div>
         <h1 class="module-title module-heading">Cinema</h1>
       </div>
     </div>
@@ -78,11 +78,11 @@ const mod = modules.find((m) => m.id === 34)!;
       <div class="panel-title">Cinema history — major periods and movements</div>
       <div class="pc-axis">
         <span class="pc-axis-mark pc-axis-mark-style">1895</span>
-        <span class="pc-axis-mark pc-axis-mark-style-2">1927</span>
-        <span class="pc-axis-mark pc-axis-mark-style-3">1950</span>
-        <span class="pc-axis-mark pc-axis-mark-style-4">1970</span>
-        <span class="pc-axis-mark pc-axis-mark-style-5">1990</span>
-        <span class="pc-axis-mark pc-axis-mark-style-6">Now</span>
+        <span class="pc-axis-mark pc-axis-mark-second">1927</span>
+        <span class="pc-axis-mark pc-axis-mark-third">1950</span>
+        <span class="pc-axis-mark pc-axis-mark-fourth">1970</span>
+        <span class="pc-axis-mark pc-axis-mark-fifth">1990</span>
+        <span class="pc-axis-mark pc-axis-mark-last">Now</span>
       </div>
       <div class="pc-row">
         <div class="pc-label">Silent era</div>
@@ -90,47 +90,47 @@ const mod = modules.find((m) => m.id === 34)!;
       </div>
       <div class="pc-row">
         <div class="pc-label">Studio system</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-style-2"><span class="pc-fill-label text-amber-900">Hollywood Golden Age</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-studio-system"><span class="pc-fill-label text-amber-900">Hollywood Golden Age</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">Italian Neorealism</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-style-3"><span class="pc-fill-label text-red-900">De Sica, Rossellini</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-neorealism"><span class="pc-fill-label text-red-900">De Sica, Rossellini</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">French New Wave</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-style-4"><span class="pc-fill-label text-blue-900">Godard, Truffaut, Chabrol</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-new-wave"><span class="pc-fill-label text-blue-900">Godard, Truffaut, Chabrol</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">New Hollywood</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-style-5"><span class="pc-fill-label text-green-800">Coppola, Scorsese, Kubrick</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-new-hollywood"><span class="pc-fill-label text-green-800">Coppola, Scorsese, Kubrick</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">Contemporary / Digital</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-style-6"><span class="pc-fill-label text-indigo-900">Global auteurs + streaming</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-contemporary"><span class="pc-fill-label text-indigo-900">Global auteurs + streaming</span></div></div>
       </div>
     </div>
 
     <!-- Director style comparison scale -->
     <div class="content-panel">
       <div class="inline-card-title">Filmmaking approaches — where major directors sit</div>
-      <div class="cinema-text-3">Approximate positions on key cinematic dimensions. Tendencies, not definitions.</div>
+      <div class="chart-intro">Approximate positions on key cinematic dimensions. Tendencies, not definitions.</div>
 
-      <div class="cinema-text-4">Style: Classical — Experimental / Formal</div>
+      <div class="axis-title">Style: Classical — Experimental / Formal</div>
       <div class="cscale-row"><div class="cscale-name">Spielberg</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Kubrick</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-2"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Godard</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-3"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-4"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Hitchcock</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-5"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Kubrick</div><div class="cscale-track"><div class="cscale-dot cscale-dot-kubrick"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Godard</div><div class="cscale-track"><div class="cscale-dot cscale-dot-godard"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tarkovsky-style"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Hitchcock</div><div class="cscale-track"><div class="cscale-dot cscale-dot-hitchcock"></div></div></div>
       <div class="cscale-poles">
         <span>Genre entertainment, invisible technique</span>
         <span>Self-conscious form, art cinema</span>
       </div>
 
-      <div class="cinema-text-5">Pace: Fast-cut / Dynamic — Long takes / Contemplative</div>
-      <div class="cscale-row"><div class="cscale-name">Michael Bay</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-6"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Scorsese</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-7"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Wong Kar-wai</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-8"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-9"></div></div></div>
+      <div class="axis-title-spaced">Pace: Fast-cut / Dynamic — Long takes / Contemplative</div>
+      <div class="cscale-row"><div class="cscale-name">Michael Bay</div><div class="cscale-track"><div class="cscale-dot cscale-dot-michael-bay"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Scorsese</div><div class="cscale-track"><div class="cscale-dot cscale-dot-scorsese-pace"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Wong Kar-wai</div><div class="cscale-track"><div class="cscale-dot cscale-dot-wong-kar-wai-pace"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tarkovsky-pace"></div></div></div>
       <div class="cscale-poles">
         <span>High-energy editing, constant motion</span>
         <span>Stillness, duration as meaning</span>
@@ -156,7 +156,7 @@ const mod = modules.find((m) => m.id === 34)!;
     </div>
 
     <!-- Camera movement elem grid -->
-    <div class="cinema-label-2">Camera movement — seven ways to move through space</div>
+    <div class="subsection-title">Camera movement — seven ways to move through space</div>
     <div class="elem-grid" id="camGrid"></div>
     <div id="camDetail" class="elem-detail elem-detail-panel"></div>
 
@@ -199,7 +199,7 @@ const mod = modules.find((m) => m.id === 34)!;
         <rect x="330" y="248" width="180" height="22" rx="4" fill="var(--color-background-success)" opacity="0.3"/>
         <text x="420" y="262" text-anchor="middle" font-size="9" fill="var(--color-text-success)">Back: behind subject, rim light effect</text>
       </svg>
-      <p class="cinema-text-6">Three-point lighting was standardised in Hollywood's Golden Age (1930s-1950s). The key light is typically positioned at 45° above and to one side, the fill light reduces contrast on the shadowed side, and the back/rim light prevents the subject merging with the background. Adjusting the ratio between key and fill changes the mood: a 2:1 ratio reads as natural and warm; 8:1 reads as noir and sinister.</p>
+      <p class="diagram-note">Three-point lighting was standardised in Hollywood's Golden Age (1930s-1950s). The key light is typically positioned at 45° above and to one side, the fill light reduces contrast on the shadowed side, and the back/rim light prevents the subject merging with the background. Adjusting the ratio between key and fill changes the mood: a 2:1 ratio reads as natural and warm; 8:1 reads as noir and sinister.</p>
     </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -207,7 +207,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Sound design range slider -->
     <div class="content-panel">
       <div class="inline-card-title">Sound design — from diegetic to non-diegetic</div>
-      <div class="cinema-text-7">Move the slider to explore how sound relates to the world of the film.</div>
+      <div class="slider-intro">Move the slider to explore how sound relates to the world of the film.</div>
       <input class="u-w-100pct" type="range" id="soundSlider" min="1" max="5" value="1" oninput="updateSoundSlider(this.value)">
       <div class="slider-labels">
         <span>Fully diegetic</span>
@@ -237,8 +237,8 @@ const mod = modules.find((m) => m.id === 34)!;
 
     <!-- Box office top films bar chart -->
     <div class="content-panel">
-      <div class="cinema-label-3">All-time highest-grossing films (adjusted for inflation, worldwide)</div>
-      <div class="cinema-text-10">Inflation-adjusted to 2024 USD. Figures are estimates — historical conversion is inexact.</div>
+      <div class="box-office-title">All-time highest-grossing films (adjusted for inflation, worldwide)</div>
+      <div class="inflation-note">Inflation-adjusted to 2024 USD. Figures are estimates — historical conversion is inexact.</div>
       <div class="bo-chart-wrap" id="boxOfficeChart"></div>
     </div>
 
@@ -255,7 +255,7 @@ const mod = modules.find((m) => m.id === 34)!;
     </div>
 
     <!-- Genre multi-card explorer -->
-    <div class="cinema-label-2">The major film genres — click to explore conventions</div>
+    <div class="subsection-title">The major film genres — click to explore conventions</div>
     <div class="elem-grid" id="genreGrid"></div>
     <div id="genreDetail" class="elem-detail elem-detail-panel"></div>
 
@@ -264,7 +264,7 @@ const mod = modules.find((m) => m.id === 34)!;
       <div class="panel-title-spaced">Global box office by genre — approximate shares (2015–2024 average)</div>
       <div class="dist-bar" id="genreDistBar"></div>
       <div class="dist-legend" id="genreDistLegend"></div>
-      <div class="cinema-text-9">Source: based on MPAA annual reports and Box Office Mojo data. Many films straddle multiple genres; primary classification used.</div>
+      <div class="source-note">Source: based on MPAA annual reports and Box Office Mojo data. Many films straddle multiple genres; primary classification used.</div>
     </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -286,14 +286,14 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Director style comparison scale (narrative vs visual) -->
     <div class="content-panel">
       <div class="inline-card-title">Auteur orientation — narrative vs visual primacy</div>
-      <div class="cinema-text-3">Where each director places their primary emphasis. Neither pole is superior.</div>
-      <div class="cinema-text-4">Story/character-first — Image/form-first</div>
-      <div class="cscale-row"><div class="cscale-name">Sidney Lumet</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-10"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Billy Wilder</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-11"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Scorsese</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-12"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Wong Kar-wai</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-13"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Malick</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-14"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style-15"></div></div></div>
+      <div class="chart-intro">Where each director places their primary emphasis. Neither pole is superior.</div>
+      <div class="axis-title">Story/character-first — Image/form-first</div>
+      <div class="cscale-row"><div class="cscale-name">Sidney Lumet</div><div class="cscale-track"><div class="cscale-dot cscale-dot-lumet"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Billy Wilder</div><div class="cscale-track"><div class="cscale-dot cscale-dot-wilder"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Scorsese</div><div class="cscale-track"><div class="cscale-dot cscale-dot-scorsese-auteur"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Wong Kar-wai</div><div class="cscale-track"><div class="cscale-dot cscale-dot-wong-kar-wai-auteur"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Malick</div><div class="cscale-track"><div class="cscale-dot cscale-dot-malick"></div></div></div>
+      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tarkovsky-auteur"></div></div></div>
       <div class="cscale-poles">
         <span>Dialogue, performance, plot mechanics</span>
         <span>Texture, duration, visual poetry</span>
@@ -306,7 +306,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <div class="content-panel">
       <div class="panel-title">Key auteur careers — active periods</div>
       <div id="auteurTimeline"></div>
-      <div class="cinema-text-8">Approximate active periods as directors, based on first feature to final film or present day.</div>
+      <div class="careers-note">Approximate active periods as directors, based on first feature to final film or present day.</div>
     </div>
 
          PART F · WORLD CINEMA
@@ -335,7 +335,7 @@ const mod = modules.find((m) => m.id === 34)!;
       <div class="panel-title-spaced">Global box office by territory — approximate 2023 shares</div>
       <div class="dist-bar" id="worldDistBar"></div>
       <div class="dist-legend" id="worldDistLegend"></div>
-      <div class="cinema-text-9">Includes domestic productions. North America and China together represent over half of global theatrical revenue.</div>
+      <div class="source-note">Includes domestic productions. North America and China together represent over half of global theatrical revenue.</div>
     </div>
 
          PART G · HOW TO WATCH
@@ -358,7 +358,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Watchlist difficulty calculator -->
     <div class="calc-wrap">
       <div class="inline-card-title">Film difficulty estimator</div>
-      <div class="cinema-text-7">How demanding is a film likely to be? Enter rough ratings for three properties.</div>
+      <div class="slider-intro">How demanding is a film likely to be? Enter rough ratings for three properties.</div>
       <div class="calc-row">
         <div class="calc-field">
           <label>Editing pace (1=very fast, 10=very slow)</label>
@@ -380,7 +380,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Rewatch value slider -->
     <div class="content-panel">
       <div class="inline-card-title">How many times to watch a film</div>
-      <div class="cinema-text-7">Move the slider to see what rewatching a specific number of times typically reveals.</div>
+      <div class="slider-intro">Move the slider to see what rewatching a specific number of times typically reveals.</div>
       <input class="u-w-100pct" type="range" id="rewatchSlider" min="1" max="5" value="1" oninput="updateRewatchSlider(this.value)">
       <div class="slider-labels">
         <span>First watch</span>
@@ -438,7 +438,7 @@ const mod = modules.find((m) => m.id === 34)!;
         <!-- Bottom label -->
         <text x="300" y="318" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)">Ask each question for every scene that produces a strong response</text>
       </svg>
-      <p class="cinema-text-6">This loop has no fixed starting point. Most viewers begin with feeling (what did this do to me?) and work backward through the technical elements to understand the cause. The more you can identify the specific choices that produced the effect — the cut, the close-up, the silence — the more completely you understand the film.</p>
+      <p class="diagram-note">This loop has no fixed starting point. Most viewers begin with feeling (what did this do to me?) and work backward through the technical elements to understand the cause. The more you can identify the specific choices that produced the effect — the cut, the close-up, the silence — the more completely you understand the film.</p>
     </div>
 
 
@@ -446,7 +446,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Starter watchlist -->
     <h2 class="sec" id="thirty-essential-films-an-annotated-starting-point">Thirty essential films — an annotated starting point</h2>
     <div class="content-panel">
-      <div class="cinema-text-3">Sorted by approximate difficulty. Start at the top if you're new to serious film-watching; the bottom row requires patience and prior film literacy.</div>
+      <div class="chart-intro">Sorted by approximate difficulty. Start at the top if you're new to serious film-watching; the bottom row requires patience and prior film literacy.</div>
       <div class="watchlistgrid" id="watchlistGrid"></div>
     </div>
 
