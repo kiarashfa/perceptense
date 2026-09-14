@@ -1,13 +1,8 @@
 name: Deploy
 
-# Manual for now. Add the `push` trigger below once the site is ready to
-# replace what GitHub Pages currently serves from the branch root:
-#
-#   push:
-#     branches: [main]
-#
-# Deployment also requires Settings -> Pages -> Source set to "GitHub Actions".
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
