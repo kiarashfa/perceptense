@@ -102,7 +102,7 @@ const mod = modules.find((m) => m.id === 6)!;
             <rect x="16" y="50" width="20" height="28" fill="var(--color-text-secondary)" rx="2"/>
             <rect x="484" y="50" width="20" height="28" fill="var(--color-text-secondary)" rx="2"/>
             <!-- road surface -->
-            <rect x="30" y="38" width="452" height="6" fill="#9FE1CB" rx="2"/>
+            <rect x="30" y="38" width="452" height="6" class="bi-c-mint" rx="2"/>
             <!-- span label -->
             <line x1="106" y1="28" x2="256" y2="28" stroke="var(--color-text-secondary)" stroke-width="0.8" stroke-dasharray="3,2"/>
             <line x1="106" y1="24" x2="106" y2="32" stroke="var(--color-text-secondary)" stroke-width="0.8"/>
@@ -138,7 +138,7 @@ const mod = modules.find((m) => m.id === 6)!;
             <line x1="400" y1="46" x2="400" y2="57" stroke="var(--color-text-secondary)" stroke-width="1.5"/>
             <!-- deck -->
             <rect x="50" y="54" width="420" height="8" fill="var(--color-text-primary)" rx="2"/>
-            <rect x="50" y="48" width="420" height="6" fill="#9FE1CB" rx="2"/>
+            <rect x="50" y="48" width="420" height="6" class="bi-c-mint" rx="2"/>
             <!-- abutments -->
             <rect x="36" y="58" width="22" height="28" fill="var(--color-text-secondary)" rx="2"/>
             <rect x="462" y="58" width="22" height="28" fill="var(--color-text-secondary)" rx="2"/>
@@ -177,7 +177,7 @@ const mod = modules.find((m) => m.id === 6)!;
             <line x1="320" y1="30" x2="275" y2="86" stroke="#1D9E75" stroke-width="1.5"/>
             <!-- deck -->
             <rect x="40" y="82" width="440" height="8" fill="var(--color-text-primary)" rx="2"/>
-            <rect x="40" y="76" width="440" height="6" fill="#9FE1CB" rx="2"/>
+            <rect x="40" y="76" width="440" height="6" class="bi-c-mint" rx="2"/>
             <!-- span label -->
             <line x1="200" y1="108" x2="320" y2="108" stroke="var(--color-text-secondary)" stroke-width="0.8" stroke-dasharray="3,2"/>
             <text x="260" y="121" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">span 200–1,100 m</text>
@@ -223,7 +223,7 @@ const mod = modules.find((m) => m.id === 6)!;
             <rect x="484" y="58" width="22" height="34" fill="var(--color-text-secondary)" rx="2"/>
             <!-- deck -->
             <rect x="36" y="82" width="448" height="8" fill="var(--color-text-primary)" rx="2"/>
-            <rect x="36" y="76" width="448" height="6" fill="#9FE1CB" rx="2"/>
+            <rect x="36" y="76" width="448" height="6" class="bi-c-mint" rx="2"/>
             <!-- labels -->
             <text x="154" y="12" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">tower</text>
             <text x="14" y="52" text-anchor="middle" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">anchorage</text>
@@ -512,7 +512,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <!-- reservoir water -->
           <path d="M 0 60 L 175 60 L 175 80 L 0 80 Z" fill="var(--color-background-info)" opacity="0.8"/>
           <!-- waves on reservoir -->
-          <path d="M 10 60 Q 30 54 50 60 Q 70 66 90 60 Q 110 54 130 60 Q 150 66 170 60" stroke="#85b7eb" stroke-width="1.5" fill="none"/>
+          <path d="M 10 60 Q 30 54 50 60 Q 70 66 90 60 Q 110 54 130 60 Q 150 66 170 60" class="bi-c-lblue" stroke-width="1.5" fill="none"/>
           <!-- dam body -->
           <path d="M 175 20 L 220 20 L 230 130 L 165 130 Z" fill="var(--color-text-primary)" opacity="0.85"/>
           <!-- dam face texture lines -->
@@ -525,9 +525,9 @@ const mod = modules.find((m) => m.id === 6)!;
           <rect x="230" y="90" width="60" height="40" fill="#1D9E75" rx="3" opacity="0.8"/>
           <text x="260" y="114" text-anchor="middle" font-size="8.5" fill="#fff" font-family="system-ui,sans-serif">power station</text>
           <!-- turbine intakes -->
-          <line x1="175" y1="100" x2="230" y2="105" stroke="#9FE1CB" stroke-width="3"/>
-          <line x1="175" y1="110" x2="230" y2="112" stroke="#9FE1CB" stroke-width="3"/>
-          <line x1="175" y1="120" x2="230" y2="120" stroke="#9FE1CB" stroke-width="3"/>
+          <line x1="175" y1="100" x2="230" y2="105" class="bi-c-mint" stroke-width="3"/>
+          <line x1="175" y1="110" x2="230" y2="112" class="bi-c-mint" stroke-width="3"/>
+          <line x1="175" y1="120" x2="230" y2="120" class="bi-c-mint" stroke-width="3"/>
           <!-- river downstream -->
           <path d="M 290 115 Q 350 108 400 115 Q 450 122 540 115" stroke="var(--color-background-info)" stroke-width="12" fill="none" opacity="0.8"/>
           <!-- ground -->
@@ -759,7 +759,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">4</div>
           <div class="hub-name-col"><div class="hub-name">Chicago O'Hare</div><div class="hub-city">Illinois, USA · ORD</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-77-pct u-bg-hex-3393df"><span class="bv u-text-hex-fff">77.9M</span></div>
+            <div class="hub-bar u-w-77-pct u-bg-hex-3393df"><span class="bv u-text-hex-0c2540">77.9M</span></div>
           </div>
         </div>
         <!-- LHR -->
@@ -767,7 +767,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">5</div>
           <div class="hub-name-col"><div class="hub-name">London Heathrow</div><div class="hub-city">UK · LHR</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-76-pct u-bg-hex-3393df"><span class="bv u-text-hex-fff">79.2M</span></div>
+            <div class="hub-bar u-w-76-pct u-bg-hex-3393df"><span class="bv u-text-hex-0c2540">79.2M</span></div>
           </div>
         </div>
         <!-- DEL -->
@@ -775,7 +775,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">6</div>
           <div class="hub-name-col"><div class="hub-name">Indira Gandhi Int'l</div><div class="hub-city">Delhi, India · DEL</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-72-pct u-bg-hex-52a9ea"><span class="bv u-text-hex-fff">72.2M</span></div>
+            <div class="hub-bar u-w-72-pct u-bg-hex-52a9ea"><span class="bv u-text-hex-0c2540">72.2M</span></div>
           </div>
         </div>
         <!-- CDG -->
@@ -783,7 +783,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">7</div>
           <div class="hub-name-col"><div class="hub-name">Paris Charles de Gaulle</div><div class="hub-city">France · CDG</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-67-pct u-bg-hex-52a9ea"><span class="bv u-text-hex-fff">67.4M</span></div>
+            <div class="hub-bar u-w-67-pct u-bg-hex-52a9ea"><span class="bv u-text-hex-0c2540">67.4M</span></div>
           </div>
         </div>
         <!-- IST -->
@@ -791,7 +791,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">8</div>
           <div class="hub-name-col"><div class="hub-name">Istanbul Airport</div><div class="hub-city">Turkey · IST</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-64-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">64.3M</span></div>
+            <div class="hub-bar u-w-64-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-0c2540">64.3M</span></div>
           </div>
         </div>
         <!-- DEN -->
@@ -799,7 +799,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">9</div>
           <div class="hub-name-col"><div class="hub-name">Denver International</div><div class="hub-city">Colorado, USA · DEN</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-62-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">64.1M</span></div>
+            <div class="hub-bar u-w-62-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-0c2540">64.1M</span></div>
           </div>
         </div>
         <!-- CAN -->
@@ -807,7 +807,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">10</div>
           <div class="hub-name-col"><div class="hub-name">Guangzhou Baiyun</div><div class="hub-city">China · CAN</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-61-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">63.0M</span></div>
+            <div class="hub-bar u-w-61-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-0c2540">63.0M</span></div>
           </div>
         </div>
 
@@ -875,8 +875,8 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">What a major new airport actually costs</div>
           <div class="bar-row"><span class="bl">Istanbul Airport (IST)</span><div class="bb u-w-100-pct u-bg-hex-0c447c"><span class="bv u-text-hex-fff">~$12B · 2018 · 150M pax/yr capacity</span></div></div>
           <div class="bar-row"><span class="bl">Beijing Daxing (PKX)</span><div class="bb u-w-75-pct u-bg-hex-1d79c7"><span class="bv u-text-hex-fff">~$18B · 2019 · 100M pax/yr capacity</span></div></div>
-          <div class="bar-row"><span class="bl">Heathrow T5 (expansion)</span><div class="bb u-w-40-pct u-bg-hex-3393df"><span class="bv u-text-hex-fff">~$8.8B · 2008 · one terminal only</span></div></div>
-          <div class="bar-row"><span class="bl">Denver Int'l (DEN, 1995)</span><div class="bb u-w-25-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-fff">~$5B · $10B in today's money</span></div></div>
+          <div class="bar-row"><span class="bl">Heathrow T5 (expansion)</span><div class="bb u-w-40-pct u-bg-hex-3393df"><span class="bv u-text-hex-0c2540">~$8.8B · 2008 · one terminal only</span></div></div>
+          <div class="bar-row"><span class="bl">Denver Int'l (DEN, 1995)</span><div class="bb u-w-25-pct u-bg-hex-6dbff5"><span class="bv u-text-hex-0c2540">~$5B · $10B in today's money</span></div></div>
           <p class="u-fs-11px text-secondary u-m-8px-0-0 u-lh-1-5">A greenfield major airport is one of the most expensive single infrastructure projects a government can undertake — comparable to a nuclear power plant but more politically popular. The per-passenger cost of a new airport is around $80–120 per annual passenger of designed capacity. A 100M pax/year airport therefore costs roughly $8–12B just for the airport itself, before roads, rail links, or a second runway.</p>
         </div>
       </div>
@@ -917,7 +917,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">4</div>
           <div class="hub-name-col"><div class="hub-name">Shibuya Station</div><div class="hub-city">Tokyo, Japan</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-63-pct u-bg-hex-57a825"><span class="bv u-text-hex-fff">2.2M / day</span></div>
+            <div class="hub-bar u-w-63-pct u-bg-hex-57a825"><span class="bv u-text-hex-04342c">2.2M / day</span></div>
           </div>
         </div>
         <!-- Beijing South -->
@@ -925,7 +925,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">5</div>
           <div class="hub-name-col"><div class="hub-name">Beijing South</div><div class="hub-city">Beijing, China</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-57-pct u-bg-hex-57a825"><span class="bv u-text-hex-fff">2.0M / day</span></div>
+            <div class="hub-bar u-w-57-pct u-bg-hex-57a825"><span class="bv u-text-hex-04342c">2.0M / day</span></div>
           </div>
         </div>
         <!-- Xinzheng -->
@@ -933,7 +933,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">6</div>
           <div class="hub-name-col"><div class="hub-name">Guangzhou South</div><div class="hub-city">Guangzhou, China</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-51-pct u-bg-hex-72c040"><span class="bv u-text-hex-fff">1.8M / day</span></div>
+            <div class="hub-bar u-w-51-pct u-bg-hex-72c040"><span class="bv u-text-hex-04342c">1.8M / day</span></div>
           </div>
         </div>
         <!-- Moscow Kazansky -->
@@ -941,7 +941,7 @@ const mod = modules.find((m) => m.id === 6)!;
           <div class="hub-rank">7</div>
           <div class="hub-name-col"><div class="hub-name">Moscow Kursky / Central</div><div class="hub-city">Moscow, Russia</div></div>
           <div class="hub-bar-col">
-            <div class="hub-bar u-w-43-pct u-bg-hex-72c040"><span class="bv u-text-hex-fff">1.5M / day</span></div>
+            <div class="hub-bar u-w-43-pct u-bg-hex-72c040"><span class="bv u-text-hex-04342c">1.5M / day</span></div>
           </div>
         </div>
         <!-- Paris Nord -->
@@ -1116,7 +1116,7 @@ const mod = modules.find((m) => m.id === 6)!;
       <div class="u-fs-12px u-fw-500 text-primary u-mb-sm">Compressive strength comparison (approximate MPa)</div>
       <div class="bar-row"><span class="bl">High-strength steel</span><div class="bb u-w-100-pct u-bg-hex-0c447c"><span class="bv u-text-hex-fff">~250 MPa yield strength</span></div></div>
       <div class="bar-row"><span class="bl">Reinforced concrete</span><div class="bb u-w-24-pct u-bg-hex-1d79c7"><span class="bv u-text-hex-fff">~30–50 MPa</span></div></div>
-      <div class="bar-row"><span class="bl">Granite (stone)</span><div class="bb u-w-18-pct u-bg-hex-3393df"><span class="bv u-text-hex-fff">~20–40 MPa</span></div></div>
+      <div class="bar-row"><span class="bl">Granite (stone)</span><div class="bb u-w-18-pct u-bg-hex-3393df"><span class="bv u-text-hex-0c2540">~20–40 MPa</span></div></div>
       <div class="bar-row"><span class="bl">CLT timber</span><div class="bb u-w-8-pct u-bg-hex-27500a"><span class="bv u-text-hex-fff">~20 MPa</span></div></div>
       <div class="bar-row"><span class="bl">Brick (common)</span><div class="bb u-w-4-pct u-bg-hex-57a825"><span class="bv u-text-hex-04342c u-fs-10px">~10 MPa</span></div></div>
       <p class="u-fs-11px text-secondary u-m-8px-0-0 u-lh-1-5">Note: yield strength and compressive strength are different measures. Steel's advantage is that it handles tension (pulling) equally well, while stone and concrete are much weaker in tension. The combination of concrete + steel rebar exploits both materials' strengths.</p>
@@ -1323,16 +1323,16 @@ const mod = modules.find((m) => m.id === 6)!;
           <rect x="10" y="28" width="220" height="16" rx="3" fill="#0C447C"/>
           <text x="15" y="40" font-size="9" fill="#fff" font-family="system-ui,sans-serif">HVAC (heating, cooling, ventilation) — 44%</text>
           <!-- Lighting -->
-          <rect x="10" y="50" width="130" height="16" rx="3" fill="#1D79C7"/>
+          <rect x="10" y="50" width="130" height="16" rx="3" fill="#1C76C2"/>
           <text x="15" y="62" font-size="9" fill="#fff" font-family="system-ui,sans-serif">Lighting — 26%</text>
           <!-- Plug loads -->
-          <rect x="10" y="72" width="80" height="16" rx="3" fill="#3393DF"/>
+          <rect x="10" y="72" width="80" height="16" rx="3" fill="#1E77BD"/>
           <text x="15" y="84" font-size="9" fill="#fff" font-family="system-ui,sans-serif">Plug loads — 16%</text>
           <!-- Water heating -->
           <rect x="10" y="94" width="35" height="16" rx="3" fill="#6DBFF5"/>
-          <text x="15" y="106" font-size="9" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">Water — 7%</text>
+          <text x="15" y="106" font-size="9" fill="#04342c" font-family="system-ui,sans-serif">Water — 7%</text>
           <!-- Other -->
-          <rect x="10" y="116" width="18" height="10" rx="3" fill="#9FE1CB"/>
+          <rect x="10" y="116" width="18" height="10" rx="3" class="bi-c-mint"/>
           <text x="32" y="124" font-size="9" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">Other — 7%</text>
           <!-- insight box -->
           <rect x="280" y="28" width="248" height="98" rx="6" fill="var(--color-background-info)" stroke="var(--color-border-info)" stroke-width="0.5"/>
