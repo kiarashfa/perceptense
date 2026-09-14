@@ -22,7 +22,7 @@
     /* Milestone ticker */
     .milestone-item { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
     .milestone-item:last-child { border-bottom: none; }
-    .milestone-year { font-size: 13px; font-weight: 600; color: var(--accent); width: 46px; flex-shrink: 0; }
+    .milestone-year { font-size: 13px; font-weight: 600; color: #1F6350; width: 46px; flex-shrink: 0; }
     .milestone-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.45; }
     .mc-rank { font-size: 12px; font-weight: 600; color: var(--color-text-tertiary); width: 22px; text-align: right; flex-shrink: 0; }
     .mc-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; }
@@ -57,6 +57,10 @@
 
 .text-white {
   color:#fff;
+}
+
+.wp-bar-text-dark {
+  color:#000;
 }
 
 .tl-bar-data {
@@ -296,5 +300,10 @@
 .country-a {
   height:36px;
   font-size:13px;
+}
+
+html[data-theme="dark"] .milestone-year { color: #4CB596; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .milestone-year { color: #4CB596; }
 }
   
