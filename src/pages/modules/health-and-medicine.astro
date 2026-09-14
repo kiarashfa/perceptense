@@ -31,14 +31,14 @@ const mod = modules.find((m) => m.id === 49)!;
   <div class="content-panel">
     <p class="panel-title">Click a system to explore it</p>
     <div class="sys-grid" id="sys-grid">
-      <div class="sys-card active" onclick="showSys('cardio',this)"><div class="sys-icon">&#x2764;</div><div class="sys-label">Cardiovascular</div></div>
-      <div class="sys-card" onclick="showSys('resp',this)"><div class="sys-icon">&#x1FAC1;</div><div class="sys-label">Respiratory</div></div>
-      <div class="sys-card" onclick="showSys('digest',this)"><div class="sys-icon">&#x1F9B4;</div><div class="sys-label">Digestive</div></div>
-      <div class="sys-card" onclick="showSys('neuro',this)"><div class="sys-icon">&#x1F9E0;</div><div class="sys-label">Nervous</div></div>
-      <div class="sys-card" onclick="showSys('endo',this)"><div class="sys-icon">&#x1F9EA;</div><div class="sys-label">Endocrine</div></div>
-      <div class="sys-card" onclick="showSys('immune',this)"><div class="sys-icon">&#x1F6E1;</div><div class="sys-label">Immune</div></div>
-      <div class="sys-card" onclick="showSys('renal',this)"><div class="sys-icon">&#x1FAD8;</div><div class="sys-label">Renal</div></div>
-      <div class="sys-card" onclick="showSys('musculo',this)"><div class="sys-icon">&#x1F9B4;</div><div class="sys-label">Musculoskeletal</div></div>
+      <div class="sys-card active" onclick="showSys('cardio',this)"><div class="tile-icon">&#x2764;</div><div class="label-tiny">Cardiovascular</div></div>
+      <div class="sys-card" onclick="showSys('resp',this)"><div class="tile-icon">&#x1FAC1;</div><div class="label-tiny">Respiratory</div></div>
+      <div class="sys-card" onclick="showSys('digest',this)"><div class="tile-icon">&#x1F9B4;</div><div class="label-tiny">Digestive</div></div>
+      <div class="sys-card" onclick="showSys('neuro',this)"><div class="tile-icon">&#x1F9E0;</div><div class="label-tiny">Nervous</div></div>
+      <div class="sys-card" onclick="showSys('endo',this)"><div class="tile-icon">&#x1F9EA;</div><div class="label-tiny">Endocrine</div></div>
+      <div class="sys-card" onclick="showSys('immune',this)"><div class="tile-icon">&#x1F6E1;</div><div class="label-tiny">Immune</div></div>
+      <div class="sys-card" onclick="showSys('renal',this)"><div class="tile-icon">&#x1FAD8;</div><div class="label-tiny">Renal</div></div>
+      <div class="sys-card" onclick="showSys('musculo',this)"><div class="tile-icon">&#x1F9B4;</div><div class="label-tiny">Musculoskeletal</div></div>
     </div>
     <div id="sys-detail" class="sub-card-roomy">
       <p class="compact-card-title" id="sys-title">Cardiovascular System</p>
@@ -424,27 +424,27 @@ const mod = modules.find((m) => m.id === 49)!;
       <div class="abcde-card" style="background:var(--color-background-danger);border:0.5px solid var(--color-border-danger);">
         <div class="abcde-letter" style="color:var(--color-text-danger);">A</div>
         <div class="abcde-word" style="color:var(--color-text-danger);">Airway</div>
-        <div class="abcde-body" style="color:var(--color-text-danger);">Is it open and clear? Look for gurgling, stridor. Head-tilt chin-lift if safe. Jaw thrust if spinal injury suspected.</div>
+        <div class="body-tiny" style="color:var(--color-text-danger);">Is it open and clear? Look for gurgling, stridor. Head-tilt chin-lift if safe. Jaw thrust if spinal injury suspected.</div>
       </div>
       <div class="abcde-card" style="background:var(--color-background-warning);border:0.5px solid var(--color-border-warning);">
         <div class="abcde-letter" style="color:var(--color-text-warning);">B</div>
         <div class="abcde-word" style="color:var(--color-text-warning);">Breathing</div>
-        <div class="abcde-body" style="color:var(--color-text-warning);">Rate, depth, symmetry. SpO2 if available. Give O2 if SpO2 &lt;94%. Look for paradoxical movement (tension pneumothorax).</div>
+        <div class="body-tiny" style="color:var(--color-text-warning);">Rate, depth, symmetry. SpO2 if available. Give O2 if SpO2 &lt;94%. Look for paradoxical movement (tension pneumothorax).</div>
       </div>
       <div class="abcde-card" style="background:var(--color-background-info);border:0.5px solid var(--color-border-info);">
         <div class="abcde-letter" style="color:var(--color-text-info);">C</div>
         <div class="abcde-word" style="color:var(--color-text-info);">Circulation</div>
-        <div class="abcde-body" style="color:var(--color-text-info);">Pulse rate, BP, capillary refill (&lt;2 s is normal). Control major bleeding with direct pressure. IV access if trained.</div>
+        <div class="body-tiny" style="color:var(--color-text-info);">Pulse rate, BP, capillary refill (&lt;2 s is normal). Control major bleeding with direct pressure. IV access if trained.</div>
       </div>
       <div class="abcde-card" style="background:var(--color-background-success);border:0.5px solid var(--color-border-success);">
         <div class="abcde-letter" style="color:var(--color-text-success);">D</div>
         <div class="abcde-word" style="color:var(--color-text-success);">Disability</div>
-        <div class="abcde-body" style="color:var(--color-text-success);">AVPU (Alert/Voice/Pain/Unresponsive) or GCS. Blood glucose. Pupils equal and reactive?</div>
+        <div class="body-tiny" style="color:var(--color-text-success);">AVPU (Alert/Voice/Pain/Unresponsive) or GCS. Blood glucose. Pupils equal and reactive?</div>
       </div>
       <div class="abcde-card" style="background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);">
         <div class="abcde-letter" style="color:var(--color-text-primary);">E</div>
         <div class="abcde-word" style="color:var(--color-text-primary);">Exposure</div>
-        <div class="abcde-body" style="color:var(--color-text-secondary);">Expose the body to look for hidden injuries, rashes, burns. Then cover to prevent hypothermia. Preserve dignity.</div>
+        <div class="body-tiny" style="color:var(--color-text-secondary);">Expose the body to look for hidden injuries, rashes, burns. Then cover to prevent hypothermia. Preserve dignity.</div>
       </div>
     </div>
   </div>
@@ -866,7 +866,7 @@ buildBarChart('amr-chart', [
     row.className = 'ev-level';
     row.innerHTML = `<div class="ev-bar-label text-secondary">${i === 0 ? 'Strongest' : i === levels.length-1 ? 'Weakest' : ''}</div>
       <div style="flex:1;">
-        <div class="ev-bar-fill" style="width:${lv.width}%;background:${i < 2 ? lv.bg : 'var(--color-background-secondary)'};border:0.5px solid var(--color-border-tertiary);">
+        <div class="fill-bar" style="width:${lv.width}%;background:${i < 2 ? lv.bg : 'var(--color-background-secondary)'};border:0.5px solid var(--color-border-tertiary);">
           <span style="font-size:11px;font-weight:500;color:${i < 2 ? '#fff' : 'var(--color-text-secondary)'};">${lv.label}</span>
         </div>
         <div style="font-size:10px;color:var(--color-text-tertiary);margin-left:4px;">${lv.note}</div>
@@ -966,7 +966,7 @@ buildBarChart('amr-chart', [
   const legend = document.createElement('div');
   legend.className = 'dist-legend';
   segs.forEach(s => {
-    legend.innerHTML += `<div class="dist-key"><div class="dist-dot" style="background:${s.bg};"></div><span>${s.label} (${s.pct}%)</span></div>`;
+    legend.innerHTML += `<div class="legend-item"><div class="key-swatch" style="background:${s.bg};"></div><span>${s.label} (${s.pct}%)</span></div>`;
   });
   el.appendChild(legend);
 })();

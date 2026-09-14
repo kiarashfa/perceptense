@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 45)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-place-of-worship religions-text"></i>
+      <i class="fa-solid fa-place-of-worship module-icon-large"></i>
       <h1 class="module-title module-heading">Module 45: Religions</h1>
     </div>
     <p class="module-subtitle">What religions are, why humans have always had them, and a guided tour of the major traditions</p>
@@ -34,13 +34,13 @@ const mod = modules.find((m) => m.id === 45)!;
         <button onclick="showCSR('tmt',this)">Terror management</button>
         <button onclick="showCSR('boyer',this)">Boyer's minimally counter-intuitive</button>
       </div>
-      <div class="explorer-panel" id="csr-panel"></div>
+      <div class="explorer-box" id="csr-panel"></div>
     </div>
 
     <div class="card u-mb-md">
       <p class="clabel">The numbers — who believes what and where (2024 estimates)</p>
       <div class="dist-bar u-mt-md" id="u-mt-10px"></div>
-      <div class="dist-legend" id="religion-legend"></div>
+      <div class="wrap-row" id="religion-legend"></div>
       <p class="cnote u-mt-sm">Christianity is largest by count (2.4B, 31%) but Islam is fastest-growing: demographic projections suggest Islam will roughly match Christianity by 2070 due to younger age profiles in Muslim-majority countries. The "non-religious" 1.2B is heavily concentrated in China (where many identify as non-religious yet practice ancestor veneration) and Western Europe.</p>
     </div>
 
@@ -60,7 +60,7 @@ const mod = modules.find((m) => m.id === 45)!;
     <div class="card u-mb-md">
       <p class="clabel">Judaism — the oldest Abrahamic tradition</p>
       <p class="cnote u-mb-md">Judaism is the parent tradition of both Christianity and Islam — simultaneously a religion, an ethnicity, and a civilisation. About 15.7 million Jews exist worldwide (0.2% of humanity), yet Jewish thought has shaped Western law, ethics, and theology far beyond that proportion. Click a key concept:</p>
-      <div class="elem-grid" id="judaism-grid"></div>
+      <div class="tile-grid-xs" id="judaism-grid"></div>
       <div class="elem-detail" id="judaism-detail"></div>
     </div>
 
@@ -148,7 +148,7 @@ const mod = modules.find((m) => m.id === 45)!;
       <div class="branch-panel" id="buddhism-panel"></div>
     </div>
 
-    <div class="slider-widget">
+    <div class="widget-card">
       <p class="slider-title">The spectrum of Buddhist meditation practices</p>
       <p class="cnote u-mb-sm">Drag to explore different meditative orientations, from concentration-based calm (samatha) to insight-based inquiry (vipassana):</p>
       <div class="slider-poles"><span>Pure calm (samatha)</span><span>Pure insight (vipassana)</span></div>
@@ -185,18 +185,18 @@ const mod = modules.find((m) => m.id === 45)!;
         <button onclick="showGeneric('eastasia','confucianism',this)">Confucianism</button>
         <button onclick="showGeneric('eastasia','shinto',this)">Shinto</button>
       </div>
-      <div class="explorer-panel" id="eastasia-panel"></div>
+      <div class="explorer-box" id="eastasia-panel"></div>
     </div>
 
     <div class="card u-mb-md">
       <p class="clabel">Three traditions on a spectrum: how much does the individual matter?</p>
-      <div class="cscale-wrap">
-        <div class="cscale-poles"><span>Society / cosmos primary</span><span>Individual primary</span></div>
-        <div class="cscale-row"><div class="cscale-name">Confucianism</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Shinto</div><div class="cscale-track"><div class="cscale-dot cscale-dot-shinto"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Taoism</div><div class="cscale-track"><div class="cscale-dot cscale-dot-taoism"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Buddhism</div><div class="cscale-track"><div class="cscale-dot cscale-dot-buddhism"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Protestantism</div><div class="cscale-track"><div class="cscale-dot cscale-dot-protestantism"></div></div></div>
+      <div class="block-margin">
+        <div class="pole-labels-roomy"><span>Society / cosmos primary</span><span>Individual primary</span></div>
+        <div class="data-row-wide"><div class="cscale-name">Confucianism</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-style"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Shinto</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-shinto"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Taoism</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-taoism"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Buddhism</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-buddhism"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Protestantism</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-protestantism"></div></div></div>
       </div>
       <p class="cnote">Confucianism places the self firmly within a web of obligations (five relationships: ruler-subject, parent-child, husband-wife, elder-younger, friend-friend). Protestant Christianity is probably the most individualistic major religion: Luther's sola fide (faith alone) and the "priesthood of all believers" placed personal conviction at the centre of salvation.</p>
     </div>
@@ -211,7 +211,7 @@ const mod = modules.find((m) => m.id === 45)!;
 
     <div class="card u-mb-md">
       <p class="clabel">Ancient polytheisms — approximate periods of cultural dominance</p>
-      <div class="pc-wrap">
+      <div class="block-margin">
         <div class="pc-axis" id="polytheism-axis"></div>
         <div id="polytheism-chart"></div>
       </div>
@@ -227,7 +227,7 @@ const mod = modules.find((m) => m.id === 45)!;
         <button onclick="showGeneric('nrm','scientology',this)">Scientology</button>
         <button onclick="showGeneric('nrm','bahai',this)">Bahai</button>
       </div>
-      <div class="explorer-panel" id="nrm-panel"></div>
+      <div class="explorer-box" id="nrm-panel"></div>
     </div>
 
     <div class="card u-mb-md">
@@ -235,13 +235,13 @@ const mod = modules.find((m) => m.id === 45)!;
       <p class="cnote">Atheism (no god) and agnosticism (unknowable whether there is a god) are often conflated but conceptually distinct: agnosticism is an epistemic claim about knowledge, atheism is a metaphysical claim about existence. You can be an agnostic atheist (no belief in god, and the question is not answerable) or an agnostic theist (belief in god, but acknowledged as unprovable). "New Atheism" — associated with Dawkins, Hitchens, Harris, and Dennett from roughly 2004 — argued religion is not just mistaken but actively harmful and deserves no special social deference. Secular humanism is the positive programme: basing ethics on human flourishing and reason without any supernatural grounding. About 1.2 billion people self-identify as non-religious (2024), but surveys consistently find that a large portion of "nones" still hold supernatural beliefs — in fate, spiritual forces, or life after death — making them "believing without belonging" rather than committed materialists.</p>
     </div>
 
-    <div class="calc-widget">
+    <div class="widget-card">
       <p class="calc-title">Calculator: Secularisation index — how does your country score?</p>
       <p class="cnote u-mb-md">Enter approximate statistics for a country or region and get a rough "secularisation score" based on Norris and Inglehart's indicators.</p>
-      <div class="calc-row"><span class="calc-label">% who say religion is "important in daily life"</span><input type="number" id="calc-religion-important" placeholder="e.g. 53" min="0" max="100"></div>
-      <div class="calc-row"><span class="calc-label">% who attend weekly religious services</span><input type="number" id="calc-weekly-attend" placeholder="e.g. 20" min="0" max="100"></div>
-      <div class="calc-row"><span class="calc-label">% who say they have no religion</span><input type="number" id="calc-no-religion" placeholder="e.g. 28" min="0" max="100"></div>
-      <div class="calc-row"><span class="calc-label">Human Development Index (0–1)</span><input type="number" id="calc-hdi" placeholder="e.g. 0.92" min="0" max="1" step="0.01"></div>
+      <div class="calc-row"><span class="form-label-wide">% who say religion is "important in daily life"</span><input type="number" id="calc-religion-important" placeholder="e.g. 53" min="0" max="100"></div>
+      <div class="calc-row"><span class="form-label-wide">% who attend weekly religious services</span><input type="number" id="calc-weekly-attend" placeholder="e.g. 20" min="0" max="100"></div>
+      <div class="calc-row"><span class="form-label-wide">% who say they have no religion</span><input type="number" id="calc-no-religion" placeholder="e.g. 28" min="0" max="100"></div>
+      <div class="calc-row"><span class="form-label-wide">Human Development Index (0–1)</span><input type="number" id="calc-hdi" placeholder="e.g. 0.92" min="0" max="1" step="0.01"></div>
       <button onclick="calcSecularism()">Calculate secularisation score</button>
       <div class="calc-output" id="secularism-output">Fill in the fields above and press Calculate.</div>
     </div>
@@ -263,7 +263,7 @@ const mod = modules.find((m) => m.id === 45)!;
         <button onclick="showGeneric('relpol','political_islam',this)">Political Islam</button>
         <button onclick="showGeneric('relpol','hindu_nationalism',this)">Hindu nationalism</button>
       </div>
-      <div class="explorer-panel" id="relpol-panel"></div>
+      <div class="explorer-box" id="relpol-panel"></div>
     </div>
 
     <div class="card u-mb-md">
@@ -295,7 +295,7 @@ const mod = modules.find((m) => m.id === 45)!;
       <p class="cnote">The "conflict thesis" — that religion and science are inherently at war — was popularised by Draper (1874) and White (1896), but historians of science now consider it largely a myth created for 19th-century polemical purposes. The Galileo affair was not primarily about science vs. religion: Galileo was condemned partly because he insulted Pope Urban VIII (a former friend) and because his heliocentrism contradicted the reigning Aristotelian physics, not only Genesis. Isaac Newton, Gregor Mendel (genetics), Georges Lemaitre (Big Bang), and Francisco Varela (cognitive science) were all devout religious believers. Stephen Jay Gould's "Non-Overlapping Magisteria" (NOMA) proposed that science covers fact and theory while religion covers meaning and value — but this fails because most religions do make factual claims (the resurrection, the creation). The most philosophically sophisticated position is probably ongoing dialogue: both religion and science are attempts to understand reality, and both have something to learn from their disagreements.</p>
     </div>
 
-    <div class="slider-widget">
+    <div class="widget-card">
       <p class="slider-title">The future of religion: where do you place yourself on the spectrum?</p>
       <div class="slider-poles"><span>Religion will fade with modernity</span><span>Religion will persist and adapt</span></div>
       <input type="range" min="0" max="100" value="50" id="future-slider" oninput="updateFutureSlider(this.value)">
@@ -358,7 +358,7 @@ const mod = modules.find((m) => m.id === 45)!;
     /* Branch panel renderer */
     function renderBranchPanel(panelId, d) {
       var rows = d.facts.map(function(f){
-        return '<div class="bp-key">'+f.k+'</div><div class="bp-val">'+f.v+'</div>';
+        return '<div class="bp-key">'+f.k+'</div><div class="body-small">'+f.v+'</div>';
       }).join('');
       document.getElementById(panelId).innerHTML =
         '<p class="bp-title">'+d.title+'</p><div class="bp-grid">'+rows+'</div><p class="bp-desc">'+d.desc+'</p>';
@@ -579,7 +579,7 @@ const mod = modules.find((m) => m.id === 45)!;
     var bar = document.getElementById('u-mt-10px'), leg = document.getElementById('religion-legend');
     relData.forEach(function(r){
       var seg = document.createElement('div'); seg.className = 'dist-seg'; seg.style.width = r.pct+'%'; seg.style.background = r.col; seg.title = r.label+' '+r.pct+'%'; if(r.pct>=7) seg.textContent = r.pct+'%'; bar.appendChild(seg);
-      var li = document.createElement('div'); li.className = 'dl-item'; li.innerHTML = '<div class="dl-dot" style="background:'+r.col+'"></div>'+r.label+' '+r.pct+'%'; leg.appendChild(li);
+      var li = document.createElement('div'); li.className = 'dl-item'; li.innerHTML = '<div class="key-swatch" style="background:'+r.col+'"></div>'+r.label+' '+r.pct+'%'; leg.appendChild(li);
     });
 
     /* Judaism elem cards */

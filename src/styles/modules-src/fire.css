@@ -3,12 +3,6 @@
       --accent: #2B7A5E;
     }
 
-    .module-icon {
-      color: var(--accent);
-      flex-shrink: 0;
-      font-size: 42px;
-    }
-
     .module-header .module-title {
       margin: 0;
       line-height: 1.05;
@@ -35,12 +29,6 @@
       color: var(--color-text-primary);
       margin-bottom: 5px;
       line-height: 1.35;
-    }
-
-    .teaser-text {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      line-height: 1.55;
     }
 
     .success-block {
@@ -100,12 +88,6 @@
       margin-bottom: 8px;
     }
 
-    .detail-title {
-      color: var(--color-text-primary);
-      font-size: 15px;
-      font-weight: 500;
-    }
-
     .detail-tag {
       background: var(--accent-bg);
       border: 0.5px solid var(--accent-border);
@@ -150,14 +132,6 @@
       min-width: 320px;
     }
 
-    .diagram-scroll {
-      overflow-x: auto;
-    }
-
-    .dist-wrap {
-      margin-bottom: 10px;
-    }
-
     .dist-bar {
       display: flex;
       height: 28px;
@@ -184,26 +158,11 @@
       margin-top: 8px;
     }
 
-    .legend-item {
-      align-items: center;
-      color: var(--color-text-secondary);
-      display: flex;
-      font-size: 11px;
-      gap: 5px;
-    }
-
     .legend-dot {
       border: 0.5px solid var(--color-border-tertiary);
       border-radius: 50%;
       height: 10px;
       width: 10px;
-    }
-
-    .elem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 8px;
-      margin-bottom: 10px;
     }
 
     .elem-card {
@@ -257,21 +216,6 @@
       margin-bottom: 8px;
     }
 
-    .slider-value {
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .range-ends {
-      color: var(--color-text-secondary);
-      display: flex;
-      font-size: 11px;
-      justify-content: space-between;
-      margin-top: 3px;
-    }
-
     .calc-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -291,17 +235,6 @@
       margin-bottom: 1rem;
       overflow-x: auto;
       padding: 13px 15px 24px;
-    }
-
-    .pc-inner {
-      min-width: 620px;
-    }
-
-    .pc-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
     }
 
     .pc-label {
@@ -345,14 +278,6 @@
       height: 18px;
       margin-left: 158px;
       position: relative;
-    }
-
-    .pc-axis-mark {
-      color: var(--color-text-tertiary);
-      font-size: 9px;
-      position: absolute;
-      transform: translateX(-50%);
-      white-space: nowrap;
     }
 
     .cscale-row {

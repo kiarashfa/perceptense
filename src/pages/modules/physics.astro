@@ -13,7 +13,7 @@ const mod = modules.find((m) => m.id === 43)!;
 
   <!-- HEADER -->
   <div class="module-header">
-    <i class="fa-solid fa-atom module-header-icon-accent"></i>
+    <i class="fa-solid fa-atom module-icon-large"></i>
     <h1 class="module-title module-heading">Module 43: Physics</h1>
   </div>
   <p class="module-subtitle">The laws that govern reality — from falling apples to the fabric of spacetime</p>
@@ -30,7 +30,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">The four great theories — explore each</p>
     <div class="button-row-compact" id="theory-btns"></div>
-    <div class="explorer-panel" id="theory-panel"><span class="explorer-placeholder">Select a theory above.</span></div>
+    <div class="explorer-panel" id="theory-panel"><span class="muted-medium">Select a theory above.</span></div>
   </div>
 
   <!-- Units overview card -->
@@ -56,7 +56,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- TIMELINE: History of physics -->
   <div class="card u-mb-md">
     <p class="clabel">Physics timeline — key eras</p>
-    <div class="pc-wrap">
+    <div class="scroll-x-padded">
       <div class="pc-axis" id="phys-axis"></div>
       <div id="phys-timeline"></div>
     </div>
@@ -327,7 +327,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- Entanglement distribution bar -->
   <div class="card u-mb-md">
     <p class="clabel">Bell inequality violations — experimental results summary</p>
-    <p class="card-intro">The Bell parameter S: classical (local hidden variable) theories require S ≤ 2. Quantum mechanics predicts S ≤ 2√2 ≈ 2.83. Experimental results consistently find S > 2.</p>
+    <p class="lede-flush-tight">The Bell parameter S: classical (local hidden variable) theories require S ≤ 2. Quantum mechanics predicts S ≤ 2√2 ≈ 2.83. Experimental results consistently find S > 2.</p>
     <div id="bell-bars"></div>
     <p class="cnote">The Aspect et al. (1982), Hensen et al. (2015, loophole-free), and subsequent experiments all confirm quantum mechanics and rule out local hidden variable theories. The universe is genuinely non-local at the quantum level.</p>
   </div>
@@ -338,7 +338,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- Comparison scale: interpretations -->
   <div class="card u-mb-md">
     <p class="clabel">Interpretations compared — on key dimensions</p>
-    <p class="card-intro">Where each major interpretation falls on contested questions</p>
+    <p class="lede-flush-tight">Where each major interpretation falls on contested questions</p>
 
     <p class="clabel u-mt-md">Wavefunction collapse — real or not?</p>
     <div class="cscale-axis"><span>Collapse is physical</span><span>No collapse</span></div>
@@ -353,7 +353,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Interpretations — explore in depth</p>
     <div class="button-row-compact" id="interp-btns"></div>
-    <div class="explorer-panel" id="interp-panel"><span class="explorer-placeholder">Select an interpretation above.</span></div>
+    <div class="explorer-panel" id="interp-panel"><span class="muted-medium">Select an interpretation above.</span></div>
   </div>
 
   <!-- ═══════════ PART I ═══════════ -->
@@ -381,7 +381,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Standard Model — particle categories by type</p>
     <div class="distbar" id="sm-distbar"></div>
-    <div class="distbar-legend" id="sm-legend"></div>
+    <div class="legend-inline" id="sm-legend"></div>
     <p class="cnote u-mt-sm">The Standard Model has 17 fundamental particles (6 quarks, 6 leptons, 4 force-carrying gauge bosons, plus the Higgs). The Higgs boson, last piece confirmed at the LHC in 2012, gives quarks and leptons their mass via the Higgs mechanism.</p>
   </div>
 
@@ -392,7 +392,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Quantum technologies — explore applications</p>
     <div class="button-row-compact" id="qtech-btns"></div>
-    <div class="explorer-panel" id="qtech-panel"><span class="explorer-placeholder">Select a technology above.</span></div>
+    <div class="explorer-panel" id="qtech-panel"><span class="muted-medium">Select a technology above.</span></div>
   </div>
 
   <!-- Quantum computing comparison scale -->
@@ -450,14 +450,14 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Fate of the universe — explore the scenarios</p>
     <div class="button-row-compact" id="fate-btns"></div>
-    <div class="explorer-panel" id="fate-panel"><span class="explorer-placeholder">Select a scenario above.</span></div>
+    <div class="explorer-panel" id="fate-panel"><span class="muted-medium">Select a scenario above.</span></div>
   </div>
 
   <!-- Cosmology distribution bar -->
   <div class="card u-mb-md">
     <p class="clabel">Composition of the universe (energy density)</p>
     <div class="distbar" id="cosmos-distbar"></div>
-    <div class="distbar-legend" id="cosmos-legend"></div>
+    <div class="legend-inline" id="cosmos-legend"></div>
     <p class="cnote u-mt-sm">Dark energy is the dominant component and drives the accelerating expansion. Baryonic matter — everything you can see, touch, and are made of — is a 5% afterthought in the cosmic inventory.</p>
   </div>
 
@@ -629,7 +629,7 @@ window.addEventListener('DOMContentLoaded', function () {
       var row = document.createElement('div');
       row.className = 'cscale-row';
       row.innerHTML = '<div class="cscale-name">' + item.name + '</div>' +
-        '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pct + '%;background:' + (item.col || 'var(--accent)') + '"></div></div>' +
+        '<div class="range-track"><div class="cscale-dot" style="left:' + item.pct + '%;background:' + (item.col || 'var(--accent)') + '"></div></div>' +
         '<div class="cscale-val">' + item.val + '</div>';
       container.appendChild(row);
     });
@@ -668,7 +668,7 @@ window.addEventListener('DOMContentLoaded', function () {
       segs.forEach(function(s) {
         var item = document.createElement('div');
         item.className = 'dbl-item';
-        item.innerHTML = '<div class="dbl-dot" style="background:' + s.bg + ';"></div>' + s.label + ' (' + s.pct + '%)';
+        item.innerHTML = '<div class="key-swatch" style="background:' + s.bg + ';"></div>' + s.label + ' (' + s.pct + '%)';
         legend.appendChild(item);
       });
     }

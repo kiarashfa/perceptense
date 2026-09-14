@@ -26,7 +26,7 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
 
     <div class="content-panel">
-      <div class="logic-title">Form over content</div>
+      <div class="detail-heading">Form over content</div>
       <div class="muted-copy-large">Logic's central insight is that validity depends on form, not subject matter. "All A are B; C is A; therefore C is B" keeps the same structure whether A means mammals, legal contracts, integers, or fictional creatures. A valid argument guarantees only this: if the premises are true, the conclusion cannot be false. A sound argument is stronger because it is valid and its premises are actually true.</div>
     </div>
 
@@ -40,7 +40,7 @@ const mod = modules.find((m) => m.id === 47)!;
     <div id="logic-core-display" class="explorer-panel"></div>
 
     <div class="content-panel">
-      <div class="logic-title">The historical hinge</div>
+      <div class="detail-heading">The historical hinge</div>
       <div class="muted-copy-large">Aristotle, writing around 350 BCE, made the syllogism famous: all humans are mortal; Socrates is human; therefore Socrates is mortal. The Stoics then developed propositional logic, with if-then arguments closer to modern computing. George Boole turned logic into algebra in 1847. Gottlob Frege's 1879 <span class="mono">Begriffsschrift</span> added quantifiers and variables, which is why modern logic can say "for every number there is a larger number" without pretending every argument is about Socrates. The short version: logic moved from classifying sentences to designing languages precise enough for mathematics and machines.</div>
     </div>
 
@@ -55,48 +55,48 @@ const mod = modules.find((m) => m.id === 47)!;
         </defs>
         <rect class="diagram-node" x="30" y="34" width="180" height="58" rx="10"></rect>
         <text class="diagram-label" x="120" y="58" text-anchor="middle">Premise 1</text>
-        <text class="diagram-small" x="120" y="77" text-anchor="middle">If P, then Q</text>
+        <text class="svg-small" x="120" y="77" text-anchor="middle">If P, then Q</text>
         <rect class="diagram-node" x="30" y="138" width="180" height="58" rx="10"></rect>
         <text class="diagram-label" x="120" y="162" text-anchor="middle">Premise 2</text>
-        <text class="diagram-small" x="120" y="181" text-anchor="middle">P is true</text>
-        <rect class="diagram-accent" x="285" y="86" width="160" height="64" rx="10"></rect>
+        <text class="svg-small" x="120" y="181" text-anchor="middle">P is true</text>
+        <rect class="svg-accent" x="285" y="86" width="160" height="64" rx="10"></rect>
         <text class="diagram-label" x="365" y="112" text-anchor="middle">Inference rule</text>
-        <text class="diagram-small" x="365" y="132" text-anchor="middle">modus ponens</text>
+        <text class="svg-small" x="365" y="132" text-anchor="middle">modus ponens</text>
         <rect class="diagram-node" x="515" y="86" width="170" height="64" rx="10"></rect>
         <text class="diagram-label" x="600" y="112" text-anchor="middle">Conclusion</text>
-        <text class="diagram-small" x="600" y="132" text-anchor="middle">Q is true</text>
+        <text class="svg-small" x="600" y="132" text-anchor="middle">Q is true</text>
         <path class="diagram-line" d="M 210 63 C 248 63, 250 104, 285 108" marker-end="url(#arrow)"></path>
         <path class="diagram-line" d="M 210 167 C 248 167, 250 132, 285 128" marker-end="url(#arrow)"></path>
         <path class="diagram-line" d="M 445 118 L 515 118" marker-end="url(#arrow)"></path>
-        <text class="diagram-small" x="360" y="204" text-anchor="middle">Logic checks whether the bridge is licensed, not whether the starting facts are pleasant.</text>
+        <text class="svg-small" x="360" y="204" text-anchor="middle">Logic checks whether the bridge is licensed, not whether the starting facts are pleasant.</text>
       </svg>
     </div>
 
-    <div class="elem-grid" aria-label="Classical logic explorer">
+    <div class="tile-grid-xs" aria-label="Classical logic explorer">
       <div class="elem-card" onclick="showLogicElement('connectives', this)">
         <div class="elem-icon"><i class="fa-solid fa-code-branch"></i></div>
         <div class="elem-name">Connectives</div>
-        <div class="elem-sub">and, or, not, if, iff</div>
+        <div class="note-line-relaxed">and, or, not, if, iff</div>
       </div>
       <div class="elem-card" onclick="showLogicElement('deduction', this)">
         <div class="elem-icon"><i class="fa-solid fa-arrow-down-short-wide"></i></div>
         <div class="elem-name">Deduction</div>
-        <div class="elem-sub">certainty from premises</div>
+        <div class="note-line-relaxed">certainty from premises</div>
       </div>
       <div class="elem-card" onclick="showLogicElement('predicate', this)">
         <div class="elem-icon"><i class="fa-solid fa-universal-access"></i></div>
         <div class="elem-name">Predicate logic</div>
-        <div class="elem-sub">all, some, none</div>
+        <div class="note-line-relaxed">all, some, none</div>
       </div>
       <div class="elem-card" onclick="showLogicElement('induction', this)">
         <div class="elem-icon"><i class="fa-solid fa-chart-line"></i></div>
         <div class="elem-name">Induction</div>
-        <div class="elem-sub">evidence to expectation</div>
+        <div class="note-line-relaxed">evidence to expectation</div>
       </div>
       <div class="elem-card" onclick="showLogicElement('abduction', this)">
         <div class="elem-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
         <div class="elem-name">Abduction</div>
-        <div class="elem-sub">best explanation</div>
+        <div class="note-line-relaxed">best explanation</div>
       </div>
     </div>
     <div id="logic-element-detail" class="elem-detail elem-detail-panel"></div>
@@ -112,7 +112,7 @@ const mod = modules.find((m) => m.id === 47)!;
         <button onclick="showTruthTable('iff', this)">IFF</button>
       </div>
       <div id="truth-table-display" class="truth-table-wrap"></div>
-      <div id="truth-table-note" class="chart-note"></div>
+      <div id="truth-table-note" class="fine-print"></div>
     </div>
 
     <div class="diagram-card">
@@ -120,33 +120,33 @@ const mod = modules.find((m) => m.id === 47)!;
       <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing four valid deductive forms">
         <rect class="diagram-node" x="12" y="26" width="170" height="132" rx="10"></rect>
         <text class="diagram-label" x="97" y="50" text-anchor="middle">Modus ponens</text>
-        <text class="diagram-small" x="97" y="75" text-anchor="middle">If P then Q</text>
-        <text class="diagram-small" x="97" y="96" text-anchor="middle">P is true</text>
+        <text class="svg-small" x="97" y="75" text-anchor="middle">If P then Q</text>
+        <text class="svg-small" x="97" y="96" text-anchor="middle">P is true</text>
         <line x1="38" y1="111" x2="156" y2="111" class="diagram-line"></line>
-        <text class="diagram-small" x="97" y="133" text-anchor="middle">therefore Q</text>
+        <text class="svg-small" x="97" y="133" text-anchor="middle">therefore Q</text>
 
         <rect class="diagram-node" x="202" y="26" width="170" height="132" rx="10"></rect>
         <text class="diagram-label" x="287" y="50" text-anchor="middle">Modus tollens</text>
-        <text class="diagram-small" x="287" y="75" text-anchor="middle">If P then Q</text>
-        <text class="diagram-small" x="287" y="96" text-anchor="middle">Q is false</text>
+        <text class="svg-small" x="287" y="75" text-anchor="middle">If P then Q</text>
+        <text class="svg-small" x="287" y="96" text-anchor="middle">Q is false</text>
         <line x1="228" y1="111" x2="346" y2="111" class="diagram-line"></line>
-        <text class="diagram-small" x="287" y="133" text-anchor="middle">therefore P is false</text>
+        <text class="svg-small" x="287" y="133" text-anchor="middle">therefore P is false</text>
 
-        <rect class="diagram-accent" x="392" y="26" width="170" height="132" rx="10"></rect>
+        <rect class="svg-accent" x="392" y="26" width="170" height="132" rx="10"></rect>
         <text class="diagram-label" x="477" y="50" text-anchor="middle">Conditional chain</text>
-        <text class="diagram-small" x="477" y="75" text-anchor="middle">If P then Q</text>
-        <text class="diagram-small" x="477" y="96" text-anchor="middle">If Q then R</text>
+        <text class="svg-small" x="477" y="75" text-anchor="middle">If P then Q</text>
+        <text class="svg-small" x="477" y="96" text-anchor="middle">If Q then R</text>
         <line x1="418" y1="111" x2="536" y2="111" class="diagram-line"></line>
-        <text class="diagram-small" x="477" y="133" text-anchor="middle">therefore if P then R</text>
+        <text class="svg-small" x="477" y="133" text-anchor="middle">therefore if P then R</text>
 
         <rect class="diagram-node" x="582" y="26" width="166" height="132" rx="10"></rect>
         <text class="diagram-label" x="665" y="50" text-anchor="middle">Either-or</text>
-        <text class="diagram-small" x="665" y="75" text-anchor="middle">P or Q</text>
-        <text class="diagram-small" x="665" y="96" text-anchor="middle">P is false</text>
+        <text class="svg-small" x="665" y="75" text-anchor="middle">P or Q</text>
+        <text class="svg-small" x="665" y="96" text-anchor="middle">P is false</text>
         <line x1="608" y1="111" x2="722" y2="111" class="diagram-line"></line>
-        <text class="diagram-small" x="665" y="133" text-anchor="middle">therefore Q</text>
+        <text class="svg-small" x="665" y="133" text-anchor="middle">therefore Q</text>
       </svg>
-      <div class="chart-note">These are reusable argument skeletons. Logic asks whether the skeleton preserves truth; other fields decide whether the starting premises deserve belief.</div>
+      <div class="fine-print">These are reusable argument skeletons. Logic asks whether the skeleton preserves truth; other fields decide whether the starting premises deserve belief.</div>
     </div>
 
     <h2 class="sec" id="part-c-fallacies-the-patterns-of-bad-reasoning">Part C - fallacies: the patterns of bad reasoning</h2>
@@ -175,7 +175,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="cscale-row"><div class="cscale-name">False dichotomy</div><div class="cscale-track"><span class="cscale-dot" data-left="54"></span></div></div>
       <div class="cscale-row"><div class="cscale-name">Appeal to authority</div><div class="cscale-track"><span class="cscale-dot" data-left="66"></span></div></div>
       <div class="cscale-row"><div class="cscale-name">Straw man</div><div class="cscale-track"><span class="cscale-dot" data-left="86"></span></div></div>
-      <div class="chart-note">Placement is conceptual, not a measurement. Formal fallacies can be diagnosed from structure alone; informal fallacies usually require context, definitions, and background facts.</div>
+      <div class="fine-print">Placement is conceptual, not a measurement. Formal fallacies can be diagnosed from structure alone; informal fallacies usually require context, definitions, and background facts.</div>
     </div>
 
     <div class="logic-warning">A bias is not automatically a fallacy. Confirmation bias is a psychological tendency to seek friendly evidence; a fallacy is a defect in an argument. They overlap when a person turns selective attention into a conclusion, as in "I found three stories that confirm my belief, so the belief is established."</div>
@@ -212,14 +212,14 @@ const mod = modules.find((m) => m.id === 47)!;
         <div class="slider-value"><span id="selfref-value">3</span>/10</div>
       </div>
       <input id="selfref-slider" type="range" min="0" max="10" value="3">
-      <div class="slider-poles"><span>object language only</span><span>talking about its own sentences</span></div>
+      <div class="pole-labels-under"><span>object language only</span><span>talking about its own sentences</span></div>
       <div id="selfref-output" class="live-result"></div>
     </div>
 
     <h2 class="sec" id="part-e-probability-and-decision-theory-logic-under-uncertainty">Part E - probability and decision theory: logic under uncertainty</h2>
     <div class="calc-box">
       <div class="chart-title">Bayes calculator: base rates change everything</div>
-      <div class="calc-grid">
+      <div class="field-grid">
         <div class="calc-field">
           <label for="prior">Prior probability (%)</label>
           <input id="prior" type="number" min="0.01" max="99.99" step="0.01" value="1">
@@ -251,11 +251,11 @@ const mod = modules.find((m) => m.id === 47)!;
         <div class="legend-item"><span class="legend-swatch" data-color="var(--color-background-warning)"></span>Payoff</div>
         <div class="legend-item"><span class="legend-swatch" data-color="var(--accent-bg)"></span>Strategy</div>
       </div>
-      <div class="chart-note">Illustrative distribution, not a universal law. It reminds you that probability, utility, and strategic interaction are different questions that people often collapse into one vague word: "rational."</div>
+      <div class="fine-print">Illustrative distribution, not a universal law. It reminds you that probability, utility, and strategic interaction are different questions that people often collapse into one vague word: "rational."</div>
     </div>
 
     <div class="content-panel">
-      <div class="logic-title">Decision theory and game theory are not the same game</div>
+      <div class="detail-heading">Decision theory and game theory are not the same game</div>
       <div class="muted-copy-large">Decision theory asks what one agent should choose under uncertainty, usually by expected utility: probability multiplied by value. Pascal's wager is a famous early version, though its assumptions are heavily disputed. Game theory adds other agents whose choices respond to yours. In the prisoner's dilemma, defection dominates in a one-shot version, yet cooperation can win in repeated play because reputation changes the payoff landscape.</div>
       <div class="matrix" aria-label="Prisoner's dilemma payoff matrix">
         <div></div><div class="m-head">Other cooperates</div><div class="m-head">Other defects</div>
@@ -277,31 +277,31 @@ const mod = modules.find((m) => m.id === 47)!;
     <div class="logic-note">Self-reference is not automatically forbidden. A book can say "this book has 300 pages" without exploding. The danger appears when a system is strong enough to encode statements about its own truth or provability while also pretending there is only one level of language. Alfred Tarski's hierarchy separates object language from metalanguage precisely to stop truth from chasing its own tail.</div>
 
     <h2 class="sec" id="part-g-mathematical-and-infinity-paradoxes">Part G - mathematical and infinity paradoxes</h2>
-    <div class="elem-grid" aria-label="Infinity paradox explorer">
+    <div class="tile-grid-xs" aria-label="Infinity paradox explorer">
       <div class="elem-card" onclick="showInfinity('zeno', this)">
         <div class="elem-icon"><i class="fa-solid fa-person-running"></i></div>
         <div class="elem-name">Zeno</div>
-        <div class="elem-sub">motion split infinitely</div>
+        <div class="note-line-relaxed">motion split infinitely</div>
       </div>
       <div class="elem-card" onclick="showInfinity('hotel', this)">
         <div class="elem-icon"><i class="fa-solid fa-hotel"></i></div>
         <div class="elem-name">Hilbert's Hotel</div>
-        <div class="elem-sub">countable infinity</div>
+        <div class="note-line-relaxed">countable infinity</div>
       </div>
       <div class="elem-card" onclick="showInfinity('cantor', this)">
         <div class="elem-icon"><i class="fa-solid fa-table-cells"></i></div>
         <div class="elem-name">Cantor</div>
-        <div class="elem-sub">larger infinities</div>
+        <div class="note-line-relaxed">larger infinities</div>
       </div>
       <div class="elem-card" onclick="showInfinity('banach', this)">
         <div class="elem-icon"><i class="fa-solid fa-circle-nodes"></i></div>
         <div class="elem-name">Banach-Tarski</div>
-        <div class="elem-sub">choice gets wild</div>
+        <div class="note-line-relaxed">choice gets wild</div>
       </div>
       <div class="elem-card" onclick="showInfinity('horn', this)">
         <div class="elem-icon"><i class="fa-solid fa-volume-high"></i></div>
         <div class="elem-name">Gabriel's Horn</div>
-        <div class="elem-sub">finite volume, infinite area</div>
+        <div class="note-line-relaxed">finite volume, infinite area</div>
       </div>
     </div>
     <div id="infinity-detail" class="elem-detail elem-detail-panel"></div>
@@ -312,7 +312,7 @@ const mod = modules.find((m) => m.id === 47)!;
         <div class="slider-value"><span id="birthday-count">23</span> people</div>
       </div>
       <input id="birthday-slider" type="range" min="2" max="80" value="23">
-      <div class="slider-poles"><span>few pairs</span><span>many pairwise comparisons</span></div>
+      <div class="pole-labels-under"><span>few pairs</span><span>many pairwise comparisons</span></div>
       <div id="birthday-output" class="live-result"></div>
     </div>
 
@@ -322,11 +322,11 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="bar-row"><div class="bl">Always switch</div><div class="bb"><div class="bar-fill" data-width="66.7" data-color="var(--accent)"></div></div><div class="bv">66.7%</div></div>
       <div class="bar-row"><div class="bl">Always stay</div><div class="bb"><div class="bar-fill" data-width="33.3" data-color="var(--color-background-warning)"></div></div><div class="bv">33.3%</div></div>
       <div class="bar-row"><div class="bl">Random choice</div><div class="bb"><div class="bar-fill" data-width="50" data-color="var(--color-background-info)"></div></div><div class="bv">50%</div></div>
-      <div class="chart-note">Assumes the standard rules: the host knows where the car is, always opens a goat door, and always offers the switch. Change those rules and the calculation changes.</div>
+      <div class="fine-print">Assumes the standard rules: the host knows where the car is, always opens a goat door, and always offers the switch. Change those rules and the calculation changes.</div>
     </div>
 
     <div class="content-panel">
-      <div class="logic-title">Monty Hall simulator</div>
+      <div class="detail-heading">Monty Hall simulator</div>
       <div class="muted-copy-large">Pick a door. The host will reveal one empty door and offer the switch. Manual plays update the policy you choose; auto-play tests both stay and switch on the same random setups.</div>
       <div id="mh-doors" class="mh-doors" aria-label="Monty Hall doors"></div>
       <div id="mh-status" class="mh-status">Pick a door to begin.</div>
@@ -354,7 +354,7 @@ const mod = modules.find((m) => m.id === 47)!;
 
     <div class="calc-box">
       <div class="chart-title">Expected value calculator</div>
-      <div class="calc-grid">
+      <div class="field-grid">
         <div class="calc-field">
           <label for="gain">Gain if it works</label>
           <input id="gain" type="number" value="1000" step="10">
@@ -401,7 +401,7 @@ const mod = modules.find((m) => m.id === 47)!;
     <div id="phil-paradox-display" class="explorer-panel"></div>
 
     <div class="content-panel">
-      <div class="logic-title">The useful habit: ask which assumption breaks</div>
+      <div class="detail-heading">The useful habit: ask which assumption breaks</div>
       <div class="muted-copy-large">The Sorites paradox pressures vague predicates like "heap" and "bald." The Ship of Theseus pressures identity through time. The Fermi paradox pressures estimates about life, technology, and detectability in a galaxy with roughly 100 to 400 billion stars. Olbers' paradox looked at a dark night sky and refuted an infinite, eternal, static universe before modern cosmology supplied the mechanism: the observable universe has finite age and is expanding.</div>
     </div>
 
@@ -421,7 +421,7 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
 
     <div class="content-panel">
-      <div class="panel-title">The decision anatomy diagram</div>
+      <div class="panel-title-large">The decision anatomy diagram</div>
       <div class="diagram-card u-mb-md" style="margin-bottom:0">
         <svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision anatomy showing the five stages from problem framing to post-decision review">
           <defs>
@@ -432,23 +432,23 @@ const mod = modules.find((m) => m.id === 47)!;
           <!-- Stage boxes -->
           <rect class="diagram-node" x="10" y="90" width="118" height="52" rx="9"></rect>
           <text class="diagram-label" x="69" y="112" text-anchor="middle">Frame</text>
-          <text class="diagram-small" x="69" y="131" text-anchor="middle">What is the question?</text>
+          <text class="svg-small" x="69" y="131" text-anchor="middle">What is the question?</text>
 
           <rect class="diagram-node" x="152" y="90" width="118" height="52" rx="9"></rect>
           <text class="diagram-label" x="211" y="112" text-anchor="middle">Generate</text>
-          <text class="diagram-small" x="211" y="131" text-anchor="middle">What options exist?</text>
+          <text class="svg-small" x="211" y="131" text-anchor="middle">What options exist?</text>
 
-          <rect class="diagram-accent" x="294" y="90" width="132" height="52" rx="9"></rect>
+          <rect class="svg-accent" x="294" y="90" width="132" height="52" rx="9"></rect>
           <text class="diagram-label" x="360" y="112" text-anchor="middle">Evaluate</text>
-          <text class="diagram-small" x="360" y="131" text-anchor="middle">Probabilities + values</text>
+          <text class="svg-small" x="360" y="131" text-anchor="middle">Probabilities + values</text>
 
           <rect class="diagram-node" x="450" y="90" width="118" height="52" rx="9"></rect>
           <text class="diagram-label" x="509" y="112" text-anchor="middle">Choose</text>
-          <text class="diagram-small" x="509" y="131" text-anchor="middle">Commit to one path</text>
+          <text class="svg-small" x="509" y="131" text-anchor="middle">Commit to one path</text>
 
           <rect class="diagram-node" x="592" y="90" width="118" height="52" rx="9"></rect>
           <text class="diagram-label" x="651" y="112" text-anchor="middle">Review</text>
-          <text class="diagram-small" x="651" y="131" text-anchor="middle">Update the model</text>
+          <text class="svg-small" x="651" y="131" text-anchor="middle">Update the model</text>
 
           <!-- Arrows between stages -->
           <path class="diagram-line" d="M 128 116 L 152 116" marker-end="url(#darrow)"></path>
@@ -457,21 +457,21 @@ const mod = modules.find((m) => m.id === 47)!;
           <path class="diagram-line" d="M 568 116 L 592 116" marker-end="url(#darrow)"></path>
 
           <!-- Bias labels below each stage -->
-          <text class="diagram-small" x="69" y="178" text-anchor="middle" fill="var(--color-text-warning)">Anchoring</text>
-          <text class="diagram-small" x="69" y="193" text-anchor="middle" fill="var(--color-text-warning)">Framing effect</text>
-          <text class="diagram-small" x="211" y="178" text-anchor="middle" fill="var(--color-text-warning)">Availability</text>
-          <text class="diagram-small" x="211" y="193" text-anchor="middle" fill="var(--color-text-warning)">Tunnel vision</text>
-          <text class="diagram-small" x="360" y="178" text-anchor="middle" fill="var(--color-text-warning)">Base rate neglect</text>
-          <text class="diagram-small" x="360" y="193" text-anchor="middle" fill="var(--color-text-warning)">Overconfidence</text>
-          <text class="diagram-small" x="509" y="178" text-anchor="middle" fill="var(--color-text-warning)">Sunk cost</text>
-          <text class="diagram-small" x="509" y="193" text-anchor="middle" fill="var(--color-text-warning)">Loss aversion</text>
-          <text class="diagram-small" x="651" y="178" text-anchor="middle" fill="var(--color-text-warning)">Hindsight bias</text>
-          <text class="diagram-small" x="651" y="193" text-anchor="middle" fill="var(--color-text-warning)">Outcome bias</text>
+          <text class="svg-small" x="69" y="178" text-anchor="middle" fill="var(--color-text-warning)">Anchoring</text>
+          <text class="svg-small" x="69" y="193" text-anchor="middle" fill="var(--color-text-warning)">Framing effect</text>
+          <text class="svg-small" x="211" y="178" text-anchor="middle" fill="var(--color-text-warning)">Availability</text>
+          <text class="svg-small" x="211" y="193" text-anchor="middle" fill="var(--color-text-warning)">Tunnel vision</text>
+          <text class="svg-small" x="360" y="178" text-anchor="middle" fill="var(--color-text-warning)">Base rate neglect</text>
+          <text class="svg-small" x="360" y="193" text-anchor="middle" fill="var(--color-text-warning)">Overconfidence</text>
+          <text class="svg-small" x="509" y="178" text-anchor="middle" fill="var(--color-text-warning)">Sunk cost</text>
+          <text class="svg-small" x="509" y="193" text-anchor="middle" fill="var(--color-text-warning)">Loss aversion</text>
+          <text class="svg-small" x="651" y="178" text-anchor="middle" fill="var(--color-text-warning)">Hindsight bias</text>
+          <text class="svg-small" x="651" y="193" text-anchor="middle" fill="var(--color-text-warning)">Outcome bias</text>
 
           <!-- Header labels -->
-          <text class="diagram-small" x="360" y="44" text-anchor="middle">The five decision stages (top) with the most common bias at each stage (below)</text>
+          <text class="svg-small" x="360" y="44" text-anchor="middle">The five decision stages (top) with the most common bias at each stage (below)</text>
           <line x1="10" y1="155" x2="710" y2="155" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4,4"></line>
-          <text class="diagram-small" x="10" y="170" fill="var(--color-text-warning)">Biases that attack each stage:</text>
+          <text class="svg-small" x="10" y="170" fill="var(--color-text-warning)">Biases that attack each stage:</text>
         </svg>
       </div>
     </div>
@@ -490,7 +490,7 @@ const mod = modules.find((m) => m.id === 47)!;
 
     <!-- Bias severity chart -->
     <div class="content-panel u-mb-lg">
-      <div class="panel-title">How biases are distributed across decision domains</div>
+      <div class="panel-title-large">How biases are distributed across decision domains</div>
       <div class="u-overflow-x-auto">
         <div style="min-width:480px">
           <div class="bar-row" style="grid-template-columns:160px 1fr 58px">
@@ -525,48 +525,48 @@ const mod = modules.find((m) => m.id === 47)!;
           </div>
         </div>
       </div>
-      <div class="chart-note">Severity ratings are consensus estimates from meta-analyses in behavioral economics, not precise measurements. The key insight is that overconfidence and planning errors are pervasive even among trained experts.</div>
+      <div class="fine-print">Severity ratings are consensus estimates from meta-analyses in behavioral economics, not precise measurements. The key insight is that overconfidence and planning errors are pervasive even among trained experts.</div>
     </div>
 
     <!-- Critical thinking toolkit -->
     <h2 class="sec" id="critical-thinking-tools-and-when-to-use-them">Critical thinking tools and when to use them</h2>
-    <div class="elem-grid" aria-label="Critical thinking tool explorer">
+    <div class="tile-grid-xs" aria-label="Critical thinking tool explorer">
       <div class="elem-card" onclick="showCTTool('premortem', this)">
         <div class="elem-icon"><i class="fa-solid fa-skull"></i></div>
         <div class="elem-name">Pre-mortem</div>
-        <div class="elem-sub">imagine failure first</div>
+        <div class="note-line-relaxed">imagine failure first</div>
       </div>
       <div class="elem-card" onclick="showCTTool('steelman', this)">
         <div class="elem-icon"><i class="fa-solid fa-shield-halved"></i></div>
         <div class="elem-name">Steelmanning</div>
-        <div class="elem-sub">best version of the opposite view</div>
+        <div class="note-line-relaxed">best version of the opposite view</div>
       </div>
       <div class="elem-card" onclick="showCTTool('outside', this)">
         <div class="elem-icon"><i class="fa-solid fa-eye"></i></div>
         <div class="elem-name">Outside view</div>
-        <div class="elem-sub">reference class forecasting</div>
+        <div class="note-line-relaxed">reference class forecasting</div>
       </div>
       <div class="elem-card" onclick="showCTTool('ferminest', this)">
         <div class="elem-icon"><i class="fa-solid fa-calculator"></i></div>
         <div class="elem-name">Fermi estimation</div>
-        <div class="elem-sub">order-of-magnitude check</div>
+        <div class="note-line-relaxed">order-of-magnitude check</div>
       </div>
       <div class="elem-card" onclick="showCTTool('five-whys', this)">
         <div class="elem-icon"><i class="fa-solid fa-circle-question"></i></div>
         <div class="elem-name">Five Whys</div>
-        <div class="elem-sub">root cause drill-down</div>
+        <div class="note-line-relaxed">root cause drill-down</div>
       </div>
       <div class="elem-card" onclick="showCTTool('null', this)">
         <div class="elem-icon"><i class="fa-solid fa-vial"></i></div>
         <div class="elem-name">Null hypothesis</div>
-        <div class="elem-sub">burden of proof discipline</div>
+        <div class="note-line-relaxed">burden of proof discipline</div>
       </div>
     </div>
     <div id="ct-tool-detail" class="elem-detail elem-detail-panel"></div>
 
     <!-- Decision quality vs outcome matrix -->
     <div class="content-panel u-mb-lg">
-      <div class="panel-title">Decision quality is not the same as outcome quality</div>
+      <div class="panel-title-large">Decision quality is not the same as outcome quality</div>
       <div class="muted-copy u-mb-md">Luck and skill both affect outcomes, but only process quality is within your control. Outcome bias judges a decision by its result; a careful reasoner judges it by the process given the information available at the time.</div>
       <div class="matrix" aria-label="Decision quality vs outcome matrix" style="grid-template-columns:100px repeat(2, minmax(120px, 1fr))">
         <div></div>
@@ -588,13 +588,13 @@ const mod = modules.find((m) => m.id === 47)!;
         <div class="slider-value"><span id="conf-value">70</span>% confident</div>
       </div>
       <input id="conf-slider" type="range" min="50" max="99" value="70">
-      <div class="slider-poles"><span>uncertain (50/50)</span><span>near-certain (99%)</span></div>
+      <div class="pole-labels-under"><span>uncertain (50/50)</span><span>near-certain (99%)</span></div>
       <div id="conf-output" class="live-result"></div>
     </div>
 
     <!-- Argument reconstruction tool -->
     <div class="content-panel u-mb-lg">
-      <div class="panel-title">Argument reconstruction: a worked example</div>
+      <div class="panel-title-large">Argument reconstruction: a worked example</div>
       <div class="muted-copy u-mb-md">One of the most practical critical thinking skills is breaking a messy claim into its premise-conclusion skeleton. Choose an example argument to see how it reconstructs.</div>
       <div class="button-row">
         <button onclick="showArgReconstruct('policy', this)">Policy claim</button>
@@ -609,7 +609,7 @@ const mod = modules.find((m) => m.id === 47)!;
     <h2 class="sec" id="epistemic-habits-good-and-bad">Epistemic habits: good and bad</h2>
     <div class="two-col-grid">
       <div class="content-card">
-        <div class="panel-title" style="color:var(--color-text-success)"><i class="fa-solid fa-check u-mb-sm"></i> Habits that improve reasoning</div>
+        <div class="panel-title-large" style="color:var(--color-text-success)"><i class="fa-solid fa-check u-mb-sm"></i> Habits that improve reasoning</div>
         <div class="anchor-row">
           <div>
             <div class="atext">Seek disconfirming evidence</div>
@@ -636,7 +636,7 @@ const mod = modules.find((m) => m.id === 47)!;
         </div>
       </div>
       <div class="content-card">
-        <div class="panel-title" style="color:var(--color-text-danger)"><i class="fa-solid fa-xmark u-mb-sm"></i> Habits that degrade reasoning</div>
+        <div class="panel-title-large" style="color:var(--color-text-danger)"><i class="fa-solid fa-xmark u-mb-sm"></i> Habits that degrade reasoning</div>
         <div class="anchor-row">
           <div>
             <div class="atext">Motte-and-bailey switching</div>
@@ -1086,7 +1086,7 @@ const mod = modules.find((m) => m.id === 47)!;
         const item = logicElements[key];
         const detail = document.getElementById('logic-element-detail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title-large">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
       };
 
       window.showFallacy = function(key, btn) {
@@ -1104,7 +1104,7 @@ const mod = modules.find((m) => m.id === 47)!;
         const item = infinity[key];
         const detail = document.getElementById('infinity-detail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title-large">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
       };
 
       window.showProbParadox = function(key, btn) {
@@ -1194,7 +1194,7 @@ const mod = modules.find((m) => m.id === 47)!;
           }
           html += '<button class="' + cls + '" onclick="mhPickDoor(' + i + ')">';
           html += '<span class="mh-door-mark">' + mark + '</span>';
-          html += '<span class="mh-door-label">Door ' + (i + 1) + '</span>';
+          html += '<span class="hint-text">Door ' + (i + 1) + '</span>';
           html += '</button>';
         }
         doors.innerHTML = html;
@@ -1267,7 +1267,7 @@ const mod = modules.find((m) => m.id === 47)!;
       };
 
       function renderPanel(item) {
-        let html = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
+        let html = '<div class="panel-title-large">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
         if (item.meta) {
           html += '<div class="panel-meta">' + item.meta.map(function(m) {
             return '<div class="panel-chip">' + m + '</div>';
@@ -1308,7 +1308,7 @@ const mod = modules.find((m) => m.id === 47)!;
         axis.forEach(function(mark) {
           const left = ((mark - min) / (max - min)) * 100;
           const label = mark < 0 ? Math.abs(mark) + ' BCE' : mark;
-          html += '<span class="pc-axis-mark" style="left:' + left + '%">' + label + '</span>';
+          html += '<span class="axis-tick-small" style="left:' + left + '%">' + label + '</span>';
         });
         html += '</div>';
         timelineItems.forEach(function(item) {
@@ -1316,9 +1316,9 @@ const mod = modules.find((m) => m.id === 47)!;
           const end = Math.min(item.end, max);
           const left = ((start - min) / (max - min)) * 100;
           const width = Math.max(((end - start) / (max - min)) * 100, 1.6);
-          html += '<div class="pc-row"><div class="pc-label">' + item.label + '</div><div class="pc-track"><div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + item.bg + ';color:' + item.text + '"><span class="pc-fill-label">' + item.start + '</span></div></div></div>';
+          html += '<div class="data-row-loose"><div class="pc-label">' + item.label + '</div><div class="pc-track"><div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + item.bg + ';color:' + item.text + '"><span class="period-label-ellipsis">' + item.start + '</span></div></div></div>';
         });
-        html += '</div><div class="chart-note">Bars mark active periods or publication moments. Single-year breakthroughs are widened so they remain visible on small screens.</div>';
+        html += '</div><div class="fine-print">Bars mark active periods or publication moments. Single-year breakthroughs are widened so they remain visible on small screens.</div>';
         chart.innerHTML = html;
       }
 
@@ -1491,7 +1491,7 @@ const mod = modules.find((m) => m.id === 47)!;
         const item = ctTools[key];
         const detail = document.getElementById('ct-tool-detail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="panel-title">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title-large">' + item.title + '</div><div class="muted-copy-large">' + item.body + '</div>';
       };
 
       window.showArgReconstruct = function(key, btn) {

@@ -29,25 +29,6 @@
       flex-direction: column;
       gap: 6px;
     }
-    .teaser-num {
-      font-size: 10px;
-      font-weight: 600;
-      color: var(--accent);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .teaser-name {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      line-height: 1.25;
-    }
-    .logic-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: 6px;
-    }
     .logic-note {
       background: var(--color-background-info);
       border: 0.5px solid var(--color-border-info);
@@ -97,12 +78,6 @@
       margin-bottom: 1rem;
       min-height: 110px;
     }
-    .panel-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: 6px;
-    }
     .panel-meta {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -136,32 +111,15 @@
       font-size: 13px;
       fill: var(--color-text-primary);
     }
-    .diagram-small {
-      font-family: var(--font-sans);
-      font-size: 10px;
-      fill: var(--color-text-secondary);
-    }
     .diagram-node {
       fill: var(--color-background-secondary);
       stroke: var(--color-border-tertiary);
-      stroke-width: 1;
-    }
-    .diagram-accent {
-      fill: var(--accent-bg);
-      stroke: var(--accent-border);
       stroke-width: 1;
     }
     .diagram-line {
       stroke: var(--color-border-secondary);
       stroke-width: 1.5;
       fill: none;
-    }
-
-    .elem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 8px;
-      margin-bottom: 10px;
     }
     .elem-card {
       background: var(--color-background-primary);
@@ -185,20 +143,8 @@
       color: var(--color-text-primary);
       line-height: 1.25;
     }
-    .elem-sub {
-      font-size: 11px;
-      color: var(--color-text-secondary);
-      margin-top: 2px;
-      line-height: 1.4;
-    }
     .pc-inner {
       min-width: 560px;
-    }
-    .pc-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 7px;
     }
     .pc-label {
       font-size: 11px;
@@ -225,24 +171,11 @@
       padding: 0 5px;
       overflow: hidden;
     }
-    .pc-fill-label {
-      font-size: 9px;
-      font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
     .pc-axis {
       position: relative;
       height: 18px;
       margin-left: 158px;
       margin-bottom: 5px;
-    }
-    .pc-axis-mark {
-      font-size: 9px;
-      color: var(--color-text-tertiary);
-      position: absolute;
-      transform: translateX(-50%);
     }
 
     .slider-box,
@@ -267,13 +200,6 @@
       color: var(--accent);
       font-weight: 600;
     }
-    .slider-poles {
-      display: flex;
-      justify-content: space-between;
-      color: var(--color-text-tertiary);
-      font-size: 11px;
-      margin-top: 5px;
-    }
     .live-result,
     .calc-result {
       background: var(--color-background-secondary);
@@ -284,13 +210,6 @@
       color: var(--color-text-primary);
       line-height: 1.55;
       min-height: 42px;
-    }
-    .calc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
-      align-items: end;
-      margin-bottom: 10px;
     }
     .calc-field label {
       display: block;
@@ -348,12 +267,6 @@
       color: var(--color-text-primary);
       margin-bottom: 9px;
     }
-    .chart-note {
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      line-height: 1.5;
-      margin-top: 8px;
-    }
     .logic-bar-chart {
       margin-bottom: 1rem;
     }
@@ -382,13 +295,6 @@
       flex-wrap: wrap;
       gap: 7px;
       margin-top: 8px;
-    }
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      color: var(--color-text-secondary);
     }
     .legend-swatch {
       width: 11px;
@@ -482,10 +388,6 @@
       font-size: 22px;
       font-weight: 600;
       letter-spacing: 0.03em;
-    }
-    .mh-door-label {
-      font-size: 11px;
-      color: var(--color-text-tertiary);
     }
     .mh-status {
       background: var(--color-background-secondary);

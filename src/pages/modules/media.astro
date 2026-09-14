@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 44)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-tower-broadcast media-text"></i>
+      <i class="fa-solid fa-tower-broadcast module-icon-large"></i>
       <h1 class="module-title module-heading">Module 44: Media</h1>
     </div>
     <p class="module-subtitle">How information is produced, packaged, sold, and believed — advertising, journalism, and social media</p>
@@ -104,7 +104,7 @@ const mod = modules.find((m) => m.id === 44)!;
     <div class="card u-mb-lg">
       <div class="clabel">US digital advertising revenue by platform type, 2023</div>
       <div class="dist-bar" id="rev-dist"></div>
-      <div class="dist-legend" id="rev-legend"></div>
+      <div class="key-list" id="rev-legend"></div>
       <div class="cnote">Source: IAB / eMarketer estimates. Meta = Facebook + Instagram. "Other" includes Amazon Ads, TikTok, Snap, Pinterest, and others.</div>
     </div>
 
@@ -155,7 +155,7 @@ const mod = modules.find((m) => m.id === 44)!;
     <!-- COMPARISON SCALE: approaches to objectivity -->
     <div class="card u-mb-lg">
       <div class="clabel">Approaches to editorial philosophy — spectrum from objectivity to advocacy</div>
-      <div class="cscale-wrap" id="obj-scale">
+      <div class="block-gap" id="obj-scale">
         <div class="cscale-poles"><span>Strict objectivity (view from nowhere)</span><span>Advocacy journalism</span></div>
       </div>
     </div>
@@ -178,16 +178,16 @@ const mod = modules.find((m) => m.id === 44)!;
     <h2 class="sec" id="types-of-journalism">types of journalism</h2>
 
     <!-- MULTI-CARD EXPLORER: types of journalism -->
-    <div class="elem-grid" id="jtype-grid"></div>
+    <div class="tile-grid-md" id="jtype-grid"></div>
     <div class="elem-detail" id="jtype-detail"></div>
 
     <h2 class="sec" id="press-freedom">press freedom</h2>
 
     <div class="card u-mb-md">
       <div class="clabel">RSF Press Freedom Index 2024 — selected countries (rank out of 180)</div>
-      <div class="bar-chart-title">Lower score = higher press freedom</div>
+      <div class="figure-title">Lower score = higher press freedom</div>
       <div id="press-chart"></div>
-      <div class="bar-note">Source: Reporters Without Borders (RSF) 2024 World Press Freedom Index. Norway has ranked first for 8 consecutive years.</div>
+      <div class="note-small">Source: Reporters Without Borders (RSF) 2024 World Press Freedom Index. Norway has ranked first for 8 consecutive years.</div>
     </div>
 
     <div class="cgrid cgrid-style">
@@ -288,7 +288,7 @@ const mod = modules.find((m) => m.id === 44)!;
     <h2 class="sec" id="how-advertising-actually-works">how advertising actually works</h2>
 
     <!-- MULTI-CARD EXPLORER: advertising models and theories -->
-    <div class="elem-grid" id="adth-grid"></div>
+    <div class="tile-grid-md" id="adth-grid"></div>
     <div class="elem-detail" id="adth-detail"></div>
 
     <div class="cgrid cgrid-style">
@@ -370,7 +370,7 @@ const mod = modules.find((m) => m.id === 44)!;
 
     <!-- CALCULATOR: CPM / total reach -->
     <div class="calc-wrap">
-      <div class="calc-title">Digital advertising calculator — CPM, reach, and budget</div>
+      <div class="block-title">Digital advertising calculator — CPM, reach, and budget</div>
       <div class="calc-fields">
         <div class="calc-field">
           <label>Total budget ($)</label>
@@ -449,7 +449,7 @@ const mod = modules.find((m) => m.id === 44)!;
     <!-- COMPARISON SCALE: platform alignment -->
     <div class="card u-mb-lg">
       <div class="clabel">Platform model spectrum — from open public square to closed algorithmic feed</div>
-      <div class="cscale-wrap" id="plat-scale">
+      <div class="block-gap" id="plat-scale">
         <div class="cscale-poles"><span>Open / chronological / user-controlled</span><span>Closed / algorithmic / platform-controlled</span></div>
       </div>
     </div>
@@ -801,7 +801,7 @@ const mod = modules.find((m) => m.id === 44)!;
         revDist.appendChild(seg);
         const item = document.createElement('div');
         item.className = 'dist-item';
-        item.innerHTML = `<div class="dist-dot" style="background:${s.color}"></div><span>${s.label} (${s.pct}%)</span>`;
+        item.innerHTML = `<div class="key-dot" style="background:${s.color}"></div><span>${s.label} (${s.pct}%)</span>`;
         revLegend.appendChild(item);
       });
     }
@@ -824,7 +824,7 @@ const mod = modules.find((m) => m.id === 44)!;
       nvData.forEach(nv => {
         const c = document.createElement('div');
         c.className = 'nv-card';
-        c.innerHTML = `<div class="nv-name">${nv.name}</div><div class="nv-body">${nv.body}</div><div class="nv-eg">${nv.eg}</div>`;
+        c.innerHTML = `<div class="nv-name">${nv.name}</div><div class="body-muted">${nv.body}</div><div class="nv-eg">${nv.eg}</div>`;
         nvGrid.appendChild(c);
       });
     }
@@ -905,7 +905,7 @@ const mod = modules.find((m) => m.id === 44)!;
       jtypeData.forEach((d, i) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-icon">${d.icon}</div><div class="elem-name">${d.name}</div><div class="elem-sub">${d.sub}</div>`;
+        card.innerHTML = `<div class="tile-icon-spaced">${d.icon}</div><div class="elem-name">${d.name}</div><div class="card-sub">${d.sub}</div>`;
         card.onclick = function() {
           document.querySelectorAll('#jtype-grid .elem-card').forEach(c => c.classList.remove('active'));
           card.classList.add('active');
@@ -1015,7 +1015,7 @@ const mod = modules.find((m) => m.id === 44)!;
       adthData.forEach(d => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-icon">${d.icon}</div><div class="elem-name">${d.name}</div><div class="elem-sub">${d.sub}</div>`;
+        card.innerHTML = `<div class="tile-icon-spaced">${d.icon}</div><div class="elem-name">${d.name}</div><div class="card-sub">${d.sub}</div>`;
         card.onclick = function() {
           document.querySelectorAll('#adth-grid .elem-card').forEach(c => c.classList.remove('active'));
           card.classList.add('active');
@@ -1092,7 +1092,7 @@ const mod = modules.find((m) => m.id === 44)!;
       platData.forEach(d => {
         const c = document.createElement('div');
         c.className = 'plat-card';
-        c.innerHTML = `<div class="plat-name">${d.name}</div><div class="plat-stat">${d.stat}</div><div class="plat-stat-label">${d.statLabel}</div><div class="plat-body">${d.body}</div>`;
+        c.innerHTML = `<div class="plat-name">${d.name}</div><div class="plat-stat">${d.stat}</div><div class="plat-stat-label">${d.statLabel}</div><div class="body-muted">${d.body}</div>`;
         platGrid.appendChild(c);
       });
     }

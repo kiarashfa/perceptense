@@ -183,9 +183,9 @@ const mod = modules.find((m) => m.id === 46)!;
           <div class="panel-title" style="margin:0 0 3px;">Threat-dose slider</div>
           <div style="font-size:11px;color:var(--color-text-tertiary);">Move the signal from harmless novelty to overwhelming threat.</div>
         </div>
-        <div class="slider-big-val"><span id="threatValue">35</span>/100</div>
+        <div class="slider-readout-large"><span id="threatValue">35</span>/100</div>
       </div>
-      <div class="slider-poles"><span>curiosity / orienting</span><span>panic / shutdown</span></div>
+      <div class="pole-labels-small"><span>curiosity / orienting</span><span>panic / shutdown</span></div>
       <input type="range" id="threatSlider" min="0" max="100" value="35">
       <div class="slider-output" id="threatResult"></div>
     </div>
@@ -195,9 +195,9 @@ const mod = modules.find((m) => m.id === 46)!;
       <div class="panel-title">Innate vs learned fears — the preparedness spectrum</div>
       <p class="muted-copy-large" style="margin:0 0 10px;">Martin Seligman's 1971 preparedness theory proposed that evolution biases us to learn certain fears extremely quickly — snakes, spiders, heights, social rejection — because these were lethal across millions of years. Monkeys that have never seen a snake will develop a lasting phobia after watching another monkey react fearfully to one on video; they show no such response to flowers. Culture then tunes the response: a snake handler and a city child inherit similar biology but very different fear histories.</p>
       <p class="muted-copy-large" style="margin:0 0 12px;">True innate fears in humans are few: loud sudden noises and loss of physical support (falling) are reliably present at birth. Everything else is acquired, but some things are acquired in one trial under stress, while others require repeated conditioning. Modern dangers — cars, alcohol, sedentary life — often kill through familiarity; they rarely trigger the ancient alarm style.</p>
-      <div class="cscale-wrap">
+      <div class="block-gap">
         <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:6px;">Ease of fear acquisition — from innate to hard-to-learn</div>
-        <div class="cscale-poles"><span>Innate / one-trial learning</span><span>Requires many repeated trials</span></div>
+        <div class="label-pair"><span>Innate / one-trial learning</span><span>Requires many repeated trials</span></div>
         <div id="prep-scale"></div>
         <div style="font-size:11px;color:var(--color-text-tertiary);margin-top:4px;">Left = hardwired or ultra-fast to condition; Right = requires sustained, intense exposure to acquire</div>
       </div>
@@ -245,7 +245,7 @@ const mod = modules.find((m) => m.id === 46)!;
     <!-- Fear science timeline — from alt version -->
     <div class="scroll-panel">
       <div class="panel-title" style="margin-bottom:10px;">Fear science timeline — ideas that changed the map</div>
-      <div class="pc-track-area">
+      <div class="wide-min">
         <div class="pc-axis" id="sci-axis"></div>
         <div id="sci-timeline"></div>
       </div>
@@ -259,9 +259,9 @@ const mod = modules.find((m) => m.id === 46)!;
           <div class="panel-title" style="margin:0 0 3px;">Courage as fear tolerance — where do you stand?</div>
           <div style="font-size:11px;color:var(--color-text-tertiary);">Aristotle's mean: courage is neither cowardice nor recklessness. Move the dial.</div>
         </div>
-        <div class="slider-big-val"><span id="courage-val">50</span>/100</div>
+        <div class="slider-readout-large"><span id="courage-val">50</span>/100</div>
       </div>
-      <div class="slider-poles"><span>Paralysed by any fear</span><span>Reckless — fears nothing</span></div>
+      <div class="pole-labels-small"><span>Paralysed by any fear</span><span>Reckless — fears nothing</span></div>
       <input type="range" id="courage-slider" min="0" max="100" value="50" oninput="updateCourageSlider(this.value)">
       <div class="slider-output" id="courage-output"></div>
     </div>
@@ -272,8 +272,8 @@ const mod = modules.find((m) => m.id === 46)!;
       <p class="muted-copy-large" style="margin:0 0 10px;">Humans overweight vivid, uncontrollable, intentional, and recently publicised threats. A plane crash dominates memory because it is dramatic and total; daily driving feels ordinary because control is distributed through your hands and habits. This is the availability heuristic, named by Daniel Kahneman and Amos Tversky. Paul Slovic's dread risk concept adds that we fear things over which we have no control (nuclear power, terrorism) disproportionately more than statistically equivalent risks we choose to take. Risk perception is not stupidity. It is a ranking system tuned for stories, agency, and dread rather than actuarial tables.</p>
 
       <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;">Risk perception scale — what makes a threat feel larger than its statistics</div>
-      <div class="cscale-wrap" style="margin-bottom:0;">
-        <div class="cscale-poles"><span>familiar, controllable, chosen</span><span>vivid, uncontrollable, immediate</span></div>
+      <div class="block-gap" style="margin-bottom:0;">
+        <div class="label-pair"><span>familiar, controllable, chosen</span><span>vivid, uncontrollable, immediate</span></div>
         <div id="risk-scale"></div>
       </div>
 
@@ -293,8 +293,8 @@ const mod = modules.find((m) => m.id === 46)!;
 
       <!-- Horror ingredient distribution — from alt version -->
       <div style="font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px;">A horror scene's fear recipe — ingredients that make it last</div>
-      <div class="dist-bar" id="horror-dist"></div>
-      <div class="dist-legend" id="horror-legend"></div>
+      <div class="stacked-bar-compact" id="horror-dist"></div>
+      <div class="key-list" id="horror-legend"></div>
       <div style="font-size:11px;color:var(--color-text-tertiary);">A conceptual distribution: good horror mixes several fear channels. Pure gore exhausts quickly; uncertainty, helplessness, and moral contamination linger longer.</div>
     </div>
 
@@ -315,7 +315,7 @@ const mod = modules.find((m) => m.id === 46)!;
     <!-- Historical fear campaigns timeline — from ver2 -->
     <div class="scroll-panel">
       <div class="panel-title" style="margin-bottom:10px;">Fear as political tool — historical fear campaigns</div>
-      <div class="pc-track-area">
+      <div class="wide-min">
         <div id="fear-timeline"></div>
         <div class="pc-axis" id="fear-axis"></div>
       </div>
@@ -390,7 +390,7 @@ const mod = modules.find((m) => m.id === 46)!;
     <!-- Control scale for situational phobias -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="panel-title">What makes situational phobias worse — perceived control scale</div>
-      <div class="cscale-poles"><span>high control, easy exit</span><span>no control, no exit</span></div>
+      <div class="label-pair"><span>high control, easy exit</span><span>no control, no exit</span></div>
       <div id="control-scale"></div>
       <div style="font-size:11px;color:var(--color-text-tertiary);margin-top:4px;">Perceived control is as important as actual danger in determining phobic intensity. The same physical height is less frightening behind a railing than at an open edge.</div>
     </div>
@@ -407,8 +407,8 @@ const mod = modules.find((m) => m.id === 46)!;
     <!-- Phobia distribution bar -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="panel-title" style="margin-bottom:8px;">Distribution of phobia types in the US population</div>
-      <div class="dist-bar" id="phobia-dist-bar"></div>
-      <div class="dist-legend" id="phobia-dist-legend"></div>
+      <div class="stacked-bar-compact" id="phobia-dist-bar"></div>
+      <div class="key-list" id="phobia-dist-legend"></div>
       <div style="font-size:11px;color:var(--color-text-tertiary);">Source: National Comorbidity Survey Replication (NCS-R). Approximate proportions of all diagnosed specific phobias.</div>
     </div>
 
@@ -416,7 +416,7 @@ const mod = modules.find((m) => m.id === 46)!;
     <div class="content-panel">
       <div class="panel-title">Avoidance cost calculator</div>
       <p class="muted-copy-large" style="margin:0 0 10px;">Avoidance looks small by the day and enormous by the year. When someone avoids the underground, they may spend 20 extra minutes per journey, five days a week. That is 87 hours a year. This calculator makes the invisible cost visible enough to compare with the effort of getting help or practising exposure.</p>
-      <div class="calc-grid">
+      <div class="field-grid-compact">
         <div class="calc-field">
           <label for="avoidMinutes">Minutes avoiding, checking, or recovering per day</label>
           <input type="number" id="avoidMinutes" min="0" max="600" value="25">
@@ -634,7 +634,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var row = document.createElement('div');
     row.className = 'cscale-row';
     row.innerHTML = '<div class="cscale-name">' + item.name + '</div>' +
-      '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pos + '%"></div></div>';
+      '<div class="range-track"><div class="scale-marker" style="left:' + item.pos + '%"></div></div>';
     prepContainer.appendChild(row);
   });
 
@@ -713,7 +713,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var row = document.createElement('div');
     row.className = 'cscale-row';
     row.innerHTML = '<div class="cscale-name">' + item.name + '</div>' +
-      '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pos + '%"></div></div>';
+      '<div class="range-track"><div class="scale-marker" style="left:' + item.pos + '%"></div></div>';
     riskScaleEl.appendChild(row);
   });
 
@@ -764,7 +764,7 @@ window.addEventListener('DOMContentLoaded', function() {
     horrorDistEl.appendChild(seg);
     var li = document.createElement('div');
     li.className = 'dist-legend-item';
-    li.innerHTML = '<div class="dist-legend-dot" style="background:' + p.col + ';border:0.5px solid ' + p.border + ';"></div>' + p.label + ' ' + p.val + '%';
+    li.innerHTML = '<div class="key-swatch" style="background:' + p.col + ';border:0.5px solid ' + p.border + ';"></div>' + p.label + ' ' + p.val + '%';
     horrorLegendEl.appendChild(li);
   });
 
@@ -930,7 +930,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var row = document.createElement('div');
     row.className = 'cscale-row';
     row.innerHTML = '<div class="cscale-name">' + item.name + '</div>' +
-      '<div class="cscale-track"><div class="cscale-dot" style="left:' + item.pos + '%"></div></div>';
+      '<div class="range-track"><div class="scale-marker" style="left:' + item.pos + '%"></div></div>';
     controlScaleEl.appendChild(row);
   });
 
@@ -1029,7 +1029,7 @@ window.addEventListener('DOMContentLoaded', function() {
     distBarEl.appendChild(seg);
     var li = document.createElement('div');
     li.className = 'dist-legend-item';
-    li.innerHTML = '<div class="dist-legend-dot" style="background:' + d.col + ';"></div>' + d.label + ' (' + d.pct + '%)';
+    li.innerHTML = '<div class="key-swatch" style="background:' + d.col + ';"></div>' + d.label + ' (' + d.pct + '%)';
     distLegendEl.appendChild(li);
   });
 
@@ -1122,7 +1122,7 @@ window.addEventListener('DOMContentLoaded', function() {
     if (axis) {
       axis.innerHTML = marks.map(function(y) {
         var left = ((y - minY) / range * 100).toFixed(1);
-        return '<span class="pc-axis-mark" style="left:' + left + '%">' + y + '</span>';
+        return '<span class="axis-tick" style="left:' + left + '%">' + y + '</span>';
       }).join('');
     }
     if (rows) {
@@ -1132,9 +1132,9 @@ window.addEventListener('DOMContentLoaded', function() {
         var bg = item.bg || item.col || '#ccc';
         var col = item.col || 'var(--color-text-primary)';
         var label = item.text || (item.start + '–' + item.end);
-        return '<div class="pc-row"><div class="pc-label">' + item.label + '</div>' +
+        return '<div class="data-row"><div class="pc-label">' + item.label + '</div>' +
           '<div class="pc-track"><div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + bg + ';">' +
-          '<span class="pc-fill-label" style="color:' + col + ';">' + label + '</span></div></div></div>';
+          '<span class="period-label-medium" style="color:' + col + ';">' + label + '</span></div></div></div>';
       }).join('');
     }
   }

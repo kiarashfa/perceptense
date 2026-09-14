@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 48)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-chart-line module-icon" aria-hidden="true"></i>
+      <i class="fa-solid fa-chart-line module-icon-large" aria-hidden="true"></i>
       <h1 class="module-title">Module 48: FIRE Sector</h1>
     </div>
     <p class="module-subtitle">Finance, insurance, and real estate: the industries that price, protect, and allocate capital</p>
@@ -23,17 +23,17 @@ const mod = modules.find((m) => m.id === 48)!;
       <div class="teaser-card">
         <div class="teaser-kicker">overview</div>
         <div class="teaser-title">What this module gives you</div>
-        <div class="teaser-text">FIRE is not one industry. It is the capital allocation system: finance moves money through time, insurance moves risk across people, and real estate turns land and buildings into collateral, rent, and household wealth.</div>
+        <div class="body-muted">FIRE is not one industry. It is the capital allocation system: finance moves money through time, insurance moves risk across people, and real estate turns land and buildings into collateral, rent, and household wealth.</div>
       </div>
       <div class="teaser-card">
         <div class="teaser-kicker">scale</div>
         <div class="teaser-title">Small share of workers, enormous share of balance sheets</div>
-        <div class="teaser-text">In the United States, finance, insurance, real estate, rental, and leasing have hovered around one fifth of GDP in recent years, depending on classification. The sector often employs far less than one fifth of workers because much of its value is measured through interest margins, fees, rents, imputed owner housing services, and asset transactions.</div>
+        <div class="body-muted">In the United States, finance, insurance, real estate, rental, and leasing have hovered around one fifth of GDP in recent years, depending on classification. The sector often employs far less than one fifth of workers because much of its value is measured through interest margins, fees, rents, imputed owner housing services, and asset transactions.</div>
       </div>
       <div class="teaser-card">
         <div class="teaser-kicker">roadmap</div>
         <div class="teaser-title">The useful mental model</div>
-        <div class="teaser-text">Ask three questions whenever you meet a FIRE business. What risk is being shifted? What maturity mismatch is being managed? What asset is being priced? Those questions explain why a bank can fail in a week, why an insurer can be profitable after paying billions in claims, and why a zoning rule can move more wealth than a factory opening.</div>
+        <div class="body-muted">Ask three questions whenever you meet a FIRE business. What risk is being shifted? What maturity mismatch is being managed? What asset is being priced? Those questions explain why a bank can fail in a week, why an insurer can be profitable after paying billions in claims, and why a zoning rule can move more wealth than a factory opening.</div>
       </div>
     </div>
 
@@ -65,7 +65,7 @@ const mod = modules.find((m) => m.id === 48)!;
 
     <div class="diagram-card">
       <div class="panel-title">The FIRE loop: how claims move through the economy</div>
-      <div class="diagram-scroll">
+      <div class="scroll-x">
         <svg viewBox="0 0 760 320" role="img" aria-label="A diagram showing households, banks, insurers, capital markets, real estate, businesses, and government connected by money, risk, and collateral flows">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -199,7 +199,7 @@ const mod = modules.find((m) => m.id === 48)!;
       </div>
     </div>
 
-    <div class="elem-grid" aria-label="insurance concept explorer">
+    <div class="tile-grid-lg" aria-label="insurance concept explorer">
       <div class="elem-card" onclick="showInsurance('pooling', this)">
         <div class="elem-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
         <div class="elem-name">Pooling</div>
@@ -265,10 +265,10 @@ const mod = modules.find((m) => m.id === 48)!;
           <div class="card-title">Mortgage rate pressure</div>
           <p class="card-text">Slide the rate for a $400,000, 30-year fixed mortgage before taxes and insurance.</p>
         </div>
-        <div id="rate-output" class="slider-value">6.50%</div>
+        <div id="rate-output" class="slider-readout">6.50%</div>
       </div>
       <input id="rate-slider" type="range" min="2" max="9" step="0.25" value="6.5">
-      <div class="range-ends">
+      <div class="scale-ends">
         <span>2% cheap money</span>
         <span>9% tight money</span>
       </div>
@@ -351,7 +351,7 @@ const mod = modules.find((m) => m.id === 48)!;
     <div id="regulator-display" class="explorer-display"></div>
 
     <div id="crisis-chart" class="pc-chart">
-      <div class="pc-inner">
+      <div class="wide-min-lg">
         <div class="panel-title">Selected crisis and regulation timeline, 1933 to 2024</div>
         <div id="pc-rows"></div>
         <div id="pc-axis" class="pc-axis"></div>
@@ -597,7 +597,7 @@ const mod = modules.find((m) => m.id === 48)!;
         const target = document.getElementById(targetId);
         target.innerHTML = `
           <div class="detail-head">
-            <div class="detail-title">${item.title}</div>
+            <div class="title-medium">${item.title}</div>
             <div class="detail-tag">${item.tag}</div>
           </div>
           <div class="muted-copy-large">${item.body}</div>
@@ -632,7 +632,7 @@ const mod = modules.find((m) => m.id === 48)!;
         const target = document.getElementById('insurance-detail');
         target.innerHTML = `
           <div class="detail-head">
-            <div class="detail-title">${item.title}</div>
+            <div class="title-medium">${item.title}</div>
             <div class="detail-tag">${item.tag}</div>
           </div>
           <div class="muted-copy-large">${item.body}</div>
@@ -662,7 +662,7 @@ const mod = modules.find((m) => m.id === 48)!;
         const lowPayment = monthlyPayment(principal, 3, 30);
         document.getElementById('rate-output').textContent = rate.toFixed(2) + '%';
         document.getElementById('rate-payment').innerHTML = `
-          <div class="detail-title">${formatMoney(payment)} per month</div>
+          <div class="title-medium">${formatMoney(payment)} per month</div>
           <div class="muted-copy-large">At ${rate.toFixed(2)}%, principal and interest on $400,000 is ${formatMoney(payment)}. Compared with a 3.00% loan at ${formatMoney(lowPayment)}, the monthly difference is ${formatMoney(payment - lowPayment)}. Taxes, insurance, HOA fees, and repairs are not included.</div>
         `;
       }
@@ -685,7 +685,7 @@ const mod = modules.find((m) => m.id === 48)!;
         const interest = total - principal;
         const ltv = principal / price * 100;
         output.innerHTML = `
-          <div class="detail-title">${formatMoney(payment)} monthly principal and interest</div>
+          <div class="title-medium">${formatMoney(payment)} monthly principal and interest</div>
           <div class="muted-copy-large">Loan amount: ${formatMoney(principal)}. Loan-to-value: ${ltv.toFixed(1)}%. Total interest over ${years} years: ${formatMoney(interest)}. This excludes taxes, insurance, mortgage insurance, repairs, and closing costs, which are often the numbers that surprise first-time buyers.</div>
         `;
       };
@@ -723,7 +723,7 @@ const mod = modules.find((m) => m.id === 48)!;
         ];
         document.getElementById('wealth-dist').innerHTML = `
           <div class="panel-title">Simplified household wealth distribution by asset type</div>
-          <div class="dist-wrap">
+          <div class="gap-below">
             <div class="dist-bar">
               ${rows.map(row => `<div class="dist-seg" style="width:${row.value}%; background:${row.color};">${row.value >= 9 ? row.value + '%' : ''}</div>`).join('')}
             </div>
@@ -778,7 +778,7 @@ const mod = modules.find((m) => m.id === 48)!;
           const left = ((item.start - min) / range * 100).toFixed(2);
           const width = ((item.end - item.start) / range * 100).toFixed(2);
           return `
-            <div class="pc-row">
+            <div class="data-row-even">
               <div class="pc-label">${item.label}</div>
               <div class="pc-track">
                 <div class="pc-fill" style="left:${left}%; width:${width}%; background:${item.bg}; border:0.5px solid ${item.col};">
@@ -792,7 +792,7 @@ const mod = modules.find((m) => m.id === 48)!;
         const marks = [1930, 1950, 1970, 1990, 2010, 2025];
         document.getElementById('pc-axis').innerHTML = marks.map(mark => {
           const left = ((mark - min) / range * 100).toFixed(2);
-          return `<span class="pc-axis-mark" style="left:${left}%;">${mark}</span>`;
+          return `<span class="axis-tick-nowrap" style="left:${left}%;">${mark}</span>`;
         }).join('');
       }
 

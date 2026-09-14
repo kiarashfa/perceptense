@@ -20,11 +20,11 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- ═══ PART A ═══ -->
     <h2 class="sec" id="part-a-the-animal-kingdom-what-animals-are-and-how-they-re-classified">Part A · the animal kingdom — what animals are and how they're classified</h2>
 
-    <div class="teaser-grid">
+    <div class="card-grid-narrow">
       <div class="card">
         <div class="teaser-part">overview</div>
         <div class="teaser-title">Animals are not just "things that move"</div>
-        <div class="teaser-body">This module builds a working map of animal life: how animals are defined, why vertebrates feel familiar but are a small branch, why invertebrates carry most of the diversity, how bodies solve movement and sensing, how behaviour emerges, how ecology links everything, and how human choices now shape the future of many lineages.</div>
+        <div class="body-muted">This module builds a working map of animal life: how animals are defined, why vertebrates feel familiar but are a small branch, why invertebrates carry most of the diversity, how bodies solve movement and sensing, how behaviour emerges, how ecology links everything, and how human choices now shape the future of many lineages.</div>
       </div>
     </div>
 
@@ -53,18 +53,18 @@ const mod = modules.find((m) => m.id === 42)!;
     </div>
 
     <!-- Evolutionary periods timeline — Cambrian to present -->
-    <div class="pc-wrap">
-      <div class="pc-inner">
+    <div class="chart-panel">
+      <div class="wide-min">
         <div class="panel-title" style="margin-bottom:12px;">Animal evolution: major periods (millions of years before present)</div>
         <div id="evo-timeline"></div>
         <div class="pc-axis" id="evo-axis"></div>
-        <div class="pc-note">Dates are approximate. Fossils mark minimum ages; actual origins of lineages are usually older than the oldest rock record found. The Cambrian explosion did not create life from nothing — it was a rapid diversification of animals that had already existed for tens of millions of years as soft-bodied Ediacaran creatures.</div>
+        <div class="fine-print">Dates are approximate. Fossils mark minimum ages; actual origins of lineages are usually older than the oldest rock record found. The Cambrian explosion did not create life from nothing — it was a rapid diversification of animals that had already existed for tens of millions of years as soft-bodied Ediacaran creatures.</div>
       </div>
     </div>
 
     <!-- Vertebrate class origins timeline -->
-    <div class="pc-wrap">
-      <div class="pc-inner">
+    <div class="chart-panel">
+      <div class="wide-min">
         <div class="panel-title" style="margin-bottom:12px;">When vertebrate groups first appeared (millions of years ago)</div>
         <div id="vert-timeline"></div>
         <div class="pc-axis" id="vert-axis"></div>
@@ -85,12 +85,12 @@ const mod = modules.find((m) => m.id === 42)!;
       </div>
       <div class="explorer-panel" id="phyla-panel">
         <div class="exp-meta">Click a phylum above</div>
-        <div class="exp-body">Select a phylum to see its defining features, species count, ecological role, and key facts.</div>
+        <div class="body-text-relaxed">Select a phylum to see its defining features, species count, ecological role, and key facts.</div>
       </div>
     </div>
 
     <!-- Phylogenetic tree SVG -->
-    <div class="svg-wrap">
+    <div class="chart-panel">
       <div class="panel-title" style="margin-bottom:10px;">Simplified phylogenetic tree of Animalia</div>
       <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:680px;display:block;">
         <style is:inline>
@@ -145,7 +145,7 @@ const mod = modules.find((m) => m.id === 42)!;
       <div class="bar-row"><div class="bl">Humans</div><div class="bb" style="width:6%;background:#888;"><span class="bv" style="color:#fff;">~0.06</span></div></div>
       <div class="bar-row"><div class="bl">Wild mammals</div><div class="bb" style="width:5%;background:#C1440E;min-width:24px;"><span class="bv" style="color:#fff;">~0.007</span></div></div>
       <div class="bar-row"><div class="bl">Wild birds</div><div class="bb" style="width:3%;background:#B5A26A;min-width:24px;"><span class="bv" style="color:#fff;">~0.002</span></div></div>
-      <div class="chart-note">Source: Bar-On et al., 2018, PNAS. Insects alone outweigh all terrestrial vertebrates combined by a factor of 17. Wild mammals represent less than 5% of mammalian biomass — livestock and humans constitute the rest.</div>
+      <div class="footnote-tight">Source: Bar-On et al., 2018, PNAS. Insects alone outweigh all terrestrial vertebrates combined by a factor of 17. Wild mammals represent less than 5% of mammalian biomass — livestock and humans constitute the rest.</div>
     </div>
 
     <!-- ═══ PART B ═══ -->
@@ -165,7 +165,7 @@ const mod = modules.find((m) => m.id === 42)!;
     </div>
 
     <!-- Vertebrate body plan SVG (from alt) -->
-    <div class="svg-wrap">
+    <div class="chart-panel">
       <div class="panel-title" style="margin-bottom:10px;">A simplified vertebrate body plan — one deep template, modified into every class</div>
       <svg viewBox="0 0 760 250" role="img" aria-label="Simplified vertebrate body plan diagram" style="width:100%;height:auto;display:block;">
         <path class="svg-line" d="M88 124 C180 82, 330 82, 510 124 C610 148, 676 142, 714 110"/>
@@ -189,12 +189,12 @@ const mod = modules.find((m) => m.id === 42)!;
     </div>
 
     <!-- Vertebrate multi-card explorer -->
-    <div class="elem-grid" id="vert-grid">
-      <div class="elem-card" onclick="showVert('fish',this)"><div class="elem-card-icon">🐟</div><div class="elem-card-label">Fish</div></div>
-      <div class="elem-card" onclick="showVert('amphibians',this)"><div class="elem-card-icon">🐸</div><div class="elem-card-label">Amphibians</div></div>
-      <div class="elem-card" onclick="showVert('reptiles',this)"><div class="elem-card-icon">🦎</div><div class="elem-card-label">Reptiles</div></div>
-      <div class="elem-card" onclick="showVert('birds',this)"><div class="elem-card-icon">🦅</div><div class="elem-card-label">Birds</div></div>
-      <div class="elem-card" onclick="showVert('mammals',this)"><div class="elem-card-icon">🦁</div><div class="elem-card-label">Mammals</div></div>
+    <div class="tile-grid-sm" id="vert-grid">
+      <div class="elem-card" onclick="showVert('fish',this)"><div class="elem-card-icon">🐟</div><div class="card-label">Fish</div></div>
+      <div class="elem-card" onclick="showVert('amphibians',this)"><div class="elem-card-icon">🐸</div><div class="card-label">Amphibians</div></div>
+      <div class="elem-card" onclick="showVert('reptiles',this)"><div class="elem-card-icon">🦎</div><div class="card-label">Reptiles</div></div>
+      <div class="elem-card" onclick="showVert('birds',this)"><div class="elem-card-icon">🦅</div><div class="card-label">Birds</div></div>
+      <div class="elem-card" onclick="showVert('mammals',this)"><div class="elem-card-icon">🦁</div><div class="card-label">Mammals</div></div>
     </div>
     <div class="elem-detail" id="vert-detail"></div>
 
@@ -213,22 +213,22 @@ const mod = modules.find((m) => m.id === 42)!;
         <div class="dist-seg" style="width:4%;background:#888;color:#fff;">Vertebrates</div>
       </div>
       <div class="dist-legend">
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#7DAA3C;"></div>Insects ~59%</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:var(--accent);"></div>Arachnids ~10%</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#D4A843;"></div>Molluscs ~8%</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#C88B3A;"></div>Crustaceans ~6%</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#7B6FBD;"></div>Other invertebrates ~8%</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#888;"></div>Vertebrates ~4%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:#7DAA3C;"></div>Insects ~59%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:var(--accent);"></div>Arachnids ~10%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:#D4A843;"></div>Molluscs ~8%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:#C88B3A;"></div>Crustaceans ~6%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:#7B6FBD;"></div>Other invertebrates ~8%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:#888;"></div>Vertebrates ~4%</div>
       </div>
-      <div class="chart-note">Proportions are rounded and shift as taxonomists describe new species. The main lesson is stable: vertebrates are conspicuous, but invertebrates carry most animal diversity. The known insect total (~950,000 species) almost certainly understates true diversity — estimates of undescribed insects range from 5 to 10 million.</div>
+      <div class="footnote-tight">Proportions are rounded and shift as taxonomists describe new species. The main lesson is stable: vertebrates are conspicuous, but invertebrates carry most animal diversity. The known insect total (~950,000 species) almost certainly understates true diversity — estimates of undescribed insects range from 5 to 10 million.</div>
     </div>
 
     <!-- Invertebrate multi-card explorer -->
-    <div class="elem-grid" id="invert-grid">
-      <div class="elem-card" onclick="showInvert('insects',this)"><div class="elem-card-icon"><i class="fa-solid fa-bug" style="color:var(--accent);"></i></div><div class="elem-card-label">Insects</div></div>
-      <div class="elem-card" onclick="showInvert('arachnids',this)"><div class="elem-card-icon"><i class="fa-solid fa-spider" style="color:var(--accent);"></i></div><div class="elem-card-label">Arachnids</div></div>
-      <div class="elem-card" onclick="showInvert('molluscs',this)"><div class="elem-card-icon"><i class="fa-solid fa-water" style="color:var(--accent);"></i></div><div class="elem-card-label">Molluscs</div></div>
-      <div class="elem-card" onclick="showInvert('marine',this)"><div class="elem-card-icon"><i class="fa-solid fa-star" style="color:var(--accent);"></i></div><div class="elem-card-label">Marine</div></div>
+    <div class="tile-grid-sm" id="invert-grid">
+      <div class="elem-card" onclick="showInvert('insects',this)"><div class="elem-card-icon"><i class="fa-solid fa-bug" style="color:var(--accent);"></i></div><div class="card-label">Insects</div></div>
+      <div class="elem-card" onclick="showInvert('arachnids',this)"><div class="elem-card-icon"><i class="fa-solid fa-spider" style="color:var(--accent);"></i></div><div class="card-label">Arachnids</div></div>
+      <div class="elem-card" onclick="showInvert('molluscs',this)"><div class="elem-card-icon"><i class="fa-solid fa-water" style="color:var(--accent);"></i></div><div class="card-label">Molluscs</div></div>
+      <div class="elem-card" onclick="showInvert('marine',this)"><div class="elem-card-icon"><i class="fa-solid fa-star" style="color:var(--accent);"></i></div><div class="card-label">Marine</div></div>
     </div>
     <div class="elem-detail" id="invert-detail"></div>
 
@@ -272,11 +272,11 @@ const mod = modules.find((m) => m.id === 42)!;
     </div>
 
     <!-- Speed comparison scale -->
-    <div class="cscale-wrap">
+    <div class="tool-panel">
       <div class="panel-title">Fastest animals: speed comparison (km/h)</div>
-      <div class="cscale-poles"><span>Slow (1 km/h)</span><span>Fast (400 km/h)</span></div>
+      <div class="pole-labels-roomy"><span>Slow (1 km/h)</span><span>Fast (400 km/h)</span></div>
       <div id="speed-scale"></div>
-      <div class="chart-note">Scale runs 1–400 km/h. Peregrine falcon speed is in a dive (stoop); cheetah sprint is maintained for ~400m before overheating forces a stop. Burst speeds are hard to compare across media — swimming, flying, and running face different physics. The bar-tailed godwit holds the non-stop flight endurance record: 12,200 km Alaska to New Zealand in 11 days.</div>
+      <div class="footnote-tight">Scale runs 1–400 km/h. Peregrine falcon speed is in a dive (stoop); cheetah sprint is maintained for ~400m before overheating forces a stop. Burst speeds are hard to compare across media — swimming, flying, and running face different physics. The bar-tailed godwit holds the non-stop flight endurance record: 12,200 km Alaska to New Zealand in 11 days.</div>
     </div>
 
     <!-- Senses Explorer -->
@@ -292,26 +292,26 @@ const mod = modules.find((m) => m.id === 42)!;
       </div>
       <div class="explorer-panel" id="sense-panel">
         <div class="exp-meta">Choose a sensory modality</div>
-        <div class="exp-body">Each panel reveals how one animal group perceives the world in a way unavailable to humans — and what that sense enables them to do.</div>
+        <div class="body-text-relaxed">Each panel reveals how one animal group perceives the world in a way unavailable to humans — and what that sense enables them to do.</div>
       </div>
     </div>
 
     <!-- Body mass and metabolism slider (from alt) -->
-    <div class="slider-wrap">
+    <div class="tool-panel">
       <div class="slider-head">
         <div class="panel-title" style="margin:0;">Body mass and metabolic scaling (Kleiber's law)</div>
-        <div class="slider-value"><span id="massValue">10 kg</span></div>
+        <div class="slider-readout"><span id="massValue">10 kg</span></div>
       </div>
       <input id="massSlider" type="range" min="-3" max="5" step="0.1" value="1" oninput="updateMass()">
-      <div class="slider-label-row"><span>1 g insect</span><span>100,000 kg whale</span></div>
+      <div class="pole-labels-small"><span>1 g insect</span><span>100,000 kg whale</span></div>
       <div class="slider-output" id="massOutput"></div>
     </div>
 
     <!-- Metabolic rate calculator — endotherm vs ectotherm -->
-    <div class="calc-wrap">
+    <div class="tool-panel">
       <div class="panel-title">Warm vs cold blooded: daily calorie calculator</div>
       <p class="muted-copy" style="margin:0 0 10px;">Endotherms (mammals, birds) maintain constant body temperature and pay a large energy cost. An endotherm needs roughly 10x more calories than an ectotherm of the same mass. Enter a body mass to compare.</p>
-      <div class="calc-row">
+      <div class="field-grid">
         <div class="calc-field">
           <label for="meta-mass">Body mass (kg)</label>
           <input type="number" id="meta-mass" value="10" min="0.001" max="10000" step="0.1">
@@ -334,7 +334,7 @@ const mod = modules.find((m) => m.id === 42)!;
     <div class="card" style="margin-bottom:1rem;">
       <div class="panel-title">R/K selection: offspring number vs parental investment</div>
       <p class="muted-copy" style="margin:0 0 12px;">Ecologists describe reproductive strategies on a spectrum. R-strategists produce many small offspring with minimal care; K-strategists produce few offspring with heavy investment. Drag the slider to see where different animals fall — and why each strategy makes evolutionary sense.</p>
-      <div class="slider-label-row"><span>R-strategist (max offspring, min care)</span><span>K-strategist (few offspring, max care)</span></div>
+      <div class="pole-labels-small"><span>R-strategist (max offspring, min care)</span><span>K-strategist (few offspring, max care)</span></div>
       <input type="range" id="rk-slider" min="0" max="100" value="50" oninput="updateRK(this.value)">
       <div style="text-align:center;font-size:18px;font-weight:500;color:var(--color-text-primary);margin:8px 0 4px;font-variant-numeric:tabular-nums;" id="rk-output">—</div>
       <div class="slider-note" id="rk-note"></div>
@@ -357,11 +357,11 @@ const mod = modules.find((m) => m.id === 42)!;
     </div>
 
     <!-- Intelligence comparison scale -->
-    <div class="cscale-wrap">
+    <div class="tool-panel">
       <div class="panel-title">Behaviour spectrum: from hard-wired routines to flexible cognition</div>
-      <div class="cscale-poles"><span>Mostly inherited trigger-response</span><span>More flexible problem-solving</span></div>
+      <div class="pole-labels-roomy"><span>Mostly inherited trigger-response</span><span>More flexible problem-solving</span></div>
       <div id="intel-scale"></div>
-      <div class="chart-note">Scale is conceptual, not a league table. Each animal is brilliant at the problems its ecology actually poses. Mirror self-recognition (MSR) pass rates and evidence for perspective-taking are used as proxies — but MSR privileges vision and body-mark interest, so a dog may understand identity more through smell than reflection.</div>
+      <div class="footnote-tight">Scale is conceptual, not a league table. Each animal is brilliant at the problems its ecology actually poses. Mirror self-recognition (MSR) pass rates and evidence for perspective-taking are used as proxies — but MSR privileges vision and body-mark interest, so a dog may understand identity more through smell than reflection.</div>
     </div>
 
     <!-- Communication Explorer -->
@@ -377,7 +377,7 @@ const mod = modules.find((m) => m.id === 42)!;
       </div>
       <div class="explorer-panel" id="comm-panel">
         <div class="exp-meta">Select a communication system</div>
-        <div class="exp-body">Each panel examines one animal communication system — what it encodes, how sophisticated it is, and what it tells us about the evolution of language. Animal signals work only if another animal can detect and respond to them; communication need not be honest (anglerfish lures, firefly mimicry, harmless flies resembling wasps all exploit receiver expectations).</div>
+        <div class="body-text-relaxed">Each panel examines one animal communication system — what it encodes, how sophisticated it is, and what it tells us about the evolution of language. Animal signals work only if another animal can detect and respond to them; communication need not be honest (anglerfish lures, firefly mimicry, harmless flies resembling wasps all exploit receiver expectations).</div>
       </div>
     </div>
 
@@ -396,14 +396,14 @@ const mod = modules.find((m) => m.id === 42)!;
       <div class="bar-row"><div class="bl">Leatherback Turtle</div><div class="bb" style="width:8%;background:#B5A26A;"><span class="bv" style="color:#fff;">7,200 km</span></div></div>
       <div class="bar-row"><div class="bl">Monarch Butterfly</div><div class="bb" style="width:10%;background:#D4A843;"><span class="bv" style="color:#1a1a18;">9,000 km</span></div></div>
       <div class="bar-row"><div class="bl">Wildebeest</div><div class="bb" style="width:4%;background:#C88B3A;min-width:28px;"><span class="bv" style="color:#fff;">3,200 km</span></div></div>
-      <div class="chart-note">The bar-tailed godwit holds the non-stop flight record: 12,200 km Alaska to New Zealand, 11 days, no landing. It achieves this by atrophying its digestive organs before departure to save weight, and rebuilding them on arrival. Migration is not tourism — it is a strategy for tracking food, breeding sites, and seasonal weather. The route can be as important as the destination: stopover wetlands and wind corridors are invisible infrastructure whose destruction collapses migration systems.</div>
+      <div class="footnote-tight">The bar-tailed godwit holds the non-stop flight record: 12,200 km Alaska to New Zealand, 11 days, no landing. It achieves this by atrophying its digestive organs before departure to save weight, and rebuilding them on arrival. Migration is not tourism — it is a strategy for tracking food, breeding sites, and seasonal weather. The route can be as important as the destination: stopover wetlands and wind corridors are invisible infrastructure whose destruction collapses migration systems.</div>
     </div>
 
     <!-- ═══ PART F ═══ -->
     <h2 class="sec" id="part-f-ecology-animals-in-their-environments">Part F · ecology — animals in their environments</h2>
 
     <!-- Food web SVG (network style from alt, upgraded) -->
-    <div class="svg-wrap">
+    <div class="chart-panel">
       <div class="panel-title" style="margin-bottom:10px;">Food webs are networks, not ladders</div>
       <svg viewBox="0 0 760 330" role="img" aria-label="Food web diagram" style="width:100%;height:auto;display:block;">
         <defs>
@@ -434,14 +434,14 @@ const mod = modules.find((m) => m.id === 42)!;
         <path class="svg-line" marker-end="url(#fw-arrow)" d="M112 236 C138 154, 190 100, 230 92"/>
         <text class="svg-small" x="396" y="305" text-anchor="middle">energy thins upward; nutrients cycle back through decomposers</text>
       </svg>
-      <p class="chart-note" style="margin:4px 0 0;">The 10% rule: only ~10% of energy stored at one trophic level reaches the next. A field with 10,000 kcal supports ~1,000 kcal in herbivores, ~100 in predators, ~10 in apex predators. This is why large carnivores are rare and require enormous territories. Note the return arrows: decomposers recycle nutrients from every level back into the soil, completing the cycle.</p>
+      <p class="footnote-tight" style="margin:4px 0 0;">The 10% rule: only ~10% of energy stored at one trophic level reaches the next. A field with 10,000 kcal supports ~1,000 kcal in herbivores, ~100 in predators, ~10 in apex predators. This is why large carnivores are rare and require enormous territories. Note the return arrows: decomposers recycle nutrients from every level back into the soil, completing the cycle.</p>
     </div>
 
     <!-- Trophic energy calculator (from alt) -->
-    <div class="calc-wrap">
+    <div class="tool-panel">
       <div class="panel-title">Trophic energy calculator</div>
       <p class="muted-copy" style="margin:0 0 10px;">Enter a starting energy level (plant biomass or producer units) and a transfer efficiency to see what survives at each trophic level. The real world averages ~10% efficiency, but aquatic systems can reach 15–20%; mammal-dominated food chains can drop below 5%.</p>
-      <div class="calc-row">
+      <div class="field-grid">
         <div>
           <div class="detail-label-spaced">Producer energy (arbitrary units)</div>
           <input id="energyInput" type="number" min="0" step="100" value="10000">
@@ -491,7 +491,7 @@ const mod = modules.find((m) => m.id === 42)!;
       </div>
       <div class="explorer-panel" id="biome-panel">
         <div class="exp-meta">Select a biome</div>
-        <div class="exp-body">Explore the defining conditions, typical animal adaptations, and biodiversity statistics for each major biome.</div>
+        <div class="body-text-relaxed">Explore the defining conditions, typical animal adaptations, and biodiversity statistics for each major biome.</div>
       </div>
     </div>
 
@@ -506,7 +506,7 @@ const mod = modules.find((m) => m.id === 42)!;
       <div class="bar-row"><div class="bl">Climate change</div><div class="bb" style="width:74%;background:var(--color-background-danger);border:0.5px solid var(--color-border-danger);"><span class="bv" style="color:var(--color-text-danger);">rising fast — now 2nd driver</span></div></div>
       <div class="bar-row"><div class="bl">Invasive species</div><div class="bb" style="width:67%;background:var(--color-background-info);border:0.5px solid var(--color-border-info);"><span class="bv" style="color:var(--color-text-info);">high on islands especially</span></div></div>
       <div class="bar-row"><div class="bl">Pollution</div><div class="bb" style="width:58%;background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);"><span class="bv" style="color:var(--color-text-secondary);">regional to global</span></div></div>
-      <div class="chart-note">This is a conceptual index, not a single measured percentage. For most threatened terrestrial and freshwater species, habitat loss and direct exploitation dominate; climate change is rising sharply and will likely become the leading driver by mid-century.</div>
+      <div class="footnote-tight">This is a conceptual index, not a single measured percentage. For most threatened terrestrial and freshwater species, habitat loss and direct exploitation dominate; climate change is rising sharply and will likely become the leading driver by mid-century.</div>
     </div>
 
     <!-- Extinction rate chart -->
@@ -515,7 +515,7 @@ const mod = modules.find((m) => m.id === 42)!;
       <div class="bar-row"><div class="bl">Background rate</div><div class="bb" style="width:1%;background:#7DAA3C;min-width:28px;"><span class="bv" style="color:#fff;">&nbsp;0.1–1</span></div></div>
       <div class="bar-row"><div class="bl">20th-century rate</div><div class="bb" style="width:30%;background:#D4A843;"><span class="bv" style="color:#fff;">~100x background</span></div></div>
       <div class="bar-row"><div class="bl">Current estimate</div><div class="bb" style="width:100%;background:#C1440E;"><span class="bv" style="color:#fff;">100–1,000x background</span></div></div>
-      <div class="chart-note">Ceballos et al. (2017) estimate that since 1900, populations of vertebrates have declined by 60%. The number of individuals lost — not just species — is the hidden dimension of the crisis. A species that loses 99% of its individuals is "not extinct" on a spreadsheet but has lost almost all ecological function and is extremely vulnerable to stochastic extinction.</div>
+      <div class="footnote-tight">Ceballos et al. (2017) estimate that since 1900, populations of vertebrates have declined by 60%. The number of individuals lost — not just species — is the hidden dimension of the crisis. A species that loses 99% of its individuals is "not extinct" on a spreadsheet but has lost almost all ecological function and is extremely vulnerable to stochastic extinction.</div>
     </div>
 
     <div class="card" style="margin-bottom:10px;">
@@ -527,12 +527,12 @@ const mod = modules.find((m) => m.id === 42)!;
       <div class="panel-title">Conservation strategies — what actually works</div>
       <p class="muted-copy-large" style="margin:0 0 10px;">Conservation succeeds when biology, enforcement, money, and local legitimacy line up. Protected areas work when large enough, connected, and enforced — not when they are "paper parks." The California condor (<em>Gymnogyps californianus</em>) fell to 27 individuals in 1987; captive breeding and reintroduction have brought the wild population to ~340. The Mauritius kestrel, Arabian oryx, and black-footed ferret show similar patterns. Marine Protected Areas covering 30% of the ocean could restore global fish stocks (Sala et al., 2021, <em>Nature</em>). Wolves reintroduced to Yellowstone in 1995 triggered a trophic cascade restructuring the entire ecosystem. The unglamorous details — fences, rangers, veterinary screening, land rights, and incentives for local communities — decide outcomes far more than charismatic branding does.</p>
       <div class="exp-facts" style="margin-top:10px;">
-        <div class="exp-fact"><div class="exp-fact-k">Protect habitat</div><div class="exp-fact-v">Large reserves, buffer zones, and wildlife corridors keep populations connected instead of isolated in genetic dead ends.</div></div>
-        <div class="exp-fact"><div class="exp-fact-k">Reduce killing</div><div class="exp-fact-v">Anti-poaching patrols, fishing limits, trade controls, and bycatch reduction buy time for slow-breeding species.</div></div>
-        <div class="exp-fact"><div class="exp-fact-k">Restore systems</div><div class="exp-fact-v">Wetland repair, reforestation, dam removal, reef restoration, and invasive-species removal rebuild the conditions animals need.</div></div>
-        <div class="exp-fact"><div class="exp-fact-k">Manage disease</div><div class="exp-fact-v">Vaccination, quarantine, veterinary screening, and biosecurity can prevent small populations from being erased by one outbreak.</div></div>
-        <div class="exp-fact"><div class="exp-fact-k">Breed carefully</div><div class="exp-fact-v">Captive breeding helps only when genetics, release habitat, predator control, and long-term monitoring are handled together.</div></div>
-        <div class="exp-fact"><div class="exp-fact-k">Align incentives</div><div class="exp-fact-v">Local land rights, compensation, jobs, and shared governance make protection durable rather than imposed from outside.</div></div>
+        <div class="exp-fact"><div class="caption-label">Protect habitat</div><div class="fact-value">Large reserves, buffer zones, and wildlife corridors keep populations connected instead of isolated in genetic dead ends.</div></div>
+        <div class="exp-fact"><div class="caption-label">Reduce killing</div><div class="fact-value">Anti-poaching patrols, fishing limits, trade controls, and bycatch reduction buy time for slow-breeding species.</div></div>
+        <div class="exp-fact"><div class="caption-label">Restore systems</div><div class="fact-value">Wetland repair, reforestation, dam removal, reef restoration, and invasive-species removal rebuild the conditions animals need.</div></div>
+        <div class="exp-fact"><div class="caption-label">Manage disease</div><div class="fact-value">Vaccination, quarantine, veterinary screening, and biosecurity can prevent small populations from being erased by one outbreak.</div></div>
+        <div class="exp-fact"><div class="caption-label">Breed carefully</div><div class="fact-value">Captive breeding helps only when genetics, release habitat, predator control, and long-term monitoring are handled together.</div></div>
+        <div class="exp-fact"><div class="caption-label">Align incentives</div><div class="fact-value">Local land rights, compensation, jobs, and shared governance make protection durable rather than imposed from outside.</div></div>
       </div>
     </div>
 
@@ -771,13 +771,13 @@ const mod = modules.find((m) => m.id === 42)!;
       let factsHTML = '';
       if (d.facts) {
         factsHTML = '<div class="exp-facts">' + d.facts.map(function(f) {
-          return '<div class="exp-fact"><div class="exp-fact-k">' + f[0] + '</div><div class="exp-fact-v">' + f[1] + '</div></div>';
+          return '<div class="exp-fact"><div class="caption-label">' + f[0] + '</div><div class="fact-value">' + f[1] + '</div></div>';
         }).join('') + '</div>';
       }
       document.getElementById('phyla-panel').innerHTML =
         '<div class="exp-meta">' + d.meta + '</div>' +
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>' +
+        '<div class="result-title">' + d.title + '</div>' +
+        '<div class="body-text-relaxed">' + d.body + '</div>' +
         factsHTML;
     };
 
@@ -819,12 +819,12 @@ const mod = modules.find((m) => m.id === 42)!;
       let factsHTML = '';
       if (d.facts) {
         factsHTML = '<div class="exp-facts" style="margin-top:10px;">' + d.facts.map(function(f) {
-          return '<div class="exp-fact"><div class="exp-fact-k">' + f[0] + '</div><div class="exp-fact-v">' + f[1] + '</div></div>';
+          return '<div class="exp-fact"><div class="caption-label">' + f[0] + '</div><div class="fact-value">' + f[1] + '</div></div>';
         }).join('') + '</div>';
       }
       det.innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body" style="margin-bottom:2px;">' + d.body + '</div>' +
+        '<div class="result-title">' + d.title + '</div>' +
+        '<div class="body-text-relaxed" style="margin-bottom:2px;">' + d.body + '</div>' +
         factsHTML;
     };
 
@@ -855,8 +855,8 @@ const mod = modules.find((m) => m.id === 42)!;
       const det = document.getElementById('invert-detail');
       det.classList.add('show');
       det.innerHTML =
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>';
+        '<div class="result-title">' + d.title + '</div>' +
+        '<div class="body-text-relaxed">' + d.body + '</div>';
     };
 
     /* ════ PART D — Speed scale ════ */
@@ -929,8 +929,8 @@ const mod = modules.find((m) => m.id === 42)!;
       btn.classList.add('active');
       document.getElementById('sense-panel').innerHTML =
         '<div class="exp-meta">' + d.meta + '</div>' +
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>' +
+        '<div class="result-title">' + d.title + '</div>' +
+        '<div class="body-text-relaxed">' + d.body + '</div>' +
         '<span class="exp-stat">' + d.stat + '</span>';
     };
 
@@ -1078,8 +1078,8 @@ const mod = modules.find((m) => m.id === 42)!;
       btn.classList.add('active');
       document.getElementById('comm-panel').innerHTML =
         '<div class="exp-meta">' + d.meta + '</div>' +
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>' +
+        '<div class="result-title">' + d.title + '</div>' +
+        '<div class="body-text-relaxed">' + d.body + '</div>' +
         '<span class="exp-stat">' + d.stat + '</span>';
     };
 
@@ -1152,8 +1152,8 @@ const mod = modules.find((m) => m.id === 42)!;
       btn.classList.add('active');
       document.getElementById('biome-panel').innerHTML =
         '<div class="exp-meta">' + d.meta + '</div>' +
-        '<div class="exp-title">' + d.title + '</div>' +
-        '<div class="exp-body">' + d.body + '</div>' +
+        '<div class="result-title">' + d.title + '</div>' +
+        '<div class="body-text-relaxed">' + d.body + '</div>' +
         '<span class="exp-stat">' + d.stat + '</span>';
     };
 

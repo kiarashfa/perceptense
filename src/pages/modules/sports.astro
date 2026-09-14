@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 41)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-person-skiing module-header-icon-accent"></i>
+      <i class="fa-solid fa-person-skiing module-icon-large"></i>
       <h1 class="module-title module-heading">Module 41: Sports</h1>
     </div>
     <p class="module-subtitle">Why sport matters, how it works, and a deep dive into the world's game</p>
@@ -89,15 +89,15 @@ const mod = modules.find((m) => m.id === 41)!;
         The 100-metre sprint ceiling: biomechanical models suggest the absolute human limit is approximately 9.48 seconds, versus Usain Bolt's 9.58 in 2009. The constraint is not just muscle speed but ground contact time — below about 80 milliseconds per step, the foot cannot generate enough force.
       </p>
       <div class="clabel u-mt-md">Physical demand by sport (illustrative comparison)</div>
-      <div class="cscale-wrap">
+      <div class="block-margin">
         <div class="cscale-poles"><span>Pure endurance</span><span>Pure power / speed</span></div>
-        <div class="cscale-row"><div class="cscale-name">Marathon</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Tour de France cyclist</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tour-de-france"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Football (midfield)</div><div class="cscale-track"><div class="cscale-dot cscale-dot-football-midfield"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">NBA basketball</div><div class="cscale-track"><div class="cscale-dot cscale-dot-nba"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">200m swimmer</div><div class="cscale-track"><div class="cscale-dot cscale-dot-swimmer"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">100m sprint</div><div class="cscale-track"><div class="cscale-dot cscale-dot-sprint"></div></div></div>
-        <div class="cscale-row"><div class="cscale-name">Powerlifting</div><div class="cscale-track"><div class="cscale-dot cscale-dot-powerlifting"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Marathon</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Tour de France cyclist</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tour-de-france"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Football (midfield)</div><div class="cscale-track"><div class="cscale-dot cscale-dot-football-midfield"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">NBA basketball</div><div class="cscale-track"><div class="cscale-dot cscale-dot-nba"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">200m swimmer</div><div class="cscale-track"><div class="cscale-dot cscale-dot-swimmer"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">100m sprint</div><div class="cscale-track"><div class="cscale-dot cscale-dot-sprint"></div></div></div>
+        <div class="data-row-wide"><div class="cscale-name">Powerlifting</div><div class="cscale-track"><div class="cscale-dot cscale-dot-powerlifting"></div></div></div>
       </div>
     </div>
 
@@ -115,7 +115,7 @@ const mod = modules.find((m) => m.id === 41)!;
       </p>
       <div class="clabel">VO₂ max improvement simulator</div>
       <div class="slider-wrap">
-        <div class="slider-poles"><span>0 weeks of training</span><span>52 weeks</span></div>
+        <div class="pole-labels-top"><span>0 weeks of training</span><span>52 weeks</span></div>
         <input type="range" id="training-weeks" min="0" max="52" value="12" step="1">
         <div class="slider-out" id="training-out">Move the slider to see estimated VO₂ max improvement.</div>
       </div>
@@ -322,7 +322,7 @@ const mod = modules.find((m) => m.id === 41)!;
     <!-- Tactics timeline -->
     <div class="card-football card">
       <div class="clabel">The history of football tactics — timeline</div>
-      <div id="tactics-timeline" class="pc-wrap"></div>
+      <div id="tactics-timeline" class="block-margin"></div>
       <p class="chart-note">Era labels are approximate. Tactical eras overlap significantly — the 4-4-2 remained common in England until the 2010s while continental football had moved on.</p>
     </div>
 
@@ -349,7 +349,7 @@ const mod = modules.find((m) => m.id === 41)!;
         The press has limits. Low-quality opposition can be pressed off the pitch; elite technical players (Iniesta, De Bruyne, Modric) can escape presses with first-touch control and short combinations. Manchester City under Guardiola specifically trains "press-breaking" patterns as a primary possession objective.
       </div>
 
-      <div class="clabel clabel-spaced">Press intensity comparison — PPDA (lower = more aggressive press)</div>
+      <div class="clabel gap-above-lg">Press intensity comparison — PPDA (lower = more aggressive press)</div>
       <div class="u-mt-sm" id="u-mt-8px"></div>
       <p class="data-note">PPDA figures are approximate seasonal averages. Sources: StatsBomb, Understat 2019–23.</p>
     </div>
@@ -677,9 +677,9 @@ const mod = modules.find((m) => m.id === 41)!;
       <div class="u-mt-sm" id="mgr-success-chart"></div>
       <p class="data-note">Relative importance based on econometric studies (Szymanski, ter Weel, Bridgewater). Wage bill is the dominant predictor of league performance regardless of manager.</p>
 
-      <div class="clabel clabel-spaced">Time-to-results simulator</div>
+      <div class="clabel gap-above-lg">Time-to-results simulator</div>
       <div class="slider-wrap">
-        <div class="slider-poles"><span>Just appointed (0 months)</span><span>4 seasons (48 months)</span></div>
+        <div class="pole-labels-top"><span>Just appointed (0 months)</span><span>4 seasons (48 months)</span></div>
         <input type="range" id="mgr-tenure" min="0" max="48" value="6" step="1">
         <div class="slider-out" id="mgr-tenure-out">Move the slider to explore how manager tenure relates to performance.</div>
       </div>
@@ -896,9 +896,9 @@ const mod = modules.find((m) => m.id === 41)!;
     let html = tacticsEras.map(e => {
       const left = ((e.start - minY) / span) * 100;
       const width = ((e.end - e.start) / span) * 100;
-      return `<div class="pc-row">
+      return `<div class="value-row">
         <div class="pc-label">${e.label}</div>
-        <div class="pc-track">
+        <div class="period-track-tall">
           <div class="pc-fill" style="left:${left}%;width:${width}%;background:${e.col};">
             <span class="pc-fill-label">${e.start}–${e.end}</span>
           </div>
@@ -906,7 +906,7 @@ const mod = modules.find((m) => m.id === 41)!;
       </div>`;
     }).join('');
     const axisMarks = [1863, 1880, 1900, 1920, 1940, 1960, 1980, 2000, 2024];
-    html += `<div class="pc-axis">${axisMarks.map(y => `<span class="pc-axis-mark">${y}</span>`).join('')}</div>`;
+    html += `<div class="pc-axis">${axisMarks.map(y => `<span class="micro-caption">${y}</span>`).join('')}</div>`;
     ttEl.innerHTML = html;
 
     // ─── Formation explorer ───

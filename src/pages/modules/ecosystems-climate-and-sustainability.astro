@@ -61,12 +61,12 @@ const mod = modules.find((m) => m.id === 50)!;
     <!-- Species interactions multi-card explorer -->
     <div class="panel-title">Community interactions — click a type to explore</div>
     <div class="interact-grid">
-      <div class="interact-card active" onclick="showInteract('mutualism',this)"><div class="interact-sign" style="color:#1D9E75">+/+</div><div class="interact-title">Mutualism</div></div>
-      <div class="interact-card" onclick="showInteract('commensalism',this)"><div class="interact-sign" style="color:#185FA5">+/0</div><div class="interact-title">Commensalism</div></div>
-      <div class="interact-card" onclick="showInteract('parasitism',this)"><div class="interact-sign" style="color:#993C1D">+/−</div><div class="interact-title">Parasitism</div></div>
-      <div class="interact-card" onclick="showInteract('predation',this)"><div class="interact-sign" style="color:#791F1F">+/−</div><div class="interact-title">Predation</div></div>
-      <div class="interact-card" onclick="showInteract('competition',this)"><div class="interact-sign" style="color:#633806">−/−</div><div class="interact-title">Competition</div></div>
-      <div class="interact-card" onclick="showInteract('amensalism',this)"><div class="interact-sign" style="color:var(--color-text-tertiary)">−/0</div><div class="interact-title">Amensalism</div></div>
+      <div class="interact-card active" onclick="showInteract('mutualism',this)"><div class="interact-sign" style="color:#1D9E75">+/+</div><div class="small-title">Mutualism</div></div>
+      <div class="interact-card" onclick="showInteract('commensalism',this)"><div class="interact-sign" style="color:#185FA5">+/0</div><div class="small-title">Commensalism</div></div>
+      <div class="interact-card" onclick="showInteract('parasitism',this)"><div class="interact-sign" style="color:#993C1D">+/−</div><div class="small-title">Parasitism</div></div>
+      <div class="interact-card" onclick="showInteract('predation',this)"><div class="interact-sign" style="color:#791F1F">+/−</div><div class="small-title">Predation</div></div>
+      <div class="interact-card" onclick="showInteract('competition',this)"><div class="interact-sign" style="color:#633806">−/−</div><div class="small-title">Competition</div></div>
+      <div class="interact-card" onclick="showInteract('amensalism',this)"><div class="interact-sign" style="color:var(--color-text-tertiary)">−/0</div><div class="small-title">Amensalism</div></div>
     </div>
     <div id="interact-display" class="sub-card muted-copy-large"></div>
   </div>
@@ -114,7 +114,7 @@ const mod = modules.find((m) => m.id === 50)!;
         <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#993C1D"/></marker>
       </defs>
       <!-- Atmosphere box -->
-      <rect x="230" y="10" width="240" height="50" rx="6" class="cycle-node"/>
+      <rect x="230" y="10" width="240" height="50" rx="6" class="svg-node"/>
       <text x="350" y="32" text-anchor="middle" class="cycle-text" font-weight="600">ATMOSPHERE</text>
       <text x="350" y="50" text-anchor="middle" class="cycle-text">870 GtC · 422 ppm CO₂</text>
       <!-- Ocean box -->
@@ -166,19 +166,19 @@ const mod = modules.find((m) => m.id === 50)!;
   <div class="content-panel">
     <div class="panel-title">12 major biomes — click any to explore</div>
     <div class="muted-copy u-mb-md">A biome is a large-scale ecosystem type defined primarily by climate (temperature and precipitation) and characterised by a distinctive plant community. The same biome type can appear on different continents with entirely different species — convergent evolution produces similar adaptations to similar climates. Biome boundaries are shifting as climate changes: the boreal forest's southern edge is retreating northward at 35–50 km per decade.</div>
-    <div class="biome-grid">
-      <div class="biome-card active" onclick="showBiome('rainforest',this)"><div class="biome-icon">🌿</div><div class="biome-label">Tropical Rainforest</div></div>
-      <div class="biome-card" onclick="showBiome('savanna',this)"><div class="biome-icon">🦁</div><div class="biome-label">Savanna</div></div>
-      <div class="biome-card" onclick="showBiome('desert',this)"><div class="biome-icon">🏜</div><div class="biome-label">Desert</div></div>
-      <div class="biome-card" onclick="showBiome('mediterranean',this)"><div class="biome-icon">🫒</div><div class="biome-label">Mediterranean</div></div>
-      <div class="biome-card" onclick="showBiome('temperate',this)"><div class="biome-icon">🍂</div><div class="biome-label">Temperate Forest</div></div>
-      <div class="biome-card" onclick="showBiome('boreal',this)"><div class="biome-icon">🌲</div><div class="biome-label">Boreal / Taiga</div></div>
-      <div class="biome-card" onclick="showBiome('tundra',this)"><div class="biome-icon">🧊</div><div class="biome-label">Tundra</div></div>
-      <div class="biome-card" onclick="showBiome('wetlands',this)"><div class="biome-icon">🦢</div><div class="biome-label">Wetlands</div></div>
-      <div class="biome-card" onclick="showBiome('freshwater',this)"><div class="biome-icon">💧</div><div class="biome-label">Freshwater</div></div>
-      <div class="biome-card" onclick="showBiome('marine',this)"><div class="biome-icon">🐟</div><div class="biome-label">Marine</div></div>
-      <div class="biome-card" onclick="showBiome('coral',this)"><div class="biome-icon">🪸</div><div class="biome-label">Coral Reefs</div></div>
-      <div class="biome-card" onclick="showBiome('polar',this)"><div class="biome-icon">🐧</div><div class="biome-label">Polar</div></div>
+    <div class="tile-grid-fill">
+      <div class="biome-card active" onclick="showBiome('rainforest',this)"><div class="tile-icon">🌿</div><div class="card-label">Tropical Rainforest</div></div>
+      <div class="biome-card" onclick="showBiome('savanna',this)"><div class="tile-icon">🦁</div><div class="card-label">Savanna</div></div>
+      <div class="biome-card" onclick="showBiome('desert',this)"><div class="tile-icon">🏜</div><div class="card-label">Desert</div></div>
+      <div class="biome-card" onclick="showBiome('mediterranean',this)"><div class="tile-icon">🫒</div><div class="card-label">Mediterranean</div></div>
+      <div class="biome-card" onclick="showBiome('temperate',this)"><div class="tile-icon">🍂</div><div class="card-label">Temperate Forest</div></div>
+      <div class="biome-card" onclick="showBiome('boreal',this)"><div class="tile-icon">🌲</div><div class="card-label">Boreal / Taiga</div></div>
+      <div class="biome-card" onclick="showBiome('tundra',this)"><div class="tile-icon">🧊</div><div class="card-label">Tundra</div></div>
+      <div class="biome-card" onclick="showBiome('wetlands',this)"><div class="tile-icon">🦢</div><div class="card-label">Wetlands</div></div>
+      <div class="biome-card" onclick="showBiome('freshwater',this)"><div class="tile-icon">💧</div><div class="card-label">Freshwater</div></div>
+      <div class="biome-card" onclick="showBiome('marine',this)"><div class="tile-icon">🐟</div><div class="card-label">Marine</div></div>
+      <div class="biome-card" onclick="showBiome('coral',this)"><div class="tile-icon">🪸</div><div class="card-label">Coral Reefs</div></div>
+      <div class="biome-card" onclick="showBiome('polar',this)"><div class="tile-icon">🐧</div><div class="card-label">Polar</div></div>
     </div>
     <div id="biome-display" class="sub-card muted-copy-large"></div>
   </div>
@@ -321,7 +321,7 @@ const mod = modules.find((m) => m.id === 50)!;
     <!-- Sea level rise calculator -->
     <div class="panel-title">Sea level rise calculator</div>
     <div class="muted-copy u-mb-sm">Current rate: ~3.7 mm/yr and accelerating. Under high-emission scenarios (SSP5-8.5), models project 0.6–1.0 m by 2100, with some ice-sheet instability models projecting up to 2 m. Each centimetre of rise threatens 6 million more people with annual flooding.</div>
-    <div class="calc-row">
+    <div class="input-row-compact">
       <div class="calc-field">
         <label>Warming scenario (°C above pre-industrial)</label>
         <input type="number" id="slr-temp" value="2" min="0.5" max="5" step="0.5">
@@ -739,7 +739,7 @@ function updateKSlider(v) {
   else if (v < 75) { status='Approaching K — healthy zone'; color='#185FA5'; growth='Growth rate is positive but decelerating. Resources becoming limiting. Competition intensifying. Most wild populations spend most of their time in this zone.'; detail='The inflection point of the logistic curve is at K/2 — maximum growth rate per unit time occurs at half the carrying capacity. This is why fisheries management aims to maintain fish stocks at ~K/2 (Maximum Sustainable Yield).'; }
   else if (v < 100) { status='Near K — resource-limited'; color='#ef9f27'; growth='Growth nearly zero. High density stress: disease spreads more easily, food per individual drops, territorial conflict increases. Birth rate ≈ death rate.'; detail='Many regulated populations oscillate around K with cycles of overshoot and decline. Predator-prey cycles (Lotka-Volterra model) emerge from this dynamic. Human populations in pre-industrial Europe were largely K-limited by food, disease, and land.'; }
   else { status='Overshoot — above K'; color='#791F1F'; growth='Population exceeds carrying capacity. Resources being depleted faster than they regenerate. Death rate rising. Crash incoming unless carrying capacity increases or population declines rapidly.'; detail='Classic example: St Matthew Island reindeer (Alaska). 29 reindeer introduced in 1944. By 1963: 6,000. By 1966: 42 survivors after population crash, with lichen pastures permanently degraded. Relevance to human systems: aquifer depletion, soil exhaustion, and fisheries collapse all represent carrying capacity overshoot.'; }
-  document.getElementById('k-output').innerHTML = '<div class="slider-output" style="color:'+color+'">'+v+'% of K</div><div class="slider-sub" style="margin-bottom:6px;">Status: '+status+'</div><div class="muted-copy">'+growth+'</div><div class="muted-copy u-mt-sm">'+detail+'</div>';
+  document.getElementById('k-output').innerHTML = '<div class="figure-xl" style="color:'+color+'">'+v+'% of K</div><div class="muted-small" style="margin-bottom:6px;">Status: '+status+'</div><div class="muted-copy">'+growth+'</div><div class="muted-copy u-mt-sm">'+detail+'</div>';
 }
 updateKSlider(50);
 
@@ -860,7 +860,7 @@ showTipping('amaz', document.querySelector('[onclick="showTipping(\'amaz\',this)
   ];
   let html = '';
   data.forEach(d => {
-    html += '<div class="ghg-row"><div class="ghg-label">'+d.label+'</div><div class="ghg-track"><div class="ghg-fill" style="width:'+d.val+'%;background:'+d.color+'">'+d.val+'% — '+d.note+'</div></div></div>';
+    html += '<div class="data-row"><div class="ghg-label">'+d.label+'</div><div class="track-plain"><div class="ghg-fill" style="width:'+d.val+'%;background:'+d.color+'">'+d.val+'% — '+d.note+'</div></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -1127,7 +1127,7 @@ function updateBeefSlider(v) {
     v <= 3 ? 'Occasional beef (weekends only). Annual footprint from beef alone: ~'+annualCo2+' tCO2e — comparable to driving a petrol car ~'+Math.round(annualCo2/0.21*1000)+' km.' :
     v <= 7 ? 'Average European consumption level. Annual beef footprint: ~'+annualCo2+' tCO2e — equivalent to ~'+Math.round(annualCo2*4)+' return flights London-Paris.' :
     'High consumption. Annual beef footprint: ~'+annualCo2+' tCO2e — equivalent to ~'+Math.round(annualCo2*200)+' kg of tofu in emissions terms. Switching to chicken or pork from all this beef would save ~60–80% of the footprint.';
-  document.getElementById('beef-output').innerHTML = '<div class="slider-output">'+v+'x/week · '+annualCo2+' tCO₂e/yr</div><div class="slider-sub">'+equiv+'</div>';
+  document.getElementById('beef-output').innerHTML = '<div class="figure-xl">'+v+'x/week · '+annualCo2+' tCO₂e/yr</div><div class="muted-small">'+equiv+'</div>';
 }
 updateBeefSlider(4);
 

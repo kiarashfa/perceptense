@@ -4,14 +4,6 @@
       --accent-bg: #EDF5D8;
       --accent-border: #B2D46A;
     }
-
-    /* ── Teaser overview cards ── */
-    .teaser-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
     .teaser-part {
       font-size: 10px;
       font-weight: 500;
@@ -27,11 +19,6 @@
       margin-bottom: 5px;
       line-height: 1.35;
     }
-    .teaser-body {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      line-height: 1.55;
-    }
     .button-row-compact button.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
@@ -45,12 +32,6 @@
       margin-bottom: 1rem;
       min-height: 100px;
     }
-    .exp-title {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 6px;
-    }
     .exp-meta {
       font-size: 11px;
       color: var(--accent);
@@ -58,11 +39,6 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin-bottom: 8px;
-    }
-    .exp-body {
-      font-size: 13px;
-      color: var(--color-text-secondary);
-      line-height: 1.65;
     }
     .exp-stat {
       display: inline-block;
@@ -85,27 +61,6 @@
       border-radius: var(--border-radius-md);
       padding: 9px 10px;
     }
-    .exp-fact-k {
-      font-size: 11px;
-      color: var(--color-text-secondary);
-      margin-bottom: 2px;
-    }
-    .exp-fact-v {
-      font-size: 12px;
-      color: var(--color-text-primary);
-      line-height: 1.45;
-    }
-
-    /* ── Period chart (timeline) ── */
-    .pc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
-      overflow-x: auto;
-    }
-    .pc-inner { min-width: 480px; }
     .pc-row {
       display: flex;
       align-items: center;
@@ -158,28 +113,6 @@
       position: absolute;
       transform: translateX(-50%);
     }
-    .pc-note {
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      line-height: 1.5;
-      margin-top: 8px;
-    }
-
-    /* ── Comparison scale (dot on track) ── */
-    .cscale-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
-    }
-    .cscale-poles {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      margin-bottom: 8px;
-    }
     .cscale-row {
       display: flex;
       align-items: center;
@@ -217,14 +150,6 @@
       text-align: left;
       flex-shrink: 0;
     }
-
-    /* ── Element card grid (multi-card explorer) ── */
-    .elem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-      gap: 8px;
-      margin-bottom: 10px;
-    }
     .elem-card {
       background: var(--color-background-secondary);
       border: 0.5px solid var(--color-border-tertiary);
@@ -237,7 +162,6 @@
     .elem-card:hover { background: var(--color-background-primary); border-color: var(--accent-border); }
     .elem-card.active { background: var(--accent-bg); border-color: var(--accent-border); }
     .elem-card-icon { font-size: 22px; margin-bottom: 5px; line-height: 1; }
-    .elem-card-label { font-size: 11px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; }
     .elem-detail {
       display: none;
       background: var(--color-background-primary);
@@ -273,13 +197,6 @@
       gap: 8px 14px;
       margin-bottom: 0.5rem;
     }
-    .dist-legend-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      color: var(--color-text-secondary);
-    }
     .dist-swatch {
       width: 10px;
       height: 10px;
@@ -287,34 +204,12 @@
       flex-shrink: 0;
       border: 0.5px solid var(--color-border-tertiary);
     }
-
-    /* ── Slider widget ── */
-    .slider-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
-    }
     .slider-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 10px;
       margin-bottom: 9px;
-    }
-    .slider-label-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      margin-bottom: 4px;
-    }
-    .slider-value {
-      color: var(--accent);
-      font-weight: 500;
-      font-size: 14px;
-      white-space: nowrap;
     }
     .slider-output {
       background: var(--color-background-secondary);
@@ -332,22 +227,6 @@
       line-height: 1.5;
       margin-top: 6px;
     }
-
-    /* ── Calculator widget ── */
-    .calc-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
-    }
-    .calc-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
-      align-items: end;
-      margin-bottom: 10px;
-    }
     .calc-field { display: flex; flex-direction: column; gap: 4px; }
     .calc-field label { font-size: 12px; color: var(--color-text-secondary); }
     .calc-output {
@@ -359,47 +238,16 @@
       line-height: 1.65;
       min-height: 44px;
     }
-
-    /* ── SVG shared classes ── */
-    .svg-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
-      overflow-x: auto;
-    }
     .svg-label {
       font-family: var(--font-sans);
       fill: var(--color-text-primary);
       font-size: 12px;
       font-weight: 500;
     }
-    .svg-small {
-      font-family: var(--font-sans);
-      fill: var(--color-text-secondary);
-      font-size: 10px;
-    }
-    .svg-node {
-      fill: var(--color-background-secondary);
-      stroke: var(--color-border-secondary);
-      stroke-width: 1;
-    }
-    .svg-accent {
-      fill: var(--accent-bg);
-      stroke: var(--accent-border);
-      stroke-width: 1;
-    }
     .svg-line {
       stroke: var(--color-border-secondary);
       stroke-width: 1.4;
       fill: none;
-    }
-    .chart-note {
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      margin-top: 6px;
-      line-height: 1.5;
     }
 
     @media (max-width: 500px) {
