@@ -64,28 +64,28 @@ const mod = modules.find((m) => m.id === 13)!;
         <text x="340" y="76" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.5">50%</text>
         <text x="640" y="76" text-anchor="middle" font-size="11" fill="currentColor" opacity="0.5">100%</text>
         <!-- starting point at 5% -->
-        <circle cx="97" cy="55" r="5" fill="#0C447C"/>
-        <text x="97" y="38" text-anchor="middle" font-size="11" fill="#0C447C" font-weight="500">5%</text>
+        <circle cx="97" cy="55" r="5" class="pct-txt-blue"/>
+        <text x="97" y="38" text-anchor="middle" font-size="11" class="pct-txt-blue" font-weight="500">5%</text>
         <!-- +3pp arrow → 8% -->
-        <line x1="97" y1="55" x2="136" y2="55" stroke="#791F1F" stroke-width="2" marker-end="url(#arr-red)"/>
-        <text x="116" y="30" text-anchor="middle" font-size="10" fill="#791F1F">+3 pp</text>
-        <circle cx="140" cy="55" r="5" fill="#791F1F"/>
-        <text x="140" y="76" text-anchor="middle" font-size="11" fill="#791F1F" font-weight="500">8%</text>
+        <line x1="97" y1="55" x2="136" y2="55" stroke-width="2" class="pct-txt-red" marker-end="url(#arr-red)"/>
+        <text x="116" y="30" text-anchor="middle" font-size="10" class="pct-txt-red">+3 pp</text>
+        <circle cx="140" cy="55" r="5" class="pct-txt-red"/>
+        <text x="140" y="76" text-anchor="middle" font-size="11" class="pct-txt-red" font-weight="500">8%</text>
         <!-- +60% arrow → same 8%, but labelled differently -->
-        <line x1="97" y1="70" x2="136" y2="70" stroke="#27500A" stroke-width="2" marker-end="url(#arr-grn)"/>
-        <text x="116" y="93" text-anchor="middle" font-size="10" fill="#27500A">+60%</text>
+        <line x1="97" y1="70" x2="136" y2="70" stroke-width="2" class="pct-txt-green" marker-end="url(#arr-grn)"/>
+        <text x="116" y="93" text-anchor="middle" font-size="10" class="pct-txt-green">+60%</text>
         <!-- badge -->
         <rect x="165" y="42" width="200" height="26" rx="6" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-width="0.5"/>
         <text x="175" y="59" font-size="11" fill="currentColor" opacity="0.7">Same move. Different framing.</text>
         <defs>
-          <marker id="arr-red" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#791F1F"/></marker>
-          <marker id="arr-grn" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#27500A"/></marker>
+          <marker id="arr-red" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" class="pct-txt-red"/></marker>
+          <marker id="arr-grn" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" class="pct-txt-green"/></marker>
         </defs>
         <!-- headline examples -->
         <rect x="390" y="15" width="245" height="78" rx="8" fill="currentColor" fill-opacity="0.04" stroke="currentColor" stroke-opacity="0.1" stroke-width="0.5"/>
         <text x="402" y="33" font-size="10.5" fill="currentColor" opacity="0.55" font-weight="500">Real headline ambiguity:</text>
-        <text x="402" y="50" font-size="10" fill="#791F1F">"Interest rates rise 50%"</text>
-        <text x="402" y="65" font-size="10" fill="#27500A">"Interest rates up 1 point"</text>
+        <text x="402" y="50" font-size="10" class="pct-txt-red">"Interest rates rise 50%"</text>
+        <text x="402" y="65" font-size="10" class="pct-txt-green">"Interest rates up 1 point"</text>
         <text x="402" y="82" font-size="9.5" fill="currentColor" opacity="0.45">Both describe 2% → 3%. Both true.</text>
       </svg>
     </div>
@@ -479,7 +479,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <text id="iv2" x="165" y="0" text-anchor="middle" font-size="12" font-weight="500" fill="var(--accent)"></text>
           <text id="iv3" x="255" y="0" text-anchor="middle" font-size="12" font-weight="500" fill="var(--accent)"></text>
           <text id="iv4" x="345" y="0" text-anchor="middle" font-size="12" font-weight="500" fill="var(--accent)"></text>
-          <text id="iv5" x="435" y="0" text-anchor="middle" font-size="12" font-weight="500" fill="#791F1F"></text>
+          <text id="iv5" x="435" y="0" text-anchor="middle" font-size="12" font-weight="500" class="pct-txt-red"></text>
           <!-- top quintile bar different colour -->
         </svg>
       </div>
@@ -591,8 +591,8 @@ const mod = modules.find((m) => m.id === 13)!;
           <text x="500" y="90" text-anchor="middle" font-size="9.5" fill="currentColor" opacity="0.65">80/20 rule</text>
 
           <!-- 97% salt water -->
-          <line x1="602" y1="42" x2="602" y2="110" stroke="#F09595" stroke-width="1" stroke-dasharray="2,2"/>
-          <text x="602" y="120" text-anchor="middle" font-size="9.5" fill="#F09595">97% salt water</text>
+          <line x1="602" y1="42" x2="602" y2="110" class="pct-txt-red" stroke-width="1" stroke-dasharray="2,2"/>
+          <text x="602" y="120" text-anchor="middle" font-size="9.5" class="pct-txt-red">97% salt water</text>
 
           <!-- bottom bracket labels -->
           <rect x="20"  y="165" width="90"  height="32" rx="5" fill="var(--color-background-secondary)" stroke="currentColor" stroke-opacity="0.08" stroke-width="0.5"/>
@@ -787,7 +787,7 @@ function runCalc() {
     const change = (b - base) / base * 100;
     const pp     = b - base;
     html = `<strong>${fmt(base)} → ${fmt(b)}</strong><br>` +
-      `Percent change: <strong style="color:${change >= 0 ? '#27500A' : '#791F1F'};">${change >= 0 ? '+' : ''}${change.toFixed(1)}%</strong><br>` +
+      `Percent change: <strong class="${change >= 0 ? 'pct-txt-green' : 'pct-txt-red'}">${change >= 0 ? '+' : ''}${change.toFixed(1)}%</strong><br>` +
       `Absolute change: <strong>${pp >= 0 ? '+' : ''}${fmt(pp)}</strong>`;
   }
   document.getElementById('calc-result').innerHTML = html;
@@ -846,11 +846,11 @@ const giniData = [
   const wrap = document.getElementById('gini-bars');
   giniData.forEach(d => {
     const pct = (d.val / 0.65 * 100).toFixed(1);
-    const hue = d.val < 0.30 ? '#97C459' : d.val < 0.40 ? '#EF9F27' : '#F09595';
+    const hue = d.val < 0.30 ? 'pct-fill-green' : d.val < 0.40 ? 'pct-fill-amber' : 'pct-fill-red';
     const row = document.createElement('div');
     row.className = 'gini-bar-wrap';
     row.innerHTML = `<span class="gini-label">${d.country}</span>
-      <div class="track-thin"><div class="gini-bar-fill" style="width:${pct}%; background:${hue};"></div></div>
+      <div class="track-thin"><div class="gini-bar-fill ${hue}" style="width:${pct}%;"></div></div>
       <span class="gini-val">${d.val.toFixed(3)}</span>`;
     wrap.appendChild(row);
   });
@@ -870,7 +870,7 @@ function showPE(pe, btn) {
   const dotsWrap = document.getElementById('pe-dots');
   const filled = Math.min(pe, 100);
   dotsWrap.innerHTML = Array.from({length: filled}, (_, i) =>
-    `<span style="color:${i < 10 ? 'var(--accent)' : '#EF9F27'}; font-size:14px;">●</span>`
+    `<span class="${i < 10 ? '' : 'pct-txt-amber'}" style="${i < 10 ? 'color:var(--accent);' : ''} font-size:14px;">●</span>`
   ).join('') + (pe > 100 ? ` <span style="font-size:12px; color:var(--color-text-secondary);">…+${pe-100} more</span>` : '');
   document.getElementById('pe-desc').textContent = peDescriptions[pe];
 }
@@ -971,14 +971,14 @@ drawGrowthChart(3, document.querySelector('[onclick="drawGrowthChart(3, this)"]'
   const scale   = maxH / 51.5;
   const ids     = ['iq1','iq2','iq3','iq4','iq5'];
   const valIds  = ['iv1','iv2','iv3','iv4','iv5'];
-  const colours = ['var(--accent)','var(--accent)','var(--accent)','var(--accent)','#F09595'];
   ids.forEach((id, i) => {
     const el = document.getElementById(id);
     if (!el) return;
     const h = shares[i] * scale;
     el.setAttribute('y', 170 - h);
     el.setAttribute('height', h);
-    el.setAttribute('fill', colours[i]);
+    if (i === ids.length - 1) el.setAttribute('class', 'pct-txt-red');
+    else el.setAttribute('fill', 'var(--accent)');
     const vEl = document.getElementById(valIds[i]);
     if (vEl) {
       vEl.setAttribute('y', 170 - h - 5);

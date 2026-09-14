@@ -342,4 +342,38 @@
   min-width:80px;
   text-align:right;
 }
+
+/* Semantic colours used as text/fill throughout this module's SVGs and
+   JS-built content (pp-vs-% comparison chart, quintile chart, percentage
+   ladder, Gini bars, P/E dot explorer). Several literal values failed
+   4.5:1 (text) or 3:1 (decorative fill) against the page background in one
+   theme or the other. Classes, not custom properties on html/:root — see
+   the module-12 note in memory.md for why a bare "html[data-theme=dark]"
+   rule loses its theme condition when namespaced; a compound class
+   selector namespaces correctly. Declared last in this file so a same-
+   specificity tie with an earlier rule (gotcha 17) resolves in these
+   rules' favour. */
+.pct-txt-blue   { color: #0C447C; fill: #0C447C; stroke: #0C447C; }
+.pct-txt-red    { color: #791F1F; fill: #791F1F; stroke: #791F1F; }
+.pct-txt-green  { color: #27500A; fill: #27500A; stroke: #27500A; }
+.pct-txt-amber  { color: #633806; fill: #633806; stroke: #633806; }
+.pct-fill-green { background: #4B9913; }
+.pct-fill-amber { background: #BA7517; }
+.pct-fill-red   { background: #D85A30; }
+html[data-theme="dark"] .pct-txt-blue   { color: #85B7EB; fill: #85B7EB; stroke: #85B7EB; }
+html[data-theme="dark"] .pct-txt-red    { color: #F09595; fill: #F09595; stroke: #F09595; }
+html[data-theme="dark"] .pct-txt-green  { color: #9FE1CB; fill: #9FE1CB; stroke: #9FE1CB; }
+html[data-theme="dark"] .pct-txt-amber  { color: #EF9F27; fill: #EF9F27; stroke: #EF9F27; }
+html[data-theme="dark"] .pct-fill-green { background: #97C459; }
+html[data-theme="dark"] .pct-fill-amber { background: #EF9F27; }
+html[data-theme="dark"] .pct-fill-red   { background: #F09595; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .pct-txt-blue   { color: #85B7EB; fill: #85B7EB; stroke: #85B7EB; }
+  html[data-theme="auto"] .pct-txt-red    { color: #F09595; fill: #F09595; stroke: #F09595; }
+  html[data-theme="auto"] .pct-txt-green  { color: #9FE1CB; fill: #9FE1CB; stroke: #9FE1CB; }
+  html[data-theme="auto"] .pct-txt-amber  { color: #EF9F27; fill: #EF9F27; stroke: #EF9F27; }
+  html[data-theme="auto"] .pct-fill-green { background: #97C459; }
+  html[data-theme="auto"] .pct-fill-amber { background: #EF9F27; }
+  html[data-theme="auto"] .pct-fill-red   { background: #F09595; }
+}
   
