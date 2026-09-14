@@ -251,19 +251,23 @@
   display:block;
 }
 
+.p5-card {
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .p5-card-style {
-  background:#E6F1FB;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .p5-card-russia {
-  background:#FCEBEB;
-  border:0.5px solid #F09595;
+  --tint-background: #FCEBEB;
+  --tint-border: 0.5px solid #F09595;
 }
 
 .p5-card-china {
-  background:#FAEEDA;
-  border:0.5px solid #EF9F27;
+  --tint-background: #FAEEDA;
+  --tint-border: 0.5px solid #EF9F27;
 }
 
 .chart-heading {

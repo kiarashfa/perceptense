@@ -164,34 +164,32 @@
   font-size:11px;
 }
 
+.property-value {
+  font-weight: 500;
+  color: var(--tint-color);
+}
 .property-value-green {
-  color:#3B6D11;
-  font-weight:500;
+  --tint-color: #3B6D11;
 }
 
 .property-value-amber {
-  color:#BA7517;
-  font-weight:500;
+  --tint-color: #BA7517;
 }
 
 .property-value-blue {
-  color:#185FA5;
-  font-weight:500;
+  --tint-color: #185FA5;
 }
 
 .property-value-indigo {
-  color:#534AB7;
-  font-weight:500;
+  --tint-color: #534AB7;
 }
 
 .property-value-red {
-  color:#791F1F;
-  font-weight:500;
+  --tint-color: #791F1F;
 }
 
 .property-value-brown {
-  color:#633806;
-  font-weight:500;
+  --tint-color: #633806;
 }
 
 .strength-insight {

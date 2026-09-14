@@ -291,60 +291,37 @@
   align-items:flex-start;
 }
 
+.checklist-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+  background: var(--tint-background);
+  color: var(--tint-color);
+}
 .checklist-num-blue {
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  background:#E6F1FB;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  font-weight:500;
-  color:#0C447C;
-  flex-shrink:0;
+  --tint-background: #E6F1FB;
+  --tint-color: #0C447C;
 }
 
 .checklist-num-green {
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  background:#E1F5EE;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  font-weight:500;
-  color:#085041;
-  flex-shrink:0;
+  --tint-background: #E1F5EE;
+  --tint-color: #085041;
 }
 
 .checklist-num-amber {
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  background:#FAEEDA;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  font-weight:500;
-  color:#633806;
-  flex-shrink:0;
+  --tint-background: #FAEEDA;
+  --tint-color: #633806;
 }
 
 .checklist-num-red {
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  background:#FCEBEB;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  font-weight:500;
-  color:#791F1F;
-  flex-shrink:0;
+  --tint-background: #FCEBEB;
+  --tint-color: #791F1F;
 }
 
 .percentage-ladder-chart {

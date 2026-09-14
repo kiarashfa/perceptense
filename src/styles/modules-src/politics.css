@@ -173,11 +173,14 @@
   color:#FCEBEB;
 }
 
+.spectrum-examples {
+  font-size: 10px;
+  margin-top: 3px;
+  line-height: 1.4;
+  color: var(--tint-color);
+}
 .spectrum-examples-pink {
-  font-size:10px;
-  color:#F7C1C1;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #F7C1C1;
 }
 
 .spectrum-hard-left {
@@ -194,10 +197,7 @@
 }
 
 .spectrum-examples-peach {
-  font-size:10px;
-  color:#FAECE7;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #FAECE7;
 }
 
 .spectrum-centre-left {
@@ -208,10 +208,7 @@
 }
 
 .spectrum-examples-blue {
-  font-size:10px;
-  color:#E6F1FB;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #E6F1FB;
 }
 
 .spectrum-centre {
@@ -222,10 +219,7 @@
 }
 
 .spectrum-examples-stone {
-  font-size:10px;
-  color:#F1EFE8;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #F1EFE8;
 }
 
 .spectrum-centre-right {
@@ -236,10 +230,7 @@
 }
 
 .spectrum-examples-sand {
-  font-size:10px;
-  color:#FAEEDA;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #FAEEDA;
 }
 
 .spectrum-hard-right {

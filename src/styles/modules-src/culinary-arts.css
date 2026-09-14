@@ -191,84 +191,73 @@
   margin-bottom:10px;
 }
 
+.signal-panel {
+  border-radius: var(--border-radius-md);
+  padding: 11px 13px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .signal-panel-resting {
-  background:#EAF3DE;
-  border-radius:var(--border-radius-md);
-  padding:11px 13px;
-  border:0.5px solid #97C459;
+  --tint-background: #EAF3DE;
+  --tint-border: 0.5px solid #97C459;
 }
 
+.signal-title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--tint-color);
+}
 .signal-title-resting {
-  font-size:12px;
-  font-weight:500;
-  color:#27500A;
-  margin-bottom:4px;
+  --tint-color: #27500A;
 }
 
+.signal-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--tint-color);
+}
 .signal-desc-resting {
-  font-size:12px;
-  color:#3B6D11;
-  line-height:1.5;
+  --tint-color: #3B6D11;
 }
 
 .signal-panel-finished {
-  background:#FCEBEB;
-  border-radius:var(--border-radius-md);
-  padding:11px 13px;
-  border:0.5px solid #F09595;
+  --tint-background: #FCEBEB;
+  --tint-border: 0.5px solid #F09595;
 }
 
 .signal-title-finished {
-  font-size:12px;
-  font-weight:500;
-  color:#791F1F;
-  margin-bottom:4px;
+  --tint-color: #791F1F;
 }
 
 .signal-desc-finished {
-  font-size:12px;
-  color:#A32D2D;
-  line-height:1.5;
+  --tint-color: #A32D2D;
 }
 
 .signal-panel-disliked {
-  background:#FAEEDA;
-  border-radius:var(--border-radius-md);
-  padding:11px 13px;
-  border:0.5px solid #EF9F27;
+  --tint-background: #FAEEDA;
+  --tint-border: 0.5px solid #EF9F27;
 }
 
 .signal-title-disliked {
-  font-size:12px;
-  font-weight:500;
-  color:#633806;
-  margin-bottom:4px;
+  --tint-color: #633806;
 }
 
 .signal-desc-disliked {
-  font-size:12px;
-  color:#854F0B;
-  line-height:1.5;
+  --tint-color: #854F0B;
 }
 
 .signal-panel-pause {
-  background:#E6F1FB;
-  border-radius:var(--border-radius-md);
-  padding:11px 13px;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .signal-title-pause {
-  font-size:12px;
-  font-weight:500;
-  color:#0C447C;
-  margin-bottom:4px;
+  --tint-color: #0C447C;
 }
 
 .signal-desc-pause {
-  font-size:12px;
-  color:#185FA5;
-  line-height:1.5;
+  --tint-color: #185FA5;
 }
 
 .etiquette-grid {

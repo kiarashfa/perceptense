@@ -62,124 +62,99 @@
   max-height:90px;
 }
 
+.tint-panel {
+  border-radius: var(--border-radius-md);
+  padding: 10px 12px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .tint-panel-amber {
-  background:#FAEEDA;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  border:0.5px solid #EF9F27;
+  --tint-background: #FAEEDA;
+  --tint-border: 0.5px solid #EF9F27;
 }
 
+.tint-title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--tint-color);
+}
 .tint-title-amber {
-  font-size:12px;
-  font-weight:500;
-  color:#633806;
-  margin-bottom:4px;
+  --tint-color: #633806;
 }
 
+.tint-desc {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--tint-color);
+}
 .tint-desc-amber {
-  font-size:11px;
-  color:#854F0B;
-  line-height:1.5;
+  --tint-color: #854F0B;
 }
 
 .tint-panel-red {
-  background:#FCEBEB;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  border:0.5px solid #F09595;
+  --tint-background: #FCEBEB;
+  --tint-border: 0.5px solid #F09595;
 }
 
 .tint-title-red {
-  font-size:12px;
-  font-weight:500;
-  color:#791F1F;
-  margin-bottom:4px;
+  --tint-color: #791F1F;
 }
 
 .tint-desc-red {
-  font-size:11px;
-  color:#A32D2D;
-  line-height:1.5;
+  --tint-color: #A32D2D;
 }
 
 .tint-panel-blue {
-  background:#E6F1FB;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .tint-title-blue {
-  font-size:12px;
-  font-weight:500;
-  color:#0C447C;
-  margin-bottom:4px;
+  --tint-color: #0C447C;
 }
 
 .tint-desc-blue {
-  font-size:11px;
-  color:#185FA5;
-  line-height:1.5;
+  --tint-color: #185FA5;
 }
 
 .tint-panel-green {
-  background:#EAF3DE;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  border:0.5px solid #97C459;
+  --tint-background: #EAF3DE;
+  --tint-border: 0.5px solid #97C459;
 }
 
 .tint-title-green {
-  font-size:12px;
-  font-weight:500;
-  color:#27500A;
-  margin-bottom:4px;
+  --tint-color: #27500A;
 }
 
 .tint-desc-green {
-  font-size:11px;
-  color:#3B6D11;
-  line-height:1.5;
+  --tint-color: #3B6D11;
 }
 
 .tint-panel-purple {
-  background:#EEEDFE;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  border:0.5px solid #AFA9EC;
+  --tint-background: #EEEDFE;
+  --tint-border: 0.5px solid #AFA9EC;
 }
 
 .tint-title-purple {
-  font-size:12px;
-  font-weight:500;
-  color:#3C3489;
-  margin-bottom:4px;
+  --tint-color: #3C3489;
 }
 
 .tint-desc-purple {
-  font-size:11px;
-  color:#534AB7;
-  line-height:1.5;
+  --tint-color: #534AB7;
 }
 
 .tint-panel-coral {
-  background:#FAECE7;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  border:0.5px solid #F0997B;
+  --tint-background: #FAECE7;
+  --tint-border: 0.5px solid #F0997B;
 }
 
 .tint-title-coral {
-  font-size:12px;
-  font-weight:500;
-  color:#712B13;
-  margin-bottom:4px;
+  --tint-color: #712B13;
 }
 
 .tint-desc-coral {
-  font-size:11px;
-  color:#993C1D;
-  line-height:1.5;
+  --tint-color: #993C1D;
 }
 
 .beer-labels-section {

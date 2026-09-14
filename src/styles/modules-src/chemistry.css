@@ -140,13 +140,16 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   margin-bottom:10px;
 }
 
+.ph-num {
+  width: 32px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: right;
+  flex-shrink: 0;
+  color: var(--tint-color);
+}
 .ph-num-red {
-  width:32px;
-  font-size:11px;
-  font-weight:500;
-  color:#791F1F;
-  text-align:right;
-  flex-shrink:0;
+  --tint-color: #791F1F;
 }
 
 .ph-bar-battery-acid {
@@ -159,9 +162,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
+.ph-bar-text {
+  font-size: 11px;
+  color: var(--tint-color);
+}
 .ph-bar-text-blush {
-  font-size:11px;
-  color:#FCEBEB;
+  --tint-color: #FCEBEB;
 }
 
 .ph-bar-lemon {
@@ -175,17 +181,11 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 }
 
 .ph-bar-text-white {
-  font-size:11px;
-  color:#fff;
+  --tint-color: #fff;
 }
 
 .ph-num-brown {
-  width:32px;
-  font-size:11px;
-  font-weight:500;
-  color:#633806;
-  text-align:right;
-  flex-shrink:0;
+  --tint-color: #633806;
 }
 
 .ph-bar-tomato {
@@ -199,17 +199,11 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 }
 
 .ph-bar-text-dark {
-  font-size:11px;
-  color:#412402;
+  --tint-color: #412402;
 }
 
 .ph-num-green {
-  width:32px;
-  font-size:11px;
-  font-weight:500;
-  color:#27500A;
-  text-align:right;
-  flex-shrink:0;
+  --tint-color: #27500A;
 }
 
 .ph-bar-water {
@@ -233,17 +227,11 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 }
 
 .ph-bar-text-deep-green {
-  font-size:11px;
-  color:#04342C;
+  --tint-color: #04342C;
 }
 
 .ph-num-blue {
-  width:32px;
-  font-size:11px;
-  font-weight:500;
-  color:#0C447C;
-  text-align:right;
-  flex-shrink:0;
+  --tint-color: #0C447C;
 }
 
 .ph-bar-baking-soda {
@@ -267,12 +255,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 }
 
 .ph-num-navy {
-  width:32px;
-  font-size:11px;
-  font-weight:500;
-  color:#042C53;
-  text-align:right;
-  flex-shrink:0;
+  --tint-color: #042C53;
 }
 
 .ph-bar-drain-cleaner {
@@ -286,8 +269,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 }
 
 .ph-bar-text-pale-blue {
-  font-size:11px;
-  color:#E6F1FB;
+  --tint-color: #E6F1FB;
 }
 
 .ph-input-field {
@@ -324,98 +306,79 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   gap:8px;
 }
 
+.taste-panel {
+  border-radius: var(--border-radius-md);
+  padding: 10px 12px;
+  background: var(--tint-background);
+}
 .taste-panel-sweet {
-  background:#E1F5EE;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
+  --tint-background: #E1F5EE;
 }
 
+.taste-title {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--tint-color);
+}
 .taste-title-sweet {
-  font-size:12px;
-  font-weight:500;
-  color:#085041;
-  margin-bottom:4px;
+  --tint-color: #085041;
 }
 
+.taste-desc {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--tint-color);
+}
 .taste-desc-sweet {
-  font-size:11px;
-  color:#085041;
-  line-height:1.5;
+  --tint-color: #085041;
 }
 
 .taste-panel-sour {
-  background:#FCEBEB;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
+  --tint-background: #FCEBEB;
 }
 
 .taste-title-sour {
-  font-size:12px;
-  font-weight:500;
-  color:#791F1F;
-  margin-bottom:4px;
+  --tint-color: #791F1F;
 }
 
 .taste-desc-sour {
-  font-size:11px;
-  color:#791F1F;
-  line-height:1.5;
+  --tint-color: #791F1F;
 }
 
 .taste-panel-salty {
-  background:#FAEEDA;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
+  --tint-background: #FAEEDA;
 }
 
 .taste-title-salty {
-  font-size:12px;
-  font-weight:500;
-  color:#633806;
-  margin-bottom:4px;
+  --tint-color: #633806;
 }
 
 .taste-desc-salty {
-  font-size:11px;
-  color:#633806;
-  line-height:1.5;
+  --tint-color: #633806;
 }
 
 .taste-panel-bitter {
-  background:#EAF3DE;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
+  --tint-background: #EAF3DE;
 }
 
 .taste-title-bitter {
-  font-size:12px;
-  font-weight:500;
-  color:#27500A;
-  margin-bottom:4px;
+  --tint-color: #27500A;
 }
 
 .taste-desc-bitter {
-  font-size:11px;
-  color:#27500A;
-  line-height:1.5;
+  --tint-color: #27500A;
 }
 
 .taste-panel-umami {
-  background:#EEEDFE;
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
+  --tint-background: #EEEDFE;
 }
 
 .taste-title-umami {
-  font-size:12px;
-  font-weight:500;
-  color:#3C3489;
-  margin-bottom:4px;
+  --tint-color: #3C3489;
 }
 
 .taste-desc-umami {
-  font-size:11px;
-  color:#3C3489;
-  line-height:1.5;
+  --tint-color: #3C3489;
 }
   

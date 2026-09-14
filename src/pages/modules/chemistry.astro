@@ -390,14 +390,14 @@ const mod = modules.find((m) => m.id === 15)!;
     <div class="content-panel">
       <div class="panel-title">pH 0–14: from battery acid to drain cleaner</div>
       <div class="ph-scale">
-        <div class="inline-group"><div class="ph-num-red">0</div><div class="ph-bar-battery-acid"><span class="ph-bar-text-blush">Battery acid, stomach acid (pH ~1.5)</span></div></div>
-        <div class="inline-group"><div class="ph-num-red">2</div><div class="ph-bar-lemon"><span class="ph-bar-text-white">Lemon juice (~2.2), vinegar (~2.5)</span></div></div>
-        <div class="inline-group"><div class="ph-num-brown">4</div><div class="ph-bar-tomato"><span class="ph-bar-text-dark">Tomato juice (~4), coffee (~5)</span></div></div>
-        <div class="inline-group"><div class="ph-num-green">7</div><div class="ph-bar-water"><span class="ph-bar-text-white">Pure water — neutral</span></div></div>
-        <div class="inline-group"><div class="ph-num-green">7.4</div><div class="ph-bar-blood"><span class="ph-bar-text-deep-green">Human blood — must stay here</span></div></div>
-        <div class="inline-group"><div class="ph-num-blue">9</div><div class="ph-bar-baking-soda"><span class="ph-bar-text-white">Baking soda (~8.3), seawater (~8.1)</span></div></div>
-        <div class="inline-group"><div class="ph-num-blue">11</div><div class="ph-bar-ammonia"><span class="ph-bar-text-white">Ammonia (~11), bleach (~12)</span></div></div>
-        <div class="inline-group"><div class="ph-num-navy">14</div><div class="ph-bar-drain-cleaner"><span class="ph-bar-text-pale-blue">Drain cleaner, NaOH</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-red">0</div><div class="ph-bar-battery-acid"><span class="ph-bar-text ph-bar-text-blush">Battery acid, stomach acid (pH ~1.5)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-red">2</div><div class="ph-bar-lemon"><span class="ph-bar-text ph-bar-text-white">Lemon juice (~2.2), vinegar (~2.5)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-brown">4</div><div class="ph-bar-tomato"><span class="ph-bar-text ph-bar-text-dark">Tomato juice (~4), coffee (~5)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-green">7</div><div class="ph-bar-water"><span class="ph-bar-text ph-bar-text-white">Pure water — neutral</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-green">7.4</div><div class="ph-bar-blood"><span class="ph-bar-text ph-bar-text-deep-green">Human blood — must stay here</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-blue">9</div><div class="ph-bar-baking-soda"><span class="ph-bar-text ph-bar-text-white">Baking soda (~8.3), seawater (~8.1)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-blue">11</div><div class="ph-bar-ammonia"><span class="ph-bar-text ph-bar-text-white">Ammonia (~11), bleach (~12)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-navy">14</div><div class="ph-bar-drain-cleaner"><span class="ph-bar-text ph-bar-text-pale-blue">Drain cleaner, NaOH</span></div></div>
       </div>
       <div class="note-panel">
         <strong class="text-primary">pH is logarithmic.</strong> Each step is 10× more acidic or alkaline. pH 3 is 10× more acidic than pH 4, and 100× more acidic than pH 5. Stomach acid (pH ~1.5) is roughly 30,000× more acidic than blood (pH 7.4). Your body maintains blood pH within ±0.1 of 7.4 — outside pH 6.8 or 7.8, death occurs.
@@ -465,25 +465,25 @@ const mod = modules.find((m) => m.id === 15)!;
     <div class="content-panel">
       <div class="panel-title-spaced">The five tastes — and their chemical triggers</div>
       <div class="taste-grid">
-        <div class="taste-panel-sweet">
-          <div class="taste-title-sweet">Sweet</div>
-          <div class="taste-desc-sweet">Sugars (glucose, fructose, sucrose) bind to T1R2/T1R3 receptor dimers. Fructose is ~1.7× sweeter than glucose despite being the same formula (C₆H₁₂O₆) — different shape, different receptor fit.</div>
+        <div class="taste-panel taste-panel-sweet">
+          <div class="taste-title taste-title-sweet">Sweet</div>
+          <div class="taste-desc taste-desc-sweet">Sugars (glucose, fructose, sucrose) bind to T1R2/T1R3 receptor dimers. Fructose is ~1.7× sweeter than glucose despite being the same formula (C₆H₁₂O₆) — different shape, different receptor fit.</div>
         </div>
-        <div class="taste-panel-sour">
-          <div class="taste-title-sour">Sour</div>
-          <div class="taste-desc-sour">H⁺ ions (from acids like citric, acetic, lactic) activate proton-sensing channels. The more H⁺, the lower the pH, the sourer the taste. Vinegar (pH 2.5) vs lemon (pH 2.2) — directly measurable acidity.</div>
+        <div class="taste-panel taste-panel-sour">
+          <div class="taste-title taste-title-sour">Sour</div>
+          <div class="taste-desc taste-desc-sour">H⁺ ions (from acids like citric, acetic, lactic) activate proton-sensing channels. The more H⁺, the lower the pH, the sourer the taste. Vinegar (pH 2.5) vs lemon (pH 2.2) — directly measurable acidity.</div>
         </div>
-        <div class="taste-panel-salty">
-          <div class="taste-title-salty">Salty</div>
-          <div class="taste-desc-salty">Na⁺ ions from sodium chloride pass directly through ENaC ion channels on taste cells. Other salts (KCl, MgCl₂) taste differently because their cations activate different channels or in different proportions.</div>
+        <div class="taste-panel taste-panel-salty">
+          <div class="taste-title taste-title-salty">Salty</div>
+          <div class="taste-desc taste-desc-salty">Na⁺ ions from sodium chloride pass directly through ENaC ion channels on taste cells. Other salts (KCl, MgCl₂) taste differently because their cations activate different channels or in different proportions.</div>
         </div>
-        <div class="taste-panel-bitter">
-          <div class="taste-title-bitter">Bitter</div>
-          <div class="taste-desc-bitter">~25 different TAS2R receptors detect a huge variety of compounds — mostly alkaloids and glucosinolates that are toxic in plants. Caffeine, quinine, and Brussels sprouts all trigger bitterness. Evolved as a toxin-detection system.</div>
+        <div class="taste-panel taste-panel-bitter">
+          <div class="taste-title taste-title-bitter">Bitter</div>
+          <div class="taste-desc taste-desc-bitter">~25 different TAS2R receptors detect a huge variety of compounds — mostly alkaloids and glucosinolates that are toxic in plants. Caffeine, quinine, and Brussels sprouts all trigger bitterness. Evolved as a toxin-detection system.</div>
         </div>
-        <div class="taste-panel-umami">
-          <div class="taste-title-umami">Umami</div>
-          <div class="taste-desc-umami">Glutamate (an amino acid) and nucleotides (IMP, GMP) bind the T1R1/T1R3 receptor. Identified in 1908 by Kikunae Ikeda studying kombu seaweed. Naturally concentrated in Parmesan, anchovies, mushrooms, tomatoes, and soy sauce.</div>
+        <div class="taste-panel taste-panel-umami">
+          <div class="taste-title taste-title-umami">Umami</div>
+          <div class="taste-desc taste-desc-umami">Glutamate (an amino acid) and nucleotides (IMP, GMP) bind the T1R1/T1R3 receptor. Identified in 1908 by Kikunae Ikeda studying kombu seaweed. Naturally concentrated in Parmesan, anchovies, mushrooms, tomatoes, and soy sauce.</div>
         </div>
       </div>
     </div>
