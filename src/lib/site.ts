@@ -1,14 +1,9 @@
 /** Single source of truth for anything that depends on where the site lives. */
 
-export const site = {
-  brand: 'Perceptense',
-  tagline: 'Have a Sense About Everything',
-  author: 'Kiarash Farajzadehahary',
-  locale: 'en',
-  description:
-    'A free, self-directed course of 50 interactive modules for building real ' +
-    'intuition about numbers, science, culture and the systems that shape daily life.',
-} as const;
+import siteData from '../data/site.json';
+
+/** Brand strings, shared with the build tools through src/data/site.json. */
+export const site = siteData;
 
 /** Base path with no trailing slash, e.g. "/perceptense". */
 export const base = import.meta.env.BASE_URL.replace(/\/$/, '');

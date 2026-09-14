@@ -2,16 +2,17 @@
   "name": "perceptense",
   "type": "module",
   "version": "2.0.0",
-  "description": "Have a Sense About Everything \u2014 a free, self-directed course of interactive modules.",
+  "description": "Have a Sense About Everything — a free, self-directed course of interactive modules.",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run data && npm run icons && npm run css && astro build && npm run redirects",
+    "build": "npm run data && npm run icons && npm run css && npm run og && astro build && npm run redirects",
     "preview": "astro preview",
     "check": "astro check",
     "data": "python tools/build_data.py",
     "port": "python tools/port.py",
     "css": "node tools/build-styles.mjs",
+    "og": "python tools/build_og_fonts.py && node tools/build-og.mjs",
     "verify": "npm run verify:drift && npm run verify:handlers && npm run verify:crawl && npm run verify:seo",
     "verify:seo": "python tools/verify_seo.py",
     "test": "npm run build && npm run verify",
@@ -28,11 +29,13 @@
     "@astrojs/sitemap": "^3.7.4",
     "@fortawesome/fontawesome-free": "^7.3.1",
     "astro": "^7.3.2",
+    "fontkit": "2.0.4",
     "pixelmatch": "^7.1.0",
     "playwright": "^1.56.1",
     "pngjs": "^7.0.0",
     "postcss": "^8.5.6",
     "postcss-selector-parser": "^7.1.0",
+    "sharp": "0.35.4",
     "typescript": "^5.9.3"
   }
 }

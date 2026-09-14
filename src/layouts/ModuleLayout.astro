@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import RelatedModules from '../components/RelatedModules.astro';
-import { site, path, pageTitle } from '../lib/site';
+import { site, base, path, pageTitle } from '../lib/site';
 import modules from '../data/modules.json';
 import categories from '../data/categories.json';
 
@@ -82,6 +82,8 @@ if (mod.qa.length > 0) {
   description={mod.description}
   pathname={pathname}
   ogType="article"
+  ogImage={`${base}/og/${mod.slug}.png`}
+  ogImageAlt={`Module ${mod.id}: ${mod.name}`}
   moduleId={mod.id}
   structuredData={structuredData}
 >

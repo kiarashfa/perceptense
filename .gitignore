@@ -25,4 +25,8 @@ src/styles/modules/
 public/styles/
 src/styles/icons/
 src/styles/icons-base.css
+
+# generated from src/data by the og step
+public/og/
+
 __pycache__/

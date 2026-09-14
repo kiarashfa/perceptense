@@ -34,6 +34,9 @@ REQUIRED_META = [
     ('og:type', r'<meta property="og:type" content="([^"]*)"'),
     ('og:site_name', r'<meta property="og:site_name" content="([^"]*)"'),
     ('twitter:card', r'<meta name="twitter:card" content="([^"]*)"'),
+    ('og:image', r'<meta property="og:image" content="([^"]*)"'),
+    ('og:image:alt', r'<meta property="og:image:alt" content="([^"]*)"'),
+    ('twitter:image', r'<meta name="twitter:image" content="([^"]*)"'),
 ]
 
 
@@ -58,6 +61,7 @@ def main() -> int:
     anchors: list[tuple[str, str]] = []
     ld_types: defaultdict[str, int] = defaultdict(int)
     terse: list[tuple[str, int]] = []
+    og_images: set[str] = set()
 
     for page in pages:
         rel = page.parent.relative_to(DIST).as_posix()
@@ -107,6 +111,26 @@ def main() -> int:
         for label, pattern in REQUIRED_META:
             if not re.search(pattern, html):
                 fail(f'missing {label}')
+
+        # --- social card is a real 1200x630 PNG in the build ---
+        m = re.search(r'<meta property="og:image" content="([^"]*)"', html)
+        if m:
+            image = m.group(1)
+            og_images.add(image)
+            prefix = f'{ORIGIN}{BASE}/'
+            file = DIST / image[len(prefix):] if image.startswith(prefix) else None
+            if file is None:
+                fail(f'og:image is not on this site: {image}')
+            elif not file.is_file():
+                fail(f'og:image not in the build: {image}')
+            else:
+                head = file.read_bytes()[:24]
+                size = (int.from_bytes(head[16:20], 'big'), int.from_bytes(head[20:24], 'big'))
+                if head[:8] != b'\x89PNG\r\n\x1a\n' or size != (1200, 630):
+                    fail(f'og:image is not a 1200x630 PNG: {image}')
+            if rel.startswith('modules/') and rel != 'modules':
+                if not image.endswith(f'/og/{rel.split("/", 1)[1]}.png'):
+                    fail(f'module page does not use its own card: {image}')
 
         # --- language ---
         if not re.search(r'<html[^>]*\blang="[a-z]{2}', html):
@@ -187,6 +211,7 @@ def main() -> int:
     print(f'unique descriptions: {len(descriptions)}')
     print(f'anchors checked    : {len(anchors)}')
     print(f'structured data    : ' + ', '.join(f'{k} x{v}' for k, v in sorted(ld_types.items())))
+    print(f'social cards       : {len(og_images)} distinct')
     if terse:
         print(f'terse descriptions : {len(terse)} under {DESC_SOFT} chars '
               f'(accurate and unique, but worth expanding by hand)')
