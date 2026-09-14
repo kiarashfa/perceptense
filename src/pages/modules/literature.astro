@@ -314,7 +314,7 @@ const mod = modules.find((m) => m.id === 31)!;
           <span>Deep inside a character's mind</span>
           <span>Distant, god-like narrator</span>
         </div>
-        <input class="u-w-100pct" type="range" id="u-w-100pct" min="1" max="5" value="3" oninput="updateDistanceSlider(this.value)">
+        <input class="u-w-100pct" type="range" id="narrative-distance-slider" min="1" max="5" value="3" oninput="updateDistanceSlider(this.value)">
         <div class="slider-output" id="distance-output"></div>
       </div>
 
@@ -372,12 +372,12 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="panel-title">Reading time calculator — how long will a novel take?</div>
         <div class="control-row-tight">
           <span class="calc-label">Novel word count (words)</span>
-          <input class="u-w-130px" type="number" id="u-w-130px" value="100000" min="10000" max="800000">
+          <input class="u-w-130px" type="number" id="read-words" value="100000" min="10000" max="800000">
         </div>
         <div class="control-row-tight">
           <span class="calc-label">Your reading speed (WPM)</span>
           <input class="u-w-130px" type="number" id="read-speed" value="250" min="50" max="700">
-          <select class="u-fs-12px" id="u-fs-12px" onchange="applySpeedPreset(this.value)">
+          <select class="u-fs-12px" id="read-speed-preset" onchange="applySpeedPreset(this.value)">
             <option value="">Preset...</option>
             <option value="150">Slow &amp; careful (150)</option>
             <option value="250">Average adult (250)</option>
@@ -593,11 +593,11 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="mini-intro">The "core" Western canon is roughly 100 major works (Homer through to the 20th century). How long would it actually take?</div>
         <div class="control-row-tight">
           <span class="calc-label">Number of works to read</span>
-          <input class="u-w-100px" type="number" id="u-w-100px" value="100" min="10" max="500">
+          <input class="u-w-100px" type="number" id="canon-works" value="100" min="10" max="500">
         </div>
         <div class="control-row-tight">
           <span class="calc-label">Average words per work</span>
-          <input class="u-w-120px" type="number" id="u-w-120px" value="80000" min="5000" max="500000">
+          <input class="u-w-120px" type="number" id="canon-word-len" value="80000" min="5000" max="500000">
           <select class="u-fs-12px" id="len-preset" onchange="applyLenPreset(this.value)">
             <option value="">Preset...</option>
             <option value="5000">Poetry collections (~5k)</option>
@@ -1560,7 +1560,7 @@ const mod = modules.find((m) => m.id === 31)!;
      CALCULATORS
   ════════════════════════════════════ */
   function calcReadingTime() {
-    const words = parseInt(document.getElementById('u-w-130px').value) || 100000;
+    const words = parseInt(document.getElementById('read-words').value) || 100000;
     const wpm = parseInt(document.getElementById('read-speed').value) || 250;
     const minsPerDay = parseInt(document.getElementById('read-mins').value) || 30;
     const totalMins = words / wpm;
@@ -1578,8 +1578,8 @@ For context: a standard literary novel (~80,000 words) at 250 WPM takes about 5.
   }
 
   function calcCanonTime() {
-    const works = parseInt(document.getElementById('u-w-100px').value) || 100;
-    const wordLen = parseInt(document.getElementById('u-w-120px').value) || 80000;
+    const works = parseInt(document.getElementById('canon-works').value) || 100;
+    const wordLen = parseInt(document.getElementById('canon-word-len').value) || 80000;
     const minsPerDay = parseInt(document.getElementById('canon-mins').value) || 45;
     const wpm = parseInt(document.getElementById('canon-wpm').value) || 250;
     const totalWords = works * wordLen;
@@ -1595,7 +1595,7 @@ This is entirely achievable — a committed reader spending 45 minutes a day can
   }
 
   function applyLenPreset(val) {
-    if (val) document.getElementById('u-w-120px').value = val;
+    if (val) document.getElementById('canon-word-len').value = val;
   }
 
   /* ════════════════════════════════════

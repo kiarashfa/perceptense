@@ -116,7 +116,7 @@ const mod = modules.find((m) => m.id === 24)!;
       <div class="input-row-spaced">
         <div class="field-wide">
           <label class="muted-text-small">Weight (kg)</label>
-          <input class="u-fs-13px" type="number" id="u-fs-13px" value="75">
+          <input class="u-fs-13px" type="number" id="met-weight" value="75">
         </div>
         <div class="field-wide">
           <label class="muted-text-small">Height (cm)</label>
@@ -675,7 +675,7 @@ const mod = modules.find((m) => m.id === 24)!;
    PART B · Metabolism calculator
 ═══════════════════════════════════════════════════════════ */
 function calcMet() {
-  const w = parseFloat(document.getElementById('u-fs-13px').value);
+  const w = parseFloat(document.getElementById('met-weight').value);
   const h = parseFloat(document.getElementById('met-height').value);
   const a = parseFloat(document.getElementById('met-age').value);
   const s = document.getElementById('met-sex').value;

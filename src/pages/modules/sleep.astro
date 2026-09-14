@@ -259,7 +259,7 @@ const mod = modules.find((m) => m.id === 22)!;
       <div class="hormone-timeline-title">Interactive hormone timeline — drag to explore the 24-hour cycle</div>
       <div class="range-row">
         <label class="hormone-slider-label">Time of day:</label>
-        <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="23" value="23" step="1">
+        <input class="u-flex-1" type="range" id="hormone-time-slider" min="0" max="23" value="23" step="1">
         <span class="time-out" id="time-out"></span>
       </div>
       <div class="hormone-display" id="hormone-display"></div>
@@ -706,7 +706,7 @@ const mod = modules.find((m) => m.id === 22)!;
       ];
 
       window.updateHormones = function() {
-        const idx = parseInt(document.getElementById('u-flex-1').value);
+        const idx = parseInt(document.getElementById('hormone-time-slider').value);
         const hours = hormoneData.map(d => d.hour);
         const closestIdx = hours.reduce((best, h, i) => {
           const diff  = Math.abs(h  <= 5 ? h  + 24 - idx : h  - idx);
@@ -738,7 +738,7 @@ const mod = modules.find((m) => m.id === 22)!;
           <div style="font-size:13px; color:#1a1a1a; line-height:1.6;">${d.desc}</div>`;
       };
       
-      const timeSlider = document.getElementById('u-flex-1');
+      const timeSlider = document.getElementById('hormone-time-slider');
       if (timeSlider) {
         timeSlider.addEventListener('input', window.updateHormones);
         window.updateHormones();

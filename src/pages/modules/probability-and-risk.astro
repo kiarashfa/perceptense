@@ -268,7 +268,7 @@ const mod = modules.find((m) => m.id === 12)!;
 
       <div class="range-row">
         <label class="form-label-wide">Disease prevalence:</label>
-        <input class="u-flex-1" type="range" id="u-flex-1" min="1" max="500" value="10" step="1">
+        <input class="u-flex-1" type="range" id="prev-slider" min="1" max="500" value="10" step="1">
         <span class="prev-out" id="prev-out">1 in 100</span>
       </div>
       <div class="range-row-spaced">
@@ -277,7 +277,7 @@ const mod = modules.find((m) => m.id === 12)!;
         <span class="prev-out" id="acc-out">99%</span>
       </div>
 
-      <div class="u-mb-md" id="u-mb-10px"></div>
+      <div class="u-mb-md" id="fp-spacer"></div>
       <div class="fp-result" id="fp-result"></div>
       <div class="muted-copy" id="fp-explain"></div>
     </div>
@@ -410,7 +410,7 @@ const mod = modules.find((m) => m.id === 12)!;
       </div>
 
       <div class="panel-title-spaced">Build your own expected value table</div>
-      <div class="u-mb-sm" id="u-mb-8px"></div>
+      <div class="u-mb-sm" id="ev-rows"></div>
       <button class="addevrow-control" onclick="addEVRow()">+ Add outcome</button>
       <div class="ev-result" id="ev-result"></div>
       <div class="muted-copy" id="ev-note"></div>
@@ -710,7 +710,7 @@ function updateRisk() {
    FALSE POSITIVE SLIDER
 ======================================================== */
 function updateFP() {
-  const prev = parseInt(document.getElementById('u-flex-1').value);
+  const prev = parseInt(document.getElementById('prev-slider').value);
   const acc  = parseInt(document.getElementById('acc-slider').value) / 100;
   document.getElementById('prev-out').textContent = '1 in ' + prev;
   document.getElementById('acc-out').textContent = (acc * 100).toFixed(0) + '%';
@@ -855,7 +855,7 @@ let evRows = [
 ];
 
 function renderEVRows() {
-  const wrap = document.getElementById('u-mb-8px');
+  const wrap = document.getElementById('ev-rows');
   wrap.innerHTML = evRows.map((r, i) => `
     <div style="display:flex; gap:8px; align-items:center; margin-bottom:6px; flex-wrap:wrap;">
       <input type="number" value="${r.prob}" min="0" max="100" step="1"
@@ -1265,7 +1265,7 @@ function updateCond() {
    INIT
 ======================================================== */
 document.getElementById('risk-scenario').addEventListener('change', updateRisk);
-document.getElementById('u-flex-1').addEventListener('input', updateFP);
+document.getElementById('prev-slider').addEventListener('input', updateFP);
 document.getElementById('acc-slider').addEventListener('input', updateFP);
 document.getElementById('bday-slider').addEventListener('input', updateBday);
 document.getElementById('pa-slider').addEventListener('input', updateCond);

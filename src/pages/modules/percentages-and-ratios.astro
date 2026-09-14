@@ -26,7 +26,7 @@ const mod = modules.find((m) => m.id === 13)!;
       <div class="panel-title">See the difference — drag the slider and watch both outputs</div>
       <div class="range-row">
         <label class="slider-label">Starting rate:</label>
-        <input class="u-flex-1" type="range" id="u-flex-1" min="1" max="80" value="40" step="1">
+        <input class="u-flex-1" type="range" id="starting-rate" min="1" max="80" value="40" step="1">
         <span class="start-out" id="start-out">40%</span>
       </div>
       <div class="range-row-spaced">
@@ -730,7 +730,7 @@ const mod = modules.find((m) => m.id === 13)!;
 
 /* ── Part A: % vs pp slider ── */
 function updatePP() {
-  const start  = parseInt(document.getElementById('u-flex-1').value);
+  const start  = parseInt(document.getElementById('starting-rate').value);
   const change = parseInt(document.getElementById('change-rate').value);
   document.getElementById('start-out').textContent  = start + '%';
   document.getElementById('change-out').textContent = '+' + change;
@@ -743,7 +743,7 @@ function updatePP() {
   document.getElementById('pct-result').textContent = start + '% → ' + pct_new + '%';
   document.getElementById('pct-desc').textContent   = 'A ' + change + '% increase on ' + start + '% = ×' + (1 + change / 100).toFixed(2) + ' = ' + pct_new + '%.';
 }
-document.getElementById('u-flex-1').addEventListener('input', updatePP);
+document.getElementById('starting-rate').addEventListener('input', updatePP);
 document.getElementById('change-rate').addEventListener('input', updatePP);
 updatePP();
 

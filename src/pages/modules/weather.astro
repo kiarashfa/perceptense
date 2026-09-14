@@ -80,7 +80,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <span class="u-text-center">1013 hPa<br><span>Standard sea level</span></span>
         <span class="u-text-right">1040+ hPa<br><span class="text-blue-900">Strong high</span></span>
       </div>
-      <div class="u-mt-sm" id="u-mt-8px"></div>
+      <div class="u-mt-sm" id="pressure-output"></div>
       <div class="button-row btn-row-style">
         <button onclick="showPressureEvent('typhoon')">Typhoon Tip (record)</button>
         <button onclick="showPressureEvent('katrina')">Hurricane Katrina</button>
@@ -721,7 +721,7 @@ const pressureEvents = {
 
 function showPressureEvent(key) {
   const e = pressureEvents[key];
-  document.getElementById('u-mt-8px').innerHTML = `
+  document.getElementById('pressure-output').innerHTML = `
     <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 12px; font-size:12px; color:var(--color-text-secondary); line-height:1.6;">
       <strong style="color:${e.col};">${e.label}: ${e.hpa} hPa</strong> — ${e.note}
     </div>`;

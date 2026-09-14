@@ -461,7 +461,7 @@ const mod = modules.find((m) => m.id === 29)!;
         <span class="calc-label">Annual growth rate:</span>
         <span class="card-title" id="card-title">0.9%</span>
       </div>
-      <input class="u-mb-md" type="range" min="0.2" max="2.5" step="0.1" value="0.9" id="u-mb-12px" oninput="updateBillionCalc()">
+      <input class="u-mb-md" type="range" min="0.2" max="2.5" step="0.1" value="0.9" id="growth-rate-slider" oninput="updateBillionCalc()">
       <div class="calc-result" id="billion-result"></div>
     </div>
 
@@ -469,7 +469,7 @@ const mod = modules.find((m) => m.id === 29)!;
       <div class="block-title">How many people have been born during your lifetime?</div>
       <div class="control-row">
         <span class="calc-label">Your birth year:</span>
-        <input class="u-w-100px" type="number" id="u-w-100px" min="1920" value="1990" oninput="updateLifetimeBirths()">
+        <input class="u-w-100px" type="number" id="birth-year" min="1920" value="1990" oninput="updateLifetimeBirths()">
       </div>
       <div class="calc-result" id="lifetime-births-result"></div>
     </div>
@@ -612,7 +612,7 @@ const mod = modules.find((m) => m.id === 29)!;
 
     /* --- Billion calculator --- */
     function updateBillionCalc() {
-      const rate = parseFloat(document.getElementById('u-mb-12px').value);
+      const rate = parseFloat(document.getElementById('growth-rate-slider').value);
       document.getElementById('card-title').textContent = rate.toFixed(1) + '%';
       const currentPop = 8.2e9;
       const targetPop  = 9.2e9;
@@ -627,7 +627,7 @@ const mod = modules.find((m) => m.id === 29)!;
 
     /* --- Lifetime births calculator --- */
     function updateLifetimeBirths() {
-      const birthYear = parseInt(document.getElementById('u-w-100px').value);
+      const birthYear = parseInt(document.getElementById('birth-year').value);
       const currentYear = new Date().getFullYear();
       if (isNaN(birthYear) || birthYear < 1920 || birthYear > currentYear) {
         document.getElementById('lifetime-births-result').textContent = `Please enter a year between 1920 and ${currentYear}.`;

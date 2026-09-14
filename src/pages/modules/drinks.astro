@@ -61,7 +61,7 @@ const mod = modules.find((m) => m.id === 20)!;
         <div class="calc-row">
           <div>
             <div class="input-caption">Volume (ml)</div>
-            <input class="u-w-100pct" type="number" id="u-w-100pct" value="250" min="1" max="2000">
+            <input class="u-w-100pct" type="number" id="calc-volume" value="250" min="1" max="2000">
           </div>
           <div>
             <div class="input-caption">ABV (%)</div>
@@ -312,10 +312,10 @@ const mod = modules.find((m) => m.id === 20)!;
       <div class="inline-card-title">Everything starts with espresso</div>
       <div class="intro-small">A single espresso is approximately 3 cl (30 ml) of concentrated coffee extracted under ~9 bar of pressure through ~7–9 g of finely ground coffee in ~25–30 seconds. All other coffee drinks are built from this base by adding water, milk, or both.</div>
 
-      <div class="u-mb-lg" id="u-mb-14px">
+      <div class="u-mb-lg" id="coffee-ratio-panel">
         <div class="range-row">
           <span class="form-label-narrow">Espresso ratio:</span>
-          <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="10" value="0" step="1">
+          <input class="u-flex-1" type="range" id="coffee-ratio-slider" min="0" max="10" value="0" step="1">
         </div>
         <div class="coffee-drink-name" id="coffee-drink-name"></div>
         <div class="lede-compact" id="coffee-drink-desc"></div>
@@ -919,7 +919,7 @@ const coffeeDrinks = [
 ];
 
 function updateCoffee() {
-  const idx = parseInt(document.getElementById('u-flex-1').value);
+  const idx = parseInt(document.getElementById('coffee-ratio-slider').value);
   const d = coffeeDrinks[idx];
   document.getElementById('coffee-drink-name').textContent = d.name;
   document.getElementById('coffee-drink-desc').textContent = d.desc;
@@ -936,13 +936,13 @@ function updateCoffee() {
   add(d.steamedMilk,'#D4A679');
   add(d.foam,       '#F5E6D3');
 }
-document.getElementById('u-flex-1').addEventListener('input', updateCoffee);
+document.getElementById('coffee-ratio-slider').addEventListener('input', updateCoffee);
 
 /* ══════════════════════════════════════
    ABV UNITS CALCULATOR
 ══════════════════════════════════════ */
 function calcUnits() {
-  const vol = parseFloat(document.getElementById('u-w-100pct').value);
+  const vol = parseFloat(document.getElementById('calc-volume').value);
   const abv = parseFloat(document.getElementById('calc-abv').value);
   const res = document.getElementById('calc-result');
   if (isNaN(vol) || isNaN(abv) || vol <= 0 || abv <= 0) {

@@ -39,7 +39,7 @@ const mod = modules.find((m) => m.id === 45)!;
 
     <div class="card u-mb-md">
       <p class="clabel">The numbers — who believes what and where (2024 estimates)</p>
-      <div class="dist-bar u-mt-md" id="u-mt-10px"></div>
+      <div class="dist-bar u-mt-md" id="religion-dist-bar"></div>
       <div class="wrap-row" id="religion-legend"></div>
       <p class="cnote u-mt-sm">Christianity is largest by count (2.4B, 31%) but Islam is fastest-growing: demographic projections suggest Islam will roughly match Christianity by 2070 due to younger age profiles in Muslim-majority countries. The "non-religious" 1.2B is heavily concentrated in China (where many identify as non-religious yet practice ancestor veneration) and Western Europe.</p>
     </div>
@@ -576,7 +576,7 @@ const mod = modules.find((m) => m.id === 45)!;
       { label: 'Folk/Indigenous', pct: 6, col: '#A67C52' }, { label: 'Other', pct: 1, col: '#7a7a7a' },
       { label: 'Non-religious', pct: 15, col: '#aaaaaa' }
     ];
-    var bar = document.getElementById('u-mt-10px'), leg = document.getElementById('religion-legend');
+    var bar = document.getElementById('religion-dist-bar'), leg = document.getElementById('religion-legend');
     relData.forEach(function(r){
       var seg = document.createElement('div'); seg.className = 'dist-seg'; seg.style.width = r.pct+'%'; seg.style.background = r.col; seg.title = r.label+' '+r.pct+'%'; if(r.pct>=7) seg.textContent = r.pct+'%'; bar.appendChild(seg);
       var li = document.createElement('div'); li.className = 'dl-item'; li.innerHTML = '<div class="key-swatch" style="background:'+r.col+'"></div>'+r.label+' '+r.pct+'%'; leg.appendChild(li);

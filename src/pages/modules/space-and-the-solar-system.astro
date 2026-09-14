@@ -340,8 +340,8 @@ const mod = modules.find((m) => m.id === 26)!;
     <div class="content-panel">
       <div class="panel-title">Distances from Earth's surface -- drag to explore</div>
       <div class="altitude-slider-row">
-        <label class="form-label-narrow" for="u-flex-1">Altitude:</label>
-        <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="18" value="3" step="1">
+        <label class="form-label-narrow" for="distance-slider">Altitude:</label>
+        <input class="u-flex-1" type="range" id="distance-slider" min="0" max="18" value="3" step="1">
       </div>
       <div class="dist-display" id="dist-display"></div>
     </div>
@@ -1027,7 +1027,7 @@ const mod = modules.find((m) => m.id === 26)!;
   ];
 
   function updateDist() {
-    const idx = parseInt(document.getElementById('u-flex-1').value);
+    const idx = parseInt(document.getElementById('distance-slider').value);
     const d = distances[idx];
     const fmt = km => {
       if (km >= 1e15) return `${(km/9.461e15).toFixed(1)} kly (${(km/1e12).toFixed(0)} trillion km)`;
@@ -1044,8 +1044,8 @@ const mod = modules.find((m) => m.id === 26)!;
       </div>
       <div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;">${d.note}</div>`;
   }
-  document.getElementById('u-flex-1').max = distances.length - 1;
-  document.getElementById('u-flex-1').addEventListener('input', updateDist);
+  document.getElementById('distance-slider').max = distances.length - 1;
+  document.getElementById('distance-slider').addEventListener('input', updateDist);
 
   /* ─────────────────────────────────────────────
      SPACE MISSIONS TABS

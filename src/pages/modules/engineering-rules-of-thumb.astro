@@ -227,7 +227,7 @@ const mod = modules.find((m) => m.id === 16)!;
         <button class="pill-button-wide" onclick="showCalc('wind')"  >Wind load</button>
         <button class="pill-button-wide" onclick="showCalc('concrete')">Concrete mix</button>
       </div>
-      <div class="u-mb-md" id="u-mb-12px"></div>
+      <div class="u-mb-md" id="eng-calc-output"></div>
       <div class="eng-result" id="eng-result"></div>
     </div>
 
@@ -746,7 +746,7 @@ function showCalc(key) {
   });
   html += `<button onclick="runCalc('${key}')" style="height:36px; padding:0 16px; font-size:13px; flex-shrink:0;">Calculate</button>`;
   html += `</div>`;
-  document.getElementById('u-mb-12px').innerHTML = html;
+  document.getElementById('eng-calc-output').innerHTML = html;
   runCalc(key);
 }
 

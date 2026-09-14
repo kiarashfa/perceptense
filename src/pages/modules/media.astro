@@ -209,7 +209,7 @@ const mod = modules.find((m) => m.id === 44)!;
         <div class="slider-title">US newspaper newsroom employment, 2006–2023</div>
         <div class="slider-val" id="news-jobs-val">71,000</div>
       </div>
-      <input class="u-w-100pct" type="range" id="u-w-100pct" min="2006" max="2023" value="2006" step="1">
+      <input class="u-w-100pct" type="range" id="news-jobs-slider" min="2006" max="2023" value="2006" step="1">
       <div class="slider-poles"><span>2006</span><span>2023</span></div>
       <div class="slider-output" id="news-jobs-out"></div>
     </div>
@@ -963,7 +963,7 @@ const mod = modules.find((m) => m.id === 44)!;
       2018: 30000, 2019: 28000, 2020: 24000, 2021: 23000,
       2022: 22000, 2023: 21000
     };
-    const jobSlider = document.getElementById('u-w-100pct');
+    const jobSlider = document.getElementById('news-jobs-slider');
     const jobVal = document.getElementById('news-jobs-val');
     const jobOut = document.getElementById('news-jobs-out');
     function updateJobSlider(y) {

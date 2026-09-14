@@ -37,7 +37,7 @@ const mod = modules.find((m) => m.id === 11)!;
       </div>
       <div class="range-row-spaced">
         <span class="inline-label">−273°C</span>
-        <input class="u-flex-1" type="range" id="u-flex-1" min="-273" max="5778" value="20" step="1">
+        <input class="u-flex-1" type="range" id="temp-slider" min="-273" max="5778" value="20" step="1">
         <span class="inline-label">5,778°C</span>
       </div>
       <div class="header-row-spaced">
@@ -305,7 +305,7 @@ const mod = modules.find((m) => m.id === 11)!;
       <div class="control-row">
         <div class="flex-cell-wide">
           <div class="detail-label-spaced">Object temperature (°C)</div>
-          <input class="u-w-100pct" type="range" id="u-w-100pct" min="0" max="6000" value="300" step="10">
+          <input class="u-w-100pct" type="range" id="rad-temp-slider" min="0" max="6000" value="300" step="10">
         </div>
         <div class="inline-label" id="rad-temp-label">300°C</div>
       </div>
@@ -335,8 +335,8 @@ const mod = modules.find((m) => m.id === 11)!;
           </select>
         </div>
         <div class="field-cell">
-          <label class="muted-text-small" for="u-fs-13px">Length (metres)</label>
-          <input class="u-fs-13px" type="number" id="u-fs-13px" value="100" min="0.01" max="10000" step="1" oninput="calcExpansion()">
+          <label class="muted-text-small" for="texp-length">Length (metres)</label>
+          <input class="u-fs-13px" type="number" id="texp-length" value="100" min="0.01" max="10000" step="1" oninput="calcExpansion()">
         </div>
         <div class="field-cell">
           <label class="muted-text-small" for="texp-dt">Temperature rise (°C)</label>
@@ -606,11 +606,11 @@ function getTempData(c) {
   return tempData.find(d => c >= d.min && c < d.max) || tempData[tempData.length-1];
 }
 function setTemp(val) {
-  document.getElementById('u-flex-1').value = Math.max(-273, Math.min(5778, val));
+  document.getElementById('temp-slider').value = Math.max(-273, Math.min(5778, val));
   updateTemp();
 }
 function updateTemp() {
-  const c = parseInt(document.getElementById('u-flex-1').value);
+  const c = parseInt(document.getElementById('temp-slider').value);
   const f = Math.round(c * 9/5 + 32);
   const k = (c + 273.15).toFixed(2);
   document.getElementById('temp-c').textContent = c + '°C';
@@ -621,7 +621,7 @@ function updateTemp() {
   document.getElementById('temp-name').style.color = d.col;
   document.getElementById('muted-copy-large').textContent = d.desc;
 }
-document.getElementById('u-flex-1').addEventListener('input', updateTemp);
+document.getElementById('temp-slider').addEventListener('input', updateTemp);
 
 /* ── Part C: Converter ── */
 function doConvert() {
@@ -643,7 +643,7 @@ function doConvert() {
 
 /* ── Part G: Radiation slider ── */
 function updateRadiation() {
-  const c = parseInt(document.getElementById('u-w-100pct').value);
+  const c = parseInt(document.getElementById('rad-temp-slider').value);
   const k = c + 273.15;
   document.getElementById('rad-temp-label').textContent = c.toLocaleString() + '°C';
   // Stefan-Boltzmann: P = σT⁴, σ = 5.67e-8 W/m²K⁴
@@ -667,12 +667,12 @@ function updateRadiation() {
     ratio + '× the heat radiated by a human body (37°C). ' + colourNote + '<br>' +
     '<span style="font-size:11px; color:var(--color-text-secondary);">Formula: P = σT⁴ where σ = 5.67 × 10⁻⁸ W/m²K⁴. T must be in Kelvin (' + k.toFixed(0) + ' K here).</span>';
 }
-document.getElementById('u-w-100pct').addEventListener('input', updateRadiation);
+document.getElementById('rad-temp-slider').addEventListener('input', updateRadiation);
 
 /* ── Part H: Thermal expansion ── */
 function calcExpansion() {
   const alpha = parseFloat(document.getElementById('texp-mat').value);
-  const L = parseFloat(document.getElementById('u-fs-13px').value);
+  const L = parseFloat(document.getElementById('texp-length').value);
   const dT = parseFloat(document.getElementById('texp-dt').value);
   if (isNaN(L) || isNaN(dT) || L <= 0) return;
   const dL = alpha * L * dT; // metres

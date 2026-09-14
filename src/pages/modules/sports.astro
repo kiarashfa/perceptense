@@ -350,7 +350,7 @@ const mod = modules.find((m) => m.id === 41)!;
       </div>
 
       <div class="clabel gap-above-lg">Press intensity comparison — PPDA (lower = more aggressive press)</div>
-      <div class="u-mt-sm" id="u-mt-8px"></div>
+      <div class="u-mt-sm" id="ppda-chart"></div>
       <p class="data-note">PPDA figures are approximate seasonal averages. Sources: StatsBomb, Understat 2019–23.</p>
     </div>
 
@@ -392,8 +392,8 @@ const mod = modules.find((m) => m.id === 41)!;
       <div class="calc-wrap">
         <div class="calc-row">
           <div>
-            <label for="u-w-100pct">Distance from goal (metres)</label>
-            <input class="u-w-100pct" type="number" id="u-w-100pct" min="3" max="40" value="18">
+            <label for="xg-distance">Distance from goal (metres)</label>
+            <input class="u-w-100pct" type="number" id="xg-distance" min="3" max="40" value="18">
           </div>
           <div>
             <label for="xg-angle">Shooting angle (degrees from centre, 0=straight-on, 45=wide)</label>
@@ -956,12 +956,12 @@ const mod = modules.find((m) => m.id === 41)!;
       { name: 'Atletico Madrid', val: 15.2, col: '#D97706' },
       { name: 'Burnley 2023', val: 18.7, col: '#7C3AED' },
     ];
-    const ppdaEl = document.getElementById('u-mt-8px');
+    const ppdaEl = document.getElementById('ppda-chart');
     ppdaEl.innerHTML = ppdaData.map(d => barRow(d.name, d.val, 20, d.col, '')).join('');
 
     // ─── xG calculator ───
     window.calcXG = function() {
-      const dist = parseFloat(document.getElementById('u-w-100pct').value);
+      const dist = parseFloat(document.getElementById('xg-distance').value);
       const angle = parseFloat(document.getElementById('xg-angle').value);
       const type = document.getElementById('xg-type').value;
       if (isNaN(dist) || isNaN(angle) || dist < 3 || dist > 40 || angle < 0 || angle > 70) {
