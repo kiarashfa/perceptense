@@ -30,7 +30,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">The four great theories — explore each</p>
     <div class="button-row-compact" id="theory-btns"></div>
-    <div class="explorer-panel" id="theory-panel"><span class="physics-text-2">Select a theory above.</span></div>
+    <div class="explorer-panel" id="theory-panel"><span class="explorer-placeholder">Select a theory above.</span></div>
   </div>
 
   <!-- Units overview card -->
@@ -42,7 +42,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- ═══════════ PART B ═══════════ -->
   <h2 class="sec" id="part-b-classical-mechanics-the-physics-of-everyday-motion">Part B · classical mechanics — the physics of everyday motion</h2>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="card">
       <p class="clabel">Newton's three laws</p>
       <p class="cnote u-fs-13px">Newton's first law (inertia) says a body continues in uniform motion unless acted on by a force — the punch-line being that "rest" and "constant velocity" are physically identical, a Galilean insight Newton codified. The second law, F = ma, is the workhorse: it tells you that force is what causes acceleration, not velocity. Crucially, F and a are vectors — direction matters. The third law (action-reaction) is frequently misunderstood: if you push a wall, the wall pushes back on you with equal force, but on a different object, so the forces don't cancel. That's why you accelerate away from the wall when you push off.</p>
@@ -68,7 +68,7 @@ const mod = modules.find((m) => m.id === 43)!;
     <p class="cnote u-fs-13px">Newton's law of universal gravitation (1687) says every mass attracts every other mass with a force proportional to the product of their masses and inversely proportional to the square of the distance between them. It works brilliantly for apples, moons, and space probes — but not for Mercury. Mercury's orbit precesses 43 arcseconds per century more than Newton predicts. Einstein's general relativity (1915) gets it exactly right, because gravity is not a force in GR — it is the curvature of spacetime caused by mass-energy. The escape velocity from Earth is 11.2 km/s; from a neutron star it's a significant fraction of the speed of light; from a black hole's event horizon, it exceeds it.</p>
   </div>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="card">
       <p class="clabel">Waves and oscillations</p>
       <p class="cnote u-fs-13px">Waves transfer energy without transferring matter. The key properties are frequency (f), wavelength (λ), and wave speed (v = fλ). Resonance — when an external force drives a system at its natural frequency — is both enormously useful (musical instruments, MRI machines) and dangerous: the Tacoma Narrows Bridge collapsed in 1940 because wind-induced resonance matched the bridge's natural frequency. The Doppler effect explains why a passing ambulance changes pitch: the source is moving relative to the medium, compressing wavefronts ahead and stretching them behind. The same effect is used to measure the recession velocity of distant galaxies via redshift.</p>
@@ -176,7 +176,7 @@ const mod = modules.find((m) => m.id === 43)!;
   </div>
 </div>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="card">
       <p class="clabel">Special relativity — the key results</p>
       <p class="cnote u-fs-13px">Time dilation: a moving clock runs slow by factor γ = 1/√(1−v²/c²). At 99% of c, γ ≈ 7, so one year passes on the ship while 7 pass at home. This is not an illusion — muons created in the upper atmosphere at 0.998c reach the ground despite their lifetime being only 2.2 microseconds in their own frame. Length contraction: a moving object is shortened in the direction of travel. Mass-energy equivalence: E = mc². The 'c²' factor (≈ 9 × 10¹⁶) explains why a tiny mass converts to enormous energy — the Hiroshima bomb released energy from converting about 700mg of matter into radiation.</p>
@@ -218,7 +218,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- ═══════════ PART E ═══════════ -->
   <div class="sec-quantum">Part E · the quantum revolution — why classical physics failed</div>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="qcard">
       <p class="clabel">The ultraviolet catastrophe</p>
       <p class="cnote u-fs-13px">Classical physics predicted that a hot object in thermal equilibrium should radiate infinite energy — specifically, that radiated power should increase without limit as wavelength decreases. This was not a small discrepancy; it predicted that everything around you at room temperature should be bathing you in lethal ultraviolet and X-ray radiation, constantly. In 1900, Planck fixed this by assuming that energy is emitted only in discrete packets (quanta) of size E = hf, where h = 6.626 × 10⁻³⁴ J·s. He described this as "an act of desperation" — he didn't believe the quantisation was real. Einstein did.</p>
@@ -272,7 +272,7 @@ const mod = modules.find((m) => m.id === 43)!;
     </div>
   </div>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="qcard">
       <p class="clabel">The Schrödinger equation</p>
       <p class="cnote u-fs-13px">The Schrödinger equation is quantum mechanics' equation of motion. Given the wavefunction now, it tells you the wavefunction at any future time — perfectly deterministically. This surprises most people: quantum mechanics is deterministic about the wavefunction, but the wavefunction only gives probabilities for measurement outcomes. The randomness enters not in the time evolution but in the measurement itself. A particle in a box (infinite square well) is the simplest exact solution: the allowed energies are E_n = n²π²ℏ²/(2mL²), quantised naturally because only standing waves fit inside the box — just like Bohr's condition, but now derived rigorously.</p>
@@ -314,7 +314,7 @@ const mod = modules.find((m) => m.id === 43)!;
       <button onclick="setSlitMode('which')">Detector on (which-path known)</button>
       <button onclick="setSlitMode('single')">Only one slit open</button>
     </div>
-    <p class="cnote cnote-style-2">With both slits open and no detector, individual particles build up an interference pattern — as if each particle goes through both slits simultaneously. Place a detector to determine which slit, and the interference pattern vanishes. This is the core mystery of quantum mechanics.</p>
+    <p class="cnote cnote-spaced">With both slits open and no detector, individual particles build up an interference pattern — as if each particle goes through both slits simultaneously. Place a detector to determine which slit, and the interference pattern vanishes. This is the core mystery of quantum mechanics.</p>
   </div>
 
   <!-- Quantum weirdness multi-card -->
@@ -327,7 +327,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- Entanglement distribution bar -->
   <div class="card u-mb-md">
     <p class="clabel">Bell inequality violations — experimental results summary</p>
-    <p class="physics-text-3">The Bell parameter S: classical (local hidden variable) theories require S ≤ 2. Quantum mechanics predicts S ≤ 2√2 ≈ 2.83. Experimental results consistently find S > 2.</p>
+    <p class="card-intro">The Bell parameter S: classical (local hidden variable) theories require S ≤ 2. Quantum mechanics predicts S ≤ 2√2 ≈ 2.83. Experimental results consistently find S > 2.</p>
     <div id="bell-bars"></div>
     <p class="cnote">The Aspect et al. (1982), Hensen et al. (2015, loophole-free), and subsequent experiments all confirm quantum mechanics and rule out local hidden variable theories. The universe is genuinely non-local at the quantum level.</p>
   </div>
@@ -338,7 +338,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- Comparison scale: interpretations -->
   <div class="card u-mb-md">
     <p class="clabel">Interpretations compared — on key dimensions</p>
-    <p class="physics-text-3">Where each major interpretation falls on contested questions</p>
+    <p class="card-intro">Where each major interpretation falls on contested questions</p>
 
     <p class="clabel u-mt-md">Wavefunction collapse — real or not?</p>
     <div class="cscale-axis"><span>Collapse is physical</span><span>No collapse</span></div>
@@ -353,7 +353,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Interpretations — explore in depth</p>
     <div class="button-row-compact" id="interp-btns"></div>
-    <div class="explorer-panel" id="interp-panel"><span class="physics-text-2">Select an interpretation above.</span></div>
+    <div class="explorer-panel" id="interp-panel"><span class="explorer-placeholder">Select an interpretation above.</span></div>
   </div>
 
   <!-- ═══════════ PART I ═══════════ -->
@@ -366,7 +366,7 @@ const mod = modules.find((m) => m.id === 43)!;
     <div class="elem-detail" id="sm-detail"></div>
   </div>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="qcard">
       <p class="clabel">From QM to quantum field theory</p>
       <p class="cnote u-fs-13px">Quantum mechanics describes particles. Relativity requires that nothing propagates faster than light, including the interactions between particles. When you try to combine non-relativistic quantum mechanics with special relativity, you immediately encounter inconsistencies — the number of particles isn't conserved (particles can be created and destroyed), and you need to allow for anti-particles. Quantum field theory (QFT) resolves this by promoting fields (like the electromagnetic field) to be the fundamental objects, and particles are excitations of those fields. An electron is a ripple in the electron field that pervades all of space. The photon is a ripple in the electromagnetic field. This is why QFT is inherently multi-particle and handles creation/annihilation naturally.</p>
@@ -392,7 +392,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Quantum technologies — explore applications</p>
     <div class="button-row-compact" id="qtech-btns"></div>
-    <div class="explorer-panel" id="qtech-panel"><span class="physics-text-2">Select a technology above.</span></div>
+    <div class="explorer-panel" id="qtech-panel"><span class="explorer-placeholder">Select a technology above.</span></div>
   </div>
 
   <!-- Quantum computing comparison scale -->
@@ -406,7 +406,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- ═══════════ PART K ═══════════ -->
   <div class="sec-quantum">Part K · the open frontiers of quantum physics</div>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="qcard">
       <p class="clabel">Quantum gravity — the hardest problem</p>
       <p class="cnote u-fs-13px">General relativity and quantum mechanics are each extraordinarily well confirmed. They are also mutually inconsistent. GR treats spacetime as a smooth, continuous, classical field. QM requires all fields to be quantised and subject to uncertainty. At the Planck scale (10⁻³⁵ m, 10⁻⁴³ s), both theories are needed simultaneously, and both break down. String theory proposes replacing point particles with 1D strings, predicting a spin-2 graviton and requiring 10 or 11 dimensions. Loop quantum gravity quantises spacetime itself, predicting space is discrete at the Planck scale. Neither theory yet makes new predictions that have been experimentally tested. This is the dominant unsolved problem in fundamental physics.</p>
@@ -428,7 +428,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <!-- ═══════════ PART L ═══════════ -->
   <h2 class="sec" id="part-l-astrophysics-and-cosmology-physics-at-the-largest-scales">Part L · astrophysics and cosmology — physics at the largest scales</h2>
 
-  <div class="cgrid cgrid-style-2">
+  <div class="cgrid cgrid-wide">
     <div class="card">
       <p class="clabel">The Big Bang — evidence, not inference</p>
       <p class="cnote u-fs-13px">The Big Bang is supported by three independent observational pillars. (1) Hubble expansion: all distant galaxies are receding, with velocity proportional to distance — run time backward and everything converges. (2) Cosmic Microwave Background: the universe was once opaque plasma; when it cooled enough for atoms to form (380,000 years post-Bang), photons were released. We detect them today as the CMB, at 2.725 K, perfectly matching predictions. (3) Big Bang nucleosynthesis: the light elements (H, He, Li) were forged in the first few minutes in exactly the ratios we observe — 75% hydrogen, 25% helium by mass. No stellar process can explain this ratio from scratch.</p>
@@ -450,7 +450,7 @@ const mod = modules.find((m) => m.id === 43)!;
   <div class="card u-mb-md">
     <p class="clabel">Fate of the universe — explore the scenarios</p>
     <div class="button-row-compact" id="fate-btns"></div>
-    <div class="explorer-panel" id="fate-panel"><span class="physics-text-2">Select a scenario above.</span></div>
+    <div class="explorer-panel" id="fate-panel"><span class="explorer-placeholder">Select a scenario above.</span></div>
   </div>
 
   <!-- Cosmology distribution bar -->

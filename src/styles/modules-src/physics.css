@@ -165,12 +165,12 @@
 
 /* === Module-specific extracted styles === */
 
-.physics-text-2 {
+.explorer-placeholder {
   font-size:13px;
   color:var(--color-text-secondary);
 }
 
-.cgrid-style-2 {
+.cgrid-wide {
   grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
   margin-bottom:10px;
 }
@@ -205,7 +205,7 @@
   flex-wrap:wrap;
 }
 
-.cnote-style-2 {
+.cnote-spaced {
   margin-top:6px;
 }
 
@@ -213,7 +213,7 @@
   grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
 }
 
-.physics-text-3 {
+.card-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 8px;

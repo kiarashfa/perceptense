@@ -124,16 +124,16 @@
   background:#e1f5ee;
 }
 
-.bb-style-2 {
+.bb-confucianism {
   width:75%;
   background:#eeedfe;
 }
 
-.bv-style-2 {
+.bv-confucianism {
   color:#3c3489;
 }
 
-.bb-style-3 {
+.bb-shinto {
   width:35%;
   background:#faeeda;
 }
@@ -143,27 +143,27 @@
   background:#3C3489;
 }
 
-.cscale-dot-style-2 {
+.cscale-dot-shinto {
   left:30%;
   background:#633806;
 }
 
-.cscale-dot-style-3 {
+.cscale-dot-taoism {
   left:55%;
   background:#085041;
 }
 
-.cscale-dot-style-4 {
+.cscale-dot-buddhism {
   left:70%;
   background:#A0845C;
 }
 
-.cscale-dot-style-5 {
+.cscale-dot-protestantism {
   left:85%;
   background:#27500a;
 }
 
-.religions-media-2 {
+.science-models-diagram {
   width:100%;
   max-width:640px;
   display:block;

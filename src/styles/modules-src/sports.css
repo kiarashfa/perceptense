@@ -197,21 +197,21 @@
 
 /* === Module-specific extracted styles === */
 
-.sports-text-2 {
+.overview-lede {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
   margin:0 0 14px;
 }
 
-.sports-text-3 {
+.body-paragraph {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
   margin:0 0 10px;
 }
 
-.sports-text-4 {
+.body-paragraph-last {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
@@ -222,13 +222,13 @@
   margin:10px 0;
 }
 
-.sports-text-5 {
+.chart-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin:6px 0 0;
 }
 
-.sports-text-6 {
+.body-paragraph-spaced {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
@@ -239,27 +239,27 @@
   left:5%;
 }
 
-.cscale-dot-style-2 {
+.cscale-dot-tour-de-france {
   left:12%;
 }
 
-.cscale-dot-style-3 {
+.cscale-dot-football-midfield {
   left:40%;
 }
 
-.cscale-dot-style-4 {
+.cscale-dot-nba {
   left:55%;
 }
 
-.cscale-dot-style-5 {
+.cscale-dot-swimmer {
   left:65%;
 }
 
-.cscale-dot-style-6 {
+.cscale-dot-sprint {
   left:93%;
 }
 
-.cscale-dot-style-7 {
+.cscale-dot-powerlifting {
   left:98%;
 }
 
@@ -267,18 +267,18 @@
   max-height:320px;
 }
 
-.sports-text-7 {
+.body-paragraph-after {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
   margin:10px 0 0;
 }
 
-.clabel-style-2 {
+.clabel-spaced {
   margin-top:14px;
 }
 
-.sports-text-8 {
+.data-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin:4px 0 0;
@@ -297,13 +297,13 @@
   align-self:flex-end;
 }
 
-.sports-text-9 {
+.chart-intro {
   font-size:13px;
   color:var(--color-text-secondary);
   margin:0 0 8px;
 }
 
-.sports-text-10 {
+.revenue-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin:4px 0 10px;
