@@ -154,7 +154,7 @@ const mod = modules.find((m) => m.id === 15)!;
         <text x="356" y="62" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle" font-family="system-ui">3.4</text>
         <!-- F at 4.0 → 1.0 → x = 500 -->
         <line x1="498" y1="16" x2="498" y2="40" stroke="var(--color-text-primary)" stroke-width="1.5"/>
-        <text x="498" y="50" font-size="11" fill="#A32D2D" text-anchor="middle" font-family="monospace" font-weight="600">F</text>
+        <text x="498" y="50" font-size="11" class="en-scale-high" text-anchor="middle" font-family="monospace" font-weight="600">F</text>
         <text x="498" y="62" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle" font-family="system-ui">4.0</text>
       </svg>
       <div class="note-panel">
@@ -197,7 +197,7 @@ const mod = modules.find((m) => m.id === 15)!;
         <rect x="2" y="2" width="88" height="52" rx="7" fill="#F1EFE8" stroke="#C8C4B0" stroke-width="0.8"/>
         <text x="46" y="20" font-size="9" fill="#444441" text-anchor="middle" font-family="system-ui" font-weight="600">ALKANE</text>
         <text x="46" y="34" font-size="12" fill="#444441" text-anchor="middle" font-family="monospace" font-weight="700">C–C</text>
-        <text x="46" y="48" font-size="8" fill="#888780" text-anchor="middle" font-family="system-ui">no group</text>
+        <text x="46" y="48" font-size="8" fill="#444441" text-anchor="middle" font-family="system-ui">no group</text>
         <!-- Alcohol -->
         <rect x="96" y="2" width="88" height="52" rx="7" fill="#E1F5EE" stroke="#97C459" stroke-width="0.8"/>
         <text x="140" y="20" font-size="9" fill="#085041" text-anchor="middle" font-family="system-ui" font-weight="600">ALCOHOL</text>
@@ -391,11 +391,11 @@ const mod = modules.find((m) => m.id === 15)!;
       <div class="panel-title">pH 0–14: from battery acid to drain cleaner</div>
       <div class="ph-scale">
         <div class="inline-group"><div class="ph-num ph-num-red">0</div><div class="ph-bar-battery-acid"><span class="ph-bar-text ph-bar-text-blush">Battery acid, stomach acid (pH ~1.5)</span></div></div>
-        <div class="inline-group"><div class="ph-num ph-num-red">2</div><div class="ph-bar-lemon"><span class="ph-bar-text ph-bar-text-white">Lemon juice (~2.2), vinegar (~2.5)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-red">2</div><div class="ph-bar-lemon"><span class="ph-bar-text ph-bar-text-dark2">Lemon juice (~2.2), vinegar (~2.5)</span></div></div>
         <div class="inline-group"><div class="ph-num ph-num-brown">4</div><div class="ph-bar-tomato"><span class="ph-bar-text ph-bar-text-dark">Tomato juice (~4), coffee (~5)</span></div></div>
-        <div class="inline-group"><div class="ph-num ph-num-green">7</div><div class="ph-bar-water"><span class="ph-bar-text ph-bar-text-white">Pure water — neutral</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-green">7</div><div class="ph-bar-water"><span class="ph-bar-text ph-bar-text-dark2">Pure water — neutral</span></div></div>
         <div class="inline-group"><div class="ph-num ph-num-green">7.4</div><div class="ph-bar-blood"><span class="ph-bar-text ph-bar-text-deep-green">Human blood — must stay here</span></div></div>
-        <div class="inline-group"><div class="ph-num ph-num-blue">9</div><div class="ph-bar-baking-soda"><span class="ph-bar-text ph-bar-text-white">Baking soda (~8.3), seawater (~8.1)</span></div></div>
+        <div class="inline-group"><div class="ph-num ph-num-blue">9</div><div class="ph-bar-baking-soda"><span class="ph-bar-text ph-bar-text-dark2">Baking soda (~8.3), seawater (~8.1)</span></div></div>
         <div class="inline-group"><div class="ph-num ph-num-blue">11</div><div class="ph-bar-ammonia"><span class="ph-bar-text ph-bar-text-white">Ammonia (~11), bleach (~12)</span></div></div>
         <div class="inline-group"><div class="ph-num ph-num-navy">14</div><div class="ph-bar-drain-cleaner"><span class="ph-bar-text ph-bar-text-pale-blue">Drain cleaner, NaOH</span></div></div>
       </div>
@@ -514,57 +514,57 @@ const mod = modules.find((m) => m.id === 15)!;
 
         <!-- Methane -161°C -->
         <rect x="86" y="145" width="38" height="68" rx="3" fill="#C8C4B0"/>
-        <text x="105" y="158" font-size="8" fill="var(--color-text-secondary)" text-anchor="middle" font-family="system-ui">CH₄</text>
-        <text x="105" y="168" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">alkane</text>
-        <text x="105" y="176" font-size="8" fill="var(--color-text-secondary)" text-anchor="middle" font-family="monospace">−161°C</text>
-        <text x="105" y="186" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:16</text>
+        <text x="105" y="158" font-size="8" fill="#444441" text-anchor="middle" font-family="system-ui">CH₄</text>
+        <text x="105" y="168" font-size="7" fill="#444441" text-anchor="middle" font-family="system-ui">alkane</text>
+        <text x="105" y="176" font-size="8" fill="#444441" text-anchor="middle" font-family="monospace">−161°C</text>
+        <text x="105" y="186" font-size="7" fill="#444441" text-anchor="middle" font-family="system-ui">MW:16</text>
 
         <!-- Diethyl ether -34→ wait. bp = 34.6°C. MW=74 -->
         <rect x="140" y="130" width="38" height="15" rx="3" fill="#E1F5EE" stroke="#97C459" stroke-width="0.5"/>
         <text x="159" y="140" font-size="8" fill="#085041" text-anchor="middle" font-family="system-ui">Ether</text>
-        <text x="159" y="150" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">R–O–R</text>
+        <text x="159" y="150" font-size="7" fill="#085041" text-anchor="middle" font-family="system-ui">R–O–R</text>
         <text x="159" y="160" font-size="8" fill="#085041" text-anchor="middle" font-family="monospace">35°C</text>
-        <text x="159" y="170" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:74</text>
+        <text x="159" y="170" font-size="7" fill="#085041" text-anchor="middle" font-family="system-ui">MW:74</text>
 
         <!-- Pentane (alkane) bp=36°C, MW=72 -->
         <rect x="194" y="130" width="38" height="15" rx="3" fill="#F1EFE8" stroke="#C8C4B0" stroke-width="0.5"/>
         <text x="213" y="140" font-size="8" fill="#444441" text-anchor="middle" font-family="system-ui">Pentane</text>
-        <text x="213" y="150" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">alkane</text>
+        <text x="213" y="150" font-size="7" fill="#444441" text-anchor="middle" font-family="system-ui">alkane</text>
         <text x="213" y="160" font-size="8" fill="#444441" text-anchor="middle" font-family="monospace">36°C</text>
-        <text x="213" y="170" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:72</text>
+        <text x="213" y="170" font-size="7" fill="#444441" text-anchor="middle" font-family="system-ui">MW:72</text>
 
         <!-- Butanone (ketone) bp=80°C, MW=72 -->
         <rect x="248" y="111" width="38" height="34" rx="3" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.5"/>
         <text x="267" y="122" font-size="8" fill="#633806" text-anchor="middle" font-family="system-ui">Butanone</text>
-        <text x="267" y="132" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">ketone</text>
+        <text x="267" y="132" font-size="7" fill="#633806" text-anchor="middle" font-family="system-ui">ketone</text>
         <text x="267" y="142" font-size="8" fill="#633806" text-anchor="middle" font-family="monospace">80°C</text>
-        <text x="267" y="152" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:72</text>
+        <text x="267" y="152" font-size="7" fill="#633806" text-anchor="middle" font-family="system-ui">MW:72</text>
 
         <!-- Ethanol bp=78°C, MW=46 -->
         <rect x="302" y="112" width="38" height="33" rx="3" fill="#E1F5EE" stroke="#97C459" stroke-width="0.5"/>
         <text x="321" y="123" font-size="8" fill="#085041" text-anchor="middle" font-family="system-ui">Ethanol</text>
-        <text x="321" y="133" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">alcohol</text>
+        <text x="321" y="133" font-size="7" fill="#085041" text-anchor="middle" font-family="system-ui">alcohol</text>
         <text x="321" y="143" font-size="8" fill="#085041" text-anchor="middle" font-family="monospace">78°C</text>
-        <text x="321" y="153" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:46</text>
+        <text x="321" y="153" font-size="7" fill="#085041" text-anchor="middle" font-family="system-ui">MW:46</text>
 
         <!-- Acetic acid bp=118°C, MW=60 -->
         <rect x="356" y="95" width="38" height="50" rx="3" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
         <text x="375" y="106" font-size="8" fill="#791F1F" text-anchor="middle" font-family="system-ui">AcOH</text>
-        <text x="375" y="116" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">acid</text>
+        <text x="375" y="116" font-size="7" fill="#791F1F" text-anchor="middle" font-family="system-ui">acid</text>
         <text x="375" y="126" font-size="8" fill="#791F1F" text-anchor="middle" font-family="monospace">118°C</text>
-        <text x="375" y="136" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:60</text>
+        <text x="375" y="136" font-size="7" fill="#791F1F" text-anchor="middle" font-family="system-ui">MW:60</text>
 
         <!-- Water bp=100°C, MW=18 -->
         <rect x="410" y="103" width="38" height="42" rx="3" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.5"/>
         <text x="429" y="114" font-size="8" fill="#0C447C" text-anchor="middle" font-family="system-ui">Water</text>
-        <text x="429" y="124" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">H₂O</text>
+        <text x="429" y="124" font-size="7" fill="#0C447C" text-anchor="middle" font-family="system-ui">H₂O</text>
         <text x="429" y="134" font-size="8" fill="#0C447C" text-anchor="middle" font-family="monospace">100°C</text>
-        <text x="429" y="144" font-size="7" fill="var(--color-text-tertiary)" text-anchor="middle" font-family="system-ui">MW:18 !</text>
+        <text x="429" y="144" font-size="7" fill="#0C447C" text-anchor="middle" font-family="system-ui">MW:18 !</text>
 
         <!-- annotation for water -->
         <path d="M429 100 Q460 80 480 75" stroke="#85B7EB" stroke-width="0.8" fill="none" stroke-dasharray="2,2"/>
-        <text x="482" y="75" font-size="9" fill="#0C447C" font-family="system-ui">Should boil at ~−80°C</text>
-        <text x="482" y="86" font-size="9" fill="#0C447C" font-family="system-ui">if not for H-bonds!</text>
+        <text x="482" y="75" font-size="9" class="water-annotation" font-family="system-ui">Should boil at ~−80°C</text>
+        <text x="482" y="86" font-size="9" class="water-annotation" font-family="system-ui">if not for H-bonds!</text>
       </svg>
       <div class="note-panel">
         Butanone (ketone, MW 72) and pentane (alkane, MW 72) have identical molecular weights yet boil 44°C apart — because the C=O group creates dipole-dipole attractions that pentane lacks. Water (MW 18) should boil around −80°C based on size alone; its actual boiling point of 100°C is entirely due to the network of hydrogen bonds each molecule forms.
