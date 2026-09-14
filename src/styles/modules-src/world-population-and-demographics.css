@@ -59,29 +59,9 @@
   color:#fff;
 }
 
-.tl-bar-style {
-  width:3%;
-  background:#C0DD97;
-}
-
-.tl-bar-one-billion {
-  width:12%;
-  background:#97C459;
-}
-
-.tl-bar-two-billion {
-  width:25%;
-  background:#639922;
-}
-
-.tl-bar-four-billion {
-  width:49%;
-  background:#3B6D11;
-}
-
-.tl-bar-six-billion {
-  width:73%;
-  background:#27500A;
+.tl-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .tl-bar-full-dark {
@@ -119,89 +99,14 @@
   color:var(--color-text-info);
 }
 
-.region-fill-style {
-  width:26.4%;
-  background:#3B6D11;
-}
-
-.region-fill-east-asia {
-  width:23.2%;
-  background:#27500A;
-}
-
-.region-fill-sub-saharan-africa {
-  width:15.9%;
-  background:#639922;
-}
-
-.region-fill-southeast-asia {
-  width:8.4%;
-  background:#97C459;
-}
-
-.region-fill-latin-america {
-  width:7.9%;
-  background:var(--accent);
-}
-
-.region-fill-europe {
-  width:7.4%;
-  background:#085041;
-}
-
-.region-fill-north-africa-me {
-  width:6.1%;
-  background:#ef9f27;
-}
-
-.region-fill-north-america {
-  width:4.7%;
-  background:#C0DD97;
+.region-fill-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .region-fill-top {
   width:98%;
   background:#27500A;
-}
-
-.region-fill-usa {
-  width:23%;
-  background:#3B6D11;
-}
-
-.region-fill-indonesia {
-  width:19%;
-  background:#639922;
-}
-
-.region-fill-pakistan {
-  width:17%;
-  background:#639922;
-}
-
-.region-fill-brazil {
-  width:14.5%;
-  background:#97C459;
-}
-
-.region-fill-nigeria {
-  width:13.5%;
-  background:#97C459;
-}
-
-.region-fill-bangladesh {
-  width:11%;
-  background:#C0DD97;
-}
-
-.region-fill-russia {
-  width:9.5%;
-  background:#C0DD97;
-}
-
-.region-fill-ethiopia {
-  width:8.6%;
-  background:#C0DD97;
 }
 
 .fertil-rate-green {
@@ -249,44 +154,9 @@
   margin:8px 0 0;
 }
 
-.life-fill-style {
-  width:96%;
-  background:#3B6D11;
-}
-
-.life-fill-germany {
-  width:93%;
-  background:#639922;
-}
-
-.life-fill-usa {
-  width:88%;
-  background:#97C459;
-}
-
-.life-fill-brazil {
-  width:80%;
-  background:#C0DD97;
-}
-
-.life-fill-india {
-  width:75%;
-  background:var(--accent);
-}
-
-.life-fill-global {
-  width:73%;
-  background:#0C447C;
-}
-
-.life-fill-nigeria {
-  width:63%;
-  background:#ef9f27;
-}
-
-.life-fill-chad {
-  width:57%;
-  background:#f09595;
+.life-fill-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .split-row {
@@ -406,80 +276,15 @@
   background:var(--color-background-secondary);
 }
 
-.mc-fill-style {
-  width:100%;
-  background:#0C447C;
-}
-
-.mc-fill-delhi {
-  width:97%;
-  background:#27500A;
-}
-
-.mc-fill-shanghai {
-  width:78%;
-  background:#3B6D11;
-}
-
-.mc-fill-dhaka {
-  width:70%;
-  background:#639922;
-}
-
-.mc-fill-sao-paulo {
-  width:68%;
-  background:#639922;
-}
-
-.mc-fill-mexico-city {
-  width:65%;
-  background:#97C459;
-}
-
-.mc-fill-cairo {
-  width:62%;
-  background:#97C459;
-}
-
-.mc-fill-mumbai {
-  width:59%;
-  background:#C0DD97;
-}
-
-.mc-fill-beijing {
-  width:57%;
-  background:#C0DD97;
-}
-
-.mc-fill-osaka {
-  width:54%;
-  background:#C0DD97;
+.mc-fill-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .projection-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin:0 0 12px;
-}
-
-.tl-bar-now {
-  width:79%;
-  background:var(--accent);
-}
-
-.tl-bar-medium-mid-century {
-  width:91%;
-  background:#3B6D11;
-}
-
-.tl-bar-low-century {
-  width:68%;
-  background:#85b7eb;
-}
-
-.tl-bar-medium-century {
-  width:100%;
-  background:#27500A;
 }
 
 .tl-bar-high-century {

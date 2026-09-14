@@ -43,11 +43,11 @@ const mod = modules.find((m) => m.id === 29)!;
     <!-- Growth timeline chart -->
     <div class="card u-mb-lg">
       <div class="panel-title">How fast did world population grow?</div>
-      <div class="track-row-tight"><span class="tl-label">Year 1 AD</span><div class="tl-bar tl-bar-style"><span class="bv text-green-800">300M</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">1800</span><div class="tl-bar tl-bar-one-billion"><span class="bv text-green-800">1B</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">1930</span><div class="tl-bar tl-bar-two-billion"><span class="bv text-white">2B</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">1975</span><div class="tl-bar tl-bar-four-billion"><span class="bv text-white">4B</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">2000</span><div class="tl-bar tl-bar-six-billion"><span class="bv text-white">6B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">Year 1 AD</span><div class="tl-bar tl-bar-data" style="--data-background: #C0DD97; --data-width: 3%"><span class="bv text-green-800">300M</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">1800</span><div class="tl-bar tl-bar-data" style="--data-background: #97C459; --data-width: 12%"><span class="bv text-green-800">1B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">1930</span><div class="tl-bar tl-bar-data" style="--data-background: #639922; --data-width: 25%"><span class="bv text-white">2B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">1975</span><div class="tl-bar tl-bar-data" style="--data-background: #3B6D11; --data-width: 49%"><span class="bv text-white">4B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">2000</span><div class="tl-bar tl-bar-data" style="--data-background: #27500A; --data-width: 73%"><span class="bv text-white">6B</span></div></div>
       <div class="track-row-tight"><span class="tl-label">2025</span><div class="tl-bar tl-bar-full-dark"><span class="bv text-white">8.2B</span></div></div>
       <p class="demographics-text">It took 130 years to go 1B → 2B. It took only 45 years to go 4B → 8B.</p>
     </div>
@@ -172,35 +172,35 @@ const mod = modules.find((m) => m.id === 29)!;
       <div class="block-title">Share of world population by region (2025)</div>
       <div class="data-row">
         <span class="region-label">South Asia</span>
-        <div class="track-tall"><div class="region-fill region-fill-style"><span class="bv text-white">26.4% · 2.17B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #3B6D11; --data-width: 26.4%"><span class="bv text-white">26.4% · 2.17B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">East Asia</span>
-        <div class="track-tall"><div class="region-fill region-fill-east-asia"><span class="bv text-white">23.2% · 1.90B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #27500A; --data-width: 23.2%"><span class="bv text-white">23.2% · 1.90B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">Sub-S. Africa</span>
-        <div class="track-tall"><div class="region-fill region-fill-sub-saharan-africa"><span class="bv text-white">15.9% · 1.30B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #639922; --data-width: 15.9%"><span class="bv text-white">15.9% · 1.30B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">SE Asia &amp; Pacific</span>
-        <div class="track-tall"><div class="region-fill region-fill-southeast-asia"><span class="bv text-green-800">8.4% · 0.69B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #97C459; --data-width: 8.4%"><span class="bv text-green-800">8.4% · 0.69B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">Latin America</span>
-        <div class="track-tall"><div class="region-fill region-fill-latin-america"><span class="bv text-white">7.9% · 0.65B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: var(--accent); --data-width: 7.9%"><span class="bv text-white">7.9% · 0.65B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">Europe</span>
-        <div class="track-tall"><div class="region-fill region-fill-europe"><span class="bv text-white">7.4% · 0.61B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #085041; --data-width: 7.4%"><span class="bv text-white">7.4% · 0.61B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">North Africa &amp; ME</span>
-        <div class="track-tall"><div class="region-fill region-fill-north-africa-me"><span class="bv text-white">6.1% · 0.50B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #ef9f27; --data-width: 6.1%"><span class="bv text-white">6.1% · 0.50B</span></div></div>
       </div>
       <div class="data-row">
         <span class="region-label">North America</span>
-        <div class="track-tall"><div class="region-fill region-fill-north-america"><span class="bv text-green-800">4.7% · 0.39B</span></div></div>
+        <div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #C0DD97; --data-width: 4.7%"><span class="bv text-green-800">4.7% · 0.39B</span></div></div>
       </div>
       <p class="demographics-text">South and East Asia alone account for nearly half of humanity. Europe plus North America combined = ~12%.</p>
     </div>
@@ -210,14 +210,14 @@ const mod = modules.find((m) => m.id === 29)!;
       <div class="block-title">Top 10 most populous countries (2025)</div>
       <div class="data-row"><span class="region-label u-w-130px">🇮🇳 India</span><div class="track-tall"><div class="region-fill tl-bar-full-dark"><span class="bv text-white">1.44B · #1</span></div></div></div>
       <div class="data-row"><span class="region-label u-w-130px">🇨🇳 China</span><div class="track-tall"><div class="region-fill region-fill-top"><span class="bv text-white">1.41B · #2</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇺🇸 USA</span><div class="track-tall"><div class="region-fill region-fill-usa"><span class="bv text-white">340M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇮🇩 Indonesia</span><div class="track-tall"><div class="region-fill region-fill-indonesia"><span class="bv text-white">278M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇵🇰 Pakistan</span><div class="track-tall"><div class="region-fill region-fill-pakistan"><span class="bv text-white">250M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇧🇷 Brazil</span><div class="track-tall"><div class="region-fill region-fill-brazil"><span class="bv text-green-800">216M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇳🇬 Nigeria</span><div class="track-tall"><div class="region-fill region-fill-nigeria"><span class="bv text-green-800">230M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇧🇩 Bangladesh</span><div class="track-tall"><div class="region-fill region-fill-bangladesh"><span class="bv text-green-800">175M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇷🇺 Russia</span><div class="track-tall"><div class="region-fill region-fill-russia"><span class="bv text-green-800">143M</span></div></div></div>
-      <div class="data-row"><span class="region-label u-w-130px">🇪🇹 Ethiopia</span><div class="track-tall"><div class="region-fill region-fill-ethiopia"><span class="bv text-green-800">130M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇺🇸 USA</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #3B6D11; --data-width: 23%"><span class="bv text-white">340M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇮🇩 Indonesia</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #639922; --data-width: 19%"><span class="bv text-white">278M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇵🇰 Pakistan</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #639922; --data-width: 17%"><span class="bv text-white">250M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇧🇷 Brazil</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #97C459; --data-width: 14.5%"><span class="bv text-green-800">216M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇳🇬 Nigeria</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #97C459; --data-width: 13.5%"><span class="bv text-green-800">230M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇧🇩 Bangladesh</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #C0DD97; --data-width: 11%"><span class="bv text-green-800">175M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇷🇺 Russia</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #C0DD97; --data-width: 9.5%"><span class="bv text-green-800">143M</span></div></div></div>
+      <div class="data-row"><span class="region-label u-w-130px">🇪🇹 Ethiopia</span><div class="track-tall"><div class="region-fill region-fill-data" style="--data-background: #C0DD97; --data-width: 8.6%"><span class="bv text-green-800">130M</span></div></div></div>
       <p class="demographics-text">India overtook China as the most populous country in 2023. Nigeria is growing so fast it may enter the top 3 by 2100.</p>
     </div>
 
@@ -307,14 +307,14 @@ const mod = modules.find((m) => m.id === 29)!;
       <div class="block-title">Life expectancy at birth — selected countries (2025)</div>
       <div class="data-row-compact"><span class="scale-name">Japan</span><div class="track-plain"><div class="life-fill tl-bar-full-dark"><span class="bv text-white">84 yrs</span></div></div></div>
       <div class="data-row-compact"><span class="scale-name">Switzerland</span><div class="track-plain"><div class="life-fill region-fill-top"><span class="bv text-white">83.8 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">Australia</span><div class="track-plain"><div class="life-fill life-fill-style"><span class="bv text-white">83.3 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">Germany</span><div class="track-plain"><div class="life-fill life-fill-germany"><span class="bv text-white">81.4 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">USA</span><div class="track-plain"><div class="life-fill life-fill-usa"><span class="bv text-green-800">77.5 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">Brazil</span><div class="track-plain"><div class="life-fill life-fill-brazil"><span class="bv text-green-800">74 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">India</span><div class="track-plain"><div class="life-fill life-fill-india"><span class="bv text-white">70 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">Global avg.</span><div class="track-plain"><div class="life-fill life-fill-global"><span class="bv text-white">~73 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">Nigeria</span><div class="track-plain"><div class="life-fill life-fill-nigeria"><span class="bv text-white">55 yrs</span></div></div></div>
-      <div class="data-row-compact"><span class="scale-name">Chad</span><div class="track-plain"><div class="life-fill life-fill-chad"><span class="bv text-red-900">53 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">Australia</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #3B6D11; --data-width: 96%"><span class="bv text-white">83.3 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">Germany</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #639922; --data-width: 93%"><span class="bv text-white">81.4 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">USA</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #97C459; --data-width: 88%"><span class="bv text-green-800">77.5 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">Brazil</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #C0DD97; --data-width: 80%"><span class="bv text-green-800">74 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">India</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: var(--accent); --data-width: 75%"><span class="bv text-white">70 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">Global avg.</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #0C447C; --data-width: 73%"><span class="bv text-white">~73 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">Nigeria</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #ef9f27; --data-width: 63%"><span class="bv text-white">55 yrs</span></div></div></div>
+      <div class="data-row-compact"><span class="scale-name">Chad</span><div class="track-plain"><div class="life-fill life-fill-data" style="--data-background: #f09595; --data-width: 57%"><span class="bv text-red-900">53 yrs</span></div></div></div>
       <p class="demographics-text">In 1900 global average life expectancy was ~32 years. A 40-year gain in a single century is one of humanity's greatest achievements.</p>
     </div>
 
@@ -384,16 +384,16 @@ const mod = modules.find((m) => m.id === 29)!;
     <!-- Megacities -->
     <div class="card u-mb-lg">
       <div class="block-title">Largest megacities (2025, metro population)</div>
-      <div class="data-row-compact"><span class="mc-rank">1</span><span class="row-label">Tokyo, Japan</span><div class="track-medium"><div class="mc-fill mc-fill-style"><span class="bv text-white">37M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">2</span><span class="row-label">Delhi, India</span><div class="track-medium"><div class="mc-fill mc-fill-delhi"><span class="bv text-white">36M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">3</span><span class="row-label">Shanghai, China</span><div class="track-medium"><div class="mc-fill mc-fill-shanghai"><span class="bv text-white">29M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">4</span><span class="row-label">Dhaka, Bangladesh</span><div class="track-medium"><div class="mc-fill mc-fill-dhaka"><span class="bv text-white">26M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">5</span><span class="row-label">São Paulo, Brazil</span><div class="track-medium"><div class="mc-fill mc-fill-sao-paulo"><span class="bv text-white">25M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">6</span><span class="row-label">Mexico City</span><div class="track-medium"><div class="mc-fill mc-fill-mexico-city"><span class="bv text-green-800">22M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">7</span><span class="row-label">Cairo, Egypt</span><div class="track-medium"><div class="mc-fill mc-fill-cairo"><span class="bv text-green-800">22M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">8</span><span class="row-label">Mumbai, India</span><div class="track-medium"><div class="mc-fill mc-fill-mumbai"><span class="bv text-green-800">21M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">9</span><span class="row-label">Beijing, China</span><div class="track-medium"><div class="mc-fill mc-fill-beijing"><span class="bv text-green-800">21M</span></div></div></div>
-      <div class="data-row-compact"><span class="mc-rank">10</span><span class="row-label">Osaka, Japan</span><div class="track-medium"><div class="mc-fill mc-fill-osaka"><span class="bv text-green-800">19M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">1</span><span class="row-label">Tokyo, Japan</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #0C447C; --data-width: 100%"><span class="bv text-white">37M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">2</span><span class="row-label">Delhi, India</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #27500A; --data-width: 97%"><span class="bv text-white">36M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">3</span><span class="row-label">Shanghai, China</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #3B6D11; --data-width: 78%"><span class="bv text-white">29M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">4</span><span class="row-label">Dhaka, Bangladesh</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #639922; --data-width: 70%"><span class="bv text-white">26M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">5</span><span class="row-label">São Paulo, Brazil</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #639922; --data-width: 68%"><span class="bv text-white">25M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">6</span><span class="row-label">Mexico City</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #97C459; --data-width: 65%"><span class="bv text-green-800">22M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">7</span><span class="row-label">Cairo, Egypt</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #97C459; --data-width: 62%"><span class="bv text-green-800">22M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">8</span><span class="row-label">Mumbai, India</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #C0DD97; --data-width: 59%"><span class="bv text-green-800">21M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">9</span><span class="row-label">Beijing, China</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #C0DD97; --data-width: 57%"><span class="bv text-green-800">21M</span></div></div></div>
+      <div class="data-row-compact"><span class="mc-rank">10</span><span class="row-label">Osaka, Japan</span><div class="track-medium"><div class="mc-fill mc-fill-data" style="--data-background: #C0DD97; --data-width: 54%"><span class="bv text-green-800">19M</span></div></div></div>
       <p class="demographics-text">A "megacity" = city of 10M+. There are now 35 megacities globally, up from just 2 in 1950 (New York and Tokyo).</p>
     </div>
 
@@ -424,10 +424,10 @@ const mod = modules.find((m) => m.id === 29)!;
     <div class="card u-mb-lg">
       <div class="inline-card-title">UN population projections to 2100</div>
       <p class="projection-intro">Three scenarios: low, medium, and high fertility assumptions.</p>
-      <div class="track-row-tight"><span class="tl-label">2025 (now)</span><div class="tl-bar tl-bar-now"><span class="bv text-white">8.2B</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">2050 (medium)</span><div class="tl-bar tl-bar-medium-mid-century"><span class="bv text-white">9.7B</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">2100 (low)</span><div class="tl-bar tl-bar-low-century"><span class="bv text-blue-900">7.3B</span></div></div>
-      <div class="track-row-tight"><span class="tl-label">2100 (medium)</span><div class="tl-bar tl-bar-medium-century"><span class="bv text-white">10.4B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">2025 (now)</span><div class="tl-bar tl-bar-data" style="--data-background: var(--accent); --data-width: 79%"><span class="bv text-white">8.2B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">2050 (medium)</span><div class="tl-bar tl-bar-data" style="--data-background: #3B6D11; --data-width: 91%"><span class="bv text-white">9.7B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">2100 (low)</span><div class="tl-bar tl-bar-data" style="--data-background: #85b7eb; --data-width: 68%"><span class="bv text-blue-900">7.3B</span></div></div>
+      <div class="track-row-tight"><span class="tl-label">2100 (medium)</span><div class="tl-bar tl-bar-data" style="--data-background: #27500A; --data-width: 100%"><span class="bv text-white">10.4B</span></div></div>
       <div class="track-row-tight"><span class="tl-label">2100 (high)</span><div class="tl-bar tl-bar-high-century"><span class="bv text-white">15.8B ↑</span></div></div>
       <p class="demographics-text">The spread between low and high scenarios is enormous — everything hinges on whether fertility in Sub-Saharan Africa falls quickly or slowly.</p>
     </div>

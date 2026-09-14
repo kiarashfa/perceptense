@@ -831,34 +831,9 @@
   color:var(--color-text-tertiary);
 }
 
-.ps-bar-style {
-  width:100%;
-  background:#EEEDFE;
-}
-
-.ps-bar-warhol {
-  width:43%;
-  background:#FCEBEB;
-}
-
-.ps-bar-picasso {
-  width:40%;
-  background:#FAEEDA;
-}
-
-.ps-bar-de-kooning {
-  width:34%;
-  background:#E6F1FB;
-}
-
-.ps-bar-gauguin {
-  width:33%;
-  background:#EAF3DE;
-}
-
-.ps-bar-rothko {
-  width:20%;
-  background:#FBEAF0;
+.ps-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .scalebuttons {

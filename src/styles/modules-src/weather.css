@@ -343,35 +343,15 @@
   font-size:14px;
 }
 
-.comfort-seg-style {
-  width:12%;
-  background:#0C447C;
-}
-
-.comfort-seg-cool {
-  width:15%;
-  background:#085041;
-}
-
-.comfort-seg-mild {
-  width:18%;
-  background:var(--accent);
+.comfort-seg-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .comfort-seg-sticky {
   width:18%;
   background:#EF9F27;
   color:#4A2800;
-}
-
-.comfort-seg-oppressive {
-  width:18%;
-  background:#D85A30;
-}
-
-.comfort-seg-dangerous {
-  width:19%;
-  background:#791F1F;
 }
 
 .dew-point-scale {

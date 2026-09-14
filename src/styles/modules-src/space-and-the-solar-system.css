@@ -700,24 +700,9 @@
   background:#878BE8;
 }
 
-.mag-bar-style {
-  background:var(--accent);
-  width:72%;
-}
-
-.mag-bar-galactic-gas {
-  background:#5DCAA5;
-  width:18%;
-}
-
-.mag-bar-stars {
-  background:#EF9F27;
-  width:8%;
-}
-
-.mag-bar-everything-else {
-  background:#D85A30;
-  width:2%;
+.mag-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .spacex-intro-card {

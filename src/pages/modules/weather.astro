@@ -328,12 +328,12 @@ const mod = modules.find((m) => m.id === 25)!;
         Relative humidity is misleading — 90% humidity at 5°C feels fine; 60% humidity at 35°C feels oppressive. The <strong>dew point temperature</strong> is a better measure of how muggy the air actually feels, because it's an absolute measure of moisture content and doesn't change with temperature.
       </div>
       <div class="comfort-bar u-mb-xs">
-        <div class="comfort-seg comfort-seg-style">Dry</div>
-        <div class="comfort-seg comfort-seg-cool">Comfort</div>
-        <div class="comfort-seg comfort-seg-mild">Comfort</div>
+        <div class="comfort-seg comfort-seg-data" style="--data-background: #0C447C; --data-width: 12%">Dry</div>
+        <div class="comfort-seg comfort-seg-data" style="--data-background: #085041; --data-width: 15%">Comfort</div>
+        <div class="comfort-seg comfort-seg-data" style="--data-background: var(--accent); --data-width: 18%">Comfort</div>
         <div class="comfort-seg comfort-seg-sticky">Sticky</div>
-        <div class="comfort-seg comfort-seg-oppressive">Oppressive</div>
-        <div class="comfort-seg comfort-seg-dangerous">Dangerous</div>
+        <div class="comfort-seg comfort-seg-data" style="--data-background: #D85A30; --data-width: 18%">Oppressive</div>
+        <div class="comfort-seg comfort-seg-data" style="--data-background: #791F1F; --data-width: 19%">Dangerous</div>
       </div>
       <div class="dew-point-scale">
         <span>&lt;5°C</span><span>5–10°C</span><span>10–15°C</span><span>15–18°C</span><span>18–21°C</span><span>&gt;21°C</span>
