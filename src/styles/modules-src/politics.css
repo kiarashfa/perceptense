@@ -195,9 +195,22 @@
   font-weight:500;
   color:#fff;
 }
+/* hard-left/centre-left/centre/centre-right backgrounds are too light for
+   white title text (3.6-3.9:1) — these bars are fixed regardless of
+   theme, so one dark override per segment is enough, no light/dark pair
+   needed. */
+.spectrum-hard-left .spectrum-name,
+.spectrum-centre-left .spectrum-name,
+.spectrum-centre .spectrum-name,
+.spectrum-centre-right .spectrum-name {
+  color: #1a1a18;
+}
 
 .spectrum-examples-peach {
   --tint-color: #FAECE7;
+}
+.spectrum-examples-dark {
+  --tint-color: #1a1a18;
 }
 
 .spectrum-centre-left {
@@ -208,7 +221,7 @@
 }
 
 .spectrum-examples-blue {
-  --tint-color: #E6F1FB;
+  --tint-color: #1a1a18;
 }
 
 .spectrum-centre {
@@ -219,7 +232,7 @@
 }
 
 .spectrum-examples-stone {
-  --tint-color: #F1EFE8;
+  --tint-color: #1a1a18;
 }
 
 .spectrum-centre-right {
@@ -230,7 +243,7 @@
 }
 
 .spectrum-examples-sand {
-  --tint-color: #FAEEDA;
+  --tint-color: #1a1a18;
 }
 
 .spectrum-hard-right {
@@ -283,6 +296,10 @@
   text-align:right;
   color:#185FA5;
 }
+html[data-theme="dark"] .pa-out { color:#85B7EB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .pa-out { color:#85B7EB; }
+}
 
 .pb-out {
   font-size:13px;
@@ -290,6 +307,10 @@
   min-width:40px;
   text-align:right;
   color:#A32D2D;
+}
+html[data-theme="dark"] .pb-out { color:#F09595; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .pb-out { color:#F09595; }
 }
 
 .vote-remainder-row {
@@ -312,6 +333,10 @@
   min-width:40px;
   text-align:right;
   color:#27500A;
+}
+html[data-theme="dark"] .pc-out { color:#9FE1CB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .pc-out { color:#9FE1CB; }
 }
 
 .election-results {
@@ -354,6 +379,22 @@
 
 .tl-dot-maroon {
   background:#501313;
+}
+
+/* Timeline dots sit directly on the page background (no wrapping badge),
+   and most fail 3:1 in dark mode. tl-dot-style is already fine in both
+   themes (left alone). u-bg-hex-27500a is a shared components.css class
+   used elsewhere as a fixed-badge colour, so it gets a compound override
+   scoped to .tl-dot instead of a direct dark rule. */
+html[data-theme="dark"] .tl-dot-rust    { background:#F0997B; }
+html[data-theme="dark"] .tl-dot-crimson { background:#F09595; }
+html[data-theme="dark"] .tl-dot-maroon  { background:#ED5411; }
+html[data-theme="dark"] .tl-dot.u-bg-hex-27500a { background:#9FE1CB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .tl-dot-rust    { background:#F0997B; }
+  html[data-theme="auto"] .tl-dot-crimson { background:#F09595; }
+  html[data-theme="auto"] .tl-dot-maroon  { background:#ED5411; }
+  html[data-theme="auto"] .tl-dot.u-bg-hex-27500a { background:#9FE1CB; }
 }
 
 .power-types-grid {
@@ -455,4 +496,56 @@
 .tl-dot-brown {
   background:#633806;
 }
+html[data-theme="dark"] .tl-dot-green { background:#5DCAA5; }
+html[data-theme="dark"] .tl-dot-brown { background:#EF9F27; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .tl-dot-green { background:#5DCAA5; }
+  html[data-theme="auto"] .tl-dot-brown { background:#EF9F27; }
+}
+
+/* Semantic colours used as decorative bar fills (3:1) and as real text
+   directly on the page/token background (4.5:1) — the democracy-score
+   bars, the election-simulator party labels and bars, and the country
+   panel's "Strengths" label. All of the light values here already clear
+   4.5:1 on white, so one class per colour covers both roles. Declared
+   last in the file per the module-12+ lesson (same-specificity ties go to
+   whichever rule is later in source order). */
+.pol-c-teal  { color: #085041; fill: #085041; }
+.pol-c-blue  { color: #185FA5; fill: #185FA5; }
+.pol-c-red   { color: #791F1F; fill: #791F1F; }
+.pol-c-green { color: #27500A; fill: #27500A; }
+.pol-c-red2  { color: #A32D2D; fill: #A32D2D; }
+html[data-theme="dark"] .pol-c-teal  { color: #5DCAA5; fill: #5DCAA5; }
+html[data-theme="dark"] .pol-c-blue  { color: #85B7EB; fill: #85B7EB; }
+html[data-theme="dark"] .pol-c-red   { color: #F09595; fill: #F09595; }
+html[data-theme="dark"] .pol-c-green { color: #9FE1CB; fill: #9FE1CB; }
+html[data-theme="dark"] .pol-c-red2  { color: #F09595; fill: #F09595; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .pol-c-teal  { color: #5DCAA5; fill: #5DCAA5; }
+  html[data-theme="auto"] .pol-c-blue  { color: #85B7EB; fill: #85B7EB; }
+  html[data-theme="auto"] .pol-c-red   { color: #F09595; fill: #F09595; }
+  html[data-theme="auto"] .pol-c-green { color: #9FE1CB; fill: #9FE1CB; }
+  html[data-theme="auto"] .pol-c-red2  { color: #F09595; fill: #F09595; }
+}
+
+/* dem-score-bar is a decorative fill only (no text on top), so it only
+   needs the background swapped, and only needs 3:1 — a compound
+   selector, not the shared .pol-c-* text classes above, so a background
+   never accidentally paints behind text. */
+.dem-score-bar.pol-c-teal { background: #085041; }
+.dem-score-bar.pol-c-blue { background: #185FA5; }
+.dem-score-bar.pol-c-red  { background: #791F1F; }
+html[data-theme="dark"] .dem-score-bar.pol-c-teal { background: #5DCAA5; }
+html[data-theme="dark"] .dem-score-bar.pol-c-blue { background: #85B7EB; }
+html[data-theme="dark"] .dem-score-bar.pol-c-red  { background: #F09595; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .dem-score-bar.pol-c-teal { background: #5DCAA5; }
+  html[data-theme="auto"] .dem-score-bar.pol-c-blue { background: #85B7EB; }
+  html[data-theme="auto"] .dem-score-bar.pol-c-red  { background: #F09595; }
+}
+
+/* The election-simulator bars keep a fixed literal fill regardless of
+   theme (signature per-party colour), but white text on them fails
+   4.5:1 for all three parties — same reasoning as modules 9-16. */
+.pol-bv-dark { color: #1a1a18; }
   
