@@ -226,6 +226,8 @@
   stop-color:#AFA9EC;
   stop-opacity:0.4;
 }
+html[data-theme="dark"] .gender-stop-style { stop-opacity:1; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .gender-stop-style { stop-opacity:1; } }
 
 .stop-lavender {
   stop-color:#EEEDFE;
@@ -236,6 +238,8 @@
   stop-color:#5DCAA5;
   stop-opacity:0.5;
 }
+html[data-theme="dark"] .stop-teal-soft { stop-opacity:1; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .stop-teal-soft { stop-opacity:1; } }
 
 .stop-mint {
   stop-color:#E1F5EE;
@@ -300,14 +304,14 @@
 
 .kinsey-cell-hetero-leaning {
   flex:1;
-  background:#378ADD;
+  background:#1f6bb8;
   padding:8px 6px;
   text-align:center;
 }
 
 .kinsey-cell-equal {
   flex:1;
-  background:#888780;
+  background:#6b6a65;
   padding:8px 6px;
   text-align:center;
 }
@@ -318,7 +322,7 @@
 
 .kinsey-cell-homo-leaning {
   flex:1;
-  background:#D4537E;
+  background:#c33162;
   padding:8px 6px;
   text-align:center;
 }
@@ -379,6 +383,8 @@
 .law-dot-style {
   --tint-background: #0C447C;
 }
+html[data-theme="dark"] .law-dot-style { --tint-background: #146fcb; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .law-dot-style { --tint-background: #146fcb; } }
 
 .law-dot-pink {
   --tint-background: #D4537E;
@@ -449,6 +455,8 @@
 .law-dot-maroon {
   --tint-background: #4B1528;
 }
+html[data-theme="dark"] .law-dot-maroon { --tint-background: #c7386a; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .law-dot-maroon { --tint-background: #c7386a; } }
 
 .legal-status-chart {
   width:100%;
