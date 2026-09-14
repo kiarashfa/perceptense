@@ -275,38 +275,14 @@
   margin-bottom:8px;
 }
 
-.veto-fill-style {
-  width:100%;
-  background:#FCEBEB;
-  border:0.5px solid #f09595;
+.veto-fill-data {
+  background: var(--data-background);
+  border: var(--data-border);
+  width: var(--data-width);
 }
 
 .diplomacy-span-style {
   color:#791f1f;
-}
-
-.veto-fill-usa {
-  width:64%;
-  background:#E6F1FB;
-  border:0.5px solid #85b7eb;
-}
-
-.veto-fill-uk {
-  width:23%;
-  background:#E6F1FB;
-  border:0.5px solid #85b7eb;
-}
-
-.veto-fill-france {
-  width:13%;
-  background:#E6F1FB;
-  border:0.5px solid #85b7eb;
-}
-
-.veto-fill-china {
-  width:11%;
-  background:#FAEEDA;
-  border:0.5px solid #ef9f27;
 }
 
 .veto-footnote {
@@ -356,32 +332,8 @@
   border-radius:var(--border-radius-md);
 }
 
-.power-marker-style {
-  left:8%;
-}
-
-.power-marker-money {
-  left:22%;
-}
-
-.power-marker-handshake {
-  left:36%;
-}
-
-.power-marker-package {
-  left:52%;
-}
-
-.power-marker-institution {
-  left:66%;
-}
-
-.power-marker-film {
-  left:80%;
-}
-
-.power-marker-book {
-  left:92%;
+.power-marker-data {
+  left: var(--data-left);
 }
 
 .sharp-power-note {

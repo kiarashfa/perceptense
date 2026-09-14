@@ -214,34 +214,9 @@
   background:#A32D2D;
 }
 
-.bb-spider-silk {
-  width:88%;
-  background:#D85A30;
-}
-
-.bb-titanium {
-  width:55%;
-  background:#EF9F27;
-}
-
-.bb-aluminium {
-  width:30%;
-  background:#5DCAA5;
-}
-
-.bb-high-strength-steel {
-  width:20%;
-  background:#1D9E75;
-}
-
-.bb-structural-steel {
-  width:13%;
-  background:#9FE1CB;
-}
-
-.bb-oak {
-  width:10%;
-  background:#C0DD97;
+.bb-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .bb-concrete {
@@ -290,39 +265,9 @@
   line-height:1.8;
 }
 
-.compare-fill-style {
-  width:60%;
-  background:#D85A30;
-}
-
-.compare-fill-aluminium {
-  width:17%;
-  background:#EF9F27;
-}
-
-.compare-fill-copper {
-  width:13%;
-  background:#5DCAA5;
-}
-
-.compare-fill-steel {
-  width:9%;
-  background:#534AB7;
-}
-
-.compare-fill-concrete {
-  width:9%;
-  background:#8884d8;
-}
-
-.compare-fill-glass {
-  width:7%;
-  background:#9FE1CB;
-}
-
-.compare-fill-carbon-fibre {
-  width:1%;
-  background:#C0DD97;
+.compare-fill-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .compare-fill-invar {
@@ -356,34 +301,9 @@
   margin-bottom:8px;
 }
 
-.sustain-fill-style {
-  width:53%;
-  background:#D85A30;
-}
-
-.sustain-fill-primary-steel {
-  width:60%;
-  background:#EF9F27;
-}
-
-.sustain-fill-recycled-steel {
-  width:6%;
-  background:#1D9E75;
-}
-
-.sustain-fill-recycled-aluminium {
-  width:3%;
-  background:#5DCAA5;
-}
-
-.sustain-fill-concrete {
-  width:3%;
-  background:#9FE1CB;
-}
-
-.sustain-fill-timber {
-  width:2%;
-  background:#C0DD97;
+.sustain-fill-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .timber-nuance {

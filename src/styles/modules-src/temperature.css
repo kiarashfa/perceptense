@@ -79,63 +79,13 @@
   margin-bottom:4px;
 }
 
-.tb-style {
-  width:5%;
-  background:#042C53;
+.tb-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .tv-style {
   color:#E6F1FB;
-}
-
-.tb-siberian-winter {
-  width:10%;
-  background:#0C447C;
-}
-
-.tb-european-winter {
-  width:16%;
-  background:#185FA5;
-}
-
-.tb-freezing {
-  width:22%;
-  background:#378ADD;
-}
-
-.tb-cool {
-  width:30%;
-  background:#85B7EB;
-}
-
-.tb-room-temp {
-  width:40%;
-  background:#9FE1CB;
-}
-
-.tb-summer-day {
-  width:50%;
-  background:#5DCAA5;
-}
-
-.tb-body-temp {
-  width:60%;
-  background:#EF9F27;
-}
-
-.tb-heat-wave {
-  width:63%;
-  background:#BA7517;
-}
-
-.tb-death-valley {
-  width:70%;
-  background:#D85A30;
-}
-
-.tb-boiling-water {
-  width:100%;
-  background:#A32D2D;
 }
 
 .temperature-span-style {
@@ -203,19 +153,9 @@
   font-size:10px;
 }
 
-.tb-liquid-nitrogen {
-  width:5%;
-  background:#3C3489;
-}
-
 .tv-lavender {
   color:#CECBF6;
   font-size:10px;
-}
-
-.tb-vostok-record {
-  width:12%;
-  background:#534AB7;
 }
 
 .tv-white-small {
@@ -223,44 +163,9 @@
   font-size:10px;
 }
 
-.tb-liquid-water {
-  width:22%;
-  background:#1D9E75;
-}
-
-.tb-oven {
-  width:27%;
-  background:#EF9F27;
-}
-
 .tv-dark-small {
   color:#412402;
   font-size:10px;
-}
-
-.tb-wood-fire {
-  width:38%;
-  background:#BA7517;
-}
-
-.tb-iron-melts {
-  width:50%;
-  background:#D85A30;
-}
-
-.tb-tungsten-melts {
-  width:70%;
-  background:#A32D2D;
-}
-
-.tb-sun-surface {
-  width:85%;
-  background:#791F1F;
-}
-
-.tb-sun-core {
-  width:100%;
-  background:#501313;
 }
 
 .tv-blush {
@@ -294,51 +199,10 @@
   margin-bottom:0.8rem;
 }
 
-.tb-diamond {
-  width:100%;
-  background:#26215C;
-}
-
-.tb-silver {
-  width:92%;
-  background:#3C3489;
-}
-
-.tb-copper {
-  width:83%;
-  background:#185FA5;
-}
-
-.tb-aluminium {
-  width:55%;
-  background:#378ADD;
-}
-
-.tb-iron-steel {
-  width:35%;
-  background:#85B7EB;
-}
-
-.tb-glass {
-  width:7%;
-  background:#9FE1CB;
-}
-
-.tb-wood {
-  width:5%;
-  background:#5DCAA5;
-}
-
-.tb-aerogel {
-  width:3%;
-  background:#EF9F27;
-  min-width:28px;
-}
-
-.tb-still-air {
-  width:2%;
-  background:#BA7517;
-  min-width:24px;
+.tb-data-min-width {
+  background: var(--data-background);
+  min-width: var(--data-min-width);
+  width: var(--data-width);
 }
 
 .radiation-intro {
@@ -430,41 +294,6 @@
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(170px, 1fr));
   gap:8px;
-}
-
-.tb-drying-oven {
-  width:20%;
-  background:#EF9F27;
-}
-
-.tb-slow-cook {
-  width:35%;
-  background:#BA7517;
-}
-
-.tb-baking {
-  width:52%;
-  background:#D85A30;
-}
-
-.tb-roasting {
-  width:65%;
-  background:#993C1D;
-}
-
-.tb-hot-roast {
-  width:80%;
-  background:#712B13;
-}
-
-.tb-max-oven {
-  width:90%;
-  background:#501313;
-}
-
-.tb-paper-ignites {
-  width:72%;
-  background:#A32D2D;
 }
 
 .game-next-row {

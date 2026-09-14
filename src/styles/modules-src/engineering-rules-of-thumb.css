@@ -43,29 +43,9 @@
   display:block;
 }
 
-.scale-bar-inner-style {
-  width:15%;
-  background:#E6F1FB;
-}
-
-.scale-bar-inner-buildings {
-  width:25%;
-  background:#EAF3DE;
-}
-
-.scale-bar-inner-bridges {
-  width:40%;
-  background:#FAEEDA;
-}
-
-.scale-bar-inner-pressure-vessels {
-  width:40%;
-  background:#EEEDFE;
-}
-
-.scale-bar-inner-lifting-chains {
-  width:50%;
-  background:#FAECE7;
+.scale-bar-inner-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .scale-bar-inner-max {
@@ -73,30 +53,15 @@
   background:#FCEBEB;
 }
 
-.tol-bar-style {
-  width:6%;
-  background:#EAF3DE;
+.tol-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .tolerance-method {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-left:6px;
-}
-
-.tol-bar-cnc {
-  width:12%;
-  background:#E6F1FB;
-}
-
-.tol-bar-grinding {
-  width:30%;
-  background:#FAEEDA;
-}
-
-.tol-bar-lapping {
-  width:75%;
-  background:#FAECE7;
 }
 
 .eng-result {
@@ -119,49 +84,9 @@
   line-height:1.8;
 }
 
-.mat-bar-style {
-  width:4%;
-  background:#FAECE7;
-}
-
-.mat-bar-timber {
-  width:5%;
-  background:#EAF3DE;
-}
-
-.mat-bar-aluminium-strength {
-  width:35%;
-  background:#E6F1FB;
-}
-
-.mat-bar-structural-steel {
-  width:37%;
-  background:#FAEEDA;
-}
-
-.mat-bar-high-strength-steel {
-  width:65%;
-  background:#EEEDFE;
-}
-
-.mat-bar-titanium {
-  width:70%;
-  background:#FAECE7;
-}
-
-.mat-bar-steel-specific {
-  width:18%;
-  background:#FAEEDA;
-}
-
-.mat-bar-titanium-specific {
-  width:38%;
-  background:#FAECE7;
-}
-
-.mat-bar-aluminium-specific {
-  width:40%;
-  background:#E6F1FB;
+.mat-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .reliability-inputs {

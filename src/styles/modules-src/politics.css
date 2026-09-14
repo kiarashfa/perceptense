@@ -275,59 +275,9 @@
   padding:1px 7px;
 }
 
-.dem-score-bar-style {
-  width:98%;
-  background:#085041;
-}
-
-.dem-score-bar-sweden {
-  width:94%;
-  background:#085041;
-}
-
-.dem-score-bar-germany {
-  width:88%;
-  background:#085041;
-}
-
-.dem-score-bar-usa {
-  width:78%;
-  background:#185FA5;
-}
-
-.dem-score-bar-france {
-  width:80%;
-  background:#185FA5;
-}
-
-.dem-score-bar-india {
-  width:72%;
-  background:#185FA5;
-}
-
-.dem-score-bar-hungary {
-  width:66%;
-  background:#BA7517;
-}
-
-.dem-score-bar-turkey {
-  width:44%;
-  background:#BA7517;
-}
-
-.dem-score-bar-russia {
-  width:22%;
-  background:#791F1F;
-}
-
-.dem-score-bar-china {
-  width:19%;
-  background:#791F1F;
-}
-
-.dem-score-bar-north-korea {
-  width:11%;
-  background:#791F1F;
+.dem-score-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .pa-votes {

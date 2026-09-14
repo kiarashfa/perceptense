@@ -265,27 +265,27 @@ const mod = modules.find((m) => m.id === 18)!;
       <div class="chart-heading">Approximate veto count (all-time, USSR/Russia combined)</div>
       <div class="value-row">
         <div class="veto-label">Russia/USSR</div>
-        <div class="track-tall"><div class="veto-fill veto-fill-style"><span class="diplomacy-span-style">~140+</span></div></div>
+        <div class="track-tall"><div class="veto-fill veto-fill-data" style="--data-background: #FCEBEB; --data-border: 0.5px solid #f09595; --data-width: 100%"><span class="diplomacy-span-style">~140+</span></div></div>
         <div class="veto-note diplomacy-span-style">Most ever</div>
       </div>
       <div class="value-row">
         <div class="veto-label">USA</div>
-        <div class="track-tall"><div class="veto-fill veto-fill-usa"><span class="text-blue-900">~90</span></div></div>
+        <div class="track-tall"><div class="veto-fill veto-fill-data" style="--data-background: #E6F1FB; --data-border: 0.5px solid #85b7eb; --data-width: 64%"><span class="text-blue-900">~90</span></div></div>
         <div class="veto-note text-blue-900"></div>
       </div>
       <div class="value-row">
         <div class="veto-label">UK</div>
-        <div class="track-tall"><div class="veto-fill veto-fill-uk"><span class="text-blue-900">~32</span></div></div>
+        <div class="track-tall"><div class="veto-fill veto-fill-data" style="--data-background: #E6F1FB; --data-border: 0.5px solid #85b7eb; --data-width: 23%"><span class="text-blue-900">~32</span></div></div>
         <div class="veto-note"></div>
       </div>
       <div class="value-row">
         <div class="veto-label">France</div>
-        <div class="track-tall"><div class="veto-fill veto-fill-france"><span class="text-blue-900">~18</span></div></div>
+        <div class="track-tall"><div class="veto-fill veto-fill-data" style="--data-background: #E6F1FB; --data-border: 0.5px solid #85b7eb; --data-width: 13%"><span class="text-blue-900">~18</span></div></div>
         <div class="veto-note"></div>
       </div>
       <div class="value-row">
         <div class="veto-label">China</div>
-        <div class="track-tall"><div class="veto-fill veto-fill-china"><span class="text-amber-900">~15</span></div></div>
+        <div class="track-tall"><div class="veto-fill veto-fill-data" style="--data-background: #FAEEDA; --data-border: 0.5px solid #ef9f27; --data-width: 11%"><span class="text-amber-900">~15</span></div></div>
         <div class="veto-note text-tertiary">Rising</div>
       </div>
       <div class="veto-footnote">Note: figures include USSR-era votes for Russia; counts vary slightly by source. China figure is PRC since 1971.</div>
@@ -511,13 +511,13 @@ const mod = modules.find((m) => m.id === 18)!;
 
       <div class="power-ends"><span>Hard Power — Force / Coercion</span><span>Soft Power — Attraction / Co-option</span></div>
       <div class="power-scale" id="powerScale">
-        <div class="power-marker power-marker-style"  data-key="military" title="">✈</div>
-        <div class="power-marker power-marker-money" data-key="sanctions" title="">💰</div>
-        <div class="power-marker power-marker-handshake" data-key="aid"       title="">🤝</div>
-        <div class="power-marker power-marker-package" data-key="trade"     title="">📦</div>
-        <div class="power-marker power-marker-institution" data-key="diploma"   title="">🏛</div>
-        <div class="power-marker power-marker-film" data-key="culture"   title="">🎬</div>
-        <div class="power-marker power-marker-book" data-key="values"    title="">📘</div>
+        <div class="power-marker power-marker-data" style="--data-left: 8%"  data-key="military" title="">✈</div>
+        <div class="power-marker power-marker-data" style="--data-left: 22%" data-key="sanctions" title="">💰</div>
+        <div class="power-marker power-marker-data" style="--data-left: 36%" data-key="aid"       title="">🤝</div>
+        <div class="power-marker power-marker-data" style="--data-left: 52%" data-key="trade"     title="">📦</div>
+        <div class="power-marker power-marker-data" style="--data-left: 66%" data-key="diploma"   title="">🏛</div>
+        <div class="power-marker power-marker-data" style="--data-left: 80%" data-key="culture"   title="">🎬</div>
+        <div class="power-marker power-marker-data" style="--data-left: 92%" data-key="values"    title="">📘</div>
       </div>
       <div id="power-tooltip" class="power-tooltip"></div>
 
