@@ -2322,7 +2322,7 @@
 }
 
 .text-amber-700 {
-  color: #BA7517;
+  color: #A26614;
 }
 
 .text-amber-900 {
@@ -2334,7 +2334,7 @@
 }
 
 .text-blue-500 {
-  color: #378ADD;
+  color: #2276CA;
 }
 
 .text-blue-700 {
@@ -2366,7 +2366,7 @@
 }
 
 .text-orange-600 {
-  color: #D85A30;
+  color: #C64E25;
 }
 
 .text-orange-850 {
@@ -2386,7 +2386,41 @@
 }
 
 .text-teal-700 {
-  color: #1D9E75;
+  color: #188260;
+}
+
+/* Dark-mode contrast: these palette shades were tuned for a light page
+   background only. Lighten for dark rather than change the light value,
+   except .text-orange-600 and .text-indigo-200 which have their own pairing
+   (indigo-200 is meant as light text on a dark indigo-900 badge and is left
+   alone). */
+html[data-theme="dark"] .text-amber-900 { color: #C7710C; }
+html[data-theme="dark"] .text-amber-950 { color: #C96F06; }
+html[data-theme="dark"] .text-blue-700 { color: #2E88E1; }
+html[data-theme="dark"] .text-blue-900 { color: #2487EA; }
+html[data-theme="dark"] .text-green-800 { color: #4B9913; }
+html[data-theme="dark"] .text-green-900 { color: #0F997C; }
+html[data-theme="dark"] .text-hex-993556 { color: #CA6587; }
+html[data-theme="dark"] .text-indigo-700 { color: #847DCB; }
+html[data-theme="dark"] .text-orange-600 { color: #D96037; }
+html[data-theme="dark"] .text-orange-850 { color: #C27310; }
+html[data-theme="dark"] .text-orange-900 { color: #DC5D31; }
+html[data-theme="dark"] .text-red-700 { color: #D46262; }
+html[data-theme="dark"] .text-stone-800 { color: #868680; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .text-amber-900 { color: #C7710C; }
+  html[data-theme="auto"] .text-amber-950 { color: #C96F06; }
+  html[data-theme="auto"] .text-blue-700 { color: #2E88E1; }
+  html[data-theme="auto"] .text-blue-900 { color: #2487EA; }
+  html[data-theme="auto"] .text-green-800 { color: #4B9913; }
+  html[data-theme="auto"] .text-green-900 { color: #0F997C; }
+  html[data-theme="auto"] .text-hex-993556 { color: #CA6587; }
+  html[data-theme="auto"] .text-indigo-700 { color: #847DCB; }
+  html[data-theme="auto"] .text-orange-600 { color: #D96037; }
+  html[data-theme="auto"] .text-orange-850 { color: #C27310; }
+  html[data-theme="auto"] .text-orange-900 { color: #DC5D31; }
+  html[data-theme="auto"] .text-red-700 { color: #D46262; }
+  html[data-theme="auto"] .text-stone-800 { color: #868680; }
 }
 
 .u-align-end {
