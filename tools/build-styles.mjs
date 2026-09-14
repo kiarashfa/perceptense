@@ -23,6 +23,7 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const SHARED_PARTS = [
   path.join(ROOT, 'src/styles/fonts.css'),
   path.join(ROOT, 'src/styles/shared.css'),
+  path.join(ROOT, 'src/styles/components.css'),
   path.join(ROOT, 'src/styles/icons-base.css'),
   path.join(ROOT, 'src/styles/chrome.css'),
 ];

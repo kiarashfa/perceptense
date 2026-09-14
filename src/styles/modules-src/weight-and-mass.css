@@ -9,7 +9,6 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-.scale-caption { font-size: 11px; color: var(--color-text-tertiary); text-align: center; margin-top: 6px; }
 
 /* ── Part D: unit converter ── */
 .conv-wrap {
@@ -32,9 +31,7 @@
 @media (max-width: 480px) { .conv-results { grid-template-columns: 1fr; } }
 .conv-result-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 12px; }
 .conv-result-unit { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 1px; }
-.conv-result-val  { font-size: 18px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
 .slider-section { margin-top: 14px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
-.slider-label-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; }
 .slider-context { font-size: 12px; color: var(--color-text-secondary); margin-top: 6px; min-height: 18px; }
 .slider-context strong { color: var(--color-text-primary); }
 
@@ -74,8 +71,6 @@
 .world-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 1.2rem; }
 @media (max-width: 480px) { .world-grid { grid-template-columns: repeat(2, 1fr); } }
 .world-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 14px; }
-.world-icon  { font-size: 22px; margin-bottom: 5px; }
-.world-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 2px; }
 .world-val   { font-size: 17px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 3px; }
 .world-note  { font-size: 11px; color: var(--color-text-secondary); margin: 0; line-height: 1.4; }
 .planet-input-row {
@@ -86,38 +81,6 @@
   margin-bottom: 14px;
 }
 .planet-input-row label { font-size: 12px; color: var(--color-text-secondary); }
-.planet-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 8px;
-}
-.planet-card {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-md);
-  padding: 10px 11px 9px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.planet-color-bar {
-  height: 4px;
-  border-radius: 3px 3px 0 0;
-  margin-bottom: 8px;
-}
-.planet-card-name {
-  font-size: 11px; font-weight: 500;
-  color: var(--color-text-secondary);
-  text-transform: uppercase; letter-spacing: 0.05em;
-  margin-bottom: 2px;
-}
-.planet-card-val {
-  font-size: 22px; font-weight: 500;
-  color: var(--color-text-primary);
-  letter-spacing: -0.5px;
-  font-variant-numeric: tabular-nums;
-  line-height: 1.1;
-}
-.planet-card-sub  { font-size: 10px; color: var(--color-text-tertiary); margin-top: 3px; line-height: 1.35; }
 
 .section-intro {
   font-size: 13px;
@@ -140,10 +103,6 @@
 }
 .planet-mass-input {
   width: 90px !important;
-}
-.planet-input-unit {
-  font-size: 12px;
-  color: var(--color-text-tertiary);
 }
 .planet-note {
   font-size: 11px;
@@ -186,9 +145,6 @@
 .estimate-step strong {
   color: var(--color-text-primary);
   font-weight: 500;
-}
-.density-chart {
-  min-width: 0;
 }
 .density-row {
   display: grid;

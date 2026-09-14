@@ -4,18 +4,12 @@
 .wealth-block:last-child { border-bottom: none; }
 .wb-rank { font-size: 12px; color: var(--color-text-secondary); width: 28px; flex-shrink: 0; text-align: right; }
 .wb-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); width: 140px; flex-shrink: 0; }
-.wb-bar-wrap { flex: 1; }
 .wb-bar { height: 16px; border-radius: 2px; }
 .wb-val { font-size: 12px; color: var(--color-text-secondary); width: 72px; flex-shrink: 0; text-align: right; }
 .scale-note { font-size: 11px; color: var(--color-text-secondary); margin: 8px 0 0; }
-
-/* --- Inflation calculator --- */
-.inf-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
 .inf-label { font-size: 12px; color: var(--color-text-secondary); flex-shrink: 0; }
 .inf-input { height: 34px; width: 90px; padding: 0 8px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-primary); font-size: 13px; font-family: var(--font-sans); }
 .inf-select { height: 34px; padding: 0 8px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-primary); font-size: 13px; font-family: var(--font-sans); }
-.inf-result { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 13px; font-size: 13px; color: var(--color-text-primary); line-height: 1.6; margin-top: 4px; }
-.inf-big { font-size: 20px; font-weight: 500; color: var(--color-text-primary); }
 
 /* --- Money creation flow --- */
 .mc-step { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
@@ -26,7 +20,6 @@
 
 /* --- Debt counter --- */
 .debt-ticker { font-size: 22px; font-weight: 500; color: var(--color-text-primary); letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
-.debt-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
 
 /* --- Quiz game --- */
 .quiz-opt { display: block; width: 100%; text-align: left; padding: 8px 12px; margin-bottom: 6px; font-size: 13px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-primary); cursor: pointer; transition: background 0.1s; }
@@ -42,90 +35,38 @@
 .ci-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
 @media (max-width: 520px) { .ci-grid { grid-template-columns: 1fr; } }
 .ci-result-box { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 13px; }
-.ci-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
-.ci-val { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
-.ci-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 1px; }
-.slider-row { margin-bottom: 10px; }
-.slider-val { color: var(--color-text-primary); font-weight: 500; }
 
 /* --- Exchange rate explorer --- */
 .fx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 10px; }
 .fx-flag { font-size: 18px; margin-bottom: 3px; }
-.fx-amount { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
-.u-text-hex-4e99a3 { color: var(--accent); }
-.u-bg-background-primary { background: var(--color-background-primary); }
-.u-border-0-5px-solid-border-tertiary { border: 0.5px solid var(--color-border-tertiary); }
-.u-radius-radius-lg { border-radius: var(--border-radius-lg); }
-.u-p-14px-16px { padding: 14px 16px; }
 .u-gridcols-auto-fit-180px-1fr { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
-.u-bg-background-secondary { background: var(--color-background-secondary); }
-.u-radius-radius-md { border-radius: var(--border-radius-md); }
-.u-p-10px-12px { padding: 10px 12px; }
-.u-mt-4px { margin-top: 4px; }
-.u-lh-1-4 { line-height: 1.4; }
 .u-w-100-pct { width: 100%; }
-.u-h-auto { height: auto; }
-.u-m-8px-0-0 { margin: 8px 0 0; }
-.u-p-13px-15px { padding: 13px 15px; }
 .u-bg-hex-185fa5 { background: #185FA5; }
 .u-text-hex-fff { color: #fff; }
 .u-w-94-pct { width: 94%; }
-.u-w-88-pct { width: 88%; }
 .u-w-83-pct { width: 83%; }
 .u-bg-hex-378add { background: #378ADD; }
 .u-w-31-pct { width: 31%; }
-.u-w-19-pct { width: 19%; }
-.u-bg-hex-85b7eb { background: #85B7EB; }
-.u-text-hex-042c53 { color: #042C53; }
-.u-w-8-pct { width: 8%; }
 .u-bg-hex-b5d4f4 { background: #B5D4F4; }
 .u-w-7-pct { width: 7%; }
-.u-m-10px-0-0 { margin: 10px 0 0; }
-.u-bg-hex-0f6e56 { background: #0F6E56; }
-.u-w-10-pct { width: 10%; }
 .u-bg-hex-5dcaa5 { background: #5DCAA5; }
-.u-text-hex-04342c { color: #04342C; }
 .u-gridcols-auto-fit-160px-1fr { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
-.u-p-11px-14px { padding: 11px 14px; }
-.u-bg-hex-a32d2d { background: #A32D2D; }
 .u-w-78-pct { width: 78%; }
 .u-bg-hex-d85a30 { background: #D85A30; }
-.u-w-70-pct { width: 70%; }
 .u-w-35-pct { width: 35%; }
 .u-bg-hex-f0997b { background: #F0997B; }
-.u-w-27-pct { width: 27%; }
-.u-bg-hex-f5c4b3 { background: #F5C4B3; }
-.u-w-6-pct { width: 6%; }
-.u-bg-hex-faece7 { background: #FAECE7; }
-.u-border-0-5px-solid-hex-f5c4b3 { border: 0.5px solid #F5C4B3; }
 .u-w-2-3-pct { width: 2.3%; }
-.u-bg-hex-27500a { background: #27500A; }
-.u-w-64-pct { width: 64%; }
 .u-bg-hex-3b6d11 { background: #3B6D11; }
 .u-w-16-pct { width: 16%; }
 .u-bg-hex-639922 { background: #639922; }
 .u-w-14-pct { width: 14%; }
 .u-bg-hex-97c459 { background: #97C459; }
-.u-text-hex-27500a { color: #27500A; }
-.u-w-2-pct { width: 2%; }
 .u-bg-hex-c0dd97 { background: #C0DD97; }
 .u-m-12px-0-0 { margin: 12px 0 0; }
 .u-bg-hex-791f1f { background: #791F1F; }
-.u-w-50-pct { width: 50%; }
-.u-w-44-pct { width: 44%; }
 .u-w-41-pct { width: 41%; }
-.u-w-25-pct { width: 25%; }
-.u-w-17-pct { width: 17%; }
 .u-w-110px { width: 110px; }
 .u-w-auto { width: auto; }
 .u-gridcol-1-1 { grid-column: 1/-1; }
-.u-mb-1-2rem { margin-bottom: 1.2rem; }
-.u-w-100px { width: 100px; }
 .u-w-0-pct { width: 0%; }
-.u-align-center { text-align: center; }
-.u-p-20px-0 { padding: 20px 0; }
-.u-fs-22px { font-size: 22px; }
-.u-mt-14px { margin-top: 14px; }
-.u-fs-16px { font-size: 16px; }
-.u-text-text-danger { color: var(--color-text-danger); }
-.u-text-text-success { color: var(--color-text-success); }
+.u-p-20px-0 { padding: 20px 0; }

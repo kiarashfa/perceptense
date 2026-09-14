@@ -15,8 +15,6 @@
 }
 .tz-city { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 3px; }
 .tz-time { font-size: 22px; font-weight: 500; color: var(--color-text-primary); letter-spacing: -0.5px; font-variant-numeric: tabular-nums; }
-.tz-date-label { font-size: 10px; color: var(--color-text-tertiary); margin-top: 1px; }
-.tz-offset { font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px; }
 .tz-day-night {
   display: inline-block;
   width: 7px; height: 7px;
@@ -50,8 +48,6 @@
 .game-opt.wrong   { background: #FCEBEB; border-color: #F09595; color: #791F1F; }
 .game-opt:disabled { cursor: default; }
 .game-feedback { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; min-height: 18px; }
-.game-score-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-.game-score-label { font-size: 12px; color: var(--color-text-secondary); }
 .game-score-val { font-size: 16px; font-weight: 500; color: var(--color-text-primary); min-width: 40px; }
 /* ── SVG label helper ── */
 .svg-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -66,39 +62,7 @@
   margin-bottom: 14px;
 }
 .planet-input-row label { font-size: 12px; color: var(--color-text-secondary); }
-.planet-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 8px;
-}
-.planet-card {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-md);
-  padding: 10px 11px 9px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.planet-color-bar {
-  height: 4px;
-  border-radius: 3px 3px 0 0;
-  margin-bottom: 8px;
-}
-.planet-card-name {
-  font-size: 11px; font-weight: 500;
-  color: var(--color-text-secondary);
-  text-transform: uppercase; letter-spacing: 0.05em;
-  margin-bottom: 2px;
-}
-.planet-card-val {
-  font-size: 22px; font-weight: 500;
-  color: var(--color-text-primary);
-  letter-spacing: -0.5px;
-  font-variant-numeric: tabular-nums;
-  line-height: 1.1;
-}
 .planet-card-unit { font-size: 11px; font-weight: 400; color: var(--color-text-tertiary); margin-left: 2px; }
-.planet-card-sub  { font-size: 10px; color: var(--color-text-tertiary); margin-top: 3px; line-height: 1.35; }
 .planet-color-mercury { background: #9E9E9E; }
 .planet-color-venus { background: #D4A843; }
 .planet-color-earth { background: var(--accent); }
@@ -109,91 +73,37 @@
 .planet-color-uranus { background: #7DE8E8; }
 .planet-color-neptune { background: #5B6FE4; }
 .planet-color-pluto { background: #6B6B6B; }
-.u-text-hex-4e99a3 { color: var(--accent); }
-.u-bg-background-primary { background: var(--color-background-primary); }
-.u-border-0-5px-solid-border-tertiary { border: 0.5px solid var(--color-border-tertiary); }
-.u-radius-radius-lg { border-radius: var(--border-radius-lg); }
-.u-p-13px-15px { padding: 13px 15px; }
-.u-w-0-4-pct { width: 0.4%; }
-.u-bg-hex-e6f1fb { background: #E6F1FB; }
-.u-border-0-5px-solid-hex-b5d4f4 { border: 0.5px solid #B5D4F4; }
-.u-text-hex-0c447c { color: #0C447C; }
 .u-ml-6px { margin-left: 6px; }
-.u-w-0-8-pct { width: 0.8%; }
 .u-bg-hex-b5d4f4 { background: #B5D4F4; }
-.u-text-hex-042c53 { color: #042C53; }
-.u-w-2-pct { width: 2%; }
-.u-bg-hex-85b7eb { background: #85B7EB; }
-.u-w-8-pct { width: 8%; }
 .u-bg-hex-378add { background: #378ADD; }
 .u-text-hex-fff { color: #fff; }
 .u-w-100-pct { width: 100%; }
 .u-bg-hex-0c447c { background: #0C447C; }
-.u-gridcols-auto-fit-140px-1fr { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-.u-bg-background-secondary { background: var(--color-background-secondary); }
-.u-radius-radius-md { border-radius: var(--border-radius-md); }
-.u-p-8px-10px { padding: 8px 10px; }
-.u-mb-2px { margin-bottom: 2px; }
-.u-bg-hex-26215c { background: #26215C; }
-.u-text-hex-cecbf6 { color: #CECBF6; }
-.u-w-32-pct { width: 32%; }
 .u-bg-hex-534ab7 { background: #534AB7; }
-.u-w-28-pct { width: 28%; }
-.u-bg-hex-7f77dd { background: #7F77DD; }
 .u-w-0-48-pct { width: 0.48%; }
 .u-bg-hex-afa9ec { background: #AFA9EC; }
-.u-text-hex-26215c { color: #26215C; }
-.u-ml-4px { margin-left: 4px; }
 .u-w-0-022-pct { width: 0.022%; }
 .u-bg-hex-cecbf6 { background: #CECBF6; }
-.u-border-0-5px-solid-hex-afa9ec { border: 0.5px solid #AFA9EC; }
 .u-w-0-00040-pct { width: 0.00040%; }
-.u-bg-hex-eeedfe { background: #EEEDFE; }
-.u-border-0-5px-solid-hex-cecbf6 { border: 0.5px solid #CECBF6; }
 .u-maxw-700px { max-width: 700px; }
 .u-fill-hex-4e99a3 { fill: var(--accent); }
 .u-w-0-07-pct { width: 0.07%; }
-.u-bg-hex-e1f5ee { background: #E1F5EE; }
-.u-border-0-5px-solid-hex-9fe1cb { border: 0.5px solid #9FE1CB; }
-.u-text-hex-085041 { color: #085041; }
-.u-ml-5px { margin-left: 5px; }
-.u-bg-hex-9fe1cb { background: #9FE1CB; }
-.u-text-hex-04342c { color: #04342C; }
 .u-w-1-1-pct { width: 1.1%; }
 .u-bg-hex-5dcaa5 { background: #5DCAA5; }
-.u-w-7-5-pct { width: 7.5%; }
 .u-bg-hex-1d9e75 { background: #1D9E75; }
-.u-w-40-pct { width: 40%; }
 .u-bg-hex-085041 { background: #085041; }
 .u-text-hex-9fe1cb { color: #9FE1CB; }
 .u-bg-hex-04342c { background: #04342C; }
 .u-text-hex-5dcaa5 { color: #5DCAA5; }
-.u-gap-5px { gap: 5px; }
 .u-w-8px { width: 8px; }
 .u-h-8px { height: 8px; }
 .u-radius-50-pct { border-radius: 50%; }
-.u-bg-hex-4e99a3 { background: var(--accent); }
-.u-display-inline-block { display: inline-block; }
-.u-bg-background-tertiary { background: var(--color-background-tertiary); }
 .u-ml-auto { margin-left: auto; }
-.u-minw-28px { min-width: 28px; }
 .u-maxh-280px { max-height: 280px; }
-.u-overflow-hidden { overflow: hidden; }
-.u-fw-600 { font-weight: 600; }
-.u-transform-uppercase { text-transform: uppercase; }
-.u-ls-0-06em { letter-spacing: 0.06em; }
 .u-w-80px-important { width: 80px !important; }
-.u-m-10px-0-0 { margin: 10px 0 0; }
-.u-minw-160px { min-width: 160px; }
-.u-p-0-18px { padding: 0 18px; }
-.u-h-36px { height: 36px; }
 .u-lh-1-9 { line-height: 1.9; }
 .u-minw-500px { min-width: 500px; }
 .u-gridcols-1fr-auto-1fr { grid-template-columns: 1fr auto 1fr; }
-.u-items-end { align-items: end; }
-.u-ls-0-05em { letter-spacing: 0.05em; }
-.u-align-center { text-align: center; }
-.u-w-100px { width: 100px; }
 .u-p-14px-12px { padding: 14px 12px; }
 .u-p-0-4px { padding: 0 4px; }
 .u-minw-70px { min-width: 70px; }
@@ -202,14 +112,10 @@
 .u-p-0-16px { padding: 0 16px; }
 .u-maxw-680px { max-width: 680px; }
 .u-p-10px { padding: 10px; }
-.u-p-9px-11px { padding: 9px 11px; }
 .u-p-3px-10px { padding: 3px 10px; }
 .u-w-6px { width: 6px; }
-.u-h-6px { height: 6px; }
 .u-text-hex-f09595 { color: #F09595; }
 .u-mt-3px { margin-top: 3px; }
-.u-fs-20px { font-size: 20px; }
-.u-mt-4px { margin-top: 4px; }
 
 /* ── Calendar Tabs ── */
 .cal-tab-active {
@@ -218,27 +124,12 @@
   font-weight: 500;
   color: var(--color-text-primary);
 }
-.cal-tab-panel {
-  padding-top: 12px;
-}
-.cal-tab-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-}
 .cal-type-badge {
   font-size: 11px;
   font-weight: 500;
   border-radius: 6px;
   border: 0.5px solid;
   padding: 2px 9px;
-}
-.cal-months-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
 }
 .cal-month-chip {
   font-size: 11px;

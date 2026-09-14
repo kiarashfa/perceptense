@@ -11,18 +11,18 @@ const mod = modules.find((m) => m.id === 4)!;
 
   
 
-    <div class="u-display-flex u-align-center u-gap-14px u-mb-md">
-      <i class="fa-solid fa-apple-whole u-fs-42px u-text-teal-500 u-shrink-0" aria-hidden="true"></i>
-      <h1 class="module-title u-m-0 u-lh-1-d-05">Module 4: Nutrition &amp; Food Labels</h1>
+    <div class="u-display-flex u-items-center u-gap-14px u-mb-md">
+      <i class="fa-solid fa-apple-whole u-fs-42px text-accent u-shrink-0" aria-hidden="true"></i>
+      <h1 class="module-title u-m-0 u-lh-1-05">Module 4: Nutrition &amp; Food Labels</h1>
     </div>
     <p class="module-subtitle">Calories, macronutrients, and how to read what's in your food</p>
 
     <!-- ═══════════════════════════════════════════════════════ PART A -->
     <h2 class="sec" id="part-a-the-calorie-confusion-kcal-vs-cal">Part A · the calorie confusion — kcal vs cal</h2>
 
-    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The calorie confusion — kcal vs cal</div>
-      <div class="u-fs-13px text-secondary u-lh-1-d-7">
+      <div class="u-fs-13px text-secondary u-lh-1-7">
         Food "calories" are actually <strong class="text-primary">kilocalories (kcal)</strong>. 1 food calorie = 1,000 physics calories. When a label says "250 calories," it means 250 kcal. This is one of the most widespread unit confusions in everyday life. From here on, "calorie" means food calorie = kcal.
       </div>
     </div>
@@ -82,7 +82,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- Macronutrient deep-dive explorer -->
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">The three macronutrients — what they actually do</div>
       <div class="u-display-flex u-gap-6px u-flex-wrap u-mb-md" role="tablist" aria-label="Macronutrient details">
         <button class="macro-btn active" onclick="showMacro('carb')" role="tab" aria-selected="true" aria-controls="macro-carb" id="tab-carb">Carbohydrates</button>
@@ -93,7 +93,7 @@ const mod = modules.find((m) => m.id === 4)!;
       <div id="macro-carb" class="elem-detail-panel show" role="tabpanel" aria-labelledby="tab-carb">
         <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
           <div class="u-flex-1 u-min-w-200px">
-            <div class="u-fs-12px text-secondary u-lh-1-d-7">
+            <div class="u-fs-12px text-secondary u-lh-1-7">
               <strong class="text-primary">Primary role:</strong> Fast energy. The brain alone uses ~120g of glucose per day — about half your carb intake. Carbs are the body's preferred fuel for high-intensity work.<br><br>
               <strong class="text-primary">Simple vs complex:</strong> Sugar (glucose, fructose, sucrose) = simple carbs — digested in minutes, spike blood sugar fast. Starch (bread, rice, pasta) and fibre = complex carbs — slower digestion, steadier energy.<br><br>
               <strong class="text-primary">Storage:</strong> Excess carbs convert to glycogen (stored in liver and muscle, ~400–500g total) or, once glycogen is full, to fat. Glycogen is why you can run a 10km without eating — you're burning stored carbs.
@@ -125,7 +125,7 @@ const mod = modules.find((m) => m.id === 4)!;
       <div id="macro-fat" class="elem-detail-panel" role="tabpanel" aria-labelledby="tab-fat">
         <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
           <div class="u-flex-1 u-min-w-200px">
-            <div class="u-fs-12px text-secondary u-lh-1-d-7">
+            <div class="u-fs-12px text-secondary u-lh-1-7">
               <strong class="text-primary">Primary role:</strong> Long-term energy storage, cell membrane construction, fat-soluble vitamin transport (A, D, E, K), hormone production. Fat is not the enemy — it's essential.<br><br>
               <strong class="text-primary">Types matter:</strong> Unsaturated fats (olive oil, avocado, nuts) are associated with better cardiovascular outcomes. Saturated fats (butter, red meat) should be moderate. Trans fats (partially hydrogenated oils) are the ones to genuinely avoid — largely banned in many countries now.<br><br>
               <strong class="text-primary">Density insight:</strong> At 9 kcal/g, fat is the most energy-dense macronutrient — 2.25× more than carbs or protein. A tablespoon of olive oil (~14g) has ~125 kcal. This is why cooking oils add calories faster than people expect.
@@ -157,7 +157,7 @@ const mod = modules.find((m) => m.id === 4)!;
       <div id="macro-protein" class="elem-detail-panel" role="tabpanel" aria-labelledby="tab-protein">
         <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
           <div class="u-flex-1 u-min-w-200px">
-            <div class="u-fs-12px text-secondary u-lh-1-d-7">
+            <div class="u-fs-12px text-secondary u-lh-1-7">
               <strong class="text-primary">Primary role:</strong> Building and repairing tissue — muscle, skin, enzymes, antibodies, hormones. The body cannot store protein the way it stores fat or glycogen, so it needs a daily supply.<br><br>
               <strong class="text-primary">Complete vs incomplete:</strong> Proteins are made of 20 amino acids; 9 are "essential" (must come from food). Animal proteins (meat, eggs, dairy) are "complete" — they contain all 9. Most plant proteins are incomplete, but combining sources (e.g. rice + beans) covers all 9.<br><br>
               <strong class="text-primary">Satiety superpower:</strong> Protein is the most satiating macronutrient — gram for gram, it keeps you full longer than carbs or fat. This is why high-protein breakfasts reduce total daily calorie intake in studies. The mechanism: protein raises GLP-1 and PYY (satiety hormones) more than other macros.
@@ -185,7 +185,7 @@ const mod = modules.find((m) => m.id === 4)!;
     <!-- ═══════════════════════════════════════════════════════ PART C -->
     <h2 class="sec" id="part-c-reading-real-food-what-s-actually-inside">Part C · reading real food — what's actually inside</h2>
 
-    <div class="u-mb-1-d-2rem">
+    <div class="block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Protein in 200g of cooked chicken breast</div>
       <div class="bar-wrap">
         <div class="bar-label"><span>Protein</span><span>~46 g</span></div>
@@ -202,7 +202,7 @@ const mod = modules.find((m) => m.id === 4)!;
       <p class="u-fs-12px text-secondary u-m-6px-0-0">Rule of thumb: cooked chicken breast = ~23% protein by weight. So 200g gives you about 46g of protein — roughly what a 75kg person needs in an entire day.</p>
     </div>
 
-    <div class="u-mb-1-d-2rem">
+    <div class="block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">A Snickers bar (standard, ~52 g)</div>
       <div class="bar-wrap">
         <div class="bar-label"><span>Sugar</span><span>~27 g</span></div>
@@ -224,7 +224,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- NEW: How to read a nutrition label -->
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How to read a nutrition label — annotated</div>
       <div class="u-display-flex u-gap-20px u-flex-wrap u-align-flex-start">
 
@@ -239,7 +239,7 @@ const mod = modules.find((m) => m.id === 4)!;
             </div>
             <div class="fl-cal-num">230</div>
           </div>
-          <div class="u-text-align-right u-fs-10px u-fw-700 u-border-bottom-0-d-5px-solid-hex-ccc u-pb-2px">% Daily Value*</div>
+          <div class="u-text-right u-fs-10px u-fw-700 u-border-bottom-0-d-5px-solid-hex-ccc u-pb-2px">% Daily Value*</div>
           <div class="fl-row fl-row-bold"><span>Total Fat 8g</span><span>10%</span></div>
           <div class="fl-row fl-row-indent"><span>Saturated Fat 1g</span><span>5%</span></div>
           <div class="fl-row fl-row-indent"><span><em>Trans</em> Fat 0g</span><span></span></div>
@@ -258,7 +258,7 @@ const mod = modules.find((m) => m.id === 4)!;
         </div>
 
         <!-- Annotations -->
-        <div class="u-flex-1 u-min-w-200px u-fs-12px text-secondary u-lh-1-d-8">
+        <div class="u-flex-1 u-min-w-200px u-fs-12px text-secondary u-lh-1-8">
           <div class="u-mb-sm"><strong class="text-primary">① Serving size is the key trap.</strong> Everything on this label is <em>per serving</em>. This container has 8 servings. Eat the whole box = multiply everything by 8. Most people don't.</div>
           <div class="u-mb-sm"><strong class="text-primary">② Calories = the headline number.</strong> 230 kcal per serving. Quick mental check: is this a meal or a snack? 230 kcal is a light snack for most adults.</div>
           <div class="u-mb-sm"><strong class="text-primary">③ % Daily Value is based on 2,000 kcal/day.</strong> 5% DV = low. 20% DV = high. Use it to compare products, not as gospel — your needs differ.</div>
@@ -269,7 +269,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- NEW: Sugar visualiser -->
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Sugar in teaspoons — a visual gut-check</div>
       <div class="u-fs-12px text-secondary u-mb-md">Each cube = 1 teaspoon (~4g) of sugar. WHO daily max for adults = 6 teaspoons (25g).</div>
       <div class="u-display-flex u-gap-sm u-flex-wrap u-mb-md" role="radiogroup" aria-label="Select a food to see its sugar content">
@@ -281,13 +281,13 @@ const mod = modules.find((m) => m.id === 4)!;
         <button class="macro-btn" onclick="showSugar('apple','Apple (medium ~182g)',5,'var(--accent)')" aria-pressed="false">Apple</button>
       </div>
       <div id="sugar-cubes" class="u-mb-sm u-min-h-32px" aria-live="polite"></div>
-      <div id="sugar-label" class="u-fs-12px text-secondary u-lh-1-d-6"></div>
+      <div id="sugar-label" class="u-fs-12px text-secondary u-lh-1-6"></div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART D -->
     <h2 class="sec" id="part-d-how-far-does-100-kcal-go">Part D · how far does 100 kcal go?</h2>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How far does 100 kcal go? (exercise to burn it off)</div>
       <div class="bar-row">
         <span class="bl">Running (fast)</span>
@@ -295,46 +295,46 @@ const mod = modules.find((m) => m.id === 4)!;
       </div>
       <div class="bar-row">
         <span class="bl">Cycling</span>
-        <div class="bb u-w-30-pct u-bg-green-400"><span class="bv u-text-green-950">~15 min</span></div>
+        <div class="bb u-w-30-pct u-bg-green-400"><span class="bv u-text-hex-04342c">~15 min</span></div>
       </div>
       <div class="bar-row">
         <span class="bl">Brisk walking</span>
-        <div class="bb u-w-50-pct u-bg-green-200"><span class="bv u-text-green-950">~25 min</span></div>
+        <div class="bb u-w-50-pct u-bg-green-200"><span class="bv u-text-hex-04342c">~25 min</span></div>
       </div>
       <div class="bar-row">
         <span class="bl">Sitting at a desk</span>
-        <div class="bb u-w-100-pct u-bg-green-50 u-border-0-d-5px-solid-hex-9fe1cb"><span class="bv u-text-green-900">~75 min</span></div>
+        <div class="bb u-w-100-pct u-bg-hex-e1f5ee u-border-0-5px-solid-hex-9fe1cb"><span class="bv text-green-900">~75 min</span></div>
       </div>
-      <p class="u-fs-11px text-secondary u-m-10px-0-0">100 kcal = roughly a small apple, a plain rice cake with peanut butter, or 3 squares of dark chocolate. Exercise burns less than most people think — that croissant (250 kcal) needs 30 min of running to offset.</p>
+      <p class="u-fs-11px text-secondary panel-note">100 kcal = roughly a small apple, a plain rice cake with peanut butter, or 3 squares of dark chocolate. Exercise burns less than most people think — that croissant (250 kcal) needs 30 min of running to offset.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART E -->
     <h2 class="sec" id="part-e-energy-in-the-world-from-food-to-nuclear-weapons">Part E · energy in the world — from food to nuclear weapons</h2>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Energy released — logarithmic scale (in joules, J)</div>
       <div class="u-fs-11px text-secondary u-mb-md">Each step up is ~1,000× more energy. 1 food calorie = 4,184 joules.</div>
       <div class="energy-chart">
-        <div class="bar-row" data-val="~10 J"><span class="bl">Lifting 1 kg by 1 metre</span><div class="bb u-w-0-d-4-pct u-bg-blue-50 u-border-0-d-5px-solid-hex-b5d4f4"><span class="bv u-text-blue-900 u-ml-4px u-fs-10px">~10 J</span></div></div>
-        <div class="bar-row" data-val="~4,200 J"><span class="bl">1 food calorie (1 kcal)</span><div class="bb u-w-0-d-6-pct u-bg-blue-200"><span class="bv u-text-navy-950 u-ml-4px u-fs-10px">~4,200 J</span></div></div>
-        <div class="bar-row" data-val="~8.4 MJ"><span class="bl">Human daily food (2,000 kcal)</span><div class="bb u-w-2-pct u-bg-blue-300"><span class="bv u-text-navy-950 u-fs-10px">~8.4 MJ</span></div></div>
+        <div class="bar-row" data-val="~10 J"><span class="bl">Lifting 1 kg by 1 metre</span><div class="bb u-w-0-4-pct u-bg-hex-e6f1fb u-border-0-5px-solid-hex-b5d4f4"><span class="bv text-blue-900 u-ml-4px u-fs-10px">~10 J</span></div></div>
+        <div class="bar-row" data-val="~4,200 J"><span class="bl">1 food calorie (1 kcal)</span><div class="bb u-w-0-d-6-pct u-bg-blue-200"><span class="bv u-text-hex-042c53 u-ml-4px u-fs-10px">~4,200 J</span></div></div>
+        <div class="bar-row" data-val="~8.4 MJ"><span class="bl">Human daily food (2,000 kcal)</span><div class="bb u-w-2-pct u-bg-hex-85b7eb"><span class="bv u-text-hex-042c53 u-fs-10px">~8.4 MJ</span></div></div>
         <div class="bar-row" data-val="~34 MJ"><span class="bl">1 litre of petrol (burned)</span><div class="bb u-w-4-pct u-bg-blue-500"><span class="bv u-text-white u-fs-10px">~34 MJ</span></div></div>
         <div class="bar-row" data-val="~250 MJ–1 GJ"><span class="bl">Lightning bolt</span><div class="bb u-w-6-pct u-bg-blue-700"><span class="bv u-text-white u-fs-10px">~250 MJ–1 GJ</span></div></div>
         <div class="bar-row" data-val="~1.7 GJ"><span class="bl">Full tank of car petrol (~50L)</span><div class="bb u-w-8-pct u-bg-blue-900"><span class="bv u-text-blue-50 u-fs-10px">~1.7 GJ</span></div></div>
         <div class="bar-row" data-val="~63 TJ"><span class="bl">Hiroshima bomb (Little Boy)</span><div class="bb u-w-30-pct u-bg-brown-800"><span class="bv u-text-white">~63 TJ (63 trillion J)</span></div></div>
-        <div class="bar-row" data-val="~210 PJ — 3,300× Hiroshima"><span class="bl">Largest H-bomb ever (Tsar Bomba)</span><div class="bb u-w-100-pct u-bg-purple-800"><span class="bv u-text-purple-50">~210 PJ — 3,300× Hiroshima</span></div></div>
+        <div class="bar-row" data-val="~210 PJ — 3,300× Hiroshima"><span class="bl">Largest H-bomb ever (Tsar Bomba)</span><div class="bb u-w-100-pct bg-indigo-900"><span class="bv u-text-purple-50">~210 PJ — 3,300× Hiroshima</span></div></div>
       </div>
-      <p class="u-fs-11px text-secondary u-m-10px-0-0">Surprising fact: a typical lightning bolt (~250 MJ to ~1 GJ) contains <em>less</em> total energy than a full car petrol tank (~1.7 GJ). The difference is delivery speed — a lightning bolt releases its energy in microseconds. Your petrol tank releases it over hours. Energy rate (power) matters as much as total energy.</p>
+      <p class="u-fs-11px text-secondary panel-note">Surprising fact: a typical lightning bolt (~250 MJ to ~1 GJ) contains <em>less</em> total energy than a full car petrol tank (~1.7 GJ). The difference is delivery speed — a lightning bolt releases its energy in microseconds. Your petrol tank releases it over hours. Energy rate (power) matters as much as total energy.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART F -->
     <h2 class="sec" id="part-f-interactive-calorie-calculator">Part F · interactive calorie calculator</h2>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How long to burn off any food?</div>
-      <div class="u-display-flex u-gap-md u-flex-wrap u-align-center u-mb-md">
+      <div class="u-display-flex u-gap-md u-flex-wrap u-items-center u-mb-md">
         <label for="food-sel" class="sr-only">Choose a food</label>
-        <select id="food-sel" class="u-flex-1 u-min-w-160px">
+        <select id="food-sel" class="u-flex-1 u-minw-160px">
           <option value="52">Small apple (52 kcal)</option>
           <option value="250">Croissant (250 kcal)</option>
           <option value="300">Cheeseburger (300 kcal)</option>
@@ -346,7 +346,7 @@ const mod = modules.find((m) => m.id === 4)!;
           <option value="700">Pizza slice, large (700 kcal)</option>
         </select>
         <label for="activity-sel" class="sr-only">Choose an activity</label>
-        <select id="activity-sel" class="u-flex-1 u-min-w-160px">
+        <select id="activity-sel" class="u-flex-1 u-minw-160px">
           <option value="11.5">Running fast (11.5 kcal/min)</option>
           <option value="7">Cycling moderate (7 kcal/min)</option>
           <option value="4">Brisk walking (4 kcal/min)</option>
@@ -355,20 +355,20 @@ const mod = modules.find((m) => m.id === 4)!;
           <option value="0.9">Sleeping (0.9 kcal/min)</option>
         </select>
       </div>
-      <div id="calorie-result" class="u-fs-14px text-primary u-bg-background-secondary u-radius-border-radius-md u-p-10px-13px u-lh-1-d-8" aria-live="polite"></div>
+      <div id="calorie-result" class="u-fs-14px text-primary u-bg-background-secondary u-radius-radius-md u-p-10px-13px u-lh-1-8" aria-live="polite"></div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART G (NEW) -->
     <h2 class="sec" id="part-g-fibre-the-forgotten-macronutrient">Part G · fibre — the forgotten macronutrient</h2>
 
-    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Why fibre deserves its own section</div>
-      <div class="u-fs-13px text-secondary u-lh-1-d-7">
+      <div class="u-fs-13px text-secondary u-lh-1-7">
         Fibre is a carbohydrate the body cannot digest — it passes through mostly intact, but does critical work on the way. It is not "inert bulk." It feeds gut bacteria (your microbiome), slows glucose absorption, lowers cholesterol, and keeps bowel movements regular. Most adults in wealthy countries eat about half the recommended amount.
       </div>
     </div>
 
-    <div class="cgrid u-grid-cols-repeat-auto-fit-minmax-140px-1fr">
+    <div class="cgrid u-gridcols-auto-fit-140px-1fr">
       <div class="card">
         <p class="clabel">Recommended daily fibre</p>
         <p class="cval">25–30 g</p>
@@ -392,37 +392,37 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- Fibre sources comparison chart SVG -->
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Fibre content per serving — common foods compared</div>
       <div class="bar-row"><span class="bl">Lentils, 100g cooked</span><div class="bb u-w-80-pct u-bg-green-600"><span class="bv u-text-white">8 g</span></div></div>
       <div class="bar-row"><span class="bl">Black beans, 100g cooked</span><div class="bb u-w-75-pct u-bg-green-500"><span class="bv u-text-white">7.5 g</span></div></div>
-      <div class="bar-row"><span class="bl">Oats, 40g dry (1 serving)</span><div class="bb u-w-40-pct u-bg-green-400"><span class="bv u-text-green-950">4 g</span></div></div>
-      <div class="bar-row"><span class="bl">Apple, medium (~182g)</span><div class="bb u-w-45-pct u-bg-green-200"><span class="bv u-text-green-950">4.5 g</span></div></div>
-      <div class="bar-row"><span class="bl">Broccoli, 100g</span><div class="bb u-w-26-pct u-bg-green-100"><span class="bv u-text-green-900">2.6 g</span></div></div>
-      <div class="bar-row"><span class="bl">Wholegrain bread, 1 slice</span><div class="bb u-w-20-pct u-bg-green-75"><span class="bv u-text-green-900">2 g</span></div></div>
-      <div class="bar-row"><span class="bl">White bread, 1 slice</span><div class="bb u-w-6-pct u-bg-green-50 u-border-0-d-5px-solid-hex-9fe1cb"><span class="bv u-text-green-900">0.6 g</span></div></div>
-      <p class="u-fs-11px text-secondary u-m-10px-0-0">Rule of thumb: ≥5g fibre per serving = "high fibre." ≥3g = "source of fibre" (EU labelling). Legumes beat everything else by a wide margin.</p>
+      <div class="bar-row"><span class="bl">Oats, 40g dry (1 serving)</span><div class="bb u-w-40-pct u-bg-green-400"><span class="bv u-text-hex-04342c">4 g</span></div></div>
+      <div class="bar-row"><span class="bl">Apple, medium (~182g)</span><div class="bb u-w-45-pct u-bg-green-200"><span class="bv u-text-hex-04342c">4.5 g</span></div></div>
+      <div class="bar-row"><span class="bl">Broccoli, 100g</span><div class="bb u-w-26-pct u-bg-green-100"><span class="bv text-green-900">2.6 g</span></div></div>
+      <div class="bar-row"><span class="bl">Wholegrain bread, 1 slice</span><div class="bb u-w-20-pct u-bg-green-75"><span class="bv text-green-900">2 g</span></div></div>
+      <div class="bar-row"><span class="bl">White bread, 1 slice</span><div class="bb u-w-6-pct u-bg-hex-e1f5ee u-border-0-5px-solid-hex-9fe1cb"><span class="bv text-green-900">0.6 g</span></div></div>
+      <p class="u-fs-11px text-secondary panel-note">Rule of thumb: ≥5g fibre per serving = "high fibre." ≥3g = "source of fibre" (EU labelling). Legumes beat everything else by a wide margin.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART H (NEW) -->
     <h2 class="sec" id="part-h-food-label-estimation-game">Part H · food label estimation game</h2>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Guess the calories — 5 rounds</div>
       <div class="u-fs-12px text-secondary u-mb-md">You'll be shown a real food and a quantity. Pick the closest calorie estimate.</div>
       <div id="cg-progress" class="u-fs-11px text-tertiary u-mb-sm"></div>
       <div id="cg-question" class="u-fs-14px u-fw-500 text-primary u-mb-md"></div>
       <div id="cg-options" class="u-display-flex u-flex-wrap u-gap-6px u-mb-md"></div>
-      <div id="cg-feedback" class="u-fs-12px text-secondary u-lh-1-d-6 u-min-h-36px"></div>
-      <div id="cg-score-board" class="u-display-none u-bg-background-secondary u-radius-border-radius-md u-p-10px-13px u-fs-13px"></div>
+      <div id="cg-feedback" class="u-fs-12px text-secondary u-lh-1-6 u-min-h-36px"></div>
+      <div id="cg-score-board" class="u-display-none u-bg-background-secondary u-radius-radius-md u-p-10px-13px u-fs-13px"></div>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART I (NEW) -->
     <h2 class="sec" id="part-i-the-glycaemic-index-why-not-all-carbs-are-equal">Part I · the glycaemic index — why not all carbs are equal</h2>
 
-    <div class="u-bg-background-secondary u-radius-border-radius-md u-p-11px-14px u-mb-lg">
+    <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What is the glycaemic index (GI)?</div>
-      <div class="u-fs-13px text-secondary u-lh-1-d-7">
+      <div class="u-fs-13px text-secondary u-lh-1-7">
         GI measures how fast a carbohydrate food raises blood glucose, on a scale of 0–100 (pure glucose = 100). High-GI foods cause a rapid spike and subsequent crash. Low-GI foods cause a slower, steadier rise. GI matters most for diabetics and athletes, but it's a useful mental model for everyone: it explains why you're hungry 90 minutes after white toast but not after oats.
       </div>
     </div>
@@ -487,7 +487,7 @@ const mod = modules.find((m) => m.id === 4)!;
       </svg>
     </div>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">GI — the nuances that matter</div>
       <div class="anchor-row">
         <span class="pill p-amber">GL &gt; GI</span>
@@ -506,10 +506,10 @@ const mod = modules.find((m) => m.id === 4)!;
     <!-- ═══════════════════════════════════════════════════════ PART J (NEW) -->
     <h2 class="sec" id="part-j-food-label-decoder-interactive">Part J · food label decoder — interactive</h2>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Calculate calories from a label</div>
       <div class="u-fs-12px text-secondary u-mb-md">Enter the macros from any nutrition label and see the calorie breakdown.</div>
-      <div class="u-display-grid u-grid-cols-repeat-auto-fit-minmax-130px-1fr u-gap-md u-mb-md">
+      <div class="u-display-grid u-gridcols-auto-fit-130px-1fr u-gap-md u-mb-md">
         <div>
           <label for="ld-fat" class="u-fs-11px text-secondary u-display-block u-mb-xs">Fat (g)</label>
           <input type="number" id="ld-fat" min="0" max="200" value="8" step="0.5">
@@ -534,7 +534,7 @@ const mod = modules.find((m) => m.id === 4)!;
     <!-- ═══════════════════════════════════════════════════════ PART K (anchor) -->
     <h2 class="sec" id="part-k-anchor-numbers-to-memorize">Part K · anchor numbers to memorize</h2>
 
-    <div class="u-bg-background-primary u-border-0-d-5px-solid-var-color-border-tertiary u-radius-border-radius-lg u-p-13px-15px u-mb-1-d-2rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
       <div class="anchor-row">
         <span class="pill p-red">2,000 kcal</span>
         <div><div class="atext">Average human daily energy need</div><div class="asub">Fat = 9 kcal/g. Carbs &amp; protein = 4 kcal/g each.</div></div>
@@ -842,7 +842,7 @@ const mod = modules.find((m) => m.id === 4)!;
     <!-- ═══════════════════════════════════════════════════════ PART M (agriculture anchor numbers) -->
     <h2 class="sec" id="part-m-agriculture-anchor-numbers">Part M · agriculture anchor numbers</h2>
 
-    <div class="content-card-static u-mb-1-d-2rem">
+    <div class="content-card-static block-spaced">
       <div class="anchor-row">
         <span class="pill p-green">~70%</span>
         <div><div class="atext">Share of global freshwater withdrawals used by agriculture</div><div class="asub">Producing 1 kg of beef requires roughly 15,000 litres of water -- about the same as 6 months of drinking water for a person.</div></div>
@@ -987,7 +987,7 @@ function updateCalc() {
   document.getElementById('calorie-result').innerHTML =
     '<strong>' + foodLabel + '</strong><br>' +
     actLabel + ': <strong>' + timeStr + '</strong> to burn it off.<br>' +
-    '<span class="result-note">That\'s ' + (kcal/rate).toFixed(1) + ' minutes at ' + rate + ' kcal/min.</span>';
+    '<span class="muted-small">That\'s ' + (kcal/rate).toFixed(1) + ' minutes at ' + rate + ' kcal/min.</span>';
 }
 document.getElementById('food-sel').addEventListener('change', updateCalc);
 document.getElementById('activity-sel').addEventListener('change', updateCalc);
@@ -1022,7 +1022,7 @@ function calcLabel() {
     + '</svg>';
   var daily = Math.round(totalEaten/2000*100);
   document.getElementById('ld-result').innerHTML =
-    '<div class="label-result-main">'
+    '<div class="text-medium">'
     + '<strong>' + Math.round(totalPerServing) + ' kcal</strong> per serving'
     + (servings !== 1 ? ' &nbsp;·&nbsp; <strong>' + Math.round(totalEaten) + ' kcal</strong> total (' + servings + ' servings)' : '')
     + '</div>'
@@ -1101,7 +1101,7 @@ function cgShowScore() {
   sb.style.display = 'block';
   var msgs = ['Keep studying — the facts are worth knowing!', 'Decent start — the macro maths will click with practice.', 'Good — you have solid food number intuition.', 'Great — that\'s real nutritional literacy.', 'Perfect score — you\'ve got a genuine sense for food energy.'];
   sb.innerHTML = '<strong>Score: ' + cgScore + ' / ' + cgQuestions.length + '</strong><br>'
-    + '<span class="result-note">' + msgs[Math.min(cgScore, msgs.length - 1)] + '</span><br><br>'
+    + '<span class="muted-small">' + msgs[Math.min(cgScore, msgs.length - 1)] + '</span><br><br>'
     + '<button onclick="cgRestart()" class="replay-btn">↺ Play again</button>';
 }
 

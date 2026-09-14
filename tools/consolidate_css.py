@@ -33,6 +33,9 @@ ROOT = Path(__file__).resolve().parent.parent
 MODULE_CSS = ROOT / 'src' / 'styles' / 'modules-src'
 PAGES = ROOT / 'src' / 'pages' / 'modules'
 SHARED = ROOT / 'src' / 'styles' / 'shared.css'
+COMPONENTS = ROOT / 'src' / 'styles' / 'components.css'
+SHARED_SHEETS = [p for p in (SHARED, COMPONENTS) if p.exists()]
+UTILITY_NAME = re.compile(r'^(u-[\w-]+|(text|bg|border)-[a-z]+-\d+)$')
 
 SINGLE_CLASS = re.compile(r'^\.([A-Za-z][\w-]*)$')
 
@@ -218,10 +221,11 @@ def sweep_dead(apply: bool) -> int:
 def shared_components() -> dict[tuple, str]:
     """Declaration block -> shared component class, utilities excluded."""
     blocks: dict[tuple, str] = {}
-    for selector, decls, _ in iter_rules(read(SHARED)):
-        m = SINGLE_CLASS.match(selector)
-        if m and not m.group(1).startswith('u-') and block_key(decls) not in blocks:
-            blocks[block_key(decls)] = m.group(1)
+    for sheet in SHARED_SHEETS:
+        for selector, decls, _ in iter_rules(read(sheet)):
+            m = SINGLE_CLASS.match(selector)
+            if m and not UTILITY_NAME.match(m.group(1)) and block_key(decls) not in blocks:
+                blocks[block_key(decls)] = m.group(1)
     return blocks
 
 
@@ -358,22 +362,28 @@ def main(argv: list[str]) -> int:
     if '--compound' in argv:
         return rename_compound(apply)
 
-    # Utility classes are never merge targets: folding a meaningful name like
-    # .diagram-svg into .u-shrink-0 removes a rule but moves a styling decision
-    # into the markup and loses the name. Only shared components qualify.
+    # A meaningful name is never folded into a utility: merging .diagram-svg
+    # into .u-shrink-0 removes a rule but moves a styling decision into the
+    # markup and loses the name. Utility and palette names may fold into each
+    # other, since those names only ever describe their value.
     shared_blocks: dict[tuple, str] = {}
-    for selector, decls, _ in iter_rules(read(SHARED)):
-        m = SINGLE_CLASS.match(selector)
-        if m and not m.group(1).startswith('u-') and block_key(decls) not in shared_blocks:
-            shared_blocks[block_key(decls)] = m.group(1)
+    utility_blocks: dict[tuple, str] = {}
+    for sheet in SHARED_SHEETS:
+        for selector, decls, _ in iter_rules(read(sheet)):
+            m = SINGLE_CLASS.match(selector)
+            if not m:
+                continue
+            target = utility_blocks if UTILITY_NAME.match(m.group(1)) else shared_blocks
+            target.setdefault(block_key(decls), m.group(1))
 
+    only = set(argv[argv.index('--modules') + 1].split(',')) if '--modules' in argv else None
     planned: dict[str, list[tuple[str, str]]] = defaultdict(list)   # module -> [(from, to)]
     skipped: dict[str, int] = defaultdict(int)
 
     for css_file in sorted(MODULE_CSS.glob('*.css')):
         slug = css_file.stem
         page = PAGES / f'{slug}.astro'
-        if not page.exists():
+        if not page.exists() or (only is not None and slug not in only):
             continue
         css = read(css_file)
         raw = read(page)
@@ -395,8 +405,16 @@ def main(argv: list[str]) -> int:
                 rules[m.group(1)] = (decls, span)
 
         for name, (decls, _span) in rules.items():
-            target = shared_blocks.get(block_key(decls))
-            if not target or target == name:
+            k = block_key(decls)
+            target = shared_blocks.get(k) or (utility_blocks.get(k) if UTILITY_NAME.match(name) else None)
+            if not target:
+                continue
+            if target == name:
+                # the module keeps an identical copy of a class that is now shared
+                if occurrences[name] == 1:
+                    planned[slug].append((name, name))
+                else:
+                    skipped['declared more than once'] += 1
                 continue
             if occurrences[name] != 1:
                 skipped['declared more than once'] += 1

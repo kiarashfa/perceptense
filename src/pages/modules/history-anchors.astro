@@ -11,7 +11,7 @@ const mod = modules.find((m) => m.id === 10)!;
 
   
 <div class="u-display-flex u-items-center u-gap-14px u-mb-md">
-  <i class="fa-solid fa-archway u-fs-42px u-text-hex-4e99a3 u-shrink-0"></i>
+  <i class="fa-solid fa-archway u-fs-42px text-accent u-shrink-0"></i>
   <h1 class="module-title u-m-0 u-lh-1-05">Module 10: History Anchors</h1>
 </div>
     <p class="module-subtitle">A navigable map of the last 5,000 years</p>
@@ -22,43 +22,43 @@ const mod = modules.find((m) => m.id === 10)!;
       <div class="era-card u-bg-hex-eeedfe u-bordercolor-hex-afa9ec">
         <div class="era-num u-text-hex-3c3489">Era 1</div>
         <div class="era-name u-text-hex-26215c">Ancient world</div>
-        <div class="era-dates u-text-hex-534ab7">3000 BC – 500 AD</div>
+        <div class="era-dates text-indigo-700">3000 BC – 500 AD</div>
       </div>
       <div class="era-card u-bg-hex-faece7 u-bordercolor-hex-f0997b">
-        <div class="era-num u-text-hex-712b13">Era 2</div>
+        <div class="era-num text-orange-900">Era 2</div>
         <div class="era-name u-text-hex-4a1b0c">Middle Ages</div>
         <div class="era-dates u-text-hex-993c1d">500 – 1400</div>
       </div>
       <div class="era-card u-bg-hex-faeeda u-bordercolor-hex-ef9f27">
-        <div class="era-num u-text-hex-633806">Era 3</div>
-        <div class="era-name u-text-hex-412402">Early Modern</div>
-        <div class="era-dates u-text-hex-854f0b">1400 – 1700</div>
+        <div class="era-num text-amber-900">Era 3</div>
+        <div class="era-name text-amber-950">Early Modern</div>
+        <div class="era-dates text-orange-850">1400 – 1700</div>
       </div>
       <div class="era-card u-bg-hex-e1f5ee u-bordercolor-hex-5dcaa5">
-        <div class="era-num u-text-hex-085041">Era 4</div>
+        <div class="era-num text-green-900">Era 4</div>
         <div class="era-name u-text-hex-04342c">Enlightenment</div>
-        <div class="era-dates u-text-hex-0f6e56">1700 – 1800</div>
+        <div class="era-dates u-text-green-800">1700 – 1800</div>
       </div>
       <div class="era-card u-bg-hex-eaf3de u-bordercolor-hex-97c459">
-        <div class="era-num u-text-hex-27500a">Era 5</div>
+        <div class="era-num text-green-800">Era 5</div>
         <div class="era-name u-text-hex-173404">Long 19th century</div>
         <div class="era-dates u-text-hex-3b6d11">1800 – 1914</div>
       </div>
       <div class="era-card u-bg-hex-fcebeb u-bordercolor-hex-f09595">
         <div class="era-num u-text-hex-791f1f">Era 6</div>
         <div class="era-name u-text-hex-501313">Age of catastrophe</div>
-        <div class="era-dates u-text-hex-a32d2d">1914 – 1945</div>
+        <div class="era-dates text-red-700">1914 – 1945</div>
       </div>
       <div class="era-card u-bg-hex-e6f1fb u-bordercolor-hex-85b7eb">
-        <div class="era-num u-text-hex-0c447c">Era 7</div>
+        <div class="era-num text-blue-900">Era 7</div>
         <div class="era-name u-text-hex-042c53">Modern world</div>
-        <div class="era-dates u-text-hex-185fa5">1945 – today</div>
+        <div class="era-dates text-blue-700">1945 – today</div>
       </div>
     </div>
 
     <h2 class="sec" id="part-b-interactive-timeline-click-any-event-to-learn-more">Part B · interactive timeline — click any event to learn more</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-display-flex u-gap-sm u-items-center u-mb-md u-flex-wrap">
         <span class="u-fs-12px text-secondary">Jump to era:</span>
         <button onclick="jumpTo(-3000)" class="u-fs-11px u-p-2px-8px">Ancient</button>
@@ -84,7 +84,7 @@ const mod = modules.find((m) => m.id === 10)!;
 
     <h2 class="sec" id="part-c-the-60-anchor-events-your-permanent-mental-map">Part C · the 60 anchor events — your permanent mental map</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg" id="anchor-list"></div>
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg" id="anchor-list"></div>
 
     <h2 class="sec" id="part-d-proximity-shockers-things-that-feel-far-apart-but-aren-t">Part D · proximity shockers — things that feel far apart but aren't</h2>
 
@@ -138,53 +138,53 @@ const mod = modules.find((m) => m.id === 10)!;
 
     <h2 class="sec" id="part-e-the-what-year-was-that-lookup-tool">Part E · the "what year was that?" lookup tool</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Enter any year and instantly see its era, what just happened, and what was coming next.</div>
       <div class="u-display-flex u-gap-md u-items-center u-mb-md u-flex-wrap">
         <input type="number" id="year-lookup" placeholder="e.g. 1870" min="-3000" max="2025" class="u-flex-1 u-minw-120px u-fs-14px">
-        <button onclick="lookupYear()" class="u-p-0-18px u-h-36px u-fs-13px">Look up ↗</button>
+        <button onclick="lookupYear()" class="u-p-0-18px control-height u-fs-13px">Look up ↗</button>
       </div>
       <div id="lookup-result" class="u-fs-13px text-primary u-lh-1-8"></div>
     </div>
 
     <h2 class="sec" id="part-f-how-long-did-they-last-empire-and-civilisation-lifespans">Part F · how long did they last? — empire &amp; civilisation lifespans</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <p class="u-fs-12px text-secondary u-m-0-0-14px u-lh-1-6">One of the most disorienting facts in history: most major empires lasted longer than the entire gap between Napoleon and today. Use this chart to calibrate your sense of historical depth.</p>
       <div id="empire-bars"></div>
-      <p class="u-fs-11px text-tertiary u-m-10px-0-0 u-lh-1-5">* "Roman civilisation" measured from Rome's traditional founding (753 BC) to the final fall of the Eastern Empire (1453 AD). Many empires had interruptions; durations shown are total civilisational spans.</p>
+      <p class="u-fs-11px text-tertiary panel-note u-lh-1-5">* "Roman civilisation" measured from Rome's traditional founding (753 BC) to the final fall of the Eastern Empire (1453 AD). Many empires had interruptions; durations shown are total civilisational spans.</p>
     </div>
 
     <h2 class="sec" id="part-g-concurrent-worlds-what-was-happening-everywhere-at-once">Part G · concurrent worlds — what was happening everywhere at once?</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
-      <p class="u-fs-12px text-secondary u-m-0-0-12px u-lh-1-6">History is often taught one civilisation at a time. But the world was always happening everywhere simultaneously. Pick a moment and see the full picture.</p>
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
+      <p class="u-fs-12px text-secondary gap-below-md u-lh-1-6">History is often taught one civilisation at a time. But the world was always happening everywhere simultaneously. Pick a moment and see the full picture.</p>
       <div class="u-display-flex u-gap-7px u-flex-wrap u-mb-lg" id="conc-btns"></div>
       <div id="conc-panel"></div>
     </div>
 
     <h2 class="sec" id="part-h-depth-calculator-where-does-a-year-sit-in-all-of-history">Part H · depth calculator — where does a year sit in all of history?</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Enter a year to see how it relates to the full sweep of recorded history.</div>
       <div class="u-display-flex u-gap-md u-items-center u-mb-md u-flex-wrap">
         <input type="number" id="depth-year" placeholder="e.g. 1066" min="-3000" max="2025" class="u-flex-1 u-minw-120px u-fs-14px">
-        <button onclick="calcDepth()" class="u-p-0-18px u-h-36px u-fs-13px">Calculate ↗</button>
+        <button onclick="calcDepth()" class="u-p-0-18px control-height u-fs-13px">Calculate ↗</button>
       </div>
       <div id="depth-result"></div>
     </div>
 
     <h2 class="sec" id="part-i-the-speed-of-change-how-long-between-each-leap">Part I · the speed of change — how long between each leap?</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <p class="u-fs-12px text-secondary u-m-0-0-14px u-lh-1-6">The time between major human leaps keeps shrinking. Each bar shows the gap (in years) between one civilisational milestone and the next. The compression in the last 300 years is staggering.</p>
       <div id="speed-bars"></div>
-      <p class="u-fs-11px text-tertiary u-m-10px-0-0 u-lh-1-5">Note: gaps between ancient milestones are approximate. The compression of modern change is the key insight here.</p>
+      <p class="u-fs-11px text-tertiary panel-note u-lh-1-5">Note: gaps between ancient milestones are approximate. The compression of modern change is the key insight here.</p>
     </div>
 
     <h2 class="sec" id="part-j-history-quiz-test-your-calibration">Part J · history quiz — test your calibration</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">10 questions. No multiple-choice tricks — just "before or after?" calibration.</div>
       <div class="u-fs-12px text-secondary u-mb-lg">Score: <span id="quiz-score">0</span> / <span id="quiz-total">0</span></div>
       <div id="quiz-container"></div>
@@ -193,7 +193,7 @@ const mod = modules.find((m) => m.id === 10)!;
 
     <h2 class="sec" id="part-k-wars-in-depth-the-conflicts-that-shaped-the-world">Part K · wars in depth — the conflicts that shaped the world</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <p class="u-fs-12px text-secondary u-m-0-0-13px u-lh-1-6">Ten defining conflicts — each one a turning point that remade the political, cultural, or technological order of the world. Select a war to see its full profile.</p>
       <div class="u-display-flex u-gap-5px u-flex-wrap u-mb-lg" id="war-tabs"></div>
       <div id="war-panel"></div>
@@ -201,7 +201,7 @@ const mod = modules.find((m) => m.id === 10)!;
 
     <h2 class="sec" id="part-l-iran-through-the-ages-3-000-years-of-continuous-civilisation">Part L · Iran through the ages — 3,000 years of continuous civilisation</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <p class="u-fs-12px text-secondary u-m-0-0-13px u-lh-1-6">Iran (historically known as Persia) has one of the longest continuous civilisational histories on Earth — encompassing some of history's largest empires, world-shaping religions, and cultural achievements that influenced Greece, Rome, Islam, and beyond. Select an era to explore its full profile.</p>
       <div class="u-display-flex u-gap-5px u-flex-wrap u-mb-lg" id="iran-tabs"></div>
       <div id="iran-panel"></div>
@@ -412,7 +412,7 @@ function buildAnchorList() {
   });
   let rows = '';
   eraEvents.forEach(e => {
-    rows += `<div class="u-display-flex u-gap-md u-p-5px-0 u-bb-0-5px-solid-border-tertiary u-items-baseline u-cursor-pointer" onclick="jumpTo(${e.y})" title="Jump to ${fmtYear(e.y)}">
+    rows += `<div class="u-display-flex u-gap-md u-p-5px-0 u-bb-0-5px-solid-border-tertiary u-items-baseline is-clickable" onclick="jumpTo(${e.y})" title="Jump to ${fmtYear(e.y)}">
       <span class="u-fs-12px u-fw-500 text-secondary u-minw-64px u-shrink-0 u-font-monospace">${fmtYear(e.y)}</span>
       <span class="u-fs-13px text-primary">${e.name}</span>
     </div>`;
@@ -468,9 +468,9 @@ function buildEmpireBars() {
   sorted.forEach(emp => {
     const dur = emp.end - emp.start;
     const pct = Math.round((dur / maxDur) * 100);
-    html += `<div class="empire-bar-row">
-      <div class="empire-bar-label">${emp.name}</div>
-      <div class="empire-bar-track">
+    html += `<div class="track-row">
+      <div class="track-label-padded">${emp.name}</div>
+      <div class="track-tall">
         <div class="empire-bar-fill">
           <span class="bv">${dur.toLocaleString()} yrs</span>
         </div>
@@ -557,7 +557,7 @@ function showConcurrent(idx) {
   w.regions.forEach(r => {
     html += `<div class="anchor-row">
       <span class="region-pill">${r.name}</span>
-      <span class="region-text">${r.text}</span>
+      <span class="body-relaxed">${r.text}</span>
     </div>`;
   });
   const panel = document.getElementById('conc-panel');
@@ -625,7 +625,7 @@ function calcDepth() {
     html += `<div class="depth-row">
       <div class="depth-icon">${r.icon}</div>
       <div class="depth-label">${r.label}</div>
-      <div class="depth-val u-maxw-55-pct u-align-right u-fs-12px">${r.val}</div>
+      <div class="depth-val u-maxw-55-pct u-text-right u-fs-12px">${r.val}</div>
     </div>`;
   });
 
@@ -660,7 +660,7 @@ function buildSpeedBars() {
   let html = '';
   speedMilestones.forEach(m => {
     const pct = Math.max(3, Math.round((m.gap / maxGap) * 100));
-    html += `<div class="speed-row">
+    html += `<div class="data-row-loose">
       <div class="speed-label">${m.from}<br>→ ${m.to}</div>
       <div class="speed-track">
         <div class="speed-fill">
@@ -779,7 +779,7 @@ function renderQuizQuestion() {
     <button class="quiz-opt" onclick="answerQuiz('a')" id="qopt-a">${q.a}</button>
     <button class="quiz-opt" onclick="answerQuiz('b')" id="qopt-b">${q.b}</button>
     ${q.correct === 'tie' ? `<button class="quiz-opt" onclick="answerQuiz('tie')" id="qopt-tie">They happened at the same time / same year</button>` : ''}
-    <div id="quiz-feedback" class="u-display-none u-mt-sm u-fs-12px text-secondary u-lh-1-6 u-bg-background-secondary u-radius-radius-md u-p-8px-10px"></div>
+    <div id="quiz-feedback" class="u-display-none u-mt-sm u-fs-12px text-secondary u-lh-1-6 u-bg-background-secondary u-radius-radius-md pad-compact"></div>
   `;
 }
 
@@ -1660,7 +1660,7 @@ function showIranEra(idx) {
   html += `<p class="war-body-text u-mb-md">${era.intro}</p>`;
 
   // Highlight callout
-  html += `<div class="u-bg-background-warning u-border-0-5px-solid-border-warning u-radius-radius-md u-p-9px-12px u-mb-13px u-fs-12px u-text-text-warning u-lh-1-6">
+  html += `<div class="u-bg-background-warning u-border-0-5px-solid-border-warning u-radius-radius-md u-p-9px-12px u-mb-13px u-fs-12px text-warning u-lh-1-6">
     <strong>↳ Key fact:</strong> ${era.highlight}
   </div>`;
 
