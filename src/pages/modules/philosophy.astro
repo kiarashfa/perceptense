@@ -726,11 +726,13 @@ const mod = modules.find((m) => m.id === 28)!;
       var bw = Math.max(x2 - x1, 4);
       var y = PAD_T + p.row * (ROW_H + GAP);
       var pid = 'bar-' + p.name.replace(/[^a-z]/gi,'');
-      svgContent += '<rect id="' + pid + '" class="phil-tl-bar" x="' + x1 + '" y="' + y + '" width="' + bw + '" height="' + ROW_H + '" rx="3" fill="' + p.col + '" opacity="0.82" data-name="' + p.name + '"/>';
+      svgContent += '<g id="' + pid + '" class="phil-tl-bar" opacity="0.82" data-name="' + p.name + '">';
+      svgContent += '<rect x="' + x1 + '" y="' + y + '" width="' + bw + '" height="' + ROW_H + '" rx="3" fill="' + p.col + '"/>';
       // Label if bar wide enough
       if (bw > 38) {
         svgContent += '<text x="' + (x1 + 4) + '" y="' + (y + ROW_H - 5) + '" font-size="8" fill="rgba(255,255,255,0.95)" font-family="system-ui,sans-serif" pointer-events="none">' + p.name + '</text>';
       }
+      svgContent += '</g>';
     });
 
     svg.innerHTML = svgContent;
@@ -1001,14 +1003,14 @@ const mod = modules.find((m) => m.id === 28)!;
      PART A VISUAL: born-from-philosophy bars
   ────────────────────────────────────────── */
   const bornBarsData = [
-    { label:'Mathematics',      parent:'Logic / Aristotle',    century:'~300 BCE',  pct:85, col:'var(--accent)' },
-    { label:'Physics',          parent:'Natural philosophy',   century:'~1600s',    pct:72, col:'#5DAAB4' },
-    { label:'Biology',          parent:'Aristotle\'s zoology', century:'~1850s',    pct:55, col:'#63BE98' },
-    { label:'Psychology',       parent:'Phil. of mind',        century:'~1880s',    pct:48, col:'#7BBF67' },
-    { label:'Economics',        parent:'Moral philosophy',     century:'~1770s',    pct:60, col:'#9AC252' },
-    { label:'Political science',parent:'Political philosophy', century:'~1900s',    pct:42, col:'#BCC94B' },
-    { label:'Computer science', parent:'Mathematical logic',   century:'~1940s',    pct:38, col:'#D4B84A' },
-    { label:'Linguistics',      parent:'Phil. of language',    century:'~1960s',    pct:33, col:'#D4844A' },
+    { label:'Mathematics',      parent:'Logic / Aristotle',    century:'~300 BCE',  pct:85, col:'var(--accent)', textCol:'#ffffff' },
+    { label:'Physics',          parent:'Natural philosophy',   century:'~1600s',    pct:72, col:'#5DAAB4', textCol:'#1a1a18' },
+    { label:'Biology',          parent:'Aristotle\'s zoology', century:'~1850s',    pct:55, col:'#63BE98', textCol:'#1a1a18' },
+    { label:'Psychology',       parent:'Phil. of mind',        century:'~1880s',    pct:48, col:'#7BBF67', textCol:'#1a1a18' },
+    { label:'Economics',        parent:'Moral philosophy',     century:'~1770s',    pct:60, col:'#9AC252', textCol:'#1a1a18' },
+    { label:'Political science',parent:'Political philosophy', century:'~1900s',    pct:42, col:'#BCC94B', textCol:'#1a1a18' },
+    { label:'Computer science', parent:'Mathematical logic',   century:'~1940s',    pct:38, col:'#D4B84A', textCol:'#1a1a18' },
+    { label:'Linguistics',      parent:'Phil. of language',    century:'~1960s',    pct:33, col:'#D4844A', textCol:'#1a1a18' },
   ];
 
   const barsContainer = document.getElementById('phil-born-bars');
@@ -1018,7 +1020,7 @@ const mod = modules.find((m) => m.id === 28)!;
         <div class="scale-name">${d.label}</div>
         <div class="track-medium">
           <div class="influence-fill" style="width:${d.pct}%; background:${d.col};">
-            <span style="color:rgba(255,255,255,0.9);">${d.parent} · indep. ${d.century}</span>
+            <span style="color:${d.textCol};">${d.parent} · indep. ${d.century}</span>
           </div>
         </div>
       </div>`;
