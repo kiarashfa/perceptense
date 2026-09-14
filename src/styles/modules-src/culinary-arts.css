@@ -148,12 +148,19 @@
 }
 
 .doneness-swatch-medium-well {
-  background:#D35400;
+  background:#BF4C00;
 }
 
 .doneness-swatch-well-done {
   background:#784212;
 }
+
+.doneness-swatch-rare .ds-temp { color:#fff; }
+.doneness-swatch-medium-rare .ds-name,
+.doneness-swatch-medium-rare .ds-temp { color:#1a1a18; }
+.doneness-swatch-medium .ds-name,
+.doneness-swatch-medium .ds-temp { color:#1a1a18; }
+.doneness-swatch-medium-well .ds-temp { color:#fff; }
 
 .ds-temp-light {
   color:rgba(255,255,255,0.9);
@@ -321,26 +328,50 @@
 }
 
 .wine-dot-style {
-  background:#D4A0C0;
+  background:#c176a4;
 }
+html[data-theme="dark"] .wine-dot-style { background:#D4A0C0; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-dot-style { background:#D4A0C0; } }
 
 .wine-dot-tannin {
   background:#7B2D2D;
 }
+html[data-theme="dark"] .wine-dot-tannin { background:#ba4444; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-dot-tannin { background:#ba4444; } }
 
 .wine-dot-sweet-spice {
-  background:#F7E48B;
+  background:#a58a0b;
 }
+html[data-theme="dark"] .wine-dot-sweet-spice { background:#F7E48B; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-dot-sweet-spice { background:#F7E48B; } }
 
 .wine-dot-weight {
-  background:#C8A850;
+  background:#aa8b36;
 }
+html[data-theme="dark"] .wine-dot-weight { background:#C8A850; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-dot-weight { background:#C8A850; } }
 
 .wine-dot-regional {
   background:#3A6830;
 }
+html[data-theme="dark"] .wine-dot-regional { background:#447938; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-dot-regional { background:#447938; } }
 
 .wine-dot-dessert {
-  background:#E8C7A0;
+  background:#c58030;
 }
+html[data-theme="dark"] .wine-dot-dessert { background:#E8C7A0; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .wine-dot-dessert { background:#E8C7A0; } }
+
+html[data-theme="dark"] .cul-taste-dot { opacity: 0.9; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .cul-taste-dot { opacity: 0.9; } }
+
+html[data-theme="dark"] .cul-temp-danger { fill:#EF9F27; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .cul-temp-danger { fill:#EF9F27; } }
+html[data-theme="dark"] .cul-temp-beef { fill:#e06c6c; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .cul-temp-beef { fill:#e06c6c; } }
+html[data-theme="dark"] .cul-temp-pork { fill:#e48181; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .cul-temp-pork { fill:#e48181; } }
+html[data-theme="dark"] .cul-temp-chicken { fill:#edabab; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .cul-temp-chicken { fill:#edabab; } }
   

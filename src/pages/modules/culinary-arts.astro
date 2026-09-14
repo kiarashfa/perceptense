@@ -81,14 +81,14 @@ const mod = modules.find((m) => m.id === 19)!;
           <text x="680" y="60" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">100°</text>
 
           <!-- Annotation labels -->
-          <text x="152" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#B45309">⚠ Danger zone</text>
+          <text x="152" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#B45309" class="cul-temp-danger">⚠ Danger zone</text>
           <text x="152" y="94" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">Bacteria multiply fast</text>
 
-          <text x="396" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#9B1C1C">Beef med-rare</text>
+          <text x="396" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#9B1C1C" class="cul-temp-beef">Beef med-rare</text>
 
-          <text x="436" y="92" text-anchor="middle" font-size="10" font-weight="600" fill="#7F1D1D">Pork &amp; fish safe</text>
+          <text x="436" y="97" text-anchor="middle" font-size="10" font-weight="600" fill="#7F1D1D" class="cul-temp-pork">Pork &amp; fish safe</text>
 
-          <text x="508" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#450A0A">Chicken safe</text>
+          <text x="508" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#450A0A" class="cul-temp-chicken">Chicken safe</text>
           <text x="508" y="94" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">No exceptions</text>
 
           <text x="680" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-text-secondary)">Boiling</text>
@@ -848,35 +848,35 @@ const mod = modules.find((m) => m.id === 19)!;
     <div class="scroll-panel">
       <svg class="taste-wheel" viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg">
         <!-- Sweet -->
-        <circle cx="80" cy="65" r="40" fill="#FDE68A" opacity="0.7"/>
+        <circle cx="80" cy="65" r="40" fill="#FDE68A" opacity="0.7" class="cul-taste-dot"/>
         <text x="80" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#92400E" font-family="IBM Plex Sans,system-ui,sans-serif">Sweet</text>
         <text x="80" y="75" text-anchor="middle" font-size="9" fill="#92400E" font-family="IBM Plex Sans,system-ui,sans-serif">sugar, honey</text>
         <text x="80" y="86" text-anchor="middle" font-size="9" fill="#92400E" font-family="IBM Plex Sans,system-ui,sans-serif">ripe fruit</text>
         <text x="80" y="120" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="IBM Plex Sans,system-ui,sans-serif">Reduces bitterness</text>
 
         <!-- Sour -->
-        <circle cx="200" cy="65" r="40" fill="#BBF7D0" opacity="0.7"/>
+        <circle cx="200" cy="65" r="40" fill="#BBF7D0" opacity="0.7" class="cul-taste-dot"/>
         <text x="200" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#065F46" font-family="IBM Plex Sans,system-ui,sans-serif">Sour</text>
         <text x="200" y="75" text-anchor="middle" font-size="9" fill="#065F46" font-family="IBM Plex Sans,system-ui,sans-serif">citrus, vinegar</text>
         <text x="200" y="86" text-anchor="middle" font-size="9" fill="#065F46" font-family="IBM Plex Sans,system-ui,sans-serif">fermented foods</text>
         <text x="200" y="120" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="IBM Plex Sans,system-ui,sans-serif">Brightens &amp; cuts fat</text>
 
         <!-- Salty -->
-        <circle cx="320" cy="65" r="40" fill="#BAE6FD" opacity="0.7"/>
+        <circle cx="320" cy="65" r="40" fill="#BAE6FD" opacity="0.7" class="cul-taste-dot"/>
         <text x="320" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#0C4A6E" font-family="IBM Plex Sans,system-ui,sans-serif">Salty</text>
         <text x="320" y="75" text-anchor="middle" font-size="9" fill="#0C4A6E" font-family="IBM Plex Sans,system-ui,sans-serif">salt, soy sauce</text>
         <text x="320" y="86" text-anchor="middle" font-size="9" fill="#0C4A6E" font-family="IBM Plex Sans,system-ui,sans-serif">fish sauce</text>
         <text x="320" y="120" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="IBM Plex Sans,system-ui,sans-serif">Amplifies everything</text>
 
         <!-- Bitter -->
-        <circle cx="440" cy="65" r="40" fill="#E9D5FF" opacity="0.7"/>
+        <circle cx="440" cy="65" r="40" fill="#E9D5FF" opacity="0.7" class="cul-taste-dot"/>
         <text x="440" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#4C1D95" font-family="IBM Plex Sans,system-ui,sans-serif">Bitter</text>
         <text x="440" y="75" text-anchor="middle" font-size="9" fill="#4C1D95" font-family="IBM Plex Sans,system-ui,sans-serif">coffee, cocoa</text>
         <text x="440" y="86" text-anchor="middle" font-size="9" fill="#4C1D95" font-family="IBM Plex Sans,system-ui,sans-serif">radicchio, ale</text>
         <text x="440" y="120" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)" font-family="IBM Plex Sans,system-ui,sans-serif">Adds complexity</text>
 
         <!-- Umami -->
-        <circle cx="560" cy="65" r="40" fill="#FED7AA" opacity="0.7"/>
+        <circle cx="560" cy="65" r="40" fill="#FED7AA" opacity="0.7" class="cul-taste-dot"/>
         <text x="560" y="55" text-anchor="middle" font-size="11" font-weight="600" fill="#7C2D12" font-family="IBM Plex Sans,system-ui,sans-serif">Umami</text>
         <text x="560" y="68" text-anchor="middle" font-size="9" fill="#7C2D12" font-family="IBM Plex Sans,system-ui,sans-serif">meat, mushrooms</text>
         <text x="560" y="79" text-anchor="middle" font-size="9" fill="#7C2D12" font-family="IBM Plex Sans,system-ui,sans-serif">aged cheese, miso</text>
