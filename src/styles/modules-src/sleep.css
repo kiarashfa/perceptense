@@ -184,7 +184,7 @@
 
 .cycle-block-n2 {
   flex:2;
-  background:#378ADD;
+  background:#2276c9;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -208,7 +208,7 @@
 
 .cycle-block-n2-brief {
   flex:1;
-  background:#378ADD;
+  background:#2276c9;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -216,7 +216,7 @@
 
 .cycle-block-rem {
   flex:2;
-  background:#D4537E;
+  background:#ce3b6c;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -248,7 +248,7 @@
 .legend-swatch-n2 {
   width:10px;
   height:10px;
-  background:#378ADD;
+  background:#2276c9;
   border-radius:2px;
   display:inline-block;
 }
@@ -264,7 +264,7 @@
 .legend-swatch-rem {
   width:10px;
   height:10px;
-  background:#D4537E;
+  background:#ce3b6c;
   border-radius:2px;
   display:inline-block;
 }
@@ -304,7 +304,7 @@
 
 .cycle-seg-n2 {
   flex:2;
-  background:#378ADD;
+  background:#2276c9;
 }
 
 .cycle-seg-deep-long {
@@ -314,7 +314,7 @@
 
 .cycle-seg-rem-short {
   flex:1;
-  background:#D4537E;
+  background:#ce3b6c;
 }
 
 .cycle-shift-note {
@@ -330,7 +330,7 @@
 
 .cycle-seg-rem-mid {
   flex:2;
-  background:#D4537E;
+  background:#ce3b6c;
 }
 
 .cycle-seg-deep-short {
@@ -340,7 +340,7 @@
 
 .cycle-seg-rem-long {
   flex:3.5;
-  background:#D4537E;
+  background:#ce3b6c;
 }
 
 .cycle-seg-deep-trace {
@@ -350,7 +350,7 @@
 
 .cycle-seg-rem-max {
   flex:5;
-  background:#D4537E;
+  background:#ce3b6c;
 }
 
 .alarm-note {
@@ -650,3 +650,29 @@
   margin-bottom:1rem;
 }
   
+html[data-theme="dark"] .legend-swatch-n3,
+html[data-theme="dark"] .cycle-seg-deep-long,
+html[data-theme="dark"] .cycle-seg-deep-mid,
+html[data-theme="dark"] .cycle-seg-deep-short,
+html[data-theme="dark"] .cycle-seg-deep-trace { background:#6860c6; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .legend-swatch-n3,
+  html[data-theme="auto"] .cycle-seg-deep-long,
+  html[data-theme="auto"] .cycle-seg-deep-mid,
+  html[data-theme="auto"] .cycle-seg-deep-short,
+  html[data-theme="auto"] .cycle-seg-deep-trace { background:#6860c6; }
+}
+
+.sbadge-n3 { background:#4f46b1; }
+
+.sleep-span-style { color:#042C53; }
+html[data-theme="dark"] .sleep-span-style { color:#1686f4; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .sleep-span-style { color:#1686f4; } }
+
+.stage-name-n2 { color:#3C3489; }
+html[data-theme="dark"] .stage-name-n2 { color:#857ece; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .stage-name-n2 { color:#857ece; } }
+
+.stage-name-rem { color:#72243E; }
+html[data-theme="dark"] .stage-name-rem { color:#cd6286; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .stage-name-rem { color:#cd6286; } }
