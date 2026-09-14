@@ -173,7 +173,7 @@
 }
 
 .property-value-amber {
-  --tint-color: #BA7517;
+  --tint-color: #633806;
 }
 
 .property-value-blue {
@@ -190,6 +190,25 @@
 
 .property-value-brown {
   --tint-color: #633806;
+}
+
+/* The light values above are tuned for light mode only (by design — see
+   memory.md); each needs a lighter dark-mode partner. Compound selectors
+   on the real class (not a bare html[data-theme] rule) so the module
+   namespacer keeps the theme condition — see the module-12 note. */
+html[data-theme="dark"] .property-value-green  { --tint-color: #9FE1CB; }
+html[data-theme="dark"] .property-value-amber  { --tint-color: #F5C563; }
+html[data-theme="dark"] .property-value-blue   { --tint-color: #85B7EB; }
+html[data-theme="dark"] .property-value-indigo { --tint-color: #CECBF6; }
+html[data-theme="dark"] .property-value-red    { --tint-color: #F09595; }
+html[data-theme="dark"] .property-value-brown  { --tint-color: #EF9F27; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .property-value-green  { --tint-color: #9FE1CB; }
+  html[data-theme="auto"] .property-value-amber  { --tint-color: #F5C563; }
+  html[data-theme="auto"] .property-value-blue   { --tint-color: #85B7EB; }
+  html[data-theme="auto"] .property-value-indigo { --tint-color: #CECBF6; }
+  html[data-theme="auto"] .property-value-red    { --tint-color: #F09595; }
+  html[data-theme="auto"] .property-value-brown  { --tint-color: #EF9F27; }
 }
 
 .strength-insight {
@@ -333,5 +352,69 @@
   grid-template-columns:1fr 1fr;
   gap:8px;
   margin-bottom:12px;
+}
+
+/* Additional semantic colours used as text/fill in the stress-strain
+   curve, cross-section diagram, bonding diagrams and material comparisons
+   — distinct exact shades from the property-value-* set above (this
+   module reuses several close-but-different hexes for the same rough
+   colour family, e.g. steel is #3C3489 in one place and #534AB7 in
+   another), so each gets its own light/dark pair rather than collapsing
+   them into one value. Declared last in the file per the module-12/13
+   lesson: a same-specificity tie goes to whichever rule is later in
+   source order. */
+.mat-c-teal    { color: #085041; fill: #085041; stroke: #085041; }
+.mat-c-indigo2 { color: #3C3489; fill: #3C3489; stroke: #3C3489; }
+.mat-c-blue2   { color: #0C447C; fill: #0C447C; stroke: #0C447C; }
+.mat-c-blue3   { color: #185FA5; fill: #185FA5; stroke: #185FA5; }
+.mat-c-green2  { color: #27500A; fill: #27500A; stroke: #27500A; }
+.mat-c-red2    { color: #A32D2D; fill: #A32D2D; stroke: #A32D2D; }
+.mat-c-electron { color: #633806; fill: #633806; stroke: #633806; }
+.mat-c-caution  { color: #633806; fill: #633806; stroke: #633806; }
+.mat-c-green3   { color: #3B6D11; fill: #3B6D11; stroke: #3B6D11; }
+html[data-theme="dark"] .mat-c-teal     { color: #5DCAA5; fill: #5DCAA5; stroke: #5DCAA5; }
+html[data-theme="dark"] .mat-c-indigo2  { color: #CECBF6; fill: #CECBF6; stroke: #CECBF6; }
+html[data-theme="dark"] .mat-c-blue2    { color: #85B7EB; fill: #85B7EB; stroke: #85B7EB; }
+html[data-theme="dark"] .mat-c-blue3    { color: #85B7EB; fill: #85B7EB; stroke: #85B7EB; }
+html[data-theme="dark"] .mat-c-green2   { color: #9FE1CB; fill: #9FE1CB; stroke: #9FE1CB; }
+html[data-theme="dark"] .mat-c-red2     { color: #F09595; fill: #F09595; stroke: #F09595; }
+html[data-theme="dark"] .mat-c-electron { color: #EF9F27; fill: #EF9F27; stroke: #EF9F27; }
+html[data-theme="dark"] .mat-c-caution  { color: #F5C563; fill: #F5C563; stroke: #F5C563; }
+html[data-theme="dark"] .mat-c-green3   { color: #9FE1CB; fill: #9FE1CB; stroke: #9FE1CB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .mat-c-teal     { color: #5DCAA5; fill: #5DCAA5; stroke: #5DCAA5; }
+  html[data-theme="auto"] .mat-c-indigo2  { color: #CECBF6; fill: #CECBF6; stroke: #CECBF6; }
+  html[data-theme="auto"] .mat-c-blue2    { color: #85B7EB; fill: #85B7EB; stroke: #85B7EB; }
+  html[data-theme="auto"] .mat-c-blue3    { color: #85B7EB; fill: #85B7EB; stroke: #85B7EB; }
+  html[data-theme="auto"] .mat-c-green2   { color: #9FE1CB; fill: #9FE1CB; stroke: #9FE1CB; }
+  html[data-theme="auto"] .mat-c-red2     { color: #F09595; fill: #F09595; stroke: #F09595; }
+  html[data-theme="auto"] .mat-c-electron { color: #EF9F27; fill: #EF9F27; stroke: #EF9F27; }
+  html[data-theme="auto"] .mat-c-caution  { color: #F5C563; fill: #F5C563; stroke: #F5C563; }
+  html[data-theme="auto"] .mat-c-green3   { color: #9FE1CB; fill: #9FE1CB; stroke: #9FE1CB; }
+}
+
+/* Fixed dark text for the two data-bars whose literal background fails
+   the default white .bv text (same reasoning as modules 9-12: the bar
+   colour is fixed regardless of theme, so one dark value covers both). */
+.mat-bv-dark { color: #1a1a18; }
+
+/* Decorative-only pairs (3:1, not 4.5:1) for bar/donut fills that don't
+   carry their own text. */
+.mat-fill-amber   { background: #BA7517; fill: #BA7517; }
+.mat-fill-teal2   { background: #1D9E75; fill: #1D9E75; }
+.mat-fill-indigo  { background: #534AB7; fill: #534AB7; stroke: #534AB7; }
+.mat-fill-green1  { background: #4B9913; fill: #4B9913; }
+.mat-fill-green2  { background: #3B6D11; fill: #3B6D11; }
+html[data-theme="dark"] .mat-fill-amber   { background: #EF9F27; fill: #EF9F27; }
+html[data-theme="dark"] .mat-fill-teal2   { background: #5DCAA5; fill: #5DCAA5; }
+html[data-theme="dark"] .mat-fill-indigo  { background: #CECBF6; fill: #CECBF6; stroke: #CECBF6; }
+html[data-theme="dark"] .mat-fill-green1  { background: #9FE1CB; fill: #9FE1CB; }
+html[data-theme="dark"] .mat-fill-green2  { background: #C0DD97; fill: #C0DD97; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .mat-fill-amber   { background: #EF9F27; fill: #EF9F27; }
+  html[data-theme="auto"] .mat-fill-teal2   { background: #5DCAA5; fill: #5DCAA5; }
+  html[data-theme="auto"] .mat-fill-indigo  { background: #CECBF6; fill: #CECBF6; stroke: #CECBF6; }
+  html[data-theme="auto"] .mat-fill-green1  { background: #9FE1CB; fill: #9FE1CB; }
+  html[data-theme="auto"] .mat-fill-green2  { background: #C0DD97; fill: #C0DD97; }
 }
   
