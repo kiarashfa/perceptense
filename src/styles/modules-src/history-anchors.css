@@ -103,7 +103,7 @@
       font-size: 10px;
       font-weight: 500;
       white-space: nowrap;
-      color: #fff;
+      color: #1a1a18;
     }
 
     /* === WAR TABS === */
@@ -259,7 +259,11 @@
 .era-style-6 { background: #FCEBEB; color: #791F1F; border-color: #F09595; }
 .era-style-7 { background: #E6F1FB; color: #0C447C; border-color: #85B7EB; }
 .empire-bar-fill, .speed-fill { width: 0; }
-.depth-fill { height: 12px; background: #85B7EB; border-radius: 4px; }
+.depth-fill { height: 12px; background: #1a6aab; border-radius: 4px; }
+html[data-theme="dark"] .depth-fill { background: #85B7EB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .depth-fill { background: #85B7EB; }
+}
 .war-other-tag { font-size: 11px; padding: 1px 8px; border-radius: 99px; border: 0.5px solid transparent; flex-shrink: 0; }
 
   

@@ -638,20 +638,20 @@ function calcDepth() {
 
 // === PART I — Speed of Change ===
 const speedMilestones = [
-  { from: "First writing (3200 BC)", to: "First empire (Akkad, 2300 BC)", gap: 900, color: "#AFA9EC" },
-  { from: "First empire (2300 BC)", to: "Iron Age begins (~1200 BC)", gap: 1100, color: "#F0997B" },
-  { from: "Iron Age (~1200 BC)", to: "Printing press (1440 AD)", gap: 2640, color: "#EF9F27" },
-  { from: "Printing press (1440)", to: "Scientific method / Newton (1687)", gap: 247, color: "#5DCAA5" },
-  { from: "Newton (1687)", to: "Industrial Revolution (1760s)", gap: 80, color: "#97C459" },
-  { from: "Steam engine (1769)", to: "Railways (1830)", gap: 61, color: "#85B7EB" },
-  { from: "Railways (1830)", to: "Telegraph (1844)", gap: 14, color: "#AFA9EC" },
-  { from: "Telegraph (1844)", to: "Telephone (1876)", gap: 32, color: "#F0997B" },
-  { from: "Telephone (1876)", to: "Radio (1895)", gap: 19, color: "#EF9F27" },
-  { from: "Radio (1895)", to: "First flight (1903)", gap: 8, color: "#5DCAA5" },
-  { from: "First flight (1903)", to: "Moon landing (1969)", gap: 66, color: "#97C459" },
-  { from: "Moon landing (1969)", to: "World Wide Web (1991)", gap: 22, color: "#85B7EB" },
-  { from: "WWW (1991)", to: "iPhone (2007)", gap: 16, color: "#AFA9EC" },
-  { from: "iPhone (2007)", to: "AI (GPT-3, 2020)", gap: 13, color: "#F09595" },
+  { from: "First writing (3200 BC)", to: "First empire (Akkad, 2300 BC)", gap: 900, color: "#AFA9EC", textColor: "#3C3489" },
+  { from: "First empire (2300 BC)", to: "Iron Age begins (~1200 BC)", gap: 1100, color: "#F0997B", textColor: "#712B13" },
+  { from: "Iron Age (~1200 BC)", to: "Printing press (1440 AD)", gap: 2640, color: "#EF9F27", textColor: "#633806" },
+  { from: "Printing press (1440)", to: "Scientific method / Newton (1687)", gap: 247, color: "#5DCAA5", textColor: "#085041" },
+  { from: "Newton (1687)", to: "Industrial Revolution (1760s)", gap: 80, color: "#97C459", textColor: "#27500A" },
+  { from: "Steam engine (1769)", to: "Railways (1830)", gap: 61, color: "#85B7EB", textColor: "#0C447C" },
+  { from: "Railways (1830)", to: "Telegraph (1844)", gap: 14, color: "#AFA9EC", textColor: "#3C3489" },
+  { from: "Telegraph (1844)", to: "Telephone (1876)", gap: 32, color: "#F0997B", textColor: "#712B13" },
+  { from: "Telephone (1876)", to: "Radio (1895)", gap: 19, color: "#EF9F27", textColor: "#633806" },
+  { from: "Radio (1895)", to: "First flight (1903)", gap: 8, color: "#5DCAA5", textColor: "#085041" },
+  { from: "First flight (1903)", to: "Moon landing (1969)", gap: 66, color: "#97C459", textColor: "#27500A" },
+  { from: "Moon landing (1969)", to: "World Wide Web (1991)", gap: 22, color: "#85B7EB", textColor: "#0C447C" },
+  { from: "WWW (1991)", to: "iPhone (2007)", gap: 16, color: "#AFA9EC", textColor: "#3C3489" },
+  { from: "iPhone (2007)", to: "AI (GPT-3, 2020)", gap: 13, color: "#F09595", textColor: "#791F1F" },
 ];
 
 function buildSpeedBars() {
@@ -674,6 +674,8 @@ function buildSpeedBars() {
     const m = speedMilestones[i];
     bar.style.width = Math.max(3, Math.round((m.gap / maxGap) * 100)) + '%';
     bar.style.background = m.color;
+    const val = bar.querySelector('.speed-val');
+    if (val) val.style.color = m.textColor;
   });
 }
 
