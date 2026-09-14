@@ -31,19 +31,19 @@ const mod = modules.find((m) => m.id === 21)!;
         <polygon points="300,8 370,50 230,50" fill="#26215C" opacity="0.92"/>
         <text x="300" y="36" text-anchor="middle" font-size="10" font-weight="600" fill="#CECBF6">Haute Couture</text>
         <!-- Tier 2: Luxury RTW -->
-        <polygon points="230,54 370,54 410,100 190,100" fill="#185FA5" opacity="0.88"/>
+        <polygon points="230,54 370,54 410,100 190,100" fill="#185FA5" opacity="1"/>
         <text x="300" y="82" text-anchor="middle" font-size="10" font-weight="600" fill="#E6F1FB">Luxury / Ready-to-Wear</text>
         <!-- Tier 3: Premium -->
-        <polygon points="190,104 410,104 455,150 145,150" fill="#1D9E75" opacity="0.85"/>
-        <text x="300" y="132" text-anchor="middle" font-size="10" font-weight="600" fill="#E1F5EE">Premium / Contemporary</text>
+        <polygon points="190,104 410,104 455,150 145,150" fill="#1D9E75" opacity="0.85" class="fsh-tier-premium-poly"/>
+        <text x="300" y="132" text-anchor="middle" font-size="10" font-weight="600" fill="#1a1a18">Premium / Contemporary</text>
         <!-- Tier 4: High Street -->
         <polygon points="145,154 455,154 510,190 90,190" fill="#633806" opacity="0.85"/>
         <text x="300" y="178" text-anchor="middle" font-size="10" font-weight="600" fill="#FAEEDA">High Street / Fast Fashion</text>
         <!-- Price labels on right -->
-        <text x="590" y="36" text-anchor="end" font-size="9" fill="#26215C" font-weight="500">€10k–€200k+</text>
-        <text x="590" y="82" text-anchor="end" font-size="9" fill="#185FA5" font-weight="500">€500–€5,000+</text>
-        <text x="590" y="132" text-anchor="end" font-size="9" fill="#1D9E75" font-weight="500">€80–€800</text>
-        <text x="590" y="178" text-anchor="end" font-size="9" fill="#633806" font-weight="500">€5–€100</text>
+        <text x="590" y="36" text-anchor="end" font-size="9" fill="#26215C" font-weight="500" class="fsh-c-indigo">€10k–€200k+</text>
+        <text x="590" y="82" text-anchor="end" font-size="9" fill="#185FA5" font-weight="500" class="fsh-c-blue">€500–€5,000+</text>
+        <text x="590" y="132" text-anchor="end" font-size="9" fill="#188462" font-weight="500" class="fsh-c-teal">€80–€800</text>
+        <text x="590" y="178" text-anchor="end" font-size="9" fill="#633806" font-weight="500" class="fsh-c-brown">€5–€100</text>
       </svg>
 
       <div class="stack-spaced">
@@ -79,17 +79,17 @@ const mod = modules.find((m) => m.id === 21)!;
       <div class="chart-kicker">Revenue comparison — 2023 (€B)</div>
       <svg class="chart-svg" viewBox="0 0 540 110" xmlns="http://www.w3.org/2000/svg">
         <!-- LVMH bar -->
-        <rect x="90" y="10" width="370" height="24" rx="3" fill="#534AB7" opacity="0.85"/>
+        <rect x="90" y="10" width="370" height="24" rx="3" fill="#534AB7" opacity="0.85" class="fsh-bar-purple"/>
         <text x="86" y="26" text-anchor="end" font-size="11" font-weight="500" fill="var(--color-text-secondary)">LVMH</text>
-        <text x="468" y="26" font-size="11" font-weight="600" fill="#534AB7">€86B</text>
+        <text x="468" y="26" font-size="11" font-weight="600" fill="#534AB7" class="fsh-c-purple">€86B</text>
         <!-- Richemont bar -->
-        <rect x="90" y="44" width="93" height="24" rx="3" fill="#185FA5" opacity="0.85"/>
+        <rect x="90" y="44" width="93" height="24" rx="3" fill="#185FA5" opacity="0.85" class="fsh-bar-blue"/>
         <text x="86" y="60" text-anchor="end" font-size="11" font-weight="500" fill="var(--color-text-secondary)">Richemont</text>
-        <text x="191" y="60" font-size="11" font-weight="600" fill="#185FA5">€20B</text>
+        <text x="191" y="60" font-size="11" font-weight="600" fill="#185FA5" class="fsh-c-blue">€20B</text>
         <!-- Kering bar -->
-        <rect x="90" y="78" width="77" height="24" rx="3" fill="#993C1D" opacity="0.85"/>
+        <rect x="90" y="78" width="77" height="24" rx="3" fill="#993C1D" opacity="0.85" class="fsh-bar-rust"/>
         <text x="86" y="94" text-anchor="end" font-size="11" font-weight="500" fill="var(--color-text-secondary)">Kering</text>
-        <text x="175" y="94" font-size="11" font-weight="600" fill="#993C1D">€18B</text>
+        <text x="175" y="94" font-size="11" font-weight="600" fill="#993C1D" class="fsh-c-rust">€18B</text>
       </svg>
     </div>
 
@@ -258,30 +258,30 @@ const mod = modules.find((m) => m.id === 21)!;
       <svg class="knot-diagram" viewBox="0 0 540 165" xmlns="http://www.w3.org/2000/svg">
         <!-- Four-in-hand -->
         <g transform="translate(40,25)">
-          <polygon points="30,0 42,30 36,120 24,120 18,30" fill="#185FA5" opacity="0.85"/>
-          <polygon points="30,0 42,30 38,18" fill="#0C447C" opacity="0.7"/>
+          <polygon points="30,0 42,30 36,120 24,120 18,30" fill="#185FA5" opacity="0.85" class="fsh-tie-blue"/>
+          <polygon points="30,0 42,30 38,18" fill="#0C447C" opacity="0.7" class="fsh-tie-blue-dark"/>
           <text x="30" y="135" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-text-primary)">Four-in-Hand</text>
           <text x="30" y="149" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">Simple · asymmetric</text>
         </g>
         <!-- Half Windsor -->
         <g transform="translate(160,25)">
-          <polygon points="35,0 52,35 42,120 28,120 18,35" fill="#185FA5" opacity="0.85"/>
-          <polygon points="35,0 52,35 46,20 24,20 18,35" fill="#0C447C" opacity="0.7"/>
+          <polygon points="35,0 52,35 42,120 28,120 18,35" fill="#185FA5" opacity="0.85" class="fsh-tie-blue"/>
+          <polygon points="35,0 52,35 46,20 24,20 18,35" fill="#0C447C" opacity="0.7" class="fsh-tie-blue-dark"/>
           <text x="35" y="135" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-text-primary)">Half Windsor</text>
           <text x="35" y="149" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">Medium · triangular</text>
         </g>
         <!-- Full Windsor -->
         <g transform="translate(290,25)">
-          <polygon points="40,0 62,38 50,120 30,120 18,38" fill="#185FA5" opacity="0.85"/>
-          <polygon points="40,0 62,38 56,22 24,22 18,38" fill="#0C447C" opacity="0.7"/>
+          <polygon points="40,0 62,38 50,120 30,120 18,38" fill="#185FA5" opacity="0.85" class="fsh-tie-blue"/>
+          <polygon points="40,0 62,38 56,22 24,22 18,38" fill="#0C447C" opacity="0.7" class="fsh-tie-blue-dark"/>
           <text x="40" y="135" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-text-primary)">Full Windsor</text>
           <text x="40" y="149" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">Large · symmetrical</text>
         </g>
         <!-- Bow tie -->
         <g transform="translate(430,48)">
-          <ellipse cx="20" cy="30" rx="20" ry="22" fill="#26215C" opacity="0.85"/>
-          <ellipse cx="60" cy="30" rx="20" ry="22" fill="#26215C" opacity="0.85"/>
-          <ellipse cx="40" cy="30" rx="8" ry="10" fill="#3C3489" opacity="0.9"/>
+          <ellipse cx="20" cy="30" rx="20" ry="22" fill="#26215C" opacity="0.85" class="fsh-tie-indigo"/>
+          <ellipse cx="60" cy="30" rx="20" ry="22" fill="#26215C" opacity="0.85" class="fsh-tie-indigo"/>
+          <ellipse cx="40" cy="30" rx="8" ry="10" fill="#3C3489" opacity="0.9" class="fsh-tie-indigo2"/>
           <text x="40" y="72" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-text-primary)">Bow Tie</text>
           <text x="40" y="86" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">Black tie / eccentric</text>
         </g>
@@ -403,33 +403,33 @@ const mod = modules.find((m) => m.id === 21)!;
 
         <!-- Natural row -->
         <text x="10" y="38" font-size="10" fill="var(--color-text-secondary)">Breathability</text>
-        <rect x="90" y="26" width="175" height="14" rx="3" fill="#1D9E75" opacity="0.8"/>
-        <rect x="290" y="26" width="60" height="14" rx="3" fill="#633806" opacity="0.6"/>
+        <rect x="90" y="26" width="175" height="14" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
+        <rect x="290" y="26" width="60" height="14" rx="3" fill="#633806" opacity="0.6" class="fsh-bar-brown"/>
 
         <text x="10" y="62" font-size="10" fill="var(--color-text-secondary)">Durability</text>
-        <rect x="90" y="50" width="100" height="14" rx="3" fill="#1D9E75" opacity="0.8"/>
-        <rect x="290" y="50" width="175" height="14" rx="3" fill="#185FA5" opacity="0.8"/>
+        <rect x="90" y="50" width="100" height="14" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
+        <rect x="290" y="50" width="175" height="14" rx="3" fill="#185FA5" opacity="0.8" class="fsh-bar-blue"/>
 
         <text x="10" y="86" font-size="10" fill="var(--color-text-secondary)">Moisture-wicking</text>
-        <rect x="90" y="74" width="80" height="14" rx="3" fill="#1D9E75" opacity="0.8"/>
-        <rect x="290" y="74" width="175" height="14" rx="3" fill="#185FA5" opacity="0.8"/>
+        <rect x="90" y="74" width="80" height="14" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
+        <rect x="290" y="74" width="175" height="14" rx="3" fill="#185FA5" opacity="0.8" class="fsh-bar-blue"/>
 
         <text x="10" y="110" font-size="10" fill="var(--color-text-secondary)">Eco impact</text>
-        <rect x="90" y="98" width="140" height="14" rx="3" fill="#1D9E75" opacity="0.8"/>
-        <rect x="290" y="98" width="60" height="14" rx="3" fill="#633806" opacity="0.6"/>
+        <rect x="90" y="98" width="140" height="14" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
+        <rect x="290" y="98" width="60" height="14" rx="3" fill="#633806" opacity="0.6" class="fsh-bar-brown"/>
 
         <text x="10" y="134" font-size="10" fill="var(--color-text-secondary)">Cost</text>
-        <rect x="90" y="122" width="80" height="14" rx="3" fill="#633806" opacity="0.6"/>
-        <rect x="290" y="122" width="155" height="14" rx="3" fill="#1D9E75" opacity="0.8"/>
+        <rect x="90" y="122" width="80" height="14" rx="3" fill="#633806" opacity="0.6" class="fsh-bar-brown"/>
+        <rect x="290" y="122" width="155" height="14" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
 
         <text x="10" y="158" font-size="10" fill="var(--color-text-secondary)">Wrinkle resist.</text>
-        <rect x="90" y="146" width="60" height="14" rx="3" fill="#633806" opacity="0.6"/>
-        <rect x="290" y="146" width="165" height="14" rx="3" fill="#1D9E75" opacity="0.8"/>
+        <rect x="90" y="146" width="60" height="14" rx="3" fill="#633806" opacity="0.6" class="fsh-bar-brown"/>
+        <rect x="290" y="146" width="165" height="14" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
 
         <!-- Legend -->
-        <rect x="450" y="5" width="10" height="10" rx="2" fill="#1D9E75" opacity="0.8"/>
+        <rect x="450" y="5" width="10" height="10" rx="2" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
         <text x="464" y="14" font-size="9" fill="var(--color-text-secondary)">Higher</text>
-        <rect x="450" y="20" width="10" height="10" rx="2" fill="#633806" opacity="0.6"/>
+        <rect x="450" y="20" width="10" height="10" rx="2" fill="#633806" opacity="0.6" class="fsh-bar-brown"/>
         <text x="464" y="29" font-size="9" fill="var(--color-text-secondary)">Lower</text>
       </svg>
     </div>
@@ -580,15 +580,15 @@ const mod = modules.find((m) => m.id === 21)!;
         <text x="430" y="12" font-size="9" fill="var(--color-text-tertiary)">more formal →</text>
         <line x1="0" y1="16" x2="540" y2="16" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
         <!-- Bars -->
-        <rect x="10"  y="24" width="70"  height="16" rx="3" fill="#D4B483"/>
+        <rect x="10"  y="24" width="70"  height="16" rx="3" fill="#D4B483" class="fsh-suit-swatch"/>
         <text x="84"  y="36" font-size="10" fill="var(--color-text-secondary)">Tan / Khaki — summer casual, holiday</text>
-        <rect x="10"  y="46" width="110" height="16" rx="3" fill="#A0855A"/>
+        <rect x="10"  y="46" width="110" height="16" rx="3" fill="#A0855A" class="fsh-suit-swatch"/>
         <text x="124" y="58" font-size="10" fill="var(--color-text-secondary)">Mid-brown — business casual, Italian style</text>
-        <rect x="10"  y="68" width="160" height="16" rx="3" fill="#5A7FA8"/>
+        <rect x="10"  y="68" width="160" height="16" rx="3" fill="#5A7FA8" class="fsh-suit-swatch"/>
         <text x="174" y="80" font-size="10" fill="var(--color-text-secondary)">Medium blue — smart versatile</text>
-        <rect x="10"  y="90" width="210" height="16" rx="3" fill="#1B3A5C"/>
+        <rect x="10"  y="90" width="210" height="16" rx="3" fill="#1B3A5C" class="fsh-suit-swatch"/>
         <text x="224" y="102" font-size="10" fill="var(--color-text-secondary)">Navy — most versatile; business to formal</text>
-        <rect x="10"  y="112" width="270" height="16" rx="3" fill="#444"/>
+        <rect x="10"  y="112" width="270" height="16" rx="3" fill="#444" class="fsh-suit-swatch"/>
         <!-- extra row below -->
       </svg>
       <!-- separate from SVG to avoid overflow -->
@@ -611,25 +611,25 @@ const mod = modules.find((m) => m.id === 21)!;
       <!-- Fragrance family SVG -->
       <div class="section-kicker">The fragrance wheel — major families</div>
       <svg class="fashion-media" viewBox="0 0 560 120" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0"   y="20" width="100" height="80" rx="6" fill="#1D9E75"  opacity="0.82"/>
-        <text x="50"  y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#E1F5EE">Fresh</text>
-        <text x="50"  y="70" text-anchor="middle" font-size="9"  fill="#9FE1CB">Citrus · Aquatic · Green</text>
+        <rect x="0"   y="20" width="100" height="80" rx="6" fill="#1D9E75"  opacity="1"/>
+        <text x="50"  y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#1a1a18">Fresh</text>
+        <text x="50"  y="70" text-anchor="middle" font-size="9"  fill="rgba(26,26,24,0.9)">Citrus · Aquatic · Green</text>
 
-        <rect x="110" y="20" width="100" height="80" rx="6" fill="#B0629A"  opacity="0.82"/>
+        <rect x="110" y="20" width="100" height="80" rx="6" fill="#723a62"  opacity="1"/>
         <text x="160" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#F5E6F1">Floral</text>
         <text x="160" y="70" text-anchor="middle" font-size="9"  fill="#E2B8D4">Rose · Jasmine · Lily</text>
 
-        <rect x="220" y="20" width="100" height="80" rx="6" fill="#633806"  opacity="0.85"/>
+        <rect x="220" y="20" width="100" height="80" rx="6" fill="#633806"  opacity="1"/>
         <text x="270" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#FAEEDA">Oriental</text>
         <text x="270" y="70" text-anchor="middle" font-size="9"  fill="#EF9F27">Amber · Vanilla · Spice</text>
 
-        <rect x="330" y="20" width="100" height="80" rx="6" fill="#3D3D3D"  opacity="0.85"/>
+        <rect x="330" y="20" width="100" height="80" rx="6" fill="#3D3D3D"  opacity="1"/>
         <text x="380" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#E8E6DF">Woody</text>
-        <text x="380" y="70" text-anchor="middle" font-size="9"  fill="#A8A69E">Sandalwood · Cedar · Oud</text>
+        <text x="380" y="70" text-anchor="middle" font-size="9"  fill="#adaba3">Sandalwood · Cedar · Oud</text>
 
-        <rect x="440" y="20" width="100" height="80" rx="6" fill="#185FA5"  opacity="0.82"/>
+        <rect x="440" y="20" width="100" height="80" rx="6" fill="#185FA5"  opacity="1"/>
         <text x="490" y="56" text-anchor="middle" font-size="11" font-weight="600" fill="#E6F1FB">Fougère</text>
-        <text x="490" y="70" text-anchor="middle" font-size="9"  fill="#B5D4F4">Lavender · Moss · Fern</text>
+        <text x="490" y="70" text-anchor="middle" font-size="9"  fill="#c2dcf6">Lavender · Moss · Fern</text>
 
         <text x="0"   y="14" font-size="9" fill="var(--color-text-tertiary)">← lighter / day</text>
         <text x="380" y="14" font-size="9" fill="var(--color-text-tertiary)">heavier / evening →</text>
@@ -732,19 +732,19 @@ const mod = modules.find((m) => m.id === 21)!;
         <rect x="0" y="4"   width="40"  height="18" rx="3" fill="#888780"/>
         <text x="46" y="17"  font-size="10" fill="var(--color-text-secondary)">Under €500 — Seiko Presage entry, fashion watches. Quartz or basic mechanical.</text>
 
-        <rect x="0" y="30"  width="80"  height="18" rx="3" fill="#1D9E75" opacity="0.8"/>
+        <rect x="0" y="30"  width="80"  height="18" rx="3" fill="#1D9E75" opacity="0.8" class="fsh-bar-teal"/>
         <text x="86" y="43"  font-size="10" fill="var(--color-text-secondary)">€500–€2k — Seiko Grand Seiko entry, Hamilton, Tissot, Longines. Quality movements.</text>
 
-        <rect x="0" y="56"  width="130" height="18" rx="3" fill="#185FA5" opacity="0.85"/>
+        <rect x="0" y="56"  width="130" height="18" rx="3" fill="#185FA5" opacity="0.85" class="fsh-bar-blue"/>
         <text x="136" y="69" font-size="10" fill="var(--color-text-secondary)">€2k–€8k — Omega Seamaster/Speedmaster, IWC entry, TAG Heuer Carrera.</text>
 
-        <rect x="0" y="82"  width="200" height="18" rx="3" fill="#3C3489" opacity="0.85"/>
+        <rect x="0" y="82"  width="200" height="18" rx="3" fill="#3C3489" opacity="0.85" class="fsh-bar-indigo2"/>
         <text x="206" y="95" font-size="10" fill="var(--color-text-secondary)">€8k–€30k — Rolex (most models), AP Royal Oak entry, JLC, Cartier Santos.</text>
 
-        <rect x="0" y="108" width="310" height="18" rx="3" fill="#26215C" opacity="0.85"/>
+        <rect x="0" y="108" width="310" height="18" rx="3" fill="#26215C" opacity="0.85" class="fsh-tie-indigo"/>
         <text x="316" y="121" font-size="10" fill="var(--color-text-secondary)">€30k–€150k — Patek Nautilus/Calatrava, AP Royal Oak offshore, Vacheron.</text>
 
-        <rect x="0" y="134" width="440" height="18" rx="3" fill="#791F1F" opacity="0.85"/>
+        <rect x="0" y="134" width="440" height="18" rx="3" fill="#791F1F" opacity="0.85" class="fsh-bar-red"/>
         <text x="446" y="147" font-size="10" fill="var(--color-text-secondary)">€150k+ — Patek Grand Complications, Tourbillons, bespoke. Horological art.</text>
       </svg>
       <div class="rule-note"><strong class="text-primary">The key insight:</strong> Below ~€2,000 you're largely paying for brand and design. Between €2,000–€10,000 you're paying for in-house or certified movements. Above €10,000 you're paying for finishing, complications, and waiting lists. The Rolex "premium" on secondary market (paying above retail) exists because demand permanently outstrips production — not because Rolex is the most technically advanced watchmaker.</div>
@@ -1825,7 +1825,7 @@ const perfumes = {
     nose: 'Olivier Creed and Erwin Creed (recent generations)',
     family: 'Chypre, Aquatic, Floral — varies',
     concentration: 'Typically EDP (called "Millésime")',
-    tierCol: '#1D9E75', tierBg: '#D9F0E4',
+    tierCol: '#157355', tierBg: '#D9F0E4',
     about: 'Creed positions itself as the oldest luxury fragrance house, claiming origins in London in 1760 with tailoring commissions from British royalty before transitioning to fragrance. The marketing claims are somewhat contested by fragrance historians. Regardless, Aventus (2010) became one of the most influential masculine fragrances of the 21st century — and one of the most extensively cloned. EQymous Group (PE-backed) acquired Creed in 2023.',
     notes: 'Aventus: Top: Pineapple, Bergamot, Black Currant. Heart: Birch, Moroccan Jasmine, Rose. Base: Musk, Oakmoss, Ambergris, Vanilla. Green Irish Tweed: Violet Leaves, Verbena, Sandalwood, Iris — the quintessential fresh fougère.',
     occasions: 'Aventus: Business and evening — projects powerfully, reads as successful and sophisticated. Green Irish Tweed: Daytime and sport — clean, effortless, classic.',
