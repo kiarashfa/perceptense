@@ -100,17 +100,17 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="panel-title">Literary forms across time — approximate dominance</div>
         <div class="mini-intro">Each era is dominated by different forms. These are rough centres of gravity, not rigid boundaries.</div>
         <div class="pc-axis">
-          <span class="axis-tick-small pc-axis-mark-style">–800 BCE</span>
-          <span class="axis-tick-small pc-axis-mark-second">500 CE</span>
-          <span class="axis-tick-small pc-axis-mark-third">1500</span>
-          <span class="axis-tick-small pc-axis-mark-fourth">1700</span>
-          <span class="axis-tick-small pc-axis-mark-fifth">1850</span>
-          <span class="axis-tick-small pc-axis-mark-last">Now</span>
+          <span class="axis-tick-small axis-tick-small-data" style="--data-left: 0%">–800 BCE</span>
+          <span class="axis-tick-small axis-tick-small-data" style="--data-left: 20%">500 CE</span>
+          <span class="axis-tick-small axis-tick-small-data" style="--data-left: 45%">1500</span>
+          <span class="axis-tick-small axis-tick-small-data" style="--data-left: 65%">1700</span>
+          <span class="axis-tick-small axis-tick-small-data" style="--data-left: 80%">1850</span>
+          <span class="axis-tick-small axis-tick-small-data" style="--data-left: 100%">Now</span>
         </div>
         <div class="data-row-loose">
           <div class="pc-label">Oral epic &amp; lyric poetry</div>
           <div class="period-track">
-            <div class="pc-fill pc-fill-style">
+            <div class="pc-fill pc-fill-data" style="--data-background: var(--accent-bg); --data-left: 0%; --data-width: 30%">
               <span class="period-label text-indigo-900">Homer, Sappho, Virgil</span>
             </div>
           </div>
@@ -118,7 +118,7 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="data-row-loose">
           <div class="pc-label">Drama (stage)</div>
           <div class="period-track">
-            <div class="pc-fill pc-fill-drama">
+            <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-warning); --data-left: 5%; --data-width: 55%">
               <span class="period-label text-warning">Sophocles → Shakespeare → Ibsen</span>
             </div>
           </div>
@@ -126,7 +126,7 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="data-row-loose">
           <div class="pc-label">Lyric &amp; narrative poetry</div>
           <div class="period-track">
-            <div class="pc-fill pc-fill-poetry">
+            <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-info); --data-left: 0%; --data-width: 80%">
               <span class="period-label text-info">Dominant through Romantic era</span>
             </div>
           </div>
@@ -134,7 +134,7 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="data-row-loose">
           <div class="pc-label">Novel</div>
           <div class="period-track">
-            <div class="pc-fill pc-fill-novel">
+            <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-success); --data-left: 58%; --data-width: 42%">
               <span class="period-label text-success">Defoe, Austen → Present</span>
             </div>
           </div>
@@ -142,7 +142,7 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="data-row-loose">
           <div class="pc-label">Personal essay</div>
           <div class="period-track">
-            <div class="pc-fill pc-fill-essay">
+            <div class="pc-fill pc-fill-data" style="--data-background: #FAECE7; --data-left: 40%; --data-width: 60%">
               <span class="period-label text-orange-900">Montaigne (1580) → Now</span>
             </div>
           </div>
@@ -150,7 +150,7 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="data-row-loose">
           <div class="pc-label">Short story</div>
           <div class="period-track">
-            <div class="pc-fill pc-fill-short-story">
+            <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-danger); --data-left: 68%; --data-width: 32%">
               <span class="period-label text-danger">Poe, Chekhov → Now</span>
             </div>
           </div>
@@ -161,12 +161,12 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Where readers spend their time — approximate distribution of literary reading</div>
         <div class="stacked-bar-compact">
-          <div class="dist-seg dist-seg-style"><span class="seg-label">52% Novels</span></div>
-          <div class="dist-seg dist-seg-short-story"><span class="seg-label">15% SS</span></div>
-          <div class="dist-seg dist-seg-nonfiction"><span class="seg-label">12% NF</span></div>
-          <div class="dist-seg dist-seg-drama"><span class="seg-label">10% Drama</span></div>
-          <div class="dist-seg dist-seg-poetry"><span class="seg-label-small">7% Poetry</span></div>
-          <div class="dist-seg dist-seg-other"><span class="seg-label-small">4%+</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #8A6DB5; --data-width: 52%"><span class="seg-label">52% Novels</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: var(--accent); --data-width: 15%"><span class="seg-label">15% SS</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #E07B5A; --data-width: 12%"><span class="seg-label">12% NF</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #5DCAA5; --data-width: 10%"><span class="seg-label">10% Drama</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #EF9F27; --data-width: 7%"><span class="seg-label-small">7% Poetry</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #AFA9EC; --data-width: 4%"><span class="seg-label-small">4%+</span></div>
         </div>
         <div class="key-list">
           <div class="legend-item"><div class="key-dot dist-leg-dot-style"></div>Novel</div>
@@ -520,12 +520,12 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title-spaced">What shaped Modernism? — approximate weight of influences</div>
         <div class="stacked-bar-compact">
-          <div class="dist-seg dist-seg-freud"><span class="seg-label-small">28% Freud/psychology</span></div>
-          <div class="dist-seg dist-seg-wwi"><span class="seg-label-small">22% WWI trauma</span></div>
-          <div class="dist-seg dist-seg-impressionism"><span class="seg-label-small">18% Impressionism</span></div>
-          <div class="dist-seg dist-seg-bergson"><span class="seg-label-small">16% Bergson/time</span></div>
-          <div class="dist-seg dist-seg-nietzsche"><span class="seg-label-small">10% Nietzsche</span></div>
-          <div class="dist-seg dist-seg-influence-other"><span class="seg-label-small">6% other</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #534AB7; --data-width: 28%"><span class="seg-label-small">28% Freud/psychology</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: var(--accent); --data-width: 22%"><span class="seg-label-small">22% WWI trauma</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #E07B5A; --data-width: 18%"><span class="seg-label-small">18% Impressionism</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #5DCAA5; --data-width: 16%"><span class="seg-label-small">16% Bergson/time</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #EF9F27; --data-width: 10%"><span class="seg-label-small">10% Nietzsche</span></div>
+          <div class="dist-seg dist-seg-data" style="--data-background: #AFA9EC; --data-width: 6%"><span class="seg-label-small">6% other</span></div>
         </div>
         <div class="key-list">
           <div class="legend-item"><div class="key-dot dist-leg-dot-indigo"></div>Freudian psychoanalysis</div>

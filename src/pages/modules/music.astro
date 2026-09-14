@@ -131,17 +131,17 @@ const mod = modules.find((m) => m.id === 33)!;
     <div class="content-panel">
       <div class="panel-title">Western classical music — periods at a glance</div>
       <div class="pc-axis">
-        <span class="axis-tick-small pc-axis-mark-style">1400</span>
-        <span class="axis-tick-small pc-axis-mark-second">1600</span>
-        <span class="axis-tick-small pc-axis-mark-third">1750</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 0%">1400</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 25%">1600</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 50%">1750</span>
         <span class="axis-tick-small pc-axis-mark-fourth">1850</span>
         <span class="axis-tick-small pc-axis-mark-fifth">1920</span>
-        <span class="axis-tick-small pc-axis-mark-last">Now</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 100%">Now</span>
       </div>
       <div class="data-row-loose">
         <div class="pc-label">Renaissance</div>
         <div class="period-track">
-          <div class="pc-fill pc-fill-style">
+          <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-warning); --data-left: 0%; --data-width: 25%">
             <span class="period-label text-warning">Palestrina, Monteverdi</span>
           </div>
         </div>
@@ -149,7 +149,7 @@ const mod = modules.find((m) => m.id === 33)!;
       <div class="data-row-loose">
         <div class="pc-label">Baroque</div>
         <div class="period-track">
-          <div class="pc-fill pc-fill-baroque">
+          <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-info); --data-left: 25%; --data-width: 25%">
             <span class="period-label text-info">Bach, Handel, Vivaldi</span>
           </div>
         </div>
@@ -157,7 +157,7 @@ const mod = modules.find((m) => m.id === 33)!;
       <div class="data-row-loose">
         <div class="pc-label">Classical</div>
         <div class="period-track">
-          <div class="pc-fill pc-fill-classical">
+          <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-success); --data-left: 50%; --data-width: 16%">
             <span class="period-label text-success">Haydn, Mozart, early Beethoven</span>
           </div>
         </div>
@@ -165,7 +165,7 @@ const mod = modules.find((m) => m.id === 33)!;
       <div class="data-row-loose">
         <div class="pc-label">Romantic</div>
         <div class="period-track">
-          <div class="pc-fill pc-fill-romantic">
+          <div class="pc-fill pc-fill-data" style="--data-background: #EEEDFE; --data-left: 66%; --data-width: 22%">
             <span class="period-label text-indigo-700">Beethoven, Brahms, Wagner, Mahler</span>
           </div>
         </div>
@@ -173,7 +173,7 @@ const mod = modules.find((m) => m.id === 33)!;
       <div class="data-row-loose">
         <div class="pc-label">20th century</div>
         <div class="period-track">
-          <div class="pc-fill pc-fill-twentieth-century">
+          <div class="pc-fill pc-fill-data" style="--data-background: var(--color-background-danger); --data-left: 88%; --data-width: 12%">
             <span class="period-label text-danger">Stravinsky, Schoenberg, Cage</span>
           </div>
         </div>
@@ -228,22 +228,22 @@ const mod = modules.find((m) => m.id === 33)!;
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Gregorian Chant</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-style"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data-background" style="--data-left: 3%"></div></div>
           <div class="cscale-val">3%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Folk Song</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-folk-song"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data-background" style="--data-left: 12%"></div></div>
           <div class="cscale-val">12%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Pop Song</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-pop-song"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data-background" style="--data-left: 28%"></div></div>
           <div class="cscale-val">28%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Mozart Quartet</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-mozart-quartet"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data-background" style="--data-left: 48%"></div></div>
           <div class="cscale-val">48%</div>
         </div>
         <div class="cscale-row">
@@ -258,7 +258,7 @@ const mod = modules.find((m) => m.id === 33)!;
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Ligeti Atmospheres</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-ligeti"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data-background" style="--data-left: 97%"></div></div>
           <div class="cscale-val">97%</div>
         </div>
       </div>
@@ -323,13 +323,13 @@ const mod = modules.find((m) => m.id === 33)!;
     <!-- Scale systems comparison bar chart -->
     <div class="content-panel">
       <div class="panel-title">Notes per octave — scale system comparison</div>
-      <div class="bar-row"><div class="bl">Western (equal temp.)</div><div class="bb bb-style"></div><div class="bv text-info">12</div></div>
-      <div class="bar-row"><div class="bl">Arabic maqam</div><div class="bb bb-arabic-maqam"></div><div class="bv text-warning">24</div></div>
-      <div class="bar-row"><div class="bl">Turkish makam</div><div class="bb bb-turkish-makam"></div><div class="bv text-warning">53</div></div>
-      <div class="bar-row"><div class="bl">Indian raga (shrutis)</div><div class="bb bb-indian-raga"></div><div class="bv text-success">22</div></div>
-      <div class="bar-row"><div class="bl">Pentatonic (global)</div><div class="bb bb-pentatonic"></div><div class="bv text-tertiary">5</div></div>
-      <div class="bar-row"><div class="bl">Gamelan (Slendro)</div><div class="bb bb-gamelan-slendro"></div><div class="bv bv-teal">5</div></div>
-      <div class="bar-row"><div class="bl">Gamelan (Pelog)</div><div class="bb bb-gamelan-pelog"></div><div class="bv bv-teal">7</div></div>
+      <div class="bar-row"><div class="bl">Western (equal temp.)</div><div class="bb bb-data" style="--data-background: var(--color-background-info); --data-width: 24%"></div><div class="bv text-info">12</div></div>
+      <div class="bar-row"><div class="bl">Arabic maqam</div><div class="bb bb-data" style="--data-background: var(--color-background-warning); --data-width: 48%"></div><div class="bv text-warning">24</div></div>
+      <div class="bar-row"><div class="bl">Turkish makam</div><div class="bb bb-data" style="--data-background: var(--color-background-warning); --data-width: 51%"></div><div class="bv text-warning">53</div></div>
+      <div class="bar-row"><div class="bl">Indian raga (shrutis)</div><div class="bb bb-data" style="--data-background: var(--color-background-success); --data-width: 44%"></div><div class="bv text-success">22</div></div>
+      <div class="bar-row"><div class="bl">Pentatonic (global)</div><div class="bb bb-data" style="--data-background: var(--color-background-secondary); --data-width: 10%"></div><div class="bv text-tertiary">5</div></div>
+      <div class="bar-row"><div class="bl">Gamelan (Slendro)</div><div class="bb bb-data" style="--data-background: #E8F5F2; --data-width: 10%"></div><div class="bv bv-teal">5</div></div>
+      <div class="bar-row"><div class="bl">Gamelan (Pelog)</div><div class="bb bb-data" style="--data-background: #E8F5F2; --data-width: 14%"></div><div class="bv bv-teal">7</div></div>
       <p class="note-small-spaced">Turkish makam's 53-note division (Hc. Arel-Ezgi theory) represents subdivisions of the octave, not all used in one scale — individual makam scales use 7–8 notes drawn from this pool. "Scale count" measures the resolution of the tuning system, not the number of notes in any given melody.</p>
     </div>
 
@@ -356,12 +356,12 @@ const mod = modules.find((m) => m.id === 33)!;
     <div class="content-panel">
       <div class="panel-title">Genre development — from blues roots to global pop</div>
       <div class="pc-axis track-indent">
-        <span class="axis-tick-small pc-axis-mark-style">1890</span>
-        <span class="axis-tick-small pc-axis-mark-jazz-second">1920</span>
-        <span class="axis-tick-small pc-axis-mark-jazz-third">1950</span>
-        <span class="axis-tick-small pc-axis-mark-jazz-fourth">1980</span>
-        <span class="axis-tick-small pc-axis-mark-jazz-fifth">2010</span>
-        <span class="axis-tick-small pc-axis-mark-last">Now</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 0%">1890</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 22%">1920</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 44%">1950</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 67%">1980</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 89%">2010</span>
+        <span class="axis-tick-small axis-tick-small-data" style="--data-left: 100%">Now</span>
       </div>
       <div id="genreTimeline"></div>
     </div>
@@ -380,37 +380,37 @@ const mod = modules.find((m) => m.id === 33)!;
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Robert Johnson</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-robert-johnson"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: #555; --data-left: 8%"></div></div>
           <div class="cscale-val text-tertiary">8%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Elvis Presley</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-elvis"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: #c0392b; --data-left: 14%"></div></div>
           <div class="cscale-val cscale-val-style">14%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">The Beatles (early)</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-beatles-early"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: #2980b9; --data-left: 22%"></div></div>
           <div class="cscale-val cscale-val-blue">22%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">The Beatles (late)</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-beatles-late"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: #2980b9; --data-left: 45%"></div></div>
           <div class="cscale-val cscale-val-blue">45%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Duke Ellington</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-ellington"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: #8e44ad; --data-left: 65%"></div></div>
           <div class="cscale-val cscale-val-purple">65%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Charlie Parker</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-parker"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: var(--accent); --data-left: 80%"></div></div>
           <div class="cscale-val text-accent">80%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">John Coltrane</div>
-          <div class="cscale-track"><div class="scale-marker cscale-dot-coltrane"></div></div>
+          <div class="cscale-track"><div class="scale-marker scale-marker-data" style="--data-background: #16a085; --data-left: 93%"></div></div>
           <div class="cscale-val cscale-val-teal">93%</div>
         </div>
       </div>
@@ -513,13 +513,13 @@ const mod = modules.find((m) => m.id === 33)!;
     <!-- Recommended listening bar chart by difficulty -->
     <div class="content-panel">
       <div class="panel-title">A listening path — approximate minutes to familiarity for key works</div>
-      <div class="bar-row"><div class="bl">Beethoven 5th Symphony</div><div class="bb bb-beethoven-fifth"></div><div class="bv text-success">33 min</div></div>
-      <div class="bar-row"><div class="bl">Miles Davis — Kind of Blue</div><div class="bb bb-kind-of-blue"></div><div class="bv text-info">45 min</div></div>
-      <div class="bar-row"><div class="bl">Bach Goldberg Variations</div><div class="bb bb-goldberg"></div><div class="bv text-warning">50 min</div></div>
-      <div class="bar-row"><div class="bl">Stravinsky — Rite of Spring</div><div class="bb bb-rite-of-spring"></div><div class="bv text-danger">35 min</div></div>
-      <div class="bar-row"><div class="bl">Debussy — La Mer</div><div class="bb bb-la-mer"></div><div class="bv bv-teal">25 min</div></div>
-      <div class="bar-row"><div class="bl">Coltrane — A Love Supreme</div><div class="bb bb-love-supreme"></div><div class="bv bv-violet">33 min</div></div>
-      <div class="bar-row"><div class="bl">Mozart Symphony No. 40</div><div class="bb bb-mozart-fortieth"></div><div class="bv text-success">29 min</div></div>
+      <div class="bar-row"><div class="bl">Beethoven 5th Symphony</div><div class="bb bb-data" style="--data-background: var(--color-background-success); --data-width: 33%"></div><div class="bv text-success">33 min</div></div>
+      <div class="bar-row"><div class="bl">Miles Davis — Kind of Blue</div><div class="bb bb-data" style="--data-background: var(--color-background-info); --data-width: 45%"></div><div class="bv text-info">45 min</div></div>
+      <div class="bar-row"><div class="bl">Bach Goldberg Variations</div><div class="bb bb-data" style="--data-background: var(--color-background-warning); --data-width: 50%"></div><div class="bv text-warning">50 min</div></div>
+      <div class="bar-row"><div class="bl">Stravinsky — Rite of Spring</div><div class="bb bb-data" style="--data-background: var(--color-background-danger); --data-width: 35%"></div><div class="bv text-danger">35 min</div></div>
+      <div class="bar-row"><div class="bl">Debussy — La Mer</div><div class="bb bb-data" style="--data-background: #E8F5F2; --data-width: 25%"></div><div class="bv bv-teal">25 min</div></div>
+      <div class="bar-row"><div class="bl">Coltrane — A Love Supreme</div><div class="bb bb-data" style="--data-background: #F0EBF8; --data-width: 34%"></div><div class="bv bv-violet">33 min</div></div>
+      <div class="bar-row"><div class="bl">Mozart Symphony No. 40</div><div class="bb bb-data" style="--data-background: var(--color-background-success); --data-width: 29%"></div><div class="bv text-success">29 min</div></div>
       <p class="note-small-spaced">Actual runtimes of recordings in the standard repertoire. "Familiarity" requires multiple listens — plan for 5–10 complete hearings before a work fully reveals itself.</p>
     </div>
 

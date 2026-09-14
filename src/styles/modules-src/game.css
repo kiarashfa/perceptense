@@ -221,70 +221,14 @@
   transition:background 0.3s;
 }
 
-.pc-axis-mark-style {
-  left:0%;
+.axis-tick-small-data {
+  left: var(--data-left);
 }
 
-.pc-axis-mark-second {
-  left:20%;
-}
-
-.pc-axis-mark-third {
-  left:38%;
-}
-
-.pc-axis-mark-fourth {
-  left:55%;
-}
-
-.pc-axis-mark-fifth {
-  left:72%;
-}
-
-.pc-axis-mark-last {
-  left:100%;
-}
-
-.pc-fill-style {
-  left:0%;
-  width:20%;
-  background:#FAEEDA;
-}
-
-.pc-fill-eight-bit {
-  left:15%;
-  width:23%;
-  background:#E6F1FB;
-}
-
-.pc-fill-sixteen-bit {
-  left:28%;
-  width:16%;
-  background:#EAF3DE;
-}
-
-.pc-fill-three-d {
-  left:38%;
-  width:17%;
-  background:#EEEDFE;
-}
-
-.pc-fill-online-era {
-  left:55%;
-  width:17%;
-  background:#FAECE7;
-}
-
-.pc-fill-hd-mobile {
-  left:68%;
-  width:18%;
-  background:#FCEBEB;
-}
-
-.pc-fill-live-service {
-  left:82%;
-  width:18%;
-  background:#F1EFE8;
+.pc-fill-data {
+  background: var(--data-background);
+  left: var(--data-left);
+  width: var(--data-width);
 }
 
 .genres-intro {
@@ -300,29 +244,9 @@
   gap:8px;
 }
 
-.ind-bar-style {
-  width:100%;
-  background:#7E5BBF;
-}
-
-.ind-bar-streaming {
-  width:62%;
-  background:#E07B5A;
-}
-
-.ind-bar-box-office {
-  width:47%;
-  background:var(--accent);
-}
-
-.ind-bar-music {
-  width:20%;
-  background:#3B7FCC;
-}
-
-.ind-bar-books {
-  width:22%;
-  background:#27A04A;
+.fill-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .platform-panel-mobile {
@@ -385,53 +309,9 @@
   line-height:1.6;
 }
 
-.cscale-dot-style {
-  left:5%;
-  background:#E07B5A;
+.cscale-dot-data {
+  background: var(--data-background);
+  left: var(--data-left);
 }
 
-.cscale-dot-disco-elysium {
-  left:30%;
-  background:#7E5BBF;
-}
-
-.cscale-dot-elden-ring {
-  left:55%;
-  background:#0C447C;
-}
-
-.cscale-dot-minecraft {
-  left:85%;
-  background:#27A04A;
-}
-
-.cscale-dot-dwarf-fortress-design {
-  left:97%;
-  background:#633806;
-}
-
-.cscale-dot-stardew-valley {
-  left:8%;
-  background:#27A04A;
-}
-
-.cscale-dot-witcher {
-  left:35%;
-  background:#7E5BBF;
-}
-
-.cscale-dot-celeste {
-  left:60%;
-  background:var(--accent);
-}
-
-.cscale-dot-dark-souls {
-  left:85%;
-  background:#791F1F;
-}
-
-.cscale-dot-dwarf-fortress-difficulty {
-  left:98%;
-  background:#633806;
-}
   

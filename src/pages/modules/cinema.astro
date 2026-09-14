@@ -77,36 +77,36 @@ const mod = modules.find((m) => m.id === 34)!;
     <div class="content-panel">
       <div class="panel-title">Cinema history — major periods and movements</div>
       <div class="pc-axis">
-        <span class="pc-axis-mark pc-axis-mark-style">1895</span>
-        <span class="pc-axis-mark pc-axis-mark-second">1927</span>
-        <span class="pc-axis-mark pc-axis-mark-third">1950</span>
-        <span class="pc-axis-mark pc-axis-mark-fourth">1970</span>
-        <span class="pc-axis-mark pc-axis-mark-fifth">1990</span>
-        <span class="pc-axis-mark pc-axis-mark-last">Now</span>
+        <span class="pc-axis-mark pc-axis-mark-data" style="--data-left: 0%">1895</span>
+        <span class="pc-axis-mark pc-axis-mark-data" style="--data-left: 20%">1927</span>
+        <span class="pc-axis-mark pc-axis-mark-data" style="--data-left: 38%">1950</span>
+        <span class="pc-axis-mark pc-axis-mark-data" style="--data-left: 58%">1970</span>
+        <span class="pc-axis-mark pc-axis-mark-data" style="--data-left: 78%">1990</span>
+        <span class="pc-axis-mark pc-axis-mark-data" style="--data-left: 100%">Now</span>
       </div>
       <div class="pc-row">
         <div class="pc-label">Silent era</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-style"><span class="pc-fill-label text-stone-800">Méliès, Griffith, Chaplin, Keaton</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-data" style="--data-background: #F1EFE8; --data-left: 0%; --data-width: 20%"><span class="pc-fill-label text-stone-800">Méliès, Griffith, Chaplin, Keaton</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">Studio system</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-studio-system"><span class="pc-fill-label text-amber-900">Hollywood Golden Age</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-data" style="--data-background: #FAEEDA; --data-left: 20%; --data-width: 35%"><span class="pc-fill-label text-amber-900">Hollywood Golden Age</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">Italian Neorealism</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-neorealism"><span class="pc-fill-label text-red-900">De Sica, Rossellini</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-data" style="--data-background: #FCEBEB; --data-left: 35%; --data-width: 15%"><span class="pc-fill-label text-red-900">De Sica, Rossellini</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">French New Wave</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-new-wave"><span class="pc-fill-label text-blue-900">Godard, Truffaut, Chabrol</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-data" style="--data-background: #E6F1FB; --data-left: 42%; --data-width: 16%"><span class="pc-fill-label text-blue-900">Godard, Truffaut, Chabrol</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">New Hollywood</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-new-hollywood"><span class="pc-fill-label text-green-800">Coppola, Scorsese, Kubrick</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-data" style="--data-background: #EAF3DE; --data-left: 58%; --data-width: 12%"><span class="pc-fill-label text-green-800">Coppola, Scorsese, Kubrick</span></div></div>
       </div>
       <div class="pc-row">
         <div class="pc-label">Contemporary / Digital</div>
-        <div class="pc-track"><div class="pc-fill pc-fill-contemporary"><span class="pc-fill-label text-indigo-900">Global auteurs + streaming</span></div></div>
+        <div class="pc-track"><div class="pc-fill pc-fill-data" style="--data-background: #EEEDFE; --data-left: 78%; --data-width: 22%"><span class="pc-fill-label text-indigo-900">Global auteurs + streaming</span></div></div>
       </div>
     </div>
 
@@ -116,21 +116,21 @@ const mod = modules.find((m) => m.id === 34)!;
       <div class="mini-intro-spaced">Approximate positions on key cinematic dimensions. Tendencies, not definitions.</div>
 
       <div class="axis-title">Style: Classical — Experimental / Formal</div>
-      <div class="data-row-wide"><div class="cscale-name">Spielberg</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-style"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Kubrick</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-kubrick"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Godard</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-godard"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-tarkovsky-style"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Hitchcock</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-hitchcock"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Spielberg</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: var(--accent); --data-left: 12%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Kubrick</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #E07B5A; --data-left: 55%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Godard</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #8A6DB5; --data-left: 88%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #0C447C; --data-left: 80%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Hitchcock</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #633806; --data-left: 35%"></div></div></div>
       <div class="pole-labels-spaced">
         <span>Genre entertainment, invisible technique</span>
         <span>Self-conscious form, art cinema</span>
       </div>
 
       <div class="axis-title-spaced">Pace: Fast-cut / Dynamic — Long takes / Contemplative</div>
-      <div class="data-row-wide"><div class="cscale-name">Michael Bay</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-michael-bay"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Scorsese</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-scorsese-pace"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Wong Kar-wai</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-wong-kar-wai-pace"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-tarkovsky-pace"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Michael Bay</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #E07B5A; --data-left: 3%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Scorsese</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: var(--accent); --data-left: 30%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Wong Kar-wai</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #8A6DB5; --data-left: 65%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #0C447C; --data-left: 96%"></div></div></div>
       <div class="pole-labels-spaced">
         <span>High-energy editing, constant motion</span>
         <span>Stillness, duration as meaning</span>
@@ -288,12 +288,12 @@ const mod = modules.find((m) => m.id === 34)!;
       <div class="inline-card-title">Auteur orientation — narrative vs visual primacy</div>
       <div class="mini-intro-spaced">Where each director places their primary emphasis. Neither pole is superior.</div>
       <div class="axis-title">Story/character-first — Image/form-first</div>
-      <div class="data-row-wide"><div class="cscale-name">Sidney Lumet</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-lumet"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Billy Wilder</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-wilder"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Scorsese</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-scorsese-auteur"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Wong Kar-wai</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-wong-kar-wai-auteur"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Malick</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-malick"></div></div></div>
-      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-tarkovsky-auteur"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Sidney Lumet</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: var(--accent); --data-left: 8%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Billy Wilder</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #E07B5A; --data-left: 14%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Scorsese</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #5DCAA5; --data-left: 38%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Wong Kar-wai</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #8A6DB5; --data-left: 72%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Malick</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #0C447C; --data-left: 88%"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-data" style="--data-background: #791F1F; --data-left: 93%"></div></div></div>
       <div class="pole-labels-spaced">
         <span>Dialogue, performance, plot mechanics</span>
         <span>Texture, duration, visual poetry</span>

@@ -158,16 +158,8 @@
   margin-bottom:8px;
 }
 
-.pc-axis-mark-style {
-  left:0%;
-}
-
-.pc-axis-mark-second {
-  left:25%;
-}
-
-.pc-axis-mark-third {
-  left:50%;
+.axis-tick-small-data {
+  left: var(--data-left);
 }
 
 .pc-axis-mark-fourth {
@@ -178,38 +170,10 @@
   left:88%;
 }
 
-.pc-axis-mark-last {
-  left:100%;
-}
-
-.pc-fill-style {
-  left:0%;
-  width:25%;
-  background:var(--color-background-warning);
-}
-
-.pc-fill-baroque {
-  left:25%;
-  width:25%;
-  background:var(--color-background-info);
-}
-
-.pc-fill-classical {
-  left:50%;
-  width:16%;
-  background:var(--color-background-success);
-}
-
-.pc-fill-romantic {
-  left:66%;
-  width:22%;
-  background:#EEEDFE;
-}
-
-.pc-fill-twentieth-century {
-  left:88%;
-  width:12%;
-  background:var(--color-background-danger);
+.pc-fill-data {
+  background: var(--data-background);
+  left: var(--data-left);
+  width: var(--data-width);
 }
 
 .cgrid-style {
@@ -221,63 +185,17 @@
   margin-left:138px;
 }
 
-.cscale-dot-style {
-  left:3%;
+.scale-marker-data-background {
+  left: var(--data-left);
 }
 
-.cscale-dot-folk-song {
-  left:12%;
-}
-
-.cscale-dot-pop-song {
-  left:28%;
-}
-
-.cscale-dot-mozart-quartet {
-  left:48%;
-}
-
-.cscale-dot-ligeti {
-  left:97%;
-}
-
-.bb-style {
-  width:24%;
-  background:var(--color-background-info);
-}
-
-.bb-arabic-maqam {
-  width:48%;
-  background:var(--color-background-warning);
-}
-
-.bb-turkish-makam {
-  width:51%;
-  background:var(--color-background-warning);
-}
-
-.bb-indian-raga {
-  width:44%;
-  background:var(--color-background-success);
-}
-
-.bb-pentatonic {
-  width:10%;
-  background:var(--color-background-secondary);
-}
-
-.bb-gamelan-slendro {
-  width:10%;
-  background:#E8F5F2;
+.bb-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .bv-teal {
   color:#1A6B5A;
-}
-
-.bb-gamelan-pelog {
-  width:14%;
-  background:#E8F5F2;
 }
 
 .pentaoutput {
@@ -289,110 +207,29 @@
   color:var(--color-text-primary);
 }
 
-.pc-axis-mark-jazz-second {
-  left:22%;
-}
-
-.pc-axis-mark-jazz-third {
-  left:44%;
-}
-
-.pc-axis-mark-jazz-fourth {
-  left:67%;
-}
-
-.pc-axis-mark-jazz-fifth {
-  left:89%;
-}
-
-.cscale-dot-robert-johnson {
-  left:8%;
-  background:#555;
-}
-
-.cscale-dot-elvis {
-  left:14%;
-  background:#c0392b;
+.scale-marker-data {
+  background: var(--data-background);
+  left: var(--data-left);
 }
 
 .cscale-val-style {
   color:#c0392b;
 }
 
-.cscale-dot-beatles-early {
-  left:22%;
-  background:#2980b9;
-}
-
 .cscale-val-blue {
   color:#2980b9;
-}
-
-.cscale-dot-beatles-late {
-  left:45%;
-  background:#2980b9;
-}
-
-.cscale-dot-ellington {
-  left:65%;
-  background:#8e44ad;
 }
 
 .cscale-val-purple {
   color:#8e44ad;
 }
 
-.cscale-dot-parker {
-  left:80%;
-  background:var(--accent);
-}
-
-.cscale-dot-coltrane {
-  left:93%;
-  background:#16a085;
-}
-
 .cscale-val-teal {
   color:#16a085;
 }
 
-.bb-beethoven-fifth {
-  width:33%;
-  background:var(--color-background-success);
-}
-
-.bb-kind-of-blue {
-  width:45%;
-  background:var(--color-background-info);
-}
-
-.bb-goldberg {
-  width:50%;
-  background:var(--color-background-warning);
-}
-
-.bb-rite-of-spring {
-  width:35%;
-  background:var(--color-background-danger);
-}
-
-.bb-la-mer {
-  width:25%;
-  background:#E8F5F2;
-}
-
-.bb-love-supreme {
-  width:34%;
-  background:#F0EBF8;
-}
-
 .bv-violet {
   color:#7B5AB5;
-}
-
-.bb-mozart-fortieth {
-  width:29%;
-  background:var(--color-background-success);
 }
 
 /* ── Part G: Instrument family tabs ── */

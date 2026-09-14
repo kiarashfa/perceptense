@@ -240,69 +240,19 @@
   line-height:1.5;
 }
 
-.pc-axis-mark-style {
-  left:0%;
+.axis-tick-small-data {
+  left: var(--data-left);
 }
 
-.pc-axis-mark-second {
-  left:20%;
+.pc-fill-data {
+  background: var(--data-background);
+  left: var(--data-left);
+  width: var(--data-width);
 }
 
-.pc-axis-mark-third {
-  left:45%;
-}
-
-.pc-axis-mark-fourth {
-  left:65%;
-}
-
-.pc-axis-mark-fifth {
-  left:80%;
-}
-
-.pc-axis-mark-last {
-  left:100%;
-}
-
-.pc-fill-style {
-  left:0%;
-  width:30%;
-  background:var(--accent-bg);
-}
-
-.pc-fill-drama {
-  left:5%;
-  width:55%;
-  background:var(--color-background-warning);
-}
-
-.pc-fill-poetry {
-  left:0%;
-  width:80%;
-  background:var(--color-background-info);
-}
-
-.pc-fill-novel {
-  left:58%;
-  width:42%;
-  background:var(--color-background-success);
-}
-
-.pc-fill-essay {
-  left:40%;
-  width:60%;
-  background:#FAECE7;
-}
-
-.pc-fill-short-story {
-  left:68%;
-  width:32%;
-  background:var(--color-background-danger);
-}
-
-.dist-seg-style {
-  width:52%;
-  background:#8A6DB5;
+.dist-seg-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .seg-label {
@@ -311,35 +261,10 @@
   font-weight:600;
 }
 
-.dist-seg-short-story {
-  width:15%;
-  background:var(--accent);
-}
-
-.dist-seg-nonfiction {
-  width:12%;
-  background:#E07B5A;
-}
-
-.dist-seg-drama {
-  width:10%;
-  background:#5DCAA5;
-}
-
-.dist-seg-poetry {
-  width:7%;
-  background:#EF9F27;
-}
-
 .seg-label-small {
   font-size:9px;
   color:white;
   font-weight:600;
-}
-
-.dist-seg-other {
-  width:4%;
-  background:#AFA9EC;
 }
 
 .dist-leg-dot-style {
@@ -368,36 +293,6 @@
 .literature-media {
   width:100%;
   height:auto;
-}
-
-.dist-seg-freud {
-  width:28%;
-  background:#534AB7;
-}
-
-.dist-seg-wwi {
-  width:22%;
-  background:var(--accent);
-}
-
-.dist-seg-impressionism {
-  width:18%;
-  background:#E07B5A;
-}
-
-.dist-seg-bergson {
-  width:16%;
-  background:#5DCAA5;
-}
-
-.dist-seg-nietzsche {
-  width:10%;
-  background:#EF9F27;
-}
-
-.dist-seg-influence-other {
-  width:6%;
-  background:#AFA9EC;
 }
 
 .dist-leg-dot-indigo {

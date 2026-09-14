@@ -74,16 +74,16 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Top languages bar chart -->
     <div class="card u-mb-md">
       <p class="clabel">top 10 languages by total speakers (L1 + L2, 2024 estimate)</p>
-      <div class="bar-row"><div class="bl">English</div><div class="bb bb-style"><span class="bv text-white">1.46 billion</span></div></div>
-      <div class="bar-row"><div class="bl">Mandarin</div><div class="bb bb-mandarin"><span class="bv text-white">1.16 billion</span></div></div>
-      <div class="bar-row"><div class="bl">Hindi</div><div class="bb bb-hindi"><span class="bv text-white">820 million</span></div></div>
-      <div class="bar-row"><div class="bl">Spanish</div><div class="bb bb-spanish"><span class="bv text-white">760 million</span></div></div>
-      <div class="bar-row"><div class="bl">French</div><div class="bb bb-french"><span class="bv text-white">580 million</span></div></div>
-      <div class="bar-row"><div class="bl">Modern Arabic</div><div class="bb bb-arabic"><span class="bv text-white">550 million</span></div></div>
-      <div class="bar-row"><div class="bl">Bengali</div><div class="bb bb-bengali"><span class="bv text-white">340 million</span></div></div>
-      <div class="bar-row"><div class="bl">Russian</div><div class="bb bb-russian"><span class="bv text-white">320 million</span></div></div>
-      <div class="bar-row"><div class="bl">Portuguese</div><div class="bb bb-portuguese"><span class="bv text-white">310 million</span></div></div>
-      <div class="bar-row"><div class="bl">Urdu</div><div class="bb bb-urdu"><span class="bv text-white">240 million</span></div></div>
+      <div class="bar-row"><div class="bl">English</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 100%"><span class="bv text-white">1.46 billion</span></div></div>
+      <div class="bar-row"><div class="bl">Mandarin</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 80%"><span class="bv text-white">1.16 billion</span></div></div>
+      <div class="bar-row"><div class="bl">Hindi</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 57%"><span class="bv text-white">820 million</span></div></div>
+      <div class="bar-row"><div class="bl">Spanish</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 53%"><span class="bv text-white">760 million</span></div></div>
+      <div class="bar-row"><div class="bl">French</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 40%"><span class="bv text-white">580 million</span></div></div>
+      <div class="bar-row"><div class="bl">Modern Arabic</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 38%"><span class="bv text-white">550 million</span></div></div>
+      <div class="bar-row"><div class="bl">Bengali</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 24%"><span class="bv text-white">340 million</span></div></div>
+      <div class="bar-row"><div class="bl">Russian</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 22%"><span class="bv text-white">320 million</span></div></div>
+      <div class="bar-row"><div class="bl">Portuguese</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 21%"><span class="bv text-white">310 million</span></div></div>
+      <div class="bar-row"><div class="bl">Urdu</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 17%"><span class="bv text-white">240 million</span></div></div>
       <p class="cnote u-mt-sm">Bars show total speakers (L1 native + L2 fluent). English leads on this measure; Mandarin leads on native speakers alone (~940 million).</p>
     </div>
 
@@ -210,8 +210,8 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Tone languages bar -->
     <div class="card u-mb-md">
       <p class="clabel">tonal languages — more common than you think</p>
-      <div class="bar-row"><div class="bl">Tonal languages</div><div class="bb bb-tonal"><span class="bv text-white">~70% of world's languages</span></div></div>
-      <div class="bar-row"><div class="bl">Non-tonal languages</div><div class="bb bb-non-tonal"><span class="bv text-secondary">~30%</span></div></div>
+      <div class="bar-row"><div class="bl">Tonal languages</div><div class="bb bb-data" style="--data-background: #D4884A; --data-width: 70%"><span class="bv text-white">~70% of world's languages</span></div></div>
+      <div class="bar-row"><div class="bl">Non-tonal languages</div><div class="bb bb-data-border" style="--data-background: var(--color-background-secondary); --data-border: 0.5px solid var(--color-border-tertiary); --data-width: 30%"><span class="bv text-secondary">~30%</span></div></div>
       <p class="cnote">Mandarin uses 4 tones; Cantonese has 6; Vietnamese has 6; Hmong has 8. English and most European languages are non-tonal. Tone languages are concentrated in sub-Saharan Africa, Southeast Asia, and Mesoamerica.</p>
     </div>
 
@@ -220,12 +220,12 @@ const mod = modules.find((m) => m.id === 40)!;
     <div class="card u-mb-md">
       <p class="clabel">morphological types — a comparison scale</p>
       <div class="label-pair"><span>Analytic (no inflection)</span><span>Synthetic (moderate)</span><span>Polysynthetic (extreme)</span></div>
-      <div class="data-row"><div class="cscale-name">Mandarin</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-style"></div></div></div>
-      <div class="data-row"><div class="cscale-name">English</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-english"></div></div></div>
-      <div class="data-row"><div class="cscale-name">French</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-french"></div></div></div>
-      <div class="data-row"><div class="cscale-name">Russian</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-russian"></div></div></div>
-      <div class="data-row"><div class="cscale-name">Turkish</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-turkish"></div></div></div>
-      <div class="data-row"><div class="cscale-name">Inuktitut</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-inuktitut"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Mandarin</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-data" style="--data-left: 5%"></div></div></div>
+      <div class="data-row"><div class="cscale-name">English</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-data" style="--data-left: 20%"></div></div></div>
+      <div class="data-row"><div class="cscale-name">French</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-data" style="--data-left: 38%"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Russian</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-data" style="--data-left: 58%"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Turkish</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-data" style="--data-left: 72%"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Inuktitut</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-data" style="--data-left: 93%"></div></div></div>
       <p class="cnote">Turkish "evlerinizden" (from your houses) packs five morphemes into one word. The Inuktitut word "ᑕᑯᒃᓴᐅᓂᕐᒧᑦ" can encode what English needs an entire sentence to express.</p>
     </div>
 
@@ -238,10 +238,10 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="syntax-word-order-and-sentence-structure">syntax — word order and sentence structure</h2>
     <div class="card u-mb-md">
       <p class="clabel">basic word order types across world's languages</p>
-      <div class="bar-row"><div class="bl">SOV (Subject-Object-Verb)</div><div class="bb bb-sov"><span class="bv text-white">~45% of languages</span></div></div>
-      <div class="bar-row"><div class="bl">SVO (Subject-Verb-Object)</div><div class="bb bb-svo"><span class="bv text-white">~42%</span></div></div>
-      <div class="bar-row"><div class="bl">VSO</div><div class="bb bb-vso"><span class="bv text-white">~9%</span></div></div>
-      <div class="bar-row"><div class="bl">VOS / OVS / OSV</div><div class="bb bb-rare-orders"><span class="bv text-secondary">~4%</span></div></div>
+      <div class="bar-row"><div class="bl">SOV (Subject-Object-Verb)</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 45%"><span class="bv text-white">~45% of languages</span></div></div>
+      <div class="bar-row"><div class="bl">SVO (Subject-Verb-Object)</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 42%"><span class="bv text-white">~42%</span></div></div>
+      <div class="bar-row"><div class="bl">VSO</div><div class="bb bb-data" style="--data-background: var(--accent); --data-width: 9%"><span class="bv text-white">~9%</span></div></div>
+      <div class="bar-row"><div class="bl">VOS / OVS / OSV</div><div class="bb bb-data-border" style="--data-background: var(--color-background-secondary); --data-border: 0.5px solid var(--color-border-tertiary); --data-width: 4%"><span class="bv text-secondary">~4%</span></div></div>
       <p class="cnote">English and Mandarin are SVO ("She eats rice"). Japanese, Turkish, and Korean are SOV ("She rice eats"). Classical Arabic and Welsh are VSO ("Eats she rice"). Free word-order languages (Latin, Russian, Hungarian) use case endings rather than position to signal grammatical roles.</p>
     </div>
 

@@ -94,39 +94,9 @@
   gap:8px;
 }
 
-.cscale-dot-style {
-  left:8%;
-  background:#0C447C;
-}
-
-.cscale-dot-renaissance {
-  left:20%;
-  background:#27500A;
-}
-
-.cscale-dot-impressionism {
-  left:36%;
-  background:#6B5B00;
-}
-
-.cscale-dot-mughal {
-  left:48%;
-  background:#6B3010;
-}
-
-.cscale-dot-chinese-ink {
-  left:62%;
-  background:#4A2E00;
-}
-
-.cscale-dot-byzantine {
-  left:84%;
-  background:#712B13;
-}
-
-.cscale-dot-abstract-expressionism {
-  left:95%;
-  background:#534AB7;
+.cscale-dot-data {
+  background: var(--data-background);
+  left: var(--data-left);
 }
 
 .distinct-traits-grid {
@@ -157,34 +127,10 @@
   margin-bottom:1rem;
 }
 
-.dist-seg-style {
-  width:38%;
-  background:#3A6BB0;
-  color:#fff;
-}
-
-.dist-seg-inorganic {
-  width:22%;
-  background:#8B3A9C;
-  color:#fff;
-}
-
-.dist-seg-orange-wide {
-  width:18%;
-  background:#C85C14;
-  color:#fff;
-}
-
-.dist-seg-carbon-black {
-  width:12%;
-  background:#2C8C6A;
-  color:#fff;
-}
-
-.dist-seg-historic {
-  width:10%;
-  background:#A09060;
-  color:#fff;
+.stack-segment-data {
+  background: var(--data-background);
+  color: var(--data-color);
+  width: var(--data-width);
 }
 
 .dist-legend-dot-style {
@@ -238,31 +184,6 @@
   display:block;
 }
 
-.cscale-dot-european-christian {
-  left:7%;
-  background:var(--accent);
-}
-
-.cscale-dot-ancient-rome {
-  left:14%;
-  background:#3A6BB0;
-}
-
-.cscale-dot-dutch-vanitas {
-  left:32%;
-  background:#2C8C6A;
-}
-
-.cscale-dot-chinese-tradition {
-  left:80%;
-  background:#8B3A9C;
-}
-
-.cscale-dot-japanese-mourning {
-  left:92%;
-  background:#C85C14;
-}
-
 .scale-diagram {
   width:100%;
   max-width:600px;
@@ -276,33 +197,4 @@
   margin-bottom:12px;
 }
 
-.dist-seg-artist-identity {
-  width:30%;
-  background:var(--accent);
-  color:#fff;
-}
-
-.dist-seg-provenance {
-  width:20%;
-  background:#3A6BB0;
-  color:#fff;
-}
-
-.dist-seg-exhibition {
-  width:15%;
-  background:#8B3A9C;
-  color:#fff;
-}
-
-.dist-seg-market-timing {
-  width:10%;
-  background:#2C8C6A;
-  color:#fff;
-}
-
-.dist-seg-size {
-  width:7%;
-  background:#A09060;
-  color:#fff;
-}
   
