@@ -248,4 +248,18 @@ html[data-theme="dark"] .geo-c-purple2 { fill: #7F77DD; }
   html[data-theme="auto"] .geo-c-blue2 { fill: #5BA0D8; }
   html[data-theme="auto"] .geo-c-purple2 { fill: #7F77DD; }
 }
+
+/* --- Route-label / bar-chart text sitting on page bg (not a fixed badge) ---
+   text-green-900 / text-blue-900 (shared) are fine in light but fail dark
+   here since the label sits above the bar on the page background, not on a
+   fixed-colour badge. Local override, not a shared-class change - see
+   memory.md for why the shared classes don't get this treatment. */
+.geo-label-green { color: #085041; }
+.geo-label-blue { color: #0C447C; }
+html[data-theme="dark"] .geo-label-green { color: #0F997C; }
+html[data-theme="dark"] .geo-label-blue { color: #2487EA; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .geo-label-green { color: #0F997C; }
+  html[data-theme="auto"] .geo-label-blue { color: #2487EA; }
+}
   
