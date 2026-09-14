@@ -6,6 +6,11 @@ body {
       max-width: 820px;
       margin: 0 auto;
       padding: 0 1.5rem 0;
+      /* The hero and quiz glows bleed 8% past their blocks, more than the
+         gutter on narrow screens. Their gradients are already transparent
+         there, so clipping at the wrap changes nothing visible and keeps the
+         page from scrolling sideways. */
+      overflow-x: clip;
     }
 
     /* ============================================================
