@@ -44,6 +44,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    #cmp-bar-a .cmp-bar-label { color: #1a1a18; }
     .cmp-result {
       background: var(--color-background-secondary);
       border-radius: var(--border-radius-md);
@@ -147,6 +148,7 @@
       color: #fff;
       white-space: nowrap;
     }
+    .dna-fold-val-dark { color: #1a1a18; }
 
     /* === Order-of-magnitude calculator === */
     .oom-grid {
