@@ -1,65 +1,23 @@
-.rh { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.rname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
-.rval { font-size: 13px; font-family: monospace; font-weight: 500; }
-.rbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
 .rsub { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
 @media (max-width: 500px) { .rsub { grid-template-columns: 1fr; } }
-.rl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
-.rv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
 /* ---- concept cards safe minmax ---- */
 .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px; margin-bottom: 1rem; }
 /* ---- SVG diagrams ---- */
 .svg-wrap { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; overflow: hidden; }
-/* ---- scale viz ---- */
-.scale-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
 .scale-label { font-size: 11px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; text-align: right; padding-right: 8px; line-height: 1.3; }
-.scale-bar-outer { flex: 1; height: 18px; background: var(--color-background-secondary); border-radius: 3px; overflow: hidden; }
 .scale-bar-inner { height: 18px; border-radius: 3px; display: flex; align-items: center; padding: 0 6px; }
 .scale-bar-val { font-size: 10px; font-weight: 500; white-space: nowrap; }
-/* ---- reliability interactive ---- */
-.rel-display { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 11px 13px; font-size: 13px; line-height: 1.8; }
-/* ---- tolerance cost chart ---- */
-.tol-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .tol-label { font-size: 11px; color: var(--color-text-secondary); width: 90px; flex-shrink: 0; text-align:right; padding-right:8px; }
 .tol-bar { height: 20px; border-radius: 3px; display: flex; align-items: center; padding: 0 8px; transition: width 0.3s; }
 /* ---- failure timeline ---- */
 .fail-timeline { position: relative; padding-left: 24px; }
 .fail-timeline::before { content:''; position:absolute; left:8px; top:6px; bottom:6px; width:1px; background: var(--color-border-tertiary); }
-/* ---- materials strength chart ---- */
-.mat-row { display:flex; align-items:center; gap:8px; margin-bottom:5px; }
 .mat-label { font-size:11px; color:var(--color-text-secondary); width:120px; flex-shrink:0; text-align:right; padding-right:8px; line-height:1.3; }
 .mat-bar { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 7px; }
 .mat-val { font-size:10px; font-weight:500; white-space:nowrap; }
 
-/* === Shared-ready extracted styles === */
-
-.muted-text {
-  font-size:12px;
-  color:var(--color-text-secondary);
-}
-
-.text-amber-900 {
-  color:#633806;
-}
-
-.text-blue-900 {
-  color:#0C447C;
-}
-
-.text-green-800 {
-  color:#27500A;
-}
-
-.text-green-900 {
-  color:#085041;
-}
-
 .text-indigo-900 {
   color:#3C3489;
-}
-
-.text-orange-900 {
-  color:#712B13;
 }
 
 .text-red-900 {
@@ -79,27 +37,10 @@
   font-style:italic;
 }
 
-.engineering-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
-  gap:8px;
-}
-
-.engineering-label {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:3px;
-}
-
 .engineering-media {
   width:100%;
   height:auto;
   display:block;
-}
-
-.engineering-spacing {
-  margin-top:4px;
 }
 
 .scale-bar-inner-style {
@@ -132,12 +73,6 @@
   background:#FCEBEB;
 }
 
-.figure-caption {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:6px;
-}
-
 .tol-bar-style {
   width:6%;
   background:#EAF3DE;
@@ -164,11 +99,6 @@
   background:#FAECE7;
 }
 
-.showcalc-control {
-  font-size:12px;
-  padding:4px 11px;
-}
-
 .eng-result {
   font-size:13px;
   color:var(--color-text-primary);
@@ -187,12 +117,6 @@
   font-size:13px;
   color:var(--color-text-primary);
   line-height:1.8;
-}
-
-.units-note {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
 }
 
 .mat-bar-style {
@@ -223,12 +147,6 @@
 .mat-bar-titanium {
   width:70%;
   background:#FAECE7;
-}
-
-.comparison-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:8px;
 }
 
 .mat-bar-steel-specific {
@@ -272,12 +190,6 @@
   grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
   gap:10px;
   margin-bottom:1rem;
-}
-
-.failure-cause-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:4px;
 }
 
 .fermi-steps {

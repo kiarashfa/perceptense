@@ -1,10 +1,4 @@
-.fg-header { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.fg-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
-.fg-formula { font-size: 13px; font-family: monospace; font-weight: 500; }
-.fg-badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
 .fg-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-bottom: 8px; }
-.fg-sl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
-.fg-sv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
 
 /* Mobile: collapse 3-col grids to 1-col */
 @media (max-width: 520px) {
@@ -16,45 +10,17 @@
 .rxn-display { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 11px 14px; font-family: monospace; font-size: 13px; color: var(--color-text-primary); margin: 10px 0; line-height: 1.8; }
 .rxn-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
 .rxn-tag { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
-
-/* --- Smell/taste explorer --- */
-.smell-btn-row { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 12px; }
 .smell-result { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; font-size: 13px; color: var(--color-text-primary); line-height: 1.7; min-height: 60px; }
-
-/* --- Periodic table highlight SVG note --- */
-.svg-caption { font-size: 11px; color: var(--color-text-tertiary); text-align: center; margin-top: 6px; }
 
 /* --- Active button highlight --- */
 button.active-sel { background: var(--color-background-tertiary) !important; border-color: var(--color-border-primary) !important; color: var(--color-text-primary) !important; font-weight: 500; }
-
-/* === Shared-ready extracted styles === */
-
-.text-amber-900 {
-  color:#633806;
-}
-
-.text-green-800 {
-  color:#27500A;
-}
-
-.text-green-900 {
-  color:#085041;
-}
 
 .text-indigo-900 {
   color:#3C3489;
 }
 
-.text-orange-900 {
-  color:#712B13;
-}
-
 .text-red-900 {
   color:#791F1F;
-}
-
-.text-stone-800 {
-  color:#444441;
 }
 
 /* === Module-specific extracted styles === */
@@ -63,13 +29,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:8px;
-}
-
-.elements-note {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-  line-height:1.5;
 }
 
 .chemistry-media {
@@ -132,22 +91,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   line-height:1.6;
 }
 
-.insight-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-}
-
-.section-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.5;
-  margin-bottom:12px;
-}
-
 .figure-svg {
   width:100%;
   height:auto;
@@ -160,15 +103,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   grid-template-columns:1fr 1fr 1fr;
   gap:8px;
   margin-bottom:10px;
-}
-
-.reference-panel {
-  background:var(--color-background-primary);
-  border:0.5px solid var(--color-border-tertiary);
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  margin-bottom:12px;
-  overflow-x:auto;
 }
 
 .reference-title {
@@ -193,11 +127,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   color:#444441;
 }
 
-.showmol-control {
-  font-size:12px;
-  padding:4px 11px;
-}
-
 .mol-display {
   font-size:13px;
   color:var(--color-text-primary);
@@ -209,12 +138,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   flex-direction:column;
   gap:3px;
   margin-bottom:10px;
-}
-
-.ph-row {
-  display:flex;
-  align-items:center;
-  gap:8px;
 }
 
 .ph-num-red {
@@ -367,23 +290,9 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   color:#E6F1FB;
 }
 
-.ph-compare-row {
-  display:flex;
-  gap:10px;
-  align-items:flex-end;
-  flex-wrap:wrap;
-  margin-bottom:10px;
-}
-
 .ph-input-field {
   flex:1;
   min-width:140px;
-}
-
-.ph-input-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:4px;
 }
 
 .pha {
@@ -407,13 +316,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   color:var(--color-text-primary);
   line-height:1.7;
   display:none;
-}
-
-.rxnbtnrow {
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
-  margin-bottom:12px;
 }
 
 .taste-grid {
@@ -514,18 +416,6 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
 .taste-desc-umami {
   font-size:11px;
   color:#3C3489;
-  line-height:1.5;
-}
-
-.kitchen-reactions-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.reaction-desc {
-  font-size:11px;
-  color:var(--color-text-secondary);
   line-height:1.5;
 }
   

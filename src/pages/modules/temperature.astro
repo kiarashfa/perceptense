@@ -23,7 +23,7 @@ const mod = modules.find((m) => m.id === 11)!;
     <h2 class="sec" id="part-a-the-temperature-scale-interactive-thermometer">Part A · the temperature scale — interactive thermometer</h2>
 
     <div class="content-panel">
-      <div class="temperature-label">Drag to explore any temperature. What does it mean?</div>
+      <div class="block-title">Drag to explore any temperature. What does it mean?</div>
       <div class="button-row">
         <button class="settemp-control" onclick="setTemp(-273)">Absolute zero</button>
         <button class="settemp-control" onclick="setTemp(-40)" >-40°</button>
@@ -35,12 +35,12 @@ const mod = modules.find((m) => m.id === 11)!;
         <button class="settemp-control" onclick="setTemp(1535)">Steel melts</button>
         <button class="settemp-control" onclick="setTemp(5500)">Sun surface</button>
       </div>
-      <div class="thermometer-slider-row">
-        <span class="slider-end-label">−273°C</span>
+      <div class="range-row-spaced">
+        <span class="inline-label">−273°C</span>
         <input class="u-flex-1" type="range" id="u-flex-1" min="-273" max="5778" value="20" step="1">
-        <span class="slider-end-label">5,778°C</span>
+        <span class="inline-label">5,778°C</span>
       </div>
-      <div class="thermometer-readouts">
+      <div class="header-row-spaced">
         <div class="temp-c" id="temp-c"></div>
         <div class="temp-f" id="temp-f"></div>
         <div class="temp-k" id="temp-k"></div>
@@ -56,18 +56,18 @@ const mod = modules.find((m) => m.id === 11)!;
 
     <div class="content-panel">
       <div class="panel-title">Weather and environment — what you actually experience</div>
-      <div class="trow"><span class="tl">-40°C / -40°F</span><div class="tb tb-style"><span class="bv tv-style">Extreme cold — F = C here</span></div></div>
-      <div class="trow"><span class="tl">-20°C / -4°F</span><div class="tb tb-siberian-winter"><span class="bv tv-style">Siberian winter, Arctic</span></div></div>
-      <div class="trow"><span class="tl">-10°C / 14°F</span><div class="tb tb-european-winter"><span class="bv text-white">Harsh European winter</span></div></div>
-      <div class="trow"><span class="tl">0°C / 32°F</span><div class="tb tb-freezing"><span class="bv text-white">Freezing — water/ice boundary</span></div></div>
-      <div class="trow"><span class="tl">10°C / 50°F</span><div class="tb tb-cool"><span class="bv text-blue-950">Cool — coat needed</span></div></div>
-      <div class="trow"><span class="tl">20°C / 68°F</span><div class="tb tb-room-temp"><span class="bv text-green-950">Comfortable room temp</span></div></div>
-      <div class="trow"><span class="tl">28°C / 82°F</span><div class="tb tb-summer-day"><span class="bv text-green-950">Warm summer day</span></div></div>
-      <div class="trow"><span class="tl">37°C / 98.6°F</span><div class="tb tb-body-temp"><span class="bv text-amber-950">Human body temperature</span></div></div>
-      <div class="trow"><span class="tl">40°C / 104°F</span><div class="tb tb-heat-wave"><span class="bv text-white">Dangerous fever / extreme heat wave</span></div></div>
-      <div class="trow"><span class="tl">54.4°C / 130°F</span><div class="tb tb-death-valley"><span class="bv text-white">Hottest air temp recorded — Death Valley, 2020</span></div></div>
-      <div class="trow"><span class="tl">100°C / 212°F</span><div class="tb tb-boiling-water"><span class="bv text-white">Water boils at sea level</span></div></div>
-      <div class="scale-footnote">
+      <div class="track-row-tight"><span class="tl">-40°C / -40°F</span><div class="tb tb-style"><span class="bv tv-style">Extreme cold — F = C here</span></div></div>
+      <div class="track-row-tight"><span class="tl">-20°C / -4°F</span><div class="tb tb-siberian-winter"><span class="bv tv-style">Siberian winter, Arctic</span></div></div>
+      <div class="track-row-tight"><span class="tl">-10°C / 14°F</span><div class="tb tb-european-winter"><span class="bv text-white">Harsh European winter</span></div></div>
+      <div class="track-row-tight"><span class="tl">0°C / 32°F</span><div class="tb tb-freezing"><span class="bv text-white">Freezing — water/ice boundary</span></div></div>
+      <div class="track-row-tight"><span class="tl">10°C / 50°F</span><div class="tb tb-cool"><span class="bv u-text-hex-042c53">Cool — coat needed</span></div></div>
+      <div class="track-row-tight"><span class="tl">20°C / 68°F</span><div class="tb tb-room-temp"><span class="bv u-text-hex-04342c">Comfortable room temp</span></div></div>
+      <div class="track-row-tight"><span class="tl">28°C / 82°F</span><div class="tb tb-summer-day"><span class="bv u-text-hex-04342c">Warm summer day</span></div></div>
+      <div class="track-row-tight"><span class="tl">37°C / 98.6°F</span><div class="tb tb-body-temp"><span class="bv text-amber-950">Human body temperature</span></div></div>
+      <div class="track-row-tight"><span class="tl">40°C / 104°F</span><div class="tb tb-heat-wave"><span class="bv text-white">Dangerous fever / extreme heat wave</span></div></div>
+      <div class="track-row-tight"><span class="tl">54.4°C / 130°F</span><div class="tb tb-death-valley"><span class="bv text-white">Hottest air temp recorded — Death Valley, 2020</span></div></div>
+      <div class="track-row-tight"><span class="tl">100°C / 212°F</span><div class="tb tb-boiling-water"><span class="bv text-white">Water boils at sea level</span></div></div>
+      <div class="footnote-medium">
         The magic number: <strong class="text-primary">-40°C = -40°F</strong>. The only point where Celsius and Fahrenheit are identical. A useful anchor for the F↔C conversion.<br>
         <span class="temperature-span-style">The all-time official record is 56.7°C / 134°F, also at Death Valley — but that was set on <strong class="text-primary">July 10, 1913</strong>.</span>
       </div>
@@ -80,7 +80,7 @@ const mod = modules.find((m) => m.id === 11)!;
 
     <div class="content-panel">
       <div class="panel-title">Type any temperature and get both the exact answer and the mental shortcut</div>
-      <div class="converter-row">
+      <div class="control-row-spaced">
         <input class="conv-val" type="number" id="conv-val" placeholder="Enter temperature" value="72">
         <select class="conv-dir" id="conv-dir">
           <option value="ftoc">°F → °C</option>
@@ -92,8 +92,8 @@ const mod = modules.find((m) => m.id === 11)!;
       <div class="conv-trick" id="conv-trick"></div>
 
       <div class="temperature-panel">
-        <div class="shortcut-title">The mental shortcut that works 80% of the time</div>
-        <div class="shortcut-body">
+        <div class="callout-title">The mental shortcut that works 80% of the time</div>
+        <div class="callout-body">
           <strong class="text-primary">°C → °F:</strong> Double it, then add 30. (Exact: ×1.8 + 32)<br>
           20°C → 40 + 30 = 70°F. Actual: 68°F. Close enough.<br><br>
           <strong class="text-primary">°F → °C:</strong> Subtract 30, then halve it.<br>
@@ -104,7 +104,7 @@ const mod = modules.find((m) => m.id === 11)!;
 
     <!-- Three-scale comparison SVG -->
     <div class="content-panel">
-      <div class="temperature-label">The three temperature scales — side by side</div>
+      <div class="block-title">The three temperature scales — side by side</div>
       <div class="svg-wrap">
         <svg class="temperature-media" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -205,16 +205,16 @@ const mod = modules.find((m) => m.id === 11)!;
 
     <div class="content-panel">
       <div class="panel-title">From absolute zero to the Big Bang</div>
-      <div class="trow"><span class="tl">-273.15°C (0 K)</span><div class="tb tb-absolute-zero"><span class="bv tv-lavender-outside">Absolute zero — no motion</span></div></div>
-      <div class="trow"><span class="tl">-196°C</span><div class="tb tb-liquid-nitrogen"><span class="bv tv-lavender">Liquid nitrogen</span></div></div>
-      <div class="trow"><span class="tl">-89°C</span><div class="tb tb-vostok-record"><span class="bv tv-white-small">Coldest station record — Vostok, Antarctica 1983</span></div></div>
-      <div class="trow"><span class="tl">0°C to 100°C</span><div class="tb tb-liquid-water"><span class="bv tv-white-small">Liquid water — life's zone</span></div></div>
-      <div class="trow"><span class="tl">~200°C</span><div class="tb tb-oven"><span class="bv tv-dark-small">Standard oven</span></div></div>
-      <div class="trow"><span class="tl">~600°C</span><div class="tb tb-wood-fire"><span class="bv tv-white-small">Wood fire, glass softens</span></div></div>
-      <div class="trow"><span class="tl">~1,538°C</span><div class="tb tb-iron-melts"><span class="bv tv-white-small">Iron melts</span></div></div>
-      <div class="trow"><span class="tl">~3,422°C</span><div class="tb tb-tungsten-melts"><span class="bv tv-white-small">Tungsten melts — highest melting point of any pure metal</span></div></div>
-      <div class="trow"><span class="tl">5,500°C</span><div class="tb tb-sun-surface"><span class="bv text-white">Surface of the Sun</span></div></div>
-      <div class="trow"><span class="tl">15,000,000°C</span><div class="tb tb-sun-core"><span class="bv tv-blush">Sun's core — nuclear fusion</span></div></div>
+      <div class="track-row-tight"><span class="tl">-273.15°C (0 K)</span><div class="tb tb-absolute-zero"><span class="bv tv-lavender-outside">Absolute zero — no motion</span></div></div>
+      <div class="track-row-tight"><span class="tl">-196°C</span><div class="tb tb-liquid-nitrogen"><span class="bv tv-lavender">Liquid nitrogen</span></div></div>
+      <div class="track-row-tight"><span class="tl">-89°C</span><div class="tb tb-vostok-record"><span class="bv tv-white-small">Coldest station record — Vostok, Antarctica 1983</span></div></div>
+      <div class="track-row-tight"><span class="tl">0°C to 100°C</span><div class="tb tb-liquid-water"><span class="bv tv-white-small">Liquid water — life's zone</span></div></div>
+      <div class="track-row-tight"><span class="tl">~200°C</span><div class="tb tb-oven"><span class="bv tv-dark-small">Standard oven</span></div></div>
+      <div class="track-row-tight"><span class="tl">~600°C</span><div class="tb tb-wood-fire"><span class="bv tv-white-small">Wood fire, glass softens</span></div></div>
+      <div class="track-row-tight"><span class="tl">~1,538°C</span><div class="tb tb-iron-melts"><span class="bv tv-white-small">Iron melts</span></div></div>
+      <div class="track-row-tight"><span class="tl">~3,422°C</span><div class="tb tb-tungsten-melts"><span class="bv tv-white-small">Tungsten melts — highest melting point of any pure metal</span></div></div>
+      <div class="track-row-tight"><span class="tl">5,500°C</span><div class="tb tb-sun-surface"><span class="bv text-white">Surface of the Sun</span></div></div>
+      <div class="track-row-tight"><span class="tl">15,000,000°C</span><div class="tb tb-sun-core"><span class="bv tv-blush">Sun's core — nuclear fusion</span></div></div>
       <p class="scale-reference-note">For reference: the Big Bang was ~10³² °C. Nuclear fusion reactors aim for ~150,000,000°C — ten times hotter than the Sun's core, because they use different fuel (deuterium-tritium) and need higher plasma pressure to compensate for Earth-scale confinement.</p>
       <p class="scale-caveat-note">Note: in 2013, satellite measurements recorded −93.2°C on the East Antarctic plateau — lower than the Vostok station record, but taken from orbit rather than a ground thermometer. The station-based record remains −89.2°C.</p>
     </div>
@@ -260,21 +260,21 @@ const mod = modules.find((m) => m.id === 11)!;
 
     <div class="ht-grid">
       <div class="ht-card">
-        <div class="ht-icon">🔗</div>
+        <div class="tile-icon-spaced">🔗</div>
         <div class="inline-card-title">Conduction</div>
-        <div class="ht-body">Direct contact. Vibrating atoms pass energy to their neighbours. Metals are excellent conductors — electrons carry energy quickly. Wood, air, and foam are poor conductors (insulators).</div>
+        <div class="body-muted">Direct contact. Vibrating atoms pass energy to their neighbours. Metals are excellent conductors — electrons carry energy quickly. Wood, air, and foam are poor conductors (insulators).</div>
         <div class="ht-ex">Metal spoon in hot soup heats up fast. Wooden spoon stays cool.</div>
       </div>
       <div class="ht-card">
-        <div class="ht-icon">🌊</div>
+        <div class="tile-icon-spaced">🌊</div>
         <div class="inline-card-title">Convection</div>
-        <div class="ht-body">Moving fluid (liquid or gas) carries heat. Hot fluid rises, cool fluid sinks — creating circulation. Forced convection (fan ovens, wind) is far more efficient than natural convection.</div>
+        <div class="body-muted">Moving fluid (liquid or gas) carries heat. Hot fluid rises, cool fluid sinks — creating circulation. Forced convection (fan ovens, wind) is far more efficient than natural convection.</div>
         <div class="ht-ex">Fan oven cooks food ~20°C hotter effectively than same-temperature still oven.</div>
       </div>
       <div class="ht-card">
-        <div class="ht-icon">☀️</div>
+        <div class="tile-icon-spaced">☀️</div>
         <div class="inline-card-title">Radiation</div>
-        <div class="ht-body">Electromagnetic waves — no medium needed. Every object above absolute zero emits infrared radiation. Works through vacuum. Rate scales with T⁴ (Stefan-Boltzmann law) — doubling temperature sends 16× more radiation.</div>
+        <div class="body-muted">Electromagnetic waves — no medium needed. Every object above absolute zero emits infrared radiation. Works through vacuum. Rate scales with T⁴ (Stefan-Boltzmann law) — doubling temperature sends 16× more radiation.</div>
         <div class="ht-ex">The Sun heats Earth through 150 million km of empty space.</div>
       </div>
     </div>
@@ -282,16 +282,16 @@ const mod = modules.find((m) => m.id === 11)!;
     <!-- Heat transfer SVG diagram -->
     <div class="content-panel">
       <div class="panel-title">Thermal conductivity — how fast different materials transfer heat</div>
-      <div class="trow"><span class="tl">Diamond</span><div class="tb tb-diamond"><span class="bv text-indigo-200">~2,200 W/m·K — best conductor known</span></div></div>
-      <div class="trow"><span class="tl">Silver</span><div class="tb tb-silver"><span class="bv text-indigo-200">429 W/m·K</span></div></div>
-      <div class="trow"><span class="tl">Copper</span><div class="tb tb-copper"><span class="bv text-white">401 W/m·K — why copper pipes and cookware</span></div></div>
-      <div class="trow"><span class="tl">Aluminium</span><div class="tb tb-aluminium"><span class="bv text-white">205 W/m·K</span></div></div>
-      <div class="trow"><span class="tl">Iron / Steel</span><div class="tb tb-iron-steel"><span class="bv text-blue-950">50–80 W/m·K</span></div></div>
-      <div class="trow"><span class="tl">Glass</span><div class="tb tb-glass"><span class="bv text-green-950">1.0 W/m·K</span></div></div>
-      <div class="trow"><span class="tl">Wood</span><div class="tb tb-wood"><span class="bv text-green-950">0.1–0.4 W/m·K</span></div></div>
-      <div class="trow"><span class="tl">Aerogel</span><div class="tb tb-aerogel"><span class="bv text-amber-950">0.015</span></div></div>
-      <div class="trow"><span class="tl">Air (still)</span><div class="tb tb-still-air"><span class="bv text-white">0.025</span></div></div>
-      <div class="scale-footnote">
+      <div class="track-row-tight"><span class="tl">Diamond</span><div class="tb tb-diamond"><span class="bv text-indigo-200">~2,200 W/m·K — best conductor known</span></div></div>
+      <div class="track-row-tight"><span class="tl">Silver</span><div class="tb tb-silver"><span class="bv text-indigo-200">429 W/m·K</span></div></div>
+      <div class="track-row-tight"><span class="tl">Copper</span><div class="tb tb-copper"><span class="bv text-white">401 W/m·K — why copper pipes and cookware</span></div></div>
+      <div class="track-row-tight"><span class="tl">Aluminium</span><div class="tb tb-aluminium"><span class="bv text-white">205 W/m·K</span></div></div>
+      <div class="track-row-tight"><span class="tl">Iron / Steel</span><div class="tb tb-iron-steel"><span class="bv u-text-hex-042c53">50–80 W/m·K</span></div></div>
+      <div class="track-row-tight"><span class="tl">Glass</span><div class="tb tb-glass"><span class="bv u-text-hex-04342c">1.0 W/m·K</span></div></div>
+      <div class="track-row-tight"><span class="tl">Wood</span><div class="tb tb-wood"><span class="bv u-text-hex-04342c">0.1–0.4 W/m·K</span></div></div>
+      <div class="track-row-tight"><span class="tl">Aerogel</span><div class="tb tb-aerogel"><span class="bv text-amber-950">0.015</span></div></div>
+      <div class="track-row-tight"><span class="tl">Air (still)</span><div class="tb tb-still-air"><span class="bv text-white">0.025</span></div></div>
+      <div class="footnote-medium">
         Copper conducts heat <strong class="text-primary">16,000× faster</strong> than still air. This is why a metal object and a wooden object at the same room temperature feel different to the touch — the metal feels cooler because it conducts heat away from your fingertips faster. They are at the same temperature; only the <em>rate of transfer</em> differs.
       </div>
     </div>
@@ -302,12 +302,12 @@ const mod = modules.find((m) => m.id === 11)!;
       <div class="radiation-intro">
         Every object radiates heat as infrared light. The power radiated is proportional to the <em>fourth power</em> of absolute temperature (Kelvin). This is why small temperature increases can cause dramatic radiation increases.
       </div>
-      <div class="radiation-row">
-        <div class="radiation-temp-field">
+      <div class="control-row">
+        <div class="flex-cell-wide">
           <div class="detail-label-spaced">Object temperature (°C)</div>
           <input class="u-w-100pct" type="range" id="u-w-100pct" min="0" max="6000" value="300" step="10">
         </div>
-        <div class="slider-end-label" id="rad-temp-label">300°C</div>
+        <div class="inline-label" id="rad-temp-label">300°C</div>
       </div>
       <div class="rad-output" id="rad-output"></div>
     </div>
@@ -320,10 +320,10 @@ const mod = modules.find((m) => m.id === 11)!;
     <p class="section-intro">Almost all solids expand when heated. The amount is tiny — but at engineering scales, it adds up to real consequences. Bridges, rails, pipelines, and buildings all need expansion joints to accommodate this.</p>
 
     <div class="content-panel">
-      <div class="temperature-label">Thermal expansion calculator</div>
+      <div class="block-title">Thermal expansion calculator</div>
 
-      <div class="texp-row">
-        <div class="texp-field">
+      <div class="input-row">
+        <div class="field-cell">
           <label class="muted-text-small" for="texp-mat">Material</label>
           <select class="texp-mat" id="texp-mat" onchange="calcExpansion()">
             <option value="12e-6">Steel (12 × 10⁻⁶/°C)</option>
@@ -334,11 +334,11 @@ const mod = modules.find((m) => m.id === 11)!;
             <option value="5e-6">Invar alloy (5 × 10⁻⁷/°C)</option>
           </select>
         </div>
-        <div class="texp-field">
+        <div class="field-cell">
           <label class="muted-text-small" for="u-fs-13px">Length (metres)</label>
           <input class="u-fs-13px" type="number" id="u-fs-13px" value="100" min="0.01" max="10000" step="1" oninput="calcExpansion()">
         </div>
-        <div class="texp-field">
+        <div class="field-cell">
           <label class="muted-text-small" for="texp-dt">Temperature rise (°C)</label>
           <input class="u-fs-13px" type="number" id="texp-dt" value="40" min="0" max="500" step="1" oninput="calcExpansion()">
         </div>
@@ -346,12 +346,12 @@ const mod = modules.find((m) => m.id === 11)!;
       <div class="texp-result" id="texp-result"></div>
 
       <div class="u-mt-md">
-        <div class="expansion-examples-title">Real-world examples</div>
+        <div class="subheading">Real-world examples</div>
         <div class="temperature-grid">
-          <div class="expansion-fact"><strong class="text-primary">Eiffel Tower</strong> — 300 m of iron. Grows by ~18 cm between winter and summer. The top sways up to 6 cm in the wind.</div>
-          <div class="expansion-fact"><strong class="text-primary">Railway track</strong> — gaps every 25 m allow ~12 mm expansion per section. Modern welded rail uses pre-stress instead.</div>
-          <div class="expansion-fact"><strong class="text-primary">Power lines</strong> — deliberately strung with sag in summer so they don't snap taut and break in winter cold.</div>
-          <div class="expansion-fact"><strong class="text-primary">Invar alloy</strong> (iron + 36% nickel) was invented specifically for watch springs and surveying rods because it barely expands at all.</div>
+          <div class="fact-panel"><strong class="text-primary">Eiffel Tower</strong> — 300 m of iron. Grows by ~18 cm between winter and summer. The top sways up to 6 cm in the wind.</div>
+          <div class="fact-panel"><strong class="text-primary">Railway track</strong> — gaps every 25 m allow ~12 mm expansion per section. Modern welded rail uses pre-stress instead.</div>
+          <div class="fact-panel"><strong class="text-primary">Power lines</strong> — deliberately strung with sag in summer so they don't snap taut and break in winter cold.</div>
+          <div class="fact-panel"><strong class="text-primary">Invar alloy</strong> (iron + 36% nickel) was invented specifically for watch springs and surveying rods because it barely expands at all.</div>
         </div>
       </div>
     </div>
@@ -364,7 +364,7 @@ const mod = modules.find((m) => m.id === 11)!;
     <p class="section-intro">Your body generates about 80 watts of heat at rest — roughly the same as an incandescent light bulb. It must constantly shed this heat or overheat within minutes. The entire system is engineered for a target of exactly 37°C.</p>
 
     <div class="content-panel">
-      <div class="temperature-label">Body temperature zones — core vs extremities</div>
+      <div class="block-title">Body temperature zones — core vs extremities</div>
 
       <!-- Body temperature SVG -->
       <div class="svg-wrap u-mb-md">
@@ -414,44 +414,44 @@ const mod = modules.find((m) => m.id === 11)!;
 
       <div class="panel-title-spaced">Temperature thresholds — the body's danger zones</div>
       <div class="bzone-row">
-        <span class="bzone-temp text-indigo-950">≤ 28°C</span>
+        <span class="bzone-temp u-text-hex-26215c">≤ 28°C</span>
         <div class="bzone-bar bzone-bar-style"></div>
-        <span class="bzone-desc">Severe hypothermia — cardiac arrest risk. Unconsciousness, no shivering reflex.</span>
+        <span class="desc-text">Severe hypothermia — cardiac arrest risk. Unconsciousness, no shivering reflex.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-blue-700">32°C</span>
         <div class="bzone-bar bzone-bar-moderate-hypothermia"></div>
-        <span class="bzone-desc">Moderate hypothermia — intense shivering, confusion, muscle incoordination.</span>
+        <span class="desc-text">Moderate hypothermia — intense shivering, confusion, muscle incoordination.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-blue-500">35°C</span>
         <div class="bzone-bar bzone-bar-mild-hypothermia"></div>
-        <span class="bzone-desc">Mild hypothermia — shivering, loss of fine motor control. Clinical threshold.</span>
+        <span class="desc-text">Mild hypothermia — shivering, loss of fine motor control. Clinical threshold.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-teal-700">36–37.5°C</span>
         <div class="bzone-bar bzone-bar-normal"></div>
-        <span class="bzone-desc"><strong class="text-primary">Normal range.</strong> Slight variation by time of day — lowest at ~4 AM, highest in late afternoon.</span>
+        <span class="desc-text"><strong class="text-primary">Normal range.</strong> Slight variation by time of day — lowest at ~4 AM, highest in late afternoon.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-amber-500">38°C</span>
         <div class="bzone-bar bzone-bar-low-fever"></div>
-        <span class="bzone-desc">Low-grade fever. Immune response actively fighting infection — the elevated temp actually helps.</span>
+        <span class="desc-text">Low-grade fever. Immune response actively fighting infection — the elevated temp actually helps.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-amber-700">39–40°C</span>
         <div class="bzone-bar bzone-bar-significant-fever"></div>
-        <span class="bzone-desc">Significant fever. Enzyme function begins to degrade. Medical attention recommended above 39.5°C.</span>
+        <span class="desc-text">Significant fever. Enzyme function begins to degrade. Medical attention recommended above 39.5°C.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-orange-600">41°C</span>
         <div class="bzone-bar bzone-bar-high-fever"></div>
-        <span class="bzone-desc">High fever — brain damage risk. Convulsions possible. Seek emergency care immediately.</span>
+        <span class="desc-text">High fever — brain damage risk. Convulsions possible. Seek emergency care immediately.</span>
       </div>
       <div class="bzone-row">
         <span class="bzone-temp text-red-700">≥ 42°C</span>
         <div class="bzone-bar bzone-bar-fatal"></div>
-        <span class="bzone-desc">Potentially fatal. Proteins denature. Multi-organ failure. Medical emergency.</span>
+        <span class="desc-text">Potentially fatal. Proteins denature. Multi-organ failure. Medical emergency.</span>
       </div>
 
       <div class="fever-paradox-note">
@@ -506,14 +506,14 @@ const mod = modules.find((m) => m.id === 11)!;
     <!-- Oven temperature chart -->
     <div class="content-panel">
       <div class="panel-title">Oven temperature guide — what actually happens at each setting</div>
-      <div class="trow"><span class="tl">120°C / 250°F</span><div class="tb tb-drying-oven"><span class="bv text-amber-950">Very slow / drying (meringue, jerky)</span></div></div>
-      <div class="trow"><span class="tl">150°C / 300°F</span><div class="tb tb-slow-cook"><span class="bv text-white">Slow cook — collagen melts to gelatin</span></div></div>
-      <div class="trow"><span class="tl">180°C / 356°F</span><div class="tb tb-baking"><span class="bv text-white">Standard baking — Maillard reaction begins</span></div></div>
-      <div class="trow"><span class="tl">200°C / 392°F</span><div class="tb tb-roasting"><span class="bv text-white">Roasting — browning and crisping</span></div></div>
-      <div class="trow"><span class="tl">220°C / 428°F</span><div class="tb tb-hot-roast"><span class="bv text-white">Hot roast / pizza — rapid crust formation</span></div></div>
-      <div class="trow"><span class="tl">250°C / 482°F</span><div class="tb tb-max-oven"><span class="bv tv-blush">Maximum — near-char, Neapolitan pizza</span></div></div>
-      <div class="trow"><span class="tl">~233°C / 451°F</span><div class="tb tb-paper-ignites"><span class="bv text-white">Fahrenheit 451 — paper can ignite</span></div></div>
-      <div class="scale-footnote">
+      <div class="track-row-tight"><span class="tl">120°C / 250°F</span><div class="tb tb-drying-oven"><span class="bv text-amber-950">Very slow / drying (meringue, jerky)</span></div></div>
+      <div class="track-row-tight"><span class="tl">150°C / 300°F</span><div class="tb tb-slow-cook"><span class="bv text-white">Slow cook — collagen melts to gelatin</span></div></div>
+      <div class="track-row-tight"><span class="tl">180°C / 356°F</span><div class="tb tb-baking"><span class="bv text-white">Standard baking — Maillard reaction begins</span></div></div>
+      <div class="track-row-tight"><span class="tl">200°C / 392°F</span><div class="tb tb-roasting"><span class="bv text-white">Roasting — browning and crisping</span></div></div>
+      <div class="track-row-tight"><span class="tl">220°C / 428°F</span><div class="tb tb-hot-roast"><span class="bv text-white">Hot roast / pizza — rapid crust formation</span></div></div>
+      <div class="track-row-tight"><span class="tl">250°C / 482°F</span><div class="tb tb-max-oven"><span class="bv tv-blush">Maximum — near-char, Neapolitan pizza</span></div></div>
+      <div class="track-row-tight"><span class="tl">~233°C / 451°F</span><div class="tb tb-paper-ignites"><span class="bv text-white">Fahrenheit 451 — paper can ignite</span></div></div>
+      <div class="footnote-medium">
         <strong class="text-primary">The Maillard reaction</strong> is the set of chemical reactions between amino acids and reducing sugars that begins around 140–165°C and creates hundreds of flavour compounds. It is not caramelisation (which involves only sugars, starting around 160°C) — they are distinct processes, but both require removing moisture and reaching the right temperature. Note: 451°F (233°C) is the temperature Ray Bradbury used as paper's ignition point for his novel's title — the actual autoignition range of paper varies from about 218–246°C depending on paper type.
       </div>
     </div>
@@ -525,7 +525,7 @@ const mod = modules.find((m) => m.id === 11)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Read the scenario. Pick the best temperature estimate.</div>
-      <div class="game-intro">Building real-world temperature intuition, one scenario at a time.</div>
+      <div class="intro-small">Building real-world temperature intuition, one scenario at a time.</div>
 
       <div class="game-score" id="game-score">Score: 0 / 0</div>
       <div class="game-scenario" id="game-scenario"></div>

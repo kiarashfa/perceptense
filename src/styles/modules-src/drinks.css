@@ -1,11 +1,7 @@
 .wine-btn { font-size:12px; padding:3px 10px; border-radius:99px; }
 .wine-btn.active { background:var(--color-text-primary); color:var(--color-background-primary); border-color:var(--color-text-primary); }
-
-/* Tasting wheel visual */
-.taste-bar-row { display:flex; align-items:center; gap:8px; margin-bottom:5px; }
 .taste-bar-label { font-size:11px; color:var(--color-text-secondary); width:72px; flex-shrink:0; text-align:right; }
 .taste-bar-track { flex:1; background:var(--color-background-secondary); border-radius:3px; height:8px; overflow:hidden; }
-.taste-bar-fill { height:8px; border-radius:3px; transition:width 0.4s ease; }
 
 /* ABV calculator */
 .calc-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px; }
@@ -15,38 +11,8 @@
 .beer-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:8px; }
 @media(max-width:480px){ .beer-grid { grid-template-columns:1fr; } }
 
-/* === Shared-ready extracted styles === */
-
-.two-col-grid-tight {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-}
-
 .u-w-100pct {
   width:100%;
-}
-
-/* === Module-specific extracted styles === */
-
-.drinks-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(120px,1fr));
-  gap:8px;
-  margin-bottom:10px;
-}
-
-.drinks-panel {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
-  text-align:center;
-}
-
-.drinks-label {
-  font-size:18px;
-  font-weight:500;
-  color:var(--color-text-primary);
 }
 
 .drinks-text {
@@ -55,26 +21,10 @@
   margin-top:3px;
 }
 
-.method-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-}
-
 .drinks-spacing {
   margin-top:12px;
   border-top:0.5px solid var(--color-border-tertiary);
   padding-top:12px;
-}
-
-.subsection-title {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:8px;
 }
 
 .unit-definition {
@@ -82,12 +32,6 @@
   color:var(--color-text-secondary);
   margin-bottom:10px;
   line-height:1.5;
-}
-
-.calc-field-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:4px;
 }
 
 .calcunits-control {
@@ -103,30 +47,11 @@
   display:none;
 }
 
-.showspirit-control {
-  font-size:12px;
-  padding:4px 11px;
-}
-
-.section-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
-  line-height:1.6;
-}
-
 .drinks-media {
   width:100%;
   height:auto;
   display:block;
   max-height:160px;
-}
-
-.still-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:6px;
-  line-height:1.5;
 }
 
 .fermentation-diagram {
@@ -263,12 +188,6 @@
   padding-top:10px;
 }
 
-.scale-heading {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:6px;
-}
-
 .ibu-gradient {
   position:relative;
   height:16px;
@@ -309,41 +228,10 @@
   background:linear-gradient(to right, #FFE88A, #F8BB35, #C07C27, #8C4A0A, #4A1A00, #1A0800);
 }
 
-.showcocktail-control {
-  font-size:12px;
-  padding:3px 10px;
-}
-
-.section-intro-short {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-  line-height:1.5;
-}
-
 .cocktail-diagram {
   width:100%;
   height:auto;
   display:block;
-}
-
-.espresso-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
-}
-
-.ratio-slider-row {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:8px;
-}
-
-.ratio-label {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  min-width:80px;
 }
 
 .coffee-drink-name {
@@ -413,19 +301,6 @@
   gap:12px;
 }
 
-.coffee-name {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:2px;
-}
-
-.coffee-desc {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  line-height:1.4;
-}
-
 .winemaking-diagram {
   width:100%;
   height:auto;
@@ -440,31 +315,12 @@
   margin-bottom:10px;
 }
 
-.grapes-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-}
-
 .wine-display {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-lg);
   padding:13px 15px;
   margin-top:8px;
   min-height:120px;
-}
-
-.label-comparison {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.wine-label-title {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:6px;
 }
 
 .wine-label-card {
@@ -475,21 +331,6 @@
   color:var(--color-text-secondary);
   line-height:1.7;
   background:var(--color-background-secondary);
-}
-
-.drinks-span-style {
-  color:var(--color-text-primary);
-  font-weight:500;
-}
-
-.sweetness-note {
-  margin-top:10px;
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
 }
 
 .pairing-diagram {

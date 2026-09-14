@@ -23,16 +23,16 @@ const mod = modules.find((m) => m.id === 19)!;
     <h2 class="sec" id="part-a-world-cuisines-origins-philosophy-key-flavours">Part A · world cuisines — origins, philosophy, key flavours</h2>
 
     <div class="button-row">
-      <button class="showcuisine-control" onclick="showCuisine('french')"     >French</button>
-      <button class="showcuisine-control" onclick="showCuisine('italian')"    >Italian</button>
-      <button class="showcuisine-control" onclick="showCuisine('chinese')"    >Chinese</button>
-      <button class="showcuisine-control" onclick="showCuisine('japanese')"   >Japanese</button>
-      <button class="showcuisine-control" onclick="showCuisine('thai')"       >Thai</button>
-      <button class="showcuisine-control" onclick="showCuisine('indian')"     >Indian</button>
-      <button class="showcuisine-control" onclick="showCuisine('middle')"     >Middle Eastern</button>
-      <button class="showcuisine-control" onclick="showCuisine('mexican')"    >Mexican</button>
-      <button class="showcuisine-control" onclick="showCuisine('spanish')"    >Spanish</button>
-      <button class="showcuisine-control" onclick="showCuisine('westafrican')">West African</button>
+      <button class="pill-button" onclick="showCuisine('french')"     >French</button>
+      <button class="pill-button" onclick="showCuisine('italian')"    >Italian</button>
+      <button class="pill-button" onclick="showCuisine('chinese')"    >Chinese</button>
+      <button class="pill-button" onclick="showCuisine('japanese')"   >Japanese</button>
+      <button class="pill-button" onclick="showCuisine('thai')"       >Thai</button>
+      <button class="pill-button" onclick="showCuisine('indian')"     >Indian</button>
+      <button class="pill-button" onclick="showCuisine('middle')"     >Middle Eastern</button>
+      <button class="pill-button" onclick="showCuisine('mexican')"    >Mexican</button>
+      <button class="pill-button" onclick="showCuisine('spanish')"    >Spanish</button>
+      <button class="pill-button" onclick="showCuisine('westafrican')">West African</button>
     </div>
     <div class="content-panel" id="cuisine-display"></div>
 
@@ -43,7 +43,7 @@ const mod = modules.find((m) => m.id === 19)!;
 
     <!-- Temperature danger zone diagram (SVG) -->
     <div class="content-panel">
-      <div class="culinary-label">Internal temperature scale (°C) — what's happening inside the meat</div>
+      <div class="block-title">Internal temperature scale (°C) — what's happening inside the meat</div>
       <div class="u-overflow-x-auto">
         <svg class="culinary-media" viewBox="0 0 700 110" xmlns="http://www.w3.org/2000/svg">
           <!-- Temperature gradient bar -->
@@ -145,125 +145,125 @@ const mod = modules.find((m) => m.id === 19)!;
     </div>
 
     <div class="content-card">
-      <div class="meat-header">
-        <span class="meat-name">Chicken &amp; poultry</span>
-        <span class="meat-badge p-coral">Most strict — no pink ever</span>
+      <div class="header-row-split">
+        <span class="card-name">Chicken &amp; poultry</span>
+        <span class="pill-badge p-coral">Most strict — no pink ever</span>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Safe internal temp (grill/oven)</p>
-          <p class="sub-val">74°C (165°F)</p>
-          <p class="sub-note">The strictest of all meats. Salmonella risk means no exceptions.</p>
+          <p class="stat-label-small">Safe internal temp (grill/oven)</p>
+          <p class="value-flush">74°C (165°F)</p>
+          <p class="note-flush">The strictest of all meats. Salmonella risk means no exceptions.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Boiling (whole pieces in water)</p>
-          <p class="sub-val">20–30 min</p>
-          <p class="sub-note">Breast: 20 min. Thighs/legs: 30 min. Always fully opaque, no pink juice.</p>
+          <p class="stat-label-small">Boiling (whole pieces in water)</p>
+          <p class="value-flush">20–30 min</p>
+          <p class="note-flush">Breast: 20 min. Thighs/legs: 30 min. Always fully opaque, no pink juice.</p>
         </div>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Pan-fry / grill (breast, 2 cm thick)</p>
-          <p class="sub-val">6–8 min per side</p>
-          <p class="sub-note">Medium heat. Rest 3 min after. Juices should run clear.</p>
+          <p class="stat-label-small">Pan-fry / grill (breast, 2 cm thick)</p>
+          <p class="value-flush">6–8 min per side</p>
+          <p class="note-flush">Medium heat. Rest 3 min after. Juices should run clear.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Oven-roast whole chicken (~1.5 kg)</p>
-          <p class="sub-val">~1.5 hours at 190°C</p>
-          <p class="sub-note">Rule: 20 min per 500g + 20 min extra. Thigh must reach 74°C.</p>
+          <p class="stat-label-small">Oven-roast whole chicken (~1.5 kg)</p>
+          <p class="value-flush">~1.5 hours at 190°C</p>
+          <p class="note-flush">Rule: 20 min per 500g + 20 min extra. Thigh must reach 74°C.</p>
         </div>
       </div>
     </div>
 
     <div class="content-card">
-      <div class="meat-header">
-        <span class="meat-name">Beef</span>
-        <span class="meat-badge p-amber">Flexible — doneness is personal</span>
+      <div class="header-row-split">
+        <span class="card-name">Beef</span>
+        <span class="pill-badge p-amber">Flexible — doneness is personal</span>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Rare (red centre)</p>
-          <p class="sub-val">50–52°C</p>
-          <p class="sub-note">Safe for whole cuts (steak) — bacteria only on surface, which is seared.</p>
+          <p class="stat-label-small">Rare (red centre)</p>
+          <p class="value-flush">50–52°C</p>
+          <p class="note-flush">Safe for whole cuts (steak) — bacteria only on surface, which is seared.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Medium-rare (pink, warm)</p>
-          <p class="sub-val">55–57°C</p>
-          <p class="sub-note">The sweet spot for most steaks. Juicy and tender.</p>
+          <p class="stat-label-small">Medium-rare (pink, warm)</p>
+          <p class="value-flush">55–57°C</p>
+          <p class="note-flush">The sweet spot for most steaks. Juicy and tender.</p>
         </div>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Medium (slight pink)</p>
-          <p class="sub-val">60–63°C</p>
-          <p class="sub-note">Ground beef must reach 71°C — bacteria throughout.</p>
+          <p class="stat-label-small">Medium (slight pink)</p>
+          <p class="value-flush">60–63°C</p>
+          <p class="note-flush">Ground beef must reach 71°C — bacteria throughout.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Well done / stewing</p>
-          <p class="sub-val">71°C+ / 1.5–2 hrs simmer</p>
-          <p class="sub-note">Stewing beef: long, slow simmer breaks collagen into gelatin for tenderness.</p>
+          <p class="stat-label-small">Well done / stewing</p>
+          <p class="value-flush">71°C+ / 1.5–2 hrs simmer</p>
+          <p class="note-flush">Stewing beef: long, slow simmer breaks collagen into gelatin for tenderness.</p>
         </div>
       </div>
     </div>
 
     <div class="content-card">
-      <div class="meat-header">
-        <span class="meat-name">Pork</span>
-        <span class="meat-badge p-green">Slightly pink is now fine (updated guidelines)</span>
+      <div class="header-row-split">
+        <span class="card-name">Pork</span>
+        <span class="pill-badge p-green">Slightly pink is now fine (updated guidelines)</span>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Safe internal temp</p>
-          <p class="sub-val">63°C (145°F)</p>
-          <p class="sub-note">Modern standard — a little pink at the centre is safe. Old guideline was 77°C (overcooks it).</p>
+          <p class="stat-label-small">Safe internal temp</p>
+          <p class="value-flush">63°C (145°F)</p>
+          <p class="note-flush">Modern standard — a little pink at the centre is safe. Old guideline was 77°C (overcooks it).</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Pork chop (grill/pan, 2 cm)</p>
-          <p class="sub-val">4–5 min per side</p>
-          <p class="sub-note">Rest 3 min. Should feel firm but not hard when pressed.</p>
+          <p class="stat-label-small">Pork chop (grill/pan, 2 cm)</p>
+          <p class="value-flush">4–5 min per side</p>
+          <p class="note-flush">Rest 3 min. Should feel firm but not hard when pressed.</p>
         </div>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Pork belly / ribs (oven slow)</p>
-          <p class="sub-val">2.5–3 hrs at 160°C</p>
-          <p class="sub-note">Low and slow for collagen breakdown. Fat renders out, meat falls off bone.</p>
+          <p class="stat-label-small">Pork belly / ribs (oven slow)</p>
+          <p class="value-flush">2.5–3 hrs at 160°C</p>
+          <p class="note-flush">Low and slow for collagen breakdown. Fat renders out, meat falls off bone.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Boiling (pork shoulder)</p>
-          <p class="sub-val">1.5–2 hrs</p>
-          <p class="sub-note">Until fork-tender. Good for ramen broth or pulled pork base.</p>
+          <p class="stat-label-small">Boiling (pork shoulder)</p>
+          <p class="value-flush">1.5–2 hrs</p>
+          <p class="note-flush">Until fork-tender. Good for ramen broth or pulled pork base.</p>
         </div>
       </div>
     </div>
 
     <div class="content-card">
-      <div class="meat-header">
-        <span class="meat-name">Fish (salmon, cod, sea bass…)</span>
-        <span class="meat-badge p-blue">Fastest — easy to overcook</span>
+      <div class="header-row-split">
+        <span class="card-name">Fish (salmon, cod, sea bass…)</span>
+        <span class="pill-badge p-blue">Fastest — easy to overcook</span>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Safe internal temp</p>
-          <p class="sub-val">63°C (145°F)</p>
-          <p class="sub-note">Flesh should flake easily and be opaque. Salmon can stay slightly translucent if very fresh.</p>
+          <p class="stat-label-small">Safe internal temp</p>
+          <p class="value-flush">63°C (145°F)</p>
+          <p class="note-flush">Flesh should flake easily and be opaque. Salmon can stay slightly translucent if very fresh.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Pan-fry fillet (2–3 cm thick)</p>
-          <p class="sub-val">3–4 min per side</p>
-          <p class="sub-note">Skin side down first on high heat. Don't move it until it releases naturally.</p>
+          <p class="stat-label-small">Pan-fry fillet (2–3 cm thick)</p>
+          <p class="value-flush">3–4 min per side</p>
+          <p class="note-flush">Skin side down first on high heat. Don't move it until it releases naturally.</p>
         </div>
       </div>
       <div class="row2">
         <div class="sub-card">
-          <p class="sub-label">Oven (salmon fillet, 180°C)</p>
-          <p class="sub-val">12–15 min</p>
-          <p class="sub-note">Rule: 10 min per 2.5 cm of thickness. Overcooked fish is dry and chalky.</p>
+          <p class="stat-label-small">Oven (salmon fillet, 180°C)</p>
+          <p class="value-flush">12–15 min</p>
+          <p class="note-flush">Rule: 10 min per 2.5 cm of thickness. Overcooked fish is dry and chalky.</p>
         </div>
         <div class="sub-card">
-          <p class="sub-label">Poaching in water (~80°C)</p>
-          <p class="sub-val">8–12 min</p>
-          <p class="sub-note">Gentle, keeps fish moist. Don't boil — it toughens the flesh.</p>
+          <p class="stat-label-small">Poaching in water (~80°C)</p>
+          <p class="value-flush">8–12 min</p>
+          <p class="note-flush">Gentle, keeps fish moist. Don't boil — it toughens the flesh.</p>
         </div>
       </div>
     </div>
@@ -296,7 +296,7 @@ const mod = modules.find((m) => m.id === 19)!;
       </div>
     </div>
 
-    <div class="thickness-rule">
+    <div class="soft-block">
       <div class="compact-card-title">The thickness rule — works for grilling any meat</div>
       <div class="muted-copy-large">
         For every 1 cm of thickness, allow roughly 2–3 minutes per side on medium-high heat. A 2 cm chicken breast = 4–6 min per side. A 3 cm steak = 6–9 min per side for medium. This is a rough guide — always verify with a thermometer or the finger-press test.
@@ -308,7 +308,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-c-the-5-french-mother-sauces-the-foundation-of-classical-cooking">Part C · the 5 French mother sauces — the foundation of classical cooking</h2>
 
-    <div class="context-note">
+    <div class="note-context">
       Codified by Auguste Escoffier in the early 20th century (building on Marie-Antoine Carême's earlier work). Every classical French sauce derives from one of these five bases. Master these and you can make thousands of sauces.
     </div>
 
@@ -389,51 +389,51 @@ const mod = modules.find((m) => m.id === 19)!;
     </div>
 
     <div class="content-card">
-      <div class="sh"><span class="sname">Béchamel</span><span class="sbadge p-blue">milk + roux</span><span class="sbadge p-teal">white sauce</span></div>
+      <div class="header-row"><span class="card-name">Béchamel</span><span class="pill-badge p-blue">milk + roux</span><span class="pill-badge p-teal">white sauce</span></div>
       <div class="ssub">
-        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Butter + flour (roux) cooked until pale, then milk whisked in.</p></div>
-        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Mornay (+ cheese), Soubise (+ onion purée), Nantua (+ crayfish butter), cream sauce.</p></div>
-        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Lasagne, moussaka, croque monsieur, cauliflower cheese, gratins, pasta bakes.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Base</p><p class="value-text">Butter + flour (roux) cooked until pale, then milk whisked in.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Key derivatives</p><p class="value-text">Mornay (+ cheese), Soubise (+ onion purée), Nantua (+ crayfish butter), cream sauce.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Used in</p><p class="value-text">Lasagne, moussaka, croque monsieur, cauliflower cheese, gratins, pasta bakes.</p></div>
       </div>
       <p class="muted-copy-tight">The roux is the key skill: equal parts butter and flour by weight, cooked over medium heat until it smells nutty but hasn't coloured (white roux). Then add milk gradually, whisking constantly to prevent lumps. Season with nutmeg. The ratio: ~50g butter + 50g flour per 500ml milk for a medium sauce.</p>
     </div>
 
     <div class="content-card">
-      <div class="sh"><span class="sname">Velouté</span><span class="sbadge p-amber">stock + roux</span><span class="sbadge p-teal">blonde sauce</span></div>
+      <div class="header-row"><span class="card-name">Velouté</span><span class="pill-badge p-amber">stock + roux</span><span class="pill-badge p-teal">blonde sauce</span></div>
       <div class="ssub">
-        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Blond roux (slightly coloured) + white stock (veal, chicken, or fish).</p></div>
-        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Allemande (+ egg yolk/cream), Suprême (+ chicken velouté + cream), Vin Blanc (fish velouté + white wine).</p></div>
-        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Chicken dishes, fish dishes, vol-au-vents, creamy soups as a base.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Base</p><p class="value-text">Blond roux (slightly coloured) + white stock (veal, chicken, or fish).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Key derivatives</p><p class="value-text">Allemande (+ egg yolk/cream), Suprême (+ chicken velouté + cream), Vin Blanc (fish velouté + white wine).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Used in</p><p class="value-text">Chicken dishes, fish dishes, vol-au-vents, creamy soups as a base.</p></div>
       </div>
       <p class="muted-copy-tight">The difference from béchamel: stock instead of milk gives a deeper, more savoury flavour. The blond roux (cooked a few minutes longer than white) adds a subtle nutty note. Velouté means "velvety" — the sauce should be smooth and silky, coating the back of a spoon.</p>
     </div>
 
     <div class="content-card">
-      <div class="sh"><span class="sname">Espagnole</span><span class="sbadge p-coral">brown stock + tomato + mirepoix</span><span class="sbadge p-amber">brown sauce</span></div>
+      <div class="header-row"><span class="card-name">Espagnole</span><span class="pill-badge p-coral">brown stock + tomato + mirepoix</span><span class="pill-badge p-amber">brown sauce</span></div>
       <div class="ssub">
-        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Dark (brown) roux + rich brown veal stock + mirepoix (carrot, onion, celery) + tomato purée. Slow-cooked, skimmed repeatedly.</p></div>
-        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Demi-glace (espagnole reduced 50% + equal veal stock), Bordelaise (demi-glace + red wine + shallots + bone marrow), Chasseur, Robert, Madeira.</p></div>
-        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Rich meat dishes, stews, braised meats, classic French bistro sauces.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Base</p><p class="value-text">Dark (brown) roux + rich brown veal stock + mirepoix (carrot, onion, celery) + tomato purée. Slow-cooked, skimmed repeatedly.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Key derivatives</p><p class="value-text">Demi-glace (espagnole reduced 50% + equal veal stock), Bordelaise (demi-glace + red wine + shallots + bone marrow), Chasseur, Robert, Madeira.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Used in</p><p class="value-text">Rich meat dishes, stews, braised meats, classic French bistro sauces.</p></div>
       </div>
       <p class="muted-copy-tight">The most labour-intensive mother sauce — traditionally takes 2 days. The brown roux (cooked until deep brown) and reduction of rich bone stock creates extraordinary depth of flavour. Demi-glace is its most important derivative — the backbone of classical French restaurant cooking. When a sauce is described as "reduced to a glaze," this is the direction.</p>
     </div>
 
     <div class="content-card">
-      <div class="sh"><span class="sname">Sauce tomat</span><span class="sbadge p-red">tomatoes + pork + aromatics</span><span class="sbadge p-amber">red sauce</span></div>
+      <div class="header-row"><span class="card-name">Sauce tomat</span><span class="pill-badge p-red">tomatoes + pork + aromatics</span><span class="pill-badge p-amber">red sauce</span></div>
       <div class="ssub">
-        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Pork fat (or butter) + mirepoix + tomatoes + stock. The classical version uses salt pork and veal stock — more complex than Italian tomato sauce.</p></div>
-        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Creole, Portuguese, Provençale. Also forms the base for pizza and pasta sauces in adapted form.</p></div>
-        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Braised meats, stuffed vegetables, eggs (shakshuka-style), pasta (simplified version).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Base</p><p class="value-text">Pork fat (or butter) + mirepoix + tomatoes + stock. The classical version uses salt pork and veal stock — more complex than Italian tomato sauce.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Key derivatives</p><p class="value-text">Creole, Portuguese, Provençale. Also forms the base for pizza and pasta sauces in adapted form.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Used in</p><p class="value-text">Braised meats, stuffed vegetables, eggs (shakshuka-style), pasta (simplified version).</p></div>
       </div>
       <p class="muted-copy-tight">Not to be confused with simple Italian pomodoro. The French classical sauce tomat is richer and more complex — includes roux, salt pork, and long cooking. The tomato arrived in France via Spain in the 16th century; Escoffier elevated it to mother sauce status. The modern kitchen often uses simplified tomato sauce as this base.</p>
     </div>
 
     <div class="content-card">
-      <div class="sh"><span class="sname">Hollandaise</span><span class="sbadge p-amber">butter + egg yolks + acid</span><span class="sbadge p-coral">emulsified butter sauce</span></div>
+      <div class="header-row"><span class="card-name">Hollandaise</span><span class="pill-badge p-amber">butter + egg yolks + acid</span><span class="pill-badge p-coral">emulsified butter sauce</span></div>
       <div class="ssub">
-        <div class="sub-card-compact"><p class="sl">Base</p><p class="sv">Clarified butter whisked into egg yolks over gentle heat, with lemon juice or white wine vinegar. An emulsion — fat suspended in water by lecithin from egg yolks.</p></div>
-        <div class="sub-card-compact"><p class="sl">Key derivatives</p><p class="sv">Béarnaise (+ tarragon + shallots — classic with steak), Choron (béarnaise + tomato), Foyot (béarnaise + meat glaze), Maltaise (+ blood orange).</p></div>
-        <div class="sub-card-compact"><p class="sl">Used in</p><p class="sv">Eggs Benedict, asparagus, fish, vegetables. Béarnaise with steak is one of the great pairings.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Base</p><p class="value-text">Clarified butter whisked into egg yolks over gentle heat, with lemon juice or white wine vinegar. An emulsion — fat suspended in water by lecithin from egg yolks.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Key derivatives</p><p class="value-text">Béarnaise (+ tarragon + shallots — classic with steak), Choron (béarnaise + tomato), Foyot (béarnaise + meat glaze), Maltaise (+ blood orange).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Used in</p><p class="value-text">Eggs Benedict, asparagus, fish, vegetables. Béarnaise with steak is one of the great pairings.</p></div>
       </div>
       <p class="muted-copy-tight">The most technically demanding mother sauce — the emulsion can "break" (separate into greasy butter and watery eggs) if too hot or stirred too fast. Temperature control is everything: the bowl should be over barely simmering water, not boiling (below 65°C). If it breaks, whisking in a cold tablespoon of water or starting a new yolk in a clean bowl and slowly incorporating the broken sauce can rescue it.</p>
     </div>
@@ -482,15 +482,15 @@ const mod = modules.find((m) => m.id === 19)!;
     <h2 class="sec" id="part-e-essential-techniques-what-they-mean-and-why-they-work">Part E · essential techniques — what they mean and why they work</h2>
 
     <div class="button-row">
-      <button class="showcuisine-control" onclick="showTech('mise')"      >Mise en place</button>
-      <button class="showcuisine-control" onclick="showTech('maillard')"  >Maillard reaction</button>
-      <button class="showcuisine-control" onclick="showTech('caramel')"   >Caramelisation</button>
-      <button class="showcuisine-control" onclick="showTech('reduction')" >Reduction</button>
-      <button class="showcuisine-control" onclick="showTech('emulsion')"  >Emulsion</button>
-      <button class="showcuisine-control" onclick="showTech('seasoning')" >Seasoning</button>
-      <button class="showcuisine-control" onclick="showTech('resting')"   >Resting meat</button>
-      <button class="showcuisine-control" onclick="showTech('beurre')"    >Beurre blanc / monter</button>
-      <button class="showcuisine-control" onclick="showTech('deglaze')"   >Deglazing</button>
+      <button class="pill-button" onclick="showTech('mise')"      >Mise en place</button>
+      <button class="pill-button" onclick="showTech('maillard')"  >Maillard reaction</button>
+      <button class="pill-button" onclick="showTech('caramel')"   >Caramelisation</button>
+      <button class="pill-button" onclick="showTech('reduction')" >Reduction</button>
+      <button class="pill-button" onclick="showTech('emulsion')"  >Emulsion</button>
+      <button class="pill-button" onclick="showTech('seasoning')" >Seasoning</button>
+      <button class="pill-button" onclick="showTech('resting')"   >Resting meat</button>
+      <button class="pill-button" onclick="showTech('beurre')"    >Beurre blanc / monter</button>
+      <button class="pill-button" onclick="showTech('deglaze')"   >Deglazing</button>
     </div>
     <div class="tech-display" id="tech-display"></div>
 
@@ -523,28 +523,28 @@ const mod = modules.find((m) => m.id === 19)!;
       <div class="panel-title-spaced">Other essential table etiquette</div>
       <div class="etiquette-grid">
         <div class="sub-card">
-          <div class="detail-label">Bread</div>
-          <div class="etiquette-rule">Tear bread with your hands, never cut it. Butter each small piece as you eat it, not the whole slice at once. Bread plate is to your left.</div>
+          <div class="caption-label">Bread</div>
+          <div class="body-compact">Tear bread with your hands, never cut it. Butter each small piece as you eat it, not the whole slice at once. Bread plate is to your left.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Cutlery order</div>
-          <div class="etiquette-rule">Work from the outside in. The fork and knife furthest from your plate are for the first course. You should never need to ask which to use.</div>
+          <div class="caption-label">Cutlery order</div>
+          <div class="body-compact">Work from the outside in. The fork and knife furthest from your plate are for the first course. You should never need to ask which to use.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Wine glasses</div>
-          <div class="etiquette-rule">Hold by the stem (not the bowl) to avoid warming the wine and leaving fingerprints. Glasses are to your right. White wine glass is typically smaller; red is larger for aeration.</div>
+          <div class="caption-label">Wine glasses</div>
+          <div class="body-compact">Hold by the stem (not the bowl) to avoid warming the wine and leaving fingerprints. Glasses are to your right. White wine glass is typically smaller; red is larger for aeration.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Napkin</div>
-          <div class="etiquette-rule">Unfold onto your lap when seated. If you leave the table temporarily, place loosely on your chair — not the table. At meal's end, place loosely left of plate (not refolded).</div>
+          <div class="caption-label">Napkin</div>
+          <div class="body-compact">Unfold onto your lap when seated. If you leave the table temporarily, place loosely on your chair — not the table. At meal's end, place loosely left of plate (not refolded).</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Soup</div>
-          <div class="etiquette-rule">Spoon away from you (European style). Tilt the bowl away from you to get the last spoonful. Never blow on soup to cool it — wait. No slurping (in Western dining — actively encouraged in Japan).</div>
+          <div class="caption-label">Soup</div>
+          <div class="body-compact">Spoon away from you (European style). Tilt the bowl away from you to get the last spoonful. Never blow on soup to cool it — wait. No slurping (in Western dining — actively encouraged in Japan).</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Tipping norms</div>
-          <div class="etiquette-rule">USA: 18–22% expected. UK: 10–12.5% or service charge included. France: rounding up appreciated, not obligatory. Japan: tipping is considered rude. Scandinavia: not expected.</div>
+          <div class="caption-label">Tipping norms</div>
+          <div class="body-compact">USA: 18–22% expected. UK: 10–12.5% or service charge included. France: rounding up appreciated, not obligatory. Japan: tipping is considered rude. Scandinavia: not expected.</div>
         </div>
       </div>
     </div>
@@ -592,12 +592,12 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-knife-skills-and-essential-kitchen-equipment">Part H · knife skills &amp; essential kitchen equipment</h2>
 
-    <div class="context-note">
+    <div class="note-context">
       A sharp knife is safer than a dull one — a dull knife requires more force, which means less control. Honing (realigning the edge) should be done before every use. Sharpening (removing metal) is needed a few times a year for home cooks.
     </div>
 
     <!-- Knife SVG diagram -->
-    <div class="knife-diagram-scroll">
+    <div class="scroll-block">
       <svg class="knife-diagram" viewBox="0 0 620 90" xmlns="http://www.w3.org/2000/svg">
         <!-- Chef's knife silhouette -->
         <path d="M30 48 L340 32 L360 38 L360 52 L340 58 L30 58 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
@@ -629,34 +629,34 @@ const mod = modules.find((m) => m.id === 19)!;
     </div>
 
     <!-- Essential knives -->
-    <div class="knife-grid">
-      <div class="knife-card">
-        <div class="knife-name">Chef's knife (20–25 cm)</div>
+    <div class="card-grid-roomy">
+      <div class="spec-card">
+        <div class="card-heading-strong">Chef's knife (20–25 cm)</div>
         <div class="muted-copy-tight">The single most important knife. Handles 90% of all cutting tasks — dicing, slicing, chopping, mincing. If you own one knife, make it this. German knives (Wüsthof, Henckels) are heavier; Japanese (Global, MAC) are lighter and harder.</div>
         <span class="knife-tip">Grip: pinch the blade just above the handle (pinch grip) — not the handle. Far more control.</span>
       </div>
-      <div class="knife-card">
-        <div class="knife-name">Paring knife (8–10 cm)</div>
+      <div class="spec-card">
+        <div class="card-heading-strong">Paring knife (8–10 cm)</div>
         <div class="muted-copy-tight">Precision work where a chef's knife is too large — peeling, trimming, segmenting citrus, deveining prawns, scoring. Held in the hand rather than used against a board for many tasks.</div>
         <span class="knife-tip">For peeling: cut toward your thumb, not away. More control, not more dangerous if done properly.</span>
       </div>
-      <div class="knife-card">
-        <div class="knife-name">Serrated bread knife (25–30 cm)</div>
+      <div class="spec-card">
+        <div class="card-heading-strong">Serrated bread knife (25–30 cm)</div>
         <div class="muted-copy-tight">Designed for bread's hard crust. The serrated edge saws rather than compresses, so soft interiors don't squash. Also excellent for tomatoes and anything with a firm exterior and soft interior.</div>
         <span class="knife-tip">Never hone or sharpen a serrated knife at home — send to a professional.</span>
       </div>
-      <div class="knife-card">
-        <div class="knife-name">Boning knife (13–17 cm)</div>
+      <div class="spec-card">
+        <div class="card-heading-strong">Boning knife (13–17 cm)</div>
         <div class="muted-copy-tight">Thin, flexible or stiff blade for separating meat from bone, butterflying chicken breasts, filleting fish. The thin blade can follow contours that a chef's knife cannot.</div>
         <span class="knife-tip">Flexible for fish; stiff for beef and pork. A filleting knife is essentially a long flexible boning knife.</span>
       </div>
-      <div class="knife-card">
-        <div class="knife-name">Nakiri (Japanese vegetable knife)</div>
+      <div class="spec-card">
+        <div class="card-heading-strong">Nakiri (Japanese vegetable knife)</div>
         <div class="muted-copy-tight">Flat rectangular blade for vegetables — pushes straight down rather than rocking. Zero tip means no puncturing the board; perfect for long, thin cuts of soft vegetables. Increasingly popular in Western kitchens.</div>
         <span class="knife-tip">Not for hard root vegetables like large turnips — the thin blade can chip on extreme resistance.</span>
       </div>
-      <div class="knife-card">
-        <div class="knife-name">Honing steel</div>
+      <div class="spec-card">
+        <div class="card-heading-strong">Honing steel</div>
         <div class="muted-copy-tight">Not a sharpener — it realigns the microscopic edge that bends with use. Should be used before nearly every cooking session. A few strokes per side at 15–20° angle maintains sharpness between proper sharpenings.</div>
         <span class="knife-tip">A ceramic honing rod is gentler on harder Japanese knives. The "swipe down the steel" technique is faster but the "steel held upright" method is safer for beginners.</span>
       </div>
@@ -840,7 +840,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-flavour-science-the-five-tastes-umami-and-pairing-logic">Part J · flavour science — the five tastes, umami, and pairing logic</h2>
 
-    <div class="context-note">
+    <div class="note-context">
       There are five scientifically recognised basic tastes: sweet, sour, salty, bitter, and umami. A sixth — "kokumi" (richness/mouthfeel) — is increasingly accepted. Flavour is taste + aroma: your nose contributes ~80% of what you perceive as flavour. This is why food tastes bland when you have a blocked nose.
     </div>
 
@@ -889,11 +889,11 @@ const mod = modules.find((m) => m.id === 19)!;
     </div>
 
     <!-- Flavour pairing explorer -->
-    <div class="context-note">
+    <div class="note-context">
       The flavour pairing theory (Heston Blumenthal popularised it) suggests ingredients that share key volatile aroma compounds pair well together. Some famous unexpected pairings: strawberry + parmesan, chocolate + blue cheese, oysters + kiwi, white chocolate + caviar. Select an ingredient below to explore its pairing logic.
     </div>
 
-    <div class="pairing-grid">
+    <div class="card-grid-medium">
       <div class="pairing-btn active" onclick="showPairing('chocolate')">
         <div class="pb-label">🍫 Chocolate</div>
         <div class="pb-sub">bitter + rich</div>
@@ -924,26 +924,26 @@ const mod = modules.find((m) => m.id === 19)!;
     <!-- Umami stacking concept -->
     <div class="content-panel">
       <div class="panel-title-spaced">Umami stacking — the chef's amplification trick</div>
-      <div class="umami-intro">Glutamate (the umami compound in tomatoes, parmesan, miso) has a synergistic relationship with nucleotides (found in meat, fish, mushrooms). When combined, they amplify each other's umami effect by up to 8×. This is why certain combinations are so satisfying:</div>
-      <div class="flavour-pairing-grid">
+      <div class="lede-text-loose">Glutamate (the umami compound in tomatoes, parmesan, miso) has a synergistic relationship with nucleotides (found in meat, fish, mushrooms). When combined, they amplify each other's umami effect by up to 8×. This is why certain combinations are so satisfying:</div>
+      <div class="tile-grid">
         <div class="sub-card">
           <div class="muted-text-small">Classic combination</div>
-          <div class="item-title">Tomato + parmesan</div>
+          <div class="item-name">Tomato + parmesan</div>
           <div class="muted-text-small">Glutamate + glutamate — pure umami layering. The reason Italian pasta with tomato + parmesan is addictive.</div>
         </div>
         <div class="sub-card">
           <div class="muted-text-small">Japanese example</div>
-          <div class="item-title">Kombu + bonito (dashi)</div>
+          <div class="item-name">Kombu + bonito (dashi)</div>
           <div class="muted-text-small">Glutamate (kombu) + inosinate (bonito) — the synergistic combination. Dashi achieves remarkable depth with just two ingredients.</div>
         </div>
         <div class="sub-card">
           <div class="muted-text-small">Western steak sauce</div>
-          <div class="item-title">Beef + Worcestershire</div>
+          <div class="item-name">Beef + Worcestershire</div>
           <div class="muted-text-small">Meat's nucleotides + Worcestershire's fermented anchovy/tamarind glutamates. Why a splash makes a burger profoundly more satisfying.</div>
         </div>
         <div class="sub-card">
           <div class="muted-text-small">Secret weapon</div>
-          <div class="item-title">Anchovies in red sauce</div>
+          <div class="item-name">Anchovies in red sauce</div>
           <div class="muted-text-small">Anchovies dissolve completely during cooking but leave intense glutamate behind. You can't taste "anchovy" — only profound depth. Bolognese, puttanesca, and tapenade all use this trick.</div>
         </div>
       </div>
@@ -952,7 +952,7 @@ const mod = modules.find((m) => m.id === 19)!;
     <!-- Spice heat scale -->
     <div class="content-panel">
       <div class="panel-title-spaced">Scoville scale — measuring chilli heat</div>
-      <div class="scoville-intro">The Scoville Heat Unit (SHU) measures capsaicin concentration. Capsaicin doesn't cause chemical burns — it activates pain receptors (TRPV1) that normally respond to actual heat. Milk's casein protein binds and washes away capsaicin; water does not.</div>
+      <div class="intro-text">The Scoville Heat Unit (SHU) measures capsaicin concentration. Capsaicin doesn't cause chemical burns — it activates pain receptors (TRPV1) that normally respond to actual heat. Milk's casein protein binds and washes away capsaicin; water does not.</div>
       <div class="scoville-scale">
         <div class="heat-bar"></div>
         <!-- Markers: log scale, bell pepper=0, jalapeño=8K, serrano=23K, cayenne=50K, habanero=300K, Carolina reaper=2.2M -->
@@ -974,7 +974,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-wine-and-food-pairing-the-logic-behind-the-rules">Part K · wine &amp; food pairing — the logic behind the rules</h2>
 
-    <div class="context-note">
+    <div class="note-context">
       Wine pairing isn't arbitrary. It's based on complementary or contrasting chemistry: acid in wine cuts fat; tannins bind proteins; sweetness balances spice; mineral notes amplify delicate flavours. The old "red with meat, white with fish" is a useful rough guide — but understanding why leads to much better choices.
     </div>
 
@@ -1011,7 +1011,7 @@ const mod = modules.find((m) => m.id === 19)!;
           <div class="atext"><strong>Regional pairings work almost always.</strong> Wines and foods from the same region evolved together over centuries. Burgundy Pinot Noir with coq au vin; Sancerre with Loire Valley goat's cheese; Barolo with Piedmontese white truffle pasta; Fino Sherry with jamón ibérico.</div>
         </div>
       </div>
-      <div class="wine-row wine-row-style">
+      <div class="wine-row no-divider">
         <div class="wine-dot wine-dot-dessert"></div>
         <div>
           <div class="atext"><strong>Dessert wine must be sweeter than the dessert.</strong> If the dessert is sweeter, the wine tastes sour and unpleasant. Sauternes with crème brûlée; Pedro Ximénez Sherry with vanilla ice cream; Tokaji Aszú with foie gras (the classic sweet-fatty pairing).</div>
@@ -1069,12 +1069,12 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-l-the-balance-calculator-diagnose-and-fix-any-dish">Part L · the balance calculator — diagnose and fix any dish</h2>
 
-    <div class="context-note">
+    <div class="note-context">
       A dish is "finished" when all its components are in harmony. Use this interactive guide to identify what your dish is missing and what to add. Adjust the sliders to describe what you're tasting.
     </div>
 
-    <div class="balance-wrap">
-      <div class="culinary-label">What does your dish taste like right now?</div>
+    <div class="tool-panel">
+      <div class="block-title">What does your dish taste like right now?</div>
       <div class="bal-row">
         <label class="bal-label" for="sl-salt">Saltiness</label>
         <input type="range" id="sl-salt" min="0" max="10" value="5" oninput="updateBalance()">

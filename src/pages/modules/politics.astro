@@ -24,7 +24,7 @@ const mod = modules.find((m) => m.id === 17)!;
 
     <div class="content-panel">
       <div class="panel-title-spaced">The origin: where left and right come from</div>
-      <div class="politics-panel">
+      <div class="note-callout">
         The terms come from the 1789 French National Assembly. Those who supported the king sat on his right; those who wanted change sat on his left. The spatial metaphor stuck. Today the meanings have evolved, but the core tension remains: <strong class="text-primary">left broadly favours collective action and reducing inequality; right broadly favours individual liberty and market-based solutions</strong>.
       </div>
       <div class="two-col">
@@ -53,7 +53,7 @@ const mod = modules.find((m) => m.id === 17)!;
           </div>
         </div>
       </div>
-      <div class="caveat-note">
+      <div class="note-spaced">
         <strong class="text-primary">Important:</strong> These are tendencies, not rigid rules. Most real parties and people mix elements of both. "Left" and "right" mean different things in different countries — a moderate right-wing party in Sweden might be to the left of a moderate Democrat in the USA on healthcare. The labels are useful shorthand but always relative to a specific national context.
       </div>
     </div>
@@ -65,7 +65,7 @@ const mod = modules.find((m) => m.id === 17)!;
 
     <div class="content-panel">
       <div class="inline-card-title">One axis is not enough</div>
-      <div class="section-intro">The left-right axis describes economics. A second axis — authoritarian vs libertarian — describes social freedom. These two axes are largely independent.</div>
+      <div class="intro-small">The left-right axis describes economics. A second axis — authoritarian vs libertarian — describes social freedom. These two axes are largely independent.</div>
 
       <!-- SVG compass diagram -->
       <div class="compass-wrap">
@@ -129,7 +129,7 @@ const mod = modules.find((m) => m.id === 17)!;
         </div>
       </div>
 
-      <div class="caveat-note">
+      <div class="note-spaced">
         <strong class="text-primary">Why this matters:</strong> Someone can be economically right (low taxes, free markets) but socially libertarian (pro-drug legalisation, pro-LGBTQ+ rights). Or economically left (redistribution, universal healthcare) but socially conservative (traditional family values, strict immigration). The 1D left-right line can't describe this — the 2D compass can. Most voters don't fit neatly in one corner.
       </div>
     </div>
@@ -171,14 +171,14 @@ const mod = modules.find((m) => m.id === 17)!;
     </div>
 
     <div class="button-row" id="button-row">
-      <button class="showideology-control" onclick="showIdeology('socialdem')"   >Social democracy</button>
-      <button class="showideology-control" onclick="showIdeology('liberalism')"  >Liberalism</button>
-      <button class="showideology-control" onclick="showIdeology('conservatism')">Conservatism</button>
-      <button class="showideology-control" onclick="showIdeology('nationalism')" >Nationalism/populism</button>
-      <button class="showideology-control" onclick="showIdeology('socialism')"   >Socialism</button>
-      <button class="showideology-control" onclick="showIdeology('communism')"   >Communism</button>
-      <button class="showideology-control" onclick="showIdeology('fascism')"     >Fascism</button>
-      <button class="showideology-control" onclick="showIdeology('greens')"      >Green politics</button>
+      <button class="pill-button" onclick="showIdeology('socialdem')"   >Social democracy</button>
+      <button class="pill-button" onclick="showIdeology('liberalism')"  >Liberalism</button>
+      <button class="pill-button" onclick="showIdeology('conservatism')">Conservatism</button>
+      <button class="pill-button" onclick="showIdeology('nationalism')" >Nationalism/populism</button>
+      <button class="pill-button" onclick="showIdeology('socialism')"   >Socialism</button>
+      <button class="pill-button" onclick="showIdeology('communism')"   >Communism</button>
+      <button class="pill-button" onclick="showIdeology('fascism')"     >Fascism</button>
+      <button class="pill-button" onclick="showIdeology('greens')"      >Green politics</button>
     </div>
     <div class="ideology-display" id="ideology-display"></div>
 
@@ -188,51 +188,51 @@ const mod = modules.find((m) => m.id === 17)!;
     <h2 class="sec" id="part-d-types-of-government-with-real-country-examples">Part D · types of government — with real country examples</h2>
 
     <div class="content-card">
-      <div class="gh"><span class="gname">Liberal democracy</span><span class="gbadge p-blue">most common in developed world</span></div>
+      <div class="header-row"><span class="card-name">Liberal democracy</span><span class="gbadge p-blue">most common in developed world</span></div>
       <div class="gsub">
-        <div class="sub-card-compact"><p class="gl">How power works</p><p class="gv">Free elections, multiple parties, independent courts, free press, rights protected by law.</p></div>
-        <div class="sub-card-compact"><p class="gl">Variations</p><p class="gv">Presidential (USA, France), Parliamentary (UK, Germany, most of Europe), Semi-presidential (France has elements of both).</p></div>
-        <div class="sub-card-compact"><p class="gl">Examples</p><p class="gv">Germany, France, UK, Sweden, Japan, Canada, Australia, most of the EU.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">How power works</p><p class="value-text">Free elections, multiple parties, independent courts, free press, rights protected by law.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Variations</p><p class="value-text">Presidential (USA, France), Parliamentary (UK, Germany, most of Europe), Semi-presidential (France has elements of both).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Examples</p><p class="value-text">Germany, France, UK, Sweden, Japan, Canada, Australia, most of the EU.</p></div>
       </div>
       <p class="cnote">In a parliamentary system, the government is formed from the majority in parliament (the PM is the parliament's leader). In a presidential system, the executive (president) is separately elected and independent. This matters: a parliamentary government can fall if it loses parliament's confidence; a president serves a fixed term regardless.</p>
     </div>
 
     <div class="content-card">
-      <div class="gh"><span class="gname">Constitutional monarchy</span><span class="gbadge p-green">monarchy + democracy</span></div>
+      <div class="header-row"><span class="card-name">Constitutional monarchy</span><span class="gbadge p-green">monarchy + democracy</span></div>
       <div class="gsub">
-        <div class="sub-card-compact"><p class="gl">How power works</p><p class="gv">A monarch is head of state (often ceremonial) while elected politicians hold real power. Constitution limits both.</p></div>
-        <div class="sub-card-compact"><p class="gl">The monarch's role</p><p class="gv">Symbolic: signing laws, representing the nation, providing continuity. Real power rests with parliament and prime minister.</p></div>
-        <div class="sub-card-compact"><p class="gl">Examples</p><p class="gv">UK, Sweden, Netherlands, Belgium, Spain, Japan, Norway, Denmark. ~30 countries globally.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">How power works</p><p class="value-text">A monarch is head of state (often ceremonial) while elected politicians hold real power. Constitution limits both.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">The monarch's role</p><p class="value-text">Symbolic: signing laws, representing the nation, providing continuity. Real power rests with parliament and prime minister.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Examples</p><p class="value-text">UK, Sweden, Netherlands, Belgium, Spain, Japan, Norway, Denmark. ~30 countries globally.</p></div>
       </div>
       <p class="cnote">Often confused with absolute monarchy (where the king actually rules). In the UK, the monarch's role is so ceremonial that refusing to sign a bill passed by parliament would trigger a constitutional crisis — the last time a British monarch refused royal assent was 1708 (Queen Anne). Constitutional monarchy is functionally a parliamentary democracy with a royal head of state.</p>
     </div>
 
     <div class="content-card">
-      <div class="gh"><span class="gname">Authoritarian regime</span><span class="gbadge p-amber">power concentrated, limited accountability</span></div>
+      <div class="header-row"><span class="card-name">Authoritarian regime</span><span class="gbadge p-amber">power concentrated, limited accountability</span></div>
       <div class="gsub">
-        <div class="sub-card-compact"><p class="gl">How power works</p><p class="gv">One leader or party controls the state. Elections may exist but aren't free. Opposition suppressed. Press not fully free.</p></div>
-        <div class="sub-card-compact"><p class="gl">Variations</p><p class="gv">Military junta (power seized by army), competitive authoritarian (elections exist but are rigged), personal dictatorship, one-party state.</p></div>
-        <div class="sub-card-compact"><p class="gl">Examples</p><p class="gv">Russia (competitive authoritarian), Hungary (backsliding democracy), Turkey (centralised power), Egypt (military-backed).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">How power works</p><p class="value-text">One leader or party controls the state. Elections may exist but aren't free. Opposition suppressed. Press not fully free.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Variations</p><p class="value-text">Military junta (power seized by army), competitive authoritarian (elections exist but are rigged), personal dictatorship, one-party state.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Examples</p><p class="value-text">Russia (competitive authoritarian), Hungary (backsliding democracy), Turkey (centralised power), Egypt (military-backed).</p></div>
       </div>
       <p class="cnote">The line between "flawed democracy" and "authoritarian" is blurry and contested. Organisations like Freedom House and V-Dem track democratic backsliding — when democracies gradually erode without a single dramatic coup. Hungary under Orbán is often cited as a textbook case: elections still happen, but courts, media, and electoral rules have been captured to entrench one party's advantage.</p>
     </div>
 
     <div class="content-card">
-      <div class="gh"><span class="gname">Totalitarian state</span><span class="gbadge p-red">total control of all aspects of life</span></div>
+      <div class="header-row"><span class="card-name">Totalitarian state</span><span class="gbadge p-red">total control of all aspects of life</span></div>
       <div class="gsub">
-        <div class="sub-card-compact"><p class="gl">Difference from authoritarianism</p><p class="gv">Authoritarian: controls political life. Totalitarian: controls all life — culture, family, religion, economy, language, thought.</p></div>
-        <div class="sub-card-compact"><p class="gl">Key features</p><p class="gv">Single ideology (which cannot be questioned), mass surveillance, propaganda, purges of perceived enemies, personality cult.</p></div>
-        <div class="sub-card-compact"><p class="gl">Examples</p><p class="gv">Nazi Germany, Stalinist USSR, Maoist China during Cultural Revolution, North Korea today.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Difference from authoritarianism</p><p class="value-text">Authoritarian: controls political life. Totalitarian: controls all life — culture, family, religion, economy, language, thought.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Key features</p><p class="value-text">Single ideology (which cannot be questioned), mass surveillance, propaganda, purges of perceived enemies, personality cult.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Examples</p><p class="value-text">Nazi Germany, Stalinist USSR, Maoist China during Cultural Revolution, North Korea today.</p></div>
       </div>
       <p class="cnote">North Korea is the clearest modern example: the state controls housing, employment, movement, education, and information. Leaving without permission is illegal. Listening to foreign radio is punishable by severe penalties. The distinction matters because totalitarianism is qualitatively different from ordinary authoritarianism — it seeks to reshape human identity itself, not merely control political behaviour.</p>
     </div>
 
     <div class="content-card">
-      <div class="gh"><span class="gname">Theocracy</span><span class="gbadge p-purple">religious law governs the state</span></div>
+      <div class="header-row"><span class="card-name">Theocracy</span><span class="gbadge p-purple">religious law governs the state</span></div>
       <div class="gsub">
-        <div class="sub-card-compact"><p class="gl">How power works</p><p class="gv">Religious authorities hold political power, or religious law (sharia, halakha) is the basis of state law. Clergy may govern directly or veto secular decisions.</p></div>
-        <div class="sub-card-compact"><p class="gl">Variations</p><p class="gv">Pure theocracy (Vatican City — the Pope rules directly), hybrid (Iran — elected institutions but Supreme Leader is a cleric with ultimate veto), soft (Saudi Arabia — monarchy uses Islamic law as foundation).</p></div>
-        <div class="sub-card-compact"><p class="gl">Examples</p><p class="gv">Iran, Vatican City, Saudi Arabia, Afghanistan under Taliban. Elements in many other states.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">How power works</p><p class="value-text">Religious authorities hold political power, or religious law (sharia, halakha) is the basis of state law. Clergy may govern directly or veto secular decisions.</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Variations</p><p class="value-text">Pure theocracy (Vatican City — the Pope rules directly), hybrid (Iran — elected institutions but Supreme Leader is a cleric with ultimate veto), soft (Saudi Arabia — monarchy uses Islamic law as foundation).</p></div>
+        <div class="sub-card-compact"><p class="caption-label">Examples</p><p class="value-text">Iran, Vatican City, Saudi Arabia, Afghanistan under Taliban. Elements in many other states.</p></div>
       </div>
       <p class="cnote">Iran is the most complex modern example: it has a parliament, a president, and elections — but the unelected Supreme Leader (a religious cleric) has final authority over all state matters, can veto laws, controls the military and judiciary, and can disqualify election candidates. It's a hybrid of electoral institutions and theocratic control.</p>
     </div>
@@ -240,7 +240,7 @@ const mod = modules.find((m) => m.id === 17)!;
     <!-- NEW: Democracy health index visual -->
     <div class="content-panel">
       <div class="inline-card-title">Democracy index — how countries compare</div>
-      <div class="section-intro">The Economist Intelligence Unit scores countries 0–10 across electoral process, civil liberties, political culture, and government function. Updated annually.</div>
+      <div class="intro-small">The Economist Intelligence Unit scores countries 0–10 across electoral process, civil liberties, political culture, and government function. Updated annually.</div>
       <table class="dem-table">
         <thead><tr><th>Country</th><th>Score /10</th><th>Category</th><th class="scale-column">Scale</th></tr></thead>
         <tbody>
@@ -257,7 +257,7 @@ const mod = modules.find((m) => m.id === 17)!;
           <tr><td>North Korea</td><td>1.08</td><td><span class="pill p-red p-teal-style">Authoritarian</span></td><td><span class="dem-score-bar dem-score-bar-north-korea"></span></td></tr>
         </tbody>
       </table>
-      <div class="index-source">Source: EIU Democracy Index 2023. Full democracy: 8–10 · Flawed democracy: 6–8 · Hybrid regime: 4–6 · Authoritarian: 0–4</div>
+      <div class="note-small-spaced">Source: EIU Democracy Index 2023. Full democracy: 8–10 · Flawed democracy: 6–8 · Hybrid regime: 4–6 · Authoritarian: 0–4</div>
     </div>
 
     <!-- ============================================================
@@ -268,18 +268,18 @@ const mod = modules.find((m) => m.id === 17)!;
     <div class="content-panel">
       <div class="panel-title">How you count votes determines who wins — see the same election result under different systems</div>
 
-      <div class="vote-slider-row">
-        <label class="vote-label">Party A (left) votes:</label>
+      <div class="range-row-wrap">
+        <label class="form-label">Party A (left) votes:</label>
         <input class="pa-votes" type="range" id="pa-votes" min="10" max="60" value="40" step="1">
         <span class="pa-out" id="pa-out">40%</span>
       </div>
-      <div class="vote-slider-row">
-        <label class="vote-label">Party B (right) votes:</label>
+      <div class="range-row-wrap">
+        <label class="form-label">Party B (right) votes:</label>
         <input class="pa-votes" type="range" id="pb-votes" min="10" max="60" value="35" step="1">
         <span class="pb-out" id="pb-out">35%</span>
       </div>
       <div class="vote-remainder-row">
-        <label class="vote-label">Party C (third):</label>
+        <label class="form-label">Party C (third):</label>
         <span class="pc-fixed" id="pc-fixed">Remainder of votes</span>
         <span class="pc-out" id="pc-out"></span>
       </div>
@@ -291,7 +291,7 @@ const mod = modules.find((m) => m.id === 17)!;
     <div class="content-panel">
       <div class="panel-title">Electoral systems at a glance</div>
       <div class="u-overflow-x-auto">
-        <table class="dem-table dem-table-style">
+        <table class="dem-table wide-min">
           <thead><tr><th>System</th><th>How it works</th><th>Typical outcome</th><th>Used in</th></tr></thead>
           <tbody>
             <tr>
@@ -334,7 +334,7 @@ const mod = modules.find((m) => m.id === 17)!;
          ============================================================ -->
     <h2 class="sec" id="part-f-reading-political-language-the-rhetoric-toolkit">Part F · reading political language — the rhetoric toolkit</h2>
 
-    <div class="politics-grid">
+    <div class="card-grid-medium">
       <div class="card">
         <p class="clabel">Framing</p>
         <p class="cval">Same fact, different story</p>
@@ -370,13 +370,13 @@ const mod = modules.find((m) => m.id === 17)!;
     <!-- NEW: Media bias explorer -->
     <div class="content-panel">
       <div class="inline-card-title">The same story — how framing changes meaning</div>
-      <div class="section-intro">Pick a topic to see how different outlets or political perspectives frame identical events.</div>
+      <div class="intro-small">Pick a topic to see how different outlets or political perspectives frame identical events.</div>
       <div class="button-row">
-        <button class="showideology-control" onclick="showFraming('protest')"   >A large protest</button>
-        <button class="showideology-control" onclick="showFraming('budget')"    >Budget cuts</button>
-        <button class="showideology-control" onclick="showFraming('migration')" >Migration</button>
-        <button class="showideology-control" onclick="showFraming('strike')"    >A workers' strike</button>
-        <button class="showideology-control" onclick="showFraming('crime')"     >Crime statistics</button>
+        <button class="pill-button" onclick="showFraming('protest')"   >A large protest</button>
+        <button class="pill-button" onclick="showFraming('budget')"    >Budget cuts</button>
+        <button class="pill-button" onclick="showFraming('migration')" >Migration</button>
+        <button class="pill-button" onclick="showFraming('strike')"    >A workers' strike</button>
+        <button class="pill-button" onclick="showFraming('crime')"     >Crime statistics</button>
       </div>
       <div class="framing-display" id="framing-display"></div>
     </div>
@@ -388,14 +388,14 @@ const mod = modules.find((m) => m.id === 17)!;
 
     <div class="content-panel" id="vocab-section">
       <div class="button-row-spaced">
-        <button class="showideology-control" onclick="showVocab('federalism')"   >Federalism</button>
-        <button class="showideology-control" onclick="showVocab('separation')"   >Separation of powers</button>
-        <button class="showideology-control" onclick="showVocab('constitution')" >Constitution</button>
-        <button class="showideology-control" onclick="showVocab('referendum')"   >Referendum</button>
-        <button class="showideology-control" onclick="showVocab('gerrymander')"  >Gerrymandering</button>
-        <button class="showideology-control" onclick="showVocab('coalition')"    >Coalition</button>
-        <button class="showideology-control" onclick="showVocab('sovereignty')"  >Sovereignty</button>
-        <button class="showideology-control" onclick="showVocab('checks')"       >Checks and balances</button>
+        <button class="pill-button" onclick="showVocab('federalism')"   >Federalism</button>
+        <button class="pill-button" onclick="showVocab('separation')"   >Separation of powers</button>
+        <button class="pill-button" onclick="showVocab('constitution')" >Constitution</button>
+        <button class="pill-button" onclick="showVocab('referendum')"   >Referendum</button>
+        <button class="pill-button" onclick="showVocab('gerrymander')"  >Gerrymandering</button>
+        <button class="pill-button" onclick="showVocab('coalition')"    >Coalition</button>
+        <button class="pill-button" onclick="showVocab('sovereignty')"  >Sovereignty</button>
+        <button class="pill-button" onclick="showVocab('checks')"       >Checks and balances</button>
       </div>
       <div class="election-results" id="vocab-display"></div>
     </div>
@@ -408,9 +408,9 @@ const mod = modules.find((m) => m.id === 17)!;
     <div class="content-panel">
       <div class="panel-title">Presidential vs parliamentary vs semi-presidential</div>
       <div class="button-row-spaced">
-        <button class="showideology-control" onclick="showPowerDiagram('presidential')"  id="pd-btn-presidential">Presidential (USA)</button>
-        <button class="showideology-control" onclick="showPowerDiagram('parliamentary')" id="pd-btn-parliamentary">Parliamentary (UK/Germany)</button>
-        <button class="showideology-control" onclick="showPowerDiagram('semi')"          id="pd-btn-semi">Semi-presidential (France)</button>
+        <button class="pill-button" onclick="showPowerDiagram('presidential')"  id="pd-btn-presidential">Presidential (USA)</button>
+        <button class="pill-button" onclick="showPowerDiagram('parliamentary')" id="pd-btn-parliamentary">Parliamentary (UK/Germany)</button>
+        <button class="pill-button" onclick="showPowerDiagram('semi')"          id="pd-btn-semi">Semi-presidential (France)</button>
       </div>
       <div class="power-diagram" id="power-diagram"></div>
     </div>
@@ -422,7 +422,7 @@ const mod = modules.find((m) => m.id === 17)!;
 
     <div class="content-panel">
       <div class="compact-card-title">Modern democracies rarely die in coups — they erode from within</div>
-      <div class="backsliding-intro">Political scientists Steven Levitsky and Lucan Way identified a pattern: elected leaders dismantle democracy step by step, often with popular support. Each step seems individually defensible; together they hollow out democratic institutions without ever declaring a coup. The playbook is remarkably consistent across countries.</div>
+      <div class="lede-roomy">Political scientists Steven Levitsky and Lucan Way identified a pattern: elected leaders dismantle democracy step by step, often with popular support. Each step seems individually defensible; together they hollow out democratic institutions without ever declaring a coup. The playbook is remarkably consistent across countries.</div>
 
       <div class="u-mb-lg">
         <div class="playbook-heading">The backsliding playbook — in order</div>
@@ -430,31 +430,31 @@ const mod = modules.find((m) => m.id === 17)!;
         <div class="timeline-row">
           <div class="tl-year">Step 1</div>
           <div class="tl-dot-col"><div class="tl-dot tl-dot-style"></div><div class="tl-line"></div></div>
-          <div class="tl-body"><div class="tl-event">Win a landslide — or manufacture a crisis</div><div class="tl-detail">Come to power legitimately or exploit a genuine crisis (economic collapse, terrorism, pandemic) to demand emergency powers. The mandate of the people is invoked constantly.</div></div>
+          <div class="tl-body"><div class="value-text">Win a landslide — or manufacture a crisis</div><div class="tl-detail">Come to power legitimately or exploit a genuine crisis (economic collapse, terrorism, pandemic) to demand emergency powers. The mandate of the people is invoked constantly.</div></div>
         </div>
         <div class="timeline-row">
           <div class="tl-year">Step 2</div>
           <div class="tl-dot-col"><div class="tl-dot tl-dot-rust"></div><div class="tl-line"></div></div>
-          <div class="tl-body"><div class="tl-event">Pack the courts</div><div class="tl-detail">Expand the number of judges, impose early retirement ages, or replace independent justices with loyalists. Once courts are captured, almost anything the government does is "constitutional." Hungary under Orbán lowered the retirement age of judges to force out experienced, independent ones; Poland's Law and Justice party tried the same.</div></div>
+          <div class="tl-body"><div class="value-text">Pack the courts</div><div class="tl-detail">Expand the number of judges, impose early retirement ages, or replace independent justices with loyalists. Once courts are captured, almost anything the government does is "constitutional." Hungary under Orbán lowered the retirement age of judges to force out experienced, independent ones; Poland's Law and Justice party tried the same.</div></div>
         </div>
         <div class="timeline-row">
           <div class="tl-year">Step 3</div>
           <div class="tl-dot-col"><div class="tl-dot bg-red-700"></div><div class="tl-line"></div></div>
-          <div class="tl-body"><div class="tl-event">Capture or silence the media</div><div class="tl-detail">Buy up independent outlets through friendly oligarchs, withdraw state advertising from critical media (economically devastating for smaller outlets), use tax investigations or broadcasting licence renewals as leverage. In Hungary, over 500 outlets are now controlled by Orbán-aligned interests.</div></div>
+          <div class="tl-body"><div class="value-text">Capture or silence the media</div><div class="tl-detail">Buy up independent outlets through friendly oligarchs, withdraw state advertising from critical media (economically devastating for smaller outlets), use tax investigations or broadcasting licence renewals as leverage. In Hungary, over 500 outlets are now controlled by Orbán-aligned interests.</div></div>
         </div>
         <div class="timeline-row">
           <div class="tl-year">Step 4</div>
           <div class="tl-dot-col"><div class="tl-dot tl-dot-crimson"></div><div class="tl-line"></div></div>
-          <div class="tl-body"><div class="tl-event">Rewrite electoral rules</div><div class="tl-detail">Redraw constituency boundaries, change campaign finance rules, set discriminatory voter ID requirements, control the electoral commission. Done while in power, these changes are almost impossible for an opposition to reverse through the ballot box alone.</div></div>
+          <div class="tl-body"><div class="value-text">Rewrite electoral rules</div><div class="tl-detail">Redraw constituency boundaries, change campaign finance rules, set discriminatory voter ID requirements, control the electoral commission. Done while in power, these changes are almost impossible for an opposition to reverse through the ballot box alone.</div></div>
         </div>
         <div class="timeline-row">
           <div class="tl-year">Step 5</div>
           <div class="tl-dot-col"><div class="tl-dot tl-dot-maroon"></div></div>
-          <div class="tl-body tl-body-style"><div class="tl-event">Delegitimise the opposition</div><div class="tl-detail">Frame opponents not as political rivals but as existential threats to the nation — corrupt elites, foreign agents, traitors. Criminal investigations against opposition leaders. Legal harassment of NGOs and civil society. The goal: make voters feel that opposing the ruling party is unpatriotic, even treasonous.</div></div>
+          <div class="tl-body flush-padding-bottom"><div class="value-text">Delegitimise the opposition</div><div class="tl-detail">Frame opponents not as political rivals but as existential threats to the nation — corrupt elites, foreign agents, traitors. Criminal investigations against opposition leaders. Legal harassment of NGOs and civil society. The goal: make voters feel that opposing the ruling party is unpatriotic, even treasonous.</div></div>
         </div>
       </div>
 
-      <div class="backsliding-insight">
+      <div class="note-panel">
         <strong class="text-primary">The key insight (Levitsky &amp; Ziblatt):</strong> Democratic norms — the unwritten rules that make democracy function — are more important than constitutional rules. The US constitution has no rule against a president refusing to accept election results; it was considered unthinkable. Once norms are broken, constitutions alone cannot protect democracy. Institutions are only as strong as the people who agree to be bound by them.
       </div>
     </div>
@@ -513,7 +513,7 @@ const mod = modules.find((m) => m.id === 17)!;
         <text x="437" y="192" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">UK</text>
         <text x="507" y="192" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">S. Korea</text>
       </svg>
-      <div class="chart-legend-note">Red = hard power (military/economic might). Blue = soft power (cultural influence, institutional prestige). Illustrative — not a precise index.</div>
+      <div class="note-tiny">Red = hard power (military/economic might). Blue = soft power (cultural influence, institutional prestige). Illustrative — not a precise index.</div>
     </div>
 
     <!-- ============================================================
@@ -524,14 +524,14 @@ const mod = modules.find((m) => m.id === 17)!;
     <div class="content-panel">
       <div class="panel-title">Explore key countries — their system, strengths, and tensions</div>
       <div class="button-row-spaced">
-        <button class="showideology-control" onclick="showCountry('usa')"    >🇺🇸 USA</button>
-        <button class="showideology-control" onclick="showCountry('germany')">🇩🇪 Germany</button>
-        <button class="showideology-control" onclick="showCountry('uk')"     >🇬🇧 UK</button>
-        <button class="showideology-control" onclick="showCountry('france')" >🇫🇷 France</button>
-        <button class="showideology-control" onclick="showCountry('china')"  >🇨🇳 China</button>
-        <button class="showideology-control" onclick="showCountry('india')"  >🇮🇳 India</button>
-        <button class="showideology-control" onclick="showCountry('russia')" >🇷🇺 Russia</button>
-        <button class="showideology-control" onclick="showCountry('sweden')" >🇸🇪 Sweden</button>
+        <button class="pill-button" onclick="showCountry('usa')"    >🇺🇸 USA</button>
+        <button class="pill-button" onclick="showCountry('germany')">🇩🇪 Germany</button>
+        <button class="pill-button" onclick="showCountry('uk')"     >🇬🇧 UK</button>
+        <button class="pill-button" onclick="showCountry('france')" >🇫🇷 France</button>
+        <button class="pill-button" onclick="showCountry('china')"  >🇨🇳 China</button>
+        <button class="pill-button" onclick="showCountry('india')"  >🇮🇳 India</button>
+        <button class="pill-button" onclick="showCountry('russia')" >🇷🇺 Russia</button>
+        <button class="pill-button" onclick="showCountry('sweden')" >🇸🇪 Sweden</button>
       </div>
       <div class="power-diagram" id="country-display"></div>
     </div>
@@ -547,52 +547,52 @@ const mod = modules.find((m) => m.id === 17)!;
       <div class="timeline-row">
         <div class="tl-year">1789</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-blue"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">French Revolution</div><div class="tl-detail">Ended the divine right of kings in Europe. Introduced the concepts of popular sovereignty, citizenship, and secular government. Created the left-right political spectrum. Inspired revolutions across the 19th century and shaped the modern concept of nationalism.</div></div>
+        <div class="tl-body"><div class="value-text">French Revolution</div><div class="tl-detail">Ended the divine right of kings in Europe. Introduced the concepts of popular sovereignty, citizenship, and secular government. Created the left-right political spectrum. Inspired revolutions across the 19th century and shaped the modern concept of nationalism.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">1848</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-blue"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">The Springtime of Nations</div><div class="tl-detail">Revolutions erupted across Europe (France, Germany, Austria-Hungary, Italy). Most were suppressed, but they established liberal and nationalist movements as permanent features of European politics. Marx and Engels published The Communist Manifesto the same year.</div></div>
+        <div class="tl-body"><div class="value-text">The Springtime of Nations</div><div class="tl-detail">Revolutions erupted across Europe (France, Germany, Austria-Hungary, Italy). Most were suppressed, but they established liberal and nationalist movements as permanent features of European politics. Marx and Engels published The Communist Manifesto the same year.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">1917</div>
         <div class="tl-dot-col"><div class="tl-dot bg-red-700"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">Russian Revolution</div><div class="tl-detail">The Bolsheviks seized power and created the world's first communist state. For the rest of the 20th century, the ideological battle between capitalism and communism structured global politics. Every political party in the West defined itself partly in relation to what had happened in Russia.</div></div>
+        <div class="tl-body"><div class="value-text">Russian Revolution</div><div class="tl-detail">The Bolsheviks seized power and created the world's first communist state. For the rest of the 20th century, the ideological battle between capitalism and communism structured global politics. Every political party in the West defined itself partly in relation to what had happened in Russia.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">1933</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-maroon"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">Hitler appointed Chancellor of Germany</div><div class="tl-detail">A democratic election system brought the Nazis to power. This traumatised post-war democracies into building stronger constitutional safeguards — Germany's Basic Law, the European Convention on Human Rights, and the UN's Universal Declaration of Human Rights (1948) were all direct responses to what democratic failure had produced.</div></div>
+        <div class="tl-body"><div class="value-text">Hitler appointed Chancellor of Germany</div><div class="tl-detail">A democratic election system brought the Nazis to power. This traumatised post-war democracies into building stronger constitutional safeguards — Germany's Basic Law, the European Convention on Human Rights, and the UN's Universal Declaration of Human Rights (1948) were all direct responses to what democratic failure had produced.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">1945</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-green"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">End of WWII — the liberal international order is built</div><div class="tl-detail">The UN, IMF, World Bank, and later NATO and the EU were created to prevent another catastrophic war. The "rules-based international order" — free trade, collective security, human rights norms — was deliberately constructed by the victors, especially the USA. Much of current geopolitical tension is about whether this order should continue.</div></div>
+        <div class="tl-body"><div class="value-text">End of WWII — the liberal international order is built</div><div class="tl-detail">The UN, IMF, World Bank, and later NATO and the EU were created to prevent another catastrophic war. The "rules-based international order" — free trade, collective security, human rights norms — was deliberately constructed by the victors, especially the USA. Much of current geopolitical tension is about whether this order should continue.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">1989</div>
-        <div class="tl-dot-col"><div class="tl-dot bg-green-800"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">Fall of the Berlin Wall</div><div class="tl-detail">Symbolised the collapse of Soviet communism. Francis Fukuyama famously declared "the end of history" — liberal democracy had won. This optimism shaped the 1990s expansion of democracy and free markets globally. The backlash to this optimism — rising nationalism, authoritarianism, and inequality from globalisation — defines much of 21st-century politics.</div></div>
+        <div class="tl-dot-col"><div class="tl-dot u-bg-hex-27500a"></div><div class="tl-line"></div></div>
+        <div class="tl-body"><div class="value-text">Fall of the Berlin Wall</div><div class="tl-detail">Symbolised the collapse of Soviet communism. Francis Fukuyama famously declared "the end of history" — liberal democracy had won. This optimism shaped the 1990s expansion of democracy and free markets globally. The backlash to this optimism — rising nationalism, authoritarianism, and inequality from globalisation — defines much of 21st-century politics.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">2001</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-brown"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">September 11 attacks</div><div class="tl-detail">Reshaped security politics worldwide. The War on Terror expanded state surveillance powers (PATRIOT Act, GCHQ mass surveillance), launched wars in Afghanistan and Iraq, and accelerated debates about civil liberties vs security that continue today. Increased Islamophobia and identity politics tensions in Western democracies.</div></div>
+        <div class="tl-body"><div class="value-text">September 11 attacks</div><div class="tl-detail">Reshaped security politics worldwide. The War on Terror expanded state surveillance powers (PATRIOT Act, GCHQ mass surveillance), launched wars in Afghanistan and Iraq, and accelerated debates about civil liberties vs security that continue today. Increased Islamophobia and identity politics tensions in Western democracies.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">2008</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-style"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">Global financial crisis</div><div class="tl-detail">Triggered the deepest recession since the Great Depression. Governments bailed out banks; austerity policies followed in Europe and the UK. The result: shattered trust in mainstream centre-left and centre-right parties, rising inequality, and fertile ground for populist movements on both the left (Occupy, Podemos, Syriza, Corbyn, Sanders) and right (Trump, Brexit, Le Pen, Orbán).</div></div>
+        <div class="tl-body"><div class="value-text">Global financial crisis</div><div class="tl-detail">Triggered the deepest recession since the Great Depression. Governments bailed out banks; austerity policies followed in Europe and the UK. The result: shattered trust in mainstream centre-left and centre-right parties, rising inequality, and fertile ground for populist movements on both the left (Occupy, Podemos, Syriza, Corbyn, Sanders) and right (Trump, Brexit, Le Pen, Orbán).</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">2016</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-rust"></div><div class="tl-line"></div></div>
-        <div class="tl-body"><div class="tl-event">Brexit and Trump</div><div class="tl-detail">Two seismic shocks to the post-war liberal order. Brexit passed 52–48 on a campaign defined by anti-establishment sentiment, migration, and sovereignty. Trump won the US presidency on a nationalist "America First" platform, rejecting multilateral trade deals and alliances. Both signalled that the centrist consensus of the 1990s–2000s was over.</div></div>
+        <div class="tl-body"><div class="value-text">Brexit and Trump</div><div class="tl-detail">Two seismic shocks to the post-war liberal order. Brexit passed 52–48 on a campaign defined by anti-establishment sentiment, migration, and sovereignty. Trump won the US presidency on a nationalist "America First" platform, rejecting multilateral trade deals and alliances. Both signalled that the centrist consensus of the 1990s–2000s was over.</div></div>
       </div>
       <div class="timeline-row">
         <div class="tl-year">2022</div>
         <div class="tl-dot-col"><div class="tl-dot tl-dot-crimson"></div></div>
-        <div class="tl-body tl-body-style"><div class="tl-event">Russia invades Ukraine</div><div class="tl-detail">The largest military conflict in Europe since WWII. Ended two decades of post-Cold War assumptions about European security, accelerated NATO expansion (Finland and Sweden joined), forced a reckoning with energy dependence on Russia, and sharpened the global divide between democratic and authoritarian blocs. The war also showed limits of international institutions — the UN Security Council is paralysed when a permanent member is the aggressor.</div></div>
+        <div class="tl-body flush-padding-bottom"><div class="value-text">Russia invades Ukraine</div><div class="tl-detail">The largest military conflict in Europe since WWII. Ended two decades of post-Cold War assumptions about European security, accelerated NATO expansion (Finland and Sweden joined), forced a reckoning with energy dependence on Russia, and sharpened the global divide between democratic and authoritarian blocs. The war also showed limits of international institutions — the UN Security Council is paralysed when a permanent member is the aggressor.</div></div>
       </div>
     </div>
 

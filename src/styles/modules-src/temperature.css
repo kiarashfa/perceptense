@@ -1,6 +1,3 @@
-
-/* Bar chart rows — local variant with slightly wider label for this module */
-.trow { display: flex; align-items: center; gap: 0; margin-bottom: 4px; }
 .tl   { font-size: 11px; color: var(--color-text-secondary); width: 148px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
 .tb   { height: 20px; border-radius: 3px; display: flex; align-items: center; padding: 0 7px; min-width: 3px; overflow: hidden; }
 
@@ -8,13 +5,7 @@
 .ht-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1rem; }
 @media (max-width: 560px) { .ht-grid { grid-template-columns: 1fr; } }
 .ht-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 13px; }
-.ht-icon { font-size: 22px; margin-bottom: 6px; }
-.ht-body  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
 .ht-ex    { font-size: 11px; color: var(--color-text-tertiary); margin-top: 5px; font-style: italic; }
-
-/* Thermal expansion calculator */
-.texp-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 10px; }
-.texp-field { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 110px; }
 .texp-result { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 13px; font-size: 13px; color: var(--color-text-primary); line-height: 1.6; margin-top: 4px; }
 
 /* Body temperature zones */
@@ -22,7 +13,6 @@
 .bzone-row:last-child { border-bottom: none; }
 .bzone-temp { font-size: 13px; font-weight: 500; width: 68px; flex-shrink: 0; text-align: right; }
 .bzone-bar  { height: 16px; border-radius: 3px; flex-shrink: 0; }
-.bzone-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
 .cook-tab  { font-size: 11px; padding: 3px 10px; cursor: pointer; }
 .cook-tab.active { background: var(--color-background-secondary); border-color: var(--color-border-primary); font-weight: 500; }
 .cook-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
@@ -54,50 +44,6 @@
   color:#EF9F27;
 }
 
-.text-amber-700 {
-  color:#BA7517;
-}
-
-.text-amber-950 {
-  color:#412402;
-}
-
-.text-blue-500 {
-  color:#378ADD;
-}
-
-.text-blue-700 {
-  color:#185FA5;
-}
-
-.text-blue-950 {
-  color:#042C53;
-}
-
-.text-green-950 {
-  color:#04342C;
-}
-
-.text-indigo-200 {
-  color:#CECBF6;
-}
-
-.text-indigo-950 {
-  color:#26215C;
-}
-
-.text-orange-600 {
-  color:#D85A30;
-}
-
-.text-red-700 {
-  color:#A32D2D;
-}
-
-.text-teal-700 {
-  color:#1D9E75;
-}
-
 .text-white {
   color:#fff;
 }
@@ -106,39 +52,9 @@
   width:100%;
 }
 
-/* === Module-specific extracted styles === */
-
-.temperature-label {
-  font-size:13px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:12px;
-}
-
 .settemp-control {
   font-size:11px;
   padding:2px 8px;
-}
-
-.thermometer-slider-row {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:14px;
-}
-
-.slider-end-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  white-space:nowrap;
-}
-
-.thermometer-readouts {
-  display:flex;
-  gap:10px;
-  align-items:baseline;
-  flex-wrap:wrap;
-  margin-bottom:10px;
 }
 
 .temp-c {
@@ -222,24 +138,9 @@
   background:#A32D2D;
 }
 
-.scale-footnote {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-top:10px;
-  line-height:1.5;
-}
-
 .temperature-span-style {
   margin-top:3px;
   display:inline-block;
-}
-
-.converter-row {
-  display:flex;
-  gap:10px;
-  align-items:center;
-  flex-wrap:wrap;
-  margin-bottom:12px;
 }
 
 .conv-val {
@@ -283,19 +184,6 @@
   border-radius:var(--border-radius-md);
   padding:11px 14px;
   margin-bottom:0;
-}
-
-.shortcut-title {
-  font-size:13px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:5px;
-}
-
-.shortcut-body {
-  font-size:13px;
-  color:var(--color-text-secondary);
-  line-height:1.7;
 }
 
 .temperature-media {
@@ -460,19 +348,6 @@
   margin-bottom:10px;
 }
 
-.radiation-row {
-  display:flex;
-  gap:10px;
-  align-items:center;
-  flex-wrap:wrap;
-  margin-bottom:10px;
-}
-
-.radiation-temp-field {
-  flex:1;
-  min-width:120px;
-}
-
 .rad-output {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
@@ -493,26 +368,10 @@
   width:100%;
 }
 
-.expansion-examples-title {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:6px;
-}
-
 .temperature-grid {
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));
   gap:8px;
-}
-
-.expansion-fact {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.5;
 }
 
 .body-heat-map {
@@ -606,12 +465,6 @@
 .tb-paper-ignites {
   width:72%;
   background:#A32D2D;
-}
-
-.game-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
 }
 
 .game-next-row {

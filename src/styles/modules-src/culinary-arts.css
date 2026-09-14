@@ -1,9 +1,4 @@
-.sh { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-.sname { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
-.sbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
 .ssub { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-bottom: 8px; }
-.sl { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
-.sv { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
 
 /* ── Sauce tree ── */
 .sauce-tree {
@@ -62,22 +57,11 @@
 .sauce-root.brown  { background:#FAEEDA; border-color:#EF9F27; color:#633806; }
 .sauce-root.red    { background:#FCEBEB; border-color:#F09595; color:#791F1F; }
 .sauce-root.gold   { background:#FAEEDA; border-color:#EF9F27; color:#633806; }
-.meat-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
-.meat-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
-.meat-badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
 .row2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-bottom: 4px; }
-.sub-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 2px; }
-.sub-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0; }
-.sub-note { font-size: 11px; color: var(--color-text-secondary); margin: 2px 0 0; }
 
 /* ── SVG sauce tree ── */
 .sauce-tree-wrap { overflow-x: auto; margin-bottom: 1rem; }
 .sauce-tree-wrap svg text { font-family: 'IBM Plex Sans', system-ui, sans-serif; }
-
-/* ── Knife grid ── */
-.knife-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-bottom: 1rem; }
-.knife-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
-.knife-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 3px; }
 .knife-tip { font-size: 11px; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 4px 8px; margin-top: 6px; display: inline-block; }
 
 /* ── Flavour wheel ── */
@@ -89,9 +73,6 @@
 .method-table td { padding: 9px 10px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-primary); vertical-align: top; line-height: 1.4; }
 .method-table tr:last-child td { border-bottom: none; }
 .method-table tr:hover td { background: var(--color-background-secondary); }
-
-/* ── Pairing explorer ── */
-.pairing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 1rem; }
 .pairing-btn { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 10px 12px; cursor: pointer; text-align: left; transition: all 0.12s; }
 .pairing-btn:hover, .pairing-btn.active { background: var(--color-background-secondary); border-color: var(--color-border-secondary); }
 .pairing-btn .pb-label { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
@@ -101,9 +82,6 @@
 .wine-row { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
 .wine-row:last-child { border-bottom: none; }
 .wine-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 2px; }
-
-/* ── Flavour balance interactive ── */
-.balance-wrap { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 1rem; }
 .bal-row { display: grid; grid-template-columns: 80px 1fr 50px; align-items: center; gap: 10px; margin-bottom: 10px; }
 .bal-label { font-size: 12px; color: var(--color-text-secondary); text-align: right; }
 .bal-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); text-align: center; }
@@ -119,36 +97,8 @@
 .heat-marker { position: absolute; top: -4px; width: 4px; height: 26px; background: var(--color-text-primary); border-radius: 2px; transform: translateX(-50%); }
 .heat-label { position: absolute; top: 28px; transform: translateX(-50%); font-size: 10px; color: var(--color-text-secondary); white-space: nowrap; }
 
-/* === Shared-ready extracted styles === */
-
-.detail-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:2px;
-}
-
-.item-title {
-  font-size:13px;
-  font-weight:500;
-  color:var(--color-text-primary);
-}
-
 .text-white {
   color:#fff;
-}
-
-/* === Module-specific extracted styles === */
-
-.showcuisine-control {
-  font-size:12px;
-  padding:3px 10px;
-}
-
-.culinary-label {
-  font-size:13px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:12px;
 }
 
 .culinary-media {
@@ -207,23 +157,6 @@
 
 .ds-temp-light {
   color:rgba(255,255,255,0.9);
-}
-
-.thickness-rule {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:12px 14px;
-  margin-bottom:1rem;
-}
-
-.context-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-  margin-bottom:1rem;
 }
 
 .family-tree-heading {
@@ -344,17 +277,6 @@
   gap:12px;
 }
 
-.etiquette-rule {
-  font-size:12px;
-  color:var(--color-text-primary);
-  line-height:1.4;
-}
-
-.knife-diagram-scroll {
-  overflow-x:auto;
-  margin-bottom:1rem;
-}
-
 .knife-diagram {
   width:100%;
   min-width:400px;
@@ -371,25 +293,6 @@
   width:100%;
   min-width:480px;
   display:block;
-}
-
-.umami-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-  line-height:1.6;
-}
-
-.flavour-pairing-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
-  gap:8px;
-}
-
-.scoville-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
 }
 
 .scoville-scale {
@@ -446,10 +349,6 @@
 
 .wine-dot-regional {
   background:#3A6830;
-}
-
-.wine-row-style {
-  border-bottom:none;
 }
 
 .wine-dot-dessert {

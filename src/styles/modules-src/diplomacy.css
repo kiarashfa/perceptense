@@ -8,14 +8,10 @@
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
 }
-.ibox-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
-.ibox-val   { font-size: 12px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; }
-.ibox-body  { font-size: 12px; color: var(--color-text-primary); line-height: 1.5; }
 
 /* ── P5 member cards ── */
 .p5-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 8px; margin-bottom: 12px; }
 @media (max-width: 600px) { .p5-grid { grid-template-columns: 1fr 1fr; } }
-.p5-card { border-radius: var(--border-radius-md); padding: 10px 8px; text-align: center; }
 .p5-name { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
 .p5-since { font-size: 11px; margin-top: 2px; opacity: 0.75; }
 .p5-note  { font-size: 10px; margin-top: 4px; line-height: 1.3; opacity: 0.8; }
@@ -37,14 +33,8 @@
   padding: 10px 0;
 }
 .rung-body { padding: 9px 12px; flex: 1; }
-.rung-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
-.rung-desc  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
 .rung-eg    { font-size: 11px; color: var(--color-text-tertiary); margin-top: 3px; font-style: italic; }
-
-/* ── Veto bar chart ── */
-.veto-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
 .veto-label { font-size: 12px; color: var(--color-text-secondary); width: 54px; flex-shrink: 0; text-align: right; }
-.veto-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 20px; overflow: hidden; position: relative; }
 .veto-fill  { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; font-size: 11px; font-weight: 500; white-space: nowrap; min-width: 30px; transition: width 0.4s ease; }
 .veto-note  { font-size: 11px; color: var(--color-text-tertiary); width: 60px; flex-shrink: 0; }
 
@@ -96,17 +86,12 @@
   box-shadow: 0 0 0 1.5px var(--accent);
 }
 .tl-year { font-size: 10px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 1px; }
-.tl-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
 
 /* ── Signal strength widget ── */
 .signal-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 1rem; }
-.signal-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 10px 12px; }
 .signal-dots { display: flex; gap: 4px; margin-bottom: 6px; }
 .signal-dot  { width: 10px; height: 10px; border-radius: 50%; }
-.dot-fill    { background: var(--accent); }
 .dot-empty   { background: var(--color-background-secondary); border: 1px solid var(--color-border-secondary); }
-.signal-label { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
-.signal-eg    { font-size: 11px; color: var(--color-text-secondary); line-height: 1.4; }
 
 /* ── Flags: Design A ── */
 .fl-wrap {
@@ -207,42 +192,6 @@
 .cmp-table tr:hover td { background: var(--color-background-secondary); }
 .cmp-table .td-label { color: var(--color-text-secondary); font-weight: 500; width: 32%; }
 
-/* === Shared-ready extracted styles === */
-
-.card-header-row {
-  display:flex;
-  align-items:baseline;
-  gap:10px;
-  margin-bottom:8px;
-  flex-wrap:wrap;
-}
-
-.card-title {
-  font-size:14px;
-  font-weight:500;
-  color:var(--color-text-primary);
-}
-
-.text-amber-700 {
-  color:#BA7517;
-}
-
-.text-amber-900 {
-  color:#633806;
-}
-
-.text-blue-500 {
-  color:#378ADD;
-}
-
-.text-blue-700 {
-  color:#185FA5;
-}
-
-.text-blue-900 {
-  color:#0C447C;
-}
-
 .text-hex-ef9f27 {
   color:#ef9f27;
 }
@@ -251,24 +200,8 @@
   color:#f09595;
 }
 
-.text-orange-600 {
-  color:#D85A30;
-}
-
-.text-orange-850 {
-  color:#854F0B;
-}
-
-.text-red-700 {
-  color:#A32D2D;
-}
-
 .text-red-900 {
   color:#791F1F;
-}
-
-.text-teal-500 {
-  color:var(--accent);
 }
 
 /* === Module-specific extracted styles === */
@@ -282,13 +215,6 @@
   line-height:1.6;
   margin-bottom:10px;
   font-style:italic;
-}
-
-.diplomacy-label {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:3px;
 }
 
 .un-members-badge {
@@ -413,11 +339,6 @@
   margin-top:4px;
 }
 
-.showterm-control {
-  font-size:12px;
-  padding:3px 10px;
-}
-
 .signal-ladder-intro {
   font-size:12px;
   color:var(--color-text-secondary);
@@ -433,13 +354,6 @@
   padding:9px 11px;
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
-}
-
-.spectrum-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
-  line-height:1.5;
 }
 
 .power-marker-style {
