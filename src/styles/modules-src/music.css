@@ -4,8 +4,6 @@
       --accent-bg: #FDF0EB;
       --accent-border: #F0B49A;
     }
-    /* ── Element explorer tabs ── */
-    .elem-tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
     .elem-tab {
       font-size:12px; padding:4px 12px;
       border-radius:var(--border-radius-md);
