@@ -24,13 +24,13 @@ const mod = modules.find((m) => m.id === 13)!;
 
     <div class="content-panel">
       <div class="panel-title">See the difference — drag the slider and watch both outputs</div>
-      <div class="percentages-row-2">
-        <label class="percentages-text-2">Starting rate:</label>
+      <div class="slider-row-tight">
+        <label class="slider-label">Starting rate:</label>
         <input class="u-flex-1" type="range" id="u-flex-1" min="1" max="80" value="40" step="1">
         <span class="start-out" id="start-out">40%</span>
       </div>
-      <div class="percentages-row-3">
-        <label class="percentages-text-2">Change:</label>
+      <div class="slider-row-spaced">
+        <label class="slider-label">Change:</label>
         <input class="u-flex-1" type="range" id="change-rate" min="1" max="50" value="10" step="1">
         <span class="start-out" id="change-out">+10</span>
       </div>
@@ -40,13 +40,13 @@ const mod = modules.find((m) => m.id === 13)!;
           <div class="pp-result" id="pp-result"></div>
           <div class="pp-desc" id="pp-desc"></div>
         </div>
-        <div class="percentages-panel-2">
-          <div class="percentages-label-2">If the change is in PERCENT (%)</div>
+        <div class="percent-case-panel">
+          <div class="percent-case-label">If the change is in PERCENT (%)</div>
           <div class="pct-result" id="pct-result"></div>
           <div class="pct-desc" id="pct-desc"></div>
         </div>
       </div>
-      <div class="percentages-panel-3">
+      <div class="points-rule-note">
         <strong class="text-primary">Rule:</strong> "Percentage points" = raw arithmetic subtraction (40% → 50% = +10 pp). "Percent change" = relative to the original (40% → 44% = +10%). Politicians and media almost always use whichever sounds bigger — which is usually % when rates are low, and pp when rates are high.
       </div>
     </div>
@@ -111,7 +111,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <p class="sub-note">Start at 100. −20% = 80. Then +25% of 80 = +20. 80 + 20 = 100? Yes — but that's why they chose 25%, not 20%. Try −20% then +20%: 100 → 80 → 96. Still 4% below start.</p>
         </div>
       </div>
-      <div class="percentages-panel-4">
+      <div class="trick-rule-note">
         <strong class="text-primary">The rule:</strong> Percentage changes are not reversible with the same number. A 50% drop needs a 100% rise to recover. A 20% drop needs a 25% rise. The base changes each time.
       </div>
     </div>
@@ -133,7 +133,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <p class="sub-note">Also true — measured over a longer window that includes the spike.</p>
         </div>
       </div>
-      <div class="percentages-panel-4">
+      <div class="trick-rule-note">
         <strong class="text-primary">The rule:</strong> Always ask "compared to when?" A trend can go up or down depending entirely on the start point chosen. Ask for the longest available timeframe.
       </div>
     </div>
@@ -155,7 +155,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <p class="sub-note">The median is far more representative of "typical." For income, house prices, and wealth, always prefer the median.</p>
         </div>
       </div>
-      <div class="percentages-panel-4">
+      <div class="trick-rule-note">
         <strong class="text-primary">The rule:</strong> When the topic involves wealth, income, house prices, or anything with outliers — ask for the median. The mean is almost always higher and almost always misleading. "Average salary" is typically 20–40% higher than "typical salary."
       </div>
     </div>
@@ -176,7 +176,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <p class="sub-note">5% of a €1B budget = €50M. 5% of GDP (say €1T) = €50B. Same percentage, 1,000× different reality.</p>
         </div>
       </div>
-      <div class="percentages-panel-4">
+      <div class="trick-rule-note">
         <strong class="text-primary">The rule:</strong> A percentage is meaningless without knowing its base. Always ask "X% of what total?"
       </div>
     </div>
@@ -184,7 +184,7 @@ const mod = modules.find((m) => m.id === 13)!;
     <div class="content-card">
       <div class="trick-header">
         <span class="trick-name">Trick 5 · small sample sizes</span>
-        <span class="trick-badge trick-badge-style-5">in headlines daily</span>
+        <span class="trick-badge trick-badge-rose">in headlines daily</span>
       </div>
       <div class="sub2">
         <div class="sub-card">
@@ -197,7 +197,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <p class="sub-note">With tiny counts, random variation produces huge percentage swings that mean nothing.</p>
         </div>
       </div>
-      <div class="percentages-panel-4">
+      <div class="trick-rule-note">
         <strong class="text-primary">The rule:</strong> Large percentage changes on small absolute numbers are almost always noise. Ask for the raw counts first.
       </div>
     </div>
@@ -209,17 +209,17 @@ const mod = modules.find((m) => m.id === 13)!;
 
     <div class="content-panel">
       <div class="panel-title">The mental maths toolkit — pick a scenario</div>
-      <div class="percentages-row-4">
+      <div class="preset-buttons">
         <button onclick="setCalc('tip')">Restaurant tip</button>
         <button onclick="setCalc('disc')">Sale discount</button>
         <button onclick="setCalc('tax')">VAT / tax</button>
         <button onclick="setCalc('raise')">Salary raise</button>
         <button onclick="setCalc('gdp')">GDP growth</button>
       </div>
-      <div class="percentages-row-5">
+      <div class="calc-inputs">
         <input class="calc-base" type="number" id="calc-base" placeholder="Base number" value="85">
         <input class="calc-pct" type="number" id="calc-pct" placeholder="%" value="15">
-        <span class="percentages-text-3">%</span>
+        <span class="calc-unit">%</span>
         <select class="calc-op" id="calc-op">
           <option value="of">% of number</option>
           <option value="add">add %</option>
@@ -268,11 +268,11 @@ const mod = modules.find((m) => m.id === 13)!;
     <!-- stacked discount explorer -->
     <div class="content-panel">
       <div class="panel-title">Stacked discounts — are they additive?</div>
-      <div class="percentages-text-4">Add up to 3 sequential discounts. Retailers love this — "30% + 20% off" sounds like 50% but it isn't.</div>
-      <div class="percentages-row-6">
+      <div class="tool-intro">Add up to 3 sequential discounts. Retailers love this — "30% + 20% off" sounds like 50% but it isn't.</div>
+      <div class="discount-inputs">
         <label class="muted-text">Original price:</label>
         <input class="disc-price" type="number" id="disc-price" value="100">
-        <label class="percentages-text-6">Disc 1:</label>
+        <label class="discount-label">Disc 1:</label>
         <input class="disc1" type="number" id="disc1" value="30" min="0" max="99"><span class="u-fs-12px">%</span>
         <label class="muted-text">Disc 2:</label>
         <input class="disc1" type="number" id="disc2" value="20" min="0" max="99"><span class="u-fs-12px">%</span>
@@ -287,7 +287,7 @@ const mod = modules.find((m) => m.id === 13)!;
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-d-ratios-in-the-real-world-what-they-actually-mean">Part D · ratios in the real world — what they actually mean</h2>
 
-    <div class="percentages-grid-2">
+    <div class="ratio-card-grid">
       <div class="card">
         <p class="clabel">P/E ratio (stocks)</p>
         <p class="cval">Price ÷ Annual earnings</p>
@@ -314,13 +314,13 @@ const mod = modules.find((m) => m.id === 13)!;
     <div class="content-panel">
       <div class="panel-title">Gini coefficient — global comparison</div>
       <div id="gini-bars"></div>
-      <div class="percentages-text-8">Lower = more equal distribution. The scale runs 0–1 but real-world values cluster between 0.24 (very equal) and 0.60 (very unequal). Source: World Bank / OECD estimates, ~2022–24.</div>
+      <div class="chart-note">Lower = more equal distribution. The scale runs 0–1 but real-world values cluster between 0.24 (very equal) and 0.60 (very unequal). Source: World Bank / OECD estimates, ~2022–24.</div>
     </div>
 
     <!-- P/E visual context -->
     <div class="content-panel">
       <div class="panel-title">What P/E ratios actually feel like</div>
-      <div class="percentages-text-9">Each dot = 1 year of profit you're paying for.</div>
+      <div class="chart-intro">Each dot = 1 year of profit you're paying for.</div>
       <div id="pe-explorer">
         <div class="button-row">
           <button class="sense-tab active" onclick="showPE(10, this)">P/E 10</button>
@@ -341,27 +341,27 @@ const mod = modules.find((m) => m.id === 13)!;
 
     <div class="content-panel">
       <div class="panel-title">The rule of 72: how long to double at any growth rate?</div>
-      <div class="percentages-row-3">
-        <label class="percentages-text-2">Annual growth:</label>
+      <div class="slider-row-spaced">
+        <label class="slider-label">Annual growth:</label>
         <input class="u-flex-1" type="range" id="growth-slider" min="1" max="30" value="7" step="1">
         <span class="growth-out" id="growth-out">7%/yr</span>
       </div>
-      <div class="percentages-grid-3">
-        <div class="percentages-panel-5">
+      <div class="growth-stats-grid">
+        <div class="growth-stat">
           <div class="detail-label-spaced">Doubles in</div>
           <div class="double-years" id="double-years"></div>
         </div>
-        <div class="percentages-panel-5">
+        <div class="growth-stat">
           <div class="detail-label-spaced">×10 in</div>
           <div class="double-years" id="ten-years"></div>
         </div>
-        <div class="percentages-panel-5">
+        <div class="growth-stat">
           <div class="detail-label-spaced">€1,000 → in 30 yrs</div>
           <div class="double-years" id="future-val"></div>
         </div>
       </div>
       <div class="growth-examples" id="growth-examples"></div>
-      <div class="percentages-text-11">
+      <div class="rule-note">
         <strong class="text-primary">Rule of 72:</strong> Divide 72 by the growth rate to get approximate doubling time. 72 ÷ 7% ≈ 10.3 years. 72 ÷ 3% = 24 years. 72 ÷ 12% = 6 years. Works for any compound growth — inflation, investment returns, population, debt.
       </div>
     </div>
@@ -369,8 +369,8 @@ const mod = modules.find((m) => m.id === 13)!;
     <!-- compound growth SVG bar chart — 30-year projection at selected rate -->
     <div class="content-panel">
       <div class="panel-title">Compound growth visualised — €1,000 over 30 years</div>
-      <div class="percentages-text-9">Select a rate. Each bar is a 5-year milestone.</div>
-      <div class="percentages-row-8">
+      <div class="chart-intro">Select a rate. Each bar is a 5-year milestone.</div>
+      <div class="growth-rate-tabs">
         <button class="sense-tab active" onclick="drawGrowthChart(3, this)">3%</button>
         <button class="sense-tab" onclick="drawGrowthChart(5, this)">5%</button>
         <button class="sense-tab" onclick="drawGrowthChart(7, this)">7%</button>
@@ -383,14 +383,14 @@ const mod = modules.find((m) => m.id === 13)!;
     <!-- loss-recovery asymmetry table -->
     <div class="content-panel">
       <div class="panel-title">Loss-recovery asymmetry — why drawdowns are so dangerous</div>
-      <div class="percentages-text-12">A fall and a rise of the same percentage do <strong class="text-primary">not</strong> cancel out. This asymmetry catches almost everyone off-guard.</div>
+      <div class="asymmetry-note">A fall and a rise of the same percentage do <strong class="text-primary">not</strong> cancel out. This asymmetry catches almost everyone off-guard.</div>
       <div class="u-overflow-x-auto">
         <table class="rec-table">
           <thead><tr><th>You lose</th><th>You need to gain</th><th>Example (from €10,000)</th></tr></thead>
           <tbody id="rec-table-body"></tbody>
         </table>
       </div>
-      <div class="percentages-text-11">Formula: recovery % = loss% ÷ (1 − loss%) × 100. A 50% loss needs 50 ÷ 0.50 = 100% gain to recover. Investors who avoid a 50% loss need only a 7% average return to match someone who lost 50% and recovered at 10%/yr.</div>
+      <div class="rule-note">Formula: recovery % = loss% ÷ (1 − loss%) × 100. A 50% loss needs 50 ÷ 0.50 = 100% gain to recover. Investors who avoid a 50% loss need only a 7% average return to match someone who lost 50% and recovered at 10%/yr.</div>
     </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -398,7 +398,7 @@ const mod = modules.find((m) => m.id === 13)!;
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-real-world-anchors-percentages-you-should-have-memorised">Part F · real-world anchors — percentages you should have memorised</h2>
 
-    <div class="percentages-text-4">These are the reference points that let you sanity-check any claim. Knowing them changes how headlines read.</div>
+    <div class="tool-intro">These are the reference points that let you sanity-check any claim. Knowing them changes how headlines read.</div>
 
     <div class="anchor-grid">
       <div class="anchor-card">
@@ -446,9 +446,9 @@ const mod = modules.find((m) => m.id === 13)!;
     <!-- SVG: income distribution pie -->
     <div class="content-panel">
       <div class="panel-title">Where the money is — US income distribution by quintile</div>
-      <div class="percentages-text-4">Each quintile = 20% of households, ranked by income. The share of total income each receives is not equal.</div>
+      <div class="tool-intro">Each quintile = 20% of households, ranked by income. The share of total income each receives is not equal.</div>
       <div class="svg-wrap">
-        <svg class="percentages-media-2" viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
+        <svg class="income-share-chart" viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg">
           <!-- Bar chart of income shares by quintile -->
           <!-- Data approx: Bottom 20%: 3.1%, 2nd 20%: 8.3%, Middle 20%: 14.2%, 4th 20%: 23.0%, Top 20%: 51.5% (CBO-style) -->
           <!-- bars -->
@@ -483,7 +483,7 @@ const mod = modules.find((m) => m.id === 13)!;
           <!-- top quintile bar different colour -->
         </svg>
       </div>
-      <div class="percentages-text-13">Source: US Congressional Budget Office estimates (approximate). The top 20% receive more income than the bottom 80% combined — a pattern consistent across most high-income countries.</div>
+      <div class="source-note">Source: US Congressional Budget Office estimates (approximate). The top 20% receive more income than the bottom 80% combined — a pattern consistent across most high-income countries.</div>
     </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -493,21 +493,21 @@ const mod = modules.find((m) => m.id === 13)!;
 
     <div class="content-panel">
       <div class="panel-title">Every time you see a % in a headline, ask these 4 questions:</div>
-      <div class="percentages-row-9">
-        <div class="percentages-row-10">
-          <div class="percentages-row-11">1</div>
+      <div class="news-checklist">
+        <div class="checklist-item">
+          <div class="checklist-num-blue">1</div>
           <div><div class="item-title">X% of what?</div><div class="muted-text">What is the base? Is it the total, a subset, last year's value?</div></div>
         </div>
-        <div class="percentages-row-10">
-          <div class="percentages-row-12">2</div>
+        <div class="checklist-item">
+          <div class="checklist-num-green">2</div>
           <div><div class="item-title">Percentage or percentage points?</div><div class="muted-text">A change "from 5% to 8%" is either +3 pp or +60% — both technically correct, wildly different in feel.</div></div>
         </div>
-        <div class="percentages-row-10">
-          <div class="percentages-row-13">3</div>
+        <div class="checklist-item">
+          <div class="checklist-num-amber">3</div>
           <div><div class="item-title">Compared to when?</div><div class="muted-text">What is the time window? Who chose it, and why?</div></div>
         </div>
-        <div class="percentages-row-10">
-          <div class="percentages-row-14">4</div>
+        <div class="checklist-item">
+          <div class="checklist-num-red">4</div>
           <div><div class="item-title">What are the raw numbers?</div><div class="muted-text">A 200% increase from 1 to 3 is very different from a 200% increase from 1,000 to 3,000.</div></div>
         </div>
       </div>
@@ -519,12 +519,12 @@ const mod = modules.find((m) => m.id === 13)!;
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-percentage-ladders-making-numbers-feel-real">Part H · percentage ladders — making numbers feel real</h2>
 
-    <div class="percentages-text-4">We talk about 2%, 40%, and 85% as if they all feel obvious — but they don't. These ladders give you concrete comparisons for each zone of the 0–100% scale.</div>
+    <div class="tool-intro">We talk about 2%, 40%, and 85% as if they all feel obvious — but they don't. These ladders give you concrete comparisons for each zone of the 0–100% scale.</div>
 
     <div class="content-panel">
       <div class="panel-title">The % scale — what each zone actually means</div>
       <div class="svg-wrap">
-        <svg class="percentages-media-3" viewBox="0 0 640 310" xmlns="http://www.w3.org/2000/svg">
+        <svg class="percentage-ladder-chart" viewBox="0 0 640 310" xmlns="http://www.w3.org/2000/svg">
           <!-- gradient bar -->
           <defs>
             <linearGradient id="pct-grad" x1="0" x2="1" y1="0" y2="0">
@@ -643,11 +643,11 @@ const mod = modules.find((m) => m.id === 13)!;
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-i-percentages-in-personal-finance-the-ones-that-compound-quietly">Part I · percentages in personal finance — the ones that compound quietly</h2>
 
-    <div class="percentages-text-4">Small percentages repeated over decades produce staggering differences. These are the four you should track for yourself.</div>
+    <div class="tool-intro">Small percentages repeated over decades produce staggering differences. These are the four you should track for yourself.</div>
 
     <div class="content-panel">
       <div class="panel-title">Fee drag — the hidden cost of % charges</div>
-      <div class="percentages-text-14">Two investors both earn 7%/year. One pays a 0.1% annual fund fee. The other pays 1.5%. Over 40 years on a €50,000 starting pot, the difference is massive.</div>
+      <div class="fees-intro">Two investors both earn 7%/year. One pays a 0.1% annual fund fee. The other pays 1.5%. Over 40 years on a €50,000 starting pot, the difference is massive.</div>
       <div class="button-row">
         <button class="sense-tab active" onclick="showFee(0.1, this)">0.1% fee (index fund)</button>
         <button class="sense-tab" onclick="showFee(0.5, this)">0.5% fee</button>
@@ -655,19 +655,19 @@ const mod = modules.find((m) => m.id === 13)!;
         <button class="sense-tab" onclick="showFee(2.5, this)">2.5% fee (some annuities)</button>
       </div>
       <div class="calc-result" id="fee-result"></div>
-      <div class="percentages-text-8"><strong class="text-primary">Why it matters so much:</strong> The fee comes off the <em>total</em> balance every year, not just your original investment. That means you also lose the compound growth that fee money would have generated.</div>
+      <div class="chart-note"><strong class="text-primary">Why it matters so much:</strong> The fee comes off the <em>total</em> balance every year, not just your original investment. That means you also lose the compound growth that fee money would have generated.</div>
     </div>
 
     <div class="content-panel">
       <div class="panel-title">Mortgage interest — how small rate differences scale</div>
-      <div class="percentages-text-9">A 1 pp difference in mortgage rate on a typical loan makes a huge difference in total paid. Drag the slider:</div>
-      <div class="percentages-row-2">
-        <label class="percentages-text-15">Interest rate:</label>
+      <div class="chart-intro">A 1 pp difference in mortgage rate on a typical loan makes a huge difference in total paid. Drag the slider:</div>
+      <div class="slider-row-tight">
+        <label class="rate-label">Interest rate:</label>
         <input class="u-flex-1" type="range" id="mortgage-rate" min="1" max="10" value="4" step="0.5">
         <span class="start-out" id="mortgage-rate-out">4%</span>
       </div>
-      <div class="percentages-row-3">
-        <label class="percentages-text-15">Loan amount:</label>
+      <div class="slider-row-spaced">
+        <label class="rate-label">Loan amount:</label>
         <input class="u-flex-1" type="range" id="mortgage-loan" min="50000" max="600000" value="250000" step="10000">
         <span class="mortgage-loan-out" id="mortgage-loan-out">€250,000</span>
       </div>

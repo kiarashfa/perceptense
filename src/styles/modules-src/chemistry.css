@@ -65,7 +65,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   gap:8px;
 }
 
-.chemistry-text-2 {
+.elements-note {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -78,61 +78,61 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   display:block;
 }
 
-.chemistry-panel-2 {
+.polar-panel {
   background:#E6F1FB;
   border-radius:var(--border-radius-md);
   padding:12px 14px;
   border:0.5px solid #85B7EB;
 }
 
-.chemistry-label-3 {
+.polar-title {
   font-size:12px;
   font-weight:500;
   color:#0C447C;
   margin-bottom:6px;
 }
 
-.chemistry-text-3 {
+.polar-desc {
   font-size:12px;
   color:#0C447C;
   line-height:1.6;
   margin-bottom:8px;
 }
 
-.chemistry-text-4 {
+.polar-examples {
   font-size:12px;
   color:#0C447C;
   line-height:1.6;
 }
 
-.chemistry-panel-3 {
+.nonpolar-panel {
   background:#FAEEDA;
   border-radius:var(--border-radius-md);
   padding:12px 14px;
   border:0.5px solid #EF9F27;
 }
 
-.chemistry-label-4 {
+.nonpolar-title {
   font-size:12px;
   font-weight:500;
   color:#633806;
   margin-bottom:6px;
 }
 
-.chemistry-text-5 {
+.nonpolar-desc {
   font-size:12px;
   color:#633806;
   line-height:1.6;
   margin-bottom:8px;
 }
 
-.chemistry-text-6 {
+.nonpolar-examples {
   font-size:12px;
   color:#633806;
   line-height:1.6;
 }
 
-.chemistry-panel-4 {
+.insight-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -141,14 +141,14 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   line-height:1.6;
 }
 
-.chemistry-text-7 {
+.section-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.5;
   margin-bottom:12px;
 }
 
-.chemistry-media-2 {
+.figure-svg {
   width:100%;
   height:auto;
   display:block;
@@ -162,7 +162,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   margin-bottom:10px;
 }
 
-.chemistry-panel-5 {
+.reference-panel {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-lg);
@@ -171,7 +171,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   overflow-x:auto;
 }
 
-.chemistry-label-5 {
+.reference-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -181,7 +181,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   font-size:10px;
 }
 
-.chemistry-media-3 {
+.functional-group-chart {
   width:100%;
   min-width:600px;
   height:auto;
@@ -204,20 +204,20 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   line-height:1.8;
 }
 
-.chemistry-row-2 {
+.ph-scale {
   display:flex;
   flex-direction:column;
   gap:3px;
   margin-bottom:10px;
 }
 
-.chemistry-row-3 {
+.ph-row {
   display:flex;
   align-items:center;
   gap:8px;
 }
 
-.chemistry-label-6 {
+.ph-num-red {
   width:32px;
   font-size:11px;
   font-weight:500;
@@ -226,7 +226,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   flex-shrink:0;
 }
 
-.chemistry-row-4 {
+.ph-bar-battery-acid {
   flex:1;
   height:18px;
   background:#A32D2D;
@@ -236,12 +236,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-text-8 {
+.ph-bar-text-blush {
   font-size:11px;
   color:#FCEBEB;
 }
 
-.chemistry-row-5 {
+.ph-bar-lemon {
   flex:0.9;
   height:18px;
   background:#D85A30;
@@ -251,12 +251,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-text-9 {
+.ph-bar-text-white {
   font-size:11px;
   color:#fff;
 }
 
-.chemistry-label-7 {
+.ph-num-brown {
   width:32px;
   font-size:11px;
   font-weight:500;
@@ -265,7 +265,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   flex-shrink:0;
 }
 
-.chemistry-row-6 {
+.ph-bar-tomato {
   flex:0.75;
   height:18px;
   background:#EF9F27;
@@ -275,12 +275,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-text-10 {
+.ph-bar-text-dark {
   font-size:11px;
   color:#412402;
 }
 
-.chemistry-label-8 {
+.ph-num-green {
   width:32px;
   font-size:11px;
   font-weight:500;
@@ -289,7 +289,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   flex-shrink:0;
 }
 
-.chemistry-row-7 {
+.ph-bar-water {
   flex:0.5;
   height:18px;
   background:#1D9E75;
@@ -299,7 +299,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-row-8 {
+.ph-bar-blood {
   flex:0.47;
   height:18px;
   background:#5DCAA5;
@@ -309,12 +309,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-text-11 {
+.ph-bar-text-deep-green {
   font-size:11px;
   color:#04342C;
 }
 
-.chemistry-label-9 {
+.ph-num-blue {
   width:32px;
   font-size:11px;
   font-weight:500;
@@ -323,7 +323,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   flex-shrink:0;
 }
 
-.chemistry-row-9 {
+.ph-bar-baking-soda {
   flex:0.35;
   height:18px;
   background:#378ADD;
@@ -333,7 +333,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-row-10 {
+.ph-bar-ammonia {
   flex:0.2;
   height:18px;
   background:#185FA5;
@@ -343,7 +343,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-label-10 {
+.ph-num-navy {
   width:32px;
   font-size:11px;
   font-weight:500;
@@ -352,7 +352,7 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   flex-shrink:0;
 }
 
-.chemistry-row-11 {
+.ph-bar-drain-cleaner {
   flex:0.05;
   height:18px;
   background:#042C53;
@@ -362,12 +362,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   padding-left:7px;
 }
 
-.chemistry-text-12 {
+.ph-bar-text-pale-blue {
   font-size:11px;
   color:#E6F1FB;
 }
 
-.chemistry-row-12 {
+.ph-compare-row {
   display:flex;
   gap:10px;
   align-items:flex-end;
@@ -375,12 +375,12 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   margin-bottom:10px;
 }
 
-.chemistry-media-4 {
+.ph-input-field {
   flex:1;
   min-width:140px;
 }
 
-.chemistry-text-13 {
+.ph-input-label {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:4px;
@@ -416,114 +416,114 @@ button.active-sel { background: var(--color-background-tertiary) !important; bor
   margin-bottom:12px;
 }
 
-.chemistry-grid-2 {
+.taste-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(140px,1fr));
   gap:8px;
 }
 
-.chemistry-panel-6 {
+.taste-panel-sweet {
   background:#E1F5EE;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
 }
 
-.chemistry-label-11 {
+.taste-title-sweet {
   font-size:12px;
   font-weight:500;
   color:#085041;
   margin-bottom:4px;
 }
 
-.chemistry-text-14 {
+.taste-desc-sweet {
   font-size:11px;
   color:#085041;
   line-height:1.5;
 }
 
-.chemistry-panel-7 {
+.taste-panel-sour {
   background:#FCEBEB;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
 }
 
-.chemistry-label-12 {
+.taste-title-sour {
   font-size:12px;
   font-weight:500;
   color:#791F1F;
   margin-bottom:4px;
 }
 
-.chemistry-text-15 {
+.taste-desc-sour {
   font-size:11px;
   color:#791F1F;
   line-height:1.5;
 }
 
-.chemistry-panel-8 {
+.taste-panel-salty {
   background:#FAEEDA;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
 }
 
-.chemistry-label-13 {
+.taste-title-salty {
   font-size:12px;
   font-weight:500;
   color:#633806;
   margin-bottom:4px;
 }
 
-.chemistry-text-16 {
+.taste-desc-salty {
   font-size:11px;
   color:#633806;
   line-height:1.5;
 }
 
-.chemistry-panel-9 {
+.taste-panel-bitter {
   background:#EAF3DE;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
 }
 
-.chemistry-label-14 {
+.taste-title-bitter {
   font-size:12px;
   font-weight:500;
   color:#27500A;
   margin-bottom:4px;
 }
 
-.chemistry-text-17 {
+.taste-desc-bitter {
   font-size:11px;
   color:#27500A;
   line-height:1.5;
 }
 
-.chemistry-panel-10 {
+.taste-panel-umami {
   background:#EEEDFE;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
 }
 
-.chemistry-label-15 {
+.taste-title-umami {
   font-size:12px;
   font-weight:500;
   color:#3C3489;
   margin-bottom:4px;
 }
 
-.chemistry-text-18 {
+.taste-desc-umami {
   font-size:11px;
   color:#3C3489;
   line-height:1.5;
 }
 
-.chemistry-grid-3 {
+.kitchen-reactions-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
 }
 
-.chemistry-text-19 {
+.reaction-desc {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.5;

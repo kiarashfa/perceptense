@@ -107,32 +107,32 @@
   background:#E6F1FB;
 }
 
-.scale-bar-inner-style-2 {
+.scale-bar-inner-buildings {
   width:25%;
   background:#EAF3DE;
 }
 
-.scale-bar-inner-style-3 {
+.scale-bar-inner-bridges {
   width:40%;
   background:#FAEEDA;
 }
 
-.scale-bar-inner-style-4 {
+.scale-bar-inner-pressure-vessels {
   width:40%;
   background:#EEEDFE;
 }
 
-.scale-bar-inner-style-5 {
+.scale-bar-inner-lifting-chains {
   width:50%;
   background:#FAECE7;
 }
 
-.scale-bar-inner-style-6 {
+.scale-bar-inner-max {
   width:100%;
   background:#FCEBEB;
 }
 
-.engineering-text-2 {
+.figure-caption {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:6px;
@@ -143,23 +143,23 @@
   background:#EAF3DE;
 }
 
-.engineering-text-3 {
+.tolerance-method {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-left:6px;
 }
 
-.tol-bar-style-2 {
+.tol-bar-cnc {
   width:12%;
   background:#E6F1FB;
 }
 
-.tol-bar-style-3 {
+.tol-bar-grinding {
   width:30%;
   background:#FAEEDA;
 }
 
-.tol-bar-style-4 {
+.tol-bar-lapping {
   width:75%;
   background:#FAECE7;
 }
@@ -189,7 +189,7 @@
   line-height:1.8;
 }
 
-.engineering-text-4 {
+.units-note {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
@@ -200,60 +200,60 @@
   background:#FAECE7;
 }
 
-.mat-bar-style-2 {
+.mat-bar-timber {
   width:5%;
   background:#EAF3DE;
 }
 
-.mat-bar-style-3 {
+.mat-bar-aluminium-strength {
   width:35%;
   background:#E6F1FB;
 }
 
-.mat-bar-style-4 {
+.mat-bar-structural-steel {
   width:37%;
   background:#FAEEDA;
 }
 
-.mat-bar-style-5 {
+.mat-bar-high-strength-steel {
   width:65%;
   background:#EEEDFE;
 }
 
-.mat-bar-style-6 {
+.mat-bar-titanium {
   width:70%;
   background:#FAECE7;
 }
 
-.engineering-text-5 {
+.comparison-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:8px;
 }
 
-.mat-bar-style-7 {
+.mat-bar-steel-specific {
   width:18%;
   background:#FAEEDA;
 }
 
-.mat-bar-style-8 {
+.mat-bar-titanium-specific {
   width:38%;
   background:#FAECE7;
 }
 
-.mat-bar-style-9 {
+.mat-bar-aluminium-specific {
   width:40%;
   background:#E6F1FB;
 }
 
-.engineering-grid-2 {
+.reliability-inputs {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
   gap:12px;
   margin-bottom:14px;
 }
 
-.engineering-text-6 {
+.reliability-label {
   font-size:11px;
   color:var(--color-text-secondary);
   display:block;
@@ -267,20 +267,20 @@
   margin-top:10px;
 }
 
-.engineering-grid-3 {
+.failure-card-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
   gap:10px;
   margin-bottom:1rem;
 }
 
-.engineering-text-7 {
+.failure-cause-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:4px;
 }
 
-.engineering-panel-4 {
+.fermi-steps {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;

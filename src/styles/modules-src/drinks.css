@@ -55,7 +55,7 @@
   margin-top:3px;
 }
 
-.drinks-panel-2 {
+.method-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -70,21 +70,21 @@
   padding-top:12px;
 }
 
-.drinks-label-2 {
+.subsection-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:8px;
 }
 
-.drinks-text-2 {
+.unit-definition {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
   line-height:1.5;
 }
 
-.drinks-text-3 {
+.calc-field-label {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:4px;
@@ -108,7 +108,7 @@
   padding:4px 11px;
 }
 
-.drinks-text-4 {
+.section-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
@@ -122,14 +122,14 @@
   max-height:160px;
 }
 
-.drinks-text-5 {
+.still-note {
   font-size:11px;
   color:var(--color-text-tertiary);
   margin-top:6px;
   line-height:1.5;
 }
 
-.drinks-media-2 {
+.fermentation-diagram {
   width:100%;
   height:auto;
   display:block;
@@ -137,139 +137,139 @@
   max-height:90px;
 }
 
-.drinks-panel-3 {
+.tint-panel-amber {
   background:#FAEEDA;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid #EF9F27;
 }
 
-.drinks-label-4 {
+.tint-title-amber {
   font-size:12px;
   font-weight:500;
   color:#633806;
   margin-bottom:4px;
 }
 
-.drinks-text-6 {
+.tint-desc-amber {
   font-size:11px;
   color:#854F0B;
   line-height:1.5;
 }
 
-.drinks-panel-4 {
+.tint-panel-red {
   background:#FCEBEB;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid #F09595;
 }
 
-.drinks-label-5 {
+.tint-title-red {
   font-size:12px;
   font-weight:500;
   color:#791F1F;
   margin-bottom:4px;
 }
 
-.drinks-text-7 {
+.tint-desc-red {
   font-size:11px;
   color:#A32D2D;
   line-height:1.5;
 }
 
-.drinks-panel-5 {
+.tint-panel-blue {
   background:#E6F1FB;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid #85B7EB;
 }
 
-.drinks-label-6 {
+.tint-title-blue {
   font-size:12px;
   font-weight:500;
   color:#0C447C;
   margin-bottom:4px;
 }
 
-.drinks-text-8 {
+.tint-desc-blue {
   font-size:11px;
   color:#185FA5;
   line-height:1.5;
 }
 
-.drinks-panel-6 {
+.tint-panel-green {
   background:#EAF3DE;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid #97C459;
 }
 
-.drinks-label-7 {
+.tint-title-green {
   font-size:12px;
   font-weight:500;
   color:#27500A;
   margin-bottom:4px;
 }
 
-.drinks-text-9 {
+.tint-desc-green {
   font-size:11px;
   color:#3B6D11;
   line-height:1.5;
 }
 
-.drinks-panel-7 {
+.tint-panel-purple {
   background:#EEEDFE;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid #AFA9EC;
 }
 
-.drinks-label-8 {
+.tint-title-purple {
   font-size:12px;
   font-weight:500;
   color:#3C3489;
   margin-bottom:4px;
 }
 
-.drinks-text-10 {
+.tint-desc-purple {
   font-size:11px;
   color:#534AB7;
   line-height:1.5;
 }
 
-.drinks-panel-8 {
+.tint-panel-coral {
   background:#FAECE7;
   border-radius:var(--border-radius-md);
   padding:10px 12px;
   border:0.5px solid #F0997B;
 }
 
-.drinks-label-9 {
+.tint-title-coral {
   font-size:12px;
   font-weight:500;
   color:#712B13;
   margin-bottom:4px;
 }
 
-.drinks-text-11 {
+.tint-desc-coral {
   font-size:11px;
   color:#993C1D;
   line-height:1.5;
 }
 
-.drinks-spacing-2 {
+.beer-labels-section {
   margin-top:12px;
   border-top:0.5px solid var(--color-border-tertiary);
   padding-top:10px;
 }
 
-.drinks-text-12 {
+.scale-heading {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:6px;
 }
 
-.drinks-media-3 {
+.ibu-gradient {
   position:relative;
   height:16px;
   border-radius:3px;
@@ -278,7 +278,7 @@
   background:linear-gradient(to right, #F5E6D3 0%, #D4A679 30%, #8B5A2B 60%, #3C2415 100%);
 }
 
-.drinks-row-2 {
+.ibu-scale-labels {
   position:absolute;
   top:0;
   left:0;
@@ -290,18 +290,18 @@
   padding:0 6px;
 }
 
-.drinks-text-13 {
+.scale-end-label {
   font-size:9px;
   color:rgba(255,255,255,0.9);
 }
 
-.drinks-text-14 {
+.scale-desc {
   font-size:10px;
   color:var(--color-text-secondary);
   line-height:1.5;
 }
 
-.drinks-media-4 {
+.srm-gradient {
   height:16px;
   border-radius:3px;
   overflow:hidden;
@@ -314,33 +314,33 @@
   padding:3px 10px;
 }
 
-.drinks-text-15 {
+.section-intro-short {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
   line-height:1.5;
 }
 
-.drinks-media-5 {
+.cocktail-diagram {
   width:100%;
   height:auto;
   display:block;
 }
 
-.drinks-text-16 {
+.espresso-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
 }
 
-.drinks-row-3 {
+.ratio-slider-row {
   display:flex;
   align-items:center;
   gap:12px;
   margin-bottom:8px;
 }
 
-.drinks-text-17 {
+.ratio-label {
   font-size:12px;
   color:var(--color-text-secondary);
   min-width:80px;
@@ -361,7 +361,7 @@
   margin-bottom:4px;
 }
 
-.drinks-row-4 {
+.coffee-legend {
   display:flex;
   gap:12px;
   flex-wrap:wrap;
@@ -369,13 +369,13 @@
   color:var(--color-text-secondary);
 }
 
-.drinks-row-5 {
+.coffee-legend-item {
   display:flex;
   align-items:center;
   gap:4px;
 }
 
-.drinks-media-6 {
+.swatch-espresso {
   width:10px;
   height:10px;
   background:#3C2415;
@@ -383,7 +383,7 @@
   display:inline-block;
 }
 
-.drinks-media-7 {
+.swatch-steamed-milk {
   width:10px;
   height:10px;
   background:#D4A679;
@@ -391,7 +391,7 @@
   display:inline-block;
 }
 
-.drinks-media-8 {
+.swatch-milk-foam {
   width:10px;
   height:10px;
   background:#F5E6D3;
@@ -399,7 +399,7 @@
   display:inline-block;
 }
 
-.drinks-media-9 {
+.swatch-hot-water {
   width:10px;
   height:10px;
   background:#B8D4E8;
@@ -407,40 +407,40 @@
   display:inline-block;
 }
 
-.drinks-grid-3 {
+.coffee-grid {
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(270px,1fr));
   gap:12px;
 }
 
-.drinks-label-10 {
+.coffee-name {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:2px;
 }
 
-.drinks-text-18 {
+.coffee-desc {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.4;
 }
 
-.drinks-media-10 {
+.winemaking-diagram {
   width:100%;
   height:auto;
   display:block;
   margin-bottom:10px;
 }
 
-.drinks-grid-4 {
+.wine-type-grid {
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
   gap:10px;
   margin-bottom:10px;
 }
 
-.drinks-text-19 {
+.grapes-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
@@ -454,20 +454,20 @@
   min-height:120px;
 }
 
-.drinks-grid-5 {
+.label-comparison {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
 }
 
-.drinks-label-11 {
+.wine-label-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:6px;
 }
 
-.drinks-panel-10 {
+.wine-label-card {
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-md);
   padding:10px;
@@ -482,7 +482,7 @@
   font-weight:500;
 }
 
-.drinks-panel-11 {
+.sweetness-note {
   margin-top:10px;
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
@@ -492,7 +492,7 @@
   line-height:1.6;
 }
 
-.drinks-media-11 {
+.pairing-diagram {
   width:100%;
   height:auto;
   display:block;

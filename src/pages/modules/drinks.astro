@@ -50,21 +50,21 @@ const mod = modules.find((m) => m.id === 20)!;
           <div class="drinks-text">Fill the glass to near the rim with the specified mixer</div>
         </div>
       </div>
-      <div class="drinks-panel-2">
+      <div class="method-note">
         <strong class="text-primary">Methods:</strong> <strong class="text-primary">Shake</strong> (with ice in shaker — chills, dilutes, aerates — for citrus/juice cocktails). <strong class="text-primary">Stir</strong> (with ice in mixing glass — chills, dilutes without aeration — for spirit-only cocktails like Martini/Negroni). <strong class="text-primary">Build</strong> (pour directly into serving glass over ice). <strong class="text-primary">Muddle</strong> (crush ingredients in glass). <strong class="text-primary">Strain</strong> (pour through strainer to remove ice/solids). <strong class="text-primary">Double strain</strong> (also through fine mesh to remove ice chips).
       </div>
 
       <!-- ABV / Units calculator -->
       <div class="drinks-spacing">
-        <div class="drinks-label-2">Standard drink / unit calculator</div>
-        <div class="drinks-text-2">One UK unit = 10 ml (8 g) of pure alcohol. One US standard drink ≈ 14 g (17.7 ml) of pure alcohol. Use this to check how many units are in any drink.</div>
+        <div class="subsection-title">Standard drink / unit calculator</div>
+        <div class="unit-definition">One UK unit = 10 ml (8 g) of pure alcohol. One US standard drink ≈ 14 g (17.7 ml) of pure alcohol. Use this to check how many units are in any drink.</div>
         <div class="calc-row">
           <div>
-            <div class="drinks-text-3">Volume (ml)</div>
+            <div class="calc-field-label">Volume (ml)</div>
             <input class="u-w-100pct" type="number" id="u-w-100pct" value="250" min="1" max="2000">
           </div>
           <div>
-            <div class="drinks-text-3">ABV (%)</div>
+            <div class="calc-field-label">ABV (%)</div>
             <input class="u-w-100pct" type="number" id="calc-abv" value="13" min="0.1" max="96" step="0.5">
           </div>
         </div>
@@ -92,7 +92,7 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- Distillation diagram -->
     <div class="content-panel">
       <div class="inline-card-title">How distillation works — the universal principle behind all spirits</div>
-      <div class="drinks-text-4">Every spirit starts as a fermented liquid (beer, wine, wash). Distillation exploits the fact that alcohol boils at 78.4°C, lower than water's 100°C. The vapour — richer in alcohol — is captured and condensed. The result is a concentrated liquid. Repeat distillation increases strength and removes impurities ("pot still" doubles, "column still" can reach near-pure alcohol).</div>
+      <div class="section-intro">Every spirit starts as a fermented liquid (beer, wine, wash). Distillation exploits the fact that alcohol boils at 78.4°C, lower than water's 100°C. The vapour — richer in alcohol — is captured and condensed. The result is a concentrated liquid. Repeat distillation increases strength and removes impurities ("pot still" doubles, "column still" can reach near-pure alcohol).</div>
       <svg class="drinks-media" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
         <!-- Wash container -->
         <rect x="20" y="60" width="80" height="70" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
@@ -143,7 +143,7 @@ const mod = modules.find((m) => m.id === 20)!;
         <path d="M625 130 L625 110 Q625 100 630 95 L630 75 Q630 68 635 68 Q640 68 640 75 L640 95 Q645 100 645 110 L645 130 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
         <text x="635" y="148" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui">Bottle</text>
       </svg>
-      <div class="drinks-text-5">Column stills (continuous distillation) used for vodka, grain whisky, and rum run continuously and can produce spirit close to 96% ABV. Pot stills are batch-operated and produce lower-strength, more flavourful spirit. Most premium whisky and cognac use pot stills.</div>
+      <div class="still-note">Column stills (continuous distillation) used for vodka, grain whisky, and rum run continuously and can produce spirit close to 96% ABV. Pot stills are batch-operated and produce lower-strength, more flavourful spirit. Most premium whisky and cognac use pot stills.</div>
     </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -153,10 +153,10 @@ const mod = modules.find((m) => m.id === 20)!;
 
     <div class="content-panel">
       <div class="inline-card-title">The one difference that divides all beer</div>
-      <div class="drinks-text-4">Ales use top-fermenting yeast at warm temperatures (15–24°C) — faster, fruitier, more complex. Lagers use bottom-fermenting yeast at cold temperatures (7–13°C) — slower, cleaner, crisper. This single difference explains why Guinness and Pilsner taste completely different despite using similar ingredients.</div>
+      <div class="section-intro">Ales use top-fermenting yeast at warm temperatures (15–24°C) — faster, fruitier, more complex. Lagers use bottom-fermenting yeast at cold temperatures (7–13°C) — slower, cleaner, crisper. This single difference explains why Guinness and Pilsner taste completely different despite using similar ingredients.</div>
 
       <!-- Ale vs Lager diagram -->
-      <svg class="drinks-media-2" viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg">
+      <svg class="fermentation-diagram" viewBox="0 0 600 90" xmlns="http://www.w3.org/2000/svg">
         <!-- Ale tank -->
         <rect x="20" y="10" width="240" height="65" rx="8" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.8"/>
         <text x="140" y="28" text-anchor="middle" font-size="12" font-weight="600" fill="#633806" font-family="system-ui">ALE</text>
@@ -188,52 +188,52 @@ const mod = modules.find((m) => m.id === 20)!;
       </svg>
 
       <div class="beer-grid">
-        <div class="drinks-panel-3">
-          <div class="drinks-label-4">Pale ale / IPA (Ale family)</div>
-          <div class="drinks-text-6">Hoppy, bitter, aromatic. IPA (India Pale Ale) has intensified hop character. Alcohol: 4–7.5%. Popular brands: Sierra Nevada Pale Ale, Punk IPA (BrewDog), Goose Island IPA.</div>
+        <div class="tint-panel-amber">
+          <div class="tint-title-amber">Pale ale / IPA (Ale family)</div>
+          <div class="tint-desc-amber">Hoppy, bitter, aromatic. IPA (India Pale Ale) has intensified hop character. Alcohol: 4–7.5%. Popular brands: Sierra Nevada Pale Ale, Punk IPA (BrewDog), Goose Island IPA.</div>
         </div>
-        <div class="drinks-panel-4">
-          <div class="drinks-label-5">Stout / Porter (Ale family)</div>
-          <div class="drinks-text-7">Dark, roasted malt flavours — coffee, chocolate, caramel. Dry stout (Guinness) vs sweet stout (Milk Stout). Alcohol: 4–8%. Iconic: Guinness Draught (4.2%).</div>
+        <div class="tint-panel-red">
+          <div class="tint-title-red">Stout / Porter (Ale family)</div>
+          <div class="tint-desc-red">Dark, roasted malt flavours — coffee, chocolate, caramel. Dry stout (Guinness) vs sweet stout (Milk Stout). Alcohol: 4–8%. Iconic: Guinness Draught (4.2%).</div>
         </div>
-        <div class="drinks-panel-5">
-          <div class="drinks-label-6">Pilsner / Lager (Lager family)</div>
-          <div class="drinks-text-8">Crisp, clean, light golden. The dominant global beer style. Alcohol: 4–5.5%. Brands: Pilsner Urquell (the original, 1842), Heineken, Peroni, Stella Artois, Corona.</div>
+        <div class="tint-panel-blue">
+          <div class="tint-title-blue">Pilsner / Lager (Lager family)</div>
+          <div class="tint-desc-blue">Crisp, clean, light golden. The dominant global beer style. Alcohol: 4–5.5%. Brands: Pilsner Urquell (the original, 1842), Heineken, Peroni, Stella Artois, Corona.</div>
         </div>
-        <div class="drinks-panel-6">
-          <div class="drinks-label-7">Wheat beer / Weizen (Ale family)</div>
-          <div class="drinks-text-9">Cloudy, banana and clove notes (from yeast esters and phenols, not actual fruit). Hefeweizen (with yeast) vs Kristallweizen (filtered clear). Alcohol: 4–5.5%. Iconic: Paulaner, Erdinger, Weihenstephaner.</div>
+        <div class="tint-panel-green">
+          <div class="tint-title-green">Wheat beer / Weizen (Ale family)</div>
+          <div class="tint-desc-green">Cloudy, banana and clove notes (from yeast esters and phenols, not actual fruit). Hefeweizen (with yeast) vs Kristallweizen (filtered clear). Alcohol: 4–5.5%. Iconic: Paulaner, Erdinger, Weihenstephaner.</div>
         </div>
-        <div class="drinks-panel-7">
-          <div class="drinks-label-8">Belgian ale (Ale family)</div>
-          <div class="drinks-text-10">Fruity, spicy, complex. Trappist ales (brewed by monks — Chimay, Westmalle, Westvleteren) and abbey styles. Dubbel (dark, 6–7%), Tripel (golden, 8–10%), Quad (strongest, 10–12%). ABV can reach 12%+.</div>
+        <div class="tint-panel-purple">
+          <div class="tint-title-purple">Belgian ale (Ale family)</div>
+          <div class="tint-desc-purple">Fruity, spicy, complex. Trappist ales (brewed by monks — Chimay, Westmalle, Westvleteren) and abbey styles. Dubbel (dark, 6–7%), Tripel (golden, 8–10%), Quad (strongest, 10–12%). ABV can reach 12%+.</div>
         </div>
-        <div class="drinks-panel-8">
-          <div class="drinks-label-9">Sour / Lambic (Ale — wild fermentation)</div>
-          <div class="drinks-text-11">Uses wild ambient yeast and bacteria (Brettanomyces, Lactobacillus, Pediococcus). Tart, funky, acidic — very different from conventional beer. Belgian Gueuze and Kriek (cherry lambic). Alcohol: 5–7%.</div>
+        <div class="tint-panel-coral">
+          <div class="tint-title-coral">Sour / Lambic (Ale — wild fermentation)</div>
+          <div class="tint-desc-coral">Uses wild ambient yeast and bacteria (Brettanomyces, Lactobacillus, Pediococcus). Tart, funky, acidic — very different from conventional beer. Belgian Gueuze and Kriek (cherry lambic). Alcohol: 5–7%.</div>
         </div>
       </div>
 
       <!-- IBU / SRM guide -->
-      <div class="drinks-spacing-2">
-        <div class="drinks-label-2">Reading beer labels: IBU and SRM</div>
+      <div class="beer-labels-section">
+        <div class="subsection-title">Reading beer labels: IBU and SRM</div>
         <div class="two-col-grid-tight">
           <div class="sub-card">
-            <div class="drinks-text-12">IBU (International Bitterness Units)</div>
+            <div class="scale-heading">IBU (International Bitterness Units)</div>
             <!-- IBU scale bar -->
-            <div class="drinks-media-3">
-              <div class="drinks-row-2">
-                <span class="drinks-text-13">0</span>
-                <span class="drinks-text-13">100+</span>
+            <div class="ibu-gradient">
+              <div class="ibu-scale-labels">
+                <span class="scale-end-label">0</span>
+                <span class="scale-end-label">100+</span>
               </div>
             </div>
-            <div class="drinks-text-14">0–10: very low (wheat beers). 10–30: balanced (lagers, pale ales). 40–60: noticeably bitter (IPA). 60–100+: intensely bitter (double/imperial IPA). Human bitterness perception peaks around 100 IBU — anything higher is theoretically bitter but not perceptibly more so.</div>
+            <div class="scale-desc">0–10: very low (wheat beers). 10–30: balanced (lagers, pale ales). 40–60: noticeably bitter (IPA). 60–100+: intensely bitter (double/imperial IPA). Human bitterness perception peaks around 100 IBU — anything higher is theoretically bitter but not perceptibly more so.</div>
           </div>
           <div class="sub-card">
-            <div class="drinks-text-12">SRM (Standard Reference Method) — colour</div>
+            <div class="scale-heading">SRM (Standard Reference Method) — colour</div>
             <!-- SRM colour gradient -->
-            <div class="drinks-media-4"></div>
-            <div class="drinks-text-14">2–3: pale straw (Pilsner, Wit). 4–8: golden (Pale Ale, Helles). 10–17: amber/copper (Märzen, ESB). 20–30: dark brown (Porter, Dubbel). 35–40+: black (Stout, Schwarzbier). Colour comes from malts: pale malt gives light colour; roasted/chocolate malt gives dark.</div>
+            <div class="srm-gradient"></div>
+            <div class="scale-desc">2–3: pale straw (Pilsner, Wit). 4–8: golden (Pale Ale, Helles). 10–17: amber/copper (Märzen, ESB). 20–30: dark brown (Porter, Dubbel). 35–40+: black (Stout, Schwarzbier). Colour comes from malts: pale malt gives light colour; roasted/chocolate malt gives dark.</div>
           </div>
         </div>
       </div>
@@ -261,8 +261,8 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- Flavour family diagram -->
     <div class="content-panel">
       <div class="inline-card-title">The cocktail flavour map — most classics fall into these five families</div>
-      <div class="drinks-text-15">Understanding these families lets you navigate any cocktail menu — and know what to order when you don't know what to order.</div>
-      <svg class="drinks-media-5" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <div class="section-intro-short">Understanding these families lets you navigate any cocktail menu — and know what to order when you don't know what to order.</div>
+      <svg class="cocktail-diagram" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
         <!-- Sour family -->
         <rect x="10" y="20" width="120" height="75" rx="8" fill="#EAF3DE" stroke="#97C459" stroke-width="0.8"/>
         <text x="70" y="38" text-anchor="middle" font-size="12" font-weight="600" fill="#27500A" font-family="system-ui">SOUR</text>
@@ -310,64 +310,64 @@ const mod = modules.find((m) => m.id === 20)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Everything starts with espresso</div>
-      <div class="drinks-text-16">A single espresso is approximately 3 cl (30 ml) of concentrated coffee extracted under ~9 bar of pressure through ~7–9 g of finely ground coffee in ~25–30 seconds. All other coffee drinks are built from this base by adding water, milk, or both.</div>
+      <div class="espresso-intro">A single espresso is approximately 3 cl (30 ml) of concentrated coffee extracted under ~9 bar of pressure through ~7–9 g of finely ground coffee in ~25–30 seconds. All other coffee drinks are built from this base by adding water, milk, or both.</div>
 
       <div class="u-mb-lg" id="u-mb-14px">
-        <div class="drinks-row-3">
-          <span class="drinks-text-17">Espresso ratio:</span>
+        <div class="ratio-slider-row">
+          <span class="ratio-label">Espresso ratio:</span>
           <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="10" value="0" step="1">
         </div>
         <div class="coffee-drink-name" id="coffee-drink-name"></div>
-        <div class="drinks-text-15" id="coffee-drink-desc"></div>
+        <div class="section-intro-short" id="coffee-drink-desc"></div>
         <div class="coffee-drink-bar" id="coffee-drink-bar"></div>
-        <div class="drinks-row-4">
-          <span class="drinks-row-5"><span class="drinks-media-6"></span>Espresso</span>
-          <span class="drinks-row-5"><span class="drinks-media-7"></span>Steamed milk</span>
-          <span class="drinks-row-5"><span class="drinks-media-8"></span>Milk foam</span>
-          <span class="drinks-row-5"><span class="drinks-media-9"></span>Hot water</span>
+        <div class="coffee-legend">
+          <span class="coffee-legend-item"><span class="swatch-espresso"></span>Espresso</span>
+          <span class="coffee-legend-item"><span class="swatch-steamed-milk"></span>Steamed milk</span>
+          <span class="coffee-legend-item"><span class="swatch-milk-foam"></span>Milk foam</span>
+          <span class="coffee-legend-item"><span class="swatch-hot-water"></span>Hot water</span>
         </div>
       </div>
 
-      <div class="drinks-grid-3">
+      <div class="coffee-grid">
         <div class="sub-card">
-          <div class="drinks-label-10">Ristretto</div>
-          <div class="drinks-text-18">2 cl (20 ml). Ultra-concentrated. Less water through the same coffee — sweeter, more intense, less bitter. The "short" espresso.</div>
+          <div class="coffee-name">Ristretto</div>
+          <div class="coffee-desc">2 cl (20 ml). Ultra-concentrated. Less water through the same coffee — sweeter, more intense, less bitter. The "short" espresso.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Espresso</div>
-          <div class="drinks-text-18">3 cl (30 ml). The foundation. Single shot. Rich crema on top. Drunk without milk in Italy, usually standing at the bar.</div>
+          <div class="coffee-name">Espresso</div>
+          <div class="coffee-desc">3 cl (30 ml). The foundation. Single shot. Rich crema on top. Drunk without milk in Italy, usually standing at the bar.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Lungo</div>
-          <div class="drinks-text-18">5–6 cl. More water through same coffee. Longer, more bitter, less concentrated than espresso.</div>
+          <div class="coffee-name">Lungo</div>
+          <div class="coffee-desc">5–6 cl. More water through same coffee. Longer, more bitter, less concentrated than espresso.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Americano</div>
-          <div class="drinks-text-18">Espresso + ~12 cl hot water added after. Similar strength to drip coffee. "Black Americano" = no milk.</div>
+          <div class="coffee-name">Americano</div>
+          <div class="coffee-desc">Espresso + ~12 cl hot water added after. Similar strength to drip coffee. "Black Americano" = no milk.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Flat white</div>
-          <div class="drinks-text-18">Double espresso (6 cl) + ~10 cl microfoam milk. Stronger coffee ratio than a latte. Australian/NZ origin.</div>
+          <div class="coffee-name">Flat white</div>
+          <div class="coffee-desc">Double espresso (6 cl) + ~10 cl microfoam milk. Stronger coffee ratio than a latte. Australian/NZ origin.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Cappuccino</div>
-          <div class="drinks-text-18">1/3 espresso + 1/3 steamed milk + 1/3 thick foam. The foam is substantial. Traditionally not drunk after 11am in Italy.</div>
+          <div class="coffee-name">Cappuccino</div>
+          <div class="coffee-desc">1/3 espresso + 1/3 steamed milk + 1/3 thick foam. The foam is substantial. Traditionally not drunk after 11am in Italy.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Latte</div>
-          <div class="drinks-text-18">Single/double espresso + 15–20 cl steamed milk + thin layer of microfoam. Milkiest espresso drink. The "coffee" taste is most diluted.</div>
+          <div class="coffee-name">Latte</div>
+          <div class="coffee-desc">Single/double espresso + 15–20 cl steamed milk + thin layer of microfoam. Milkiest espresso drink. The "coffee" taste is most diluted.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Macchiato</div>
-          <div class="drinks-text-18">Espresso "stained" with a splash of milk foam. ~3.5 cl total. Preserves coffee intensity with just a hint of milk to cut bitterness.</div>
+          <div class="coffee-name">Macchiato</div>
+          <div class="coffee-desc">Espresso "stained" with a splash of milk foam. ~3.5 cl total. Preserves coffee intensity with just a hint of milk to cut bitterness.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Cortado</div>
-          <div class="drinks-text-18">Equal parts espresso and warm milk (~3 cl + 3 cl). Spanish origin. Balances the coffee without diluting it. Between macchiato and flat white.</div>
+          <div class="coffee-name">Cortado</div>
+          <div class="coffee-desc">Equal parts espresso and warm milk (~3 cl + 3 cl). Spanish origin. Balances the coffee without diluting it. Between macchiato and flat white.</div>
         </div>
         <div class="sub-card">
-          <div class="drinks-label-10">Cold brew</div>
-          <div class="drinks-text-18">Coffee steeped in cold water for 12–24 hours. No heat = less acidic, sweeter, higher caffeine. Not the same as iced coffee (hot brewed then chilled).</div>
+          <div class="coffee-name">Cold brew</div>
+          <div class="coffee-desc">Coffee steeped in cold water for 12–24 hours. No heat = less acidic, sweeter, higher caffeine. Not the same as iced coffee (hot brewed then chilled).</div>
         </div>
       </div>
     </div>
@@ -380,10 +380,10 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- How wine is made -->
     <div class="content-panel">
       <div class="inline-card-title">How wine is made — the fundamentals</div>
-      <div class="drinks-text-4">Wine is fermented grape juice. Unlike beer, no cooking or added enzymes are needed — grapes contain both fermentable sugars and wild yeasts on their skins. The basic process is universal; the variables (grape variety, terroir, fermentation style, ageing) determine everything.</div>
+      <div class="section-intro">Wine is fermented grape juice. Unlike beer, no cooking or added enzymes are needed — grapes contain both fermentable sugars and wild yeasts on their skins. The basic process is universal; the variables (grape variety, terroir, fermentation style, ageing) determine everything.</div>
 
       <!-- Production flow SVG -->
-      <svg class="drinks-media-10" viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg">
+      <svg class="winemaking-diagram" viewBox="0 0 680 100" xmlns="http://www.w3.org/2000/svg">
         <!-- Step boxes -->
         <rect x="5"   y="20" width="80" height="50" rx="6" fill="#EAF3DE" stroke="#97C459" stroke-width="0.7"/>
         <rect x="105" y="20" width="80" height="50" rx="6" fill="#EAF3DE" stroke="#97C459" stroke-width="0.7"/>
@@ -430,35 +430,35 @@ const mod = modules.find((m) => m.id === 20)!;
       </svg>
 
       <!-- Red vs White vs Rosé difference -->
-      <div class="drinks-grid-4">
-        <div class="drinks-panel-4">
-          <div class="drinks-label-5">Red wine</div>
-          <div class="drinks-text-7">Red/black grapes fermented with skins left in. The skins give colour, tannins, and many flavour compounds. Tannins give the dry, grippy mouthfeel. Serve at 16–18°C. Age-worthy reds can improve for decades.</div>
+      <div class="wine-type-grid">
+        <div class="tint-panel-red">
+          <div class="tint-title-red">Red wine</div>
+          <div class="tint-desc-red">Red/black grapes fermented with skins left in. The skins give colour, tannins, and many flavour compounds. Tannins give the dry, grippy mouthfeel. Serve at 16–18°C. Age-worthy reds can improve for decades.</div>
         </div>
-        <div class="drinks-panel-3">
-          <div class="drinks-label-4">White wine</div>
-          <div class="drinks-text-6">White/green grapes (or red grapes pressed quickly, no skin contact). Little to no tannin. Freshness, acidity, and fruit are the main dimensions. Serve at 8–12°C. Most whites are best young; exceptions include aged Burgundy and Riesling.</div>
+        <div class="tint-panel-amber">
+          <div class="tint-title-amber">White wine</div>
+          <div class="tint-desc-amber">White/green grapes (or red grapes pressed quickly, no skin contact). Little to no tannin. Freshness, acidity, and fruit are the main dimensions. Serve at 8–12°C. Most whites are best young; exceptions include aged Burgundy and Riesling.</div>
         </div>
-        <div class="drinks-panel-8">
-          <div class="drinks-label-9">Rosé wine</div>
-          <div class="drinks-text-11">Red grapes with very brief skin contact (hours, not days) — just enough to give colour. Not a mix of red and white (except in Champagne, where blending is permitted). Serve at 8–10°C. Provence rosé sets the style benchmark.</div>
+        <div class="tint-panel-coral">
+          <div class="tint-title-coral">Rosé wine</div>
+          <div class="tint-desc-coral">Red grapes with very brief skin contact (hours, not days) — just enough to give colour. Not a mix of red and white (except in Champagne, where blending is permitted). Serve at 8–10°C. Provence rosé sets the style benchmark.</div>
         </div>
-        <div class="drinks-panel-5">
-          <div class="drinks-label-6">Sparkling wine</div>
-          <div class="drinks-text-8">CO₂ added via secondary fermentation (Champagne method: in bottle; Charmat method: in tank = Prosecco, Cava). Champagne method produces finer, more persistent bubbles. The pressure inside a Champagne bottle is ~6 atm — equivalent to a car tyre.</div>
+        <div class="tint-panel-blue">
+          <div class="tint-title-blue">Sparkling wine</div>
+          <div class="tint-desc-blue">CO₂ added via secondary fermentation (Champagne method: in bottle; Charmat method: in tank = Prosecco, Cava). Champagne method produces finer, more persistent bubbles. The pressure inside a Champagne bottle is ~6 atm — equivalent to a car tyre.</div>
         </div>
-        <div class="drinks-panel-6">
-          <div class="drinks-label-7">Fortified wine</div>
-          <div class="drinks-text-9">Neutral spirit added during or after fermentation, raising ABV to 15–22%. Port (added during — retains sweetness), Sherry (added after — dry or sweetened later), Madeira, Marsala, Vermouth (aromatised fortified wine). Shelf-stable opened longer than table wine.</div>
+        <div class="tint-panel-green">
+          <div class="tint-title-green">Fortified wine</div>
+          <div class="tint-desc-green">Neutral spirit added during or after fermentation, raising ABV to 15–22%. Port (added during — retains sweetness), Sherry (added after — dry or sweetened later), Madeira, Marsala, Vermouth (aromatised fortified wine). Shelf-stable opened longer than table wine.</div>
         </div>
-        <div class="drinks-panel-7">
-          <div class="drinks-label-8">Orange / Skin-contact wine</div>
-          <div class="drinks-text-10">White wine made like red — with extended skin contact. Result: amber/orange colour, significant tannins, oxidative notes, complexity. Ancient Georgian and Slovenian tradition, now a global natural wine movement. Polarising: some find them profound, others difficult.</div>
+        <div class="tint-panel-purple">
+          <div class="tint-title-purple">Orange / Skin-contact wine</div>
+          <div class="tint-desc-purple">White wine made like red — with extended skin contact. Result: amber/orange colour, significant tannins, oxidative notes, complexity. Ancient Georgian and Slovenian tradition, now a global natural wine movement. Polarising: some find them profound, others difficult.</div>
         </div>
       </div>
 
       <!-- Oak ageing note -->
-      <div class="drinks-panel-2">
+      <div class="method-note">
         <strong class="text-primary">Oak ageing:</strong> New French oak barrels impart vanilla, spice, toast, and coconut notes to wine. The smaller the barrel (standard 225 L Bordeaux barrique), the more oak influence per litre. Stainless steel or concrete tanks preserve fruit and freshness with no oak character — preferred for aromatic whites like Sauvignon Blanc. "Oaked" Chardonnay (Burgundy white, California) vs "unoaked" Chardonnay (Chablis) are almost unrecognisable as the same grape. <strong class="text-primary">Decanting:</strong> Pours older red wines off sediment; also aerates young tannic reds to soften them.
       </div>
     </div>
@@ -466,8 +466,8 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- Wine regions map schematic -->
     <div class="content-panel">
       <div class="inline-card-title">Major wine regions of the world — the "wine belt"</div>
-      <div class="drinks-text-15">Wine grapes grow in a band roughly 30–50° latitude in both hemispheres — warm enough for ripening, cool enough for acidity. Within this belt, soil, altitude, ocean proximity, and mesoclimate create "terroir."</div>
-      <svg class="drinks-media-5" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+      <div class="section-intro-short">Wine grapes grow in a band roughly 30–50° latitude in both hemispheres — warm enough for ripening, cool enough for acidity. Within this belt, soil, altitude, ocean proximity, and mesoclimate create "terroir."</div>
+      <svg class="cocktail-diagram" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
         <!-- Simple world outline simplified -->
         <!-- Wine belt bands -->
         <rect x="0" y="0" width="680" height="220" rx="8" fill="var(--color-background-secondary)"/>
@@ -544,7 +544,7 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- Wine grape explorer -->
     <div class="content-panel">
       <div class="inline-card-title">Grape variety profiles — click to explore</div>
-      <div class="drinks-text-19">These 17 grapes account for the overwhelming majority of wine you'll encounter. Each has a characteristic flavour profile, typical regions, and serving temperature.</div>
+      <div class="grapes-intro">These 17 grapes account for the overwhelming majority of wine you'll encounter. Each has a characteristic flavour profile, typical regions, and serving temperature.</div>
 
       <div class="button-row-compact">
         <button class="wine-btn" onclick="showWine('cab')">Cabernet Sauvignon</button>
@@ -572,21 +572,21 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- Wine labels / reading a bottle -->
     <div class="content-panel">
       <div class="inline-card-title">Reading a wine label — Old World vs New World logic</div>
-      <div class="drinks-grid-5">
+      <div class="label-comparison">
         <div>
-          <div class="drinks-label-11">Old World label (France / Italy / Spain)</div>
-          <div class="drinks-panel-10">
+          <div class="wine-label-title">Old World label (France / Italy / Spain)</div>
+          <div class="wine-label-card">
             <span class="drinks-span-style">Region / Appellation</span> is front and centre — "Châteauneuf-du-Pape", "Barolo", "Rioja Reserva". The grape variety is often <em>not stated</em> — you must know that Barolo = Nebbiolo, Chablis = Chardonnay, Sancerre = Sauvignon Blanc. This is the Old World philosophy: place expresses itself through the grape, not the reverse. <strong class="text-primary">Vintage</strong> matters greatly for age-worthy wines. <strong class="text-primary">Classification</strong> matters in Bordeaux (Premier Cru, Grand Cru) and Burgundy.
           </div>
         </div>
         <div>
-          <div class="drinks-label-11">New World label (USA / Australia / Chile)</div>
-          <div class="drinks-panel-10">
+          <div class="wine-label-title">New World label (USA / Australia / Chile)</div>
+          <div class="wine-label-card">
             <span class="drinks-span-style">Grape variety</span> leads — "California Cabernet Sauvignon", "Marlborough Sauvignon Blanc". The producer's brand is paramount. Region (AVA in USA, GI in Australia) provides context but is secondary. To use a single variety name in the USA, wine must contain at least 85% of that grape. New World wines are generally more fruit-forward and approachable young, less reliant on food pairing.
           </div>
         </div>
       </div>
-      <div class="drinks-panel-11">
+      <div class="sweetness-note">
         <strong class="text-primary">Sweetness levels (wine):</strong> Dry (fermented to near-zero residual sugar — most table wine). Off-dry (just a hint of sweetness — many Rieslings, Gewürztraminer). Medium (noticeable sweetness — Vouvray demi-sec). Sweet (Sauternes, Tokaji, ice wine — intentionally sweet dessert wines). The alcohol level is a rough sweetness proxy: under 12.5% ABV often means some residual sugar; over 14.5% usually means fully dry and warm-climate.
       </div>
     </div>
@@ -594,7 +594,7 @@ const mod = modules.find((m) => m.id === 20)!;
     <!-- Wine and food pairing -->
     <div class="content-panel">
       <div class="panel-title-spaced">Wine and food — the principles behind the rules</div>
-      <svg class="drinks-media-11" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
+      <svg class="pairing-diagram" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
         <!-- Principles -->
         <rect x="5"   y="5" width="195" height="105" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.7"/>
         <rect x="215" y="5" width="195" height="105" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="0.7"/>
@@ -636,10 +636,10 @@ const mod = modules.find((m) => m.id === 20)!;
     <h2 class="sec" id="part-g-serving-temperatures-the-one-rule-everyone-ignores">Part G · serving temperatures — the one rule everyone ignores</h2>
 
     <div class="content-panel">
-      <div class="drinks-text-4">"Room temperature" for red wine originated when European rooms were 16–18°C, not the 22°C+ of a modern heated interior. Serving most red wines too warm makes alcohol more prominent and fruit flabby. Serving white wines too cold numbs aromatics. A few minutes in the fridge, or a minute in a cooler, can transform a wine.</div>
+      <div class="section-intro">"Room temperature" for red wine originated when European rooms were 16–18°C, not the 22°C+ of a modern heated interior. Serving most red wines too warm makes alcohol more prominent and fruit flabby. Serving white wines too cold numbs aromatics. A few minutes in the fridge, or a minute in a cooler, can transform a wine.</div>
 
       <!-- Temperature scale SVG -->
-      <svg class="drinks-media-5" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
+      <svg class="cocktail-diagram" viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
         <!-- Thermometer track -->
         <rect x="320" y="10" width="40" height="220" rx="20" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
         <!-- Fill gradient -->

@@ -107,8 +107,8 @@ const mod = modules.find((m) => m.id === 18)!;
     <div class="content-card">
       <div class="card-header-row">
         <span class="card-title">United Nations (UN)</span>
-        <span class="diplomacy-panel-3">193 member states</span>
-        <span class="diplomacy-panel-4">founded 1945</span>
+        <span class="un-members-badge">193 member states</span>
+        <span class="un-founded-badge">founded 1945</span>
       </div>
       <div class="grid-3 u-mb-sm">
         <div class="sub-card"><div class="ibox-label">Purpose</div><div class="ibox-val">Maintain international peace and security, develop friendly relations among nations, promote human rights and international law.</div></div>
@@ -154,7 +154,7 @@ const mod = modules.find((m) => m.id === 18)!;
 
     <!-- UN Architecture SVG diagram -->
     <div class="scroll-panel">
-      <div class="diplomacy-text-2">UN system — simplified architecture</div>
+      <div class="architecture-heading">UN system — simplified architecture</div>
       <svg class="diplomacy-media" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg">
   	<rect x="320" y="8" width="160" height="30" rx="6" fill="var(--accent)" opacity="0.9"/>
   	<text x="400" y="28" text-anchor="middle" font-size="12" font-weight="600" fill="white">UN Charter (1945)</text>
@@ -239,12 +239,12 @@ const mod = modules.find((m) => m.id === 18)!;
           <div class="p5-since text-blue-700">P5 since 1945</div>
           <div class="p5-note text-blue-500">~90 vetoes total; 40+ to protect Israel; Cold War bloc</div>
         </div>
-        <div class="p5-card p5-card-style-2">
+        <div class="p5-card p5-card-russia">
           <div class="p5-name text-red-900">Russia</div>
           <div class="p5-since text-red-700">USSR seat → Russia (1991)</div>
           <div class="p5-note text-orange-600">Highest count (~140+ USSR/Russia combined). Blocks action where it has interests</div>
         </div>
-        <div class="p5-card p5-card-style-3">
+        <div class="p5-card p5-card-china">
           <div class="p5-name text-amber-900">China</div>
           <div class="p5-since text-orange-850">ROC seat → PRC (1971)</div>
           <div class="p5-note text-amber-700">Used veto sparingly until ~2010; now more assertive, often with Russia</div>
@@ -262,7 +262,7 @@ const mod = modules.find((m) => m.id === 18)!;
       </div>
 
       <!-- Veto bar chart -->
-      <div class="diplomacy-text-3">Approximate veto count (all-time, USSR/Russia combined)</div>
+      <div class="chart-heading">Approximate veto count (all-time, USSR/Russia combined)</div>
       <div class="veto-row">
         <div class="veto-label">Russia/USSR</div>
         <div class="veto-track"><div class="veto-fill veto-fill-style"><span class="diplomacy-span-style">~140+</span></div></div>
@@ -270,25 +270,25 @@ const mod = modules.find((m) => m.id === 18)!;
       </div>
       <div class="veto-row">
         <div class="veto-label">USA</div>
-        <div class="veto-track"><div class="veto-fill veto-fill-style-2"><span class="text-blue-900">~90</span></div></div>
+        <div class="veto-track"><div class="veto-fill veto-fill-usa"><span class="text-blue-900">~90</span></div></div>
         <div class="veto-note text-blue-900"></div>
       </div>
       <div class="veto-row">
         <div class="veto-label">UK</div>
-        <div class="veto-track"><div class="veto-fill veto-fill-style-3"><span class="text-blue-900">~32</span></div></div>
+        <div class="veto-track"><div class="veto-fill veto-fill-uk"><span class="text-blue-900">~32</span></div></div>
         <div class="veto-note"></div>
       </div>
       <div class="veto-row">
         <div class="veto-label">France</div>
-        <div class="veto-track"><div class="veto-fill veto-fill-style-4"><span class="text-blue-900">~18</span></div></div>
+        <div class="veto-track"><div class="veto-fill veto-fill-france"><span class="text-blue-900">~18</span></div></div>
         <div class="veto-note"></div>
       </div>
       <div class="veto-row">
         <div class="veto-label">China</div>
-        <div class="veto-track"><div class="veto-fill veto-fill-style-5"><span class="text-amber-900">~15</span></div></div>
+        <div class="veto-track"><div class="veto-fill veto-fill-china"><span class="text-amber-900">~15</span></div></div>
         <div class="veto-note text-tertiary">Rising</div>
       </div>
-      <div class="diplomacy-text-4">Note: figures include USSR-era votes for Russia; counts vary slightly by source. China figure is PRC since 1971.</div>
+      <div class="veto-footnote">Note: figures include USSR-era votes for Russia; counts vary slightly by source. China figure is PRC since 1971.</div>
 
       <div class="grid-2">
         <div class="sub-card">
@@ -327,8 +327,8 @@ const mod = modules.find((m) => m.id === 18)!;
 
     <!-- Global groupings bubble chart SVG -->
     <div class="scroll-panel">
-      <div class="diplomacy-text-3">Membership overlap — selected blocs (approximate % of world GDP)</div>
-      <svg class="diplomacy-media-2" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
+      <div class="chart-heading">Membership overlap — selected blocs (approximate % of world GDP)</div>
+      <svg class="groupings-chart" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
         <!-- GDP bars -->
         <!-- label column -->
         <text x="80" y="32" text-anchor="end" font-size="11" fill="var(--color-text-secondary)">G7</text>
@@ -363,7 +363,7 @@ const mod = modules.find((m) => m.id === 18)!;
         <line x1="360" y1="14" x2="360" y2="156" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="2,3"/>
         <text x="363" y="12" font-size="9" fill="var(--color-text-tertiary)">50%</text>
       </svg>
-      <div class="diplomacy-text-5">Share of global GDP (nominal, approximate). G20 includes EU as non-enumerated member.</div>
+      <div class="gdp-footnote">Share of global GDP (nominal, approximate). G20 includes EU as non-enumerated member.</div>
     </div>
 
     <!-- ════════════════════════════════════════════════════════
@@ -465,7 +465,7 @@ const mod = modules.find((m) => m.id === 18)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Every word in a communiqué is chosen deliberately</div>
-      <div class="diplomacy-text-6">Diplomatic documents have a precise internal hierarchy of language. The gap between "notes" and "strongly condemns" is enormous. This chart maps approximate signal strength.</div>
+      <div class="signal-ladder-intro">Diplomatic documents have a precise internal hierarchy of language. The gap between "notes" and "strongly condemns" is enormous. This chart maps approximate signal strength.</div>
 
       <div class="signal-wrap">
         <div class="signal-card">
@@ -495,7 +495,7 @@ const mod = modules.find((m) => m.id === 18)!;
         </div>
       </div>
 
-      <div class="diplomacy-panel-6">
+      <div class="reading-tips-note">
         <strong class="text-primary">What to notice in any diplomatic statement:</strong> What is absent is often as important as what is said. If a G20 communiqué discusses every major issue except Ukraine, the omission is itself news. Look for qualifiers ("most members," "some delegations") — they signal failed consensus. Look for passive voice ("violations were noted") vs active attribution ("Russia violated"). Active attribution is stronger and harder to agree.
       </div>
     </div>
@@ -507,21 +507,21 @@ const mod = modules.find((m) => m.id === 18)!;
 
     <div class="content-panel">
       <div class="inline-card-title">How states project influence</div>
-      <div class="diplomacy-text-7">Hover over each marker to see what kind of power it represents. The spectrum runs from direct coercion (hard) to indirect attraction (soft) — with "sharp power" (manipulation/subversion) as a separate dimension.</div>
+      <div class="spectrum-intro">Hover over each marker to see what kind of power it represents. The spectrum runs from direct coercion (hard) to indirect attraction (soft) — with "sharp power" (manipulation/subversion) as a separate dimension.</div>
 
       <div class="power-ends"><span>Hard Power — Force / Coercion</span><span>Soft Power — Attraction / Co-option</span></div>
       <div class="power-scale" id="powerScale">
         <div class="power-marker power-marker-style"  data-key="military" title="">✈</div>
-        <div class="power-marker power-marker-style-2" data-key="sanctions" title="">💰</div>
-        <div class="power-marker power-marker-style-3" data-key="aid"       title="">🤝</div>
-        <div class="power-marker power-marker-style-4" data-key="trade"     title="">📦</div>
-        <div class="power-marker power-marker-style-5" data-key="diploma"   title="">🏛</div>
-        <div class="power-marker power-marker-style-6" data-key="culture"   title="">🎬</div>
-        <div class="power-marker power-marker-style-7" data-key="values"    title="">📘</div>
+        <div class="power-marker power-marker-money" data-key="sanctions" title="">💰</div>
+        <div class="power-marker power-marker-handshake" data-key="aid"       title="">🤝</div>
+        <div class="power-marker power-marker-package" data-key="trade"     title="">📦</div>
+        <div class="power-marker power-marker-institution" data-key="diploma"   title="">🏛</div>
+        <div class="power-marker power-marker-film" data-key="culture"   title="">🎬</div>
+        <div class="power-marker power-marker-book" data-key="values"    title="">📘</div>
       </div>
       <div id="power-tooltip" class="power-tooltip"></div>
 
-      <div class="diplomacy-text-8">
+      <div class="sharp-power-note">
         <strong class="text-primary">Sharp power</strong> — a term coined in 2017 — sits outside the hard/soft spectrum. It describes the manipulation of information, media, and institutions by authoritarian states to distort rather than persuade: disinformation campaigns, funding foreign political parties, manipulating diaspora communities, infiltrating universities. China and Russia are the primary examples. Unlike soft power (which works by being genuinely attractive), sharp power works by corrupting the information environment in the target country.
       </div>
     </div>

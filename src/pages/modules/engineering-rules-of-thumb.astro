@@ -105,26 +105,26 @@ const mod = modules.find((m) => m.id === 16)!;
         </div>
         <div class="scale-row">
           <div class="scale-label">Buildings</div>
-          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-style-2"><span class="scale-bar-val text-green-800">×2–3</span></div></div>
+          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-buildings"><span class="scale-bar-val text-green-800">×2–3</span></div></div>
         </div>
         <div class="scale-row">
           <div class="scale-label">Bridges</div>
-          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-style-3"><span class="scale-bar-val text-amber-900">×4</span></div></div>
+          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-bridges"><span class="scale-bar-val text-amber-900">×4</span></div></div>
         </div>
         <div class="scale-row">
           <div class="scale-label">Pressure vessels</div>
-          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-style-4"><span class="scale-bar-val text-indigo-900">×4</span></div></div>
+          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-pressure-vessels"><span class="scale-bar-val text-indigo-900">×4</span></div></div>
         </div>
         <div class="scale-row">
           <div class="scale-label">Lifting chains</div>
-          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-style-5"><span class="scale-bar-val text-orange-900">×5</span></div></div>
+          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-lifting-chains"><span class="scale-bar-val text-orange-900">×5</span></div></div>
         </div>
         <div class="scale-row">
           <div class="scale-label">Elevators</div>
-          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-style-6"><span class="scale-bar-val text-red-900">×10</span></div></div>
+          <div class="scale-bar-outer"><div class="scale-bar-inner scale-bar-inner-max"><span class="scale-bar-val text-red-900">×10</span></div></div>
         </div>
       </div>
-      <div class="engineering-text-2">Higher = more consequence of failure and/or more uncertainty in loads. Aircraft keep the factor low because weight cost is so extreme.</div>
+      <div class="figure-caption">Higher = more consequence of failure and/or more uncertainty in loads. Aircraft keep the factor low because weight cost is so extreme.</div>
     </div>
 
     <div class="content-card">
@@ -173,13 +173,13 @@ const mod = modules.find((m) => m.id === 16)!;
     <div class="svg-wrap u-mb-md">
       <div class="panel-title">Tolerance vs cost — exponential relationship</div>
       <div class="engineering-spacing">
-        <div class="tol-row"><div class="tol-label">±1 mm</div><div class="tol-bar tol-bar-style"><span class="bv text-green-800">€5</span></div><div class="engineering-text-3">Manual lathe, rough cut</div></div>
-        <div class="tol-row"><div class="tol-label">±0.1 mm</div><div class="tol-bar tol-bar-style-2"><span class="bv text-blue-900">€50</span></div><div class="engineering-text-3">CNC mill, standard</div></div>
-        <div class="tol-row"><div class="tol-label">±0.01 mm</div><div class="tol-bar tol-bar-style-3"><span class="bv text-amber-900">€500</span></div><div class="engineering-text-3">Precision grinding, temp control</div></div>
-        <div class="tol-row"><div class="tol-label">±0.001 mm</div><div class="tol-bar tol-bar-style-4"><span class="bv text-orange-900">€5,000+</span></div><div class="engineering-text-3">Lapping, clean room, optical check</div></div>
-        <div class="tol-row"><div class="tol-label">±0.0001 mm</div><div class="tol-bar scale-bar-inner-style-6"><span class="bv text-red-900">€50,000+</span></div><div class="engineering-text-3">Semiconductor fab, interferometry</div></div>
+        <div class="tol-row"><div class="tol-label">±1 mm</div><div class="tol-bar tol-bar-style"><span class="bv text-green-800">€5</span></div><div class="tolerance-method">Manual lathe, rough cut</div></div>
+        <div class="tol-row"><div class="tol-label">±0.1 mm</div><div class="tol-bar tol-bar-cnc"><span class="bv text-blue-900">€50</span></div><div class="tolerance-method">CNC mill, standard</div></div>
+        <div class="tol-row"><div class="tol-label">±0.01 mm</div><div class="tol-bar tol-bar-grinding"><span class="bv text-amber-900">€500</span></div><div class="tolerance-method">Precision grinding, temp control</div></div>
+        <div class="tol-row"><div class="tol-label">±0.001 mm</div><div class="tol-bar tol-bar-lapping"><span class="bv text-orange-900">€5,000+</span></div><div class="tolerance-method">Lapping, clean room, optical check</div></div>
+        <div class="tol-row"><div class="tol-label">±0.0001 mm</div><div class="tol-bar scale-bar-inner-max"><span class="bv text-red-900">€50,000+</span></div><div class="tolerance-method">Semiconductor fab, interferometry</div></div>
       </div>
-      <div class="engineering-text-2">Each 10× tighter tolerance ≈ 10× higher cost. The question is always: does the function actually require this precision?</div>
+      <div class="figure-caption">Each 10× tighter tolerance ≈ 10× higher cost. The question is always: does the function actually require this precision?</div>
     </div>
 
     <div class="content-card">
@@ -352,29 +352,29 @@ const mod = modules.find((m) => m.id === 16)!;
 
     <div class="content-card">
       <div class="inline-card-title">Tensile strength — how hard you have to pull before it breaks</div>
-      <div class="engineering-text-4">MPa = megapascals = newtons per mm². A human hair: ~200 MPa. A car tyre bead: ~3,000 MPa.</div>
+      <div class="units-note">MPa = megapascals = newtons per mm². A human hair: ~200 MPa. A car tyre bead: ~3,000 MPa.</div>
       <div>
         <div class="mat-row"><div class="mat-label">Concrete (compression)</div><div class="mat-bar mat-bar-style"><span class="mat-val text-orange-900">30 MPa</span></div></div>
-        <div class="mat-row"><div class="mat-label">Timber (pine, along grain)</div><div class="mat-bar mat-bar-style-2"><span class="mat-val text-green-800">40 MPa</span></div></div>
-        <div class="mat-row"><div class="mat-label">Aluminium alloy (6061)</div><div class="mat-bar mat-bar-style-3"><span class="mat-val text-blue-900">276 MPa</span></div></div>
-        <div class="mat-row"><div class="mat-label">Structural steel (S275)</div><div class="mat-bar mat-bar-style-4"><span class="mat-val text-amber-900">275–430 MPa</span></div></div>
-        <div class="mat-row"><div class="mat-label">High-strength steel</div><div class="mat-bar mat-bar-style-5"><span class="mat-val text-indigo-900">500–700 MPa</span></div></div>
-        <div class="mat-row"><div class="mat-label">Titanium alloy (Ti-6Al-4V)</div><div class="mat-bar mat-bar-style-6"><span class="mat-val text-orange-900">900 MPa</span></div></div>
-        <div class="mat-row"><div class="mat-label">Carbon fibre composite</div><div class="mat-bar scale-bar-inner-style-6"><span class="mat-val text-red-900">~3,500 MPa</span></div></div>
+        <div class="mat-row"><div class="mat-label">Timber (pine, along grain)</div><div class="mat-bar mat-bar-timber"><span class="mat-val text-green-800">40 MPa</span></div></div>
+        <div class="mat-row"><div class="mat-label">Aluminium alloy (6061)</div><div class="mat-bar mat-bar-aluminium-strength"><span class="mat-val text-blue-900">276 MPa</span></div></div>
+        <div class="mat-row"><div class="mat-label">Structural steel (S275)</div><div class="mat-bar mat-bar-structural-steel"><span class="mat-val text-amber-900">275–430 MPa</span></div></div>
+        <div class="mat-row"><div class="mat-label">High-strength steel</div><div class="mat-bar mat-bar-high-strength-steel"><span class="mat-val text-indigo-900">500–700 MPa</span></div></div>
+        <div class="mat-row"><div class="mat-label">Titanium alloy (Ti-6Al-4V)</div><div class="mat-bar mat-bar-titanium"><span class="mat-val text-orange-900">900 MPa</span></div></div>
+        <div class="mat-row"><div class="mat-label">Carbon fibre composite</div><div class="mat-bar scale-bar-inner-max"><span class="mat-val text-red-900">~3,500 MPa</span></div></div>
       </div>
-      <div class="engineering-text-5">Carbon fibre is ~8× stronger than structural steel in tension — but costs ~100× more and is brittle. Steel yields (bends) before breaking — a crucial safety warning. Carbon fibre snaps without warning.</div>
+      <div class="comparison-note">Carbon fibre is ~8× stronger than structural steel in tension — but costs ~100× more and is brittle. Steel yields (bends) before breaking — a crucial safety warning. Carbon fibre snaps without warning.</div>
     </div>
 
     <div class="content-card">
       <div class="inline-card-title">Strength-to-weight ratio — the aerospace engineer's obsession</div>
-      <div class="engineering-text-4">Specific strength = tensile strength ÷ density (kN·m/kg). The higher, the better for weight-critical applications.</div>
+      <div class="units-note">Specific strength = tensile strength ÷ density (kN·m/kg). The higher, the better for weight-critical applications.</div>
       <div>
-        <div class="mat-row"><div class="mat-label">Structural steel</div><div class="mat-bar mat-bar-style-7"><span class="mat-val text-amber-900">~63 kN·m/kg</span></div></div>
-        <div class="mat-row"><div class="mat-label">Titanium alloy</div><div class="mat-bar mat-bar-style-8"><span class="mat-val text-orange-900">~200 kN·m/kg</span></div></div>
-        <div class="mat-row"><div class="mat-label">Aluminium 7075</div><div class="mat-bar mat-bar-style-9"><span class="mat-val text-blue-900">~214 kN·m/kg</span></div></div>
-        <div class="mat-row"><div class="mat-label">Carbon fibre (CFRP)</div><div class="mat-bar scale-bar-inner-style-6"><span class="mat-val text-red-900">~2,000 kN·m/kg</span></div></div>
+        <div class="mat-row"><div class="mat-label">Structural steel</div><div class="mat-bar mat-bar-steel-specific"><span class="mat-val text-amber-900">~63 kN·m/kg</span></div></div>
+        <div class="mat-row"><div class="mat-label">Titanium alloy</div><div class="mat-bar mat-bar-titanium-specific"><span class="mat-val text-orange-900">~200 kN·m/kg</span></div></div>
+        <div class="mat-row"><div class="mat-label">Aluminium 7075</div><div class="mat-bar mat-bar-aluminium-specific"><span class="mat-val text-blue-900">~214 kN·m/kg</span></div></div>
+        <div class="mat-row"><div class="mat-label">Carbon fibre (CFRP)</div><div class="mat-bar scale-bar-inner-max"><span class="mat-val text-red-900">~2,000 kN·m/kg</span></div></div>
       </div>
-      <div class="engineering-text-5">Carbon fibre is ~32× stronger per kilogram than steel. This is why it dominates aircraft, F1 cars, and bicycles — despite the cost.</div>
+      <div class="comparison-note">Carbon fibre is ~32× stronger per kilogram than steel. This is why it dominates aircraft, F1 cars, and bicycles — despite the cost.</div>
     </div>
 
     <div class="concept-grid">
@@ -407,20 +407,20 @@ const mod = modules.find((m) => m.id === 16)!;
 
     <div class="content-panel">
       <div class="panel-title">Series vs parallel reliability — adjust the sliders</div>
-      <div class="engineering-grid-2">
+      <div class="reliability-inputs">
         <div>
-          <label class="engineering-text-6">Component reliability: <strong id="rel-comp-val">99%</strong></label>
+          <label class="reliability-label">Component reliability: <strong id="rel-comp-val">99%</strong></label>
           <input type="range" id="rel-comp" min="50" max="99.9" step="0.1" value="99" oninput="updateRel()">
         </div>
         <div>
-          <label class="engineering-text-6">Number of components: <strong id="rel-n-val">3</strong></label>
+          <label class="reliability-label">Number of components: <strong id="rel-n-val">3</strong></label>
           <input type="range" id="rel-n" min="1" max="10" step="1" value="3" oninput="updateRel()">
         </div>
       </div>
       <div id="rel-result" class="rel-display"></div>
       <!-- SVG for series vs parallel diagram -->
       <svg class="rel-svg" id="rel-svg" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg"></svg>
-      <div class="engineering-text-2">Series: all must work. Parallel: only one needs to work. Real systems mix both.</div>
+      <div class="figure-caption">Series: all must work. Parallel: only one needs to work. Real systems mix both.</div>
     </div>
 
     <!-- ============================================================
@@ -428,7 +428,7 @@ const mod = modules.find((m) => m.id === 16)!;
          ============================================================ -->
     <h2 class="sec" id="part-h-famous-engineering-failures-and-what-they-taught">Part H · famous engineering failures and what they taught</h2>
 
-    <div class="engineering-grid-3">
+    <div class="failure-card-grid">
       <div class="card">
         <p class="clabel">Tacoma Narrows Bridge (1940)</p>
         <p class="cval">Resonance ignored</p>
@@ -503,7 +503,7 @@ const mod = modules.find((m) => m.id === 16)!;
         <rect x="210" y="164" width="12" height="12" rx="2" fill="#b8a6f0" opacity="0.85"/>
         <text x="228" y="175" font-size="12" fill="var(--color-text-primary)">External / design basis exceeded</text>
       </svg>
-      <div class="engineering-text-7">The dominant cause is human and organisational — not physics. This is why engineering safety culture, review processes, and whistle-blower protection matter as much as calculations.</div>
+      <div class="failure-cause-note">The dominant cause is human and organisational — not physics. This is why engineering safety culture, review processes, and whistle-blower protection matter as much as calculations.</div>
     </div>
 
     <!-- ============================================================
@@ -513,7 +513,7 @@ const mod = modules.find((m) => m.id === 16)!;
 
     <div class="content-panel">
       <div class="inline-card-title">The method: break any big number into knowable pieces</div>
-      <div class="engineering-panel-4">
+      <div class="fermi-steps">
         <strong class="text-primary">Step 1:</strong> Identify what you know. &nbsp;
         <strong class="text-primary">Step 2:</strong> Break the unknown into knowable pieces. &nbsp;
         <strong class="text-primary">Step 3:</strong> Estimate each piece with round numbers. &nbsp;

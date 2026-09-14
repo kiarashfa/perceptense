@@ -25,32 +25,32 @@ const mod = modules.find((m) => m.id === 14)!;
     <div class="parta-grid">
       <div class="content-card-static">
         <div class="compact-card-title">Strength</div>
-        <div class="materials-text-2">How much force before it permanently deforms or breaks. Measured in megapascals (MPa) — force per area.</div>
-        <div class="materials-row-2">
-          <div class="materials-row-3"><span class="text-secondary">Rubber</span><span class="materials-span-style-2">~10 MPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Concrete (compression)</span><span class="materials-span-style-3">~30 MPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Aluminium alloy</span><span class="materials-span-style-4">~270 MPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Structural steel</span><span class="materials-span-style-5">~400 MPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Carbon fibre composite</span><span class="materials-span-style-6">~1,500 MPa</span></div>
+        <div class="property-desc">How much force before it permanently deforms or breaks. Measured in megapascals (MPa) — force per area.</div>
+        <div class="property-list">
+          <div class="property-item"><span class="text-secondary">Rubber</span><span class="property-value-green">~10 MPa</span></div>
+          <div class="property-item"><span class="text-secondary">Concrete (compression)</span><span class="property-value-amber">~30 MPa</span></div>
+          <div class="property-item"><span class="text-secondary">Aluminium alloy</span><span class="property-value-blue">~270 MPa</span></div>
+          <div class="property-item"><span class="text-secondary">Structural steel</span><span class="property-value-indigo">~400 MPa</span></div>
+          <div class="property-item"><span class="text-secondary">Carbon fibre composite</span><span class="property-value-red">~1,500 MPa</span></div>
         </div>
       </div>
 
       <div class="content-card-static">
         <div class="compact-card-title">Stiffness (Young's modulus)</div>
-        <div class="materials-text-2">How much it resists being stretched or compressed. A stiff material bends little under load. Measured in GPa.</div>
-        <div class="materials-row-2">
-          <div class="materials-row-3"><span class="text-secondary">Rubber</span><span class="materials-span-style-2">~0.01 GPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Wood (along grain)</span><span class="materials-span-style-3">~10 GPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Concrete</span><span class="materials-span-style-7">~30 GPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Aluminium</span><span class="materials-span-style-4">~69 GPa</span></div>
-          <div class="materials-row-3"><span class="text-secondary">Steel</span><span class="materials-span-style-5">~200 GPa</span></div>
+        <div class="property-desc">How much it resists being stretched or compressed. A stiff material bends little under load. Measured in GPa.</div>
+        <div class="property-list">
+          <div class="property-item"><span class="text-secondary">Rubber</span><span class="property-value-green">~0.01 GPa</span></div>
+          <div class="property-item"><span class="text-secondary">Wood (along grain)</span><span class="property-value-amber">~10 GPa</span></div>
+          <div class="property-item"><span class="text-secondary">Concrete</span><span class="property-value-brown">~30 GPa</span></div>
+          <div class="property-item"><span class="text-secondary">Aluminium</span><span class="property-value-blue">~69 GPa</span></div>
+          <div class="property-item"><span class="text-secondary">Steel</span><span class="property-value-indigo">~200 GPa</span></div>
         </div>
       </div>
 
       <div class="content-card-static">
         <div class="compact-card-title">Toughness vs brittleness</div>
-        <div class="materials-text-2">Tough = absorbs energy before fracture (steel, rubber). Brittle = breaks suddenly with little warning (glass, ceramic, cast iron).</div>
-        <div class="materials-panel-2">
+        <div class="property-desc">Tough = absorbs energy before fracture (steel, rubber). Brittle = breaks suddenly with little warning (glass, ceramic, cast iron).</div>
+        <div class="strength-insight">
           <strong class="text-primary">Key insight:</strong> High strength ≠ tough. Diamond is the hardest known natural material but extremely brittle — hit it with a hammer and it shatters. Steel is less hard but far tougher.
         </div>
       </div>
@@ -221,16 +221,16 @@ const mod = modules.find((m) => m.id === 14)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Specific strength (kN·m/kg) — how strong per kilogram</div>
-      <div class="materials-text-3">This is what engineers care about for vehicles and aircraft — not absolute strength, but strength per unit weight.</div>
+      <div class="chart-intro">This is what engineers care about for vehicles and aircraft — not absolute strength, but strength per unit weight.</div>
       <div class="bar-row"><span class="bl">Carbon fibre composite</span><div class="bb bb-style"><span class="bv text-white">~938 kN·m/kg — best practical structural material</span></div></div>
-      <div class="bar-row"><span class="bl">Spider silk</span><div class="bb bb-style-2"><span class="bv text-white">~800 kN·m/kg — extraordinary</span></div></div>
-      <div class="bar-row"><span class="bl">Titanium alloy</span><div class="bb bb-style-3"><span class="bv text-amber-950">~500 kN·m/kg</span></div></div>
-      <div class="bar-row"><span class="bl">Aluminium alloy</span><div class="bb bb-style-4"><span class="bv text-green-950">~290 kN·m/kg</span></div></div>
-      <div class="bar-row"><span class="bl">High-strength steel</span><div class="bb bb-style-5"><span class="bv text-white">~180 kN·m/kg</span></div></div>
-      <div class="bar-row"><span class="bl">Structural steel</span><div class="bb bb-style-6"><span class="bv text-green-950">~50 kN·m/kg</span></div></div>
-      <div class="bar-row"><span class="bl">Wood (oak, along grain)</span><div class="bb bb-style-7"><span class="bv text-green-800">~40 kN·m/kg</span></div></div>
-      <div class="bar-row"><span class="bl">Concrete</span><div class="bb bb-style-8"><span class="bv bv-style-5">~10 kN·m/kg</span></div></div>
-      <p class="materials-text-4">Spider silk rivals carbon fibre per gram — the challenge is producing it at scale. Spiders are territorial and cannibalistic, making farming impossible. Researchers are using genetically modified bacteria and silkworms to synthesise silk proteins.</p>
+      <div class="bar-row"><span class="bl">Spider silk</span><div class="bb bb-spider-silk"><span class="bv text-white">~800 kN·m/kg — extraordinary</span></div></div>
+      <div class="bar-row"><span class="bl">Titanium alloy</span><div class="bb bb-titanium"><span class="bv text-amber-950">~500 kN·m/kg</span></div></div>
+      <div class="bar-row"><span class="bl">Aluminium alloy</span><div class="bb bb-aluminium"><span class="bv text-green-950">~290 kN·m/kg</span></div></div>
+      <div class="bar-row"><span class="bl">High-strength steel</span><div class="bb bb-high-strength-steel"><span class="bv text-white">~180 kN·m/kg</span></div></div>
+      <div class="bar-row"><span class="bl">Structural steel</span><div class="bb bb-structural-steel"><span class="bv text-green-950">~50 kN·m/kg</span></div></div>
+      <div class="bar-row"><span class="bl">Wood (oak, along grain)</span><div class="bb bb-oak"><span class="bv text-green-800">~40 kN·m/kg</span></div></div>
+      <div class="bar-row"><span class="bl">Concrete</span><div class="bb bb-concrete"><span class="bv bv-concrete">~10 kN·m/kg</span></div></div>
+      <p class="silk-note">Spider silk rivals carbon fibre per gram — the challenge is producing it at scale. Spiders are territorial and cannibalistic, making farming impossible. Researchers are using genetically modified bacteria and silkworms to synthesise silk proteins.</p>
     </div>
 
     <!-- Material property radar diagram -->
@@ -245,7 +245,7 @@ const mod = modules.find((m) => m.id === 14)!;
         <button onclick="drawRadar('wood')"     class="radar-btn" data-mat="wood">Wood</button>
         <button onclick="drawRadar('glass')"    class="radar-btn" data-mat="glass">Glass</button>
       </div>
-      <div class="materials-row-4">
+      <div class="radar-layout">
         <svg class="radarsvg" id="radarSvg" viewBox="0 0 260 240" xmlns="http://www.w3.org/2000/svg">
           <!-- drawn by JS -->
         </svg>
@@ -380,17 +380,17 @@ const mod = modules.find((m) => m.id === 14)!;
 
     <!-- CTE comparison visual -->
     <div class="content-card">
-      <div class="materials-label-2">Coefficients of thermal expansion (×10⁻⁶ per °C)</div>
+      <div class="expansion-chart-title">Coefficients of thermal expansion (×10⁻⁶ per °C)</div>
       <div class="compare-row"><span class="compare-label">PTFE (Teflon)</span><div class="compare-track"><div class="compare-fill bb-style"></div></div><span class="compare-val text-red-700">135 ×10⁻⁶</span></div>
       <div class="compare-row"><span class="compare-label">PVC plastic</span><div class="compare-track"><div class="compare-fill compare-fill-style"></div></div><span class="compare-val text-orange-600">80 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Aluminium</span><div class="compare-track"><div class="compare-fill compare-fill-style-2"></div></div><span class="compare-val text-amber-700">23 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Copper</span><div class="compare-track"><div class="compare-fill compare-fill-style-3"></div></div><span class="compare-val text-green-900">17 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Steel</span><div class="compare-track"><div class="compare-fill compare-fill-style-4"></div></div><span class="compare-val text-indigo-700">12 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Concrete</span><div class="compare-track"><div class="compare-fill compare-fill-style-5"></div></div><span class="compare-val text-indigo-700">10–12 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Glass (soda-lime)</span><div class="compare-track"><div class="compare-fill compare-fill-style-6"></div></div><span class="compare-val text-green-900">9 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Carbon fibre (along fibre)</span><div class="compare-track"><div class="compare-fill compare-fill-style-7"></div></div><span class="compare-val text-green-800">~1 ×10⁻⁶</span></div>
-      <div class="compare-row"><span class="compare-label">Invar (Fe–Ni alloy)</span><div class="compare-track"><div class="compare-fill compare-fill-style-8"></div></div><span class="compare-val text-blue-900">~1.5 ×10⁻⁶</span></div>
-      <p class="materials-text-5">Invar (iron–nickel alloy) was engineered specifically to have near-zero thermal expansion — it's used in precision instruments, laser mirrors, and telescope frames where dimensional stability matters more than almost anything else. Carbon fibre's near-zero CTE along the fibre is one of the reasons it's used in spacecraft and satellite structures exposed to extreme temperature swings.</p>
+      <div class="compare-row"><span class="compare-label">Aluminium</span><div class="compare-track"><div class="compare-fill compare-fill-aluminium"></div></div><span class="compare-val text-amber-700">23 ×10⁻⁶</span></div>
+      <div class="compare-row"><span class="compare-label">Copper</span><div class="compare-track"><div class="compare-fill compare-fill-copper"></div></div><span class="compare-val text-green-900">17 ×10⁻⁶</span></div>
+      <div class="compare-row"><span class="compare-label">Steel</span><div class="compare-track"><div class="compare-fill compare-fill-steel"></div></div><span class="compare-val text-indigo-700">12 ×10⁻⁶</span></div>
+      <div class="compare-row"><span class="compare-label">Concrete</span><div class="compare-track"><div class="compare-fill compare-fill-concrete"></div></div><span class="compare-val text-indigo-700">10–12 ×10⁻⁶</span></div>
+      <div class="compare-row"><span class="compare-label">Glass (soda-lime)</span><div class="compare-track"><div class="compare-fill compare-fill-glass"></div></div><span class="compare-val text-green-900">9 ×10⁻⁶</span></div>
+      <div class="compare-row"><span class="compare-label">Carbon fibre (along fibre)</span><div class="compare-track"><div class="compare-fill compare-fill-carbon-fibre"></div></div><span class="compare-val text-green-800">~1 ×10⁻⁶</span></div>
+      <div class="compare-row"><span class="compare-label">Invar (Fe–Ni alloy)</span><div class="compare-track"><div class="compare-fill compare-fill-invar"></div></div><span class="compare-val text-blue-900">~1.5 ×10⁻⁶</span></div>
+      <p class="invar-note">Invar (iron–nickel alloy) was engineered specifically to have near-zero thermal expansion — it's used in precision instruments, laser mirrors, and telescope frames where dimensional stability matters more than almost anything else. Carbon fibre's near-zero CTE along the fibre is one of the reasons it's used in spacecraft and satellite structures exposed to extreme temperature swings.</p>
     </div>
 
     <!-- Interactive calculator -->
@@ -418,7 +418,7 @@ const mod = modules.find((m) => m.id === 14)!;
           <div class="calc-label">Temperature change (°C)</div>
           <input class="calcmat" type="number" id="calcDelta" value="40" step="1" oninput="calcExpansion()">
         </div>
-        <div class="materials-row-5">
+        <div class="calc-button-cell">
           <button class="calcexpansion-control" onclick="calcExpansion()">Calculate</button>
         </div>
       </div>
@@ -433,13 +433,13 @@ const mod = modules.find((m) => m.id === 14)!;
          ========================================================= -->
     <h2 class="sec" id="part-g-atomic-bonds-why-materials-behave-as-they-do">Part G · atomic bonds — why materials behave as they do</h2>
 
-    <div class="materials-text-6">Everything we've discussed traces back to how atoms are held together. The type of bond determines whether a material is stiff or flexible, conducts electricity, melts at a high or low temperature, and whether it is ductile or brittle.</div>
+    <div class="bonds-intro">Everything we've discussed traces back to how atoms are held together. The type of bond determines whether a material is stiff or flexible, conducts electricity, melts at a high or low temperature, and whether it is ductile or brittle.</div>
 
     <div class="bond-grid">
       <div class="content-card-static">
         <div class="compact-card-title">Metallic bonds</div>
         <!-- SVG: metal bond -->
-        <svg class="materials-media-2" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+        <svg class="bond-diagram" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
           <!-- electron sea (wavy background) -->
           <rect x="0" y="10" width="140" height="40" rx="4" fill="var(--color-background-secondary)"/>
           <text x="70" y="48" text-anchor="middle" font-size="8" fill="var(--color-text-tertiary)">delocalised electron sea</text>
@@ -453,12 +453,12 @@ const mod = modules.find((m) => m.id === 14)!;
           <circle cx="65" cy="36" r="3" fill="#EF9F27"/><text x="65" y="34" text-anchor="middle" font-size="7" fill="#EF9F27">e⁻</text>
           <circle cx="95" cy="20" r="3" fill="#EF9F27"/><text x="95" y="18" text-anchor="middle" font-size="7" fill="#EF9F27">e⁻</text>
         </svg>
-        <div class="materials-text-7"><strong class="text-primary">Examples:</strong> Steel, aluminium, copper, gold<br><strong class="text-primary">Why ductile:</strong> Atoms can slide past each other while electrons move freely — the bond doesn't "snap." This is why metals can be bent without breaking.<br><strong class="text-primary">Why conduct electricity:</strong> The free electrons carry charge.</div>
+        <div class="bond-desc"><strong class="text-primary">Examples:</strong> Steel, aluminium, copper, gold<br><strong class="text-primary">Why ductile:</strong> Atoms can slide past each other while electrons move freely — the bond doesn't "snap." This is why metals can be bent without breaking.<br><strong class="text-primary">Why conduct electricity:</strong> The free electrons carry charge.</div>
       </div>
 
       <div class="content-card-static">
         <div class="compact-card-title">Covalent bonds</div>
-        <svg class="materials-media-2" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+        <svg class="bond-diagram" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
           <rect x="0" y="8" width="140" height="44" rx="4" fill="var(--color-background-secondary)"/>
           <!-- Diamond lattice hint: 4 atoms with shared electron pairs -->
           <circle cx="30" cy="30" r="11" fill="#085041" opacity="0.8"/><text x="30" y="34" text-anchor="middle" font-size="9" fill="#fff">C</text>
@@ -476,12 +476,12 @@ const mod = modules.find((m) => m.id === 14)!;
           <circle cx="90" cy="24" r="2.5" fill="#EF9F27"/>
           <circle cx="90" cy="36" r="2.5" fill="#EF9F27"/>
         </svg>
-        <div class="materials-text-7"><strong class="text-primary">Examples:</strong> Diamond, silicon, glass, carbon fibre<br><strong class="text-primary">Why brittle/hard:</strong> Electrons are locked between specific atom pairs. Atoms cannot slide — the bond either holds or snaps suddenly. Hence diamond's hardness and brittleness.<br><strong class="text-primary">Why insulate:</strong> No free electrons to carry charge.</div>
+        <div class="bond-desc"><strong class="text-primary">Examples:</strong> Diamond, silicon, glass, carbon fibre<br><strong class="text-primary">Why brittle/hard:</strong> Electrons are locked between specific atom pairs. Atoms cannot slide — the bond either holds or snaps suddenly. Hence diamond's hardness and brittleness.<br><strong class="text-primary">Why insulate:</strong> No free electrons to carry charge.</div>
       </div>
 
       <div class="content-card-static">
         <div class="compact-card-title">Ionic &amp; Van der Waals</div>
-        <svg class="materials-media-2" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
+        <svg class="bond-diagram" viewBox="0 0 140 60" xmlns="http://www.w3.org/2000/svg">
           <rect x="0" y="8" width="140" height="44" rx="4" fill="var(--color-background-secondary)"/>
           <!-- alternating ions (like NaCl) -->
           <circle cx="25" cy="30" r="11" fill="#185FA5" opacity="0.8"/><text x="25" y="34" text-anchor="middle" font-size="9" fill="#fff">Na⁺</text>
@@ -495,7 +495,7 @@ const mod = modules.find((m) => m.id === 14)!;
           <line x1="84" y1="30" x2="89" y2="30" stroke="#EF9F27" stroke-width="1.5"/>
           <line x1="107" y1="30" x2="109" y2="30" stroke="#EF9F27" stroke-width="1.5"/>
         </svg>
-        <div class="materials-text-7"><strong class="text-primary">Ionic:</strong> Ceramics, concrete, salt. Hard and brittle — bonds are directional and strong, but slip causes charge misalignment and catastrophic fracture.<br><strong class="text-primary">Van der Waals:</strong> Polymers — weak attractive forces between polymer chains. This is why plastics are relatively soft and can be shaped by heat.</div>
+        <div class="bond-desc"><strong class="text-primary">Ionic:</strong> Ceramics, concrete, salt. Hard and brittle — bonds are directional and strong, but slip causes charge misalignment and catastrophic fracture.<br><strong class="text-primary">Van der Waals:</strong> Polymers — weak attractive forces between polymer chains. This is why plastics are relatively soft and can be shaped by heat.</div>
       </div>
     </div>
 
@@ -506,7 +506,7 @@ const mod = modules.find((m) => m.id === 14)!;
 
     <div class="content-card">
       <div class="inline-card-title">Embodied carbon — CO₂ emitted to produce 1 kg of material</div>
-      <div class="materials-text-3">This is before the material does any work — just the extraction, processing, and manufacturing phase.</div>
+      <div class="chart-intro">This is before the material does any work — just the extraction, processing, and manufacturing phase.</div>
 
       <div class="sustain-row">
         <span class="sustain-name">Carbon fibre</span>
@@ -520,37 +520,37 @@ const mod = modules.find((m) => m.id === 14)!;
       </div>
       <div class="sustain-row">
         <span class="sustain-name">Primary steel (BF-BOF)</span>
-        <div class="sustain-track"><div class="sustain-fill sustain-fill-style-2"></div></div>
-        <span class="sustain-val text-amber-700">~18 kg CO₂/kg <span class="materials-text-8">(but very cheap)</span></span>
+        <div class="sustain-track"><div class="sustain-fill sustain-fill-primary-steel"></div></div>
+        <span class="sustain-val text-amber-700">~18 kg CO₂/kg <span class="value-aside">(but very cheap)</span></span>
       </div>
       <div class="sustain-row">
         <span class="sustain-name">Recycled steel</span>
-        <div class="sustain-track"><div class="sustain-fill sustain-fill-style-3"></div></div>
+        <div class="sustain-track"><div class="sustain-fill sustain-fill-recycled-steel"></div></div>
         <span class="sustain-val text-teal-700">~1.8 kg CO₂/kg</span>
       </div>
       <div class="sustain-row">
         <span class="sustain-name">Recycled aluminium</span>
-        <div class="sustain-track"><div class="sustain-fill sustain-fill-style-4"></div></div>
+        <div class="sustain-track"><div class="sustain-fill sustain-fill-recycled-aluminium"></div></div>
         <span class="sustain-val text-green-900">~0.8 kg CO₂/kg</span>
       </div>
       <div class="sustain-row">
         <span class="sustain-name">Concrete</span>
-        <div class="sustain-track"><div class="sustain-fill sustain-fill-style-5"></div></div>
+        <div class="sustain-track"><div class="sustain-fill sustain-fill-concrete"></div></div>
         <span class="sustain-val text-green-900">~0.8 kg CO₂/kg</span>
       </div>
       <div class="sustain-row">
         <span class="sustain-name">Structural timber</span>
-        <div class="sustain-track"><div class="sustain-fill sustain-fill-style-6"></div></div>
+        <div class="sustain-track"><div class="sustain-fill sustain-fill-timber"></div></div>
         <span class="sustain-val text-green-800">~0.3 kg CO₂/kg</span>
       </div>
-      <p class="materials-text-9"><strong class="text-primary">Important nuance:</strong> Timber is often carbon-negative when accounting for the CO₂ stored in the wood. Concrete is cheap per kg but the world uses so much (~4 billion tonnes/year) that it accounts for ~8% of global CO₂ emissions — more than aviation. Recycling makes an enormous difference: recycled aluminium costs only ~5% of the energy of primary production.</p>
+      <p class="timber-nuance"><strong class="text-primary">Important nuance:</strong> Timber is often carbon-negative when accounting for the CO₂ stored in the wood. Concrete is cheap per kg but the world uses so much (~4 billion tonnes/year) that it accounts for ~8% of global CO₂ emissions — more than aviation. Recycling makes an enormous difference: recycled aluminium costs only ~5% of the energy of primary production.</p>
     </div>
 
     <!-- Plastic recycling donut -->
     <div class="content-panel">
       <div class="panel-title">What happens to plastic ever produced (Geyer et al., 2017)</div>
       <div class="donut-wrap">
-        <svg class="materials-media-3" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <svg class="plastics-donut" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
           <!-- Donut chart: 91% never recycled, 6% recycled, 3% other -->
           <!-- Total circle, draw arcs -->
           <!-- 91% landfill/environment: 327.6° from 0° -->
@@ -566,9 +566,9 @@ const mod = modules.find((m) => m.id === 14)!;
         </svg>
         <div class="donut-legend">
           <div><span class="legend-dot bg-red-700"></span> <strong>91%</strong> — landfill, environment, or still in use</div>
-          <div><span class="legend-dot legend-dot-style-2"></span> <strong>6%</strong> — recycled (often only once)</div>
+          <div><span class="legend-dot legend-dot-recycled"></span> <strong>6%</strong> — recycled (often only once)</div>
           <div><span class="legend-dot bg-amber-500"></span> <strong>3%</strong> — incinerated</div>
-          <div class="materials-text-10">Of all plastic ever produced as of 2015 (~8.3 billion tonnes), only ~9% had been recycled. The fraction has not improved dramatically since. The main barrier is not technology — it's economics: virgin plastic is often cheaper than recycled plastic.</div>
+          <div class="plastics-caption">Of all plastic ever produced as of 2015 (~8.3 billion tonnes), only ~9% had been recycled. The fraction has not improved dramatically since. The main barrier is not technology — it's economics: virgin plastic is often cheaper than recycled plastic.</div>
         </div>
       </div>
     </div>
@@ -580,7 +580,7 @@ const mod = modules.find((m) => m.id === 14)!;
 
     <div class="content-panel">
       <div class="panel-title">Compare two materials head-to-head</div>
-      <div class="materials-grid-2">
+      <div class="comparator-selects">
         <div>
           <div class="calc-label">Material A</div>
           <select class="calcmat" id="matA" onchange="updateComparator()">

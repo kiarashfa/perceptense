@@ -120,25 +120,25 @@ const mod = modules.find((m) => m.id === 19)!;
           <div class="ds-name text-white">Blue</div>
           <div class="ds-temp ds-temp-style">46–49°C</div>
         </div>
-        <div class="doneness-swatch showdoneness-control-2" onclick="showDoneness(1,this)">
+        <div class="doneness-swatch doneness-swatch-rare" onclick="showDoneness(1,this)">
           <div class="ds-name text-white">Rare</div>
           <div class="ds-temp ds-temp-style">50–52°C</div>
         </div>
-        <div class="doneness-swatch showdoneness-control-3" onclick="showDoneness(2,this)">
+        <div class="doneness-swatch doneness-swatch-medium-rare" onclick="showDoneness(2,this)">
           <div class="ds-name text-white">Med-Rare</div>
           <div class="ds-temp ds-temp-style">55–57°C</div>
         </div>
-        <div class="doneness-swatch showdoneness-control-4" onclick="showDoneness(3,this)">
+        <div class="doneness-swatch doneness-swatch-medium" onclick="showDoneness(3,this)">
           <div class="ds-name text-white">Medium</div>
           <div class="ds-temp ds-temp-style">60–63°C</div>
         </div>
-        <div class="doneness-swatch showdoneness-control-5" onclick="showDoneness(4,this)">
+        <div class="doneness-swatch doneness-swatch-medium-well" onclick="showDoneness(4,this)">
           <div class="ds-name text-white">Med-Well</div>
           <div class="ds-temp ds-temp-style">65–69°C</div>
         </div>
-        <div class="doneness-swatch showdoneness-control-6" onclick="showDoneness(5,this)">
+        <div class="doneness-swatch doneness-swatch-well-done" onclick="showDoneness(5,this)">
           <div class="ds-name text-white">Well Done</div>
-          <div class="ds-temp ds-temp-style-2">71°C+</div>
+          <div class="ds-temp ds-temp-light">71°C+</div>
         </div>
       </div>
       <div id="doneness-detail"></div>
@@ -296,7 +296,7 @@ const mod = modules.find((m) => m.id === 19)!;
       </div>
     </div>
 
-    <div class="culinary-panel-2">
+    <div class="thickness-rule">
       <div class="compact-card-title">The thickness rule — works for grilling any meat</div>
       <div class="muted-copy-large">
         For every 1 cm of thickness, allow roughly 2–3 minutes per side on medium-high heat. A 2 cm chicken breast = 4–6 min per side. A 3 cm steak = 6–9 min per side for medium. This is a rough guide — always verify with a thermometer or the finger-press test.
@@ -308,12 +308,12 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-c-the-5-french-mother-sauces-the-foundation-of-classical-cooking">Part C · the 5 French mother sauces — the foundation of classical cooking</h2>
 
-    <div class="culinary-panel-3">
+    <div class="context-note">
       Codified by Auguste Escoffier in the early 20th century (building on Marie-Antoine Carême's earlier work). Every classical French sauce derives from one of these five bases. Master these and you can make thousands of sauces.
     </div>
 
     <!-- Sauce family tree -->
-    <div class="culinary-text-3">
+    <div class="family-tree-heading">
       FRENCH MOTHER SAUCE FAMILY TREE
     </div>
     
@@ -443,7 +443,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-d-global-sauce-foundations-beyond-france">Part D · global sauce foundations — beyond France</h2>
 
-    <div class="culinary-grid-2">
+    <div class="card-grid-wide">
       <div class="card">
         <p class="clabel">Sofrito (Spain, Latin America)</p>
         <p class="cval">The Mediterranean base</p>
@@ -501,50 +501,50 @@ const mod = modules.find((m) => m.id === 19)!;
 
     <div class="content-panel">
       <div class="panel-title">Cutlery positions — universally understood by trained restaurant staff</div>
-      <div class="culinary-grid-3">
-        <div class="culinary-panel-4">
-          <div class="culinary-label-2">Still eating / resting</div>
-          <div class="culinary-text-4">Fork and knife placed in an inverted V on the plate (continental) — knife on the right, fork on the left, tips crossing at top. Signals "I am still eating, please don't clear my plate."</div>
+      <div class="cutlery-signal-grid">
+        <div class="signal-panel-resting">
+          <div class="signal-title-resting">Still eating / resting</div>
+          <div class="signal-desc-resting">Fork and knife placed in an inverted V on the plate (continental) — knife on the right, fork on the left, tips crossing at top. Signals "I am still eating, please don't clear my plate."</div>
         </div>
-        <div class="culinary-panel-5">
-          <div class="culinary-label-3">Finished</div>
-          <div class="culinary-text-5">Fork and knife placed parallel on the plate at the 4 o'clock position (5:20 on a clock face), both pointing to top right, fork tines down. Signals "I am finished, you may clear." Most unambiguous signal.</div>
+        <div class="signal-panel-finished">
+          <div class="signal-title-finished">Finished</div>
+          <div class="signal-desc-finished">Fork and knife placed parallel on the plate at the 4 o'clock position (5:20 on a clock face), both pointing to top right, fork tines down. Signals "I am finished, you may clear." Most unambiguous signal.</div>
         </div>
-        <div class="culinary-panel-6">
-          <div class="culinary-label-4">I didn't like it (formal signal)</div>
-          <div class="culinary-text-6">Fork and knife crossed on the plate — fork over knife, X shape. In classical European service this signals displeasure or that the dish was not enjoyed. Not universally known; staff in top restaurants will notice.</div>
+        <div class="signal-panel-disliked">
+          <div class="signal-title-disliked">I didn't like it (formal signal)</div>
+          <div class="signal-desc-disliked">Fork and knife crossed on the plate — fork over knife, X shape. In classical European service this signals displeasure or that the dish was not enjoyed. Not universally known; staff in top restaurants will notice.</div>
         </div>
-        <div class="culinary-panel-7">
-          <div class="culinary-label-5">Pause (American style)</div>
-          <div class="culinary-text-7">In North American dining, resting is often signalled by placing fork and knife in a V like an upside-down roof, tips on the plate rim. Finished: same parallel as European. American style is slightly different from European for the pause signal.</div>
+        <div class="signal-panel-pause">
+          <div class="signal-title-pause">Pause (American style)</div>
+          <div class="signal-desc-pause">In North American dining, resting is often signalled by placing fork and knife in a V like an upside-down roof, tips on the plate rim. Finished: same parallel as European. American style is slightly different from European for the pause signal.</div>
         </div>
       </div>
 
       <div class="panel-title-spaced">Other essential table etiquette</div>
-      <div class="culinary-grid-4">
+      <div class="etiquette-grid">
         <div class="sub-card">
           <div class="detail-label">Bread</div>
-          <div class="culinary-text-9">Tear bread with your hands, never cut it. Butter each small piece as you eat it, not the whole slice at once. Bread plate is to your left.</div>
+          <div class="etiquette-rule">Tear bread with your hands, never cut it. Butter each small piece as you eat it, not the whole slice at once. Bread plate is to your left.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Cutlery order</div>
-          <div class="culinary-text-9">Work from the outside in. The fork and knife furthest from your plate are for the first course. You should never need to ask which to use.</div>
+          <div class="etiquette-rule">Work from the outside in. The fork and knife furthest from your plate are for the first course. You should never need to ask which to use.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Wine glasses</div>
-          <div class="culinary-text-9">Hold by the stem (not the bowl) to avoid warming the wine and leaving fingerprints. Glasses are to your right. White wine glass is typically smaller; red is larger for aeration.</div>
+          <div class="etiquette-rule">Hold by the stem (not the bowl) to avoid warming the wine and leaving fingerprints. Glasses are to your right. White wine glass is typically smaller; red is larger for aeration.</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Napkin</div>
-          <div class="culinary-text-9">Unfold onto your lap when seated. If you leave the table temporarily, place loosely on your chair — not the table. At meal's end, place loosely left of plate (not refolded).</div>
+          <div class="etiquette-rule">Unfold onto your lap when seated. If you leave the table temporarily, place loosely on your chair — not the table. At meal's end, place loosely left of plate (not refolded).</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Soup</div>
-          <div class="culinary-text-9">Spoon away from you (European style). Tilt the bowl away from you to get the last spoonful. Never blow on soup to cool it — wait. No slurping (in Western dining — actively encouraged in Japan).</div>
+          <div class="etiquette-rule">Spoon away from you (European style). Tilt the bowl away from you to get the last spoonful. Never blow on soup to cool it — wait. No slurping (in Western dining — actively encouraged in Japan).</div>
         </div>
         <div class="sub-card">
           <div class="detail-label">Tipping norms</div>
-          <div class="culinary-text-9">USA: 18–22% expected. UK: 10–12.5% or service charge included. France: rounding up appreciated, not obligatory. Japan: tipping is considered rude. Scandinavia: not expected.</div>
+          <div class="etiquette-rule">USA: 18–22% expected. UK: 10–12.5% or service charge included. France: rounding up appreciated, not obligatory. Japan: tipping is considered rude. Scandinavia: not expected.</div>
         </div>
       </div>
     </div>
@@ -554,7 +554,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-g-the-famous-rules-of-cooking">Part G · the famous rules of cooking</h2>
 
-    <div class="culinary-grid-2">
+    <div class="card-grid-wide">
       <div class="card">
         <p class="clabel">Salt is not just seasoning — it's chemistry</p>
         <p class="cval">Salt at every stage</p>
@@ -592,13 +592,13 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-knife-skills-and-essential-kitchen-equipment">Part H · knife skills &amp; essential kitchen equipment</h2>
 
-    <div class="culinary-panel-3">
+    <div class="context-note">
       A sharp knife is safer than a dull one — a dull knife requires more force, which means less control. Honing (realigning the edge) should be done before every use. Sharpening (removing metal) is needed a few times a year for home cooks.
     </div>
 
     <!-- Knife SVG diagram -->
-    <div class="culinary-spacing-2">
-      <svg class="culinary-media-2" viewBox="0 0 620 90" xmlns="http://www.w3.org/2000/svg">
+    <div class="knife-diagram-scroll">
+      <svg class="knife-diagram" viewBox="0 0 620 90" xmlns="http://www.w3.org/2000/svg">
         <!-- Chef's knife silhouette -->
         <path d="M30 48 L340 32 L360 38 L360 52 L340 58 L30 58 Z" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
         <!-- Bolster -->
@@ -722,7 +722,7 @@ const mod = modules.find((m) => m.id === 19)!;
 
     <!-- Cooking methods SVG infographic -->
     <div class="scroll-panel">
-      <svg class="culinary-media-3" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <svg class="cooking-methods-chart" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <!-- heat intensity gradient legend -->
           <linearGradient id="heatLegend" x1="0" x2="1" y1="0" y2="0">
@@ -840,13 +840,13 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-flavour-science-the-five-tastes-umami-and-pairing-logic">Part J · flavour science — the five tastes, umami, and pairing logic</h2>
 
-    <div class="culinary-panel-3">
+    <div class="context-note">
       There are five scientifically recognised basic tastes: sweet, sour, salty, bitter, and umami. A sixth — "kokumi" (richness/mouthfeel) — is increasingly accepted. Flavour is taste + aroma: your nose contributes ~80% of what you perceive as flavour. This is why food tastes bland when you have a blocked nose.
     </div>
 
     <!-- Five tastes SVG diagram -->
     <div class="scroll-panel">
-      <svg class="culinary-media-4" viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg">
+      <svg class="taste-wheel" viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg">
         <!-- Sweet -->
         <circle cx="80" cy="65" r="40" fill="#FDE68A" opacity="0.7"/>
         <text x="80" y="60" text-anchor="middle" font-size="11" font-weight="600" fill="#92400E" font-family="IBM Plex Sans,system-ui,sans-serif">Sweet</text>
@@ -889,7 +889,7 @@ const mod = modules.find((m) => m.id === 19)!;
     </div>
 
     <!-- Flavour pairing explorer -->
-    <div class="culinary-panel-3">
+    <div class="context-note">
       The flavour pairing theory (Heston Blumenthal popularised it) suggests ingredients that share key volatile aroma compounds pair well together. Some famous unexpected pairings: strawberry + parmesan, chocolate + blue cheese, oysters + kiwi, white chocolate + caviar. Select an ingredient below to explore its pairing logic.
     </div>
 
@@ -924,8 +924,8 @@ const mod = modules.find((m) => m.id === 19)!;
     <!-- Umami stacking concept -->
     <div class="content-panel">
       <div class="panel-title-spaced">Umami stacking — the chef's amplification trick</div>
-      <div class="culinary-text-10">Glutamate (the umami compound in tomatoes, parmesan, miso) has a synergistic relationship with nucleotides (found in meat, fish, mushrooms). When combined, they amplify each other's umami effect by up to 8×. This is why certain combinations are so satisfying:</div>
-      <div class="culinary-grid-5">
+      <div class="umami-intro">Glutamate (the umami compound in tomatoes, parmesan, miso) has a synergistic relationship with nucleotides (found in meat, fish, mushrooms). When combined, they amplify each other's umami effect by up to 8×. This is why certain combinations are so satisfying:</div>
+      <div class="flavour-pairing-grid">
         <div class="sub-card">
           <div class="muted-text-small">Classic combination</div>
           <div class="item-title">Tomato + parmesan</div>
@@ -952,19 +952,19 @@ const mod = modules.find((m) => m.id === 19)!;
     <!-- Spice heat scale -->
     <div class="content-panel">
       <div class="panel-title-spaced">Scoville scale — measuring chilli heat</div>
-      <div class="culinary-text-12">The Scoville Heat Unit (SHU) measures capsaicin concentration. Capsaicin doesn't cause chemical burns — it activates pain receptors (TRPV1) that normally respond to actual heat. Milk's casein protein binds and washes away capsaicin; water does not.</div>
-      <div class="culinary-spacing-3">
+      <div class="scoville-intro">The Scoville Heat Unit (SHU) measures capsaicin concentration. Capsaicin doesn't cause chemical burns — it activates pain receptors (TRPV1) that normally respond to actual heat. Milk's casein protein binds and washes away capsaicin; water does not.</div>
+      <div class="scoville-scale">
         <div class="heat-bar"></div>
         <!-- Markers: log scale, bell pepper=0, jalapeño=8K, serrano=23K, cayenne=50K, habanero=300K, Carolina reaper=2.2M -->
         <!-- Compress to 0-100% for display. Using approximate positions -->
         <div class="heat-marker heat-marker-style"><span class="heat-label heat-marker-style">Bell pepper<br>0 SHU</span></div>
-        <div class="heat-marker heat-marker-style-2"><span class="heat-label heat-marker-style-2">Jalapeño<br>2.5–8K</span></div>
-        <div class="heat-marker heat-marker-style-3"><span class="heat-label heat-marker-style-3">Serrano<br>10–23K</span></div>
-        <div class="heat-marker heat-marker-style-4"><span class="heat-label heat-marker-style-4">Cayenne<br>30–50K</span></div>
-        <div class="heat-marker heat-marker-style-5"><span class="heat-label heat-marker-style-5">Habanero<br>100–350K</span></div>
-        <div class="heat-marker heat-marker-style-6"><span class="heat-label heat-marker-style-6">Reaper<br>~2.2M</span></div>
+        <div class="heat-marker heat-marker-jalapeno"><span class="heat-label heat-marker-jalapeno">Jalapeño<br>2.5–8K</span></div>
+        <div class="heat-marker heat-marker-serrano"><span class="heat-label heat-marker-serrano">Serrano<br>10–23K</span></div>
+        <div class="heat-marker heat-marker-cayenne"><span class="heat-label heat-marker-cayenne">Cayenne<br>30–50K</span></div>
+        <div class="heat-marker heat-marker-habanero"><span class="heat-label heat-marker-habanero">Habanero<br>100–350K</span></div>
+        <div class="heat-marker heat-marker-reaper"><span class="heat-label heat-marker-reaper">Reaper<br>~2.2M</span></div>
       </div>
-      <div class="culinary-text-13">
+      <div class="heat-note">
         Cooking reduces heat slightly — capsaicin breaks down slowly with heat and time, which is why a long-cooked chilli dish is milder than the raw chilli. Removing seeds and the white pith (where most capsaicin concentrates) dramatically reduces heat without losing chilli flavour.
       </div>
     </div>
@@ -974,7 +974,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-wine-and-food-pairing-the-logic-behind-the-rules">Part K · wine &amp; food pairing — the logic behind the rules</h2>
 
-    <div class="culinary-panel-3">
+    <div class="context-note">
       Wine pairing isn't arbitrary. It's based on complementary or contrasting chemistry: acid in wine cuts fat; tannins bind proteins; sweetness balances spice; mineral notes amplify delicate flavours. The old "red with meat, white with fish" is a useful rough guide — but understanding why leads to much better choices.
     </div>
 
@@ -988,31 +988,31 @@ const mod = modules.find((m) => m.id === 19)!;
         </div>
       </div>
       <div class="wine-row">
-        <div class="wine-dot wine-dot-style-2"></div>
+        <div class="wine-dot wine-dot-tannin"></div>
         <div>
           <div class="atext"><strong>Tannins clash with fish oils but love protein.</strong> A tannic Cabernet Sauvignon with a rich beef steak — the tannins bind to the meat's proteins, creating a velvet texture. The same wine with fish makes the wine taste metallic and the fish taste bitter.</div>
         </div>
       </div>
       <div class="wine-row">
-        <div class="wine-dot wine-dot-style-3"></div>
+        <div class="wine-dot wine-dot-sweet-spice"></div>
         <div>
           <div class="atext"><strong>Sweet wine with spicy food.</strong> Off-dry Riesling with Thai food; Gewürztraminer with Indian curry. The residual sugar cools the heat and contrasts it pleasantly. Dry wine with very spicy food makes both taste harsh.</div>
         </div>
       </div>
       <div class="wine-row">
-        <div class="wine-dot wine-dot-style-4"></div>
+        <div class="wine-dot wine-dot-weight"></div>
         <div>
           <div class="atext"><strong>Match weight to weight.</strong> A light Pinot Noir won't stand up to a rich beef bourguignon; a powerful Barolo will overwhelm a delicate sole. Match the body and intensity of the wine to the body and intensity of the dish.</div>
         </div>
       </div>
       <div class="wine-row">
-        <div class="wine-dot wine-dot-style-5"></div>
+        <div class="wine-dot wine-dot-regional"></div>
         <div>
           <div class="atext"><strong>Regional pairings work almost always.</strong> Wines and foods from the same region evolved together over centuries. Burgundy Pinot Noir with coq au vin; Sancerre with Loire Valley goat's cheese; Barolo with Piedmontese white truffle pasta; Fino Sherry with jamón ibérico.</div>
         </div>
       </div>
       <div class="wine-row wine-row-style">
-        <div class="wine-dot wine-dot-style-6"></div>
+        <div class="wine-dot wine-dot-dessert"></div>
         <div>
           <div class="atext"><strong>Dessert wine must be sweeter than the dessert.</strong> If the dessert is sweeter, the wine tastes sour and unpleasant. Sauternes with crème brûlée; Pedro Ximénez Sherry with vanilla ice cream; Tokaji Aszú with foie gras (the classic sweet-fatty pairing).</div>
         </div>
@@ -1069,7 +1069,7 @@ const mod = modules.find((m) => m.id === 19)!;
     ════════════════════════════════════════════ -->
     <h2 class="sec" id="part-l-the-balance-calculator-diagnose-and-fix-any-dish">Part L · the balance calculator — diagnose and fix any dish</h2>
 
-    <div class="culinary-panel-3">
+    <div class="context-note">
       A dish is "finished" when all its components are in harmony. Use this interactive guide to identify what your dish is missing and what to add. Adjust the sliders to describe what you're tasting.
     </div>
 

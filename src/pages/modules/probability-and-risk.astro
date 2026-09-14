@@ -23,7 +23,7 @@ const mod = modules.find((m) => m.id === 12)!;
 
     <div class="content-panel">
       <div class="inline-card-title">What does "1 in N" actually look like?</div>
-      <div class="probability-text-2">Each dot below is one person or one event. The red dot is the one that "happens."</div>
+      <div class="intro-note">Each dot below is one person or one event. The red dot is the one that "happens."</div>
 
       <div class="u-mb-lg">
         <div class="mini-card-title">1 in 10 — e.g. chance of getting a cold in any given month</div>
@@ -36,7 +36,7 @@ const mod = modules.find((m) => m.id === 12)!;
       <div class="u-mb-lg">
         <div class="mini-card-title">1 in 1,000 — e.g. dying in a car accident this year (UK/Western Europe) — showing 200 dots as a sample</div>
         <div class="dot-grid" id="dots-1000"></div>
-        <div class="probability-text-3">Finding the red dot in this grid takes effort — and this is only a fifth of the full crowd. In the real group of 1,000, it would be even harder.</div>
+        <div class="small-caption">Finding the red dot in this grid takes effort — and this is only a fifth of the full crowd. In the real group of 1,000, it would be even harder.</div>
       </div>
 
       <div class="probability-panel">
@@ -83,7 +83,7 @@ const mod = modules.find((m) => m.id === 12)!;
     <!-- Visual: logarithmic risk spectrum -->
     <div class="content-panel">
       <div class="inline-card-title">The probability spectrum — logarithmic scale</div>
-      <div class="probability-text-2">Each step left is 10× more likely. The distance between lottery and lightning is the same as lightning and car accidents — but it feels very different.</div>
+      <div class="intro-note">Each step left is 10× more likely. The distance between lottery and lightning is the same as lightning and car accidents — but it feels very different.</div>
       <svg class="probability-media" viewBox="0 0 760 90" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -160,7 +160,7 @@ const mod = modules.find((m) => m.id === 12)!;
     <div class="content-panel">
       <div class="panel-title-spaced">Interactive: see how the same fact can be presented two very different ways</div>
 
-      <div class="probability-row-2">
+      <div class="risk-scenario-row">
         <select class="risk-scenario" id="risk-scenario">
           <option value="0">Drug reduces heart attack risk by 50%</option>
           <option value="1">Processed meat "increases cancer risk by 18%"</option>
@@ -172,9 +172,9 @@ const mod = modules.find((m) => m.id === 12)!;
       <div class="risk-display" id="risk-display"></div>
     </div>
 
-    <div class="probability-panel-2">
-      <div class="probability-label-3">The rule to remember forever</div>
-      <div class="probability-text-4">
+    <div class="callout-panel">
+      <div class="callout-title">The rule to remember forever</div>
+      <div class="callout-body">
         Whenever you hear a relative risk ("X% more likely"), always ask: <strong class="text-primary">"more likely than what?"</strong> — what is the base rate?<br>
         A 100% increase sounds catastrophic. If the base rate is 0.001%, doubling it gives 0.002% — almost nothing.<br>
         A 10% increase sounds small. If the base rate is 30%, adding 3 percentage points matters a lot.
@@ -186,7 +186,7 @@ const mod = modules.find((m) => m.id === 12)!;
     ============================================================ -->
     <h2 class="sec" id="part-d-cognitive-biases-why-our-probability-intuition-fails">Part D · cognitive biases — why our probability intuition fails</h2>
 
-    <div class="card-grid-2 u-mb-lg">
+    <div class="bias-card-grid u-mb-lg">
       <div class="card">
         <p class="clabel">Availability bias</p>
         <p class="cval">Vivid = likely</p>
@@ -222,7 +222,7 @@ const mod = modules.find((m) => m.id === 12)!;
     <!-- Biases visual -->
     <div class="content-panel">
       <div class="panel-title">How we perceive vs. how things actually are</div>
-      <svg class="probability-media-2" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
+      <svg class="chart-svg" viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
         <!-- Actual probability curve (roughly correct) -->
         <!-- Perceived curve (over-weights extremes, under-weights middle) -->
         <!-- X axis: probability 0 to 1, Y axis: perceived weight -->
@@ -253,7 +253,7 @@ const mod = modules.find((m) => m.id === 12)!;
         <text x="322" y="62" font-size="8.5" fill="var(--color-text-secondary)">underweight</text>
         <text x="322" y="72" font-size="8.5" fill="var(--color-text-secondary)">middle range</text>
       </svg>
-      <div class="probability-text-5">
+      <div class="weighting-note">
         Humans don't perceive probability linearly. We overweight very small probabilities (lottery tickets feel plausible; shark attacks feel imminent) and underweight moderate ones. This is why both insurance and gambling industries are profitable — they exploit opposite ends of the same bias.
       </div>
     </div>
@@ -266,13 +266,13 @@ const mod = modules.find((m) => m.id === 12)!;
     <div class="content-panel">
       <div class="panel-title">Adjust the sliders — what does a positive test really mean?</div>
 
-      <div class="probability-row-3">
-        <label class="probability-text-6">Disease prevalence:</label>
+      <div class="prevalence-row">
+        <label class="false-positive-label">Disease prevalence:</label>
         <input class="u-flex-1" type="range" id="u-flex-1" min="1" max="500" value="10" step="1">
         <span class="prev-out" id="prev-out">1 in 100</span>
       </div>
-      <div class="probability-row-4">
-        <label class="probability-text-6">Test accuracy:</label>
+      <div class="accuracy-row">
+        <label class="false-positive-label">Test accuracy:</label>
         <input class="u-flex-1" type="range" id="acc-slider" min="80" max="99" value="99" step="1">
         <span class="prev-out" id="acc-out">99%</span>
       </div>
@@ -285,8 +285,8 @@ const mod = modules.find((m) => m.id === 12)!;
     <!-- Bayes tree diagram (static illustrative) -->
     <div class="content-panel">
       <div class="compact-card-title">How to think about it: the frequency tree</div>
-      <div class="probability-text-7">Imagine 10,000 people tested for a disease that affects 1 in 100, with a 99% accurate test.</div>
-      <svg class="probability-media-2" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <div class="intro-note-tight">Imagine 10,000 people tested for a disease that affects 1 in 100, with a 99% accurate test.</div>
+      <svg class="chart-svg" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
         <!-- Root -->
         <rect x="280" y="8" width="120" height="32" rx="6" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
         <text x="340" y="28" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-primary)">10,000 people</text>
@@ -325,7 +325,7 @@ const mod = modules.find((m) => m.id === 12)!;
         <text x="205" y="75" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">1 in 100</text>
         <text x="475" y="75" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">99 in 100</text>
       </svg>
-      <div class="probability-panel-3">
+      <div class="false-positive-insight">
         <strong class="text-primary">The key insight:</strong> Among all 198 positive tests, only 99 are genuine — exactly 50%. The false positives equal the true positives because the 1% error rate applied to 9,900 healthy people generates as many wrong flags as the 99% hit rate finds in 100 sick ones. Prevalence drives everything.
       </div>
     </div>
@@ -337,17 +337,17 @@ const mod = modules.find((m) => m.id === 12)!;
 
     <div class="content-panel">
       <div class="inline-card-title">How many people in a room before two share a birthday?</div>
-      <div class="probability-text-7">Drag to find where the probability crosses 50% — most people guess far too high.</div>
-      <div class="probability-row-5">
+      <div class="intro-note-tight">Drag to find where the probability crosses 50% — most people guess far too high.</div>
+      <div class="birthday-slider-row">
         <span class="muted-text-small">2</span>
         <input class="u-flex-1" type="range" id="bday-slider" min="2" max="60" value="23" step="1">
         <span class="muted-text-small">60</span>
       </div>
-      <div class="probability-row-6">
+      <div class="birthday-result-row">
         <div class="bday-people" id="bday-people"></div>
         <div class="bday-prob" id="bday-prob"></div>
       </div>
-      <div class="probability-media-3">
+      <div class="birthday-track">
         <div class="bday-bar" id="bday-bar"></div>
       </div>
       <div class="muted-copy-tight" id="bday-note"></div>
@@ -356,8 +356,8 @@ const mod = modules.find((m) => m.id === 12)!;
     <!-- Birthday paradox curve SVG -->
     <div class="content-panel">
       <div class="inline-card-title">The full curve — probability of a shared birthday</div>
-      <svg class="probability-media-2" id="bday-curve-svg" viewBox="0 0 620 160" xmlns="http://www.w3.org/2000/svg"></svg>
-      <div class="probability-text-3">The curve is deceptively steep. It climbs rapidly because each new person can match any of the people already in the room — the number of possible pairs grows quadratically.</div>
+      <svg class="chart-svg" id="bday-curve-svg" viewBox="0 0 620 160" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="small-caption">The curve is deceptively steep. It climbs rapidly because each new person can match any of the people already in the room — the number of possible pairs grows quadratically.</div>
     </div>
 
     <!-- ============================================================
@@ -365,7 +365,7 @@ const mod = modules.find((m) => m.id === 12)!;
     ============================================================ -->
     <h2 class="sec" id="part-g-risk-in-real-life-the-numbers-that-actually-matter">Part G · risk in real life — the numbers that actually matter</h2>
 
-    <div class="card-grid-2 u-mb-lg">
+    <div class="bias-card-grid u-mb-lg">
       <div class="card">
         <p class="clabel">Lifetime risk of dying in a car (UK/EU)</p>
         <p class="cval">~1 in 240</p>
@@ -392,7 +392,7 @@ const mod = modules.find((m) => m.id === 12)!;
     <div class="content-panel">
       <div class="panel-title">Annual death risk per 100,000 people — visual comparison</div>
       <div id="risk-bars"></div>
-      <div class="probability-text-9">Bar width is proportional to risk on a linear scale within this comparison. Heart disease dominates everything else. The "all causes" bar at ~830/100k shows total mortality; most deaths cluster around a few causes.</div>
+      <div class="risk-scale-note">Bar width is proportional to risk on a linear scale within this comparison. Heart disease dominates everything else. The "all causes" bar at ~830/100k shows total mortality; most deaths cluster around a few causes.</div>
     </div>
 
     <!-- ============================================================
@@ -402,10 +402,10 @@ const mod = modules.find((m) => m.id === 12)!;
 
     <div class="content-panel">
       <div class="compact-card-title">What is expected value?</div>
-      <div class="probability-text-10">
+      <div class="body-intro">
         Expected value (EV) is the probability-weighted average of all possible outcomes. It answers: "If I repeated this decision many times, what would the average outcome be?" It is the foundation of rational decision-making under uncertainty.
       </div>
-      <div class="probability-panel-4">
+      <div class="ev-formula-panel">
         <strong class="text-primary">Formula:</strong> EV = Σ (probability<sub>i</sub> × outcome<sub>i</sub>) for all possible outcomes i
       </div>
 
@@ -416,9 +416,9 @@ const mod = modules.find((m) => m.id === 12)!;
       <div class="muted-copy" id="ev-note"></div>
     </div>
 
-    <div class="probability-panel-2">
-      <div class="probability-label-3">When EV is not enough: the role of variance</div>
-      <div class="probability-text-4">
+    <div class="callout-panel">
+      <div class="callout-title">When EV is not enough: the role of variance</div>
+      <div class="callout-body">
         Two choices can have identical expected values but feel very different. A 1% chance of winning £1,000 and a 100% chance of winning £10 both have EV = £10 — but they are not equivalent decisions. When a bad outcome is <em>unacceptable</em> (bankruptcy, death, irreversible harm), expected value undercounts the downside. This is why people buy insurance at negative expected value: they are paying to reduce variance, not to maximise EV.
       </div>
     </div>
@@ -432,7 +432,7 @@ const mod = modules.find((m) => m.id === 12)!;
         <button class="tab-btn" onclick="showEVExample(1,this)">Insurance</button>
         <button class="tab-btn" onclick="showEVExample(2,this)">Casino roulette</button>
       </div>
-      <div class="probability-text-4" id="ev-example-display"></div>
+      <div class="callout-body" id="ev-example-display"></div>
     </div>
 
     <!-- ============================================================
@@ -442,21 +442,21 @@ const mod = modules.find((m) => m.id === 12)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Play the game — then run 1,000 simulations</div>
-      <div class="probability-text-2">
+      <div class="intro-note">
         You're on a game show. Behind one door is a car, behind the other two are goats. You pick a door. The host (who knows where the car is) opens a different door revealing a goat. Should you switch?
       </div>
 
       <div id="mh-game-area">
         <div class="mh-doors" id="mh-doors"></div>
         <div class="mh-message" id="mh-message"></div>
-        <div class="probability-row-7">
+        <div class="monty-actions">
           <button class="mh-stay-btn" id="mh-stay-btn" onclick="montyChoice('stay')">Stay with my door</button>
           <button class="mh-switch-btn" id="mh-switch-btn" onclick="montyChoice('switch')">Switch doors</button>
           <button class="is-hidden" id="is-hidden" onclick="montyReset()">Play again</button>
         </div>
       </div>
 
-      <div class="probability-div-style-2"></div>
+      <div class="monty-divider"></div>
       <div class="panel-title-spaced">Simulation — run it yourself</div>
       <div class="button-row">
         <button onclick="runMontySimulation(100)">Run 100 games</button>
@@ -470,9 +470,9 @@ const mod = modules.find((m) => m.id === 12)!;
       </div>
     </div>
 
-    <div class="probability-panel-2">
-      <div class="probability-label-3">Why switching is correct (the intuition)</div>
-      <div class="probability-text-4">
+    <div class="callout-panel">
+      <div class="callout-title">Why switching is correct (the intuition)</div>
+      <div class="callout-body">
         When you first pick a door, you have a 1/3 chance of being right. That means there's a 2/3 chance the car is behind one of the other two doors. The host, who knows where the car is, then eliminates a losing door — but crucially, this doesn't change your initial 1/3 probability. The entire 2/3 probability "concentrates" onto the remaining unchosen door. Switching captures that 2/3. Staying keeps the original 1/3. The simulation above proves it empirically.
       </div>
     </div>
@@ -484,7 +484,7 @@ const mod = modules.find((m) => m.id === 12)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Flip a coin many times — watch the proportion of heads converge</div>
-      <div class="probability-text-7">After just a few flips, the proportion swings wildly. But with thousands of flips, it converges inexorably toward 50%. This is the law of large numbers — not magic, but mathematics.</div>
+      <div class="intro-note-tight">After just a few flips, the proportion swings wildly. But with thousands of flips, it converges inexorably toward 50%. This is the law of large numbers — not magic, but mathematics.</div>
 
       <div class="button-row-spaced">
         <button onclick="flipCoins(10)">Flip 10</button>
@@ -496,13 +496,13 @@ const mod = modules.find((m) => m.id === 12)!;
 
       <canvas class="lln-canvas" id="lln-canvas" width="800" height="180"></canvas>
 
-      <div class="probability-row-10">
+      <div class="lln-footer">
         <div class="lln-stats" id="lln-stats"></div>
         <div class="muted-text-small" id="lln-note"></div>
       </div>
     </div>
 
-    <div class="card-grid-2 u-mb-lg">
+    <div class="bias-card-grid u-mb-lg">
       <div class="card">
         <p class="clabel">Law of Large Numbers</p>
         <p class="cval">Results converge</p>
@@ -522,18 +522,18 @@ const mod = modules.find((m) => m.id === 12)!;
 
     <div class="content-panel">
       <div class="compact-card-title">The multiplication trap: independent vs. dependent events</div>
-      <div class="probability-text-10">
+      <div class="body-intro">
         When events are independent, you multiply probabilities. When they are not, you must condition on what has already happened. This distinction causes more probability errors than almost anything else.
       </div>
 
       <!-- Interactive: combined probability explorer -->
-      <div class="probability-row-11">
-        <label class="probability-text-11">Event A probability:</label>
+      <div class="conditional-slider-row">
+        <label class="conditional-label">Event A probability:</label>
         <input class="pa-slider" type="range" id="pa-slider" min="1" max="99" value="50" step="1">
         <span class="pa-out" id="pa-out">50%</span>
       </div>
-      <div class="probability-row-11">
-        <label class="probability-text-11">Event B probability:</label>
+      <div class="conditional-slider-row">
+        <label class="conditional-label">Event B probability:</label>
         <input class="pa-slider" type="range" id="pb-slider" min="1" max="99" value="50" step="1">
         <span class="pa-out" id="pb-out">50%</span>
       </div>
@@ -549,8 +549,8 @@ const mod = modules.find((m) => m.id === 12)!;
       <div class="inline-card-title">Visualising probability: Venn diagrams</div>
       <div class="probability-grid">
         <div>
-          <div class="probability-label-4">Independent: P(A∩B) = P(A)×P(B)</div>
-          <svg class="probability-media-2" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <div class="formula-label">Independent: P(A∩B) = P(A)×P(B)</div>
+          <svg class="chart-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
             <circle cx="75" cy="60" r="45" fill="#E6F1FB" fill-opacity="0.7" stroke="#378ADD" stroke-width="1.2"/>
             <circle cx="125" cy="60" r="45" fill="#FAECE7" fill-opacity="0.7" stroke="#D85A30" stroke-width="1.2"/>
             <!-- Overlap -->
@@ -562,8 +562,8 @@ const mod = modules.find((m) => m.id === 12)!;
           </svg>
         </div>
         <div>
-          <div class="probability-label-4">Mutually exclusive: P(A∩B) = 0</div>
-          <svg class="probability-media-2" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <div class="formula-label">Mutually exclusive: P(A∩B) = 0</div>
+          <svg class="chart-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
             <circle cx="65" cy="60" r="45" fill="#E6F1FB" fill-opacity="0.7" stroke="#378ADD" stroke-width="1.2"/>
             <circle cx="135" cy="60" r="45" fill="#FAECE7" fill-opacity="0.7" stroke="#D85A30" stroke-width="1.2"/>
             <text x="55" y="64" text-anchor="middle" font-size="11" fill="#0C447C" font-weight="600">A</text>
@@ -572,7 +572,7 @@ const mod = modules.find((m) => m.id === 12)!;
           </svg>
         </div>
       </div>
-      <div class="probability-text-12">
+      <div class="conditional-error-note">
         <strong class="text-primary">Common error:</strong> "What's the chance of rain on both Saturday and Sunday?" — people often add (50% + 50% = 100%) rather than multiply (50% × 50% = 25%), forgetting the events are independent. Only mutually exclusive events add up.
       </div>
     </div>

@@ -185,38 +185,38 @@
   color:rgba(255,255,255,0.8);
 }
 
-.showdoneness-control-2 {
+.doneness-swatch-rare {
   background:#C0392B;
 }
 
-.showdoneness-control-3 {
+.doneness-swatch-medium-rare {
   background:#E74C3C;
 }
 
-.showdoneness-control-4 {
+.doneness-swatch-medium {
   background:#E67E22;
 }
 
-.showdoneness-control-5 {
+.doneness-swatch-medium-well {
   background:#D35400;
 }
 
-.showdoneness-control-6 {
+.doneness-swatch-well-done {
   background:#784212;
 }
 
-.ds-temp-style-2 {
+.ds-temp-light {
   color:rgba(255,255,255,0.9);
 }
 
-.culinary-panel-2 {
+.thickness-rule {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:12px 14px;
   margin-bottom:1rem;
 }
 
-.culinary-panel-3 {
+.context-note {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 12px;
@@ -226,7 +226,7 @@
   margin-bottom:1rem;
 }
 
-.culinary-text-3 {
+.family-tree-heading {
   font-size:11px;
   font-weight:600;
   letter-spacing:0.08em;
@@ -234,7 +234,7 @@
   margin-bottom:6px;
 }
 
-.culinary-grid-2 {
+.card-grid-wide {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
   gap:10px;
@@ -251,148 +251,148 @@
   line-height:1.8;
 }
 
-.culinary-grid-3 {
+.cutlery-signal-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
   gap:12px;
   margin-bottom:10px;
 }
 
-.culinary-panel-4 {
+.signal-panel-resting {
   background:#EAF3DE;
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   border:0.5px solid #97C459;
 }
 
-.culinary-label-2 {
+.signal-title-resting {
   font-size:12px;
   font-weight:500;
   color:#27500A;
   margin-bottom:4px;
 }
 
-.culinary-text-4 {
+.signal-desc-resting {
   font-size:12px;
   color:#3B6D11;
   line-height:1.5;
 }
 
-.culinary-panel-5 {
+.signal-panel-finished {
   background:#FCEBEB;
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   border:0.5px solid #F09595;
 }
 
-.culinary-label-3 {
+.signal-title-finished {
   font-size:12px;
   font-weight:500;
   color:#791F1F;
   margin-bottom:4px;
 }
 
-.culinary-text-5 {
+.signal-desc-finished {
   font-size:12px;
   color:#A32D2D;
   line-height:1.5;
 }
 
-.culinary-panel-6 {
+.signal-panel-disliked {
   background:#FAEEDA;
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   border:0.5px solid #EF9F27;
 }
 
-.culinary-label-4 {
+.signal-title-disliked {
   font-size:12px;
   font-weight:500;
   color:#633806;
   margin-bottom:4px;
 }
 
-.culinary-text-6 {
+.signal-desc-disliked {
   font-size:12px;
   color:#854F0B;
   line-height:1.5;
 }
 
-.culinary-panel-7 {
+.signal-panel-pause {
   background:#E6F1FB;
   border-radius:var(--border-radius-md);
   padding:11px 13px;
   border:0.5px solid #85B7EB;
 }
 
-.culinary-label-5 {
+.signal-title-pause {
   font-size:12px;
   font-weight:500;
   color:#0C447C;
   margin-bottom:4px;
 }
 
-.culinary-text-7 {
+.signal-desc-pause {
   font-size:12px;
   color:#185FA5;
   line-height:1.5;
 }
 
-.culinary-grid-4 {
+.etiquette-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(270px,1fr));
   gap:12px;
 }
 
-.culinary-text-9 {
+.etiquette-rule {
   font-size:12px;
   color:var(--color-text-primary);
   line-height:1.4;
 }
 
-.culinary-spacing-2 {
+.knife-diagram-scroll {
   overflow-x:auto;
   margin-bottom:1rem;
 }
 
-.culinary-media-2 {
+.knife-diagram {
   width:100%;
   min-width:400px;
   display:block;
 }
 
-.culinary-media-3 {
+.cooking-methods-chart {
   width:100%;
   min-width:500px;
   display:block;
 }
 
-.culinary-media-4 {
+.taste-wheel {
   width:100%;
   min-width:480px;
   display:block;
 }
 
-.culinary-text-10 {
+.umami-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
   line-height:1.6;
 }
 
-.culinary-grid-5 {
+.flavour-pairing-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
   gap:8px;
 }
 
-.culinary-text-12 {
+.scoville-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
 }
 
-.culinary-spacing-3 {
+.scoville-scale {
   position:relative;
   margin:0 10px 40px;
 }
@@ -401,27 +401,27 @@
   left:2%;
 }
 
-.heat-marker-style-2 {
+.heat-marker-jalapeno {
   left:20%;
 }
 
-.heat-marker-style-3 {
+.heat-marker-serrano {
   left:38%;
 }
 
-.heat-marker-style-4 {
+.heat-marker-cayenne {
   left:54%;
 }
 
-.heat-marker-style-5 {
+.heat-marker-habanero {
   left:70%;
 }
 
-.heat-marker-style-6 {
+.heat-marker-reaper {
   left:88%;
 }
 
-.culinary-text-13 {
+.heat-note {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.6;
@@ -432,19 +432,19 @@
   background:#D4A0C0;
 }
 
-.wine-dot-style-2 {
+.wine-dot-tannin {
   background:#7B2D2D;
 }
 
-.wine-dot-style-3 {
+.wine-dot-sweet-spice {
   background:#F7E48B;
 }
 
-.wine-dot-style-4 {
+.wine-dot-weight {
   background:#C8A850;
 }
 
-.wine-dot-style-5 {
+.wine-dot-regional {
   background:#3A6830;
 }
 
@@ -452,7 +452,7 @@
   border-bottom:none;
 }
 
-.wine-dot-style-6 {
+.wine-dot-dessert {
   background:#E8C7A0;
 }
   

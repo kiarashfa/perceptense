@@ -120,20 +120,20 @@
   padding:2px 8px;
 }
 
-.temperature-row-3 {
+.thermometer-slider-row {
   display:flex;
   align-items:center;
   gap:12px;
   margin-bottom:14px;
 }
 
-.temperature-text-2 {
+.slider-end-label {
   font-size:11px;
   color:var(--color-text-secondary);
   white-space:nowrap;
 }
 
-.temperature-row-4 {
+.thermometer-readouts {
   display:flex;
   gap:10px;
   align-items:baseline;
@@ -172,57 +172,57 @@
   color:#E6F1FB;
 }
 
-.tb-style-2 {
+.tb-siberian-winter {
   width:10%;
   background:#0C447C;
 }
 
-.tb-style-3 {
+.tb-european-winter {
   width:16%;
   background:#185FA5;
 }
 
-.tb-style-4 {
+.tb-freezing {
   width:22%;
   background:#378ADD;
 }
 
-.tb-style-5 {
+.tb-cool {
   width:30%;
   background:#85B7EB;
 }
 
-.tb-style-6 {
+.tb-room-temp {
   width:40%;
   background:#9FE1CB;
 }
 
-.tb-style-7 {
+.tb-summer-day {
   width:50%;
   background:#5DCAA5;
 }
 
-.tb-style-8 {
+.tb-body-temp {
   width:60%;
   background:#EF9F27;
 }
 
-.tb-style-9 {
+.tb-heat-wave {
   width:63%;
   background:#BA7517;
 }
 
-.tb-style-10 {
+.tb-death-valley {
   width:70%;
   background:#D85A30;
 }
 
-.tb-style-11 {
+.tb-boiling-water {
   width:100%;
   background:#A32D2D;
 }
 
-.temperature-text-3 {
+.scale-footnote {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-top:10px;
@@ -234,7 +234,7 @@
   display:inline-block;
 }
 
-.temperature-row-5 {
+.converter-row {
   display:flex;
   gap:10px;
   align-items:center;
@@ -285,14 +285,14 @@
   margin-bottom:0;
 }
 
-.temperature-label-2 {
+.shortcut-title {
   font-size:13px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:5px;
 }
 
-.temperature-text-4 {
+.shortcut-body {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
@@ -303,95 +303,95 @@
   min-width:300px;
 }
 
-.tb-style-12 {
+.tb-absolute-zero {
   width:2%;
   background:#26215C;
   border:0.5px solid #534AB7;
 }
 
-.tv-style-6 {
+.tv-lavender-outside {
   color:#CECBF6;
   margin-left:4px;
   font-size:10px;
 }
 
-.tb-style-13 {
+.tb-liquid-nitrogen {
   width:5%;
   background:#3C3489;
 }
 
-.tv-style-7 {
+.tv-lavender {
   color:#CECBF6;
   font-size:10px;
 }
 
-.tb-style-14 {
+.tb-vostok-record {
   width:12%;
   background:#534AB7;
 }
 
-.tv-style-8 {
+.tv-white-small {
   color:#fff;
   font-size:10px;
 }
 
-.tb-style-15 {
+.tb-liquid-water {
   width:22%;
   background:#1D9E75;
 }
 
-.tb-style-16 {
+.tb-oven {
   width:27%;
   background:#EF9F27;
 }
 
-.tv-style-9 {
+.tv-dark-small {
   color:#412402;
   font-size:10px;
 }
 
-.tb-style-17 {
+.tb-wood-fire {
   width:38%;
   background:#BA7517;
 }
 
-.tb-style-18 {
+.tb-iron-melts {
   width:50%;
   background:#D85A30;
 }
 
-.tb-style-19 {
+.tb-tungsten-melts {
   width:70%;
   background:#A32D2D;
 }
 
-.tb-style-20 {
+.tb-sun-surface {
   width:85%;
   background:#791F1F;
 }
 
-.tb-style-21 {
+.tb-sun-core {
   width:100%;
   background:#501313;
 }
 
-.tv-style-10 {
+.tv-blush {
   color:#FCEBEB;
 }
 
-.temperature-text-5 {
+.scale-reference-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin:10px 0 0;
 }
 
-.temperature-text-6 {
+.scale-caveat-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin:6px 0 0;
 }
 
-.temperature-panel-2 {
+.anchor-numbers-panel {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
   border-radius:var(--border-radius-lg);
@@ -399,68 +399,68 @@
   margin-bottom:1.2rem;
 }
 
-.temperature-text-7 {
+.section-intro {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.6;
   margin-bottom:0.8rem;
 }
 
-.tb-style-22 {
+.tb-diamond {
   width:100%;
   background:#26215C;
 }
 
-.tb-style-23 {
+.tb-silver {
   width:92%;
   background:#3C3489;
 }
 
-.tb-style-24 {
+.tb-copper {
   width:83%;
   background:#185FA5;
 }
 
-.tb-style-25 {
+.tb-aluminium {
   width:55%;
   background:#378ADD;
 }
 
-.tb-style-26 {
+.tb-iron-steel {
   width:35%;
   background:#85B7EB;
 }
 
-.tb-style-27 {
+.tb-glass {
   width:7%;
   background:#9FE1CB;
 }
 
-.tb-style-28 {
+.tb-wood {
   width:5%;
   background:#5DCAA5;
 }
 
-.tb-style-29 {
+.tb-aerogel {
   width:3%;
   background:#EF9F27;
   min-width:28px;
 }
 
-.tb-style-30 {
+.tb-still-air {
   width:2%;
   background:#BA7517;
   min-width:24px;
 }
 
-.temperature-text-8 {
+.radiation-intro {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.6;
   margin-bottom:10px;
 }
 
-.temperature-row-6 {
+.radiation-row {
   display:flex;
   gap:10px;
   align-items:center;
@@ -468,7 +468,7 @@
   margin-bottom:10px;
 }
 
-.temperature-media-2 {
+.radiation-temp-field {
   flex:1;
   min-width:120px;
 }
@@ -493,7 +493,7 @@
   width:100%;
 }
 
-.temperature-label-3 {
+.expansion-examples-title {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
@@ -506,7 +506,7 @@
   gap:8px;
 }
 
-.temperature-panel-3 {
+.expansion-fact {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 11px;
@@ -515,7 +515,7 @@
   line-height:1.5;
 }
 
-.temperature-media-3 {
+.body-heat-map {
   width:100%;
   min-width:260px;
 }
@@ -525,96 +525,96 @@
   background:#26215C;
 }
 
-.bzone-bar-style-2 {
+.bzone-bar-moderate-hypothermia {
   width:22px;
   background:#185FA5;
 }
 
-.bzone-bar-style-3 {
+.bzone-bar-mild-hypothermia {
   width:18px;
   background:#378ADD;
 }
 
-.bzone-bar-style-4 {
+.bzone-bar-normal {
   width:40px;
   background:#1D9E75;
 }
 
-.bzone-bar-style-5 {
+.bzone-bar-low-fever {
   width:18px;
   background:#EF9F27;
 }
 
-.bzone-bar-style-6 {
+.bzone-bar-significant-fever {
   width:24px;
   background:#BA7517;
 }
 
-.bzone-bar-style-7 {
+.bzone-bar-high-fever {
   width:18px;
   background:#D85A30;
 }
 
-.bzone-bar-style-8 {
+.bzone-bar-fatal {
   width:22px;
   background:#A32D2D;
 }
 
-.temperature-text-10 {
+.fever-paradox-note {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-top:12px;
   line-height:1.6;
 }
 
-.temperature-grid-2 {
+.body-cooling-grid {
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(170px, 1fr));
   gap:8px;
 }
 
-.tb-style-31 {
+.tb-drying-oven {
   width:20%;
   background:#EF9F27;
 }
 
-.tb-style-32 {
+.tb-slow-cook {
   width:35%;
   background:#BA7517;
 }
 
-.tb-style-33 {
+.tb-baking {
   width:52%;
   background:#D85A30;
 }
 
-.tb-style-34 {
+.tb-roasting {
   width:65%;
   background:#993C1D;
 }
 
-.tb-style-35 {
+.tb-hot-roast {
   width:80%;
   background:#712B13;
 }
 
-.tb-style-36 {
+.tb-max-oven {
   width:90%;
   background:#501313;
 }
 
-.tb-style-37 {
+.tb-paper-ignites {
   width:72%;
   background:#A32D2D;
 }
 
-.temperature-text-11 {
+.game-intro {
   font-size:12px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
 }
 
-.temperature-row-7 {
+.game-next-row {
   display:flex;
   justify-content:flex-end;
   margin-top:10px;

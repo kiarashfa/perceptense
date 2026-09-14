@@ -4,7 +4,7 @@
 .dot { width: 9px; height: 9px; border-radius: 50%; }
 
 /* Card grid fix: avoid text crunch at mid-widths */
-.card-grid-2 {
+.bias-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 12px;
@@ -161,13 +161,13 @@
 
 /* === Module-specific extracted styles === */
 
-.probability-text-2 {
+.intro-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:12px;
 }
 
-.probability-text-3 {
+.small-caption {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:4px;
@@ -188,7 +188,7 @@
   overflow:visible;
 }
 
-.probability-row-2 {
+.risk-scenario-row {
   display:flex;
   gap:10px;
   align-items:center;
@@ -214,46 +214,46 @@
   line-height:1.8;
 }
 
-.probability-panel-2 {
+.callout-panel {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:11px 14px;
   margin-bottom:1rem;
 }
 
-.probability-label-3 {
+.callout-title {
   font-size:13px;
   font-weight:500;
   color:var(--color-text-primary);
   margin-bottom:5px;
 }
 
-.probability-text-4 {
+.callout-body {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
 }
 
-.probability-media-2 {
+.chart-svg {
   width:100%;
   height:auto;
 }
 
-.probability-text-5 {
+.weighting-note {
   font-size:11px;
   color:var(--color-text-secondary);
   line-height:1.5;
   margin-top:4px;
 }
 
-.probability-row-3 {
+.prevalence-row {
   display:flex;
   align-items:center;
   gap:12px;
   margin-bottom:8px;
 }
 
-.probability-text-6 {
+.false-positive-label {
   font-size:12px;
   color:var(--color-text-secondary);
   min-width:160px;
@@ -266,7 +266,7 @@
   text-align:right;
 }
 
-.probability-row-4 {
+.accuracy-row {
   display:flex;
   align-items:center;
   gap:12px;
@@ -280,13 +280,13 @@
   margin-bottom:6px;
 }
 
-.probability-text-7 {
+.intro-note-tight {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:10px;
 }
 
-.probability-panel-3 {
+.false-positive-insight {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:9px 12px;
@@ -296,14 +296,14 @@
   margin-top:8px;
 }
 
-.probability-row-5 {
+.birthday-slider-row {
   display:flex;
   align-items:center;
   gap:12px;
   margin-bottom:12px;
 }
 
-.probability-row-6 {
+.birthday-result-row {
   display:flex;
   align-items:baseline;
   gap:12px;
@@ -322,7 +322,7 @@
   color:var(--color-text-secondary);
 }
 
-.probability-media-3 {
+.birthday-track {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   height:14px;
@@ -336,21 +336,21 @@
   transition:width 0.2s;
 }
 
-.probability-text-9 {
+.risk-scale-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin-top:8px;
   line-height:1.5;
 }
 
-.probability-text-10 {
+.body-intro {
   font-size:13px;
   color:var(--color-text-secondary);
   line-height:1.7;
   margin-bottom:10px;
 }
 
-.probability-panel-4 {
+.ev-formula-panel {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:10px 13px;
@@ -381,7 +381,7 @@
   line-height:1.6;
 }
 
-.probability-row-7 {
+.monty-actions {
   display:flex;
   gap:8px;
   justify-content:center;
@@ -404,7 +404,7 @@
   font-weight:500;
 }
 
-.probability-div-style-2 {
+.monty-divider {
   border-top:0.5px solid var(--color-border-tertiary);
   margin:14px 0 10px;
 }
@@ -424,7 +424,7 @@
   background:var(--color-background-secondary);
 }
 
-.probability-row-10 {
+.lln-footer {
   display:flex;
   justify-content:space-between;
   align-items:baseline;
@@ -438,7 +438,7 @@
   color:var(--color-text-primary);
 }
 
-.probability-row-11 {
+.conditional-slider-row {
   display:flex;
   align-items:center;
   gap:12px;
@@ -446,7 +446,7 @@
   margin-bottom:8px;
 }
 
-.probability-text-11 {
+.conditional-label {
   font-size:12px;
   color:var(--color-text-secondary);
   min-width:130px;
@@ -471,7 +471,7 @@
   align-items:start;
 }
 
-.probability-label-4 {
+.formula-label {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
@@ -480,7 +480,7 @@
   letter-spacing:0.05em;
 }
 
-.probability-text-12 {
+.conditional-error-note {
   font-size:12px;
   color:var(--color-text-secondary);
   line-height:1.6;

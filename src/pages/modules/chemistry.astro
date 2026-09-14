@@ -43,7 +43,7 @@ const mod = modules.find((m) => m.id === 15)!;
     <!-- The atoms that matter most — SVG periodic highlight -->
     <div class="content-panel">
       <div class="inline-card-title">The six atoms that build nearly all organic molecules</div>
-      <div class="chemistry-text-2">Over 99% of biochemistry is built from just six elements: C, H, O, N, P, S. The rest (iron in haemoglobin, magnesium in chlorophyll, etc.) are trace actors.</div>
+      <div class="elements-note">Over 99% of biochemistry is built from just six elements: C, H, O, N, P, S. The rest (iron in haemoglobin, magnesium in chlorophyll, etc.) are trace actors.</div>
       <svg class="chemistry-media" viewBox="0 0 630 160" xmlns="http://www.w3.org/2000/svg">
   	<text x="10" y="15" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui">The CHONPS elements — the alphabet of life</text>
   
@@ -101,18 +101,18 @@ const mod = modules.find((m) => m.id === 15)!;
     <div class="content-panel">
       <div class="panel-title">What makes a molecule polar or nonpolar?</div>
       <div class="two-col-grid">
-        <div class="chemistry-panel-2">
-          <div class="chemistry-label-3">Polar molecules</div>
-          <div class="chemistry-text-3">Electrons are unevenly distributed — one end is slightly negative (δ−), one slightly positive (δ+). This creates a "dipole" — a tiny magnet.</div>
-          <div class="chemistry-text-4"><strong>Examples:</strong> Water (H₂O), ethanol, ammonia, sugar<br><strong>Dissolves in:</strong> Other polar solvents (water)<br><strong>Property:</strong> High boiling points, form hydrogen bonds</div>
+        <div class="polar-panel">
+          <div class="polar-title">Polar molecules</div>
+          <div class="polar-desc">Electrons are unevenly distributed — one end is slightly negative (δ−), one slightly positive (δ+). This creates a "dipole" — a tiny magnet.</div>
+          <div class="polar-examples"><strong>Examples:</strong> Water (H₂O), ethanol, ammonia, sugar<br><strong>Dissolves in:</strong> Other polar solvents (water)<br><strong>Property:</strong> High boiling points, form hydrogen bonds</div>
         </div>
-        <div class="chemistry-panel-3">
-          <div class="chemistry-label-4">Nonpolar molecules</div>
-          <div class="chemistry-text-5">Electrons are evenly distributed — no partial charges. The molecule has no dipole. Atoms pull electrons equally.</div>
-          <div class="chemistry-text-6"><strong>Examples:</strong> Oils, fats, waxes, petrol, CO₂, O₂<br><strong>Dissolves in:</strong> Other nonpolar solvents<br><strong>Property:</strong> Low boiling points, don't bond with water</div>
+        <div class="nonpolar-panel">
+          <div class="nonpolar-title">Nonpolar molecules</div>
+          <div class="nonpolar-desc">Electrons are evenly distributed — no partial charges. The molecule has no dipole. Atoms pull electrons equally.</div>
+          <div class="nonpolar-examples"><strong>Examples:</strong> Oils, fats, waxes, petrol, CO₂, O₂<br><strong>Dissolves in:</strong> Other nonpolar solvents<br><strong>Property:</strong> Low boiling points, don't bond with water</div>
         </div>
       </div>
-      <div class="chemistry-panel-4">
+      <div class="insight-note">
         <strong class="text-primary">Why soap works:</strong> Soap molecules are amphiphilic — they have a polar (water-loving, hydrophilic) head and a nonpolar (fat-loving, hydrophobic) tail. The tail grabs onto grease; the head stays in water. The soap molecule literally bridges two incompatible worlds, surrounding grease in a micelle that water can then wash away.
       </div>
     </div>
@@ -120,9 +120,9 @@ const mod = modules.find((m) => m.id === 15)!;
     <!-- Electronegativity scale — SVG -->
     <div class="content-panel">
       <div class="inline-card-title">Electronegativity — who wins the electron tug-of-war?</div>
-      <div class="chemistry-text-7">Polarity comes from electronegativity: how strongly an atom pulls shared electrons toward itself. When two bonded atoms differ greatly in electronegativity, electrons cluster near the more electronegative one — creating a dipole.</div>
+      <div class="section-intro">Polarity comes from electronegativity: how strongly an atom pulls shared electrons toward itself. When two bonded atoms differ greatly in electronegativity, electrons cluster near the more electronegative one — creating a dipole.</div>
       <!-- SVG scale -->
-      <svg class="chemistry-media-2" viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg">
+      <svg class="figure-svg" viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg">
         <!-- gradient track -->
         <defs>
           <linearGradient id="enGrad" x1="0" y1="0" x2="1" y2="0">
@@ -157,7 +157,7 @@ const mod = modules.find((m) => m.id === 15)!;
         <text x="498" y="50" font-size="11" fill="#A32D2D" text-anchor="middle" font-family="monospace" font-weight="600">F</text>
         <text x="498" y="62" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle" font-family="system-ui">4.0</text>
       </svg>
-      <div class="chemistry-panel-4">
+      <div class="insight-note">
         The C–H bond (difference: 0.3) is nearly nonpolar — this is why hydrocarbons don't interact with water. The O–H bond (difference: 1.2) is strongly polar — this is why water forms hydrogen bonds and has an anomalously high boiling point of 100°C despite its tiny molecular weight. Fluorine (EN = 4.0) is the most electronegative element, making C–F bonds extremely strong and chemically inert (used in non-stick coatings like PTFE).
       </div>
     </div>
@@ -179,7 +179,7 @@ const mod = modules.find((m) => m.id === 15)!;
           <p class="bond-desc">Exists between ALL molecules — polar or not. Caused by fleeting electron imbalances. Weak per molecule (~1–5 kJ/mol) but adds up: gecko feet stick to glass via millions of these forces.</p>
         </div>
       </div>
-      <div class="chemistry-panel-4">
+      <div class="insight-note">
         <strong class="text-primary">Why water is weird:</strong> Water (MW = 18) should be a gas at room temperature — H₂S (MW = 34, same group) boils at −60°C. But each water molecule can form up to 4 hydrogen bonds simultaneously, creating a cohesive liquid network. This is why water boils at 100°C, why ice floats (hydrogen-bonded crystal is less dense than liquid), and why water has the highest surface tension of any non-metallic liquid.
       </div>
     </div>
@@ -190,9 +190,9 @@ const mod = modules.find((m) => m.id === 15)!;
     <h2 class="sec" id="part-c-the-main-functional-groups-your-chemistry-vocabulary">Part C · the main functional groups — your chemistry vocabulary</h2>
 
     <!-- Quick-reference SVG summary strip -->
-    <div class="chemistry-panel-5">
-      <div class="chemistry-label-5">Quick reference — functional group at a glance</div>
-      <svg class="chemistry-media-3" viewBox="0 0 740 56" xmlns="http://www.w3.org/2000/svg">
+    <div class="reference-panel">
+      <div class="reference-title">Quick reference — functional group at a glance</div>
+      <svg class="functional-group-chart" viewBox="0 0 740 56" xmlns="http://www.w3.org/2000/svg">
         <!-- Alkane -->
         <rect x="2" y="2" width="88" height="52" rx="7" fill="#F1EFE8" stroke="#C8C4B0" stroke-width="0.8"/>
         <text x="46" y="20" font-size="9" fill="#444441" text-anchor="middle" font-family="system-ui" font-weight="600">ALKANE</text>
@@ -389,17 +389,17 @@ const mod = modules.find((m) => m.id === 15)!;
 
     <div class="content-panel">
       <div class="panel-title">pH 0–14: from battery acid to drain cleaner</div>
-      <div class="chemistry-row-2">
-        <div class="chemistry-row-3"><div class="chemistry-label-6">0</div><div class="chemistry-row-4"><span class="chemistry-text-8">Battery acid, stomach acid (pH ~1.5)</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-6">2</div><div class="chemistry-row-5"><span class="chemistry-text-9">Lemon juice (~2.2), vinegar (~2.5)</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-7">4</div><div class="chemistry-row-6"><span class="chemistry-text-10">Tomato juice (~4), coffee (~5)</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-8">7</div><div class="chemistry-row-7"><span class="chemistry-text-9">Pure water — neutral</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-8">7.4</div><div class="chemistry-row-8"><span class="chemistry-text-11">Human blood — must stay here</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-9">9</div><div class="chemistry-row-9"><span class="chemistry-text-9">Baking soda (~8.3), seawater (~8.1)</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-9">11</div><div class="chemistry-row-10"><span class="chemistry-text-9">Ammonia (~11), bleach (~12)</span></div></div>
-        <div class="chemistry-row-3"><div class="chemistry-label-10">14</div><div class="chemistry-row-11"><span class="chemistry-text-12">Drain cleaner, NaOH</span></div></div>
+      <div class="ph-scale">
+        <div class="ph-row"><div class="ph-num-red">0</div><div class="ph-bar-battery-acid"><span class="ph-bar-text-blush">Battery acid, stomach acid (pH ~1.5)</span></div></div>
+        <div class="ph-row"><div class="ph-num-red">2</div><div class="ph-bar-lemon"><span class="ph-bar-text-white">Lemon juice (~2.2), vinegar (~2.5)</span></div></div>
+        <div class="ph-row"><div class="ph-num-brown">4</div><div class="ph-bar-tomato"><span class="ph-bar-text-dark">Tomato juice (~4), coffee (~5)</span></div></div>
+        <div class="ph-row"><div class="ph-num-green">7</div><div class="ph-bar-water"><span class="ph-bar-text-white">Pure water — neutral</span></div></div>
+        <div class="ph-row"><div class="ph-num-green">7.4</div><div class="ph-bar-blood"><span class="ph-bar-text-deep-green">Human blood — must stay here</span></div></div>
+        <div class="ph-row"><div class="ph-num-blue">9</div><div class="ph-bar-baking-soda"><span class="ph-bar-text-white">Baking soda (~8.3), seawater (~8.1)</span></div></div>
+        <div class="ph-row"><div class="ph-num-blue">11</div><div class="ph-bar-ammonia"><span class="ph-bar-text-white">Ammonia (~11), bleach (~12)</span></div></div>
+        <div class="ph-row"><div class="ph-num-navy">14</div><div class="ph-bar-drain-cleaner"><span class="ph-bar-text-pale-blue">Drain cleaner, NaOH</span></div></div>
       </div>
-      <div class="chemistry-panel-4">
+      <div class="insight-note">
         <strong class="text-primary">pH is logarithmic.</strong> Each step is 10× more acidic or alkaline. pH 3 is 10× more acidic than pH 4, and 100× more acidic than pH 5. Stomach acid (pH ~1.5) is roughly 30,000× more acidic than blood (pH 7.4). Your body maintains blood pH within ±0.1 of 7.4 — outside pH 6.8 or 7.8, death occurs.
       </div>
     </div>
@@ -407,13 +407,13 @@ const mod = modules.find((m) => m.id === 15)!;
     <!-- Interactive pH calculator -->
     <div class="content-panel">
       <div class="panel-title-spaced">Interactive: how much more acidic is X than Y?</div>
-      <div class="chemistry-row-12">
-        <div class="chemistry-media-4">
-          <div class="chemistry-text-13">pH of substance A</div>
+      <div class="ph-compare-row">
+        <div class="ph-input-field">
+          <div class="ph-input-label">pH of substance A</div>
           <input class="pha" type="number" id="phA" value="2" min="0" max="14" step="0.1">
         </div>
-        <div class="chemistry-media-4">
-          <div class="chemistry-text-13">pH of substance B</div>
+        <div class="ph-input-field">
+          <div class="ph-input-label">pH of substance B</div>
           <input class="pha" type="number" id="phB" value="7" min="0" max="14" step="0.1">
         </div>
         <button class="calcph-control" onclick="calcPH()">Compare</button>
@@ -447,7 +447,7 @@ const mod = modules.find((m) => m.id === 15)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Every smell is a molecule landing on a receptor</div>
-      <div class="chemistry-text-7">Smell (olfaction) works by molecules binding to ~400 different receptor proteins in your nose. Each receptor fires for a range of molecular shapes. Your brain reads the pattern as a smell. Pick a familiar smell below to see the chemistry behind it.</div>
+      <div class="section-intro">Smell (olfaction) works by molecules binding to ~400 different receptor proteins in your nose. Each receptor fires for a range of molecular shapes. Your brain reads the pattern as a smell. Pick a familiar smell below to see the chemistry behind it.</div>
       <div class="smell-btn-row" id="smellBtnRow">
         <button class="showmol-control" onclick="showSmell('vanilla')"  >Vanilla</button>
         <button class="showmol-control" onclick="showSmell('banana')"   >Banana</button>
@@ -464,26 +464,26 @@ const mod = modules.find((m) => m.id === 15)!;
     <!-- Taste chemistry -->
     <div class="content-panel">
       <div class="panel-title-spaced">The five tastes — and their chemical triggers</div>
-      <div class="chemistry-grid-2">
-        <div class="chemistry-panel-6">
-          <div class="chemistry-label-11">Sweet</div>
-          <div class="chemistry-text-14">Sugars (glucose, fructose, sucrose) bind to T1R2/T1R3 receptor dimers. Fructose is ~1.7× sweeter than glucose despite being the same formula (C₆H₁₂O₆) — different shape, different receptor fit.</div>
+      <div class="taste-grid">
+        <div class="taste-panel-sweet">
+          <div class="taste-title-sweet">Sweet</div>
+          <div class="taste-desc-sweet">Sugars (glucose, fructose, sucrose) bind to T1R2/T1R3 receptor dimers. Fructose is ~1.7× sweeter than glucose despite being the same formula (C₆H₁₂O₆) — different shape, different receptor fit.</div>
         </div>
-        <div class="chemistry-panel-7">
-          <div class="chemistry-label-12">Sour</div>
-          <div class="chemistry-text-15">H⁺ ions (from acids like citric, acetic, lactic) activate proton-sensing channels. The more H⁺, the lower the pH, the sourer the taste. Vinegar (pH 2.5) vs lemon (pH 2.2) — directly measurable acidity.</div>
+        <div class="taste-panel-sour">
+          <div class="taste-title-sour">Sour</div>
+          <div class="taste-desc-sour">H⁺ ions (from acids like citric, acetic, lactic) activate proton-sensing channels. The more H⁺, the lower the pH, the sourer the taste. Vinegar (pH 2.5) vs lemon (pH 2.2) — directly measurable acidity.</div>
         </div>
-        <div class="chemistry-panel-8">
-          <div class="chemistry-label-13">Salty</div>
-          <div class="chemistry-text-16">Na⁺ ions from sodium chloride pass directly through ENaC ion channels on taste cells. Other salts (KCl, MgCl₂) taste differently because their cations activate different channels or in different proportions.</div>
+        <div class="taste-panel-salty">
+          <div class="taste-title-salty">Salty</div>
+          <div class="taste-desc-salty">Na⁺ ions from sodium chloride pass directly through ENaC ion channels on taste cells. Other salts (KCl, MgCl₂) taste differently because their cations activate different channels or in different proportions.</div>
         </div>
-        <div class="chemistry-panel-9">
-          <div class="chemistry-label-14">Bitter</div>
-          <div class="chemistry-text-17">~25 different TAS2R receptors detect a huge variety of compounds — mostly alkaloids and glucosinolates that are toxic in plants. Caffeine, quinine, and Brussels sprouts all trigger bitterness. Evolved as a toxin-detection system.</div>
+        <div class="taste-panel-bitter">
+          <div class="taste-title-bitter">Bitter</div>
+          <div class="taste-desc-bitter">~25 different TAS2R receptors detect a huge variety of compounds — mostly alkaloids and glucosinolates that are toxic in plants. Caffeine, quinine, and Brussels sprouts all trigger bitterness. Evolved as a toxin-detection system.</div>
         </div>
-        <div class="chemistry-panel-10">
-          <div class="chemistry-label-15">Umami</div>
-          <div class="chemistry-text-18">Glutamate (an amino acid) and nucleotides (IMP, GMP) bind the T1R1/T1R3 receptor. Identified in 1908 by Kikunae Ikeda studying kombu seaweed. Naturally concentrated in Parmesan, anchovies, mushrooms, tomatoes, and soy sauce.</div>
+        <div class="taste-panel-umami">
+          <div class="taste-title-umami">Umami</div>
+          <div class="taste-desc-umami">Glutamate (an amino acid) and nucleotides (IMP, GMP) bind the T1R1/T1R3 receptor. Identified in 1908 by Kikunae Ikeda studying kombu seaweed. Naturally concentrated in Parmesan, anchovies, mushrooms, tomatoes, and soy sauce.</div>
         </div>
       </div>
     </div>
@@ -495,10 +495,10 @@ const mod = modules.find((m) => m.id === 15)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Same molecular weight, wildly different boiling points</div>
-      <div class="chemistry-text-7">Molecular weight alone doesn't determine boiling point — intermolecular forces do. Two molecules of similar mass but different functional groups can have boiling points 100°C apart.</div>
+      <div class="section-intro">Molecular weight alone doesn't determine boiling point — intermolecular forces do. Two molecules of similar mass but different functional groups can have boiling points 100°C apart.</div>
 
       <!-- SVG bar chart of boiling points -->
-      <svg class="chemistry-media-2" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
+      <svg class="figure-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
         <text x="10" y="14" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui">Boiling points (°C at 1 atm) — organised by functional group</text>
         <!-- y-axis: 0°C at y=170, 200°C at y=30. Range: -200°C to 200°C. Scale: 170px for 400°C. 1°C = 0.425px -->
         <!-- zero line -->
@@ -566,7 +566,7 @@ const mod = modules.find((m) => m.id === 15)!;
         <text x="482" y="75" font-size="9" fill="#0C447C" font-family="system-ui">Should boil at ~−80°C</text>
         <text x="482" y="86" font-size="9" fill="#0C447C" font-family="system-ui">if not for H-bonds!</text>
       </svg>
-      <div class="chemistry-panel-4">
+      <div class="insight-note">
         Butanone (ketone, MW 72) and pentane (alkane, MW 72) have identical molecular weights yet boil 44°C apart — because the C=O group creates dipole-dipole attractions that pentane lacks. Water (MW 18) should boil around −80°C based on size alone; its actual boiling point of 100°C is entirely due to the network of hydrogen bonds each molecule forms.
       </div>
     </div>
@@ -578,36 +578,36 @@ const mod = modules.find((m) => m.id === 15)!;
 
     <div class="content-panel">
       <div class="panel-title">Six kitchen reactions — and what's actually happening</div>
-      <div class="chemistry-grid-3">
+      <div class="kitchen-reactions-grid">
 
         <div class="sub-card-roomy">
           <div class="mini-card-title">🥩 Maillard reaction</div>
-          <div class="chemistry-text-19">When protein (amine groups on amino acids) reacts with sugar (carbonyl groups) at temperatures above ~140°C, hundreds of new flavour and colour molecules form. This is browning: bread crust, seared meat, coffee roasting. It is NOT caramelisation (sugar-only) — it requires both amino acids and sugars.</div>
+          <div class="reaction-desc">When protein (amine groups on amino acids) reacts with sugar (carbonyl groups) at temperatures above ~140°C, hundreds of new flavour and colour molecules form. This is browning: bread crust, seared meat, coffee roasting. It is NOT caramelisation (sugar-only) — it requires both amino acids and sugars.</div>
         </div>
 
         <div class="sub-card-roomy">
           <div class="mini-card-title">🍰 Baking soda + acid</div>
-          <div class="chemistry-text-19">NaHCO₃ (baking soda) is a base. When it contacts an acid (buttermilk, vinegar, lemon juice), it reacts: NaHCO₃ + H⁺ → Na⁺ + H₂O + CO₂. The CO₂ gas creates bubbles that make cakes rise. Baking powder is baking soda premixed with a dry acid (cream of tartar) — just add water to activate.</div>
+          <div class="reaction-desc">NaHCO₃ (baking soda) is a base. When it contacts an acid (buttermilk, vinegar, lemon juice), it reacts: NaHCO₃ + H⁺ → Na⁺ + H₂O + CO₂. The CO₂ gas creates bubbles that make cakes rise. Baking powder is baking soda premixed with a dry acid (cream of tartar) — just add water to activate.</div>
         </div>
 
         <div class="sub-card-roomy">
           <div class="mini-card-title">🥚 Denaturing proteins (cooking eggs)</div>
-          <div class="chemistry-text-19">Egg white is ~10% protein (mainly ovalbumin). Heat breaks the hydrogen bonds and disulfide bridges that keep the protein folded in its 3D shape. The protein unfolds ("denatures"), exposing hydrophobic regions that stick to each other — forming the opaque solid you see. This is irreversible: you cannot un-cook an egg.</div>
+          <div class="reaction-desc">Egg white is ~10% protein (mainly ovalbumin). Heat breaks the hydrogen bonds and disulfide bridges that keep the protein folded in its 3D shape. The protein unfolds ("denatures"), exposing hydrophobic regions that stick to each other — forming the opaque solid you see. This is irreversible: you cannot un-cook an egg.</div>
         </div>
 
         <div class="sub-card-roomy">
           <div class="mini-card-title">🍬 Caramelisation</div>
-          <div class="chemistry-text-19">Heating sucrose above ~160°C breaks the glycosidic bond into glucose + fructose, then drives dehydration and polymerisation reactions, forming hundreds of compounds including furans (nutty), diacetyl (buttery), and brown polymers (caramelans). This is purely sugar chemistry — no proteins involved. The smell of caramel is a complex mixture, not a single molecule.</div>
+          <div class="reaction-desc">Heating sucrose above ~160°C breaks the glycosidic bond into glucose + fructose, then drives dehydration and polymerisation reactions, forming hundreds of compounds including furans (nutty), diacetyl (buttery), and brown polymers (caramelans). This is purely sugar chemistry — no proteins involved. The smell of caramel is a complex mixture, not a single molecule.</div>
         </div>
 
         <div class="sub-card-roomy">
           <div class="mini-card-title">🫒 Emulsification (making mayonnaise)</div>
-          <div class="chemistry-text-19">Oil and water don't mix — but egg yolk contains lecithin (phosphatidylcholine), an amphiphilic molecule with a polar head and nonpolar tail. It coats tiny oil droplets and keeps them suspended in water. The result: a stable emulsion. The same principle applies to milk, cream, and vinaigrette (which lacks a proper emulsifier, which is why it separates).</div>
+          <div class="reaction-desc">Oil and water don't mix — but egg yolk contains lecithin (phosphatidylcholine), an amphiphilic molecule with a polar head and nonpolar tail. It coats tiny oil droplets and keeps them suspended in water. The result: a stable emulsion. The same principle applies to milk, cream, and vinaigrette (which lacks a proper emulsifier, which is why it separates).</div>
         </div>
 
         <div class="sub-card-roomy">
           <div class="mini-card-title">🍋 Acid ceviche (cold cooking)</div>
-          <div class="chemistry-text-19">Citric acid in lime juice (pH ~2.2) denatures fish proteins without heat. The H⁺ ions disrupt the hydrogen bonds maintaining the protein's native structure, unfolding and cross-linking the proteins — the fish turns opaque and firms up exactly as heat would. The result is chemically "cooked," though not safe from all pathogens.</div>
+          <div class="reaction-desc">Citric acid in lime juice (pH ~2.2) denatures fish proteins without heat. The H⁺ ions disrupt the hydrogen bonds maintaining the protein's native structure, unfolding and cross-linking the proteins — the fish turns opaque and firms up exactly as heat would. The result is chemically "cooked," though not safe from all pathogens.</div>
         </div>
 
       </div>
