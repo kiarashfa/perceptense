@@ -267,20 +267,23 @@
   font-weight:600;
 }
 
+.dist-leg-dot {
+  background: var(--tint-background);
+}
 .dist-leg-dot-style {
-  background:#8A6DB5;
+  --tint-background: #8A6DB5;
 }
 
 .dist-leg-dot-coral {
-  background:#E07B5A;
+  --tint-background: #E07B5A;
 }
 
 .dist-leg-dot-teal {
-  background:#5DCAA5;
+  --tint-background: #5DCAA5;
 }
 
 .dist-leg-dot-lavender {
-  background:#AFA9EC;
+  --tint-background: #AFA9EC;
 }
 
 .poem-citation {
@@ -296,6 +299,6 @@
 }
 
 .dist-leg-dot-indigo {
-  background:#534AB7;
+  --tint-background: #534AB7;
 }
   

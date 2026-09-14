@@ -133,24 +133,27 @@
   width: var(--data-width);
 }
 
+.dist-legend-dot {
+  background: var(--tint-background);
+}
 .dist-legend-dot-style {
-  background:#3A6BB0;
+  --tint-background: #3A6BB0;
 }
 
 .dist-legend-dot-purple {
-  background:#8B3A9C;
+  --tint-background: #8B3A9C;
 }
 
 .dist-legend-dot-orange {
-  background:#C85C14;
+  --tint-background: #C85C14;
 }
 
 .dist-legend-dot-green {
-  background:#2C8C6A;
+  --tint-background: #2C8C6A;
 }
 
 .dist-legend-dot-khaki {
-  background:#A09060;
+  --tint-background: #A09060;
 }
 
 .elem-card-icon-style {
