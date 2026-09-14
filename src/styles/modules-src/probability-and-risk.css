@@ -45,6 +45,14 @@
   border-color: #A32D2D;
   background: var(--color-background-danger);
 }
+html[data-theme="dark"] .mh-door.mh-chosen { border-color: #85B7EB; }
+html[data-theme="dark"] .mh-door.mh-winner { border-color: #5DCAA5; }
+html[data-theme="dark"] .mh-door.mh-loser  { border-color: #F09595; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .mh-door.mh-chosen { border-color: #85B7EB; }
+  html[data-theme="auto"] .mh-door.mh-winner { border-color: #5DCAA5; }
+  html[data-theme="auto"] .mh-door.mh-loser  { border-color: #F09595; }
+}
 .mh-door-num {
   position: absolute;
   top: 6px;
@@ -347,5 +355,45 @@
   color:var(--color-text-secondary);
   line-height:1.6;
   margin-top:6px;
+}
+
+/* Semantic signal colours used as text throughout this module's JS-built
+   content (risk scenarios, false-positive results, EV outcomes, Monty Hall
+   messages, conditional-probability results). Several literal values
+   failed 4.5:1 against the page background in one theme or the other —
+   see memory.md for why a shared text-<colour> utility can't be used here
+   (these sit on page background, not a fixed badge). Classes rather than
+   custom properties on html/:root: build-styles.mjs's namespacing drops
+   a bare "html[data-theme=dark] { }" block's attribute selector entirely
+   (no anchor node to insert the namespace before), which would have made
+   the dark values apply unconditionally — a compound class selector has
+   a real anchor and namespaces correctly, the same shape already used for
+   .bzone-temp / .speed-val in other modules. Placed last in the file: a
+   same-specificity single-class rule loses a tie to whichever rule comes
+   later in source order, and .fp-result / .ev-result set their own `color`
+   earlier in this file — placing these after them is what makes the
+   override actually apply (see gotcha 17 in memory.md). */
+.pr-c-red     { color: #A32D2D; fill: #A32D2D; }
+.pr-c-teal    { color: #085041; fill: #085041; }
+.pr-c-amber   { color: #633806; fill: #633806; }
+.pr-c-blue    { color: #185FA5; fill: #185FA5; }
+.pr-c-orange  { color: #712B13; fill: #712B13; }
+.pr-c-caution { color: #633806; fill: #633806; }
+.pr-c-green   { color: #27500A; fill: #27500A; }
+html[data-theme="dark"] .pr-c-red     { color: #F09595; fill: #F09595; }
+html[data-theme="dark"] .pr-c-teal    { color: #5DCAA5; fill: #5DCAA5; }
+html[data-theme="dark"] .pr-c-amber   { color: #EF9F27; fill: #EF9F27; }
+html[data-theme="dark"] .pr-c-blue    { color: #85B7EB; fill: #85B7EB; }
+html[data-theme="dark"] .pr-c-orange  { color: #F0997B; fill: #F0997B; }
+html[data-theme="dark"] .pr-c-caution { color: #F5C563; fill: #F5C563; }
+html[data-theme="dark"] .pr-c-green   { color: #9FE1CB; fill: #9FE1CB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .pr-c-red     { color: #F09595; fill: #F09595; }
+  html[data-theme="auto"] .pr-c-teal    { color: #5DCAA5; fill: #5DCAA5; }
+  html[data-theme="auto"] .pr-c-amber   { color: #EF9F27; fill: #EF9F27; }
+  html[data-theme="auto"] .pr-c-blue    { color: #85B7EB; fill: #85B7EB; }
+  html[data-theme="auto"] .pr-c-orange  { color: #F0997B; fill: #F0997B; }
+  html[data-theme="auto"] .pr-c-caution { color: #F5C563; fill: #F5C563; }
+  html[data-theme="auto"] .pr-c-green   { color: #9FE1CB; fill: #9FE1CB; }
 }
   

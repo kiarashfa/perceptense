@@ -243,7 +243,7 @@ const mod = modules.find((m) => m.id === 12)!;
         <!-- starts high (overweight small probs), flattens through middle, rises again at end -->
         <path d="M 50,120 C 80,40 120,38 180,58 C 260,82 360,82 460,72 C 530,64 580,40 620,28"
               fill="none" stroke="#378ADD" stroke-width="2"/>
-        <text x="200" y="46" font-size="9" fill="#378ADD" font-weight="500">how we actually perceive it</text>
+        <text x="200" y="46" font-size="9" class="pr-c-blue" font-weight="500">how we actually perceive it</text>
         <!-- Annotation: overweight rare -->
         <line x1="90" y1="60" x2="90" y2="110" stroke="var(--color-border-tertiary)" stroke-width="0.7" stroke-dasharray="3,2"/>
         <text x="92" y="78" font-size="8.5" fill="var(--color-text-secondary)">overweight</text>
@@ -661,7 +661,7 @@ const riskScenarios = [
     absolute: '2% → 1% — an absolute reduction of 1 percentage point',
     nnt: '100 patients must take the drug for 1 year to prevent 1 heart attack (NNT = 100)',
     verdict: 'Real but modest. Worth taking if side effects are low. Would you take a daily pill, with potential side effects, to reduce your personal risk from 2% to 1%? That is the actual decision.',
-    col: '#1D9E75'
+    col: 'pr-c-teal'
   },
   {
     headline: 'Processed meat increases colon cancer risk by 18%',
@@ -670,7 +670,7 @@ const riskScenarios = [
     absolute: '5% → 5.9% — an absolute increase of ~0.9 percentage points',
     nnt: '~110 people would need to eat processed meat regularly for a lifetime for 1 additional case of colon cancer',
     verdict: 'A real but small absolute risk. The 18% figure is technically accurate but creates false alarm. Other lifestyle factors (exercise, obesity, alcohol) have far larger absolute effects on cancer risk.',
-    col: '#EF9F27'
+    col: 'pr-c-amber'
   },
   {
     headline: 'Vaccine is 95% effective',
@@ -679,7 +679,7 @@ const riskScenarios = [
     absolute: '1% → 0.05% — an absolute reduction of 0.95 percentage points',
     nnt: 'About 105 people vaccinated to prevent 1 case — but those prevented cases include severe illness and death',
     verdict: 'For common or severe diseases, even modest absolute reductions are enormously valuable at population scale. Vaccinating 100 million people with NNT=105 prevents ~1 million cases.',
-    col: '#378ADD'
+    col: 'pr-c-blue'
   },
   {
     headline: '"Coffee doubles your risk of X"',
@@ -688,7 +688,7 @@ const riskScenarios = [
     absolute: '0.5 → 1 per 100,000 — still only 1 in 100,000',
     nnt: '100,000 coffee drinkers would need to be tracked for a year to observe 0.5 extra cases',
     verdict: '"Doubles the risk" of a rare event is often meaningless in absolute terms. Always ask the base rate before worrying about a relative risk increase.',
-    col: '#D85A30'
+    col: 'pr-c-orange'
   }
 ];
 
@@ -698,9 +698,9 @@ function updateRisk() {
   document.getElementById('risk-display').innerHTML =
     `<div style="font-size:15px; font-weight:500; color:var(--color-text-primary); margin-bottom:10px;">"${s.headline}"</div>` +
     `<div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px;">` +
-    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What the headline says</div><div style="font-size:13px; color:#A32D2D; font-weight:500;">${s.relative}</div></div>` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What the headline says</div><div class="pr-c-red" style="font-size:13px; font-weight:500;">${s.relative}</div></div>` +
     `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Base rate (what you need to know)</div><div style="font-size:13px; color:var(--color-text-primary);">${s.base}</div></div>` +
-    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Absolute risk (the real story)</div><div style="font-size:13px; color:${s.col}; font-weight:500;">${s.absolute}</div></div>` +
+    `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Absolute risk (the real story)</div><div class="${s.col}" style="font-size:13px; font-weight:500;">${s.absolute}</div></div>` +
     `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Number needed to treat (NNT)</div><div style="font-size:13px; color:var(--color-text-primary);">${s.nnt}</div></div>` +
     `</div>` +
     `<div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:10px 12px; font-size:12px; color:var(--color-text-secondary); line-height:1.6;"><strong style="color:var(--color-text-primary);">Verdict: </strong>${s.verdict}</div>`;
@@ -725,11 +725,11 @@ function updateFP() {
 
   document.getElementById('fp-result').textContent =
     'If you test positive: ' + ppv.toFixed(1) + '% chance you actually have it.';
-  document.getElementById('fp-result').style.color = ppv < 30 ? '#A32D2D' : ppv < 70 ? '#BA7517' : '#27500A';
+  document.getElementById('fp-result').className = 'fp-result ' + (ppv < 30 ? 'pr-c-red' : ppv < 70 ? 'pr-c-caution' : 'pr-c-green');
 
   document.getElementById('fp-explain').innerHTML =
     `In 100,000 tested people: <strong style="color:var(--color-text-primary);">${sick.toLocaleString()} have the disease</strong>, ${healthy.toLocaleString()} do not.<br>` +
-    `The test catches <strong style="color:#1D9E75;">${truePos.toLocaleString()} true positives</strong> but also flags <strong style="color:#A32D2D;">${falsePos.toLocaleString()} false positives</strong>.<br>` +
+    `The test catches <strong class="pr-c-teal">${truePos.toLocaleString()} true positives</strong> but also flags <strong class="pr-c-red">${falsePos.toLocaleString()} false positives</strong>.<br>` +
     `Among all ${total_pos.toLocaleString()} positive results, only ${truePos.toLocaleString()} are real — <strong style="color:var(--color-text-primary);">${ppv.toFixed(1)}%</strong>.<br>` +
     `<span style="font-size:11px;">Tip: try setting prevalence to 1 in 10,000 with a 99% accurate test. The result will shock you.</span>`;
 }
@@ -807,7 +807,7 @@ function drawBdayCurve() {
       const y23 = padT + (1 - bdayProb(23)) * cH;
       return `<line x1="${x23}" y1="${padT}" x2="${x23}" y2="${padT+cH}" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3,2"/>
               <circle cx="${x23}" cy="${y23}" r="4" fill="#1D9E75"/>
-              <text x="${x23+5}" y="${y23-5}" font-size="9" fill="#1D9E75" font-weight="600">23 people = 50.7%</text>`;
+              <text x="${x23+5}" y="${y23-5}" font-size="9" class="pr-c-teal" font-weight="600">23 people = 50.7%</text>`;
     })()}
     <!-- X axis label -->
     <text x="${padL + cW/2}" y="${H}" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">Number of people in the room</text>
@@ -819,14 +819,14 @@ function drawBdayCurve() {
 ======================================================== */
 function drawRiskBars() {
   const risks = [
-    { label: 'Heart disease', rate: 179, col: '#A32D2D' },
-    { label: 'Cancer (all)', rate: 149, col: '#D85A30' },
-    { label: 'Stroke', rate: 36, col: '#EF9F27' },
-    { label: 'Accidents', rate: 28, col: '#BA7517' },
-    { label: 'Respiratory', rate: 40, col: '#633806' },
-    { label: 'Road deaths (UK)', rate: 2.9, col: '#378ADD' },
-    { label: 'Drowning', rate: 1.1, col: '#0C447C' },
-    { label: 'Commercial flight', rate: 0.009, col: '#1D9E75' },
+    { label: 'Heart disease', rate: 179, col: '#A32D2D', txt: '#fff' },
+    { label: 'Cancer (all)', rate: 149, col: '#D85A30', txt: '#1a1a18' },
+    { label: 'Stroke', rate: 36, col: '#EF9F27', txt: '#1a1a18' },
+    { label: 'Accidents', rate: 28, col: '#BA7517', txt: '#1a1a18' },
+    { label: 'Respiratory', rate: 40, col: '#633806', txt: '#fff' },
+    { label: 'Road deaths (UK)', rate: 2.9, col: '#378ADD', txt: '#1a1a18' },
+    { label: 'Drowning', rate: 1.1, col: '#0C447C', txt: '#fff' },
+    { label: 'Commercial flight', rate: 0.009, col: '#1D9E75', txt: '#1a1a18' },
   ];
   const max = Math.max(...risks.map(r => r.rate));
   const wrap = document.getElementById('risk-bars');
@@ -838,7 +838,7 @@ function drawRiskBars() {
       <div class="bl" style="width:130px;">${r.label}</div>
       <div style="flex:1; background:var(--color-background-secondary); border-radius:3px; height:20px; overflow:hidden;">
         <div style="width:${pct}%; background:${r.col}; height:20px; border-radius:3px; display:flex; align-items:center; padding-left:6px; min-width:30px; transition:width 0.3s;">
-          <span style="font-size:10px; font-weight:600; color:#fff; white-space:nowrap;">${display}</span>
+          <span style="font-size:10px; font-weight:600; color:${r.txt}; white-space:nowrap;">${display}</span>
         </div>
       </div>
     </div>`;
@@ -890,10 +890,11 @@ function computeEV() {
   const res = document.getElementById('ev-result');
   const note = document.getElementById('ev-note');
   res.textContent = `Expected value: ${ev.toFixed(2)}`;
-  res.style.color = ev > 0 ? '#1D9E75' : ev < 0 ? '#A32D2D' : 'var(--color-text-primary)';
+  res.className = 'ev-result ' + (ev > 0 ? 'pr-c-teal' : ev < 0 ? 'pr-c-red' : '');
+  res.style.color = ev === 0 ? 'var(--color-text-primary)' : '';
   const probWarn = Math.abs(totalProb - 100) > 0.5;
   note.innerHTML = probWarn
-    ? `<span style="color:#BA7517;">⚠ Probabilities sum to ${totalProb.toFixed(1)}% — they should sum to 100% for a valid expected value.</span>`
+    ? `<span class="pr-c-caution">⚠ Probabilities sum to ${totalProb.toFixed(1)}% — they should sum to 100% for a valid expected value.</span>`
     : `Probabilities sum to ${totalProb.toFixed(1)}%. ${ev > 0 ? 'This is a positive expected value decision.' : ev < 0 ? 'This is a negative expected value decision — you lose on average.' : 'Break-even expected value.'}`;
 }
 
@@ -941,7 +942,7 @@ const evExamples = [
         <div style="font-size:13px; color:var(--color-text-primary);">−£1 × 36/37 = <strong>−£0.973</strong></div>
       </div>
     </div>
-    <div style="font-size:12px; color:var(--color-text-secondary); line-height:1.6;">EV per £1 bet = £0.946 − £0.973 = <strong style="color:#A32D2D;">−£0.027</strong>. The house edge is 2.7% on every spin. It seems small — but if you make 500 bets at £10 each, the expected loss is 500 × £0.27 = £135. The casino applies this edge to millions of bets per day, making their revenue mathematically guaranteed despite individual wins and losses.</div>`
+    <div style="font-size:12px; color:var(--color-text-secondary); line-height:1.6;">EV per £1 bet = £0.946 − £0.973 = <strong class="pr-c-red">−£0.027</strong>. The house edge is 2.7% on every spin. It seems small — but if you make 500 bets at £10 each, the expected loss is 500 × £0.27 = £135. The casino applies this edge to millions of bets per day, making their revenue mathematically guaranteed despite individual wins and losses.</div>`
   }
 ];
 
@@ -1023,8 +1024,8 @@ function renderMH() {
   } else if (mhState.stage === 'result') {
     const won = (mhState.chosen === mhState.carDoor);
     msg.innerHTML = won
-      ? `<strong style="color:#1D9E75;">🎉 You won the car!</strong>`
-      : `<strong style="color:#A32D2D;">🐐 You got a goat.</strong> The car was behind Door ${mhState.carDoor+1}.`;
+      ? `<strong class="pr-c-teal">🎉 You won the car!</strong>`
+      : `<strong class="pr-c-red">🐐 You got a goat.</strong> The car was behind Door ${mhState.carDoor+1}.`;
     resetBtn.style.display = 'inline-block';
   }
 }
@@ -1089,7 +1090,7 @@ function renderMontySimulation() {
       <div class="sim-bar-label">Always switch</div>
       <div class="track-rounded">
         <div class="sim-bar-fill" style="width:${switchPct}%; background:#1D9E75;">
-          <span class="sim-bar-val">${switchPct}% won</span>
+          <span class="sim-bar-val" style="color:#1a1a18;">${switchPct}% won</span>
         </div>
       </div>
     </div>
@@ -1238,16 +1239,16 @@ function updateCond() {
       </div>
       <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
         <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A and B) — both occur</div>
-        <div style="font-size:14px; font-weight:600; color:#378ADD;">${fmt(pBoth)}</div>
+        <div class="pr-c-blue" style="font-size:14px; font-weight:600;">${fmt(pBoth)}</div>
       </div>
       <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
         <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A or B) — at least one</div>
-        <div style="font-size:14px; font-weight:600; color:#1D9E75;">${fmt(pEither)}</div>
+        <div class="pr-c-teal" style="font-size:14px; font-weight:600;">${fmt(pEither)}</div>
       </div>
     </div>
     <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;">
       <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A | B) — probability of A <em>given</em> B has occurred</div>
-      <div style="font-size:14px; font-weight:600; color:${isIndependent ? 'var(--color-text-primary)' : '#D85A30'};">${fmt(pAgivenB)}
+      <div class="${isIndependent ? '' : 'pr-c-orange'}" style="font-size:14px; font-weight:600; color:${isIndependent ? 'var(--color-text-primary)' : ''};">${fmt(pAgivenB)}
         <span style="font-size:11px; font-weight:400; color:var(--color-text-secondary);">
           ${isIndependent ? '= P(A) — knowing B tells you nothing about A' : '≠ P(A) — B raises the probability of A'}
         </span>
