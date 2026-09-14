@@ -135,15 +135,15 @@ const mod = modules.find((m) => m.id === 4)!;
             <svg viewBox="0 0 180 130" width="180" xmlns="http://www.w3.org/2000/svg" aria-label="Energy density comparison chart: fat vs carbs vs protein">
               <text x="90" y="12" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">kcal per gram</text>
               <!-- fat bar -->
-              <rect x="20" y="22" width="140" height="22" rx="3" fill="#EF9F27" opacity="0.85"/>
+              <rect x="20" y="22" width="140" height="22" rx="3" class="nutri-bar-amber" opacity="0.85"/>
               <text x="167" y="37" font-size="9" font-weight="600" fill="var(--color-text-warning)" font-family="system-ui,sans-serif">9</text>
               <text x="24" y="37" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Fat</text>
               <!-- carb bar -->
-              <rect x="20" y="52" width="62" height="22" rx="3" fill="#378ADD" opacity="0.85"/>
+              <rect x="20" y="52" width="62" height="22" rx="3" class="nutri-bar-blue" opacity="0.85"/>
               <text x="88" y="67" font-size="9" font-weight="600" fill="var(--color-text-info)" font-family="system-ui,sans-serif">4</text>
               <text x="24" y="67" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Carbs</text>
               <!-- protein bar -->
-              <rect x="20" y="82" width="62" height="22" rx="3" fill="#1D9E75" opacity="0.85"/>
+              <rect x="20" y="82" width="62" height="22" rx="3" class="nutri-bar-green" opacity="0.85"/>
               <text x="88" y="97" font-size="9" font-weight="600" fill="var(--color-text-success)" font-family="system-ui,sans-serif">4</text>
               <text x="24" y="97" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Protein</text>
               <!-- alcohol note -->
@@ -167,13 +167,13 @@ const mod = modules.find((m) => m.id === 4)!;
             <svg viewBox="0 0 180 120" width="180" xmlns="http://www.w3.org/2000/svg" aria-label="Satiety comparison chart: protein vs carbs vs fat">
               <text x="90" y="12" text-anchor="middle" font-size="9" font-weight="600" fill="var(--color-text-primary)" font-family="system-ui,sans-serif">Satiety per 100 kcal (approx)</text>
               <!-- protein -->
-              <rect x="20" y="20" width="130" height="22" rx="3" fill="#1D9E75" opacity="0.85"/>
+              <rect x="20" y="20" width="130" height="22" rx="3" class="nutri-bar-green" opacity="0.85"/>
               <text x="24" y="35" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Protein ████████████</text>
               <!-- fat -->
-              <rect x="20" y="50" width="90" height="22" rx="3" fill="#EF9F27" opacity="0.85"/>
+              <rect x="20" y="50" width="90" height="22" rx="3" class="nutri-bar-amber" opacity="0.85"/>
               <text x="24" y="65" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Fat ████████</text>
               <!-- carbs -->
-              <rect x="20" y="80" width="60" height="22" rx="3" fill="#378ADD" opacity="0.85"/>
+              <rect x="20" y="80" width="60" height="22" rx="3" class="nutri-bar-blue" opacity="0.85"/>
               <text x="24" y="95" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Carbs ████</text>
               <text x="20" y="113" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Relative — varies by food type &amp; individual</text>
             </svg>
@@ -275,7 +275,7 @@ const mod = modules.find((m) => m.id === 4)!;
       <div class="u-display-flex u-gap-sm u-flex-wrap u-mb-md" role="radiogroup" aria-label="Select a food to see its sugar content">
         <button class="macro-btn active" onclick="showSugar('coke','Can of Coke (330ml)',9,'#E24B4A')" aria-pressed="true">Coke (330ml)</button>
         <button class="macro-btn" onclick="showSugar('snickers','Snickers (52g)',7,'#EF9F27')" aria-pressed="false">Snickers</button>
-        <button class="macro-btn" onclick="showSugar('oj','Orange juice (250ml)',6,'#F4A823')" aria-pressed="false">Orange juice</button>
+        <button class="macro-btn" onclick="showSugar('oj','Orange juice (250ml)',6,'#C8830A')" aria-pressed="false">Orange juice</button>
         <button class="macro-btn" onclick="showSugar('yogurt','Flavoured yogurt (150g)',4,'#1D9E75')" aria-pressed="false">Yogurt</button>
         <button class="macro-btn" onclick="showSugar('ketchup','Ketchup (3 tbsp ~45g)',2,'#C0392B')" aria-pressed="false">Ketchup</button>
         <button class="macro-btn" onclick="showSugar('apple','Apple (medium ~182g)',5,'var(--accent)')" aria-pressed="false">Apple</button>
@@ -1013,9 +1013,9 @@ function calcLabel() {
   var carbW = Math.round(barW * pctCarb/100);
   var protW = barW - fatW - carbW;
   var svgBar = '<svg viewBox="0 0 280 28" width="100%" class="label-breakdown-svg" xmlns="http://www.w3.org/2000/svg" aria-label="Calorie breakdown bar">'
-    + (fatW  > 0 ? '<rect x="0" y="4" width="'+fatW+'" height="20" fill="#EF9F27" rx="3"/>' : '')
-    + (carbW > 0 ? '<rect x="'+fatW+'" y="4" width="'+carbW+'" height="20" fill="#378ADD"/>' : '')
-    + (protW > 0 ? '<rect x="'+(fatW+carbW)+'" y="4" width="'+protW+'" height="20" fill="#1D9E75" rx="3"/>' : '')
+    + (fatW  > 0 ? '<rect x="0" y="4" width="'+fatW+'" height="20" class="nutri-bar-amber" rx="3"/>' : '')
+    + (carbW > 0 ? '<rect x="'+fatW+'" y="4" width="'+carbW+'" height="20" class="nutri-bar-blue"/>' : '')
+    + (protW > 0 ? '<rect x="'+(fatW+carbW)+'" y="4" width="'+protW+'" height="20" class="nutri-bar-green" rx="3"/>' : '')
     + '<text x="4" y="17" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">' + (fatW>28?'Fat '+pctFat+'%':'') + '</text>'
     + '<text x="'+(fatW+4)+'" y="17" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">' + (carbW>38?'Carbs '+pctCarb+'%':'') + '</text>'
     + '<text x="'+(fatW+carbW+4)+'" y="17" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">' + (protW>44?'Protein '+pctProt+'%':'') + '</text>'

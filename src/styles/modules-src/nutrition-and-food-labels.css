@@ -122,7 +122,7 @@
 }
 .u-min-w-200px { min-width: 200px; }
 .u-w-23-pct { width: 23%; }
-.u-bg-blue-500 { background: #378ADD; }
+.u-bg-blue-500 { background: #2276CA; }
 .u-w-2-d-5-pct { width: 2.5%; }
 .u-bg-amber-500 { background: #EF9F27; }
 .u-w-100-pct { width: 100%; }
@@ -136,7 +136,7 @@
 .u-pl-20px { padding-left: 20px; }
 .u-border-bottom-4px-solid-hex-000 { border-bottom: 4px solid #000; }
 .u-min-h-32px { min-height: 32px; }
-.u-bg-green-600 { background: #1D9E75; }
+.u-bg-green-600 { background: #188260; }
 .u-text-white { color: #fff; }
 .u-w-30-pct { width: 30%; }
 .u-bg-green-400 { background: #5DCAA5; }
@@ -146,9 +146,23 @@
 .u-bg-blue-900 { background: #0C447C; }
 .u-text-blue-50 { color: #E6F1FB; }
 .u-bg-brown-800 { background: #633806; }
-.u-bg-green-500 { background: #2AAB80; }
+.u-bg-green-500 { background: #208262; }
 .u-w-45-pct { width: 45%; }
 .u-w-26-pct { width: 26%; }
 .u-bg-green-100 { background: #B8ECD8; }
 .u-bg-green-75 { background: #D4F4EA; }
-.u-min-h-36px { min-height: 36px; }
+.u-min-h-36px { min-height: 36px; }
+
+/* --- Macronutrient bar-chart SVGs: fills carry white text at opacity 0.85,
+   so the base colour needs to clear 4.5:1 once blended with the card bg --- */
+.nutri-bar-amber { fill: #83530A; }
+.nutri-bar-blue { fill: #1C60A4; }
+.nutri-bar-green { fill: #13694E; }
+html[data-theme="dark"] .nutri-bar-amber { fill: #B9750E; }
+html[data-theme="dark"] .nutri-bar-blue { fill: #3287DC; }
+html[data-theme="dark"] .nutri-bar-green { fill: #1B956E; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .nutri-bar-amber { fill: #B9750E; }
+  html[data-theme="auto"] .nutri-bar-blue { fill: #3287DC; }
+  html[data-theme="auto"] .nutri-bar-green { fill: #1B956E; }
+}
