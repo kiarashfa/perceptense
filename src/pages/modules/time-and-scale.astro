@@ -270,29 +270,29 @@ const mod = modules.find((m) => m.id === 7)!;
           <text x="670" y="68" font-size="8" fill="var(--color-text-tertiary)" font-family="var(--font-sans)" text-anchor="middle">+14</text>
           <!-- City markers (above bar) -->
           <!-- Los Angeles −8 → x=128 -->
-          <line x1="128" y1="30" x2="128" y2="9" stroke="#B5D4F4" stroke-width="0.8"/>
-          <text x="128" y="7" font-size="8" fill="#B5D4F4" font-family="var(--font-sans)" text-anchor="middle">LA</text>
+          <line x1="128" y1="30" x2="128" y2="9" class="tz-lbl-blue" stroke-width="0.8"/>
+          <text x="128" y="7" font-size="8" class="tz-lbl-blue" font-family="var(--font-sans)" text-anchor="middle">LA</text>
           <!-- New York −5 → x=202 -->
-          <line x1="202" y1="30" x2="202" y2="17" stroke="#B5D4F4" stroke-width="0.8"/>
-          <text x="202" y="15" font-size="8" fill="#B5D4F4" font-family="var(--font-sans)" text-anchor="middle">NYC</text>
+          <line x1="202" y1="30" x2="202" y2="17" class="tz-lbl-blue" stroke-width="0.8"/>
+          <text x="202" y="15" font-size="8" class="tz-lbl-blue" font-family="var(--font-sans)" text-anchor="middle">NYC</text>
           <!-- London 0 → x=325 -->
-          <line x1="325" y1="30" x2="325" y2="9" stroke="#fff" stroke-width="0.8"/>
-          <text x="325" y="7" font-size="8" fill="#fff" font-family="var(--font-sans)" text-anchor="middle">London</text>
+          <line x1="325" y1="30" x2="325" y2="9" stroke="var(--color-text-primary)" stroke-width="0.8"/>
+          <text x="325" y="7" font-size="8" fill="var(--color-text-primary)" font-family="var(--font-sans)" text-anchor="middle">London</text>
           <!-- Dubai +4 → x=424 -->
-          <line x1="424" y1="30" x2="424" y2="17" stroke="#9FE1CB" stroke-width="0.8"/>
-          <text x="424" y="15" font-size="8" fill="#9FE1CB" font-family="var(--font-sans)" text-anchor="middle">Dubai</text>
+          <line x1="424" y1="30" x2="424" y2="17" class="tz-lbl-mint" stroke-width="0.8"/>
+          <text x="424" y="15" font-size="8" class="tz-lbl-mint" font-family="var(--font-sans)" text-anchor="middle">Dubai</text>
           <!-- India +5:30 → x=460 -->
-          <line x1="460" y1="30" x2="460" y2="9" stroke="#9FE1CB" stroke-width="0.8"/>
-          <text x="460" y="7" font-size="8" fill="#9FE1CB" font-family="var(--font-sans)" text-anchor="middle">India</text>
+          <line x1="460" y1="30" x2="460" y2="9" class="tz-lbl-mint" stroke-width="0.8"/>
+          <text x="460" y="7" font-size="8" class="tz-lbl-mint" font-family="var(--font-sans)" text-anchor="middle">India</text>
           <!-- Singapore +8 → x=522 -->
-          <line x1="522" y1="30" x2="522" y2="17" stroke="#5DCAA5" stroke-width="0.8"/>
-          <text x="522" y="15" font-size="8" fill="#5DCAA5" font-family="var(--font-sans)" text-anchor="middle">SG</text>
+          <line x1="522" y1="30" x2="522" y2="17" class="tz-lbl-green" stroke-width="0.8"/>
+          <text x="522" y="15" font-size="8" class="tz-lbl-green" font-family="var(--font-sans)" text-anchor="middle">SG</text>
           <!-- Tokyo +9 → x=546 -->
-          <line x1="546" y1="30" x2="546" y2="9" stroke="#5DCAA5" stroke-width="0.8"/>
-          <text x="546" y="7" font-size="8" fill="#5DCAA5" font-family="var(--font-sans)" text-anchor="middle">Tokyo</text>
+          <line x1="546" y1="30" x2="546" y2="9" class="tz-lbl-green" stroke-width="0.8"/>
+          <text x="546" y="7" font-size="8" class="tz-lbl-green" font-family="var(--font-sans)" text-anchor="middle">Tokyo</text>
           <!-- Sydney +10 → x=571 -->
-          <line x1="571" y1="30" x2="571" y2="17" stroke="#5DCAA5" stroke-width="0.8"/>
-          <text x="571" y="15" font-size="8" fill="#5DCAA5" font-family="var(--font-sans)" text-anchor="middle">Sydney</text>
+          <line x1="571" y1="30" x2="571" y2="17" class="tz-lbl-green" stroke-width="0.8"/>
+          <text x="571" y="15" font-size="8" class="tz-lbl-green" font-family="var(--font-sans)" text-anchor="middle">Sydney</text>
           <!-- Oddity callouts below -->
           <text x="460" y="82" font-size="8" fill="var(--color-text-tertiary)" font-family="var(--font-sans)" text-anchor="middle">India: UTC+5:30</text>
           <text x="460" y="91" font-size="7.5" fill="var(--color-text-tertiary)" font-family="var(--font-sans)" text-anchor="middle">(half-hour zone)</text>
@@ -698,9 +698,9 @@ const mod = modules.find((m) => m.id === 7)!;
           <text x="540" y="21" class="cl-lbl" text-anchor="middle">Chinese</text>
           <text x="540" y="152" class="cl-val" text-anchor="middle">~365.25 avg</text>
           <!-- Lunar gap annotation -->
-          <line x1="270" y1="92" x2="270" y2="70" stroke="#C1440E" stroke-width="0.8" stroke-dasharray="2,2"/>
-          <text x="273" y="82" font-size="7.5" fill="#C1440E" font-family="var(--font-sans)">-11 days/yr</text>
-          <text x="273" y="90" font-size="7" fill="#C1440E" font-family="var(--font-sans)">= 1 yr lost / 33 yrs</text>
+          <line x1="270" y1="92" x2="270" y2="70" class="tz-lbl-red" stroke-width="0.8" stroke-dasharray="2,2"/>
+          <text x="273" y="82" font-size="7.5" class="tz-lbl-red" font-family="var(--font-sans)">-11 days/yr</text>
+          <text x="273" y="90" font-size="7" class="tz-lbl-red" font-family="var(--font-sans)">= 1 yr lost / 33 yrs</text>
         </svg>
       </div>
     </div>

@@ -75,7 +75,7 @@
 .planet-color-pluto { background: #6B6B6B; }
 .u-ml-6px { margin-left: 6px; }
 .u-bg-hex-b5d4f4 { background: #B5D4F4; }
-.u-bg-hex-378add { background: #378ADD; }
+.u-bg-hex-378add { background: #2276CA; }
 .u-text-hex-fff { color: #fff; }
 .u-w-100-pct { width: 100%; }
 .u-bg-hex-0c447c { background: #0C447C; }
@@ -90,7 +90,7 @@
 .u-w-0-07-pct { width: 0.07%; }
 .u-w-1-1-pct { width: 1.1%; }
 .u-bg-hex-5dcaa5 { background: #5DCAA5; }
-.u-bg-hex-1d9e75 { background: #1D9E75; }
+.u-bg-hex-1d9e75 { background: #188160; }
 .u-bg-hex-085041 { background: #085041; }
 .u-text-hex-9fe1cb { color: #9FE1CB; }
 .u-bg-hex-04342c { background: #04342C; }
@@ -145,5 +145,21 @@
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
+}
+
+/* --- Timezone bar city-marker labels: theme-safe --- */
+.tz-lbl-blue { fill: #1E74CC; stroke: #1E74CC; }
+.tz-lbl-mint { fill: #288062; stroke: #288062; }
+.tz-lbl-green { fill: #2A8063; stroke: #2A8063; }
+.tz-lbl-red { fill: #C1440E; stroke: #C1440E; }
+html[data-theme="dark"] .tz-lbl-blue { fill: #B5D4F4; stroke: #B5D4F4; }
+html[data-theme="dark"] .tz-lbl-mint { fill: #9FE1CB; stroke: #9FE1CB; }
+html[data-theme="dark"] .tz-lbl-green { fill: #5DCAA5; stroke: #5DCAA5; }
+html[data-theme="dark"] .tz-lbl-red { fill: #ED5411; stroke: #ED5411; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .tz-lbl-blue { fill: #B5D4F4; stroke: #B5D4F4; }
+  html[data-theme="auto"] .tz-lbl-mint { fill: #9FE1CB; stroke: #9FE1CB; }
+  html[data-theme="auto"] .tz-lbl-green { fill: #5DCAA5; stroke: #5DCAA5; }
+  html[data-theme="auto"] .tz-lbl-red { fill: #ED5411; stroke: #ED5411; }
 }
   
