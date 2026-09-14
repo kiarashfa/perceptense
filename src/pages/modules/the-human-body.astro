@@ -231,13 +231,13 @@ const mod = modules.find((m) => m.id === 2)!;
     <div class="content-panel">
       <div class="panel-title">How much do your organs weigh?</div>
 
-      <div class="bar-row"><span class="organ-lbl">Skin</span><div class="bb bar-info organ-skin"><span class="bv bar-info-text">~4–5 kg — the heaviest organ by far</span></div></div>
-      <div class="bar-row"><span class="organ-lbl">Liver</span><div class="bb bar-info organ-liver"><span class="bv bar-info-text">~1.5 kg</span></div></div>
-      <div class="bar-row"><span class="organ-lbl">Brain</span><div class="bb bar-info organ-brain"><span class="bv bar-info-text">~1.3–1.4 kg</span></div></div>
-      <div class="bar-row"><span class="organ-lbl">Lungs (×2)</span><div class="bb bar-info organ-lungs"><span class="bv bar-info-text">~1.0–1.2 kg</span></div></div>
-      <div class="bar-row"><span class="organ-lbl">Heart</span><div class="bb bar-info organ-heart"><span class="bv bar-info-text">~300 g</span></div></div>
-      <div class="bar-row"><span class="organ-lbl">Kidneys (×2)</span><div class="bb bar-info organ-kidneys"><span class="bv bar-info-text">~270 g</span></div></div>
-      <div class="bar-row"><span class="organ-lbl">Spleen</span><div class="bb bar-info organ-spleen"><span class="bv bar-info-text">~150 g</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Skin</span><div class="bb bar-info bar-info-data" style="--data-width: 100%"><span class="bv bar-info-text">~4–5 kg — the heaviest organ by far</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Liver</span><div class="bb bar-info bar-info-data" style="--data-width: 36%"><span class="bv bar-info-text">~1.5 kg</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Brain</span><div class="bb bar-info bar-info-data" style="--data-width: 30%"><span class="bv bar-info-text">~1.3–1.4 kg</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Lungs (×2)</span><div class="bb bar-info bar-info-data" style="--data-width: 26%"><span class="bv bar-info-text">~1.0–1.2 kg</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Heart</span><div class="bb bar-info bar-info-data" style="--data-width: 9%"><span class="bv bar-info-text">~300 g</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Kidneys (×2)</span><div class="bb bar-info bar-info-data" style="--data-width: 7%"><span class="bv bar-info-text">~270 g</span></div></div>
+      <div class="bar-row"><span class="organ-lbl">Spleen</span><div class="bb bar-info bar-info-data" style="--data-width: 4%"><span class="bv bar-info-text">~150 g</span></div></div>
       <p class="panel-note">Skin is consistently the largest organ, yet rarely thought of as one. It covers ~1.5–2 m² and regenerates completely about every 2–4 weeks.</p>
     </div>
 
@@ -348,42 +348,42 @@ const mod = modules.find((m) => m.id === 2)!;
         <div class="blood-card">
           <div class="blood-type">O+</div>
           <div class="blood-pct">~38%</div>
-          <div class="blood-bar blood-o-pos"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #c0392b; --data-opacity: 0.7; --data-width: 100%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">A+</div>
           <div class="blood-pct">~27%</div>
-          <div class="blood-bar blood-a-pos"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #e74c3c; --data-opacity: 0.7; --data-width: 71%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">B+</div>
           <div class="blood-pct">~20%</div>
-          <div class="blood-bar blood-b-pos"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #e74c3c; --data-opacity: 0.5; --data-width: 53%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">AB+</div>
           <div class="blood-pct">~5%</div>
-          <div class="blood-bar blood-ab-pos"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #e74c3c; --data-opacity: 0.4; --data-width: 13%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">O−</div>
           <div class="blood-pct">~7%</div>
-          <div class="blood-bar blood-o-neg"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #2980b9; --data-opacity: 0.7; --data-width: 18%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">A−</div>
           <div class="blood-pct">~6%</div>
-          <div class="blood-bar blood-a-neg"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #2980b9; --data-opacity: 0.6; --data-width: 16%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">B−</div>
           <div class="blood-pct">~2%</div>
-          <div class="blood-bar blood-b-neg"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #2980b9; --data-opacity: 0.5; --data-width: 5%"></div>
         </div>
         <div class="blood-card">
           <div class="blood-type">AB−</div>
           <div class="blood-pct">~1%</div>
-          <div class="blood-bar blood-ab-neg"></div>
+          <div class="blood-bar blood-bar-data" style="--data-background: #2980b9; --data-opacity: 0.4; --data-width: 3%"></div>
         </div>
       </div>
       <p class="panel-note">O− is the "universal donor" for red blood cells — anyone can receive it in an emergency. AB+ is the universal recipient. AB− is the rarest common type (about 1 in 100 people).</p>
@@ -449,27 +449,27 @@ const mod = modules.find((m) => m.id === 2)!;
       <div class="sense-row">
         <span class="sense-icon-col">👁️</span>
         <span class="sense-lbl-col">Vision</span>
-        <div class="sense-bar-col sense-vision"><span class="bv text-info">A candle flame visible at 48 km on a clear night</span></div>
+        <div class="sense-bar-col sense-bar-col-data" style="--data-background: var(--color-background-info); --data-width: 95%"><span class="bv text-info">A candle flame visible at 48 km on a clear night</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">👃</span>
         <span class="sense-lbl-col">Smell</span>
-        <div class="sense-bar-col sense-smell"><span class="bv text-success">1 drop of perfume diffused in a 3-room apartment</span></div>
+        <div class="sense-bar-col sense-bar-col-data" style="--data-background: var(--color-background-success); --data-width: 88%"><span class="bv text-success">1 drop of perfume diffused in a 3-room apartment</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">👂</span>
         <span class="sense-lbl-col">Hearing</span>
-        <div class="sense-bar-col sense-hearing"><span class="bv text-warning">A watch ticking at 6 metres in a quiet room</span></div>
+        <div class="sense-bar-col sense-bar-col-data" style="--data-background: var(--color-background-warning); --data-width: 76%"><span class="bv text-warning">A watch ticking at 6 metres in a quiet room</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">👅</span>
         <span class="sense-lbl-col">Taste</span>
-        <div class="sense-bar-col sense-taste"><span class="bv text-secondary">1 tsp of sugar in 8 L of water</span></div>
+        <div class="sense-bar-col sense-bar-col-data" style="--data-background: var(--color-background-secondary); --data-width: 52%"><span class="bv text-secondary">1 tsp of sugar in 8 L of water</span></div>
       </div>
       <div class="sense-row">
         <span class="sense-icon-col">✋</span>
         <span class="sense-lbl-col">Touch</span>
-        <div class="sense-bar-col sense-touch"><span class="bv text-secondary">A bee wing falling on cheek from 1 cm</span></div>
+        <div class="sense-bar-col sense-bar-col-data" style="--data-background: var(--color-background-secondary); --data-width: 38%"><span class="bv text-secondary">A bee wing falling on cheek from 1 cm</span></div>
       </div>
       <p class="panel-note">From Miller's "Plans and the Structure of Behavior" (1960) and updated sensory research. These are theoretical absolute thresholds under ideal conditions.</p>
     </div>
@@ -506,19 +506,19 @@ const mod = modules.find((m) => m.id === 2)!;
         <div class="bar-lbl"><span>Reaction time benchmarks</span></div>
         <div class="bl-row">
           <span class="benchmark-label">Elite athlete</span>
-          <div class="benchmark-bar benchmark-elite"><span class="benchmark-text text-success">&lt;150 ms</span></div>
+          <div class="benchmark-bar benchmark-bar-data" style="--data-background: var(--color-background-success); --data-width: 40%"><span class="benchmark-text text-success">&lt;150 ms</span></div>
         </div>
         <div class="bl-row">
           <span class="benchmark-label">Young adult avg</span>
-          <div class="benchmark-bar benchmark-average"><span class="benchmark-text text-info">200–250 ms</span></div>
+          <div class="benchmark-bar benchmark-bar-data" style="--data-background: var(--color-background-info); --data-width: 62%"><span class="benchmark-text text-info">200–250 ms</span></div>
         </div>
         <div class="bl-row">
           <span class="benchmark-label">Older adult avg</span>
-          <div class="benchmark-bar benchmark-older"><span class="benchmark-text text-warning">300–400 ms</span></div>
+          <div class="benchmark-bar benchmark-bar-data" style="--data-background: var(--color-background-warning); --data-width: 80%"><span class="benchmark-text text-warning">300–400 ms</span></div>
         </div>
         <div class="bl-row bl-row-last">
           <span class="benchmark-label">Impaired / tired</span>
-          <div class="benchmark-bar benchmark-impaired"><span class="benchmark-text text-danger">&gt;500 ms — comparable to drunk driving limit effects</span></div>
+          <div class="benchmark-bar benchmark-bar-data" style="--data-background: var(--color-background-danger); --data-width: 100%"><span class="benchmark-text text-danger">&gt;500 ms — comparable to drunk driving limit effects</span></div>
         </div>
       </div>
     </div>

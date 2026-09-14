@@ -171,13 +171,9 @@
 .bar-info-text {
   color: var(--color-text-info);
 }
-.organ-skin { width: 100%; }
-.organ-liver { width: 36%; }
-.organ-brain { width: 30%; }
-.organ-lungs { width: 26%; }
-.organ-heart { width: 9%; }
-.organ-kidneys { width: 7%; }
-.organ-spleen { width: 4%; }
+.bar-info-data {
+  width: var(--data-width);
+}
 .body-diagram-svg {
   min-width: 110px;
 }
@@ -197,14 +193,11 @@
 .dot-teal { background: var(--accent); }
 .dot-amber { background: #EF9F27; }
 .dot-green { background: #97C459; }
-.blood-o-pos { width: 100%; background: #c0392b; opacity: 0.7; }
-.blood-a-pos { width: 71%; background: #e74c3c; opacity: 0.7; }
-.blood-b-pos { width: 53%; background: #e74c3c; opacity: 0.5; }
-.blood-ab-pos { width: 13%; background: #e74c3c; opacity: 0.4; }
-.blood-o-neg { width: 18%; background: #2980b9; opacity: 0.7; }
-.blood-a-neg { width: 16%; background: #2980b9; opacity: 0.6; }
-.blood-b-neg { width: 5%; background: #2980b9; opacity: 0.5; }
-.blood-ab-neg { width: 3%; background: #2980b9; opacity: 0.4; }
+.blood-bar-data {
+  background: var(--data-background);
+  opacity: var(--data-opacity);
+  width: var(--data-width);
+}
 .compat-control-row {
   display: flex;
   gap: 8px;
@@ -242,11 +235,10 @@
   border: 0.5px solid var(--color-border-tertiary);
 }
 .compat-dot-self { background: var(--color-background-info); }
-.sense-vision { width: 95%; background: var(--color-background-info); }
-.sense-smell { width: 88%; background: var(--color-background-success); }
-.sense-hearing { width: 76%; background: var(--color-background-warning); }
-.sense-taste { width: 52%; background: var(--color-background-secondary); }
-.sense-touch { width: 38%; background: var(--color-background-secondary); }
+.sense-bar-col-data {
+  background: var(--data-background);
+  width: var(--data-width);
+}
 .text-info { color: var(--color-text-info); }
 .text-success { color: var(--color-text-success); }
 .text-warning { color: var(--color-text-warning); }
@@ -287,10 +279,10 @@
   font-size: 10px;
   font-weight: 500;
 }
-.benchmark-elite { width: 40%; background: var(--color-background-success); }
-.benchmark-average { width: 62%; background: var(--color-background-info); }
-.benchmark-older { width: 80%; background: var(--color-background-warning); }
-.benchmark-impaired { width: 100%; background: var(--color-background-danger); }
+.benchmark-bar-data {
+  background: var(--data-background);
+  width: var(--data-width);
+}
 .text-danger { color: var(--color-text-danger); }
 .chrom-layout,
 .punnett-layout {
