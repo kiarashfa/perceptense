@@ -1,8 +1,5 @@
 .fabric-tab { font-size:11px; padding:3px 10px; }
 .fabric-tab.active { background:var(--color-text-primary); color:var(--color-background-primary); border-color:var(--color-text-primary); }
-
-/* colour theory swatches */
-.swatch-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
 .swatch { width:36px; height:36px; border-radius:6px; flex-shrink:0; border:0.5px solid var(--color-border-tertiary); cursor:pointer; transition:transform 0.12s; }
 .swatch:hover { transform:scale(1.12); }
 .swatch.selected { outline:2px solid var(--color-text-primary); outline-offset:2px; }
@@ -31,13 +28,6 @@
   max-width:600px;
   display:block;
   margin:0 auto 14px;
-}
-
-.fashion-row {
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  margin-bottom:12px;
 }
 
 .fashion-panel {
@@ -114,15 +104,6 @@
   font-size:11px;
   color:#EF9F27;
   line-height:1.5;
-}
-
-.couture-irony-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
 }
 
 .chart-kicker {
@@ -224,36 +205,6 @@
   line-height:1.6;
 }
 
-.independents-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-  margin-bottom:1rem;
-}
-
-.brand-buttons {
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
-  margin-bottom:10px;
-}
-
-.showbrand-control {
-  font-size:11px;
-  padding:3px 9px;
-}
-
-.size-controls {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:center;
-  margin-bottom:12px;
-}
-
 .size-cat {
   flex:1;
   min-width:130px;
@@ -283,12 +234,6 @@
   font-size:14px;
 }
 
-.convertsize-control {
-  height:36px;
-  padding:0 16px;
-  font-size:13px;
-}
-
 .size-result {
   font-size:13px;
   color:var(--color-text-primary);
@@ -303,10 +248,6 @@
   font-size:12px;
   border-collapse:collapse;
   min-width:400px;
-}
-
-.fashion-tr-style {
-  border-bottom:0.5px solid var(--color-border-secondary);
 }
 
 .fashion-spacing {
@@ -335,18 +276,6 @@
   margin-bottom:4px;
 }
 
-.showdress-control {
-  font-size:12px;
-  padding:3px 10px;
-}
-
-.two-card-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-bottom:1rem;
-}
-
 .knot-diagram {
   width:100%;
   display:block;
@@ -367,39 +296,11 @@
   padding:7px 9px;
 }
 
-.fast-fashion-card-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:12px;
-  margin-bottom:1rem;
-}
-
-.seasons-heading {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-  text-transform:uppercase;
-  letter-spacing:0.06em;
-}
-
-.seasons-compare {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
 .calendar-label {
   font-size:11px;
   font-weight:500;
   color:var(--color-text-secondary);
   margin-bottom:6px;
-}
-
-.calendar-column {
-  display:flex;
-  flex-direction:column;
-  gap:4px;
 }
 
 .season-chip {
@@ -435,12 +336,6 @@
   padding:5px 0;
 }
 
-.explorer-intro {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-}
-
 .fabric-care-rule {
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
@@ -454,12 +349,6 @@
   background:var(--color-background-secondary);
   border-radius:var(--border-radius-md);
   padding:11px 13px;
-}
-
-.colour-picker-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:6px;
 }
 
 .swatch-style {
@@ -541,13 +430,6 @@
   color:var(--color-text-secondary);
   margin-top:8px;
   line-height:1.6;
-}
-
-.section-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-  margin-bottom:10px;
 }
 
 .section-kicker {
@@ -634,20 +516,6 @@
   padding:3px 9px;
 }
 
-.perfume-header-row {
-  display:flex;
-  align-items:baseline;
-  gap:10px;
-  margin-bottom:10px;
-  flex-wrap:wrap;
-}
-
-.perfume-name {
-  font-size:15px;
-  font-weight:500;
-  color:var(--color-text-primary);
-}
-
 .perfume-pill {
   font-size:11px;
   font-weight:500;
@@ -660,18 +528,6 @@
   grid-template-columns:repeat(2,1fr);
   gap:7px;
   margin-bottom:10px;
-}
-
-.perfume-meta-label {
-  font-size:10px;
-  color:var(--color-text-secondary);
-  margin-bottom:2px;
-}
-
-.perfume-meta-val {
-  font-size:12px;
-  color:var(--color-text-primary);
-  line-height:1.4;
 }
 
 .perfume-meta-val-sm {
@@ -723,10 +579,5 @@
   margin-top:10px;
   padding-top:8px;
   border-top:0.5px solid var(--color-border-tertiary);
-}
-
-.watch-nav-btn {
-  font-size:11px;
-  padding:3px 9px;
 }
   

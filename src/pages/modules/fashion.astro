@@ -46,7 +46,7 @@ const mod = modules.find((m) => m.id === 21)!;
         <text x="590" y="178" text-anchor="end" font-size="9" fill="#633806" font-weight="500">€5–€100</text>
       </svg>
 
-      <div class="fashion-row">
+      <div class="stack-spaced">
         <div class="fashion-panel">
           <div class="fashion-label">Haute couture — hand-crafted, made-to-measure, one client at a time</div>
           <div class="fashion-text">Chanel, Dior, Valentino, Givenchy. A single couture dress: €10,000–€200,000+. Legally protected designation in France. Only ~16 full member houses (plus correspondent members). Shows twice yearly in Paris. Serves roughly 2,000–4,000 clients worldwide. Exists primarily as marketing for the brand's perfume, beauty, and accessories lines — which actually make money.</div>
@@ -64,7 +64,7 @@ const mod = modules.find((m) => m.id === 21)!;
           <div class="tier-desc-high-street">Zara, H&amp;M, Uniqlo, Mango, Primark. Items: €5–€100. Dozens of "micro-seasons" per year (Zara releases new stock twice weekly). Global supply chains. Environmental and labour concerns. Zara's model (design-to-shelf in ~2 weeks vs industry's 6 months) revolutionised the industry.</div>
         </div>
       </div>
-      <div class="couture-irony-note">
+      <div class="note-panel">
         <strong class="text-primary">The great irony:</strong> Haute couture exists to fund perfume. A Chanel No.5 perfume (€120) funds the €200,000 dress that funds the brand's prestige that sells the perfume. The entire pyramid depends on each level signalling upward aspiration.
       </div>
     </div>
@@ -110,7 +110,7 @@ const mod = modules.find((m) => m.id === 21)!;
         <div class="group-brands-richemont">Cartier, Van Cleef &amp; Arpels, IWC, Jaeger-LeCoultre, Piaget, Panerai, Dunhill, Chloé. Revenue ~€20B (2023).</div>
       </div>
     </div>
-    <div class="independents-note">
+    <div class="note-context">
       <strong class="text-primary">Independents:</strong> Hermès (Hermès family, publicly traded but family-controlled), Chanel (Wertheimer family, private — no public financials), Prada (Miuccia Prada and Patrizio Bertelli family), Versace (sold to Capri Holdings, the Michael Kors parent group), Burberry (UK listed), Ralph Lauren (Ralph Lauren Corporation, NYSE).
     </div>
 
@@ -119,27 +119,27 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-c-top-20-brands-click-to-explore">Part C · top 20 brands — click to explore</h2>
 
-    <div class="brand-buttons">
-      <button class="showbrand-control" onclick="showBrand('lv')"        >Louis Vuitton</button>
-      <button class="showbrand-control" onclick="showBrand('chanel')"    >Chanel</button>
-      <button class="showbrand-control" onclick="showBrand('hermes')"    >Hermès</button>
-      <button class="showbrand-control" onclick="showBrand('gucci')"     >Gucci</button>
-      <button class="showbrand-control" onclick="showBrand('dior')"      >Dior</button>
-      <button class="showbrand-control" onclick="showBrand('prada')"     >Prada</button>
-      <button class="showbrand-control" onclick="showBrand('versace')"   >Versace</button>
-      <button class="showbrand-control" onclick="showBrand('balenciaga')">Balenciaga</button>
-      <button class="showbrand-control" onclick="showBrand('burberry')"  >Burberry</button>
-      <button class="showbrand-control" onclick="showBrand('armani')"    >Armani</button>
-      <button class="showbrand-control" onclick="showBrand('rl')"        >Ralph Lauren</button>
-      <button class="showbrand-control" onclick="showBrand('boss')"      >Hugo Boss</button>
-      <button class="showbrand-control" onclick="showBrand('zara')"      >Zara</button>
-      <button class="showbrand-control" onclick="showBrand('hm')"        >H&amp;M</button>
-      <button class="showbrand-control" onclick="showBrand('uniqlo')"    >Uniqlo</button>
-      <button class="showbrand-control" onclick="showBrand('nike')"      >Nike</button>
-      <button class="showbrand-control" onclick="showBrand('adidas')"    >Adidas</button>
-      <button class="showbrand-control" onclick="showBrand('cartier')"   >Cartier</button>
-      <button class="showbrand-control" onclick="showBrand('saint')"     >Saint Laurent</button>
-      <button class="showbrand-control" onclick="showBrand('moncler')"   >Moncler</button>
+    <div class="button-set">
+      <button class="tab-button-narrow" onclick="showBrand('lv')"        >Louis Vuitton</button>
+      <button class="tab-button-narrow" onclick="showBrand('chanel')"    >Chanel</button>
+      <button class="tab-button-narrow" onclick="showBrand('hermes')"    >Hermès</button>
+      <button class="tab-button-narrow" onclick="showBrand('gucci')"     >Gucci</button>
+      <button class="tab-button-narrow" onclick="showBrand('dior')"      >Dior</button>
+      <button class="tab-button-narrow" onclick="showBrand('prada')"     >Prada</button>
+      <button class="tab-button-narrow" onclick="showBrand('versace')"   >Versace</button>
+      <button class="tab-button-narrow" onclick="showBrand('balenciaga')">Balenciaga</button>
+      <button class="tab-button-narrow" onclick="showBrand('burberry')"  >Burberry</button>
+      <button class="tab-button-narrow" onclick="showBrand('armani')"    >Armani</button>
+      <button class="tab-button-narrow" onclick="showBrand('rl')"        >Ralph Lauren</button>
+      <button class="tab-button-narrow" onclick="showBrand('boss')"      >Hugo Boss</button>
+      <button class="tab-button-narrow" onclick="showBrand('zara')"      >Zara</button>
+      <button class="tab-button-narrow" onclick="showBrand('hm')"        >H&amp;M</button>
+      <button class="tab-button-narrow" onclick="showBrand('uniqlo')"    >Uniqlo</button>
+      <button class="tab-button-narrow" onclick="showBrand('nike')"      >Nike</button>
+      <button class="tab-button-narrow" onclick="showBrand('adidas')"    >Adidas</button>
+      <button class="tab-button-narrow" onclick="showBrand('cartier')"   >Cartier</button>
+      <button class="tab-button-narrow" onclick="showBrand('saint')"     >Saint Laurent</button>
+      <button class="tab-button-narrow" onclick="showBrand('moncler')"   >Moncler</button>
     </div>
     <div class="content-panel" id="brand-display"></div>
 
@@ -150,7 +150,7 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-panel">
       <div class="panel-title">Convert any clothing or shoe size between systems</div>
-      <div class="size-controls">
+      <div class="control-row-spaced">
         <select class="size-cat" id="size-cat" onchange="updateFromOptions()">
           <option value="clothing-women">Women's clothing</option>
           <option value="clothing-men">Men's clothing</option>
@@ -166,7 +166,7 @@ const mod = modules.find((m) => m.id === 21)!;
           <option value="fr">FR</option>
         </select>
         <input class="size-val" type="number" id="size-val" placeholder="Size" value="38">
-        <button class="convertsize-control" onclick="convertSize()">Convert</button>
+        <button class="action-button" onclick="convertSize()">Convert</button>
       </div>
       <div class="size-result" id="size-result"></div>
     </div>
@@ -175,7 +175,7 @@ const mod = modules.find((m) => m.id === 21)!;
       <div class="panel-title-spaced">XS – XXL to measurements — what the labels actually mean</div>
       <div class="u-overflow-x-auto">
         <table class="size-table">
-          <thead><tr class="fashion-tr-style">
+          <thead><tr class="divider-strong">
             <th class="fashion-spacing">Label</th>
             <th class="size-table-head">Women chest (cm)</th>
             <th class="size-table-head">Men chest (cm)</th>
@@ -225,12 +225,12 @@ const mod = modules.find((m) => m.id === 21)!;
     </div>
 
     <div class="button-row">
-      <button class="showdress-control" onclick="showDress('whitetie')"   >White tie</button>
-      <button class="showdress-control" onclick="showDress('blacktie')"   >Black tie</button>
-      <button class="showdress-control" onclick="showDress('cocktail')"   >Cocktail / smart</button>
-      <button class="showdress-control" onclick="showDress('bizformal')"  >Business formal</button>
-      <button class="showdress-control" onclick="showDress('bizcasual')"  >Business casual</button>
-      <button class="showdress-control" onclick="showDress('smartcasual')">Smart casual</button>
+      <button class="pill-button" onclick="showDress('whitetie')"   >White tie</button>
+      <button class="pill-button" onclick="showDress('blacktie')"   >Black tie</button>
+      <button class="pill-button" onclick="showDress('cocktail')"   >Cocktail / smart</button>
+      <button class="pill-button" onclick="showDress('bizformal')"  >Business formal</button>
+      <button class="pill-button" onclick="showDress('bizcasual')"  >Business casual</button>
+      <button class="pill-button" onclick="showDress('smartcasual')">Smart casual</button>
     </div>
     <div class="content-panel" id="dress-display"></div>
 
@@ -239,7 +239,7 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-f-tie-vs-bow-tie-and-how-to-wear-both">Part F · tie vs bow tie — and how to wear both</h2>
 
-    <div class="two-card-grid">
+    <div class="grid-halves-spaced">
       <div class="card">
         <p class="clabel">Necktie (regular tie)</p>
         <p class="cval">Business and formal events</p>
@@ -301,7 +301,7 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-g-fast-fashion-what-it-is-and-why-it-matters">Part G · fast fashion — what it is and why it matters</h2>
 
-    <div class="fast-fashion-card-grid">
+    <div class="card-grid-xl">
       <div class="card">
         <p class="clabel">The Zara model</p>
         <p class="cval">Design to shelf in ~2 weeks</p>
@@ -326,11 +326,11 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Fast fashion timeline -->
     <div class="content-panel">
-      <div class="seasons-heading">Industry seasons: then vs now</div>
-      <div class="seasons-compare">
+      <div class="kicker">Industry seasons: then vs now</div>
+      <div class="grid-halves">
         <div>
           <div class="calendar-label">Traditional fashion calendar (pre-1990s)</div>
-          <div class="calendar-column">
+          <div class="stack-tight">
             <div class="season-chip">Spring / Summer collection</div>
             <div class="season-chip">Autumn / Winter collection</div>
             <div class="calendar-cadence">→ 2 seasons per year</div>
@@ -376,7 +376,7 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Select a fabric to explore its properties</div>
-      <div class="explorer-intro">Natural fibres come from plants or animals. Synthetic fibres are petroleum-derived. Understanding fabric is the fastest way to judge quality.</div>
+      <div class="mini-intro">Natural fibres come from plants or animals. Synthetic fibres are petroleum-derived. Understanding fabric is the fastest way to judge quality.</div>
       <div class="button-row-compact" id="fabric-tabs">
         <button class="fabric-tab active" onclick="showFabric('cotton')">Cotton</button>
         <button class="fabric-tab" onclick="showFabric('linen')">Linen</button>
@@ -437,7 +437,7 @@ const mod = modules.find((m) => m.id === 21)!;
     <!-- Laundry care symbols -->
     <div class="content-panel">
       <div class="inline-card-title">Care label symbols — what they actually mean</div>
-      <div class="explorer-intro">These symbols appear on every garment's care label. A bar under a symbol means "gentle." A cross means "do not."</div>
+      <div class="mini-intro">These symbols appear on every garment's care label. A bar under a symbol means "gentle." A cross means "do not."</div>
       <div class="care-grid">
         <div class="care-item"><div class="care-sym">🪣</div><div class="care-label">Wash (tub = machine wash)</div></div>
         <div class="care-item"><div class="care-sym">🤚</div><div class="care-label">Hand wash only</div></div>
@@ -467,12 +467,12 @@ const mod = modules.find((m) => m.id === 21)!;
 
       <!-- Interactive era buttons -->
       <div class="button-row-compact">
-        <button class="showbrand-control" onclick="showEra('1850')">1850s–1900s</button>
-        <button class="showbrand-control" onclick="showEra('1910')">1910s–1930s</button>
-        <button class="showbrand-control" onclick="showEra('1940')">1940s–1950s</button>
-        <button class="showbrand-control" onclick="showEra('1960')">1960s–1970s</button>
-        <button class="showbrand-control" onclick="showEra('1980')">1980s–1990s</button>
-        <button class="showbrand-control" onclick="showEra('2000')">2000s–present</button>
+        <button class="tab-button-narrow" onclick="showEra('1850')">1850s–1900s</button>
+        <button class="tab-button-narrow" onclick="showEra('1910')">1910s–1930s</button>
+        <button class="tab-button-narrow" onclick="showEra('1940')">1940s–1950s</button>
+        <button class="tab-button-narrow" onclick="showEra('1960')">1960s–1970s</button>
+        <button class="tab-button-narrow" onclick="showEra('1980')">1980s–1990s</button>
+        <button class="tab-button-narrow" onclick="showEra('2000')">2000s–present</button>
       </div>
       <div class="era-display" id="era-display"></div>
     </div>
@@ -484,11 +484,11 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-panel">
       <div class="inline-card-title">The wardrobe colour wheel — select a base colour to see harmonious pairings</div>
-      <div class="explorer-intro">Fashion colour rules differ from art — neutrals (navy, grey, black, white, camel, cream) combine with almost anything. The rules below apply to accent and statement colours.</div>
+      <div class="mini-intro">Fashion colour rules differ from art — neutrals (navy, grey, black, white, camel, cream) combine with almost anything. The rules below apply to accent and statement colours.</div>
 
       <div class="u-mb-md">
-        <div class="colour-picker-label">Choose a base colour:</div>
-        <div class="swatch-row" id="colour-swatches">
+        <div class="mini-caption">Choose a base colour:</div>
+        <div class="chip-row" id="colour-swatches">
           <div class="swatch selected swatch-style" data-colour="navy" title="Navy"></div>
           <div class="swatch swatch-charcoal" data-colour="charcoal" title="Charcoal"></div>
           <div class="swatch swatch-camel" data-colour="camel" title="Camel/Tan"></div>
@@ -504,7 +504,7 @@ const mod = modules.find((m) => m.id === 21)!;
       <div class="colour-result" id="colour-result"></div>
     </div>
 
-    <div class="two-card-grid">
+    <div class="grid-halves-spaced">
       <div class="card">
         <p class="clabel">The 60-30-10 rule</p>
         <p class="cval">A reliable proportion guide</p>
@@ -522,10 +522,10 @@ const mod = modules.find((m) => m.id === 21)!;
          ===================================================================== -->
     <h2 class="sec" id="part-k-the-suit-anatomy-fit-and-reading-quality">Part K · the suit — anatomy, fit, and reading quality</h2>
 
-    <div class="two-card-grid">
+    <div class="grid-halves-spaced">
       <div class="content-card-static">
         <div class="panel-title-spaced">Suit fit — the hierarchy of importance</div>
-        <div class="calendar-column">
+        <div class="stack-tight">
           <div class="anchor-row">
             <span class="pill p-red p-red-style">Critical</span>
             <div><div class="atext">Shoulder seam</div><div class="asub">Must sit exactly at the end of your shoulder — no overhang, no pulling. Cannot be fixed by a tailor affordably.</div></div>
@@ -550,7 +550,7 @@ const mod = modules.find((m) => m.id === 21)!;
       </div>
       <div class="content-card-static">
         <div class="panel-title-spaced">Reading suit quality — what to look for</div>
-        <div class="calendar-column">
+        <div class="stack-tight">
           <div class="anchor-row">
             <span class="pill p-purple p-red-style">Lining</span>
             <div><div class="atext">Half vs full lining</div><div class="asub">Full lining: more structured, warmer, easier to put on. Half lining: breathes better, more relaxed, usually Italian. Unlined: summer suits, very casual.</div></div>
@@ -606,7 +606,7 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-card">
       <div class="inline-card-title">Why perfume is fashion's most profitable product</div>
-      <div class="section-intro">Fragrance is the entry point to luxury. A bottle of Chanel No.5 costs a fraction of the dress it funds, yet carries the same brand DNA. The global fragrance market exceeds €50B per year. For major fashion houses, perfume and beauty can generate 30–50% of total revenue while requiring far less capital than garment production. Understanding fragrance — its families, longevity, and houses — is part of understanding fashion.</div>
+      <div class="lede-text-loose">Fragrance is the entry point to luxury. A bottle of Chanel No.5 costs a fraction of the dress it funds, yet carries the same brand DNA. The global fragrance market exceeds €50B per year. For major fashion houses, perfume and beauty can generate 30–50% of total revenue while requiring far less capital than garment production. Understanding fragrance — its families, longevity, and houses — is part of understanding fashion.</div>
 
       <!-- Fragrance family SVG -->
       <div class="section-kicker">The fragrance wheel — major families</div>
@@ -655,19 +655,19 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Perfume house tabs -->
     <div class="button-row-compact" id="perfume-tab-row">
-      <button class="perfume-tab showbrand-control active" onclick="showPerfume('chanel5')">Chanel No.5</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('dior')">Dior Sauvage</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('guerlain')">Guerlain</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('creed')">Creed</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('byredo')">Byredo</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('mfk')">Maison Francis Kurkdjian</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('hermes')">Hermès</button>
-      <button class="perfume-tab showbrand-control" onclick="showPerfume('lv')">Louis Vuitton</button>
+      <button class="perfume-tab tab-button-narrow active" onclick="showPerfume('chanel5')">Chanel No.5</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('dior')">Dior Sauvage</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('guerlain')">Guerlain</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('creed')">Creed</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('byredo')">Byredo</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('mfk')">Maison Francis Kurkdjian</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('hermes')">Hermès</button>
+      <button class="perfume-tab tab-button-narrow" onclick="showPerfume('lv')">Louis Vuitton</button>
     </div>
     <div class="content-panel" id="perfume-display"></div>
 
     <!-- Fragrance application guide -->
-    <div class="two-card-grid">
+    <div class="grid-halves-spaced">
       <div class="card">
         <p class="clabel">Where to apply</p>
         <p class="cval">Pulse points — warmth diffuses the scent</p>
@@ -687,7 +687,7 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <div class="content-card">
       <div class="inline-card-title">Why watches still matter in the age of smartphones</div>
-      <div class="section-intro">A mechanical watch is the only luxury object that works without electricity, appreciates in value, and is worn daily on the body. Unlike a car or a bag, a fine watch is a micro-engineering marvel — a hand-wound movement can contain 300–500 individual components, some thinner than a human hair, assembled by hand under magnification. The Swiss watch industry exports ~CHF 25B in watches per year, roughly 95% of world production by value. Switzerland dominates not because of geography but because of 250 years of compounding craft knowledge.</div>
+      <div class="lede-text-loose">A mechanical watch is the only luxury object that works without electricity, appreciates in value, and is worn daily on the body. Unlike a car or a bag, a fine watch is a micro-engineering marvel — a hand-wound movement can contain 300–500 individual components, some thinner than a human hair, assembled by hand under magnification. The Swiss watch industry exports ~CHF 25B in watches per year, roughly 95% of world production by value. Switzerland dominates not because of geography but because of 250 years of compounding craft knowledge.</div>
 
       <!-- Movement type explainer SVG -->
       <div class="section-kicker">Three movement types</div>
@@ -709,17 +709,17 @@ const mod = modules.find((m) => m.id === 21)!;
 
     <!-- Watch brand tabs -->
     <div class="button-row-compact" id="watch-tab-row">
-      <button class="watch-tab showbrand-control" onclick="showWatch('patek')"      >Patek Philippe</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('rolex')"      >Rolex</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('ap')"         >Audemars Piguet</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('vc')"         >Vacheron Constantin</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('jlc')"        >Jaeger-LeCoultre</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('omega')"      >Omega</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('iwc')"        >IWC Schaffhausen</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('cartier')"    >Cartier</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('seiko')"      >Seiko</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('casio')"      >Casio</button>
-      <button class="watch-tab showbrand-control" onclick="showWatch('panerai')"    >Panerai</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('patek')"      >Patek Philippe</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('rolex')"      >Rolex</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('ap')"         >Audemars Piguet</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('vc')"         >Vacheron Constantin</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('jlc')"        >Jaeger-LeCoultre</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('omega')"      >Omega</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('iwc')"        >IWC Schaffhausen</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('cartier')"    >Cartier</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('seiko')"      >Seiko</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('casio')"      >Casio</button>
+      <button class="watch-tab tab-button-narrow" onclick="showWatch('panerai')"    >Panerai</button>
       <button class="watch-tab showwatch-control" onclick="showWatch('smart')">⌚ Smartwatches</button>
     </div>
     <div class="content-panel" id="watch-display"></div>
@@ -1903,31 +1903,31 @@ function showPerfume(key) {
 
   const navHtml = `
     <div class="watch-nav-row">
-      ${prevKey ? `<button onclick="showPerfume('${prevKey}')" class="watch-nav-btn">← ${perfumes[prevKey].name}</button>` : '<span></span>'}
-      ${nextKey ? `<button onclick="showPerfume('${nextKey}')" class="watch-nav-btn">${perfumes[nextKey].name} →</button>` : '<span></span>'}
+      ${prevKey ? `<button onclick="showPerfume('${prevKey}')" class="tab-button-narrow">← ${perfumes[prevKey].name}</button>` : '<span></span>'}
+      ${nextKey ? `<button onclick="showPerfume('${nextKey}')" class="tab-button-narrow">${perfumes[nextKey].name} →</button>` : '<span></span>'}
     </div>`;
 
   document.getElementById('perfume-display').innerHTML = `
-    <div class="perfume-header-row">
-      <div class="perfume-name">${p.name}</div>
+    <div class="header-row-spaced">
+      <div class="title-medium">${p.name}</div>
       <div class="perfume-pill" style="background:${p.tierBg}; color:${p.tierCol};">${p.family}</div>
     </div>
     <div class="perfume-meta-grid">
       <div class="sub-card-compact">
-        <div class="perfume-meta-label">House &amp; Country</div>
-        <div class="perfume-meta-val">${p.house} · ${p.country}</div>
+        <div class="micro-label">House &amp; Country</div>
+        <div class="body-compact">${p.house} · ${p.country}</div>
       </div>
       <div class="sub-card-compact">
-        <div class="perfume-meta-label">Year / Nose</div>
-        <div class="perfume-meta-val">${p.year} · ${p.nose}</div>
+        <div class="micro-label">Year / Nose</div>
+        <div class="body-compact">${p.year} · ${p.nose}</div>
       </div>
       <div class="sub-card-compact">
-        <div class="perfume-meta-label">Concentration</div>
-        <div class="perfume-meta-val">${p.concentration}</div>
+        <div class="micro-label">Concentration</div>
+        <div class="body-compact">${p.concentration}</div>
       </div>
       <div class="sub-card-compact">
-        <div class="perfume-meta-label">Fragrance family</div>
-        <div class="perfume-meta-val">${p.family}</div>
+        <div class="micro-label">Fragrance family</div>
+        <div class="body-compact">${p.family}</div>
       </div>
     </div>
     <div class="perfume-about-block">${p.about}</div>
@@ -1935,11 +1935,11 @@ function showPerfume(key) {
     <div class="perfume-notes-block">${p.notes}</div>
     <div class="perfume-two-col">
       <div class="sub-card-compact">
-        <div class="perfume-meta-label">Best occasions</div>
+        <div class="micro-label">Best occasions</div>
         <div class="perfume-meta-val-sm">${p.occasions}</div>
       </div>
       <div class="sub-card-compact">
-        <div class="perfume-meta-label">Key nuance</div>
+        <div class="micro-label">Key nuance</div>
         <div class="perfume-meta-val-sm">${p.nuance}</div>
       </div>
     </div>

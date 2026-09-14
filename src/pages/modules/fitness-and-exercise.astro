@@ -22,7 +22,7 @@ const mod = modules.find((m) => m.id === 24)!;
     ═══════════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-a-aerobic-vs-anaerobic-the-fundamental-split">Part A · aerobic vs anaerobic — the fundamental split</h2>
 
-    <div class="fitness-grid">
+    <div class="grid-halves-spaced">
       <div class="fitness-panel">
         <div class="fitness-label">Aerobic exercise</div>
         <div class="fitness-text">"With oxygen." At moderate intensities where oxygen supply meets demand. Fat and glycogen are the fuels. Can be sustained for long periods.</div>
@@ -47,13 +47,13 @@ const mod = modules.find((m) => m.id === 24)!;
       </div>
     </div>
 
-    <div class="lactate-note">
+    <div class="note-context">
       <strong class="text-primary">The lactate threshold:</strong> The intensity at which lactate production exceeds the body's ability to clear it — the transition from aerobic to predominantly anaerobic. Training this threshold (tempo runs, sustained efforts just below max) is the most powerful tool for improving athletic performance. World-class endurance athletes have extremely high lactate thresholds — they operate aerobically at intensities that would be anaerobic for most people.
     </div>
 
     <!-- Heart rate zone visual -->
     <div class="content-panel">
-      <div class="hr-zones-title">The five heart rate training zones — what's happening physiologically</div>
+      <div class="block-title">The five heart rate training zones — what's happening physiologically</div>
 
       <div class="zone-row">
         <div class="zone-name">Zone 1</div>
@@ -91,7 +91,7 @@ const mod = modules.find((m) => m.id === 24)!;
         </div>
         <div class="zone-desc">Hard aerobic / above threshold. Can't speak comfortably. VO2 max improvement zone.</div>
       </div>
-      <div class="zone-row-last">
+      <div class="value-row-spaced">
         <div class="zone-name">Zone 5</div>
         <div class="fitness-media">
           <div class="zone-fill-max">
@@ -101,7 +101,7 @@ const mod = modules.find((m) => m.id === 24)!;
         <div class="zone-desc">Max effort. Sprints, all-out intervals. Anaerobic. Seconds to a couple of minutes only.</div>
       </div>
 
-      <div class="polarised-note">
+      <div class="note-panel">
         <strong class="text-primary">The 80/20 rule:</strong> Elite endurance athletes spend roughly 80% of training time in Zones 1–2 and only 20% at Zone 4–5. Most recreational athletes do the opposite — they go moderately hard every session (Zone 3–4), which accumulates fatigue without developing either the aerobic base or the high-end capacity effectively. Zone 2 is boring but transformative over months. Zone 3 is the "grey zone" — hard enough to be fatiguing, not hard enough to maximise adaptation.
       </div>
     </div>
@@ -113,7 +113,7 @@ const mod = modules.find((m) => m.id === 24)!;
 
     <div class="content-panel">
       <div class="panel-title">Calculate your estimated daily energy needs</div>
-      <div class="tdee-inputs">
+      <div class="input-row-spaced">
         <div class="field-wide">
           <label class="muted-text-small">Weight (kg)</label>
           <input class="u-fs-13px" type="number" id="u-fs-13px" value="75">
@@ -133,7 +133,7 @@ const mod = modules.find((m) => m.id === 24)!;
             <option value="f">Female</option>
           </select>
         </div>
-        <div class="field-select">
+        <div class="field-cell-wide">
           <label class="muted-text-small">Activity level</label>
           <select class="met-sex" id="met-activity">
             <option value="1.2">Sedentary (desk job, no exercise)</option>
@@ -143,7 +143,7 @@ const mod = modules.find((m) => m.id === 24)!;
             <option value="1.9">Very active (2x/day, hard training)</option>
           </select>
         </div>
-        <button class="calcmet-control" onclick="calcMet()">Calculate</button>
+        <button class="action-button" onclick="calcMet()">Calculate</button>
       </div>
       <div class="met-result" id="met-result"></div>
       <div class="calorie-balance-note">
@@ -154,15 +154,15 @@ const mod = modules.find((m) => m.id === 24)!;
     <!-- Body composition visual -->
     <div class="content-panel">
       <div class="inline-card-title">Body composition explorer — adjust sliders to see the breakdown</div>
-      <div class="panel-intro">Body composition is more informative than bodyweight alone. Two people with the same weight can have radically different physiques depending on muscle-to-fat ratio.</div>
+      <div class="lede-text">Body composition is more informative than bodyweight alone. Two people with the same weight can have radically different physiques depending on muscle-to-fat ratio.</div>
 
       <div class="composition-sliders">
         <div>
-          <div class="slider-label">Body fat % — <span id="bf-val">18</span>%</div>
+          <div class="input-caption">Body fat % — <span id="bf-val">18</span>%</div>
           <input type="range" id="bf-slider" min="5" max="45" value="18" oninput="updateBComp()">
         </div>
         <div>
-          <div class="slider-label">Body weight — <span id="bw-val">75</span> kg</div>
+          <div class="input-caption">Body weight — <span id="bw-val">75</span> kg</div>
           <input type="range" id="bw-slider" min="45" max="130" value="75" oninput="updateBComp()">
         </div>
       </div>
@@ -213,18 +213,18 @@ const mod = modules.find((m) => m.id === 24)!;
       <div class="iap-note">
         <strong class="text-primary">Why this matters — intra-abdominal pressure (IAP):</strong> Exhaling during the hardest part of a lift (concentric) reduces intra-abdominal pressure, which reduces spinal stability — making the lift weaker and increasing injury risk. The technical technique for heavy lifting is the Valsalva manoeuvre: take a deep breath, brace your core hard (like you're about to be punched), hold the breath through the sticking point of the lift (the hardest moment), then exhale as you complete the rep. This creates maximum IAP and spinal stability.
       </div>
-      <div class="breathing-cue-grid">
+      <div class="tile-grid">
         <div class="sub-card">
-          <div class="detail-label">Squat breathing cue</div>
-          <div class="cue-text">Inhale and brace before descent. Hold breath through the bottom and begin exhale as you drive up. Complete exhale at top. Reset breath each rep for heavy sets.</div>
+          <div class="caption-label">Squat breathing cue</div>
+          <div class="body-compact">Inhale and brace before descent. Hold breath through the bottom and begin exhale as you drive up. Complete exhale at top. Reset breath each rep for heavy sets.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Deadlift breathing cue</div>
-          <div class="cue-text">Stand tall, take a deep breath, brace 360° around your torso. Initiate the pull. Begin exhale as bar passes knees. Exhale fully at lockout. Lower the bar, reset.</div>
+          <div class="caption-label">Deadlift breathing cue</div>
+          <div class="body-compact">Stand tall, take a deep breath, brace 360° around your torso. Initiate the pull. Begin exhale as bar passes knees. Exhale fully at lockout. Lower the bar, reset.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Light/cardio breathing</div>
-          <div class="cue-text">For lighter weights and cardio: breathe naturally in rhythm with the movement. Don't hold breath. For running: try 2-count or 3-count breathing (inhale for 2–3 strides, exhale for 2–3 strides).</div>
+          <div class="caption-label">Light/cardio breathing</div>
+          <div class="body-compact">For lighter weights and cardio: breathe naturally in rhythm with the movement. Don't hold breath. For running: try 2-count or 3-count breathing (inhale for 2–3 strides, exhale for 2–3 strides).</div>
         </div>
       </div>
     </div>
@@ -236,7 +236,7 @@ const mod = modules.find((m) => m.id === 24)!;
 
     <div class="content-panel">
       <div class="panel-title">Protein target calculator — enter your weight</div>
-      <div class="calc-inputs">
+      <div class="input-row-spaced">
         <div class="field-medium">
           <label class="muted-text-small">Body weight (kg)</label>
           <input class="u-fs-13px" type="number" id="prot-weight" value="75">
@@ -250,27 +250,27 @@ const mod = modules.find((m) => m.id === 24)!;
             <option value="athlete">Endurance athlete</option>
           </select>
         </div>
-        <button class="calcmet-control" onclick="calcProtein()">Calculate</button>
+        <button class="action-button" onclick="calcProtein()">Calculate</button>
       </div>
       <div class="prot-result" id="prot-result"></div>
 
       <div class="panel-title-spaced">The science of muscle growth — what actually drives it</div>
       <div class="hypertrophy-grid">
         <div class="sub-card">
-          <div class="detail-label">The signal: mechanical tension</div>
-          <div class="mechanism-text">Mechanical tension (load on the muscle, especially under stretch) is the primary driver of hypertrophy. When a loaded muscle is stretched under tension (the eccentric phase), mechanosensors in the muscle fibre detect this and trigger the anabolic signalling cascade (mTOR pathway).</div>
+          <div class="caption-label">The signal: mechanical tension</div>
+          <div class="body-small">Mechanical tension (load on the muscle, especially under stretch) is the primary driver of hypertrophy. When a loaded muscle is stretched under tension (the eccentric phase), mechanosensors in the muscle fibre detect this and trigger the anabolic signalling cascade (mTOR pathway).</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">The process: muscle protein synthesis</div>
-          <div class="mechanism-text">Exercise triggers muscle protein synthesis (MPS) — the construction of new protein to repair and add to muscle fibres. MPS is elevated for 24–48h after resistance exercise. Without adequate dietary protein, the body can't build the new tissue regardless of training stimulus.</div>
+          <div class="caption-label">The process: muscle protein synthesis</div>
+          <div class="body-small">Exercise triggers muscle protein synthesis (MPS) — the construction of new protein to repair and add to muscle fibres. MPS is elevated for 24–48h after resistance exercise. Without adequate dietary protein, the body can't build the new tissue regardless of training stimulus.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">The limit: genetics and testosterone</div>
-          <div class="mechanism-text">Natural muscle gain: ~0.5–1 kg/month for beginners, ~0.25–0.5 kg/month intermediate, ~0.1–0.25 kg/month advanced. Men gain faster than women (testosterone). Genetic ceiling exists — "natural" bodybuilders hit a ceiling set by their genetics and hormone profile.</div>
+          <div class="caption-label">The limit: genetics and testosterone</div>
+          <div class="body-small">Natural muscle gain: ~0.5–1 kg/month for beginners, ~0.25–0.5 kg/month intermediate, ~0.1–0.25 kg/month advanced. Men gain faster than women (testosterone). Genetic ceiling exists — "natural" bodybuilders hit a ceiling set by their genetics and hormone profile.</div>
         </div>
         <div class="sub-card">
-          <div class="detail-label">Protein timing — does it matter?</div>
-          <div class="mechanism-text">The "anabolic window" (eat protein immediately post-workout) is largely a myth for people eating adequate daily protein. Total daily intake matters far more than timing. That said, distributing protein over 3–4 meals maximises MPS — each meal should contain ~20–40g protein to optimally stimulate MPS.</div>
+          <div class="caption-label">Protein timing — does it matter?</div>
+          <div class="body-small">The "anabolic window" (eat protein immediately post-workout) is largely a myth for people eating adequate daily protein. Total daily intake matters far more than timing. That said, distributing protein over 3–4 meals maximises MPS — each meal should contain ~20–40g protein to optimally stimulate MPS.</div>
         </div>
       </div>
     </div>
@@ -377,7 +377,7 @@ const mod = modules.find((m) => m.id === 24)!;
     <!-- 1RM calculator -->
     <div class="content-panel">
       <div class="panel-title">One-rep max (1RM) estimator — and what each percentage means for training</div>
-      <div class="calc-inputs">
+      <div class="input-row-spaced">
         <div class="field-medium">
           <label class="muted-text-small">Weight lifted (kg)</label>
           <input class="u-fs-13px" type="number" id="orm-weight" value="100">
@@ -386,16 +386,16 @@ const mod = modules.find((m) => m.id === 24)!;
           <label class="muted-text-small">Reps completed</label>
           <input class="u-fs-13px" type="number" id="orm-reps" value="5" min="1" max="30">
         </div>
-        <button class="calcmet-control" onclick="calcORM()">Estimate 1RM</button>
+        <button class="action-button" onclick="calcORM()">Estimate 1RM</button>
       </div>
       <div id="orm-result"></div>
-      <div class="formula-note">Formula: Brzycki (1RM = weight × 36 / (37 − reps)). Most accurate for 1–10 reps. Estimates become less reliable above 10 reps. Never attempt a true 1RM without a spotter and substantial training experience.</div>
+      <div class="fine-print">Formula: Brzycki (1RM = weight × 36 / (37 − reps)). Most accurate for 1–10 reps. Estimates become less reliable above 10 reps. Never attempt a true 1RM without a spotter and substantial training experience.</div>
     </div>
 
     <!-- Training programme explorer -->
     <div class="content-panel">
       <div class="inline-card-title">Training programme structures — which split is right for you?</div>
-      <div class="panel-intro">How you distribute training across the week matters less than total weekly volume per muscle group. The best split is the one you'll actually do consistently.</div>
+      <div class="lede-text">How you distribute training across the week matters less than total weekly volume per muscle group. The best split is the one you'll actually do consistently.</div>
 
       <div class="button-row-compact" id="prog-tabs">
         <button onclick="showProg('fullbody')" class="active">Full body (3×/week)</button>
@@ -437,7 +437,7 @@ const mod = modules.find((m) => m.id === 24)!;
     <!-- Calorie burn estimator -->
     <div class="content-panel">
       <div class="panel-title">Cardio calorie burn estimator — compare activities</div>
-      <div class="calc-inputs">
+      <div class="input-row-spaced">
         <div class="field-wide">
           <label class="muted-text-small">Body weight (kg)</label>
           <input class="u-fs-13px" type="number" id="cardio-weight" value="75">
@@ -446,10 +446,10 @@ const mod = modules.find((m) => m.id === 24)!;
           <label class="muted-text-small">Duration (minutes)</label>
           <input class="u-fs-13px" type="number" id="cardio-dur" value="30">
         </div>
-        <button class="calcmet-control" onclick="calcCardio()">Estimate</button>
+        <button class="action-button" onclick="calcCardio()">Estimate</button>
       </div>
       <div id="cardio-result"></div>
-      <div class="formula-note">MET-based estimates (metabolic equivalents). Accuracy ±20% — heart rate, fitness level, and individual metabolism all affect the true number. These figures do not include EPOC.</div>
+      <div class="fine-print">MET-based estimates (metabolic equivalents). Accuracy ±20% — heart rate, fitness level, and individual metabolism all affect the true number. These figures do not include EPOC.</div>
     </div>
 
     <!-- ══════════════════════════════════════════════════════════
@@ -459,13 +459,13 @@ const mod = modules.find((m) => m.id === 24)!;
 
     <div class="content-panel">
       <div class="inline-card-title">Select a muscle group to explore</div>
-      <div class="muscle-intro">Understanding which muscle does what helps you train with intent, not just go through the motions.</div>
+      <div class="intro-small">Understanding which muscle does what helps you train with intent, not just go through the motions.</div>
 
       <!-- Schematic SVG body diagram — anterior & posterior -->
       <div class="muscle-map-row">
 
         <!-- Anterior (front) -->
-        <svg class="fitness-svg-style" viewBox="0 0 140 280" width="140" height="280" xmlns="http://www.w3.org/2000/svg">
+        <svg class="no-shrink" viewBox="0 0 140 280" width="140" height="280" xmlns="http://www.w3.org/2000/svg">
           <text x="70" y="12" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui">ANTERIOR</text>
           <!-- Body outline -->
           <ellipse cx="70" cy="36" rx="18" ry="20" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
@@ -492,29 +492,29 @@ const mod = modules.find((m) => m.id === 24)!;
 
           <!-- Clickable muscle overlays — anterior -->
           <!-- Chest (pectorals) -->
-          <rect id="ant-chest" x="48" y="57" width="44" height="28" rx="4" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="chest" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('chest')"/>
+          <rect id="ant-chest" x="48" y="57" width="44" height="28" rx="4" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="chest" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('chest')"/>
           <!-- Shoulders (anterior deltoid) -->
-          <ellipse id="ant-shoulder-l" cx="33" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
-          <ellipse id="ant-shoulder-r" cx="107" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
+          <ellipse id="ant-shoulder-l" cx="33" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
+          <ellipse id="ant-shoulder-r" cx="107" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
           <!-- Biceps -->
-          <rect id="ant-bicep-l" x="24" y="62" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="biceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('biceps')"/>
-          <rect id="ant-bicep-r" x="98" y="62" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="biceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('biceps')"/>
+          <rect id="ant-bicep-l" x="24" y="62" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="biceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('biceps')"/>
+          <rect id="ant-bicep-r" x="98" y="62" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="biceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('biceps')"/>
           <!-- Abs -->
-          <rect id="ant-abs" x="52" y="88" width="36" height="32" rx="3" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="abs" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('abs')"/>
+          <rect id="ant-abs" x="52" y="88" width="36" height="32" rx="3" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="abs" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('abs')"/>
           <!-- Quads -->
-          <rect id="ant-quad-l" x="47" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="quads" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('quads')"/>
-          <rect id="ant-quad-r" x="72" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="quads" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('quads')"/>
+          <rect id="ant-quad-l" x="47" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="quads" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('quads')"/>
+          <rect id="ant-quad-r" x="72" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="quads" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('quads')"/>
           <!-- Calves front -->
-          <rect id="ant-calf-l" x="48" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
-          <rect id="ant-calf-r" x="75" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
+          <rect id="ant-calf-l" x="48" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
+          <rect id="ant-calf-r" x="75" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
 
           <!-- Forearms -->
-          <rect id="ant-forearm-l" x="21" y="122" width="16" height="48" rx="6" fill="var(--accent)" opacity="0.15" class="muscle-hit ant-chest" data-muscle="forearms" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('forearms')"/>
-          <rect id="ant-forearm-r" x="103" y="122" width="16" height="48" rx="6" fill="var(--accent)" opacity="0.15" class="muscle-hit ant-chest" data-muscle="forearms" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('forearms')"/>
+          <rect id="ant-forearm-l" x="21" y="122" width="16" height="48" rx="6" fill="var(--accent)" opacity="0.15" class="muscle-hit is-clickable" data-muscle="forearms" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('forearms')"/>
+          <rect id="ant-forearm-r" x="103" y="122" width="16" height="48" rx="6" fill="var(--accent)" opacity="0.15" class="muscle-hit is-clickable" data-muscle="forearms" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('forearms')"/>
         </svg>
 
         <!-- Posterior (back) -->
-        <svg class="fitness-svg-style" viewBox="0 0 140 280" width="140" height="280" xmlns="http://www.w3.org/2000/svg">
+        <svg class="no-shrink" viewBox="0 0 140 280" width="140" height="280" xmlns="http://www.w3.org/2000/svg">
           <text x="70" y="12" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)" font-family="system-ui">POSTERIOR</text>
           <!-- Body outline (same) -->
           <ellipse cx="70" cy="36" rx="18" ry="20" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.8"/>
@@ -531,26 +531,26 @@ const mod = modules.find((m) => m.id === 24)!;
 
           <!-- Clickable muscle overlays — posterior -->
           <!-- Traps -->
-          <path id="post-traps" d="M52,56 Q70,50 88,56 L84,78 Q70,74 56,78 Z" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="traps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('traps')"/>
+          <path id="post-traps" d="M52,56 Q70,50 88,56 L84,78 Q70,74 56,78 Z" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="traps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('traps')"/>
           <!-- Lats -->
-          <path id="post-lats" d="M50,70 L46,125 L70,115 L70,70 Z" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="lats" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('lats')"/>
-          <path id="post-lats-r" d="M90,70 L94,125 L70,115 L70,70 Z" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="lats" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('lats')"/>
+          <path id="post-lats" d="M50,70 L46,125 L70,115 L70,70 Z" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="lats" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('lats')"/>
+          <path id="post-lats-r" d="M90,70 L94,125 L70,115 L70,70 Z" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="lats" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('lats')"/>
           <!-- Rear delts -->
-          <ellipse id="post-rdelt-l" cx="33" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
-          <ellipse id="post-rdelt-r" cx="107" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
+          <ellipse id="post-rdelt-l" cx="33" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
+          <ellipse id="post-rdelt-r" cx="107" cy="64" rx="10" ry="9" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="shoulders" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('shoulders')"/>
           <!-- Triceps -->
-          <rect id="post-tri-l" x="24" y="65" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="triceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('triceps')"/>
-          <rect id="post-tri-r" x="98" y="65" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="triceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('triceps')"/>
+          <rect id="post-tri-l" x="24" y="65" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="triceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('triceps')"/>
+          <rect id="post-tri-r" x="98" y="65" width="18" height="32" rx="7" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="triceps" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('triceps')"/>
           <!-- Glutes -->
-          <rect id="post-glutes" x="46" y="123" width="48" height="22" rx="5" fill="var(--accent)" opacity="0.3" class="muscle-hit ant-chest" data-muscle="glutes" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('glutes')"/>
+          <rect id="post-glutes" x="46" y="123" width="48" height="22" rx="5" fill="var(--accent)" opacity="0.3" class="muscle-hit is-clickable" data-muscle="glutes" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('glutes')"/>
           <!-- Hamstrings -->
-          <rect id="post-ham-l" x="47" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="hamstrings" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('hamstrings')"/>
-          <rect id="post-ham-r" x="72" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit ant-chest" data-muscle="hamstrings" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('hamstrings')"/>
+          <rect id="post-ham-l" x="47" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="hamstrings" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('hamstrings')"/>
+          <rect id="post-ham-r" x="72" y="146" width="21" height="58" rx="8" fill="var(--accent)" opacity="0.25" class="muscle-hit is-clickable" data-muscle="hamstrings" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('hamstrings')"/>
           <!-- Calves (gastrocnemius) -->
-          <rect id="post-calf-l" x="48" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.3" class="muscle-hit ant-chest" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
-          <rect id="post-calf-r" x="75" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.3" class="muscle-hit ant-chest" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
+          <rect id="post-calf-l" x="48" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.3" class="muscle-hit is-clickable" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
+          <rect id="post-calf-r" x="75" y="211" width="17" height="48" rx="6" fill="var(--accent)" opacity="0.3" class="muscle-hit is-clickable" data-muscle="calves" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('calves')"/>
           <!-- Lower back -->
-          <rect id="post-lback" x="55" y="100" width="30" height="20" rx="3" fill="var(--accent)" opacity="0.2" class="muscle-hit ant-chest" data-muscle="lowerback" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('lowerback')"/>
+          <rect id="post-lback" x="55" y="100" width="30" height="20" rx="3" fill="var(--accent)" opacity="0.2" class="muscle-hit is-clickable" data-muscle="lowerback" onmouseenter="hoverMuscle(this)" onmouseleave="unhoverMuscle(this)" onclick="selectMuscle('lowerback')"/>
         </svg>
       </div>
 
@@ -566,51 +566,51 @@ const mod = modules.find((m) => m.id === 24)!;
     <div class="myth-card-grid">
 
       <div class="content-card-static">
-        <div class="bar-row-tight">
-          <span class="myth-icon">❌</span>
-          <div class="item-title">"Lifting makes women bulky"</div>
+        <div class="data-row">
+          <span class="icon-medium">❌</span>
+          <div class="item-name">"Lifting makes women bulky"</div>
         </div>
-        <div class="myth-desc">Women have ~10–20× less testosterone than men and significantly less growth hormone. The hormonal environment for dramatic muscle growth simply doesn't exist. Female competitive bodybuilders achieve their physique after years of specific, high-volume training often combined with performance-enhancing drugs. Resistance training for women produces strength, bone density, improved body composition, and metabolic benefit — not bulk.</div>
+        <div class="body-muted">Women have ~10–20× less testosterone than men and significantly less growth hormone. The hormonal environment for dramatic muscle growth simply doesn't exist. Female competitive bodybuilders achieve their physique after years of specific, high-volume training often combined with performance-enhancing drugs. Resistance training for women produces strength, bone density, improved body composition, and metabolic benefit — not bulk.</div>
       </div>
 
       <div class="content-card-static">
-        <div class="bar-row-tight">
-          <span class="myth-icon">❌</span>
-          <div class="item-title">"You can spot-reduce fat"</div>
+        <div class="data-row">
+          <span class="icon-medium">❌</span>
+          <div class="item-name">"You can spot-reduce fat"</div>
         </div>
-        <div class="myth-desc">Doing 500 sit-ups will not burn the fat on your stomach. Fat loss is systemic — the body decides where to draw down fat stores based on genetics and hormones, not which muscles you work. The stomach, hips, and thighs tend to store fat preferentially (especially in women) and are the last places to lean out. Core exercises build core muscles; they do not "burn" overlying fat. Only a calorie deficit reduces fat, and where it comes off first is not controllable.</div>
+        <div class="body-muted">Doing 500 sit-ups will not burn the fat on your stomach. Fat loss is systemic — the body decides where to draw down fat stores based on genetics and hormones, not which muscles you work. The stomach, hips, and thighs tend to store fat preferentially (especially in women) and are the last places to lean out. Core exercises build core muscles; they do not "burn" overlying fat. Only a calorie deficit reduces fat, and where it comes off first is not controllable.</div>
       </div>
 
       <div class="content-card-static">
-        <div class="bar-row-tight">
-          <span class="myth-icon">❌</span>
-          <div class="item-title">"Muscle turns into fat when you stop training"</div>
+        <div class="data-row">
+          <span class="icon-medium">❌</span>
+          <div class="item-name">"Muscle turns into fat when you stop training"</div>
         </div>
-        <div class="myth-desc">Muscle and fat are different tissues — one cannot convert into the other. When you stop training: muscle undergoes atrophy (the fibres shrink) due to lack of mechanical stimulus. Simultaneously, if you continue eating the same amount without the energy expenditure of training, you gain fat. These two things happen at the same time, giving the appearance of one "turning into" the other. They are independent processes.</div>
+        <div class="body-muted">Muscle and fat are different tissues — one cannot convert into the other. When you stop training: muscle undergoes atrophy (the fibres shrink) due to lack of mechanical stimulus. Simultaneously, if you continue eating the same amount without the energy expenditure of training, you gain fat. These two things happen at the same time, giving the appearance of one "turning into" the other. They are independent processes.</div>
       </div>
 
       <div class="content-card-static">
-        <div class="bar-row-tight">
-          <span class="myth-icon">❌</span>
-          <div class="item-title">"Cardio kills your gains"</div>
+        <div class="data-row">
+          <span class="icon-medium">❌</span>
+          <div class="item-name">"Cardio kills your gains"</div>
         </div>
-        <div class="myth-desc">The "interference effect" (cardio blunting muscle growth) exists but is heavily overstated by the fitness internet. Meta-analyses show that concurrent training (cardio + weights in the same program) reduces hypertrophy by only ~5–10% compared to resistance training alone — and only when cardio volume is excessive (long sessions, same day as lifting, same muscle groups). 3–4 moderate cardio sessions per week alongside resistance training does not meaningfully impair muscle growth and improves health markers significantly.</div>
+        <div class="body-muted">The "interference effect" (cardio blunting muscle growth) exists but is heavily overstated by the fitness internet. Meta-analyses show that concurrent training (cardio + weights in the same program) reduces hypertrophy by only ~5–10% compared to resistance training alone — and only when cardio volume is excessive (long sessions, same day as lifting, same muscle groups). 3–4 moderate cardio sessions per week alongside resistance training does not meaningfully impair muscle growth and improves health markers significantly.</div>
       </div>
 
       <div class="content-card-static">
-        <div class="bar-row-tight">
-          <span class="myth-icon">❌</span>
-          <div class="item-title">"You need to feel the burn / soreness to have trained well"</div>
+        <div class="data-row">
+          <span class="icon-medium">❌</span>
+          <div class="item-name">"You need to feel the burn / soreness to have trained well"</div>
         </div>
-        <div class="myth-desc">The burn (metabolic acidosis from lactate accumulation) and soreness (DOMS from eccentric damage) are both side effects of training, not measures of effectiveness. An experienced lifter can have a highly productive session with minimal soreness. Chasing the burn leads to prioritising metabolic stress over mechanical tension, which is a less effective stimulus for strength and hypertrophy. Quality of movement and progressive overload matter far more than how much something hurts.</div>
+        <div class="body-muted">The burn (metabolic acidosis from lactate accumulation) and soreness (DOMS from eccentric damage) are both side effects of training, not measures of effectiveness. An experienced lifter can have a highly productive session with minimal soreness. Chasing the burn leads to prioritising metabolic stress over mechanical tension, which is a less effective stimulus for strength and hypertrophy. Quality of movement and progressive overload matter far more than how much something hurts.</div>
       </div>
 
       <div class="content-card-static">
-        <div class="bar-row-tight">
-          <span class="myth-icon">❌</span>
-          <div class="item-title">"Static stretching before exercise prevents injury"</div>
+        <div class="data-row">
+          <span class="icon-medium">❌</span>
+          <div class="item-name">"Static stretching before exercise prevents injury"</div>
         </div>
-        <div class="myth-desc">Static stretching (hold a stretch for 30–60 seconds) before exercise has been shown to temporarily reduce muscle force output, reduce peak power, and reduce sprint performance — the opposite of what you want before lifting or sprinting. The evidence for injury prevention from pre-exercise static stretching is weak. The effective warm-up approach: dynamic movements (arm circles, leg swings, bodyweight squats, light sets of the exercise you're about to perform). Static stretching is valuable — just save it for after training, or as a standalone flexibility session.</div>
+        <div class="body-muted">Static stretching (hold a stretch for 30–60 seconds) before exercise has been shown to temporarily reduce muscle force output, reduce peak power, and reduce sprint performance — the opposite of what you want before lifting or sprinting. The evidence for injury prevention from pre-exercise static stretching is weak. The effective warm-up approach: dynamic movements (arm circles, leg swings, bodyweight squats, light sets of the exercise you're about to perform). Static stretching is valuable — just save it for after training, or as a standalone flexibility session.</div>
       </div>
 
     </div>
@@ -735,7 +735,7 @@ function updateBComp() {
 
   document.getElementById('bcomp-cards').innerHTML = segs.map(s => {
     const pct = (s.kg / bw * 100).toFixed(1);
-    return `<div class="orm-cell"><div class="orm-pct">${s.label}</div><div class="orm-val">${s.kg} kg</div><div class="orm-reps">${pct}%</div></div>`;
+    return `<div class="orm-cell"><div class="orm-pct">${s.label}</div><div class="card-name">${s.kg} kg</div><div class="orm-reps">${pct}%</div></div>`;
   }).join('');
 
   // Contextual note
@@ -891,7 +891,7 @@ function calcORM() {
       ${pcts.map((p,i) => `
         <div class="orm-cell">
           <div class="orm-pct">${p}% 1RM</div>
-          <div class="orm-val">${(orm * p / 100).toFixed(1)} kg</div>
+          <div class="card-name">${(orm * p / 100).toFixed(1)} kg</div>
           <div class="orm-reps">~${repEstimates[i]} rep${repEstimates[i]>1?'s':''}</div>
         </div>`).join('')}
     </div>`;

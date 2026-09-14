@@ -37,7 +37,7 @@ const mod = modules.find((m) => m.id === 26)!;
 
     <!-- Sun structure diagram -->
     <div class="content-panel">
-      <div class="panel-heading">The Sun's internal layers</div>
+      <div class="block-heading">The Sun's internal layers</div>
       <div class="space-row">
         <div class="space-card">
           <div class="layer-header">
@@ -79,40 +79,40 @@ const mod = modules.find((m) => m.id === 26)!;
 
     <!-- Star type comparison -->
     <div class="content-panel">
-      <div class="panel-heading">The Sun in context -- stellar classification (Morgan–Keenan)</div>
+      <div class="block-heading">The Sun in context -- stellar classification (Morgan–Keenan)</div>
       <div class="star-row">
         <div class="star-dot star-dot-style"></div>
-        <div class="star-info"><div class="star-name">O-type -- Blue supergiant (e.g. Rigel)</div><div class="star-sub">50× Sun's mass, 300,000× luminosity. Burns fuel in just millions of years. Ends as a supernova.</div></div>
+        <div class="flex-body"><div class="item-name">O-type -- Blue supergiant (e.g. Rigel)</div><div class="star-sub">50× Sun's mass, 300,000× luminosity. Burns fuel in just millions of years. Ends as a supernova.</div></div>
         <div class="star-temp">30,000–50,000 K</div>
       </div>
       <div class="star-row">
         <div class="star-dot star-dot-b-type"></div>
-        <div class="star-info"><div class="star-name">B-type -- Blue-white (e.g. Spica)</div><div class="star-sub">2–16× Sun's mass. Very bright, short-lived. Responsible for much of a galaxy's UV output.</div></div>
+        <div class="flex-body"><div class="item-name">B-type -- Blue-white (e.g. Spica)</div><div class="star-sub">2–16× Sun's mass. Very bright, short-lived. Responsible for much of a galaxy's UV output.</div></div>
         <div class="star-temp">10,000–30,000 K</div>
       </div>
       <div class="star-row">
         <div class="star-dot star-dot-a-type"></div>
-        <div class="star-info"><div class="star-name">A-type -- White (e.g. Sirius, Vega)</div><div class="star-sub">1.4–2× Sun's mass. Sirius is the brightest star in our night sky. Too short-lived for complex life to evolve.</div></div>
+        <div class="flex-body"><div class="item-name">A-type -- White (e.g. Sirius, Vega)</div><div class="star-sub">1.4–2× Sun's mass. Sirius is the brightest star in our night sky. Too short-lived for complex life to evolve.</div></div>
         <div class="star-temp">7,500–10,000 K</div>
       </div>
       <div class="star-row">
         <div class="star-dot star-dot-f-type"></div>
-        <div class="star-info"><div class="star-name">F-type -- Yellow-white (e.g. Procyon)</div><div class="star-sub">~1.2× Sun's mass. Slightly hotter and shorter-lived than the Sun. Some are in habitable zone candidates.</div></div>
+        <div class="flex-body"><div class="item-name">F-type -- Yellow-white (e.g. Procyon)</div><div class="star-sub">~1.2× Sun's mass. Slightly hotter and shorter-lived than the Sun. Some are in habitable zone candidates.</div></div>
         <div class="star-temp">6,000–7,500 K</div>
       </div>
       <div class="star-row star-row-style">
         <div class="star-dot star-dot-sun"></div>
-        <div class="star-info"><div class="star-name text-teal-500">G-type -- Yellow dwarf ← The Sun (also: Alpha Centauri A)</div><div class="star-sub">~1× solar mass. Long-lived (~10 billion years). Stable output. Our Sun is 4.6 Gyr old, halfway through its life. Ideal for complex life.</div></div>
-        <div class="star-temp text-teal-500">5,200–6,000 K</div>
+        <div class="flex-body"><div class="item-name text-accent">G-type -- Yellow dwarf ← The Sun (also: Alpha Centauri A)</div><div class="star-sub">~1× solar mass. Long-lived (~10 billion years). Stable output. Our Sun is 4.6 Gyr old, halfway through its life. Ideal for complex life.</div></div>
+        <div class="star-temp text-accent">5,200–6,000 K</div>
       </div>
       <div class="star-row">
         <div class="star-dot star-dot-k-type"></div>
-        <div class="star-info"><div class="star-name">K-type -- Orange dwarf (e.g. Epsilon Eridani)</div><div class="star-sub">0.5–0.8× Sun's mass. Dimmer but very long-lived. Increasingly considered top candidates for life-hosting systems.</div></div>
+        <div class="flex-body"><div class="item-name">K-type -- Orange dwarf (e.g. Epsilon Eridani)</div><div class="star-sub">0.5–0.8× Sun's mass. Dimmer but very long-lived. Increasingly considered top candidates for life-hosting systems.</div></div>
         <div class="star-temp">3,700–5,200 K</div>
       </div>
       <div class="star-row">
         <div class="star-dot star-dot-m-type"></div>
-        <div class="star-info"><div class="star-name">M-type -- Red dwarf (e.g. Proxima Centauri)</div><div class="star-sub">Most common star type (~75% of all stars). 0.08–0.5× solar mass. Extremely long-lived (trillions of years). Prone to intense flares that may sterilise nearby planets.</div></div>
+        <div class="flex-body"><div class="item-name">M-type -- Red dwarf (e.g. Proxima Centauri)</div><div class="star-sub">Most common star type (~75% of all stars). 0.08–0.5× solar mass. Extremely long-lived (trillions of years). Prone to intense flares that may sterilise nearby planets.</div></div>
         <div class="star-temp">2,400–3,700 K</div>
       </div>
     </div>
@@ -123,18 +123,18 @@ const mod = modules.find((m) => m.id === 26)!;
     <h2 class="sec" id="part-b-the-planets-interactive-explorer">Part B · the planets -- interactive explorer</h2>
 
     <div class="button-row-compact">
-      <button class="showplanet-control" onclick="showPlanet('mercury')" >Mercury</button>
-      <button class="showplanet-control" onclick="showPlanet('venus')"   >Venus</button>
-      <button class="showplanet-control" onclick="showPlanet('earth')"   >Earth</button>
-      <button class="showplanet-control" onclick="showPlanet('mars')"    >Mars</button>
-      <button class="showplanet-control" onclick="showPlanet('jupiter')" >Jupiter</button>
-      <button class="showplanet-control" onclick="showPlanet('saturn')"  >Saturn</button>
-      <button class="showplanet-control" onclick="showPlanet('uranus')"  >Uranus</button>
-      <button class="showplanet-control" onclick="showPlanet('neptune')" >Neptune</button>
+      <button class="tab-button-narrow" onclick="showPlanet('mercury')" >Mercury</button>
+      <button class="tab-button-narrow" onclick="showPlanet('venus')"   >Venus</button>
+      <button class="tab-button-narrow" onclick="showPlanet('earth')"   >Earth</button>
+      <button class="tab-button-narrow" onclick="showPlanet('mars')"    >Mars</button>
+      <button class="tab-button-narrow" onclick="showPlanet('jupiter')" >Jupiter</button>
+      <button class="tab-button-narrow" onclick="showPlanet('saturn')"  >Saturn</button>
+      <button class="tab-button-narrow" onclick="showPlanet('uranus')"  >Uranus</button>
+      <button class="tab-button-narrow" onclick="showPlanet('neptune')" >Neptune</button>
     </div>
 
     <div class="content-card">
-      <div class="scale-heading">Scale visualisation -- relative planet sizes (not to orbital distance scale)</div>
+      <div class="chart-heading-small">Scale visualisation -- relative planet sizes (not to orbital distance scale)</div>
       <div class="planet-scale-row">
         <div class="u-text-center">
           <div class="space-media"></div>
@@ -181,7 +181,7 @@ const mod = modules.find((m) => m.id === 26)!;
     <div class="content-panel">
       <div class="comparison-heading">Planetary comparison -- diameter relative to Earth</div>
       <div id="planet-bar-chart"></div>
-      <div class="comparison-note">Bar width proportional to diameter. Earth = 12,742 km baseline.</div>
+      <div class="caption-spaced">Bar width proportional to diameter. Earth = 12,742 km baseline.</div>
     </div>
 
     <!-- ===========================
@@ -219,10 +219,10 @@ const mod = modules.find((m) => m.id === 26)!;
 
     <div class="content-panel">
       <div class="moon-facts-grid">
-        <div class="moon-fact"><p class="clabel u-text-center">Distance from Earth</p><p class="moon-fact-value">384,400 km</p><p class="moon-fact-note">Light: 1.3 sec. Varies: 356,500 (perigee) to 406,700 km (apogee)</p></div>
-        <div class="moon-fact"><p class="clabel u-text-center">Diameter</p><p class="moon-fact-value">3,474 km</p><p class="moon-fact-note">27% of Earth's. Largest moon relative to its planet (except Charon/Pluto)</p></div>
-        <div class="moon-fact"><p class="clabel u-text-center">Orbital period</p><p class="moon-fact-value">27.3 days</p><p class="moon-fact-note">Sidereal (relative to stars). Lunar month (new moon to new moon): 29.5 days</p></div>
-        <div class="moon-fact"><p class="clabel u-text-center">Rotation period</p><p class="moon-fact-value">27.3 days</p><p class="moon-fact-note">Same as orbital period -- tidally locked. We always see the same face.</p></div>
+        <div class="stat-tile"><p class="clabel u-text-center">Distance from Earth</p><p class="figure-medium-flush">384,400 km</p><p class="moon-fact-note">Light: 1.3 sec. Varies: 356,500 (perigee) to 406,700 km (apogee)</p></div>
+        <div class="stat-tile"><p class="clabel u-text-center">Diameter</p><p class="figure-medium-flush">3,474 km</p><p class="moon-fact-note">27% of Earth's. Largest moon relative to its planet (except Charon/Pluto)</p></div>
+        <div class="stat-tile"><p class="clabel u-text-center">Orbital period</p><p class="figure-medium-flush">27.3 days</p><p class="moon-fact-note">Sidereal (relative to stars). Lunar month (new moon to new moon): 29.5 days</p></div>
+        <div class="stat-tile"><p class="clabel u-text-center">Rotation period</p><p class="figure-medium-flush">27.3 days</p><p class="moon-fact-note">Same as orbital period -- tidally locked. We always see the same face.</p></div>
       </div>
 
       <div class="two-col-grid">
@@ -236,51 +236,51 @@ const mod = modules.find((m) => m.id === 26)!;
         </div>
       </div>
 
-      <div class="phases-heading">The 8 lunar phases -- one complete cycle = 29.5 days</div>
-      <div class="phases-row">
+      <div class="subheading">The 8 lunar phases -- one complete cycle = 29.5 days</div>
+      <div class="tab-row-tight">
         <div class="phase-card">
           <div class="phase-new"></div>
           <div class="phase-name">New Moon</div>
-          <div class="muted-text-tiny">Day 0 -- invisible.</div>
+          <div class="micro-text">Day 0 -- invisible.</div>
         </div>
         <div class="phase-card">
           <div class="phase-waxing-crescent"></div>
           <div class="phase-name">Waxing crescent</div>
-          <div class="muted-text-tiny">Days 1–6. Right side lit.</div>
+          <div class="micro-text">Days 1–6. Right side lit.</div>
         </div>
         <div class="phase-card">
           <div class="phase-first-quarter"></div>
           <div class="phase-name">First quarter</div>
-          <div class="muted-text-tiny">Day 7. Right half lit.</div>
+          <div class="micro-text">Day 7. Right half lit.</div>
         </div>
         <div class="phase-card">
           <div class="phase-waxing-gibbous"></div>
           <div class="phase-name">Waxing gibbous</div>
-          <div class="muted-text-tiny">Days 8–13. Mostly lit.</div>
+          <div class="micro-text">Days 8–13. Mostly lit.</div>
         </div>
         <div class="phase-card">
           <div class="phase-full"></div>
           <div class="phase-name">Full Moon</div>
-          <div class="muted-text-tiny">Day 14–15. Fully lit.</div>
+          <div class="micro-text">Day 14–15. Fully lit.</div>
         </div>
         <div class="phase-card">
           <div class="phase-waning-gibbous"></div>
           <div class="phase-name">Waning gibbous</div>
-          <div class="muted-text-tiny">Days 16–21. Left side lit.</div>
+          <div class="micro-text">Days 16–21. Left side lit.</div>
         </div>
         <div class="phase-card">
           <div class="phase-last-quarter"></div>
           <div class="phase-name">Last quarter</div>
-          <div class="muted-text-tiny">Day 22. Left half lit.</div>
+          <div class="micro-text">Day 22. Left half lit.</div>
         </div>
         <div class="phase-card">
           <div class="phase-waning-crescent"></div>
           <div class="phase-name">Waning crescent</div>
-          <div class="muted-text-tiny">Days 23–29. Sliver left.</div>
+          <div class="micro-text">Days 23–29. Sliver left.</div>
         </div>
       </div>
 
-      <div class="moon-motion-note">
+      <div class="note-panel">
         <strong class="text-primary">The Moon's movement through space is complex:</strong> It orbits Earth (27.3 days). Earth + Moon orbit the Sun together (365.25 days). The Moon's path around the Sun is always convex -- it always curves toward the Sun, never loops backward, despite appearances. The Moon is also very slowly drifting away from Earth at ~3.8 cm/year (measured by laser retroreflectors left by Apollo missions).
       </div>
     </div>
@@ -340,7 +340,7 @@ const mod = modules.find((m) => m.id === 26)!;
     <div class="content-panel">
       <div class="panel-title">Distances from Earth's surface -- drag to explore</div>
       <div class="altitude-slider-row">
-        <label class="altitude-label">Altitude:</label>
+        <label class="form-label-narrow">Altitude:</label>
         <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="18" value="3" step="1">
       </div>
       <div class="dist-display" id="dist-display"></div>
@@ -354,7 +354,7 @@ const mod = modules.find((m) => m.id === 26)!;
     <div class="composition-grid">
       <!-- Composition visual -->
       <div class="content-card-static">
-        <div class="panel-heading">Composition of the observable universe</div>
+        <div class="block-heading">Composition of the observable universe</div>
         <!-- SVG pie chart approximation using stacked sections -->
         <svg class="universe-pie" viewBox="0 0 200 200">
           <!-- Dark energy ~68%: 0–244.8° (in SVG path terms) -->
@@ -371,71 +371,71 @@ const mod = modules.find((m) => m.id === 26)!;
           <text x="100" y="112" text-anchor="middle" font-size="11" fill="var(--color-text-primary)" font-weight="600">Universe</text>
         </svg>
         <div class="composition-legend">
-          <div class="comp-item"><div class="comp-dot bg-indigo-900"></div>Dark energy -- 68%</div>
-          <div class="comp-item"><div class="comp-dot comp-dot-dark-matter"></div>Dark matter -- 27%</div>
-          <div class="comp-item"><div class="comp-dot bg-teal-500"></div>Ordinary matter -- 5%</div>
+          <div class="legend-item"><div class="key-swatch bg-indigo-900"></div>Dark energy -- 68%</div>
+          <div class="legend-item"><div class="key-swatch comp-dot-dark-matter"></div>Dark matter -- 27%</div>
+          <div class="legend-item"><div class="key-swatch bg-accent"></div>Ordinary matter -- 5%</div>
         </div>
       </div>
       <!-- What ordinary matter is -->
       <div class="content-card-static">
-        <div class="panel-heading">Of that 5% ordinary matter…</div>
+        <div class="block-heading">Of that 5% ordinary matter…</div>
         <div class="u-mb-sm">
-          <div class="mag-row">
+          <div class="data-row">
             <span class="mag-label">Intergalactic gas</span>
-            <div class="mag-bar mag-bar-style"><span class="mag-val text-white">~72%</span></div>
+            <div class="mag-bar mag-bar-style"><span class="bar-value white-text">~72%</span></div>
           </div>
-          <div class="mag-row">
+          <div class="data-row">
             <span class="mag-label">Intragalactic gas &amp; dust</span>
-            <div class="mag-bar mag-bar-galactic-gas"><span class="mag-val text-white">~18%</span></div>
+            <div class="mag-bar mag-bar-galactic-gas"><span class="bar-value white-text">~18%</span></div>
           </div>
-          <div class="mag-row">
+          <div class="data-row">
             <span class="mag-label">Stars</span>
-            <div class="mag-bar mag-bar-stars"><span class="mag-val text-white">~8%</span></div>
+            <div class="mag-bar mag-bar-stars"><span class="bar-value white-text">~8%</span></div>
           </div>
-          <div class="mag-row">
-            <span class="mag-label">Everything else<br><span class="mag-label-aside">(planets, you, etc.)</span></span>
-            <div class="mag-bar mag-bar-everything-else"><span class="mag-val text-white">&lt;1%</span></div>
+          <div class="data-row">
+            <span class="mag-label">Everything else<br><span class="text-tiny">(planets, you, etc.)</span></span>
+            <div class="mag-bar mag-bar-everything-else"><span class="bar-value white-text">&lt;1%</span></div>
           </div>
         </div>
-        <div class="matter-note">Everything you can see, touch, and measure -- all galaxies, stars, planets, people, and light -- accounts for just <strong class="text-primary">~5% of the universe's total energy content.</strong> Dark matter doesn't interact with light (we detect it only via gravity). Dark energy is the name given to the force driving the universe's accelerating expansion. Both are among the deepest unsolved problems in physics.</div>
+        <div class="desc-small">Everything you can see, touch, and measure -- all galaxies, stars, planets, people, and light -- accounts for just <strong class="text-primary">~5% of the universe's total energy content.</strong> Dark matter doesn't interact with light (we detect it only via gravity). Dark energy is the name given to the force driving the universe's accelerating expansion. Both are among the deepest unsolved problems in physics.</div>
       </div>
     </div>
 
     <!-- Cosmic timeline -->
     <div class="content-panel">
-      <div class="panel-heading">The cosmic calendar -- if the universe's age were one year</div>
-      <div class="calendar-intro">Carl Sagan's concept: compress 13.8 billion years into 1 calendar year. Each second = ~437 years.</div>
+      <div class="block-heading">The cosmic calendar -- if the universe's age were one year</div>
+      <div class="mini-intro">Carl Sagan's concept: compress 13.8 billion years into 1 calendar year. Each second = ~437 years.</div>
       <div class="tl-item">
         <span class="tl-year">Jan 1</span>
-        <div class="tl-body"><div class="tl-name">Big Bang -- the universe begins</div><div class="muted-copy-tight">13.8 billion years ago. Time, space, and all matter created. Temperature: 10³² K. Cosmic inflation expands the universe by a factor of 10²⁶ in a fraction of a second.</div></div>
+        <div class="flex-body"><div class="row-title">Big Bang -- the universe begins</div><div class="muted-copy-tight">13.8 billion years ago. Time, space, and all matter created. Temperature: 10³² K. Cosmic inflation expands the universe by a factor of 10²⁶ in a fraction of a second.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Jan 22</span>
-        <div class="tl-body"><div class="tl-name">First stars ignite</div><div class="muted-copy-tight">~13.5 billion years ago. Population III stars -- enormous, metal-free, extremely short-lived. Their explosions seeded the universe with heavier elements forged in stellar cores.</div></div>
+        <div class="flex-body"><div class="row-title">First stars ignite</div><div class="muted-copy-tight">~13.5 billion years ago. Population III stars -- enormous, metal-free, extremely short-lived. Their explosions seeded the universe with heavier elements forged in stellar cores.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Mar 16</span>
-        <div class="tl-body"><div class="tl-name">Milky Way begins to form</div><div class="muted-copy-tight">~12 billion years ago. The Milky Way is relatively old as galaxies go -- it has been assembling via mergers for most of cosmic history. Its central supermassive black hole (Sagittarius A*, 4 million solar masses) likely formed early.</div></div>
+        <div class="flex-body"><div class="row-title">Milky Way begins to form</div><div class="muted-copy-tight">~12 billion years ago. The Milky Way is relatively old as galaxies go -- it has been assembling via mergers for most of cosmic history. Its central supermassive black hole (Sagittarius A*, 4 million solar masses) likely formed early.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Sep 2</span>
-        <div class="tl-body"><div class="tl-name">Sun and solar system form</div><div class="muted-copy-tight">4.6 billion years ago. A giant molecular cloud collapses. The Sun ignites. Planets form from the protoplanetary disc within ~100 million years. Earth's Moon forms from a giant impact with a Mars-sized body (the "Theia" hypothesis) within the first ~50 million years.</div></div>
+        <div class="flex-body"><div class="row-title">Sun and solar system form</div><div class="muted-copy-tight">4.6 billion years ago. A giant molecular cloud collapses. The Sun ignites. Planets form from the protoplanetary disc within ~100 million years. Earth's Moon forms from a giant impact with a Mars-sized body (the "Theia" hypothesis) within the first ~50 million years.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Sep 14</span>
-        <div class="tl-body"><div class="tl-name">First life on Earth appears</div><div class="muted-copy-tight">~4 billion years ago. Microbial life (likely chemosynthetic bacteria) in ancient oceans. Life appeared remarkably quickly after Earth cooled enough to have liquid water -- within the first ~500 million years.</div></div>
+        <div class="flex-body"><div class="row-title">First life on Earth appears</div><div class="muted-copy-tight">~4 billion years ago. Microbial life (likely chemosynthetic bacteria) in ancient oceans. Life appeared remarkably quickly after Earth cooled enough to have liquid water -- within the first ~500 million years.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Dec 17</span>
-        <div class="tl-body"><div class="tl-name">Cambrian explosion</div><div class="muted-copy-tight">540 million years ago. Multicellular animal life diversifies explosively. Most major animal body plans appear in the fossil record within ~20 million years.</div></div>
+        <div class="flex-body"><div class="row-title">Cambrian explosion</div><div class="muted-copy-tight">540 million years ago. Multicellular animal life diversifies explosively. Most major animal body plans appear in the fossil record within ~20 million years.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Dec 25</span>
-        <div class="tl-body"><div class="tl-name">Dinosaurs go extinct (K-Pg event)</div><div class="muted-copy-tight">66 million years ago. Chicxulub impactor (~10 km diameter) hits the Yucatán Peninsula. 75% of all species extinct. Mammals diversify into the vacated ecological niches.</div></div>
+        <div class="flex-body"><div class="row-title">Dinosaurs go extinct (K-Pg event)</div><div class="muted-copy-tight">66 million years ago. Chicxulub impactor (~10 km diameter) hits the Yucatán Peninsula. 75% of all species extinct. Mammals diversify into the vacated ecological niches.</div></div>
       </div>
-      <div class="tl-item tl-item-style">
+      <div class="tl-item no-divider">
         <span class="tl-year">Dec 31<br>11:59:59</span>
-        <div class="tl-body"><div class="tl-name">All of recorded human history</div><div class="muted-copy-tight">The last ~10,000 years (agriculture, writing, all civilisations, the entire scientific enterprise) occupies the final 23 seconds of the cosmic year. Modern Homo sapiens (~300,000 years old) appears at 11:58:43 pm. You exist in the final fraction of a second.</div></div>
+        <div class="flex-body"><div class="row-title">All of recorded human history</div><div class="muted-copy-tight">The last ~10,000 years (agriculture, writing, all civilisations, the entire scientific enterprise) occupies the final 23 seconds of the cosmic year. Modern Homo sapiens (~300,000 years old) appears at 11:58:43 pm. You exist in the final fraction of a second.</div></div>
       </div>
     </div>
 
@@ -481,7 +481,7 @@ const mod = modules.find((m) => m.id === 26)!;
         <div>
           <div class="xmod-label">Module 07 · Time &amp; Scale</div>
           <div class="xmod-title">Your age on other planets</div>
-          <div class="xmod-desc">Enter your birthdate and see how old you'd be if you'd lived on Mars, Jupiter, or any other planet.</div>
+          <div class="desc-text">Enter your birthdate and see how old you'd be if you'd lived on Mars, Jupiter, or any other planet.</div>
         </div>
       </a>
       <a href="/perceptense/modules/weight-and-mass/#solar-mass" target="_blank" rel="noopener" class="xmod-card">
@@ -489,7 +489,7 @@ const mod = modules.find((m) => m.id === 26)!;
         <div>
           <div class="xmod-label">Module 01 · Weight &amp; Mass</div>
           <div class="xmod-title">Your weight across the solar system</div>
-          <div class="xmod-desc">See how many kilograms you'd register on the surface of every planet and the Moon, scaled by surface gravity.</div>
+          <div class="desc-text">See how many kilograms you'd register on the surface of every planet and the Moon, scaled by surface gravity.</div>
         </div>
       </a>
     </div>
@@ -504,36 +504,36 @@ const mod = modules.find((m) => m.id === 26)!;
       <div class="panel-title">Our nearest stellar neighbours</div>
       <div class="neighbor-row">
         <span class="neighbor-dist">4.24 ly</span>
-        <div class="neighbor-body">
-          <div class="neighbor-name">Proxima Centauri -- the closest star to the Sun</div>
+        <div class="flex-body">
+          <div class="row-title">Proxima Centauri -- the closest star to the Sun</div>
           <div class="muted-copy-tight">A red dwarf (M-type) only 0.12% as luminous as the Sun. Hosts Proxima b, a potentially rocky planet in the habitable zone. However, red dwarfs emit intense flares that could strip away atmospheres. Part of the Alpha Centauri triple system. At current spacecraft speeds (~17 km/s) it would take ~73,000 years to reach.</div>
         </div>
       </div>
       <div class="neighbor-row">
         <span class="neighbor-dist">4.37 ly</span>
-        <div class="neighbor-body">
-          <div class="neighbor-name">Alpha Centauri A &amp; B -- the two bright companions</div>
+        <div class="flex-body">
+          <div class="row-title">Alpha Centauri A &amp; B -- the two bright companions</div>
           <div class="muted-copy-tight">A binary pair (G-type and K-type) orbiting each other every 80 years. Alpha Centauri A is nearly identical to our Sun. The brightest star in the southern sky (Rigil Kentaurus). Breakthrough Starshot aims to send a laser-propelled probe there at 20% the speed of light -- arrival in ~20 years.</div>
         </div>
       </div>
       <div class="neighbor-row">
         <span class="neighbor-dist">5.96 ly</span>
-        <div class="neighbor-body">
-          <div class="neighbor-name">Barnard's Star -- the fastest-moving star in the sky</div>
+        <div class="flex-body">
+          <div class="row-title">Barnard's Star -- the fastest-moving star in the sky</div>
           <div class="muted-copy-tight">A red dwarf moving at such high apparent speed across the sky that its position measurably shifts within a human lifetime. It will become our closest neighbour in ~10,000 years. Has a candidate super-Earth Barnard's Star b (contested). Its rapid motion was used historically to calculate its distance precisely.</div>
         </div>
       </div>
       <div class="neighbor-row">
         <span class="neighbor-dist">8.58 ly</span>
-        <div class="neighbor-body">
-          <div class="neighbor-name">Sirius -- the brightest star in the night sky</div>
+        <div class="flex-body">
+          <div class="row-title">Sirius -- the brightest star in the night sky</div>
           <div class="muted-copy-tight">A white A-type star 2.1× the Sun's mass and 25× its luminosity. Has a white dwarf companion (Sirius B) -- what remains after a star more massive than the Sun exhausted its fuel. Despite being the brightest star as seen from Earth, it is not particularly special; it just happens to be relatively close.</div>
         </div>
       </div>
       <div class="neighbor-row">
         <span class="neighbor-dist">10.5 ly</span>
-        <div class="neighbor-body">
-          <div class="neighbor-name">Epsilon Eridani -- one of the youngest nearby stars</div>
+        <div class="flex-body">
+          <div class="row-title">Epsilon Eridani -- one of the youngest nearby stars</div>
           <div class="muted-copy-tight">Only ~800 million years old (vs the Sun's 4.6 billion). Has a confirmed planet (Epsilon Eridani b) and a debris disc similar to a young solar system. Featured extensively in science fiction -- the destination of humanity's first interstellar colony ship in Arthur C. Clarke's novels.</div>
         </div>
       </div>
@@ -563,11 +563,11 @@ const mod = modules.find((m) => m.id === 26)!;
       <!-- Scale bar visual -->
       <div class="panel-title-spaced u-mt-sm">Milky Way cross-section -- our position</div>
       <div class="mw-scale-track" id="mw-track">
-        <span class="mw-tick" style="left:0%">Centre<br>0 ly</span>
-        <span class="mw-tick" style="left:22%">Sagittarius<br>Arm</span>
-        <span class="mw-tick" style="left:43%">Sun &#9737;<br>26,000 ly</span>
-        <span class="mw-tick" style="left:70%">Perseus<br>Arm</span>
-        <span class="mw-tick" style="left:100%">Edge<br>60,000 ly</span>
+        <span class="tick-label" style="left:0%">Centre<br>0 ly</span>
+        <span class="tick-label" style="left:22%">Sagittarius<br>Arm</span>
+        <span class="tick-label" style="left:43%">Sun &#9737;<br>26,000 ly</span>
+        <span class="tick-label" style="left:70%">Perseus<br>Arm</span>
+        <span class="tick-label" style="left:100%">Edge<br>60,000 ly</span>
       </div>
       <div style="margin-top:28px;" class="muted-copy">The Sun is not at the centre -- it sits in a relatively quiet suburban region of one of the Milky Way's minor spiral arms. This is likely important for life: the galactic centre is a violent environment of intense radiation, frequent supernovae, and gravitational disruption.</div>
     </div>
@@ -653,26 +653,26 @@ const mod = modules.find((m) => m.id === 26)!;
     <!-- BH types -->
     <div class="content-panel">
       <div class="panel-title">Types of black holes</div>
-      <div class="bhtype-grid">
+      <div class="tile-grid-spaced">
         <div class="bhtype-card">
-          <div class="bhtype-name">Stellar-mass</div>
+          <div class="item-heading-spaced">Stellar-mass</div>
           <div class="bhtype-mass">~3 to ~100 solar masses</div>
-          <div class="bhtype-desc">Formed from dying massive stars. Thousands exist in the Milky Way. The first confirmed: Cygnus X-1 (1972). Detectable via X-ray emissions from accreting material.</div>
+          <div class="desc-compact">Formed from dying massive stars. Thousands exist in the Milky Way. The first confirmed: Cygnus X-1 (1972). Detectable via X-ray emissions from accreting material.</div>
         </div>
         <div class="bhtype-card">
-          <div class="bhtype-name">Intermediate-mass</div>
+          <div class="item-heading-spaced">Intermediate-mass</div>
           <div class="bhtype-mass">100 to ~100,000 solar masses</div>
-          <div class="bhtype-desc">Long theorised but hard to confirm. First strong evidence found in globular clusters and dwarf galaxy nuclei. The "missing link" between stellar and supermassive black holes.</div>
+          <div class="desc-compact">Long theorised but hard to confirm. First strong evidence found in globular clusters and dwarf galaxy nuclei. The "missing link" between stellar and supermassive black holes.</div>
         </div>
         <div class="bhtype-card">
-          <div class="bhtype-name">Supermassive</div>
+          <div class="item-heading-spaced">Supermassive</div>
           <div class="bhtype-mass">1 million to 66 billion solar masses</div>
-          <div class="bhtype-desc">Found at the centres of almost all large galaxies. Our own: Sagittarius A* (4 million solar masses). The largest known: TON 618 (66 billion solar masses). How they form remains an open question.</div>
+          <div class="desc-compact">Found at the centres of almost all large galaxies. Our own: Sagittarius A* (4 million solar masses). The largest known: TON 618 (66 billion solar masses). How they form remains an open question.</div>
         </div>
         <div class="bhtype-card">
-          <div class="bhtype-name">Primordial (theoretical)</div>
+          <div class="item-heading-spaced">Primordial (theoretical)</div>
           <div class="bhtype-mass">Any mass -- even sub-gram</div>
-          <div class="bhtype-desc">Hypothetical black holes formed from density fluctuations in the very early universe, before stars existed. Could explain dark matter. Searched for via gravitational lensing -- none confirmed yet.</div>
+          <div class="desc-compact">Hypothetical black holes formed from density fluctuations in the very early universe, before stars existed. Could explain dark matter. Searched for via gravitational lensing -- none confirmed yet.</div>
         </div>
       </div>
     </div>
@@ -722,23 +722,23 @@ const mod = modules.find((m) => m.id === 26)!;
       <div class="panel-title">Milestones in black hole observation</div>
       <div class="tl-item">
         <span class="tl-year">1915</span>
-        <div class="tl-body"><div class="tl-name">Einstein's general relativity predicts extreme spacetime curvature</div><div class="muted-copy-tight">Karl Schwarzschild derived the first exact solution to Einstein's field equations within weeks of their publication -- describing the geometry of spacetime around a point mass. He found the mathematical feature we now call the event horizon, though the physical interpretation took decades.</div></div>
+        <div class="flex-body"><div class="row-title">Einstein's general relativity predicts extreme spacetime curvature</div><div class="muted-copy-tight">Karl Schwarzschild derived the first exact solution to Einstein's field equations within weeks of their publication -- describing the geometry of spacetime around a point mass. He found the mathematical feature we now call the event horizon, though the physical interpretation took decades.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">1972</span>
-        <div class="tl-body"><div class="tl-name">Cygnus X-1 -- first strong black hole candidate confirmed</div><div class="muted-copy-tight">An X-ray binary system in which a compact invisible object (too massive for a neutron star) accretes material from a companion star, emitting X-rays. Stephen Hawking famously bet Kip Thorne in 1974 that it was NOT a black hole -- and conceded in 1990.</div></div>
+        <div class="flex-body"><div class="row-title">Cygnus X-1 -- first strong black hole candidate confirmed</div><div class="muted-copy-tight">An X-ray binary system in which a compact invisible object (too massive for a neutron star) accretes material from a companion star, emitting X-rays. Stephen Hawking famously bet Kip Thorne in 1974 that it was NOT a black hole -- and conceded in 1990.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2015</span>
-        <div class="tl-body"><div class="tl-name">First gravitational wave detection -- LIGO hears two black holes merge</div><div class="muted-copy-tight">The merger of two stellar black holes (29 and 36 solar masses) 1.3 billion light-years away was detected as a spacetime ripple lasting 0.2 seconds. The signal matched general relativity's prediction perfectly. This opened gravitational wave astronomy as an entirely new way to observe the universe.</div></div>
+        <div class="flex-body"><div class="row-title">First gravitational wave detection -- LIGO hears two black holes merge</div><div class="muted-copy-tight">The merger of two stellar black holes (29 and 36 solar masses) 1.3 billion light-years away was detected as a spacetime ripple lasting 0.2 seconds. The signal matched general relativity's prediction perfectly. This opened gravitational wave astronomy as an entirely new way to observe the universe.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2019</span>
-        <div class="tl-body"><div class="tl-name">First image of a black hole's shadow -- M87*</div><div class="muted-copy-tight">The Event Horizon Telescope (a planet-sized radio array) imaged the shadow of M87* -- a 6.5 billion solar mass black hole 55 million light-years away. The glowing ring of superheated gas matched theoretical predictions. In 2022, the same team imaged Sagittarius A*, the Milky Way's own central black hole.</div></div>
+        <div class="flex-body"><div class="row-title">First image of a black hole's shadow -- M87*</div><div class="muted-copy-tight">The Event Horizon Telescope (a planet-sized radio array) imaged the shadow of M87* -- a 6.5 billion solar mass black hole 55 million light-years away. The glowing ring of superheated gas matched theoretical predictions. In 2022, the same team imaged Sagittarius A*, the Milky Way's own central black hole.</div></div>
       </div>
-      <div class="tl-item tl-item-style">
+      <div class="tl-item no-divider">
         <span class="tl-year">Ongoing</span>
-        <div class="tl-body"><div class="tl-name">Hawking radiation -- still undetected but theoretically critical</div><div class="muted-copy-tight">In 1974, Stephen Hawking showed that black holes must slowly emit thermal radiation due to quantum effects near the event horizon -- eventually evaporating entirely. For stellar black holes, the temperature is ~60 nanokelvin, undetectable in practice (cooler than the CMB), but the principle has profound implications for the "information paradox": what happens to the information about everything that fell in?</div></div>
+        <div class="flex-body"><div class="row-title">Hawking radiation -- still undetected but theoretically critical</div><div class="muted-copy-tight">In 1974, Stephen Hawking showed that black holes must slowly emit thermal radiation due to quantum effects near the event horizon -- eventually evaporating entirely. For stellar black holes, the temperature is ~60 nanokelvin, undetectable in practice (cooler than the CMB), but the principle has profound implications for the "information paradox": what happens to the information about everything that fell in?</div></div>
       </div>
     </div>
 
@@ -762,28 +762,28 @@ const mod = modules.find((m) => m.id === 26)!;
       <div id="wh-anatomy">
         <div class="wh-section wh-mouth-a">
           <span class="wh-icon">🌌</span>
-          <div class="wh-body">
+          <div class="flex-body">
             <div class="wh-title">Mouth A -- entry point (e.g. our region of space)</div>
             <div class="wh-desc">Appears as a spherical opening suspended in space. To a distant observer it would look like a warped, lensed image of wherever the other mouth is -- you would see the other end of the universe as if looking through a glass sphere. Tidal forces near the mouth are theoretically kept survivable for a sufficiently large wormhole.</div>
           </div>
         </div>
         <div class="wh-section wh-throat">
           <span class="wh-icon">⏱️</span>
-          <div class="wh-body">
+          <div class="flex-body">
             <div class="wh-title">The throat -- minimum radius</div>
             <div class="wh-desc">The narrowest point of the tunnel. This is where time dilation is most extreme. For a traversable wormhole, the throat must remain open -- held apart by something. Gravity alone would collapse it instantly. The transit time through the throat can, in theory, be made shorter than the light-travel time between the two mouths in normal space -- this is what makes wormholes potentially useful for faster-than-light travel (or closed timelike curves).</div>
           </div>
         </div>
         <div class="wh-section wh-exotic">
           <span class="wh-icon">⚛️</span>
-          <div class="wh-body">
+          <div class="flex-body">
             <div class="wh-title">Exotic matter requirement -- the fatal obstacle</div>
             <div class="wh-desc">To keep the throat open, the wormhole requires "exotic matter" -- material with negative energy density that threads the throat and exerts a repulsive gravitational effect. The Casimir effect (a quantum phenomenon) demonstrates that negative energy densities are physically possible in tiny amounts, but the quantities required for a macroscopic wormhole are astronomically large. This is the central reason physicists believe traversable wormholes are probably impossible in practice, even if allowed in theory.</div>
           </div>
         </div>
         <div class="wh-section wh-mouth-b">
           <span class="wh-icon">🌠</span>
-          <div class="wh-body">
+          <div class="flex-body">
             <div class="wh-title">Mouth B -- exit point (another location or time)</div>
             <div class="wh-desc">Could in principle be anywhere in the same spacetime: billions of light-years away, or in a different region of the same galaxy. More provocatively, general relativity also permits the two mouths to be connected to different times -- a wormhole whose mouths are moved at relativistic speeds relative to each other (or placed in different gravitational potentials) would experience different rates of time, creating a potential time machine. This is what led Kip Thorne to publish the 1988 wormhole paper: a graduate student asked if time machines were possible, and the answer turned out to be: yes, IF wormholes exist AND can be traversed.</div>
           </div>
@@ -990,10 +990,10 @@ const mod = modules.find((m) => m.id === 26)!;
     let html = '';
     for (const [k, p] of Object.entries(planets)) {
       const pct = (p.diam_km / maxD * 100).toFixed(1);
-      html += `<div class="mag-row">
+      html += `<div class="data-row">
         <span class="mag-label">${p.name}</span>
         <div class="mag-bar" style="background:${cols[k]};width:${pct}%;opacity:0.85;">
-          <span class="mag-val" style="color:white;font-size:10px;">${p.diam_km.toLocaleString()} km</span>
+          <span class="bar-value" style="color:white;font-size:10px;">${p.diam_km.toLocaleString()} km</span>
         </div>
       </div>`;
     }
@@ -1327,23 +1327,23 @@ const mod = modules.find((m) => m.id === 26)!;
       <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:10px;line-height:1.5;">SpaceX's iterative "test to failure, learn fast" philosophy produced the most ambitious rocket programme in history. Each flight test dramatically expanded the envelope.</div>
       <div class="tl-item">
         <span class="tl-year">Apr 2023</span>
-        <div class="tl-body"><div class="tl-name">IFT-1 -- first integrated flight test</div><div class="tl-desc">First flight of the full 121m stack. Booster engines failed to separate cleanly; Flight Termination System destroyed both vehicles ~4 minutes after launch. Launchpad severely damaged. Critical data gathered. "Success -- we didn't blow up the pad" was not the original plan but became the revised definition.</div></div>
+        <div class="flex-body"><div class="row-title">IFT-1 -- first integrated flight test</div><div class="tl-desc">First flight of the full 121m stack. Booster engines failed to separate cleanly; Flight Termination System destroyed both vehicles ~4 minutes after launch. Launchpad severely damaged. Critical data gathered. "Success -- we didn't blow up the pad" was not the original plan but became the revised definition.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Nov 2023</span>
-        <div class="tl-body"><div class="tl-name">IFT-2 -- stage separation achieved</div><div class="tl-desc">Hot staging (lighting upper-stage engines before booster separation) worked -- a novel technique SpaceX adopted from Soviet rockets. Ship reached space before FTS activation. Booster exploded during landing burn. Major progress.</div></div>
+        <div class="flex-body"><div class="row-title">IFT-2 -- stage separation achieved</div><div class="tl-desc">Hot staging (lighting upper-stage engines before booster separation) worked -- a novel technique SpaceX adopted from Soviet rockets. Ship reached space before FTS activation. Booster exploded during landing burn. Major progress.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Mar 2024</span>
-        <div class="tl-body"><div class="tl-name">IFT-3 -- first reentry</div><div class="tl-desc">Both vehicles flew successfully for the first time. Ship performed a controlled reentry, surviving peak heating before contact loss near splashdown. Booster flew back toward the launch site before disintegrating. First full mission profile demonstrated.</div></div>
+        <div class="flex-body"><div class="row-title">IFT-3 -- first reentry</div><div class="tl-desc">Both vehicles flew successfully for the first time. Ship performed a controlled reentry, surviving peak heating before contact loss near splashdown. Booster flew back toward the launch site before disintegrating. First full mission profile demonstrated.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">Jun 2024</span>
-        <div class="tl-body"><div class="tl-name">IFT-4 -- both vehicles survive</div><div class="tl-desc">Historic milestone: both Super Heavy booster and Ship completed controlled flight and were recovered (splashdown). Ship performed a controlled ocean splashdown with live video transmission through reentry -- the thermal protection system held.</div></div>
+        <div class="flex-body"><div class="row-title">IFT-4 -- both vehicles survive</div><div class="tl-desc">Historic milestone: both Super Heavy booster and Ship completed controlled flight and were recovered (splashdown). Ship performed a controlled ocean splashdown with live video transmission through reentry -- the thermal protection system held.</div></div>
       </div>
       <div class="tl-item" style="border-bottom:none;">
         <span class="tl-year">Oct 2024</span>
-        <div class="tl-body"><div class="tl-name">IFT-5 -- booster caught by "chopsticks"</div><div class="tl-desc">The Super Heavy booster returned to the launch tower and was caught mid-air by the "Mechazilla" mechanical arms -- the first time a rocket booster was caught rather than landing on legs. A moment that redefined what reusability could look like. Ship splashed down successfully in the Indian Ocean.</div></div>
+        <div class="flex-body"><div class="row-title">IFT-5 -- booster caught by "chopsticks"</div><div class="tl-desc">The Super Heavy booster returned to the launch tower and was caught mid-air by the "Mechazilla" mechanical arms -- the first time a rocket booster was caught rather than landing on legs. A moment that redefined what reusability could look like. Ship splashed down successfully in the Indian Ocean.</div></div>
       </div>`
     },
     {
@@ -1362,31 +1362,31 @@ const mod = modules.find((m) => m.id === 26)!;
       content: `<div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px;">SpaceX milestones -- industry-defining firsts</div>
       <div class="tl-item">
         <span class="tl-year">2008</span>
-        <div class="tl-body"><div class="tl-name">First private liquid-fuelled orbital rocket (Falcon 1)</div><div class="tl-desc">On its 4th attempt, after 3 failures that nearly bankrupted the company. SpaceX had enough parts for one more attempt. It succeeded.</div></div>
+        <div class="flex-body"><div class="row-title">First private liquid-fuelled orbital rocket (Falcon 1)</div><div class="tl-desc">On its 4th attempt, after 3 failures that nearly bankrupted the company. SpaceX had enough parts for one more attempt. It succeeded.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2010</span>
-        <div class="tl-body"><div class="tl-name">First private company to recover a spacecraft from orbit</div><div class="tl-desc">Dragon capsule returned safely from orbit -- only the 5th entity ever to achieve this (after USA, USSR, China, ESA).</div></div>
+        <div class="flex-body"><div class="row-title">First private company to recover a spacecraft from orbit</div><div class="tl-desc">Dragon capsule returned safely from orbit -- only the 5th entity ever to achieve this (after USA, USSR, China, ESA).</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2012</span>
-        <div class="tl-body"><div class="tl-name">First private spacecraft to berth the ISS</div><div class="tl-desc">Dragon CRS-1 cargo mission. NASA had previously only accepted government-operated vehicles. A commercial turning point.</div></div>
+        <div class="flex-body"><div class="row-title">First private spacecraft to berth the ISS</div><div class="tl-desc">Dragon CRS-1 cargo mission. NASA had previously only accepted government-operated vehicles. A commercial turning point.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2015</span>
-        <div class="tl-body"><div class="tl-name">First orbital-class rocket booster to land propulsively</div><div class="tl-desc">Falcon 9 first stage landed at Cape Canaveral on 21 December 2015. The defining moment that proved reusability was achievable at orbital scale.</div></div>
+        <div class="flex-body"><div class="row-title">First orbital-class rocket booster to land propulsively</div><div class="tl-desc">Falcon 9 first stage landed at Cape Canaveral on 21 December 2015. The defining moment that proved reusability was achievable at orbital scale.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2017</span>
-        <div class="tl-body"><div class="tl-name">First reflight of an orbital-class rocket booster</div><div class="tl-desc">The same Falcon 9 booster flown twice to orbit, 6 months apart. Unit economics of launch transformed permanently.</div></div>
+        <div class="flex-body"><div class="row-title">First reflight of an orbital-class rocket booster</div><div class="tl-desc">The same Falcon 9 booster flown twice to orbit, 6 months apart. Unit economics of launch transformed permanently.</div></div>
       </div>
       <div class="tl-item">
         <span class="tl-year">2020</span>
-        <div class="tl-body"><div class="tl-name">First private crewed orbital spaceflight</div><div class="tl-desc">Crew Dragon Demo-2 restored US crewed launch capability after a 9-year gap following Shuttle retirement. First astronauts to launch on a commercial vehicle.</div></div>
+        <div class="flex-body"><div class="row-title">First private crewed orbital spaceflight</div><div class="tl-desc">Crew Dragon Demo-2 restored US crewed launch capability after a 9-year gap following Shuttle retirement. First astronauts to launch on a commercial vehicle.</div></div>
       </div>
       <div class="tl-item" style="border-bottom:none;">
         <span class="tl-year">2024</span>
-        <div class="tl-body"><div class="tl-name">First rocket booster caught mid-air at launch tower</div><div class="tl-desc">Starship IFT-5 Super Heavy booster caught by Mechazilla chopsticks -- eliminating the need for landing legs and enabling rapid same-day reflight in the future.</div></div>
+        <div class="flex-body"><div class="row-title">First rocket booster caught mid-air at launch tower</div><div class="tl-desc">Starship IFT-5 Super Heavy booster caught by Mechazilla chopsticks -- eliminating the need for landing legs and enabling rapid same-day reflight in the future.</div></div>
       </div>`
     }
   ];

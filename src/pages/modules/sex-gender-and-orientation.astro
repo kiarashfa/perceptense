@@ -41,7 +41,7 @@ const mod = modules.find((m) => m.id === 23)!;
           <div class="concept-note-green">Also not a choice. Strong evidence for biological and developmental (prenatal hormonal) contributions.</div>
         </div>
       </div>
-      <div class="key-note">
+      <div class="note-panel">
         <strong class="text-primary">The key independence:</strong> These three dimensions can combine in any way. A person can be biologically male, identify as a woman (transgender), and be attracted to men (heterosexual) — or any other combination. Gender identity says nothing about sexual orientation; biological sex says nothing about gender identity. Each dimension is its own axis.
       </div>
     </div>
@@ -200,14 +200,14 @@ const mod = modules.find((m) => m.id === 23)!;
     <h2 class="sec" id="part-c-gender-identity-the-spectrum-explored">Part C · gender identity — the spectrum explored</h2>
 
     <div class="button-row">
-      <button class="exp-btn showgender-control" onclick="showGender('cisgender')"    >Cisgender</button>
-      <button class="exp-btn showgender-control" onclick="showGender('transgender')"  >Transgender</button>
-      <button class="exp-btn showgender-control" onclick="showGender('nonbinary')"    >Non-binary</button>
-      <button class="exp-btn showgender-control" onclick="showGender('genderfluid')"  >Genderfluid</button>
-      <button class="exp-btn showgender-control" onclick="showGender('agender')"      >Agender</button>
-      <button class="exp-btn showgender-control" onclick="showGender('genderqueer')"  >Genderqueer</button>
-      <button class="exp-btn showgender-control" onclick="showGender('dysphoria')"    >Gender dysphoria</button>
-      <button class="exp-btn showgender-control" onclick="showGender('transition')"   >Transition</button>
+      <button class="exp-btn pill-button" onclick="showGender('cisgender')"    >Cisgender</button>
+      <button class="exp-btn pill-button" onclick="showGender('transgender')"  >Transgender</button>
+      <button class="exp-btn pill-button" onclick="showGender('nonbinary')"    >Non-binary</button>
+      <button class="exp-btn pill-button" onclick="showGender('genderfluid')"  >Genderfluid</button>
+      <button class="exp-btn pill-button" onclick="showGender('agender')"      >Agender</button>
+      <button class="exp-btn pill-button" onclick="showGender('genderqueer')"  >Genderqueer</button>
+      <button class="exp-btn pill-button" onclick="showGender('dysphoria')"    >Gender dysphoria</button>
+      <button class="exp-btn pill-button" onclick="showGender('transition')"   >Transition</button>
     </div>
     <div class="content-panel" id="gender-display"></div>
 
@@ -217,14 +217,14 @@ const mod = modules.find((m) => m.id === 23)!;
     <h2 class="sec" id="part-d-sexual-orientation-the-full-spectrum">Part D · sexual orientation — the full spectrum</h2>
 
     <div class="button-row">
-      <button class="exp-btn showgender-control" onclick="showOrient('heterosexual')">Heterosexual</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('homosexual')"  >Homosexual (gay/lesbian)</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('bisexual')"    >Bisexual</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('pansexual')"   >Pansexual</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('asexual')"     >Asexual</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('demisexual')"  >Demisexual</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('aromantic')"   >Aromantic</button>
-      <button class="exp-btn showgender-control" onclick="showOrient('queer')"       >Queer</button>
+      <button class="exp-btn pill-button" onclick="showOrient('heterosexual')">Heterosexual</button>
+      <button class="exp-btn pill-button" onclick="showOrient('homosexual')"  >Homosexual (gay/lesbian)</button>
+      <button class="exp-btn pill-button" onclick="showOrient('bisexual')"    >Bisexual</button>
+      <button class="exp-btn pill-button" onclick="showOrient('pansexual')"   >Pansexual</button>
+      <button class="exp-btn pill-button" onclick="showOrient('asexual')"     >Asexual</button>
+      <button class="exp-btn pill-button" onclick="showOrient('demisexual')"  >Demisexual</button>
+      <button class="exp-btn pill-button" onclick="showOrient('aromantic')"   >Aromantic</button>
+      <button class="exp-btn pill-button" onclick="showOrient('queer')"       >Queer</button>
     </div>
     <div class="content-panel" id="orient-display"></div>
 
@@ -294,39 +294,39 @@ const mod = modules.find((m) => m.id === 23)!;
     <div class="content-panel">
       <div class="panel-title">Population estimates — with important caveats about measurement</div>
       <div class="stat-grid">
-        <div class="prevalence-card">
-          <div class="stat-figure">~3–4%</div>
+        <div class="stat-tile">
+          <div class="figure-large">~3–4%</div>
           <div class="prevalence-label">US adults identifying as gay or lesbian (Gallup 2023)</div>
         </div>
-        <div class="prevalence-card">
-          <div class="stat-figure">~5–6%</div>
+        <div class="stat-tile">
+          <div class="figure-large">~5–6%</div>
           <div class="prevalence-label">US adults identifying as bisexual (largest LGB subgroup)</div>
         </div>
-        <div class="prevalence-card">
-          <div class="stat-figure">~7.6%</div>
+        <div class="stat-tile">
+          <div class="figure-large">~7.6%</div>
           <div class="prevalence-label">Gen Z adults in US identifying as LGBT+ (vs 2.6% of Baby Boomers)</div>
         </div>
-        <div class="prevalence-card">
-          <div class="stat-figure">~0.5–1.7%</div>
+        <div class="stat-tile">
+          <div class="figure-large">~0.5–1.7%</div>
           <div class="prevalence-label">Population identifying as transgender (estimates vary widely by method)</div>
         </div>
-        <div class="prevalence-card">
-          <div class="stat-figure">~1%</div>
+        <div class="stat-tile">
+          <div class="figure-large">~1%</div>
           <div class="prevalence-label">Population identifying as asexual (varies by study: 0.4–4%)</div>
         </div>
       </div>
 
       <!-- Dot grid visualisation -->
       <div class="dot-chart-heading">Dot visualisation — 100 representative people, US adult population (approximate)</div>
-      <div id="dotGridWrap" class="dot-grid-wrap"></div>
+      <div id="dotGridWrap" class="dot-field"></div>
       <div class="dot-legend">
-        <div class="law-swatch"><div class="law-dot law-dot-style"></div><span>Straight (≈87%)</span></div>
-        <div class="law-swatch"><div class="law-dot bg-indigo-900"></div><span>Gay/lesbian (≈3.5%)</span></div>
-        <div class="law-swatch"><div class="law-dot bg-teal-500"></div><span>Bisexual (≈5.5%)</span></div>
-        <div class="law-swatch"><div class="law-dot law-dot-pink"></div><span>Other LGBT+ (≈4%)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot-style"></div><span>Straight (≈87%)</span></div>
+        <div class="legend-item"><div class="key-dot bg-indigo-900"></div><span>Gay/lesbian (≈3.5%)</span></div>
+        <div class="legend-item"><div class="key-dot bg-accent"></div><span>Bisexual (≈5.5%)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot-pink"></div><span>Other LGBT+ (≈4%)</span></div>
       </div>
 
-      <div class="measurement-note">
+      <div class="note-spaced">
         <strong class="text-primary">Why numbers vary so much:</strong> Stigma causes underreporting in less accepting environments. Self-labelling varies — many people attracted to the same sex don't use the label "gay" or "bisexual." Gen Z's higher rates reflect both genuine differences and greater willingness to identify. Measurement method matters enormously: anonymous surveys consistently produce higher rates than face-to-face interviews. The underlying rates of same-sex attraction are higher than the rates of self-identification as gay/lesbian/bisexual.
       </div>
     </div>
@@ -392,7 +392,7 @@ const mod = modules.find((m) => m.id === 23)!;
         <path d="M95 149 L205 128 L315 98 L425 56 L535 48" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
       </svg>
 
-      <div class="gender-grid">
+      <div class="grid-halves">
         <div class="trend-note">
           <strong class="text-primary">Why the trend is rising:</strong> The increase from Boomers to Gen Z is real and substantial. The leading explanations are: greater social acceptance and reduced stigma enabling honest self-reporting; wider awareness of identity labels (especially bisexual, non-binary, queer) enabling identification; possible genuine cohort effects from reduced social pressure against same-sex attraction. The full explanation is probably all three, with measurement playing a significant role.
         </div>
@@ -414,7 +414,7 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="twoaxis-grid">
         <div>
           <div class="axis-heading">Sexual attraction axis</div>
-          <div class="sexaxisbtns" id="sexAxisBtns">
+          <div class="v-stack" id="sexAxisBtns">
             <button class="exp-btn setaxis-control" onclick="setAxis('sex','heterosexual')">Heterosexual (attracted to different gender)</button>
             <button class="exp-btn setaxis-control" onclick="setAxis('sex','bisexual')"    >Bisexual / pansexual</button>
             <button class="exp-btn setaxis-control" onclick="setAxis('sex','homosexual')"  >Homosexual (attracted to same gender)</button>
@@ -423,7 +423,7 @@ const mod = modules.find((m) => m.id === 23)!;
         </div>
         <div>
           <div class="axis-heading">Romantic attraction axis</div>
-          <div class="sexaxisbtns" id="romAxisBtns">
+          <div class="v-stack" id="romAxisBtns">
             <button class="exp-btn setaxis-control" onclick="setAxis('rom','heteroromantic')" >Heteroromantic (romantic attraction to different gender)</button>
             <button class="exp-btn setaxis-control" onclick="setAxis('rom','biromantic')"     >Biromantic / panromantic</button>
             <button class="exp-btn setaxis-control" onclick="setAxis('rom','homoromantic')"   >Homoromantic (romantic attraction to same gender)</button>
@@ -446,12 +446,12 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="panel-title">Lines of evidence — where the science points and its limits</div>
 
       <div class="button-row">
-        <button class="exp-btn showgender-control" onclick="showScience('twin')"    >Twin studies</button>
-        <button class="exp-btn showgender-control" onclick="showScience('birth')"   >Fraternal birth order</button>
-        <button class="exp-btn showgender-control" onclick="showScience('brain')"   >Brain structure</button>
-        <button class="exp-btn showgender-control" onclick="showScience('genetics')">Genetics (GWAS)</button>
-        <button class="exp-btn showgender-control" onclick="showScience('hormones')">Prenatal hormones</button>
-        <button class="exp-btn showgender-control" onclick="showScience('limits')"  >Limits of research</button>
+        <button class="exp-btn pill-button" onclick="showScience('twin')"    >Twin studies</button>
+        <button class="exp-btn pill-button" onclick="showScience('birth')"   >Fraternal birth order</button>
+        <button class="exp-btn pill-button" onclick="showScience('brain')"   >Brain structure</button>
+        <button class="exp-btn pill-button" onclick="showScience('genetics')">Genetics (GWAS)</button>
+        <button class="exp-btn pill-button" onclick="showScience('hormones')">Prenatal hormones</button>
+        <button class="exp-btn pill-button" onclick="showScience('limits')"  >Limits of research</button>
       </div>
       <div class="science-display" id="science-display">
         Select a line of evidence to explore the research.
@@ -468,47 +468,47 @@ const mod = modules.find((m) => m.id === 23)!;
 
       <div class="timeline-row">
         <div class="timeline-year">1948</div>
-        <div><div class="timeline-text">Kinsey publishes <em>Sexual Behavior in the Human Male</em> — first large-scale quantitative study of sexual behaviour. Introduces the 0–6 scale and demonstrates that same-sex behaviour is far more common than publicly acknowledged.</div></div>
+        <div><div class="body-relaxed">Kinsey publishes <em>Sexual Behavior in the Human Male</em> — first large-scale quantitative study of sexual behaviour. Introduces the 0–6 scale and demonstrates that same-sex behaviour is far more common than publicly acknowledged.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">1952</div>
-        <div><div class="timeline-text">APA's DSM-I lists "homosexuality" as a "sociopathic personality disturbance." This classification was not based on clinical evidence but on societal attitudes prevailing at the time.</div></div>
+        <div><div class="body-relaxed">APA's DSM-I lists "homosexuality" as a "sociopathic personality disturbance." This classification was not based on clinical evidence but on societal attitudes prevailing at the time.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">1969</div>
-        <div><div class="timeline-text">Stonewall riots, New York — patrons of a gay bar resist police raids. Widely credited as catalysing the modern LGBTQ+ rights movement.</div></div>
+        <div><div class="body-relaxed">Stonewall riots, New York — patrons of a gay bar resist police raids. Widely credited as catalysing the modern LGBTQ+ rights movement.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">1973</div>
-        <div><div class="timeline-text">APA removes homosexuality from the DSM-II, citing lack of evidence that it constitutes a disorder. Replaced with "Sexual Orientation Disturbance" (distress about orientation), which was itself removed in 1987.</div></div>
+        <div><div class="body-relaxed">APA removes homosexuality from the DSM-II, citing lack of evidence that it constitutes a disorder. Replaced with "Sexual Orientation Disturbance" (distress about orientation), which was itself removed in 1987.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">1990</div>
-        <div><div class="timeline-text">WHO removes homosexuality from the ICD-10. May 17 is now celebrated as International Day Against Homophobia, Transphobia and Biphobia (IDAHOTB) to mark this date.</div></div>
+        <div><div class="body-relaxed">WHO removes homosexuality from the ICD-10. May 17 is now celebrated as International Day Against Homophobia, Transphobia and Biphobia (IDAHOTB) to mark this date.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">1991</div>
-        <div><div class="timeline-text">Simon LeVay publishes study finding structural differences in the INAH-3 region of the hypothalamus between heterosexual and homosexual men, suggesting neurobiological components to orientation. Findings subsequently replicated with some refinements.</div></div>
+        <div><div class="body-relaxed">Simon LeVay publishes study finding structural differences in the INAH-3 region of the hypothalamus between heterosexual and homosexual men, suggesting neurobiological components to orientation. Findings subsequently replicated with some refinements.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">2003</div>
-        <div><div class="timeline-text"><em>Lawrence v. Texas</em> — US Supreme Court strikes down sodomy laws, decriminalising same-sex activity across the United States.</div></div>
+        <div><div class="body-relaxed"><em>Lawrence v. Texas</em> — US Supreme Court strikes down sodomy laws, decriminalising same-sex activity across the United States.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">2013</div>
-        <div><div class="timeline-text">DSM-5 replaces "Gender Identity Disorder" with "Gender Dysphoria" — shifting focus from identity (not a disorder) to clinically significant distress. Major conceptual and terminological shift in transgender healthcare.</div></div>
+        <div><div class="body-relaxed">DSM-5 replaces "Gender Identity Disorder" with "Gender Dysphoria" — shifting focus from identity (not a disorder) to clinically significant distress. Major conceptual and terminological shift in transgender healthcare.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">2015</div>
-        <div><div class="timeline-text"><em>Obergefell v. Hodges</em> — US Supreme Court rules same-sex marriage is constitutionally protected. Similar milestones occurred earlier in Netherlands (2001, first country), Spain (2005), Canada (2005).</div></div>
+        <div><div class="body-relaxed"><em>Obergefell v. Hodges</em> — US Supreme Court rules same-sex marriage is constitutionally protected. Similar milestones occurred earlier in Netherlands (2001, first country), Spain (2005), Canada (2005).</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">2019</div>
-        <div><div class="timeline-text">ICD-11 (WHO) removes "Gender Incongruence" from the mental health chapter and reclassifies it under "Conditions related to sexual health." Formally establishes that being transgender is not a mental illness.</div></div>
+        <div><div class="body-relaxed">ICD-11 (WHO) removes "Gender Incongruence" from the mental health chapter and reclassifies it under "Conditions related to sexual health." Formally establishes that being transgender is not a mental illness.</div></div>
       </div>
       <div class="timeline-row">
         <div class="timeline-year">2019</div>
-        <div><div class="timeline-text">Large genome-wide association study (GWAS) of ~470,000 people in <em>Science</em> finds no single "gay gene" — rather, dozens of genetic variants each with small effects, accounting for 8–25% of variance in same-sex behaviour. Genetic effects not sufficient for prediction at individual level.</div></div>
+        <div><div class="body-relaxed">Large genome-wide association study (GWAS) of ~470,000 people in <em>Science</em> finds no single "gay gene" — rather, dozens of genetic variants each with small effects, accounting for 8–25% of variance in same-sex behaviour. Genetic effects not sufficient for prediction at individual level.</div></div>
       </div>
     </div>
 
@@ -521,12 +521,12 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="panel-title-spaced">Same-sex relationships — legal status by region (approximate 2024)</div>
 
       <!-- Legend -->
-      <div class="law-legend u-mb-md">
-        <div class="law-swatch"><div class="law-dot bg-green-800"></div><span>Marriage legal (~36 countries)</span></div>
-        <div class="law-swatch"><div class="law-dot bg-teal-500"></div><span>Civil unions / partial recognition (~20 countries)</span></div>
-        <div class="law-swatch"><div class="law-dot law-dot-grey"></div><span>No recognition, legal (~70 countries)</span></div>
-        <div class="law-swatch"><div class="law-dot law-dot-pink"></div><span>Criminalised (~60 countries)</span></div>
-        <div class="law-swatch"><div class="law-dot law-dot-maroon"></div><span>Death penalty possible (~11 countries)</span></div>
+      <div class="chip-row u-mb-md">
+        <div class="legend-item"><div class="key-dot u-bg-hex-27500a"></div><span>Marriage legal (~36 countries)</span></div>
+        <div class="legend-item"><div class="key-dot bg-accent"></div><span>Civil unions / partial recognition (~20 countries)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot-grey"></div><span>No recognition, legal (~70 countries)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot-pink"></div><span>Criminalised (~60 countries)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot-maroon"></div><span>Death penalty possible (~11 countries)</span></div>
       </div>
 
       <!-- SVG world bar chart showing approximate country counts -->
@@ -596,7 +596,7 @@ const mod = modules.find((m) => m.id === 23)!;
           <div class="concept-note-green">Sexual health conversations, though sometimes awkward, consistently improve relationship quality and trust when approached honestly.</div>
         </div>
       </div>
-      <div class="key-note">
+      <div class="note-panel">
         <strong class="text-primary">An important reframe:</strong> Safe sex is not about shame or fear. It is about informed autonomy. Understanding the options, their effectiveness, and how to use them correctly is a form of self-knowledge and mutual respect. No single method is right for everyone -- the best approach depends on relationship context, reproductive goals, health history, and personal values.
       </div>
     </div>
@@ -649,12 +649,12 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="panel-title u-mb-md">Protection and contraception -- overview by category</div>
       <!-- Interactive method explorer -->
       <div class="button-row">
-      <button class="exp-btn showgender-control" onclick="showMethod('barrier')">Barrier methods</button>
-      <button class="exp-btn showgender-control" onclick="showMethod('hormonal')">Hormonal methods</button>
-      <button class="exp-btn showgender-control" onclick="showMethod('larc')">Long-acting (LARCs)</button>
-      <button class="exp-btn showgender-control" onclick="showMethod('permanent')">Permanent options</button>
-      <button class="exp-btn showgender-control" onclick="showMethod('emergency')">Emergency contraception</button>
-      <button class="exp-btn showgender-control" onclick="showMethod('behavioral')">Behavioural methods</button>
+      <button class="exp-btn pill-button" onclick="showMethod('barrier')">Barrier methods</button>
+      <button class="exp-btn pill-button" onclick="showMethod('hormonal')">Hormonal methods</button>
+      <button class="exp-btn pill-button" onclick="showMethod('larc')">Long-acting (LARCs)</button>
+      <button class="exp-btn pill-button" onclick="showMethod('permanent')">Permanent options</button>
+      <button class="exp-btn pill-button" onclick="showMethod('emergency')">Emergency contraception</button>
+      <button class="exp-btn pill-button" onclick="showMethod('behavioral')">Behavioural methods</button>
     </div>
     <div class="content-panel" id="method-display"></div>
     </div>
@@ -812,13 +812,13 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="panel-title u-mt-md">Step-by-step: correct condom use</div>
       <div id="condom-steps-display" class="science-display u-mb-md">Select a step to see guidance.</div>
       <div class="button-row-compact">
-        <button class="exp-btn showgender-control" onclick="showCondomStep(1)">1 Check</button>
-        <button class="exp-btn showgender-control" onclick="showCondomStep(2)">2 Open</button>
-        <button class="exp-btn showgender-control" onclick="showCondomStep(3)">3 Squeeze tip</button>
-        <button class="exp-btn showgender-control" onclick="showCondomStep(4)">4 Roll on</button>
-        <button class="exp-btn showgender-control" onclick="showCondomStep(5)">5 During</button>
-        <button class="exp-btn showgender-control" onclick="showCondomStep(6)">6 After</button>
-        <button class="exp-btn showgender-control" onclick="showCondomStep(7)">7 Common mistakes</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(1)">1 Check</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(2)">2 Open</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(3)">3 Squeeze tip</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(4)">4 Roll on</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(5)">5 During</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(6)">6 After</button>
+        <button class="exp-btn pill-button" onclick="showCondomStep(7)">7 Common mistakes</button>
       </div>
     </div>
 
@@ -826,14 +826,14 @@ const mod = modules.find((m) => m.id === 23)!;
     <div class="content-panel">
       <div class="panel-title u-mb-md">Hormonal and long-acting contraceptives</div>
       <div class="button-row">
-      <button class="exp-btn showgender-control" onclick="showContra('pill-combined')">Combined pill</button>
-      <button class="exp-btn showgender-control" onclick="showContra('pill-mini')">Progestogen-only pill</button>
-      <button class="exp-btn showgender-control" onclick="showContra('patch')">Patch</button>
-      <button class="exp-btn showgender-control" onclick="showContra('ring')">Vaginal ring</button>
-      <button class="exp-btn showgender-control" onclick="showContra('injection')">Injection</button>
-      <button class="exp-btn showgender-control" onclick="showContra('implant')">Implant</button>
-      <button class="exp-btn showgender-control" onclick="showContra('iud-hormonal')">Hormonal IUD</button>
-      <button class="exp-btn showgender-control" onclick="showContra('iud-copper')">Copper IUD</button>
+      <button class="exp-btn pill-button" onclick="showContra('pill-combined')">Combined pill</button>
+      <button class="exp-btn pill-button" onclick="showContra('pill-mini')">Progestogen-only pill</button>
+      <button class="exp-btn pill-button" onclick="showContra('patch')">Patch</button>
+      <button class="exp-btn pill-button" onclick="showContra('ring')">Vaginal ring</button>
+      <button class="exp-btn pill-button" onclick="showContra('injection')">Injection</button>
+      <button class="exp-btn pill-button" onclick="showContra('implant')">Implant</button>
+      <button class="exp-btn pill-button" onclick="showContra('iud-hormonal')">Hormonal IUD</button>
+      <button class="exp-btn pill-button" onclick="showContra('iud-copper')">Copper IUD</button>
     </div>
     <div class="content-panel" id="contra-display"></div>
     </div>
@@ -844,14 +844,14 @@ const mod = modules.find((m) => m.id === 23)!;
     <div class="content-panel">
       <div class="panel-title-spaced">Sexually transmitted infections -- prevention, testing, and treatment</div>
       <div class="button-row">
-        <button class="exp-btn showgender-control" onclick="showSTI('chlamydia')">Chlamydia</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('gonorrhoea')">Gonorrhoea</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('syphilis')">Syphilis</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('herpes')">Herpes (HSV)</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('hpv')">HPV</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('hiv')">HIV</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('hep')">Hepatitis B/C</button>
-        <button class="exp-btn showgender-control" onclick="showSTI('trich')">Trichomoniasis</button>
+        <button class="exp-btn pill-button" onclick="showSTI('chlamydia')">Chlamydia</button>
+        <button class="exp-btn pill-button" onclick="showSTI('gonorrhoea')">Gonorrhoea</button>
+        <button class="exp-btn pill-button" onclick="showSTI('syphilis')">Syphilis</button>
+        <button class="exp-btn pill-button" onclick="showSTI('herpes')">Herpes (HSV)</button>
+        <button class="exp-btn pill-button" onclick="showSTI('hpv')">HPV</button>
+        <button class="exp-btn pill-button" onclick="showSTI('hiv')">HIV</button>
+        <button class="exp-btn pill-button" onclick="showSTI('hep')">Hepatitis B/C</button>
+        <button class="exp-btn pill-button" onclick="showSTI('trich')">Trichomoniasis</button>
       </div>
       <div class="content-card" id="sti-display">
         <div class="muted-copy">Select an STI to see transmission, symptoms, testing, and treatment.</div>
@@ -915,14 +915,14 @@ const mod = modules.find((m) => m.id === 23)!;
     <div class="content-panel">
       <div class="panel-title-spaced">Myths, risks, and common mistakes -- debunked</div>
       <div class="button-row">
-        <button class="exp-btn showgender-control" onclick="showMyth('double-up')">Double condoms</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('pill-sti')">Pill vs STIs</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('withdrawal')">Withdrawal method</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('first-time')">First time</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('same-sex-sti')">Same-sex and STIs</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('condom-fail')">Condom failure</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('looks')">Can tell by looking</button>
-        <button class="exp-btn showgender-control" onclick="showMyth('oil')">Oil-based lube</button>
+        <button class="exp-btn pill-button" onclick="showMyth('double-up')">Double condoms</button>
+        <button class="exp-btn pill-button" onclick="showMyth('pill-sti')">Pill vs STIs</button>
+        <button class="exp-btn pill-button" onclick="showMyth('withdrawal')">Withdrawal method</button>
+        <button class="exp-btn pill-button" onclick="showMyth('first-time')">First time</button>
+        <button class="exp-btn pill-button" onclick="showMyth('same-sex-sti')">Same-sex and STIs</button>
+        <button class="exp-btn pill-button" onclick="showMyth('condom-fail')">Condom failure</button>
+        <button class="exp-btn pill-button" onclick="showMyth('looks')">Can tell by looking</button>
+        <button class="exp-btn pill-button" onclick="showMyth('oil')">Oil-based lube</button>
       </div>
       <div class="content-card" id="myth-display">
         <div class="muted-copy">Select a myth or mistake to see the evidence.</div>
@@ -954,7 +954,7 @@ const mod = modules.find((m) => m.id === 23)!;
           <div class="concept-note-green">Earlier menarche has shifted globally over the last century, attributed largely to improved nutrition and rising body fat percentages.</div>
         </div>
       </div>
-      <div class="key-note">
+      <div class="note-panel">
         <strong class="text-primary">Who menstruates:</strong> Most cisgender women between menarche and menopause, but also many transgender men and non-binary people with a uterus who have not started testosterone or had a hysterectomy. Some intersex people menstruate; others do not. Pregnancy, lactation, hormonal contraception, certain medical conditions, and significant weight loss or athletic training can pause periods entirely. "People who menstruate" is the inclusive descriptor; "women" is approximately but not strictly equivalent.
       </div>
     </div>
@@ -1017,10 +1017,10 @@ const mod = modules.find((m) => m.id === 23)!;
     <div class="content-panel">
       <div class="panel-title-spaced">Explore each phase — what is happening hormonally and what it feels like</div>
       <div class="button-row">
-        <button class="exp-btn showgender-control" onclick="showPhase('menstrual')">Menstrual (1–5)</button>
-        <button class="exp-btn showgender-control" onclick="showPhase('follicular')">Follicular (1–13)</button>
-        <button class="exp-btn showgender-control" onclick="showPhase('ovulation')">Ovulation (~14)</button>
-        <button class="exp-btn showgender-control" onclick="showPhase('luteal')">Luteal (15–28)</button>
+        <button class="exp-btn pill-button" onclick="showPhase('menstrual')">Menstrual (1–5)</button>
+        <button class="exp-btn pill-button" onclick="showPhase('follicular')">Follicular (1–13)</button>
+        <button class="exp-btn pill-button" onclick="showPhase('ovulation')">Ovulation (~14)</button>
+        <button class="exp-btn pill-button" onclick="showPhase('luteal')">Luteal (15–28)</button>
       </div>
       <div class="content-panel" id="phase-display"></div>
     </div>
@@ -1066,14 +1066,14 @@ const mod = modules.find((m) => m.id === 23)!;
     <div class="content-panel">
       <div class="panel-title">Symptoms — what is normal, what is not</div>
       <div class="button-row">
-        <button class="exp-btn showgender-control" onclick="showSymptom('cramps')">Cramps</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('flow')">Flow patterns</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('mood')">Mood &amp; mind</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('breast')">Breast changes</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('gut')">Gut &amp; digestion</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('skin')">Skin &amp; hair</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('sleep')">Sleep &amp; energy</button>
-        <button class="exp-btn showgender-control" onclick="showSymptom('warning')">Warning signs</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('cramps')">Cramps</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('flow')">Flow patterns</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('mood')">Mood &amp; mind</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('breast')">Breast changes</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('gut')">Gut &amp; digestion</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('skin')">Skin &amp; hair</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('sleep')">Sleep &amp; energy</button>
+        <button class="exp-btn pill-button" onclick="showSymptom('warning')">Warning signs</button>
       </div>
       <div class="content-panel" id="symptom-display"></div>
     </div>
@@ -1177,7 +1177,7 @@ const mod = modules.find((m) => m.id === 23)!;
           <p class="cnote">A wave of menstrual activism: period emoji campaigns, free-product legislation, art projects, athlete openness about cycle effects on performance, and renewed scientific funding into endometriosis and PMDD. The shift from euphemism to direct language ("period," "menstruation") is itself a cultural change. The phrase "menstrual equity" has entered policy vocabulary, framing access to products and information as a matter of basic rights.</p>
         </div>
       </div>
-      <div class="key-note">
+      <div class="note-panel">
         <strong class="text-primary">The bigger picture:</strong> Menstruation sits at an intersection of biology, gender, religion, economics, and law. The same physiological event is celebrated in one culture, hidden in another, criminalised in a third. Improving menstrual experience worldwide is partly a medical project (better treatments for pain, endometriosis, PMDD), partly a material one (products, water, sanitation), and partly a cultural one (information, normalisation, language). The three reinforce one another.
       </div>
     </div>
@@ -1728,11 +1728,11 @@ const mod = modules.find((m) => m.id === 23)!;
         </div>
         <div style="font-size:14px;font-weight:500;color:var(--color-text-primary);margin-bottom:10px;">${s.name}</div>
         <div class="sti-row">
-          <div class="sub-card-compact"><div class="sti-cell-label">Transmission</div><div class="sti-cell-val">${s.transmission}</div></div>
-          <div class="sub-card-compact"><div class="sti-cell-label">Symptoms</div><div class="sti-cell-val">${s.symptoms}</div></div>
-          <div class="sub-card-compact"><div class="sti-cell-label">Testing</div><div class="sti-cell-val">${s.testing}</div></div>
-          <div class="sub-card-compact"><div class="sti-cell-label">Treatment</div><div class="sti-cell-val">${s.treatment}</div></div>
-          <div class="sub-card-compact"><div class="sti-cell-label">Prevention</div><div class="sti-cell-val">${s.prevention}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Transmission</div><div class="body-small">${s.transmission}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Symptoms</div><div class="body-small">${s.symptoms}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Testing</div><div class="body-small">${s.testing}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Treatment</div><div class="body-small">${s.treatment}</div></div>
+          <div class="sub-card-compact"><div class="sti-cell-label">Prevention</div><div class="body-small">${s.prevention}</div></div>
         </div>`;
     }
 

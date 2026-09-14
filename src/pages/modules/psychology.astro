@@ -26,19 +26,19 @@ const mod = modules.find((m) => m.id === 27)!;
       <div class="panel-title-spaced">The science of mind and behaviour</div>
       <div class="psychology-grid">
         <div class="sub-card">
-          <div class="psychology-label">What psychology studies</div>
+          <div class="small-title">What psychology studies</div>
           <div class="muted-copy-tight">Perception, cognition, emotion, personality, behaviour, interpersonal relationships, social groups, development across the lifespan. Both normal functioning and psychological disorders.</div>
         </div>
         <div class="sub-card">
-          <div class="psychology-label">How it differs from common sense</div>
+          <div class="small-title">How it differs from common sense</div>
           <div class="muted-copy-tight">Psychology uses empirical methods — experiments, surveys, brain imaging, longitudinal studies — to test intuitions that are often wrong. Many common beliefs (venting anger releases it, people use 10% of their brain, opposites attract) are contradicted by evidence.</div>
         </div>
         <div class="sub-card">
-          <div class="psychology-label">Subfields</div>
+          <div class="small-title">Subfields</div>
           <div class="muted-copy-tight">Clinical, cognitive, developmental, social, neuropsychology, forensic, educational, industrial/organisational, health psychology. Each uses different methods and addresses different questions.</div>
         </div>
       </div>
-      <div class="disciplines-note">
+      <div class="note-panel">
         <strong class="text-primary">Psychology vs psychiatry vs psychotherapy:</strong> Psychiatry is a medical speciality — psychiatrists are medical doctors (MDs) who can prescribe medication and make diagnoses. Psychology is a research and clinical discipline — clinical psychologists (usually PhD or PsyD) provide therapy and psychological assessment but in most countries cannot prescribe medication. Psychotherapy is the practice of using psychological methods to treat mental health problems — it can be practised by psychiatrists, psychologists, or trained psychotherapists/counsellors with various levels of qualification.
       </div>
     </div>
@@ -57,20 +57,20 @@ const mod = modules.find((m) => m.id === 27)!;
           <div class="tl-nodes" id="tlNodes"></div>
         </div>
       </div>
-      <div class="tl-detail" id="tlDetail"><span class="psychology-text">Select a year above to see what happened.</span></div>
+      <div class="tl-detail" id="tlDetail"><span class="placeholder-text">Select a year above to see what happened.</span></div>
     </div>
 
-    <div class="psychology-row">
-      <button class="showfigure-control" onclick="showFigure('freud')"   >Sigmund Freud</button>
-      <button class="showfigure-control" onclick="showFigure('jung')"    >Carl Jung</button>
-      <button class="showfigure-control" onclick="showFigure('pavlov')"  >Ivan Pavlov</button>
-      <button class="showfigure-control" onclick="showFigure('skinner')" >B.F. Skinner</button>
-      <button class="showfigure-control" onclick="showFigure('piaget')"  >Jean Piaget</button>
-      <button class="showfigure-control" onclick="showFigure('maslow')"  >Abraham Maslow</button>
-      <button class="showfigure-control" onclick="showFigure('bandura')" >Albert Bandura</button>
-      <button class="showfigure-control" onclick="showFigure('beck')"    >Aaron Beck</button>
-      <button class="showfigure-control" onclick="showFigure('rogers')"  >Carl Rogers</button>
-      <button class="showfigure-control" onclick="showFigure('wundt')"   >Wilhelm Wundt</button>
+    <div class="button-set">
+      <button class="pill-button" onclick="showFigure('freud')"   >Sigmund Freud</button>
+      <button class="pill-button" onclick="showFigure('jung')"    >Carl Jung</button>
+      <button class="pill-button" onclick="showFigure('pavlov')"  >Ivan Pavlov</button>
+      <button class="pill-button" onclick="showFigure('skinner')" >B.F. Skinner</button>
+      <button class="pill-button" onclick="showFigure('piaget')"  >Jean Piaget</button>
+      <button class="pill-button" onclick="showFigure('maslow')"  >Abraham Maslow</button>
+      <button class="pill-button" onclick="showFigure('bandura')" >Albert Bandura</button>
+      <button class="pill-button" onclick="showFigure('beck')"    >Aaron Beck</button>
+      <button class="pill-button" onclick="showFigure('rogers')"  >Carl Rogers</button>
+      <button class="pill-button" onclick="showFigure('wundt')"   >Wilhelm Wundt</button>
     </div>
     <div class="content-panel" id="figure-display"></div>
 
@@ -80,13 +80,13 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-c-the-major-schools-of-thought">Part C · the major schools of thought</h2>
 
     <div class="button-row">
-      <button class="showfigure-control" onclick="showSchool('psychoanalytic')">Psychoanalytic</button>
-      <button class="showfigure-control" onclick="showSchool('behaviourist')"  >Behaviourist</button>
-      <button class="showfigure-control" onclick="showSchool('humanistic')"    >Humanistic</button>
-      <button class="showfigure-control" onclick="showSchool('cognitive')"     >Cognitive</button>
-      <button class="showfigure-control" onclick="showSchool('biological')"    >Biological</button>
-      <button class="showfigure-control" onclick="showSchool('evolutionary')"  >Evolutionary</button>
-      <button class="showfigure-control" onclick="showSchool('sociocultural')" >Sociocultural</button>
+      <button class="pill-button" onclick="showSchool('psychoanalytic')">Psychoanalytic</button>
+      <button class="pill-button" onclick="showSchool('behaviourist')"  >Behaviourist</button>
+      <button class="pill-button" onclick="showSchool('humanistic')"    >Humanistic</button>
+      <button class="pill-button" onclick="showSchool('cognitive')"     >Cognitive</button>
+      <button class="pill-button" onclick="showSchool('biological')"    >Biological</button>
+      <button class="pill-button" onclick="showSchool('evolutionary')"  >Evolutionary</button>
+      <button class="pill-button" onclick="showSchool('sociocultural')" >Sociocultural</button>
     </div>
     <div class="content-panel" id="school-display"></div>
 
@@ -96,7 +96,7 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-d-therapy-types-what-each-is-for">Part D · therapy types — what each is for</h2>
 
     <!-- NEW: Evidence comparison matrix -->
-    <div class="therapy-matrix-panel">
+    <div class="outline-panel">
       <div class="panel-kicker">Evidence strength by condition</div>
       <table class="therapy-matrix">
         <thead>
@@ -168,18 +168,18 @@ const mod = modules.find((m) => m.id === 27)!;
           </tr>
         </tbody>
       </table>
-      <div class="matrix-note">LT = long-term format. Evidence ratings reflect current meta-analytic consensus; individual outcomes vary. This is an educational summary, not clinical guidance.</div>
+      <div class="footnote-tight">LT = long-term format. Evidence ratings reflect current meta-analytic consensus; individual outcomes vary. This is an educational summary, not clinical guidance.</div>
     </div>
 
     <div class="button-row">
-      <button class="showfigure-control" onclick="showTherapy('psychoanalysis')">Psychoanalysis</button>
-      <button class="showfigure-control" onclick="showTherapy('cbt')"           >CBT</button>
-      <button class="showfigure-control" onclick="showTherapy('dbt')"           >DBT</button>
-      <button class="showfigure-control" onclick="showTherapy('act')"           >ACT</button>
-      <button class="showfigure-control" onclick="showTherapy('emdr')"          >EMDR</button>
-      <button class="showfigure-control" onclick="showTherapy('humanistic')"    >Humanistic / person-centred</button>
-      <button class="showfigure-control" onclick="showTherapy('schema')"        >Schema therapy</button>
-      <button class="showfigure-control" onclick="showTherapy('group')"         >Group therapy</button>
+      <button class="pill-button" onclick="showTherapy('psychoanalysis')">Psychoanalysis</button>
+      <button class="pill-button" onclick="showTherapy('cbt')"           >CBT</button>
+      <button class="pill-button" onclick="showTherapy('dbt')"           >DBT</button>
+      <button class="pill-button" onclick="showTherapy('act')"           >ACT</button>
+      <button class="pill-button" onclick="showTherapy('emdr')"          >EMDR</button>
+      <button class="pill-button" onclick="showTherapy('humanistic')"    >Humanistic / person-centred</button>
+      <button class="pill-button" onclick="showTherapy('schema')"        >Schema therapy</button>
+      <button class="pill-button" onclick="showTherapy('group')"         >Group therapy</button>
     </div>
     <div class="content-panel" id="therapy-display"></div>
 
@@ -220,10 +220,10 @@ const mod = modules.find((m) => m.id === 27)!;
     <div class="bordered-panel">
       <div class="chart-kicker">How often each bias type appears in everyday decisions (research-based estimates)</div>
       <div id="biasChart"></div>
-      <div class="bias-chart-note">Bar width reflects frequency across everyday decision-making contexts, based on meta-analytic research. All biases overlap substantially.</div>
+      <div class="fine-print">Bar width reflects frequency across everyday decision-making contexts, based on meta-analytic research. All biases overlap substantially.</div>
     </div>
 
-    <div class="psychology-row">
+    <div class="button-set">
       <button class="showconcept-control" onclick="showConcept('cogdis')"     >Cognitive dissonance</button>
       <button class="showconcept-control" onclick="showConcept('confbias')"   >Confirmation bias</button>
       <button class="showconcept-control" onclick="showConcept('schema')"     >Schema</button>
@@ -261,7 +261,7 @@ const mod = modules.find((m) => m.id === 27)!;
           <div class="stage-detail-green">Duration: potentially lifelong<br>Capacity: effectively unlimited<br>Encoded through rehearsal &amp; meaning</div>
         </div>
       </div>
-      <div class="pipeline-note">The pipeline is not one-way: retrieval from LTM feeds back into working memory. Elaborative rehearsal (connecting new material to existing knowledge) is far more effective than maintenance rehearsal (repetition alone).</div>
+      <div class="note-small-spaced">The pipeline is not one-way: retrieval from LTM feeds back into working memory. Elaborative rehearsal (connecting new material to existing knowledge) is far more effective than maintenance rehearsal (repetition alone).</div>
     </div>
 
     <!-- Long-term memory types -->
@@ -292,14 +292,14 @@ const mod = modules.find((m) => m.id === 27)!;
     <!-- Memory failure interactive explorer -->
     <div class="content-panel">
       <div class="list-kicker">Why memory fails — the seven sins of memory (Schacter)</div>
-      <div class="psychology-row">
-        <button class="showmemsin-control" onclick="showMemSin('transience')"   >Transience</button>
-        <button class="showmemsin-control" onclick="showMemSin('absentmind')"   >Absent-mindedness</button>
-        <button class="showmemsin-control" onclick="showMemSin('blocking')"     >Blocking</button>
-        <button class="showmemsin-control" onclick="showMemSin('misattrib')"    >Misattribution</button>
-        <button class="showmemsin-control" onclick="showMemSin('suggestibility')">Suggestibility</button>
-        <button class="showmemsin-control" onclick="showMemSin('bias')"         >Bias</button>
-        <button class="showmemsin-control" onclick="showMemSin('persistence')"  >Persistence</button>
+      <div class="button-set">
+        <button class="tab-button-narrow" onclick="showMemSin('transience')"   >Transience</button>
+        <button class="tab-button-narrow" onclick="showMemSin('absentmind')"   >Absent-mindedness</button>
+        <button class="tab-button-narrow" onclick="showMemSin('blocking')"     >Blocking</button>
+        <button class="tab-button-narrow" onclick="showMemSin('misattrib')"    >Misattribution</button>
+        <button class="tab-button-narrow" onclick="showMemSin('suggestibility')">Suggestibility</button>
+        <button class="tab-button-narrow" onclick="showMemSin('bias')"         >Bias</button>
+        <button class="tab-button-narrow" onclick="showMemSin('persistence')"  >Persistence</button>
       </div>
       <div class="memsindisplay" id="memSinDisplay">
         <span class="text-tertiary">Select a sin above to learn why that type of memory failure occurs.</span>
@@ -314,19 +314,19 @@ const mod = modules.find((m) => m.id === 27)!;
     <div class="ocean-layout">
       <div>
         <div class="content-card">
-          <div class="ocean-title">The OCEAN model — drag sliders to explore trait descriptions</div>
+          <div class="block-heading">The OCEAN model — drag sliders to explore trait descriptions</div>
           <div id="b5Sliders"></div>
           <div class="b5-desc" id="b5Desc">Move a slider to see what that trait level looks like in real life.</div>
         </div>
       </div>
       <div>
         <div class="big-five-facts">
-          <div class="facts-title">Key facts about the Big Five</div>
+          <div class="chart-heading-small">Key facts about the Big Five</div>
           <div class="big-five-body">
             <p class="psychology-spacing">The Big Five (or OCEAN) is the most empirically supported model of personality. Unlike MBTI, it is dimensional (not categorical), cross-culturally replicable, and strongly predictive.</p>
             <p class="psychology-spacing"><strong class="text-primary">Stability:</strong> traits are moderately heritable (~50%) and stable across adulthood, though gradual change occurs. People tend to become more Conscientious and Agreeable with age.</p>
             <p class="psychology-spacing"><strong class="text-primary">Predictive validity:</strong> Conscientiousness predicts job performance and longevity. Neuroticism predicts mental health risk. Openness predicts creative achievement.</p>
-            <p class="fact-paragraph-flush"><strong class="text-primary">MBTI vs Big Five:</strong> MBTI's test-retest reliability is ~50% — about half of people get a different type if retested a few weeks later. Big Five scores are stable and replicate across cultures. Use OCEAN for anything predictive; MBTI at best for casual self-reflection.</p>
+            <p class="no-margin"><strong class="text-primary">MBTI vs Big Five:</strong> MBTI's test-retest reliability is ~50% — about half of people get a different type if retested a few weeks later. Big Five scores are stable and replicate across cultures. Use OCEAN for anything predictive; MBTI at best for casual self-reflection.</p>
           </div>
         </div>
       </div>
@@ -338,7 +338,7 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-i-stress-arousal-and-performance">Part I · stress, arousal, and performance</h2>
 
     <!-- Yerkes-Dodson curve (SVG) -->
-    <div class="yerkes-wrap">
+    <div class="tool-panel">
       <div class="list-kicker">The Yerkes-Dodson inverted-U: arousal vs performance</div>
       <svg class="yerkes-svg" viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
         <!-- axes -->
@@ -386,7 +386,7 @@ const mod = modules.find((m) => m.id === 27)!;
 
     <!-- Stress response interactive -->
     <div class="content-panel">
-      <div class="facts-title">Emotion regulation strategies — how well do they actually work?</div>
+      <div class="chart-heading-small">Emotion regulation strategies — how well do they actually work?</div>
       <div class="reg-grid" id="regGrid"></div>
       <div class="regulation-note">Effectiveness ratings based on meta-analytic studies. Short-term vs long-term effects often differ dramatically — notably for suppression and rumination.</div>
     </div>
@@ -400,20 +400,20 @@ const mod = modules.find((m) => m.id === 27)!;
       <div class="mini-card-title">Three competing theories of emotion</div>
       <div class="emotion-theories-grid">
         <div class="sub-card">
-          <div class="theory-name">James-Lange (1884)</div>
-          <div class="theory-desc">We feel emotion because we perceive our own bodily changes. "We don't tremble because we're afraid — we're afraid because we tremble." Physical state → emotional experience.</div>
+          <div class="item-heading">James-Lange (1884)</div>
+          <div class="desc-small">We feel emotion because we perceive our own bodily changes. "We don't tremble because we're afraid — we're afraid because we tremble." Physical state → emotional experience.</div>
         </div>
         <div class="sub-card">
-          <div class="theory-name">Cannon-Bard (1927)</div>
-          <div class="theory-desc">The thalamus sends signals simultaneously to the cortex (producing subjective feeling) and the body (producing physiological response). Emotion and physiology happen together, not in sequence.</div>
+          <div class="item-heading">Cannon-Bard (1927)</div>
+          <div class="desc-small">The thalamus sends signals simultaneously to the cortex (producing subjective feeling) and the body (producing physiological response). Emotion and physiology happen together, not in sequence.</div>
         </div>
         <div class="sub-card">
-          <div class="theory-name">Schachter-Singer (1962)</div>
-          <div class="theory-desc">Two-factor theory: physiological arousal + cognitive label = emotion. The same arousal can become fear, excitement, or anger depending on what we attribute it to — misattribution of arousal is common.</div>
+          <div class="item-heading">Schachter-Singer (1962)</div>
+          <div class="desc-small">Two-factor theory: physiological arousal + cognitive label = emotion. The same arousal can become fear, excitement, or anger depending on what we attribute it to — misattribution of arousal is common.</div>
         </div>
         <div class="sub-card">
-          <div class="theory-name">Constructed emotion (Barrett, 2017)</div>
-          <div class="theory-desc">Emotions are not discrete biological programs but predictions constructed by the brain from interoceptive signals + past experience + context. Challenges Ekman's universality claim. Currently influential.</div>
+          <div class="item-heading">Constructed emotion (Barrett, 2017)</div>
+          <div class="desc-small">Emotions are not discrete biological programs but predictions constructed by the brain from interoceptive signals + past experience + context. Challenges Ekman's universality claim. Currently influential.</div>
         </div>
       </div>
     </div>
@@ -427,7 +427,7 @@ const mod = modules.find((m) => m.id === 27)!;
     ═══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-landmark-studies-in-social-psychology">Part K · landmark studies in social psychology</h2>
 
-    <div class="social-psych-intro">
+    <div class="intro-panel">
       Social psychology studies how situations shape behaviour — often far more powerfully than personality or character. The findings below are uncomfortable precisely because they reveal that "good people" reliably behave in disturbing ways under certain conditions.
     </div>
 
@@ -812,7 +812,7 @@ const biasData = [
     row.style.cssText = 'display:flex; align-items:center; gap:8px; margin-bottom:5px;';
     row.innerHTML = `
       <div style="font-size:11px; color:var(--color-text-secondary); width:160px; flex-shrink:0; text-align:right; padding-right:6px; line-height:1.3;">${d.name}</div>
-      <div class="bias-bar-track">
+      <div class="track-rounded">
         <div class="bias-bar-fill" style="width:${d.pct}%; background:${d.col}; color:${d.textCol};">${d.pct}%</div>
       </div>`;
     el.appendChild(row);
@@ -897,14 +897,14 @@ const b5Traits = [
     const div = document.createElement('div');
     div.className = 'b5-trait';
     div.innerHTML = `
-      <div class="b5-label-row">
-        <span class="b5-trait-name">${tr.name}</span>
+      <div class="label-row">
+        <span class="item-name">${tr.name}</span>
         <span class="b5-val" id="b5val_${tr.key}">3</span>
       </div>
       <input type="range" min="1" max="5" value="3" step="1"
         oninput="updateB5('${tr.key}', this.value)"
         style="width:100%; accent-color:var(--accent);">
-      <div class="b5-poles">
+      <div class="axis-ends-below">
         <span>${tr.low}</span>
         <span>${tr.high}</span>
       </div>`;

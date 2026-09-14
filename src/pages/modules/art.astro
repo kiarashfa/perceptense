@@ -86,7 +86,7 @@ const teasers = modules
           <div class="art-desc-cinema">The seventh art (added by Ricciotto Canudo, 1911). Moving image + time + narrative. Citizen Kane, Bicycle Thieves, 2001, Rashomon.</div>
         </div>
       </div>
-      <div class="taxonomy-note">
+      <div class="note-panel">
         The classical division originates from ancient Greece. The "Muses" governed nine arts including poetry, music, and dance. The six-art schema was formalised in the Italian Renaissance; film was added in the 20th century. Photography (sometimes the 8th art), comics/graphic novels (the 9th), and video games are claimed as subsequent additions. The taxonomy reveals as much about cultural values as about art itself.
       </div>
     </div>
@@ -98,26 +98,26 @@ const teasers = modules
 
     <!-- Movement period chart -->
     <div class="scroll-panel">
-      <div class="movements-chart-title">Approximate spans — Western painting movements, 1300–present</div>
-      <div class="pc-axis pcaxis" id="pcAxis"></div>
+      <div class="block-heading">Approximate spans — Western painting movements, 1300–present</div>
+      <div class="pc-axis axis-height" id="pcAxis"></div>
       <div id="pcRows"></div>
-      <div class="movements-note">Movements overlap; end dates indicate when each ceased to be the dominant avant-garde force, not when artists stopped working in the style.</div>
+      <div class="footnote-tight">Movements overlap; end dates indicate when each ceased to be the dominant avant-garde force, not when artists stopped working in the style.</div>
     </div>
 
-    <div class="art-row">
-      <button class="showmovement-control" onclick="showMovement('renaissance')"      >Renaissance</button>
-      <button class="showmovement-control" onclick="showMovement('baroque')"          >Baroque</button>
-      <button class="showmovement-control" onclick="showMovement('neoclassicism')"    >Neoclassicism</button>
-      <button class="showmovement-control" onclick="showMovement('romanticism')"      >Romanticism</button>
-      <button class="showmovement-control" onclick="showMovement('realism')"          >Realism</button>
-      <button class="showmovement-control" onclick="showMovement('impressionism')"    >Impressionism</button>
-      <button class="showmovement-control" onclick="showMovement('postimpressionism')">Post-impressionism</button>
-      <button class="showmovement-control" onclick="showMovement('cubism')"           >Cubism</button>
-      <button class="showmovement-control" onclick="showMovement('surrealism')"       >Surrealism</button>
-      <button class="showmovement-control" onclick="showMovement('expressionism')"    >Expressionism</button>
-      <button class="showmovement-control" onclick="showMovement('abstract')"         >Abstract expressionism</button>
-      <button class="showmovement-control" onclick="showMovement('popart')"           >Pop art</button>
-      <button class="showmovement-control" onclick="showMovement('contemporary')"     >Contemporary / conceptual</button>
+    <div class="button-set">
+      <button class="tab-button-narrow" onclick="showMovement('renaissance')"      >Renaissance</button>
+      <button class="tab-button-narrow" onclick="showMovement('baroque')"          >Baroque</button>
+      <button class="tab-button-narrow" onclick="showMovement('neoclassicism')"    >Neoclassicism</button>
+      <button class="tab-button-narrow" onclick="showMovement('romanticism')"      >Romanticism</button>
+      <button class="tab-button-narrow" onclick="showMovement('realism')"          >Realism</button>
+      <button class="tab-button-narrow" onclick="showMovement('impressionism')"    >Impressionism</button>
+      <button class="tab-button-narrow" onclick="showMovement('postimpressionism')">Post-impressionism</button>
+      <button class="tab-button-narrow" onclick="showMovement('cubism')"           >Cubism</button>
+      <button class="tab-button-narrow" onclick="showMovement('surrealism')"       >Surrealism</button>
+      <button class="tab-button-narrow" onclick="showMovement('expressionism')"    >Expressionism</button>
+      <button class="tab-button-narrow" onclick="showMovement('abstract')"         >Abstract expressionism</button>
+      <button class="tab-button-narrow" onclick="showMovement('popart')"           >Pop art</button>
+      <button class="tab-button-narrow" onclick="showMovement('contemporary')"     >Contemporary / conceptual</button>
     </div>
     <div class="content-panel" id="movement-display"></div>
 
@@ -126,7 +126,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-c-how-to-read-a-painting-what-art-historians-actually-look-at">Part C · how to read a painting — what art historians actually look at</h2>
 
-    <div class="reading-card-grid">
+    <div class="card-grid-large">
       <div class="card">
         <p class="clabel">Composition</p>
         <p class="cval">How elements are arranged in the frame</p>
@@ -171,7 +171,7 @@ const teasers = modules
             <div class="triangle-base-left"></div>
             <div class="triangle-base-right"></div>
           </div>
-          <div class="composition-name">Triangular</div>
+          <div class="item-heading">Triangular</div>
           <div class="composition-desc">Stable, hierarchical, divine. Renaissance Madonnas. Central figure elevated above flanking figures. Conveys permanence and authority.</div>
         </div>
         <div class="comp-card">
@@ -183,7 +183,7 @@ const teasers = modules
             <div class="thirds-line-h-bottom"></div>
             <div class="thirds-focus"></div>
           </div>
-          <div class="composition-name">Rule of thirds</div>
+          <div class="item-heading">Rule of thirds</div>
           <div class="composition-desc">Subject placed at intersection of dividing lines. More dynamic than dead-centre. Used intuitively by painters long before it was named.</div>
         </div>
         <div class="comp-card">
@@ -194,7 +194,7 @@ const teasers = modules
             <div class="diagonal-dot-high"></div>
             <div class="diagonal-dot-low"></div>
           </div>
-          <div class="composition-name">Diagonal</div>
+          <div class="item-heading">Diagonal</div>
           <div class="composition-desc">Dynamic, unstable, dramatic. Baroque hallmark — Caravaggio, Rubens. Implies movement, conflict, or imminent action. The eye travels along the diagonal axis.</div>
         </div>
         <div class="comp-card">
@@ -209,7 +209,7 @@ const teasers = modules
               </div>
             </div>
           </div>
-          <div class="composition-name">Radial / circular</div>
+          <div class="item-heading">Radial / circular</div>
           <div class="composition-desc">All elements revolve around a central point. Creates unity and focus. Used in Last Supper compositions, altarpieces, and many Renaissance group scenes.</div>
         </div>
         <div class="comp-card">
@@ -223,7 +223,7 @@ const teasers = modules
               <div class="horizon-dot-faint"></div>
             </div>
           </div>
-          <div class="composition-name">Horizontal bands</div>
+          <div class="item-heading">Horizontal bands</div>
           <div class="composition-desc">Calm, expansive, eternal. Landscape painters (Constable, Dutch Golden Age). Horizon placement governs emphasis: low horizon = vast sky; high horizon = rich foreground.</div>
         </div>
       </div>
@@ -233,27 +233,27 @@ const teasers = modules
     <div class="content-panel">
       <div class="panel-title">Colour symbolism — Western art tradition</div>
       <div class="colour-grid">
-        <div class="colour-swatch colour-swatch-style">
+        <div class="swatch-card colour-swatch-style">
           <div class="colour-swatch-name text-blue-900">Blue</div>
           <div class="colour-swatch-note text-blue-700">Divinity, the Virgin Mary, heaven, truth, loyalty. Ultramarine (from lapis lazuli) was more expensive than gold — its use signalled a patron's wealth.</div>
         </div>
-        <div class="colour-swatch colour-swatch-red">
+        <div class="swatch-card colour-swatch-red">
           <div class="colour-swatch-name text-red-900">Red</div>
           <div class="colour-swatch-note text-red-700">Passion, love, sacrifice, danger, martyrdom. Christ's robe in Passion scenes. Also royal power (vermilion was costly). Warm and advancing — pulls the eye.</div>
         </div>
-        <div class="colour-swatch colour-swatch-gold">
+        <div class="swatch-card colour-swatch-gold">
           <div class="colour-swatch-name text-amber-900">Gold</div>
           <div class="colour-swatch-note text-orange-850">Divine light, the eternal, holiness. Byzantine icons use gold ground to remove figures from earthly time and space entirely. Not a colour but a metaphysical statement.</div>
         </div>
-        <div class="colour-swatch colour-swatch-green">
+        <div class="swatch-card colour-swatch-green">
           <div class="colour-swatch-name text-green-800">Green</div>
           <div class="colour-swatch-note colour-swatch-note-green">Hope, nature, spring, renewal, envy (Shakespeare's "green-eyed monster"). Verdigris was the most common green pigment but notoriously unstable — many painted greens have turned brown over centuries.</div>
         </div>
-        <div class="colour-swatch colour-swatch-purple">
+        <div class="swatch-card colour-swatch-purple">
           <div class="colour-swatch-name text-hex-72243e">Purple / violet</div>
           <div class="colour-swatch-note text-hex-993556">Royalty, penitence, mourning, mourning. Tyrian purple was the most expensive dye in antiquity. In painting, it signals the highest status — emperors and high clergy only.</div>
         </div>
-        <div class="colour-swatch colour-swatch-white-black">
+        <div class="swatch-card colour-swatch-white-black">
           <div class="colour-swatch-name text-primary">White / black</div>
           <div class="colour-swatch-note text-secondary">White = purity, death (in some Eastern traditions), light. Black = mourning, death, authority, the void. Goya's Black Paintings — monochrome as psychological state, not just colour choice.</div>
         </div>
@@ -296,59 +296,59 @@ const teasers = modules
       </div>
 
       <!-- Record prices bar chart -->
-      <div class="auction-chart-title">Top auction records — selected works ($M at hammer)</div>
+      <div class="chart-heading-small">Top auction records — selected works ($M at hammer)</div>
       <div class="content-panel price-scale-style">
-        <div class="ps-row">
+        <div class="data-row-wide">
           <div class="ps-artist">Salvator Mundi<br><span class="art-span-style">Leonardo (attr.)</span></div>
-          <div class="ps-bar-wrap">
+          <div class="fill-space">
             <div class="ps-bar ps-bar-style">
-              <span class="ps-val text-indigo-900">$450M · Christie's 2017</span>
+              <span class="bar-value text-indigo-900">$450M · Christie's 2017</span>
             </div>
           </div>
         </div>
-        <div class="ps-row">
+        <div class="data-row-wide">
           <div class="ps-artist">Shot Sage Blue Marilyn<br><span class="art-span-style">Warhol</span></div>
-          <div class="ps-bar-wrap">
+          <div class="fill-space">
             <div class="ps-bar ps-bar-warhol">
-              <span class="ps-val text-red-900">$195M · Christie's 2022</span>
+              <span class="bar-value text-red-900">$195M · Christie's 2022</span>
             </div>
           </div>
         </div>
-        <div class="ps-row">
+        <div class="data-row-wide">
           <div class="ps-artist">Les Femmes d'Alger<br><span class="art-span-style">Picasso</span></div>
-          <div class="ps-bar-wrap">
+          <div class="fill-space">
             <div class="ps-bar ps-bar-picasso">
-              <span class="ps-val text-amber-900">$179M · Christie's 2015</span>
+              <span class="bar-value text-amber-900">$179M · Christie's 2015</span>
             </div>
           </div>
         </div>
-        <div class="ps-row">
+        <div class="data-row-wide">
           <div class="ps-artist">Interchange<br><span class="art-span-style">de Kooning</span></div>
-          <div class="ps-bar-wrap">
+          <div class="fill-space">
             <div class="ps-bar ps-bar-de-kooning">
-              <span class="ps-val text-blue-900">$300M · private 2015</span>
+              <span class="bar-value text-blue-900">$300M · private 2015</span>
             </div>
           </div>
         </div>
-        <div class="ps-row">
+        <div class="data-row-wide">
           <div class="ps-artist">Nafea Faa Ipoipo<br><span class="art-span-style">Gauguin</span></div>
-          <div class="ps-bar-wrap">
+          <div class="fill-space">
             <div class="ps-bar ps-bar-gauguin">
-              <span class="ps-val text-green-800">$300M · private 2015</span>
+              <span class="bar-value text-green-800">$300M · private 2015</span>
             </div>
           </div>
         </div>
-        <div class="ps-row">
+        <div class="data-row-wide">
           <div class="ps-artist">No. 6 (Violet, Green and Red)<br><span class="art-span-style">Rothko</span></div>
-          <div class="ps-bar-wrap">
+          <div class="fill-space">
             <div class="ps-bar ps-bar-rothko">
-              <span class="ps-val text-hex-72243e">$186M · private 2014</span>
+              <span class="bar-value text-hex-72243e">$186M · private 2014</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="value-distinction-note">
+      <div class="note-callout">
         <strong class="text-primary">Artistic value vs market value:</strong> These are genuinely independent. Vermeer's work commands extraordinary prices; his contemporary Jan Steen (far more prolific) is worth a fraction. Fra Angelico's frescoes in the Monastery of San Marco, Florence are among the most spiritually and artistically significant paintings in existence — they cannot be bought at any price. Basquiat paintings sell for $100M+ while many consider his work of modest artistic depth. The market rewards cultural meaning, scarcity, and collector fashion — not necessarily what art historians or critics consider finest.
       </div>
     </div>
@@ -359,12 +359,12 @@ const teasers = modules
     <h2 class="sec" id="part-e-six-essential-works-and-what-makes-each-significant">Part E · six essential works — and what makes each significant</h2>
 
     <div class="button-row">
-      <button class="showwork-control" onclick="showWork('mona')"     >Mona Lisa</button>
-      <button class="showwork-control" onclick="showWork('sistine')"  >Sistine ceiling</button>
-      <button class="showwork-control" onclick="showWork('guernica')" >Guernica</button>
-      <button class="showwork-control" onclick="showWork('starry')"   >Starry Night</button>
-      <button class="showwork-control" onclick="showWork('olympia')"  >Olympia</button>
-      <button class="showwork-control" onclick="showWork('fountain')" >Fountain (Duchamp)</button>
+      <button class="pill-button" onclick="showWork('mona')"     >Mona Lisa</button>
+      <button class="pill-button" onclick="showWork('sistine')"  >Sistine ceiling</button>
+      <button class="pill-button" onclick="showWork('guernica')" >Guernica</button>
+      <button class="pill-button" onclick="showWork('starry')"   >Starry Night</button>
+      <button class="pill-button" onclick="showWork('olympia')"  >Olympia</button>
+      <button class="pill-button" onclick="showWork('fountain')" >Fountain (Duchamp)</button>
     </div>
     <div class="content-panel" id="work-display"></div>
 
@@ -373,45 +373,45 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-the-seven-elements-of-art-the-visual-vocabulary">Part F · the seven elements of art — the visual vocabulary</h2>
 
-    <div class="section-intro">
+    <div class="intro-panel">
       Before movements and history, there are the building blocks every visual work uses. Art educators identify seven fundamental elements: every painting, sculpture, and drawing can be analysed in terms of these seven. Click each to explore.
     </div>
 
     <div class="elem-grid">
       <div class="elem-card active" onclick="showElement('line')">
-        <div class="elem-icon">〰</div>
-        <div class="elem-name">Line</div>
-        <div class="elem-sub">Direction &amp; energy</div>
+        <div class="card-icon-small">〰</div>
+        <div class="label-strong">Line</div>
+        <div class="sub-caption">Direction &amp; energy</div>
       </div>
       <div class="elem-card" onclick="showElement('shape')">
-        <div class="elem-icon">◻</div>
-        <div class="elem-name">Shape</div>
-        <div class="elem-sub">2D enclosed area</div>
+        <div class="card-icon-small">◻</div>
+        <div class="label-strong">Shape</div>
+        <div class="sub-caption">2D enclosed area</div>
       </div>
       <div class="elem-card" onclick="showElement('form')">
-        <div class="elem-icon">◈</div>
-        <div class="elem-name">Form</div>
-        <div class="elem-sub">3D or illusion of it</div>
+        <div class="card-icon-small">◈</div>
+        <div class="label-strong">Form</div>
+        <div class="sub-caption">3D or illusion of it</div>
       </div>
       <div class="elem-card" onclick="showElement('space')">
-        <div class="elem-icon">⊡</div>
-        <div class="elem-name">Space</div>
-        <div class="elem-sub">Positive &amp; negative</div>
+        <div class="card-icon-small">⊡</div>
+        <div class="label-strong">Space</div>
+        <div class="sub-caption">Positive &amp; negative</div>
       </div>
       <div class="elem-card" onclick="showElement('colour')">
-        <div class="elem-icon">◉</div>
-        <div class="elem-name">Colour</div>
-        <div class="elem-sub">Hue, value, intensity</div>
+        <div class="card-icon-small">◉</div>
+        <div class="label-strong">Colour</div>
+        <div class="sub-caption">Hue, value, intensity</div>
       </div>
       <div class="elem-card" onclick="showElement('value')">
-        <div class="elem-icon">▨</div>
-        <div class="elem-name">Value</div>
-        <div class="elem-sub">Light vs dark</div>
+        <div class="card-icon-small">▨</div>
+        <div class="label-strong">Value</div>
+        <div class="sub-caption">Light vs dark</div>
       </div>
       <div class="elem-card" onclick="showElement('texture')">
-        <div class="elem-icon">▦</div>
-        <div class="elem-name">Texture</div>
-        <div class="elem-sub">Surface quality</div>
+        <div class="card-icon-small">▦</div>
+        <div class="label-strong">Texture</div>
+        <div class="sub-caption">Surface quality</div>
       </div>
     </div>
 
@@ -422,19 +422,19 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-g-medium-and-technique-what-it-s-made-of-matters">Part G · medium &amp; technique — what it's made of matters</h2>
 
-    <div class="section-overview">
+    <div class="note-roomy">
       The physical medium — the stuff the artwork is made from — profoundly shapes what is possible. Oil paint allows glazing and decades of reworking. Fresco demands decisive, fast brushwork before plaster dries. Watercolour requires working light to dark. These constraints produced the distinctive look of each tradition.
     </div>
 
     <div class="button-row-compact">
-      <button class="showmovement-control" onclick="showMedium('fresco')"     >Fresco</button>
-      <button class="showmovement-control" onclick="showMedium('tempera')"    >Egg tempera</button>
-      <button class="showmovement-control" onclick="showMedium('oil')"        >Oil paint</button>
-      <button class="showmovement-control" onclick="showMedium('watercolour')">Watercolour</button>
-      <button class="showmovement-control" onclick="showMedium('acrylic')"    >Acrylic</button>
-      <button class="showmovement-control" onclick="showMedium('engraving')"  >Engraving / etching</button>
-      <button class="showmovement-control" onclick="showMedium('screenprint')">Screen printing</button>
-      <button class="showmovement-control" onclick="showMedium('collage')"    >Collage / mixed media</button>
+      <button class="tab-button-narrow" onclick="showMedium('fresco')"     >Fresco</button>
+      <button class="tab-button-narrow" onclick="showMedium('tempera')"    >Egg tempera</button>
+      <button class="tab-button-narrow" onclick="showMedium('oil')"        >Oil paint</button>
+      <button class="tab-button-narrow" onclick="showMedium('watercolour')">Watercolour</button>
+      <button class="tab-button-narrow" onclick="showMedium('acrylic')"    >Acrylic</button>
+      <button class="tab-button-narrow" onclick="showMedium('engraving')"  >Engraving / etching</button>
+      <button class="tab-button-narrow" onclick="showMedium('screenprint')">Screen printing</button>
+      <button class="tab-button-narrow" onclick="showMedium('collage')"    >Collage / mixed media</button>
     </div>
     <div class="content-panel" id="medium-display"></div>
 
@@ -443,13 +443,13 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-the-scale-of-famous-works-size-changes-everything">Part H · the scale of famous works — size changes everything</h2>
 
-    <div class="section-overview">
+    <div class="note-roomy">
       Scale is an artistic choice, not a practical one. The Mona Lisa is surprisingly small (the size of a large hardback book); Guernica is nearly 8 metres wide. Abstract Expressionists chose monumental scale to envelop the viewer. Move the slider to compare works at a consistent scale relative to an average adult figure (170 cm).
     </div>
 
     <div class="content-panel">
       <div class="u-mb-md">
-        <label class="muted-text">Select a work:</label>
+        <label class="muted-small">Select a work:</label>
         <div class="scalebuttons" id="scaleButtons"></div>
       </div>
       <div class="scaleviz" id="scaleViz"></div>
@@ -461,7 +461,7 @@ const teasers = modules
     ══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-i-going-deeper-the-dedicated-modules">Part I · going deeper — the dedicated modules</h2>
 
-    <div class="section-intro">
+    <div class="intro-panel">
       This module covers art as a broad discipline. Four dedicated modules take a deep dive into the specific arts that most shape cultural life — each with its own techniques, history, and vocabulary.
     </div>
 
@@ -469,7 +469,7 @@ const teasers = modules
       {teasers.map((t) => (
         <a href={path('modules', t.slug)} class="teaser-card">
           <div class="teaser-num">Module {t.id}</div>
-          <div class="teaser-icon">{t.icon}</div>
+          <div class="icon-large">{t.icon}</div>
           <div class="teaser-name">{t.name}</div>
           <div class="muted-copy-tight">{t.text}</div>
         </a>
@@ -741,18 +741,18 @@ const teasers = modules
       // Build axis
       ticks.forEach(t => {
         const pct = ((t - minY) / range * 100).toFixed(2);
-        axisEl.innerHTML += `<span class="pc-axis-mark" style="left:${pct}%">${t}</span>`;
+        axisEl.innerHTML += `<span class="axis-tick-small" style="left:${pct}%">${t}</span>`;
       });
       // Build rows
       pcData.forEach(d => {
         const left = ((d.start - minY) / range * 100).toFixed(2);
         const width = ((d.end - d.start) / range * 100).toFixed(2);
         rowsEl.innerHTML += `
-          <div class="pc-row">
+          <div class="data-row-loose">
             <div class="pc-label">${d.name}</div>
-            <div class="pc-track">
+            <div class="period-track">
               <div class="pc-fill" style="left:${left}%; width:${width}%; background:${d.col}; border:0.5px solid ${d.tcol}33;">
-                <span class="pc-fill-label" style="color:${d.tcol};">${d.start}–${d.end}</span>
+                <span class="period-label" style="color:${d.tcol};">${d.start}–${d.end}</span>
               </div>
             </div>
           </div>`;

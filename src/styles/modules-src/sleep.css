@@ -1,9 +1,4 @@
 
-    /* Stage cards */
-    .sh { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-    .sname { font-size: 14px; font-weight: 500; }
-    .sbadge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 99px; }
-
     /* Stage card inner 3-col grid — responsive */
     .sgrid {
       display: grid;
@@ -110,9 +105,6 @@
       color: var(--color-text-primary, #1a1a1a);
       line-height: 1.7;
     }
-
-    /* Caffeine half-life calculator */
-    .caf-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
     .caf-label { font-size: 12px; color: var(--color-text-secondary, #666); min-width: 120px; }
     .caf-bar-track { background: var(--color-background-secondary, #f5f5f5); border-radius: 4px; height: 12px; flex: 1; overflow: hidden; min-width: 80px; }
     .caf-bar-fill { height: 12px; border-radius: 4px; background: #C8952A; transition: width 0.3s; }
@@ -127,46 +119,12 @@
     .comp-table tr:last-child td { border-bottom: none; }
     .comp-table tr:hover td { background: var(--color-background-secondary, #f5f5f5); }
 
-/* === Shared-ready extracted styles === */
-
-.bg-indigo-900 {
-  background:#3C3489;
-}
-
-.text-blue-700 {
-  color:#185FA5;
-}
-
-.text-blue-900 {
-  color:#0C447C;
-}
-
-.text-blue-950 {
-  color:#042C53;
-}
-
 .text-hex-72243e {
   color:#72243E;
 }
 
-.text-hex-993556 {
-  color:#993556;
-}
-
-.text-indigo-200 {
-  color:#CECBF6;
-}
-
-.text-indigo-700 {
-  color:#534AB7;
-}
-
 .text-indigo-900 {
   color:#3C3489;
-}
-
-.text-indigo-950 {
-  color:#26215C;
 }
 
 /* === Module-specific extracted styles === */
@@ -191,13 +149,6 @@
   color:var(--color-text-secondary, #666);
   margin-bottom:12px;
   line-height:1.6;
-}
-
-.sleep-row {
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-  margin-bottom:12px;
 }
 
 .cycle-caption {
@@ -332,12 +283,6 @@
   font-weight:500;
   color:var(--color-text-primary, #1a1a1a);
   margin-bottom:8px;
-}
-
-.cycle-shift-list {
-  display:flex;
-  flex-direction:column;
-  gap:5px;
 }
 
 .cycle-shift-label {
@@ -565,13 +510,6 @@
   margin-bottom:10px;
 }
 
-.hormone-slider-row {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:8px;
-}
-
 .hormone-slider-label {
   font-size:12px;
   color:var(--color-text-secondary, #666);
@@ -594,12 +532,6 @@
   border-radius:var(--border-radius-md, 8px);
   padding:11px 13px;
   margin-bottom:10px;
-}
-
-.sleep-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
-  gap:8px;
 }
 
 .hormone-card {
@@ -626,14 +558,6 @@
   color:var(--color-text-secondary, #666);
   margin-bottom:10px;
   line-height:1.5;
-}
-
-.caffeine-inputs {
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  align-items:flex-end;
-  margin-bottom:12px;
 }
 
 .caffeine-field-label {
@@ -663,11 +587,6 @@
   margin-bottom:10px;
 }
 
-.window-button {
-  font-size:12px;
-  padding:4px 11px;
-}
-
 .depriv-display {
   font-size:13px;
   color:var(--color-text-primary, #1a1a1a);
@@ -683,27 +602,11 @@
   line-height:1.5;
 }
 
-.chronotype-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(0,1fr));
-  gap:10px;
-  margin-bottom:1rem;
-}
-
 .source-note {
   font-size:11px;
   color:#999;
   margin-top:4px;
   line-height:1.5;
-}
-
-.checklist-header {
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  margin-bottom:10px;
-  flex-wrap:wrap;
-  gap:8px;
 }
 
 .checklist-title {

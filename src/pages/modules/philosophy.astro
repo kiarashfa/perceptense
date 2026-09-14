@@ -31,17 +31,17 @@ const mod = modules.find((m) => m.id === 28)!;
       <div class="philosophy-panel">
         "The unexamined life is not worth living." — Socrates (at his trial, choosing death over exile and silence)
       </div>
-      <div class="philosophy-grid">
+      <div class="tile-grid-wide">
         <div class="sub-card">
-          <div class="philosophy-label">What philosophy does</div>
+          <div class="small-title">What philosophy does</div>
           <div class="muted-copy-tight">Examines the most fundamental questions: What exists? What can we know? How should we live? What is justice? What is beauty? What is a valid argument? It questions assumptions that other disciplines simply accept.</div>
         </div>
         <div class="sub-card">
-          <div class="philosophy-label">Why it matters now</div>
+          <div class="small-title">Why it matters now</div>
           <div class="muted-copy-tight">Every pressing question in AI ethics, bioethics, political theory, and climate justice is fundamentally a philosophical question. Every scientific discipline rests on philosophical assumptions about what counts as evidence and what kind of entities exist.</div>
         </div>
         <div class="sub-card">
-          <div class="philosophy-label">Philosophy's children</div>
+          <div class="small-title">Philosophy's children</div>
           <div class="muted-copy-tight">Every modern academic discipline began as philosophy. Physics was natural philosophy. Psychology was the philosophy of mind. Computer science grew from mathematical logic. Economics from moral philosophy. The question moves out of philosophy only when it becomes empirically tractable.</div>
         </div>
       </div>
@@ -49,9 +49,9 @@ const mod = modules.find((m) => m.id === 28)!;
 
     <!-- Visual: disciplines born from philosophy -->
     <div class="card u-mb-lg">
-      <div class="disciplines-kicker">How disciplines were born from philosophy</div>
+      <div class="kicker">How disciplines were born from philosophy</div>
       <div id="phil-born-bars"></div>
-      <div class="philosophy-text">Bar width = rough century of disciplinary independence from philosophy</div>
+      <div class="note-small">Bar width = rough century of disciplinary independence from philosophy</div>
     </div>
 
 
@@ -60,7 +60,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-b-the-six-branches-of-philosophy">Part B · the six branches of philosophy</h2>
 
-    <div class="card-grid-auto">
+    <div class="card-grid-large">
       <div class="branch-panel-metaphysics">
         <div class="branch-title-metaphysics">Metaphysics</div>
         <div class="branch-question-metaphysics">"What exists?"</div>
@@ -94,11 +94,11 @@ const mod = modules.find((m) => m.id === 28)!;
     </div>
 
     <!-- Ethics Spectrum Interactive -->
-    <div class="spectrum-wrap">
+    <div class="tool-panel">
       <div class="mini-card-title">Ethical framework spectrum — where does your intuition land?</div>
-      <div class="slider-intro">Drag to explore the spectrum from pure rule-following to pure outcome-maximising.</div>
+      <div class="intro-small">Drag to explore the spectrum from pure rule-following to pure outcome-maximising.</div>
       <input class="ethicsslider" type="range" id="ethicsSlider" min="0" max="100" value="50">
-      <div class="philosophy-row">
+      <div class="axis-ends">
         <span>Deontology<br>(rules first)</span>
         <span class="u-text-center">Virtue ethics<br>(character first)</span>
         <span class="u-text-right">Consequentialism<br>(outcomes first)</span>
@@ -113,7 +113,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <h2 class="sec" id="part-c-the-ancient-greeks-where-western-philosophy-begins">Part C · the ancient Greeks — where Western philosophy begins</h2>
 
     <!-- Interactive philosopher timeline -->
-    <div class="phil-timeline-wrap">
+    <div class="chart-panel">
       <div class="mini-card-title u-mb-xs">2,500 years of philosophy at a glance — click any thinker</div>
       <div class="muted-copy-tight u-mb-md">Each bar spans one philosopher's lifetime. Hover or tap to identify them.</div>
       <svg id="phil-timeline-svg" class="phil-timeline-svg" viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg"></svg>
@@ -129,7 +129,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-d-late-antiquity-and-medieval-philosophy-4th17th-century">Part D · late antiquity &amp; medieval philosophy (4th–17th century)</h2>
 
-    <div class="context-note">
+    <div class="note-roomy">
       After Aristotle's death, Greek philosophy spread across the Roman world. When Rome fell, Aristotle's major works were preserved in the Islamic world and reintroduced to Europe in the 12th century — triggering Scholasticism: the project of synthesising Greek philosophy with Christian (and Islamic and Jewish) theology. Medieval philosophers were not mere theologians doing philosophy — they developed original logic, metaphysics, and theory of knowledge.
     </div>
 
@@ -142,7 +142,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-e-early-modern-philosophy-17thearly-18th-century">Part E · early modern philosophy (17th–early 18th century)</h2>
 
-    <div class="context-note">
+    <div class="note-roomy">
       The Scientific Revolution shattered the Aristotelian-scholastic worldview. New questions arose: If the medieval synthesis was wrong, what can we know? What is the right method? Descartes, Spinoza, and Leibniz (the Rationalists) said reason. Locke, Berkeley, and Hume (the Empiricists) said experience. Their debate set the agenda for modern philosophy — and was not resolved until Kant.
     </div>
 
@@ -155,7 +155,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-enlightenment-and-19th-century-transformations">Part F · enlightenment &amp; 19th-century transformations</h2>
 
-    <div class="context-note">
+    <div class="note-roomy">
       The 18th and 19th centuries saw philosophy reshape politics, economics, religion, and history. The Enlightenment produced modern democracy, human rights, and capitalism. German Idealism produced the most ambitious philosophical system ever attempted. The 19th century ended with Nietzsche announcing the death of God — and philosophy fracturing into the analytic and continental traditions.
     </div>
 
@@ -168,7 +168,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-g-20th-century-and-contemporary-philosophy">Part G · 20th-century &amp; contemporary philosophy</h2>
 
-    <div class="context-note">
+    <div class="note-roomy">
       The 20th century split Western philosophy into two traditions: analytic (dominant in Britain, USA, and Australia — logical rigour, philosophy of language, mind, and science) and continental (dominant in France and Germany — phenomenology, existentialism, critical theory, poststructuralism). Both engage with the same problems; they differ radically in method and style.
     </div>
 
@@ -199,79 +199,79 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-logical-fallacies-everyone-should-know">Part J · logical fallacies everyone should know</h2>
 
-    <div class="fallacy-intro">A fallacy is an argument that appears to support a conclusion but doesn't actually succeed. Recognising them is one of the most practically useful skills philosophy gives you.</div>
+    <div class="lede-text-loose">A fallacy is an argument that appears to support a conclusion but doesn't actually succeed. Recognising them is one of the most practically useful skills philosophy gives you.</div>
 
-    <div class="fallacy-grid">
-      <div class="fallacy-card">
-        <div class="fallacy-name">Ad hominem</div>
+    <div class="panel-grid-spaced">
+      <div class="mini-card">
+        <div class="item-heading-spaced">Ad hominem</div>
         <div class="fallacy-latin">against the person</div>
-        <div class="fallacy-def">Attacking the arguer rather than the argument. Even if the speaker is dishonest or hypocritical, their argument must be addressed on its own terms.</div>
+        <div class="desc-small">Attacking the arguer rather than the argument. Even if the speaker is dishonest or hypocritical, their argument must be addressed on its own terms.</div>
         <div class="fallacy-example">Example: "You can't trust his climate science — he drives an SUV."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Straw man</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Straw man</div>
         <div class="fallacy-latin">homo stramineus</div>
-        <div class="fallacy-def">Misrepresenting someone's position to make it easier to attack — then defeating the misrepresentation rather than the actual view.</div>
+        <div class="desc-small">Misrepresenting someone's position to make it easier to attack — then defeating the misrepresentation rather than the actual view.</div>
         <div class="fallacy-example">Example: "Environmentalists want us to go back to living in caves."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">False dilemma</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">False dilemma</div>
         <div class="fallacy-latin">bifurcatio</div>
-        <div class="fallacy-def">Presenting only two options as if they're exhaustive, when other possibilities exist.</div>
+        <div class="desc-small">Presenting only two options as if they're exhaustive, when other possibilities exist.</div>
         <div class="fallacy-example">Example: "You're either with us or against us."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Appeal to authority</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Appeal to authority</div>
         <div class="fallacy-latin">argumentum ad verecundiam</div>
-        <div class="fallacy-def">Claiming something is true because an authority figure said so — without evaluating the evidence. Legitimate when the authority is genuinely expert in the relevant domain.</div>
+        <div class="desc-small">Claiming something is true because an authority figure said so — without evaluating the evidence. Legitimate when the authority is genuinely expert in the relevant domain.</div>
         <div class="fallacy-example">Example: "A Nobel laureate says homeopathy works."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Slippery slope</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Slippery slope</div>
         <div class="fallacy-latin">camel's nose</div>
-        <div class="fallacy-def">Claiming that one event will inevitably lead to extreme consequences without showing why each step in the chain is probable.</div>
+        <div class="desc-small">Claiming that one event will inevitably lead to extreme consequences without showing why each step in the chain is probable.</div>
         <div class="fallacy-example">Example: "Legalising cannabis will lead to everyone taking heroin."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Post hoc ergo propter hoc</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Post hoc ergo propter hoc</div>
         <div class="fallacy-latin">after this, therefore because of this</div>
-        <div class="fallacy-def">Inferring causation from correlation: A happened, then B happened, therefore A caused B.</div>
+        <div class="desc-small">Inferring causation from correlation: A happened, then B happened, therefore A caused B.</div>
         <div class="fallacy-example">Example: "I wore my lucky socks and we won the match."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Begging the question</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Begging the question</div>
         <div class="fallacy-latin">petitio principii</div>
-        <div class="fallacy-def">Assuming the conclusion in one of the premises — circular reasoning. The argument is valid only if you already accept what you're trying to prove.</div>
+        <div class="desc-small">Assuming the conclusion in one of the premises — circular reasoning. The argument is valid only if you already accept what you're trying to prove.</div>
         <div class="fallacy-example">Example: "The Bible is true because it says so in the Bible."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Appeal to nature</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Appeal to nature</div>
         <div class="fallacy-latin">argumentum ad naturam</div>
-        <div class="fallacy-def">Assuming that what is natural is good and what is artificial is bad. Nature contains arsenic, viruses, and parasites; artificial penicillin saves lives.</div>
+        <div class="desc-small">Assuming that what is natural is good and what is artificial is bad. Nature contains arsenic, viruses, and parasites; artificial penicillin saves lives.</div>
         <div class="fallacy-example">Example: "This supplement is safe — it's all natural."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Is-ought fallacy</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Is-ought fallacy</div>
         <div class="fallacy-latin">Hume's guillotine</div>
-        <div class="fallacy-def">Deriving a normative "ought" from a descriptive "is" without justification. Facts alone cannot determine values (see Hume, Part G).</div>
+        <div class="desc-small">Deriving a normative "ought" from a descriptive "is" without justification. Facts alone cannot determine values (see Hume, Part G).</div>
         <div class="fallacy-example">Example: "Humans evolved to eat meat, so we ought to eat meat."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Modus tollens (valid)</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Modus tollens (valid)</div>
         <div class="fallacy-latin">denying the consequent</div>
-        <div class="fallacy-def">Not a fallacy — a valid form. If P→Q and ¬Q, then ¬P. Crucial for falsifying scientific hypotheses. Karl Popper built his philosophy of science on this form.</div>
+        <div class="desc-small">Not a fallacy — a valid form. If P→Q and ¬Q, then ¬P. Crucial for falsifying scientific hypotheses. Karl Popper built his philosophy of science on this form.</div>
         <div class="fallacy-example">Example: "If the drug works, patients improve. Patients didn't improve. The drug doesn't work."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Affirming the consequent</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Affirming the consequent</div>
         <div class="fallacy-latin">fallacy of the converse</div>
-        <div class="fallacy-def">If P→Q and Q, one cannot conclude P. This is a logical fallacy that looks deceptively valid — and is the basis of most conspiracy reasoning.</div>
+        <div class="desc-small">If P→Q and Q, one cannot conclude P. This is a logical fallacy that looks deceptively valid — and is the basis of most conspiracy reasoning.</div>
         <div class="fallacy-example">Example: "If it rains, the ground is wet. The ground is wet. Therefore it rained."</div>
       </div>
-      <div class="fallacy-card">
-        <div class="fallacy-name">Hasty generalisation</div>
+      <div class="mini-card">
+        <div class="item-heading-spaced">Hasty generalisation</div>
         <div class="fallacy-latin">secundum quid</div>
-        <div class="fallacy-def">Drawing a broad conclusion from an insufficient sample. The larger the generalisation, the more evidence is required.</div>
+        <div class="desc-small">Drawing a broad conclusion from an insufficient sample. The larger the generalisation, the more evidence is required.</div>
         <div class="fallacy-example">Example: "I met two rude Parisians. Parisians are rude."</div>
       </div>
     </div>
@@ -282,7 +282,7 @@ const mod = modules.find((m) => m.id === 28)!;
     ══════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-essential-philosophical-vocabulary">Part K · essential philosophical vocabulary</h2>
 
-    <div class="card-grid-auto">
+    <div class="card-grid-large">
       <div class="card">
         <p class="clabel">A priori vs a posteriori</p>
         <p class="cval">Before vs after experience</p>
@@ -334,7 +334,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <!-- Ethics framework comparison table -->
     <h2 class="sec sec-style" id="which-ethical-theory-fits-your-intuitions-a-quick-scenario-quiz">Which ethical theory fits your intuitions? — a quick scenario quiz</h2>
 
-    <div class="quiz-wrap">
+    <div class="tool-panel">
       <div class="mini-card-title u-mb-xs">5 moral dilemmas — pick your gut reaction</div>
       <div class="muted-copy-tight u-mb-md">There are no right answers. Your pattern of responses reveals which ethical framework your intuitions most closely resemble.</div>
       <div class="quiz-progress" id="quiz-progress"></div>
@@ -348,7 +348,7 @@ const mod = modules.find((m) => m.id === 28)!;
 
     <!-- Ethics framework comparison table -->
     <h2 class="sec sec-style" id="comparing-the-three-major-ethical-frameworks">Comparing the three major ethical frameworks</h2>
-    <div class="philosophy-spacing">
+    <div class="scroll-block">
       <table class="compare-table">
         <thead>
           <tr>
@@ -362,7 +362,7 @@ const mod = modules.find((m) => m.id === 28)!;
         </thead>
         <tbody>
           <tr>
-            <td><strong>Consequentialism</strong><br><span class="school-subname">Utilitarianism</span></td>
+            <td><strong>Consequentialism</strong><br><span class="hint-text">Utilitarianism</span></td>
             <td>Right action = maximises overall good (welfare, happiness, preference satisfaction)</td>
             <td>Bentham, Mill, Singer, Sidgwick</td>
             <td>Impartial (every person counts equally); outcome-focused (what actually matters); quantifiable</td>
@@ -370,7 +370,7 @@ const mod = modules.find((m) => m.id === 28)!;
             <td>Pull the lever, push the person — the arithmetic is the same in both cases; five lives outweigh one</td>
           </tr>
           <tr>
-            <td><strong>Deontology</strong><br><span class="school-subname">Kantian ethics</span></td>
+            <td><strong>Deontology</strong><br><span class="hint-text">Kantian ethics</span></td>
             <td>Right action = follows moral rules / duties, regardless of consequences</td>
             <td>Kant, Ross, Korsgaard</td>
             <td>Respects rights and dignity; consistent; non-manipulable; matches strong moral intuitions about murder</td>
@@ -378,7 +378,7 @@ const mod = modules.find((m) => m.id === 28)!;
             <td>Pull the lever (a foreseen side-effect); but do not push the person (using them as a means violates their dignity)</td>
           </tr>
           <tr>
-            <td><strong>Virtue ethics</strong><br><span class="school-subname">Aristotelian</span></td>
+            <td><strong>Virtue ethics</strong><br><span class="hint-text">Aristotelian</span></td>
             <td>Right action = what a virtuous person would do; focus on character, not rules or outcomes</td>
             <td>Aristotle, Aquinas, MacIntyre, Foot</td>
             <td>Accommodates moral complexity; rich account of the good life; emphasises moral development; handles agent-relative obligations</td>
@@ -399,21 +399,21 @@ const mod = modules.find((m) => m.id === 28)!;
     <div class="content-panel u-mb-lg">
       <div class="panel-title-spaced">Metaethics: what are moral claims actually doing?</div>
       <div class="muted-copy-large u-mb-md">Before we ask <em>what is right</em>, metaethics asks: what kind of thing is a moral claim? Are moral statements true or false? Are moral properties real features of the world, or something we project onto it?</div>
-      <div class="card-grid-auto">
+      <div class="card-grid-large">
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Moral realism</div>
+          <div class="small-title">Moral realism</div>
           <div class="muted-copy-tight u-mt-sm">Moral facts exist independently of what anyone thinks or feels. "Torturing innocents for fun is wrong" is as objectively true as "2+2=4." Key figures: Plato (the Form of the Good), G.E. Moore (moral properties are non-natural but real), Derek Parfit (reasons are part of the fabric of the universe). The challenge: how do we perceive moral facts? What kind of thing is a moral property?</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Error theory</div>
+          <div class="small-title">Error theory</div>
           <div class="muted-copy-tight u-mt-sm">Moral claims purport to be objective facts but they are all false, because there are no moral facts (J.L. Mackie, 1977). Moral language has a built-in pretension to objectivity that reality cannot satisfy. This is a form of moral anti-realism. It is radical but internally consistent: we can explain why humans make moral claims without any moral facts existing.</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Expressivism (non-cognitivism)</div>
+          <div class="small-title">Expressivism (non-cognitivism)</div>
           <div class="muted-copy-tight u-mt-sm">Moral statements do not assert facts at all; they express attitudes. "Torture is wrong" means something like "Boo to torture!" (Ayer's emotivism) or expresses a commitment to norms that prohibit torture (Blackburn's quasi-realism, Gibbard's norm-expressivism). The challenge: "If torture is wrong, then it is wrong to make people do it" -- moral logic seems to require that moral sentences have truth values.</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Constructivism</div>
+          <div class="small-title">Constructivism</div>
           <div class="muted-copy-tight u-mt-sm">Moral facts are neither discovered (realism) nor merely projected (expressivism) -- they are constructed by rational procedures. Rawls: principles of justice are what rational people would choose behind the veil of ignorance. Korsgaard: moral obligations arise from the reflective endorsement of one's own practical identity. The question: what makes the constructive procedure authoritative?</div>
         </div>
       </div>
@@ -429,7 +429,7 @@ const mod = modules.find((m) => m.id === 28)!;
     <!-- Applied ethics domains -->
     <h2 class="sec sec-style" id="applied-ethics-where-philosophy-meets-real-decisions">Applied ethics -- where philosophy meets real decisions</h2>
 
-    <div class="context-note">
+    <div class="note-roomy">
       Applied ethics takes the tools of moral philosophy into specific domains where real choices have to be made: medicine, technology, the environment, animals, global poverty. The most important feature of applied ethics is that abstract frameworks produce sharply different recommendations -- and the disagreements reveal which framework we are actually relying on.
     </div>
 
@@ -442,30 +442,30 @@ const mod = modules.find((m) => m.id === 28)!;
     <div class="content-panel u-mb-lg">
       <div class="panel-title-spaced">The gap between moral theory and moral practice</div>
       <div class="muted-copy-large u-mb-md">Philosophy produces theories of what we <em>should</em> do. Moral psychology studies what humans <em>actually</em> do when making moral judgements -- and the gap is significant.</div>
-      <div class="philosophy-grid">
+      <div class="tile-grid-wide">
         <div class="sub-card">
-          <div class="philosophy-label">Moral intuitions</div>
+          <div class="small-title">Moral intuitions</div>
           <div class="muted-copy-tight">Immediate, strong moral judgements that resist full systematic justification. Philosophers disagree on their epistemic status. Rationalists (Kant): intuitions are unreliable; only pure practical reason grounds moral claims. Intuitionists (Ross, Moore): moral intuitions are evidence of non-inferential moral knowledge. Reflective equilibrium (Rawls): move back and forth between intuitions and principles until they cohere -- neither is automatically privileged.</div>
         </div>
         <div class="sub-card">
-          <div class="philosophy-label">Moral luck (Thomas Nagel, 1976)</div>
+          <div class="small-title">Moral luck (Thomas Nagel, 1976)</div>
           <div class="muted-copy-tight">We hold people morally responsible for things that are partly outside their control. A drunk driver who hits no one is treated differently from one who kills a child -- but luck determined the outcome, not choice. Nagel identifies four kinds of moral luck: resultant luck (outcomes), circumstantial luck (the situations you face), constitutive luck (the kind of person you are), causal luck (whether determinism undermines all responsibility). If we took moral luck seriously, most blame and praise would dissolve.</div>
         </div>
         <div class="sub-card">
-          <div class="philosophy-label">Moral disengagement (Bandura)</div>
+          <div class="small-title">Moral disengagement (Bandura)</div>
           <div class="muted-copy-tight">Albert Bandura identified mechanisms by which people disengage their moral self-sanctions: moral justification ("it's a just cause"), euphemistic labelling ("enhanced interrogation," "collateral damage"), advantageous comparison, displacement of responsibility ("I was just following orders"), diffusion of responsibility (in groups), dehumanisation of victims. These are not just individual failures -- they are systematic cognitive mechanisms exploited by institutions and propaganda.</div>
         </div>
         <div class="sub-card">
-          <div class="philosophy-label">Dual-process moral cognition</div>
+          <div class="small-title">Dual-process moral cognition</div>
           <div class="muted-copy-tight">Jonathan Haidt's social intuitionist model: moral judgements are made quickly and intuitively (System 1); the moral reasoning that follows is mostly post-hoc rationalisation. Joshua Greene: consequentialist judgements engage deliberative reasoning; deontological judgements arise from emotional reactions. The trolley/footbridge difference: pushing someone triggers an emotional alarm that abstract lever-pulling does not. This challenges the view that good moral reasoning is purely rational.</div>
         </div>
       </div>
     </div>
 
     <!-- Interactive: Moral reasoning styles self-check -->
-    <div class="spectrum-wrap u-mb-lg">
+    <div class="tool-panel u-mb-lg">
       <div class="mini-card-title">How do you weigh moral evidence? -- an interactive self-check</div>
-      <div class="slider-intro u-mt-sm">For each pair, drag toward the approach that feels most compelling to you as a way of settling moral disputes.</div>
+      <div class="intro-small u-mt-sm">For each pair, drag toward the approach that feels most compelling to you as a way of settling moral disputes.</div>
 
       <div id="moralcheck-items"></div>
 
@@ -477,29 +477,29 @@ const mod = modules.find((m) => m.id === 28)!;
     <!-- Key applied ethics concepts visual -->
     <div class="content-panel u-mb-lg">
       <div class="panel-title-spaced">Five essential concepts in contemporary ethics</div>
-      <div class="card-grid-auto">
+      <div class="card-grid-large">
         <div class="sub-card-roomy">
-          <div class="philosophy-label">The doctrine of double effect</div>
+          <div class="small-title">The doctrine of double effect</div>
           <div class="muted-copy-tight u-mt-sm">Originating in Aquinas, developed by modern just war theorists: it is sometimes permissible to cause a harm as a foreseen but unintended side-effect of bringing about a good result, even if it would be impermissible to cause that harm intentionally. Four conditions: (1) the action itself is not intrinsically wrong; (2) the agent intends the good effect; (3) the bad effect is foreseen but not intended; (4) there is proportionate reason. Used in: medical ethics (giving pain-relieving doses that may hasten death), military ethics (civilian casualties from legitimate military operations).</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">The separateness of persons</div>
+          <div class="small-title">The separateness of persons</div>
           <div class="muted-copy-tight u-mt-sm">Rawls's objection to utilitarianism: utilitarianism, in maximising aggregate welfare, treats society as if it were a single person and can justify sacrificing some individuals for others. But persons are distinct -- my suffering cannot be compensated by your happiness. Rights and justice constrain the maximisation of aggregate welfare precisely because they respect the fact that each person's life is their own, not fungible with others'. This is one of the most important arguments in 20th-century political philosophy.</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Effective altruism</div>
+          <div class="small-title">Effective altruism</div>
           <div class="muted-copy-tight u-mt-sm">Peter Singer's argument (Famine, Affluence, and Morality, 1972): if we can prevent something bad from happening without sacrificing anything of comparable moral importance, we ought to do it. Distance and proximity are morally irrelevant. If you can save a drowning child at the cost of ruining your expensive shoes, you should -- but the same logic applies to donating money to prevent deaths from malaria. EA as a movement: use evidence and reason to identify the most cost-effective ways to do good. Critiques: agent-partiality may be legitimate; demanding impartiality may be self-undermining; systemic change matters more than individual donations.</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Moral status and marginal cases</div>
+          <div class="small-title">Moral status and marginal cases</div>
           <div class="muted-copy-tight u-mt-sm">What determines whether a being has moral status (deserves moral consideration)? Candidates: rationality (Kant -- but this excludes infants and severely cognitively impaired humans), sentience/capacity for suffering (Singer -- includes animals), being human (speciesism? -- Singer's argument: if the same criterion that excludes animals also excludes some humans, it cannot be the morally relevant property). The argument from marginal cases: if severely cognitively impaired humans have full moral status, then whatever property grounds this must also apply to many non-human animals.</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Future generations and long-termism</div>
+          <div class="small-title">Future generations and long-termism</div>
           <div class="muted-copy-tight u-mt-sm">If there will be vastly more people in the future than there are now, the welfare of future people might swamp the welfare of present people in any calculation. Longtermism (William MacAskill, Toby Ord): reducing the risk of human extinction or permanent civilisational collapse is the most important moral priority -- even a small reduction in existential risk has enormous expected value. Objections: non-identity problem (Parfit) -- we cannot harm people by causing them to exist; the replaceability objection; demandingness. The philosophical foundations of AI safety concern are partly longtermist.</div>
         </div>
         <div class="sub-card-roomy">
-          <div class="philosophy-label">Care ethics</div>
+          <div class="small-title">Care ethics</div>
           <div class="muted-copy-tight u-mt-sm">Carol Gilligan (In a Different Voice, 1982) argued that Kohlberg's stages of moral development were biased toward a "justice orientation" (impartial rules, rights, universality) and against a "care orientation" (relationships, context, responsiveness to particular others). Nel Noddings developed care ethics into a full moral theory: the caring relationship, not universal principles, is the basic moral unit. Care ethics has been particularly influential in nursing ethics, feminist philosophy, and critiques of the welfare state as modelled on impersonal bureaucratic justice rather than particular care relationships.</div>
         </div>
       </div>
@@ -1014,9 +1014,9 @@ const mod = modules.find((m) => m.id === 28)!;
   const barsContainer = document.getElementById('phil-born-bars');
   bornBarsData.forEach(function(d) {
     barsContainer.innerHTML += `
-      <div class="influence-row">
-        <div class="influence-label">${d.label}</div>
-        <div class="influence-track">
+      <div class="value-row-loose">
+        <div class="scale-name">${d.label}</div>
+        <div class="track-medium">
           <div class="influence-fill" style="width:${d.pct}%; background:${d.col};">
             <span style="color:rgba(255,255,255,0.9);">${d.parent} · indep. ${d.century}</span>
           </div>

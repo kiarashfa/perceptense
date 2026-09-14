@@ -46,8 +46,6 @@
       border-radius: 50%;
       flex-shrink: 0;
     }
-    .star-info { flex: 1; min-width: 0; }
-    .star-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
     .star-sub  { font-size: 11px; color: var(--color-text-secondary); line-height: 1.4; margin-top: 1px; }
     .star-temp { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); white-space: nowrap; }
 
@@ -66,8 +64,6 @@
       min-width: 38px;
       padding-top: 1px;
     }
-    .tl-body { flex: 1; min-width: 0; }
-    .tl-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
 
     /* ── SpaceX launcher cards ── */
     .launcher-grid {
@@ -116,15 +112,6 @@
     }
     .xmod-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
     .xmod-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
-    .xmod-desc  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
-
-    /* ── Magnitude comparison bars ── */
-    .mag-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
     .mag-label {
       font-size: 11px;
       color: var(--color-text-secondary);
@@ -143,7 +130,6 @@
       min-width: 4px;
       transition: width 0.3s ease;
     }
-    .mag-val { font-size: 10px; font-weight: 600; white-space: nowrap; }
 
     /* ── Cosmic pie ── */
     .composition-legend {
@@ -152,50 +138,11 @@
       gap: 8px;
       margin-top: 10px;
     }
-    .comp-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      color: var(--color-text-secondary);
-    }
-    .comp-dot {
-      width: 10px; height: 10px;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
 
     /* misc */
     @media (max-width: 500px) {
       .launcher-grid { grid-template-columns: 1fr; }
     }
-
-/* === Shared-ready extracted styles === */
-
-.bg-indigo-900 {
-  background:#3C3489;
-}
-
-.bg-teal-500 {
-  background:var(--accent);
-}
-
-.muted-text-tiny {
-  font-size:10px;
-  color:var(--color-text-secondary);
-}
-
-.text-teal-500 {
-  color:var(--accent);
-}
-
-.text-white {
-  color:white;
-}
-
-.u-text-center {
-  text-align:center;
-}
 
 /* === Module-specific extracted styles === */
 
@@ -244,13 +191,6 @@
   font-size:12px;
   color:#633806;
   line-height:1.6;
-}
-
-.panel-heading {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:10px;
 }
 
 .space-row {
@@ -418,18 +358,6 @@
   background:#FF6030;
 }
 
-.showplanet-control {
-  font-size:11px;
-  padding:3px 9px;
-}
-
-.scale-heading {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:8px;
-}
-
 .planet-scale-row {
   display:flex;
   align-items:center;
@@ -533,12 +461,6 @@
   margin-bottom:12px;
 }
 
-.comparison-note {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-top:6px;
-}
-
 .outer-system-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
@@ -553,38 +475,10 @@
   margin-bottom:10px;
 }
 
-.moon-fact {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
-  text-align:center;
-}
-
-.moon-fact-value {
-  font-size:18px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin:0;
-}
-
 .moon-fact-note {
   font-size:11px;
   color:var(--color-text-secondary);
   margin:3px 0 0;
-}
-
-.phases-heading {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:6px;
-}
-
-.phases-row {
-  display:flex;
-  gap:4px;
-  flex-wrap:wrap;
-  margin-bottom:10px;
 }
 
 .phase-card {
@@ -665,15 +559,6 @@
   border-radius:50%;
   background:linear-gradient(to left, #2C2C2A 50%, #D3D1C7 50%);
   margin:0 auto 4px;
-}
-
-.moon-motion-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
 }
 
 .atm-stack {
@@ -788,12 +673,6 @@
   margin-bottom:10px;
 }
 
-.altitude-label {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  min-width:80px;
-}
-
 .dist-display {
   font-size:13px;
   color:var(--color-text-primary);
@@ -836,29 +715,9 @@
   width:8%;
 }
 
-.mag-label-aside {
-  font-size:10px;
-}
-
 .mag-bar-everything-else {
   background:#D85A30;
   width:2%;
-}
-
-.matter-note {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  line-height:1.5;
-}
-
-.calendar-intro {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-}
-
-.tl-item-style {
-  border-bottom:none;
 }
 
 .spacex-intro-card {
@@ -906,8 +765,6 @@
   padding-top: 1px;
   flex-shrink: 0;
 }
-.neighbor-body { flex: 1; min-width: 0; }
-.neighbor-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
 
 /* ── Black hole anatomy layers ── */
 .bh-layer {
@@ -948,7 +805,6 @@
   flex-wrap: wrap;
 }
 .wh-icon { font-size: 20px; flex-shrink: 0; padding-top: 1px; }
-.wh-body { flex: 1; min-width: 0; }
 .wh-title { font-size: 12px; font-weight: 600; margin-bottom: 3px; }
 .wh-desc  { font-size: 11px; line-height: 1.5; }
 
@@ -970,33 +826,15 @@
   position: relative;
   margin: 10px 0 6px;
 }
-.mw-tick {
-  position: absolute;
-  top: 12px;
-  transform: translateX(-50%);
-  font-size: 10px;
-  color: var(--color-text-secondary);
-  white-space: nowrap;
-}
 
 /* ── Exoplanet finder tabs ── */
 #exo-tabs { margin-bottom: 10px; }
 #exo-panel { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; }
-
-/* ── BH type cards ── */
-.bhtype-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 8px;
-  margin-bottom: 10px;
-}
 .bhtype-card {
   background: var(--color-background-secondary);
   border-radius: var(--border-radius-md);
   padding: 10px 12px;
   border-left: 3px solid #7B3FD8;
 }
-.bhtype-name { font-size: 12px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 3px; }
 .bhtype-mass { font-size: 11px; color: #7B3FD8; font-weight: 500; margin-bottom: 4px; }
-.bhtype-desc { font-size: 11px; color: var(--color-text-secondary); line-height: 1.4; }
   

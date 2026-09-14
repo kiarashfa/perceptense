@@ -26,7 +26,7 @@ const mod = modules.find((m) => m.id === 22)!;
       <div class="sleep-label">A typical 8-hour night contains 4–5 complete cycles</div>
       <div class="sleep-text">Each cycle lasts roughly 90 minutes. The composition changes across the night: early cycles are dominated by deep sleep (N3); later cycles contain more REM. This is why the last 2 hours of sleep are disproportionately rich in dreaming — and why cutting sleep short costs you mostly REM, not deep sleep.</div>
 
-      <div class="sleep-row">
+      <div class="stack-spaced">
         <div class="cycle-caption">A single 90-minute cycle — stages in order</div>
         <div class="cycle-bar">
           <div class="cycle-block-n1"><span class="stage-label-n1">N1 (5 min)</span></div>
@@ -45,7 +45,7 @@ const mod = modules.find((m) => m.id === 22)!;
 
       <div class="cycle-shift-panel">
         <div class="cycle-shift-title">How the cycle composition shifts across a full night</div>
-        <div class="cycle-shift-list">
+        <div class="v-stack">
           <div>
             <div class="cycle-shift-label">Cycle 1 (~11pm–12:30am)</div>
             <div class="cycle-shift-bar">
@@ -122,29 +122,29 @@ const mod = modules.find((m) => m.id === 22)!;
 
     <!-- N1 -->
     <div class="stage-panel-n1">
-      <div class="sh"><span class="sname text-blue-950">Stage N1 — light sleep / hypnagogic state</span><span class="sbadge sbadge-style">1–7 min, ~5% of sleep</span></div>
+      <div class="header-row"><span class="text-strong-medium u-text-hex-042c53">Stage N1 — light sleep / hypnagogic state</span><span class="pill-badge sbadge-style">1–7 min, ~5% of sleep</span></div>
       <div class="sgrid">
-        <div class="sbox sbox-style"><p class="sl text-blue-900">Brain waves</p><p class="sv text-blue-950">Alpha waves slow to theta waves. Easily awakened — "not really asleep yet."</p></div>
-        <div class="sbox sbox-style"><p class="sl text-blue-900">What happens</p><p class="sv text-blue-950">Muscle tone decreases. Eyes move slowly. Hypnic jerks (that sudden falling sensation) are common — a muscle twitch as the body releases tension.</p></div>
-        <div class="sbox sbox-style"><p class="sl text-blue-900">Hypnagogia</p><p class="sv text-blue-950">The border state between waking and sleep. Vivid, dreamlike images, sounds, or sensations that are not yet full dreams. Salvador Dalí deliberately induced this state for creative inspiration.</p></div>
+        <div class="sbox sbox-style"><p class="sl text-blue-900">Brain waves</p><p class="sv u-text-hex-042c53">Alpha waves slow to theta waves. Easily awakened — "not really asleep yet."</p></div>
+        <div class="sbox sbox-style"><p class="sl text-blue-900">What happens</p><p class="sv u-text-hex-042c53">Muscle tone decreases. Eyes move slowly. Hypnic jerks (that sudden falling sensation) are common — a muscle twitch as the body releases tension.</p></div>
+        <div class="sbox sbox-style"><p class="sl text-blue-900">Hypnagogia</p><p class="sv u-text-hex-042c53">The border state between waking and sleep. Vivid, dreamlike images, sounds, or sensations that are not yet full dreams. Salvador Dalí deliberately induced this state for creative inspiration.</p></div>
       </div>
       <p class="snote text-blue-700">N1 is the twilight zone of consciousness. Woken from N1, most people deny having been asleep at all. This is why "I was just resting my eyes" is often literally true — the person was in N1, barely unconscious.</p>
     </div>
 
     <!-- N2 -->
     <div class="stage-panel-n2">
-      <div class="sh"><span class="sname text-indigo-950">Stage N2 — true sleep</span><span class="sbadge sbadge-n2">20–30 min per cycle, ~45–50% of total sleep</span></div>
+      <div class="header-row"><span class="text-strong-medium u-text-hex-26215c">Stage N2 — true sleep</span><span class="pill-badge sbadge-n2">20–30 min per cycle, ~45–50% of total sleep</span></div>
       <div class="sgrid">
-        <div class="sbox sbox-n2"><p class="sl text-indigo-900">Brain waves</p><p class="sv text-indigo-950">Sleep spindles (bursts of 12–14 Hz oscillations, 0.5–2 sec) and K-complexes (sharp negative waves). Both are unique to N2.</p></div>
-        <div class="sbox sbox-n2"><p class="sl text-indigo-900">What happens</p><p class="sv text-indigo-950">Heart rate and body temperature drop. Sensory processing significantly reduced. Sleep spindles are thought to be the brain "gating" sensory input to maintain sleep.</p></div>
-        <div class="sbox sbox-n2"><p class="sl text-indigo-900">Memory function</p><p class="sv text-indigo-950">Sleep spindles correlate strongly with motor memory consolidation. Learning a new physical skill (playing piano, typing) improves after N2-rich sleep.</p></div>
+        <div class="sbox sbox-n2"><p class="sl text-indigo-900">Brain waves</p><p class="sv u-text-hex-26215c">Sleep spindles (bursts of 12–14 Hz oscillations, 0.5–2 sec) and K-complexes (sharp negative waves). Both are unique to N2.</p></div>
+        <div class="sbox sbox-n2"><p class="sl text-indigo-900">What happens</p><p class="sv u-text-hex-26215c">Heart rate and body temperature drop. Sensory processing significantly reduced. Sleep spindles are thought to be the brain "gating" sensory input to maintain sleep.</p></div>
+        <div class="sbox sbox-n2"><p class="sl text-indigo-900">Memory function</p><p class="sv u-text-hex-26215c">Sleep spindles correlate strongly with motor memory consolidation. Learning a new physical skill (playing piano, typing) improves after N2-rich sleep.</p></div>
       </div>
       <p class="snote text-indigo-700">A 20-minute "power nap" that stays in N2 (not reaching N3) leaves you refreshed, not groggy. The groggy nap problem is when you enter N3 and wake mid-cycle. The 20-minute cap is the practical application of this.</p>
     </div>
 
     <!-- N3 -->
     <div class="stage-panel-n3">
-      <div class="sh"><span class="sname text-indigo-200">Stage N3 — deep sleep / slow-wave sleep (SWS)</span><span class="sbadge sbadge-n3">20–40 min early, near zero later, ~20% of total</span></div>
+      <div class="header-row"><span class="text-strong-medium text-indigo-200">Stage N3 — deep sleep / slow-wave sleep (SWS)</span><span class="pill-badge sbadge-n3">20–40 min early, near zero later, ~20% of total</span></div>
       <div class="sgrid">
         <div class="sbox bg-indigo-900"><p class="sl sl-n3">Brain waves</p><p class="sv text-indigo-200">Delta waves — the slowest, highest-amplitude brain waves. Less than 1 Hz. The brain is maximally synchronised and "quiet."</p></div>
         <div class="sbox bg-indigo-900"><p class="sl sl-n3">Physical repair</p><p class="sv text-indigo-200">Growth hormone (GH) is secreted in its largest pulse of the day. Tissue repair, muscle growth, and immune strengthening all peak here. The body physically heals itself.</p></div>
@@ -155,7 +155,7 @@ const mod = modules.find((m) => m.id === 22)!;
 
     <!-- REM -->
     <div class="stage-panel-rem">
-      <div class="sh"><span class="sname sname-rem">REM — Rapid Eye Movement sleep</span><span class="sbadge sbadge-rem">10–60 min per cycle, ~20–25% of total — dreams here</span></div>
+      <div class="header-row"><span class="text-strong-medium sname-rem">REM — Rapid Eye Movement sleep</span><span class="pill-badge sbadge-rem">10–60 min per cycle, ~20–25% of total — dreams here</span></div>
       <div class="sgrid">
         <div class="sbox sbox-rem"><p class="sl text-hex-72243e">Brain waves</p><p class="sv sname-rem">Almost identical to waking brain — fast, low-amplitude, desynchronised. The brain is as active as when awake. Eyes dart rapidly (hence the name). Body is in voluntary muscle paralysis (atonia).</p></div>
         <div class="sbox sbox-rem"><p class="sl text-hex-72243e">Dreaming</p><p class="sv sname-rem">90–95% of vivid, narrative dreams occur in REM. Muscle atonia prevents acting out dreams. REM sleep behaviour disorder: atonia fails — people physically act out their dreams.</p></div>
@@ -257,13 +257,13 @@ const mod = modules.find((m) => m.id === 22)!;
 
     <div class="sleep-panel">
       <div class="hormone-timeline-title">Interactive hormone timeline — drag to explore the 24-hour cycle</div>
-      <div class="hormone-slider-row">
+      <div class="range-row">
         <label class="hormone-slider-label">Time of day:</label>
         <input class="u-flex-1" type="range" id="u-flex-1" min="0" max="23" value="23" step="1">
         <span class="time-out" id="time-out"></span>
       </div>
       <div class="hormone-display" id="hormone-display"></div>
-      <div class="sleep-grid">
+      <div class="tile-grid">
         <div class="hormone-card">
           <div class="hormone-name">Melatonin</div>
           <div class="hormone-desc">The "darkness hormone." Produced by the pineal gland when light fades (~2 hours before natural sleep time). Tells the body it's night. Does not cause sleep — signals its appropriateness. Peaks ~2–3am, fades as light returns. Suppressed by blue light (phone screens) — equivalent to a miniature sunrise signal.</div>
@@ -287,7 +287,7 @@ const mod = modules.find((m) => m.id === 22)!;
     <div class="sleep-panel">
       <div class="sleep-label">Caffeine half-life calculator — when is it safe to drink coffee?</div>
       <div class="caffeine-intro">Caffeine's half-life is ~5–6 hours. If you drink coffee at 3pm, about 25% remains in your system at midnight — blocking adenosine receptors and degrading sleep quality even if you fall asleep normally.</div>
-      <div class="caffeine-inputs">
+      <div class="input-row-spaced">
         <div>
           <div class="caffeine-field-label">Coffee time</div>
           <input class="caf-time" type="time" id="caf-time" value="14:00">
@@ -319,11 +319,11 @@ const mod = modules.find((m) => m.id === 22)!;
 
     <div class="sleep-panel">
       <div class="button-row-spaced">
-        <button class="window-button" onclick="window.showDepriv('mild')"   >Mild (6 hrs/night)</button>
-        <button class="window-button" onclick="window.showDepriv('24')"     >24 hours awake</button>
-        <button class="window-button" onclick="window.showDepriv('48')"     >48 hours awake</button>
-        <button class="window-button" onclick="window.showDepriv('72')"     >72 hours awake</button>
-        <button class="window-button" onclick="window.showDepriv('chronic')">Chronic insufficiency</button>
+        <button class="pill-button-wide" onclick="window.showDepriv('mild')"   >Mild (6 hrs/night)</button>
+        <button class="pill-button-wide" onclick="window.showDepriv('24')"     >24 hours awake</button>
+        <button class="pill-button-wide" onclick="window.showDepriv('48')"     >48 hours awake</button>
+        <button class="pill-button-wide" onclick="window.showDepriv('72')"     >72 hours awake</button>
+        <button class="pill-button-wide" onclick="window.showDepriv('chronic')">Chronic insufficiency</button>
       </div>
       <div class="depriv-display" id="depriv-display"></div>
     </div>
@@ -364,7 +364,7 @@ const mod = modules.find((m) => m.id === 22)!;
     ════════════════════════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-chronotypes-and-daydreaming">Part F · chronotypes and daydreaming</h2>
 
-    <div class="chronotype-grid">
+    <div class="grid-auto-even">
       <div class="card">
         <p class="clabel">Chronotype — your natural sleep timing</p>
         <p class="cval">Partly genetic, age-dependent</p>
@@ -438,7 +438,7 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-g-sleep-hygiene-the-evidence-behind-each-rule">Part G · sleep hygiene — the evidence behind each rule</h2>
 
     <div class="sleep-panel">
-      <div class="checklist-header">
+      <div class="header-row-split-spaced">
         <div class="checklist-title">Sleep hygiene checklist — tick what you already do</div>
         <div>
           <span class="hygiene-score" id="hygiene-score">0</span>
@@ -485,10 +485,10 @@ const mod = modules.find((m) => m.id === 22)!;
     <div class="sleep-panel">
       <div class="tool-title">Interactive nap guide — choose a nap type</div>
       <div class="button-row-compact">
-        <button class="window-button" onclick="window.showNap('power')">Power nap (10–20 min)</button>
-        <button class="window-button" onclick="window.showNap('full')" >Full cycle nap (90 min)</button>
-        <button class="window-button" onclick="window.showNap('nappuccino')">The nappuccino</button>
-        <button class="window-button" onclick="window.showNap('avoid')">When not to nap</button>
+        <button class="pill-button-wide" onclick="window.showNap('power')">Power nap (10–20 min)</button>
+        <button class="pill-button-wide" onclick="window.showNap('full')" >Full cycle nap (90 min)</button>
+        <button class="pill-button-wide" onclick="window.showNap('nappuccino')">The nappuccino</button>
+        <button class="pill-button-wide" onclick="window.showNap('avoid')">When not to nap</button>
       </div>
       <div class="nap-display" id="nap-display">Select a nap type above to learn about it.</div>
     </div>
@@ -792,7 +792,7 @@ const mod = modules.find((m) => m.id === 22)!;
           const col = pctRem > 50 ? '#D85A30' : pctRem > 30 ? '#C8952A' : pctRem > 15 ? '#97c459' : 'var(--accent)';
           const isBedtime = Math.abs(absMin - (bh * 60 + bm + (bh * 60 + bm <= cafMins ? 1440 : 0))) < 70;
           const marker = isBedtime ? ' ← your bedtime' : '';
-          barsHtml += `<div class="caf-row">
+          barsHtml += `<div class="control-row-compact">
             <span class="caf-label">${timeStr} (+${h}h)${marker}</span>
             <div class="caf-bar-track"><div class="caf-bar-fill" style="width:${barWidth}%; background:${col};"></div></div>
             <span style="font-size:11px; color:#666; min-width:65px; text-align:right;">${Math.round(rem)} mg (${Math.round(pctRem)}%)</span>

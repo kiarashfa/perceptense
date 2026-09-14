@@ -1,13 +1,6 @@
-
-    /* Timeline bars */
-    .timeline-row { display: flex; align-items: center; gap: 0; margin-bottom: 4px; }
     .tl-label { font-size: 12px; color: var(--color-text-secondary); width: 120px; flex-shrink: 0; text-align: right; padding-right: 10px; }
     .tl-bar { height: 18px; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; }
-
-    /* Region population chart */
-    .region-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .region-label { font-size: 12px; color: var(--color-text-secondary); width: 110px; flex-shrink: 0; text-align: right; }
-    .region-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 20px; overflow: hidden; position: relative; }
     .region-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; transition: width 0.6s ease; }
 
     /* Dot grid */
@@ -18,16 +11,7 @@
     .fertil-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 10px; }
     .fertil-country { font-size: 11px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
     .fertil-rate { font-size: 18px; font-weight: 500; }
-    .fertil-label { font-size: 10px; color: var(--color-text-secondary); }
-
-    /* Life expectancy bars */
-    .life-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
-    .life-label { font-size: 12px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; text-align: right; }
-    .life-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 20px; overflow: hidden; }
     .life-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; }
-
-    /* Interactive calculator */
-    .calc-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
     .calc-label { font-size: 13px; color: var(--color-text-secondary); min-width: 160px; }
     .calc-result { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
 
@@ -40,17 +24,8 @@
     .milestone-item:last-child { border-bottom: none; }
     .milestone-year { font-size: 13px; font-weight: 600; color: var(--accent); width: 46px; flex-shrink: 0; }
     .milestone-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.45; }
-    .milestone-sub  { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
-
-    /* Megacity list */
-    .megacity-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
     .mc-rank { font-size: 12px; font-weight: 600; color: var(--color-text-tertiary); width: 22px; text-align: right; flex-shrink: 0; }
-    .mc-label { font-size: 12px; color: var(--color-text-secondary); width: 130px; flex-shrink: 0; }
-    .mc-track { flex: 1; background: var(--color-background-secondary); border-radius: 3px; height: 18px; overflow: hidden; }
     .mc-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 7px; }
-
-    /* Explorer tab buttons */
-    .tab-btns { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
     .tab-btn { font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: none; color: var(--color-text-secondary); cursor: pointer; transition: all 0.12s; font-family: var(--font-sans); }
     .tab-btn:hover { background: var(--color-background-primary); color: var(--color-text-primary); }
     .tab-btn.active { background: var(--color-text-primary); color: var(--color-background-primary); border-color: var(--color-text-primary); }
@@ -68,14 +43,6 @@
   color:var(--color-text-primary);
 }
 
-.text-blue-900 {
-  color:#0C447C;
-}
-
-.text-green-800 {
-  color:#27500A;
-}
-
 .text-hex-ef9f27 {
   color:#ef9f27;
 }
@@ -90,14 +57,6 @@
 
 .text-white {
   color:#fff;
-}
-
-.u-w-100px {
-  width:100px;
-}
-
-.u-w-130px {
-  width:130px;
 }
 
 .tl-bar-style {
@@ -136,23 +95,10 @@
   margin:10px 0 0;
 }
 
-.live-counter-title {
-  font-size:13px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:12px;
-}
-
 .demographics-grid {
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:10px;
-}
-
-.counter-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:4px;
 }
 
 .births-count {
@@ -171,23 +117,6 @@
   font-size:20px;
   font-weight:500;
   color:var(--color-text-info);
-}
-
-.rate-note {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-top:8px;
-}
-
-.card-spaced {
-  margin-bottom:1.2rem;
-}
-
-.card-heading {
-  font-size:13px;
-  font-weight:500;
-  margin-bottom:12px;
-  color:var(--color-text-primary);
 }
 
 .region-fill-style {
@@ -275,12 +204,6 @@
   background:#C0DD97;
 }
 
-.chart-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin:0 0 10px;
-}
-
 .fertil-rate-green {
   color:#97C459;
 }
@@ -294,14 +217,6 @@
   gap:16px;
   flex-wrap:wrap;
   margin-top:10px;
-}
-
-.dot-legend-item {
-  display:flex;
-  align-items:center;
-  gap:6px;
-  font-size:12px;
-  color:var(--color-text-secondary);
 }
 
 .demographics-media {

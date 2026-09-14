@@ -39,28 +39,6 @@
     @media (max-width: 560px) {
       .panel-grid { grid-template-columns: 1fr; }
     }
-
-    /* ── influence meter ── */
-    .influence-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 7px;
-    }
-    .influence-label {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      width: 130px;
-      flex-shrink: 0;
-      text-align: right;
-    }
-    .influence-track {
-      flex: 1;
-      height: 18px;
-      background: var(--color-background-secondary);
-      border-radius: 3px;
-      overflow: hidden;
-    }
     .influence-fill {
       height: 100%;
       border-radius: 3px;
@@ -71,15 +49,6 @@
       font-weight: 500;
       color: #fff;
       transition: width 0.6s ease;
-    }
-
-    /* ── ethics spectrum slider ── */
-    .spectrum-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
     }
 
     /* ── comparison table ── */
@@ -106,36 +75,11 @@
     }
     .compare-table tr:last-child td { border-bottom: none; }
     .compare-table tr:hover td { background: var(--color-background-secondary); }
-
-    /* ── logical fallacy cards ── */
-    .fallacy-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 8px;
-      margin-bottom: 1rem;
-    }
-    .fallacy-card {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-md);
-      padding: 10px 12px;
-    }
-    .fallacy-name {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: 3px;
-    }
     .fallacy-latin {
       font-size: 10px;
       font-style: italic;
       color: var(--color-text-tertiary);
       margin-bottom: 5px;
-    }
-    .fallacy-def {
-      font-size: 11px;
-      color: var(--color-text-secondary);
-      line-height: 1.5;
     }
     .fallacy-example {
       font-size: 11px;
@@ -160,14 +104,6 @@
       display: inline-block;
     }
 
-.u-text-center {
-  text-align:center;
-}
-
-.u-text-right {
-  text-align:right;
-}
-
 /* === Module-specific extracted styles === */
 
 .philosophy-panel {
@@ -179,41 +115,6 @@
   line-height:1.7;
   margin-bottom:10px;
   font-style:italic;
-}
-
-.philosophy-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:8px;
-}
-
-.philosophy-label {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:3px;
-}
-
-.disciplines-kicker {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-  text-transform:uppercase;
-  letter-spacing:0.06em;
-}
-
-.philosophy-text {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:6px;
-}
-
-.card-grid-auto {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:10px;
-  margin-bottom:1rem;
 }
 
 .branch-panel-metaphysics {
@@ -378,23 +279,9 @@
   line-height:1.5;
 }
 
-.slider-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
-}
-
 .ethicsslider {
   width:100%;
   margin-bottom:6px;
-}
-
-.philosophy-row {
-  display:flex;
-  justify-content:space-between;
-  font-size:10px;
-  color:var(--color-text-tertiary);
-  margin-bottom:10px;
 }
 
 .ethics-explain {
@@ -406,30 +293,8 @@
   line-height:1.6;
 }
 
-.context-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 13px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-  margin-bottom:10px;
-}
-
-.fallacy-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-  line-height:1.6;
-}
-
 .sec-style {
   margin-top:1.5rem;
-}
-
-.philosophy-spacing {
-  overflow-x:auto;
-  margin-bottom:1rem;
 }
 
 .philosophy-media {
@@ -442,21 +307,6 @@
 
 .col-wide {
   width:18%;
-}
-
-.school-subname {
-  color:var(--color-text-tertiary);
-  font-size:11px;
-}
-
-/* ── philosopher timeline ── */
-.phil-timeline-wrap {
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  padding: 14px 16px;
-  margin-bottom: 1rem;
-  overflow-x: auto;
 }
 .phil-timeline-svg {
   display: block;
@@ -476,15 +326,6 @@
   line-height: 1.55;
   min-height: 44px;
   transition: opacity 0.15s;
-}
-
-/* ── ethical scenario quiz ── */
-.quiz-wrap {
-  background: var(--color-background-primary);
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-lg);
-  padding: 14px 16px;
-  margin-bottom: 1rem;
 }
 .quiz-progress {
   display: flex;

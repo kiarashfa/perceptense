@@ -75,11 +75,6 @@
       min-width: 48px;
       padding-top: 1px;
     }
-    .timeline-text {
-      font-size: 12px;
-      color: var(--color-text-primary);
-      line-height: 1.55;
-    }
 
     /* Comparison table */
     .comp-table {
@@ -115,35 +110,6 @@
     @media (max-width: 560px) {
       .twoaxis-grid { grid-template-columns: 1fr; }
     }
-
-    /* Country law map legend */
-    .law-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-    .law-swatch {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 11px;
-      color: var(--color-text-secondary);
-    }
-    .law-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    /* Dot grid for population viz */
-    .dot-grid-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3px;
-      margin: 8px 0;
-    }
     .dot-pop {
       width: 9px;
       height: 9px;
@@ -157,20 +123,6 @@
       color: var(--color-background-primary);
       border-color: var(--color-text-primary);
     }
-
-/* === Shared-ready extracted styles === */
-
-.bg-green-800 {
-  background:#27500A;
-}
-
-.bg-indigo-900 {
-  background:#3C3489;
-}
-
-.bg-teal-500 {
-  background:var(--accent);
-}
 
 /* === Module-specific extracted styles === */
 
@@ -252,15 +204,6 @@
   color:#0F6E56;
 }
 
-.key-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-}
-
 .axes-heading {
   font-size:12px;
   font-weight:500;
@@ -312,11 +255,6 @@
   min-width:480px;
   height:auto;
   display:block;
-}
-
-.showgender-control {
-  font-size:12px;
-  padding:3px 10px;
 }
 
 .gender-card {
@@ -421,19 +359,6 @@
   line-height:1.3;
 }
 
-.prevalence-card {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
-  text-align:center;
-}
-
-.stat-figure {
-  font-size:20px;
-  font-weight:500;
-  color:var(--color-text-primary);
-}
-
 .prevalence-label {
   font-size:11px;
   color:var(--color-text-secondary);
@@ -464,27 +389,11 @@
   background:#D4537E;
 }
 
-.measurement-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-  margin-top:10px;
-}
-
 .generation-chart {
   width:100%;
   height:auto;
   display:block;
   margin-bottom:8px;
-}
-
-.gender-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
 }
 
 .trend-note {
@@ -510,12 +419,6 @@
   text-transform:uppercase;
   letter-spacing:0.06em;
   margin-bottom:6px;
-}
-
-.sexaxisbtns {
-  display:flex;
-  flex-direction:column;
-  gap:5px;
 }
 
 .setaxis-control {
@@ -593,10 +496,5 @@
   text-transform:uppercase;
   letter-spacing:0.06em;
   margin-bottom:3px;
-}
-.sti-cell-val {
-  font-size:12px;
-  color:var(--color-text-primary);
-  line-height:1.5;
 }
   

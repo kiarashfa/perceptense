@@ -49,15 +49,15 @@ const mod = modules.find((m) => m.id === 25)!;
 
     <div class="grid-3">
       <div class="sub-card">
-        <div class="weather-label">The engine</div>
+        <div class="small-title">The engine</div>
         <div class="muted-copy-tight">The Sun heats the Earth's surface unevenly (equator more than poles, land more than sea). This creates temperature differences → density differences → pressure differences → wind. Weather is the atmosphere attempting to redistribute this energy imbalance.</div>
       </div>
       <div class="sub-card">
-        <div class="weather-label">The water cycle's role</div>
+        <div class="small-title">The water cycle's role</div>
         <div class="muted-copy-tight">Water evaporates (absorbs energy) → rises (cools) → condenses into clouds (releases latent heat — this powers storms) → falls as precipitation → evaporates again. This cycle moves enormous amounts of energy — more than direct convection alone.</div>
       </div>
       <div class="sub-card">
-        <div class="weather-label">The Coriolis effect</div>
+        <div class="small-title">The Coriolis effect</div>
         <div class="muted-copy-tight">Earth's rotation deflects moving air to the right in the N. Hemisphere, left in the S. Hemisphere. Low-pressure systems spin anticlockwise in the N. Hemisphere. The effect is zero at the equator — why hurricanes can't form within ~5° of it.</div>
       </div>
     </div>
@@ -74,7 +74,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <!-- markers injected by JS -->
         <div id="pressure-markers"></div>
       </div>
-      <div class="pressure-label-row">
+      <div class="axis-ends-tight">
         <span>880 hPa<br><span class="text-red-900">Super-typhoon</span></span>
         <span class="u-text-center">960 hPa<br><span class="text-orange-900">Severe storm</span></span>
         <span class="u-text-center">1013 hPa<br><span>Standard sea level</span></span>
@@ -94,7 +94,7 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="high-pressure-panel">
         <div class="high-pressure-title">High pressure (anticyclone)</div>
         <div class="weather-text">Air sinks from above → warms as it descends (compression) → reduces relative humidity → clouds evaporate → fair weather. Winds spiral outward (clockwise in N. Hemisphere).</div>
-        <div class="weather-row">
+        <div class="stack-tight">
           <div class="high-pressure-chip">Typical weather: clear skies, sunshine, light winds</div>
           <div class="high-pressure-chip">In summer: heatwaves (blocking high pressure traps warm air)</div>
           <div class="high-pressure-chip">In winter: cold, frost, fog (clear skies = rapid radiative cooling)</div>
@@ -104,7 +104,7 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="low-pressure-panel">
         <div class="low-pressure-title">Low pressure (cyclone / depression)</div>
         <div class="low-pressure-desc">Air rises → cools as it ascends → relative humidity increases → water vapour condenses → clouds form → precipitation. Winds spiral inward (anticlockwise in N. Hemisphere).</div>
-        <div class="weather-row">
+        <div class="stack-tight">
           <div class="low-pressure-chip">Typical weather: cloud, rain, strong winds</div>
           <div class="low-pressure-chip">Deep lows: storms, gales, heavy rain</div>
           <div class="low-pressure-chip">Tropical cyclones: extreme low pressure, catastrophic winds</div>
@@ -118,7 +118,7 @@ const mod = modules.find((m) => m.id === 25)!;
          ══════════════════════════════════════════ -->
     <h2 class="sec" id="part-c-fronts-where-weather-changes-happen">Part C · fronts — where weather changes happen</h2>
 
-    <div class="grid-4">
+    <div class="card-grid-small">
       <div class="card">
         <p class="clabel">Cold front</p>
         <p class="cval cval-style">Cold air undercuts warm air — sharp, fast</p>
@@ -156,8 +156,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-blue-900">HIGH<br>6–12 km</div>
         <div>
-          <div class="cloud-name">Cirrus (Ci)</div>
-          <div class="cloud-desc">Wispy, hair-like streaks of ice crystals. The first sign of an approaching warm front. Appear like white brushstrokes on blue. "Mare's tails" point in the direction of upper winds.</div>
+          <div class="row-title">Cirrus (Ci)</div>
+          <div class="desc-relaxed">Wispy, hair-like streaks of ice crystals. The first sign of an approaching warm front. Appear like white brushstrokes on blue. "Mare's tails" point in the direction of upper winds.</div>
           <span class="cloud-badge p-blue">Fair now · front 24h+ away</span>
         </div>
       </div>
@@ -165,8 +165,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-blue-900">HIGH<br>6–12 km</div>
         <div>
-          <div class="cloud-name">Cirrostratus (Cs)</div>
-          <div class="cloud-desc">Thin, milky veil covering the whole sky. Halos around the Sun or Moon form here (22° ring from ice crystal refraction). Sky looks milky-white. The halo is a reliable indicator of approaching precipitation.</div>
+          <div class="row-title">Cirrostratus (Cs)</div>
+          <div class="desc-relaxed">Thin, milky veil covering the whole sky. Halos around the Sun or Moon form here (22° ring from ice crystal refraction). Sky looks milky-white. The halo is a reliable indicator of approaching precipitation.</div>
           <span class="cloud-badge p-blue">Halo · rain within 12–24 h</span>
         </div>
       </div>
@@ -174,8 +174,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-blue-900">HIGH<br>6–12 km</div>
         <div>
-          <div class="cloud-name">Cirrocumulus (Cc)</div>
-          <div class="cloud-desc">Small, white puffs in rows or ripples ("mackerel sky"). Pure white — no grey. Rare. Indicates high-altitude instability. Traditional sailors' warning: "mackerel sky and mares' tails make tall ships carry low sails."</div>
+          <div class="row-title">Cirrocumulus (Cc)</div>
+          <div class="desc-relaxed">Small, white puffs in rows or ripples ("mackerel sky"). Pure white — no grey. Rare. Indicates high-altitude instability. Traditional sailors' warning: "mackerel sky and mares' tails make tall ships carry low sails."</div>
           <span class="cloud-badge p-blue">Short-lived · possible deterioration</span>
         </div>
       </div>
@@ -183,8 +183,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-green-900">MID<br>2–6 km</div>
         <div>
-          <div class="cloud-name">Altostratus (As)</div>
-          <div class="cloud-desc">Grey or blue-grey sheet covering the whole sky. The Sun appears as through ground glass — no halo (water droplets, not ice crystals). Follows cirrostratus. Steady, continuous rain imminent.</div>
+          <div class="row-title">Altostratus (As)</div>
+          <div class="desc-relaxed">Grey or blue-grey sheet covering the whole sky. The Sun appears as through ground glass — no halo (water droplets, not ice crystals). Follows cirrostratus. Steady, continuous rain imminent.</div>
           <span class="cloud-badge p-teal">Continuous rain soon</span>
         </div>
       </div>
@@ -192,8 +192,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-green-900">MID<br>2–6 km</div>
         <div>
-          <div class="cloud-name">Altocumulus (Ac)</div>
-          <div class="cloud-desc">White and grey patches or rolls, larger than cirrocumulus. Often shows iridescence (rainbow colours at edges from diffraction). "Altocumulus castellanus" — turret-shaped tops — signals instability and possible afternoon thunderstorms.</div>
+          <div class="row-title">Altocumulus (Ac)</div>
+          <div class="desc-relaxed">White and grey patches or rolls, larger than cirrocumulus. Often shows iridescence (rainbow colours at edges from diffraction). "Altocumulus castellanus" — turret-shaped tops — signals instability and possible afternoon thunderstorms.</div>
           <span class="cloud-badge p-teal">Variable · possible afternoon storms</span>
         </div>
       </div>
@@ -201,8 +201,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-amber-900">LOW<br>0–2 km</div>
         <div>
-          <div class="cloud-name">Stratus (St)</div>
-          <div class="cloud-desc">Uniform grey layer, like fog that isn't quite at the surface. May produce drizzle but rarely heavy rain. Creates grey, overcast days without dramatic weather. Fog lifting off the ground becomes stratus.</div>
+          <div class="row-title">Stratus (St)</div>
+          <div class="desc-relaxed">Uniform grey layer, like fog that isn't quite at the surface. May produce drizzle but rarely heavy rain. Creates grey, overcast days without dramatic weather. Fog lifting off the ground becomes stratus.</div>
           <span class="cloud-badge p-amber">Drizzle possible · dull overcast</span>
         </div>
       </div>
@@ -210,8 +210,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-amber-900">LOW<br>0–2 km</div>
         <div>
-          <div class="cloud-name">Stratocumulus (Sc)</div>
-          <div class="cloud-desc">The most common cloud type globally. Low, grey, lumpy rolls or patches with some blue sky between. Usually produces little or no rain. Covers vast areas under anticyclones. The "grey British sky" is typically stratocumulus.</div>
+          <div class="row-title">Stratocumulus (Sc)</div>
+          <div class="desc-relaxed">The most common cloud type globally. Low, grey, lumpy rolls or patches with some blue sky between. Usually produces little or no rain. Covers vast areas under anticyclones. The "grey British sky" is typically stratocumulus.</div>
           <span class="cloud-badge p-amber">Most common cloud · usually dry</span>
         </div>
       </div>
@@ -219,8 +219,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-amber-900">LOW<br>0–2 km</div>
         <div>
-          <div class="cloud-name">Nimbostratus (Ns)</div>
-          <div class="cloud-desc">Dark, thick grey layer — the "rain cloud." Produces continuous, steady precipitation (rain, snow, or sleet). So thick it blocks sunlight completely. Typically 3–4 km deep. Associated with warm fronts.</div>
+          <div class="row-title">Nimbostratus (Ns)</div>
+          <div class="desc-relaxed">Dark, thick grey layer — the "rain cloud." Produces continuous, steady precipitation (rain, snow, or sleet). So thick it blocks sunlight completely. Typically 3–4 km deep. Associated with warm fronts.</div>
           <span class="cloud-badge p-red">Continuous rain or snow</span>
         </div>
       </div>
@@ -228,8 +228,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-orange-900">VERT.<br>500m–12km</div>
         <div>
-          <div class="cloud-name">Cumulus (Cu)</div>
-          <div class="cloud-desc">Flat base, cauliflower top. The "fair weather" cloud when small ("cumulus humilis"). When they grow tall ("cumulus congestus"), they signal increasing instability and may develop into cumulonimbus. Key sign: if cumulus keep growing through the afternoon, take shelter.</div>
+          <div class="row-title">Cumulus (Cu)</div>
+          <div class="desc-relaxed">Flat base, cauliflower top. The "fair weather" cloud when small ("cumulus humilis"). When they grow tall ("cumulus congestus"), they signal increasing instability and may develop into cumulonimbus. Key sign: if cumulus keep growing through the afternoon, take shelter.</div>
           <span class="cloud-badge p-coral">Fair if small · watch if growing</span>
         </div>
       </div>
@@ -237,8 +237,8 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="cloud-row">
         <div class="cloud-alt text-orange-900">VERT.<br>500m–15km</div>
         <div>
-          <div class="cloud-name">Cumulonimbus (Cb)</div>
-          <div class="cloud-desc">The king of clouds. Towering from near the surface to the tropopause. The classic "anvil" top forms when the top spreads sideways at the tropopause (ice crystals). Contains hail, lightning, extreme turbulence, downbursts. Can contain energy equivalent to several atomic bombs. Generates its own mesoscale circulation.</div>
+          <div class="row-title">Cumulonimbus (Cb)</div>
+          <div class="desc-relaxed">The king of clouds. Towering from near the surface to the tropopause. The classic "anvil" top forms when the top spreads sideways at the tropopause (ice crystals). Contains hail, lightning, extreme turbulence, downbursts. Can contain energy equivalent to several atomic bombs. Generates its own mesoscale circulation.</div>
           <span class="cloud-badge p-red">Heavy rain · hail · lightning · danger</span>
         </div>
       </div>
@@ -338,13 +338,13 @@ const mod = modules.find((m) => m.id === 25)!;
       <div class="dew-point-scale">
         <span>&lt;5°C</span><span>5–10°C</span><span>10–15°C</span><span>15–18°C</span><span>18–21°C</span><span>&gt;21°C</span>
       </div>
-      <div class="weather-row">
-        <div class="muted-text"><strong class="text-blue-900">Below 5°C:</strong> Very dry. Skin dries out, static electricity. Desert and winter air.</div>
-        <div class="muted-text"><strong class="text-green-900">5–10°C:</strong> Dry but comfortable. Good hiking weather.</div>
-        <div class="muted-text"><strong class="text-teal-500">10–15°C:</strong> Comfortable. Most people feel fine. UK summer average.</div>
-        <div class="muted-text"><strong class="text-amber-500">15–18°C:</strong> Noticeably sticky. Southeast USA in summer.</div>
-        <div class="muted-text"><strong class="text-orange-600">18–21°C:</strong> Oppressive. Uncomfortable for most. Tropical cities.</div>
-        <div class="muted-text"><strong class="text-red-900">Above 21°C:</strong> Dangerous. Human thermoregulation becomes impaired. Can cause heat death in sustained exposure. Wet bulb globe temperature over 35°C is considered survivability limit.</div>
+      <div class="stack-tight">
+        <div class="muted-small"><strong class="text-blue-900">Below 5°C:</strong> Very dry. Skin dries out, static electricity. Desert and winter air.</div>
+        <div class="muted-small"><strong class="text-green-900">5–10°C:</strong> Dry but comfortable. Good hiking weather.</div>
+        <div class="muted-small"><strong class="text-accent">10–15°C:</strong> Comfortable. Most people feel fine. UK summer average.</div>
+        <div class="muted-small"><strong class="text-amber-500">15–18°C:</strong> Noticeably sticky. Southeast USA in summer.</div>
+        <div class="muted-small"><strong class="text-orange-600">18–21°C:</strong> Oppressive. Uncomfortable for most. Tropical cities.</div>
+        <div class="muted-small"><strong class="text-red-900">Above 21°C:</strong> Dangerous. Human thermoregulation becomes impaired. Can cause heat death in sustained exposure. Wet bulb globe temperature over 35°C is considered survivability limit.</div>
       </div>
     </div>
 
@@ -379,7 +379,7 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
 
       <!-- New: forecast skill by lead time visual -->
-      <div class="panel-subtitle">How far ahead can we reliably forecast? (approximate skill levels)</div>
+      <div class="subheading">How far ahead can we reliably forecast? (approximate skill levels)</div>
       <div id="skill-bars"></div>
       <div class="callout btn-row-style">
         <strong>The 10-day limit:</strong> Chaotic sensitivity to initial conditions (the "butterfly effect") means deterministic weather forecasts become essentially useless beyond ~10 days. Modern ensemble forecasts (running the model ~50 times with slightly different starting conditions) can give probabilistic guidance out to ~2 weeks, but uncertainty grows rapidly. For periods beyond 2 weeks, only broad seasonal tendencies can be forecast — not specific weather events.
@@ -392,7 +392,7 @@ const mod = modules.find((m) => m.id === 25)!;
     <h2 class="sec" id="part-h-severe-weather-tropical-cyclones-tornadoes-and-other-extremes">Part H · severe weather — tropical cyclones, tornadoes, and other extremes</h2>
 
     <!-- Storm comparison table -->
-    <div class="card card-scroll">
+    <div class="card scroll-block">
       <div class="panel-title">Major severe weather types compared</div>
       <table class="storm-table">
         <thead>
@@ -406,14 +406,14 @@ const mod = modules.find((m) => m.id === 25)!;
         </thead>
         <tbody>
           <tr>
-            <td>Tropical cyclone<br><span class="caption-tiny">(hurricane / typhoon)</span></td>
+            <td>Tropical cyclone<br><span class="micro-caption">(hurricane / typhoon)</span></td>
             <td>Cat 1: 119–153 km/h winds<br>Cat 5: &gt;252 km/h</td>
             <td>200–900 km diameter</td>
             <td>Days to weeks</td>
             <td>Warm ocean (&gt;26°C to 50m depth), Coriolis effect, low vertical wind shear. Latent heat from massive ocean evaporation drives the engine.</td>
           </tr>
           <tr>
-            <td>Extratropical cyclone<br><span class="caption-tiny">(mid-latitude depression)</span></td>
+            <td>Extratropical cyclone<br><span class="micro-caption">(mid-latitude depression)</span></td>
             <td>Winds 50–120 km/h typically; major storms to 150 km/h</td>
             <td>1,000–4,000 km</td>
             <td>Days</td>
@@ -533,7 +533,7 @@ const mod = modules.find((m) => m.id === 25)!;
       </div>
 
       <div class="anomaly-panel">
-        <div class="panel-subtitle">Global temperature anomaly — the trend (illustrative)</div>
+        <div class="subheading">Global temperature anomaly — the trend (illustrative)</div>
         <div class="u-mb-sm">
           <div class="anomaly-bars">
             <div class="weather-media"></div>
@@ -566,7 +566,7 @@ const mod = modules.find((m) => m.id === 25)!;
         <div class="muted-copy">Global average surface temperature has risen approximately +1.1–1.2°C since the pre-industrial baseline (1850–1900). The 10 warmest years on record globally have all occurred since 2005. 2023 and 2024 set successive all-time global temperature records.</div>
       </div>
 
-      <div class="callout callout-flush">
+      <div class="callout flush-bottom">
         <strong>The loaded dice analogy (James Hansen, NASA):</strong> Before climate change, rolling a die gave roughly equal chances of a hot, average, or cold summer. Climate change loads the die — you still get variety (some cool summers), but hot summers come up far more often. Statistical attribution science can now calculate how much more likely a specific heatwave was due to climate change. For recent European heatwaves, the multiplier has ranged from 2× to 5×.
       </div>
     </div>
@@ -682,7 +682,7 @@ beaufortData.forEach(b => {
   bftList.innerHTML += `
     <div class="bft-row">
       <div class="bft-num">${b.n}</div>
-      <div class="bft-label">${b.label}<br><span style="font-size:11px;font-weight:400;color:var(--color-text-tertiary)">${b.km} km/h</span></div>
+      <div class="strong-text">${b.label}<br><span style="font-size:11px;font-weight:400;color:var(--color-text-tertiary)">${b.km} km/h</span></div>
       <div class="bft-desc">${b.desc}</div>
       <div class="bft-bar-wrap"><div class="bft-bar" style="width:${pct}%; background:${b.col};"></div></div>
     </div>`;
@@ -703,9 +703,9 @@ const skillContainer = document.getElementById('skill-bars');
 skillData.forEach(s => {
   const col = s.pct > 75 ? 'var(--accent)' : s.pct > 45 ? '#EF9F27' : s.pct > 20 ? '#D85A30' : '#791F1F';
   skillContainer.innerHTML += `
-    <div class="skill-bar-row">
+    <div class="data-row">
       <div class="skill-label">${s.label}</div>
-      <div class="skill-track"><div class="skill-fill" style="width:${s.pct}%; background:${col};"></div></div>
+      <div class="track-thin"><div class="skill-fill" style="width:${s.pct}%; background:${col};"></div></div>
       <div class="skill-pct">${s.pct}%</div>
     </div>`;
 });

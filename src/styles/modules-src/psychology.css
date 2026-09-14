@@ -69,17 +69,6 @@
       min-height: 56px;
     }
     .tl-detail strong { color: var(--color-text-primary); }
-
-
-
-    /* Bias chart bars */
-    .bias-bar-track {
-      background: var(--color-background-secondary);
-      border-radius: 4px;
-      height: 18px;
-      overflow: hidden;
-      flex: 1;
-    }
     .bias-bar-fill {
       height: 18px;
       border-radius: 4px;
@@ -96,21 +85,7 @@
     .b5-trait {
       margin-bottom: 14px;
     }
-    .b5-label-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 4px;
-    }
-    .b5-trait-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
     .b5-val { font-size: 12px; font-weight: 600; color: var(--accent); min-width: 24px; text-align: right; }
-    .b5-poles {
-      display: flex;
-      justify-content: space-between;
-      font-size: 10px;
-      color: var(--color-text-tertiary);
-      margin-top: 2px;
-    }
     .b5-desc {
       font-size: 12px;
       color: var(--color-text-secondary);
@@ -119,15 +94,6 @@
       padding: 8px 10px;
       margin-top: 10px;
       line-height: 1.55;
-    }
-
-    /* Stress curve */
-    .yerkes-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 14px 16px;
-      margin-bottom: 1rem;
     }
     .yerkes-svg { width: 100%; max-width: 540px; display: block; margin: 0 auto; }
 
@@ -239,22 +205,6 @@
   margin-bottom:10px;
 }
 
-.psychology-label {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:3px;
-}
-
-.disciplines-note {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 12px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-}
-
 .bordered-panel {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
@@ -270,39 +220,6 @@
   margin-bottom:10px;
   text-transform:uppercase;
   letter-spacing:0.07em;
-}
-
-.psychology-text {
-  color:var(--color-text-tertiary);
-  font-size:12px;
-}
-
-.psychology-row {
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
-  margin-bottom:10px;
-}
-
-.showfigure-control {
-  font-size:12px;
-  padding:3px 10px;
-}
-
-.therapy-matrix-panel {
-  background:var(--color-background-primary);
-  border:0.5px solid var(--color-border-tertiary);
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  margin-bottom:12px;
-  overflow-x:auto;
-}
-
-.matrix-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:6px;
-  line-height:1.5;
 }
 
 .professionals-grid {
@@ -429,13 +346,6 @@
   margin-bottom:12px;
 }
 
-.bias-chart-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:8px;
-  line-height:1.5;
-}
-
 .showconcept-control {
   font-size:12px;
   padding:3px 9px;
@@ -513,12 +423,6 @@
   font-size:11px;
   color:#3B6D11;
   line-height:1.45;
-}
-
-.pipeline-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:8px;
 }
 
 .subsection-title {
@@ -601,11 +505,6 @@
   margin-bottom:10px;
 }
 
-.showmemsin-control {
-  font-size:11px;
-  padding:3px 9px;
-}
-
 .memsindisplay {
   font-size:13px;
   color:var(--color-text-secondary);
@@ -622,13 +521,6 @@
   margin-bottom:1rem;
 }
 
-.ocean-title {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:10px;
-}
-
 .big-five-facts {
   background:var(--color-background-primary);
   border:0.5px solid var(--color-border-tertiary);
@@ -639,13 +531,6 @@
   box-sizing:border-box;
 }
 
-.facts-title {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:8px;
-}
-
 .big-five-body {
   font-size:12px;
   color:var(--color-text-secondary);
@@ -654,10 +539,6 @@
 
 .psychology-spacing {
   margin:0 0 7px;
-}
-
-.fact-paragraph-flush {
-  margin:0;
 }
 
 .arousal-zones-grid {
@@ -739,28 +620,5 @@
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
   gap:8px;
   margin-top:8px;
-}
-
-.theory-name {
-  font-size:11px;
-  font-weight:600;
-  color:var(--color-text-primary);
-  margin-bottom:3px;
-}
-
-.theory-desc {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  line-height:1.5;
-}
-
-.social-psych-intro {
-  background:var(--color-background-secondary);
-  border-radius:var(--border-radius-md);
-  padding:10px 13px;
-  font-size:12px;
-  color:var(--color-text-secondary);
-  line-height:1.6;
-  margin-bottom:12px;
 }
   

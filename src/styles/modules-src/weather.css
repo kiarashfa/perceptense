@@ -24,13 +24,6 @@
       .grid-3 { grid-template-columns: 1fr; }
     }
 
-    .grid-4 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
-
     /* ── Inline callout ── */
     .callout {
       background: var(--color-background-secondary);
@@ -61,17 +54,6 @@
       padding-top: 2px;
       flex-shrink: 0;
     }
-    .cloud-name {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 2px;
-    }
-    .cloud-desc {
-      font-size: 12px;
-      color: var(--color-text-secondary);
-      line-height: 1.45;
-    }
     .cloud-badge {
       font-size: 10px;
       font-weight: 500;
@@ -99,7 +81,6 @@
       color: var(--color-text-tertiary);
       text-align: center;
     }
-    .bft-label { font-weight: 500; color: var(--color-text-primary); }
     .bft-desc  { color: var(--color-text-secondary); line-height: 1.4; }
     .bft-bar-wrap { min-width: 60px; }
     .bft-bar {
@@ -156,13 +137,6 @@
       border-radius: 6px;
       margin-bottom: 6px;
       overflow: hidden;
-    }
-    .pressure-label-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 10px;
-      color: var(--color-text-tertiary);
-      margin-bottom: 4px;
     }
 
     /* ── Dew point comfort chart ── */
@@ -244,27 +218,12 @@
       opacity: 0.85;
       line-height: 1.4;
     }
-
-    /* ── Forecast skill chart ── */
-    .skill-bar-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
     .skill-label {
       font-size: 12px;
       color: var(--color-text-secondary);
       min-width: 70px;
       flex-shrink: 0;
       text-align: right;
-    }
-    .skill-track {
-      flex: 1;
-      height: 14px;
-      background: var(--color-background-secondary);
-      border-radius: 4px;
-      overflow: hidden;
     }
     .skill-fill {
       height: 100%;
@@ -278,56 +237,12 @@
       min-width: 34px;
     }
 
-/* === Shared-ready extracted styles === */
-
-.caption-tiny {
-  font-size:10px;
-  color:var(--color-text-tertiary);
-}
-
-.muted-text {
-  font-size:12px;
-  color:var(--color-text-secondary);
-}
-
 .text-amber-500 {
   color:#EF9F27;
 }
 
-.text-amber-900 {
-  color:#633806;
-}
-
-.text-blue-900 {
-  color:#0C447C;
-}
-
-.text-green-900 {
-  color:#085041;
-}
-
-.text-orange-600 {
-  color:#D85A30;
-}
-
-.text-orange-900 {
-  color:#712B13;
-}
-
 .text-red-900 {
   color:#791F1F;
-}
-
-.text-teal-500 {
-  color:var(--accent);
-}
-
-.u-text-center {
-  text-align:center;
-}
-
-.u-text-right {
-  text-align:right;
 }
 
 /* === Module-specific extracted styles === */
@@ -355,13 +270,6 @@
 .atm-layer-troposphere {
   background:var(--accent);
   color:#ffffff;
-}
-
-.weather-label {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:3px;
 }
 
 .pressure-scale-style {
@@ -392,12 +300,6 @@
   color:#0C447C;
   line-height:1.6;
   margin-bottom:8px;
-}
-
-.weather-row {
-  display:flex;
-  flex-direction:column;
-  gap:4px;
 }
 
 .high-pressure-chip {
@@ -518,18 +420,6 @@
   font-size:12px;
   color:#3B6D11;
   line-height:1.6;
-}
-
-.panel-subtitle {
-  font-size:12px;
-  font-weight:500;
-  color:var(--color-text-primary);
-  margin-bottom:6px;
-}
-
-.card-scroll {
-  margin-bottom:1rem;
-  overflow-x:auto;
 }
 
 .tornado-display {
@@ -737,10 +627,6 @@
   justify-content:space-between;
   font-size:10px;
   color:var(--color-text-secondary);
-}
-
-.callout-flush {
-  margin-bottom:0;
 }
 
 .callout-spaced {
