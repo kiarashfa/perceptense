@@ -45,20 +45,20 @@
 .u-text-hex-fff { color: #fff; }
 .u-w-94-pct { width: 94%; }
 .u-w-83-pct { width: 83%; }
-.u-bg-hex-378add { background: #378ADD; }
+.u-bg-hex-378add { background: #2276CA; }
 .u-w-31-pct { width: 31%; }
 .u-bg-hex-b5d4f4 { background: #B5D4F4; }
 .u-w-7-pct { width: 7%; }
 .u-bg-hex-5dcaa5 { background: #5DCAA5; }
 .u-gridcols-auto-fit-160px-1fr { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
 .u-w-78-pct { width: 78%; }
-.u-bg-hex-d85a30 { background: #D85A30; }
+.u-bg-hex-d85a30 { background: #C64E25; }
 .u-w-35-pct { width: 35%; }
-.u-bg-hex-f0997b { background: #F0997B; }
+.u-bg-hex-f0997b { background: #CD4617; }
 .u-w-2-3-pct { width: 2.3%; }
 .u-bg-hex-3b6d11 { background: #3B6D11; }
 .u-w-16-pct { width: 16%; }
-.u-bg-hex-639922 { background: #639922; }
+.u-bg-hex-639922 { background: #527F1C; }
 .u-w-14-pct { width: 14%; }
 .u-bg-hex-97c459 { background: #97C459; }
 .u-bg-hex-c0dd97 { background: #C0DD97; }
@@ -69,4 +69,20 @@
 .u-w-auto { width: auto; }
 .u-gridcol-1-1 { grid-column: 1/-1; }
 .u-w-0-pct { width: 0%; }
-.u-p-20px-0 { padding: 20px 0; }
+.u-p-20px-0 { padding: 20px 0; }
+
+/* --- Log-scale SVG marker labels: theme-safe text colours --- */
+.money-c-blue { fill: #2276CA; stroke: #2276CA; }
+.money-c-red { fill: #A32D2D; stroke: #A32D2D; }
+.money-c-blue2 { fill: #185FA5; stroke: #185FA5; }
+.money-c-green { fill: #27500A; stroke: #27500A; }
+html[data-theme="dark"] .money-c-blue { fill: #378ADD; stroke: #378ADD; }
+html[data-theme="dark"] .money-c-red { fill: #D46262; stroke: #D46262; }
+html[data-theme="dark"] .money-c-blue2 { fill: #2E88E1; stroke: #2E88E1; }
+html[data-theme="dark"] .money-c-green { fill: #4B9913; stroke: #4B9913; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .money-c-blue { fill: #378ADD; stroke: #378ADD; }
+  html[data-theme="auto"] .money-c-red { fill: #D46262; stroke: #D46262; }
+  html[data-theme="auto"] .money-c-blue2 { fill: #2E88E1; stroke: #2E88E1; }
+  html[data-theme="auto"] .money-c-green { fill: #4B9913; stroke: #4B9913; }
+}
