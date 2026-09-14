@@ -34,7 +34,7 @@ const structuredData = [
 ];
 ---
 <BaseLayout
-  title={pageTitle('All 50 modules')}
+  title={pageTitle(`All ${modules.length} modules`)}
   description="Every Perceptense module in order, from weight and mass through to ecosystems, climate and sustainability."
   pathname={pathname}
   structuredData={structuredData}
@@ -47,7 +47,7 @@ const structuredData = [
   </nav>
 
   <div class="page-wrap">
-    <h1>All 50 modules</h1>
+    <h1>All {modules.length} modules</h1>
     <p class="lede">The full course in order. Each module stands on its own.</p>
 
     <ol class="module-list">

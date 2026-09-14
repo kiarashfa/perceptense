@@ -1,9 +1,25 @@
 /** Single source of truth for anything that depends on where the site lives. */
 
 import siteData from '../data/site.json';
+import modules from '../data/modules.json';
+import categories from '../data/categories.json';
 
-/** Brand strings, shared with the build tools through src/data/site.json. */
-export const site = siteData;
+/** Collection sizes, for copy that states them. */
+export const counts = { modules: modules.length, categories: categories.length };
+
+const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+
+/** A count in words up to twelve, in digits beyond. */
+export const spelled = (n: number): string => WORDS[n] ?? String(n);
+
+/**
+ * Brand strings, shared with the build tools through src/data/site.json.
+ * `{modules}` in the description stands for the module count.
+ */
+export const site = {
+  ...siteData,
+  description: siteData.description.replaceAll('{modules}', String(counts.modules)),
+};
 
 /** Base path with no trailing slash, e.g. "/perceptense". */
 export const base = import.meta.env.BASE_URL.replace(/\/$/, '');

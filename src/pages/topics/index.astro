@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { site, path, pageTitle } from '../../lib/site';
+import { site, path, pageTitle, counts, spelled } from '../../lib/site';
 import modules from '../../data/modules.json';
 import categories from '../../data/categories.json';
 import '../../styles/icons/topics-index.css';
@@ -24,14 +24,14 @@ const structuredData = [{
 }];
 ---
 <BaseLayout
-  title={pageTitle('Topics', 'the eight areas the course covers')}
-  description="Browse all 50 Perceptense modules by topic, from numbers and scale to culture, mind and environment."
+  title={pageTitle('Topics', `the ${spelled(counts.categories)} areas the course covers`)}
+  description={`Browse all ${counts.modules} ${site.brand} modules by topic, from numbers and scale to culture, mind and environment.`}
   pathname={pathname}
   structuredData={structuredData}
 >
   <div class="page-wrap">
     <h1>Browse by topic</h1>
-    <p class="lede">Every module, grouped into the eight areas the course covers.</p>
+    <p class="lede">Every module, grouped into the {spelled(counts.categories)} areas the course covers.</p>
 
     {grouped.map((g) => (
       <section class="topic-block">

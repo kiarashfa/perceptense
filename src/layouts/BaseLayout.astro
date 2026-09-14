@@ -19,6 +19,8 @@ interface Props {
   /** Site-root-relative path of the 1200x630 social card; defaults to the site card. */
   ogImage?: string;
   ogImageAlt?: string;
+  /** Keep the page out of search results and omit its canonical. */
+  noindex?: boolean;
 }
 
 const {
@@ -31,6 +33,7 @@ const {
   moduleId,
   ogImage = `${base}/og/site.png`,
   ogImageAlt = `${site.brand} — ${site.tagline}`,
+  noindex = false,
 } = Astro.props;
 
 const canonical = new URL(pathname, Astro.site).href;
@@ -42,11 +45,13 @@ const analyticsId = GA_MEASUREMENT_ID;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Precedes ThemeScript, which sets it to the resolved theme's background. -->
+    <meta name="theme-color" content="#ffffff" />
     <ThemeScript />
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
     <meta name="author" content={site.author} />
 
     <meta property="og:site_name" content={site.brand} />
@@ -66,11 +71,10 @@ const analyticsId = GA_MEASUREMENT_ID;
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="twitter:image:alt" content={ogImageAlt} />
 
-    <link rel="icon" type="image/x-icon" href={`${base}/assets/favicons/favicon.ico`} />
-    <link rel="icon" type="image/png" sizes="32x32" href={`${base}/assets/favicons/favicon-32x32.png`} />
-    <link rel="icon" type="image/png" sizes="16x16" href={`${base}/assets/favicons/favicon-16x16.png`} />
-    <link rel="apple-touch-icon" sizes="180x180" href={`${base}/assets/favicons/apple-touch-icon.png`} />
-    <link rel="manifest" href={`${base}/assets/favicons/site.webmanifest`} />
+    <link rel="icon" href={`${base}/assets/favicons/favicon.ico`} sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/assets/favicons/favicon.svg`} />
+    <link rel="apple-touch-icon" href={`${base}/assets/favicons/apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}/site.webmanifest`} />
 
     <!-- Linked rather than imported so it precedes every bundled module
          stylesheet; module rules are written to win ties against it. -->

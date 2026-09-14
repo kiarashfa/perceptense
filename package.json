@@ -1,7 +1,7 @@
 {
   "name": "perceptense",
   "type": "module",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Have a Sense About Everything — a free, self-directed course of interactive modules.",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
@@ -21,6 +21,7 @@
     "verify:visual": "node tools/visual/geometry.mjs",
     "shots": "node tools/visual/shoot.mjs",
     "icons": "python tools/build_icon_css.py",
+    "favicons": "node tools/build-favicons.mjs",
     "icons:fetch": "python tools/build_icons.py && python tools/build_icon_css.py && python tools/wire_icons.py",
     "redirects": "python tools/build_redirects.py"
   },

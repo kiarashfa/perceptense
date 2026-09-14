@@ -1,8 +1,6 @@
 ---
-import { site, path } from '../lib/site';
+import { site, path, counts } from '../lib/site';
 import categories from '../data/categories.json';
-
-const year = new Date().getFullYear();
 ---
 <footer class="site-foot">
   <nav class="foot-topics" aria-label="Topics">
@@ -18,14 +16,14 @@ const year = new Date().getFullYear();
     <h2 class="foot-heading">{site.brand}</h2>
     <ul>
       <li><a href={path()}>Home</a></li>
-      <li><a href={path('modules')}>All 50 modules</a></li>
+      <li><a href={path('modules')}>All {counts.modules} modules</a></li>
       <li><a href={path('topics')}>Browse by topic</a></li>
       <li><a href={path('about')}>About</a></li>
     </ul>
   </nav>
 
   <div class="foot-legal">
-    <p class="foot-copy">&copy; 2025&ndash;{year} {site.author}.</p>
+    <p class="foot-copy">&copy; 2025&ndash;2026 {site.author}.</p>
     <p class="foot-disclaimer">
       This content is provided for educational and informational purposes only. It does not
       constitute professional, medical, legal, political, or psychological advice. The author

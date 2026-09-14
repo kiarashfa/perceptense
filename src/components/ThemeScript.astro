@@ -9,11 +9,16 @@
 ---
 <script is:inline>
   (function () {
+    var saved = null;
     try {
-      var saved = localStorage.getItem('perceptense-theme');
-      document.documentElement.setAttribute('data-theme', saved || 'auto');
-    } catch (e) {
-      document.documentElement.setAttribute('data-theme', 'auto');
-    }
+      saved = localStorage.getItem('perceptense-theme');
+    } catch (e) {}
+    var theme = saved || 'auto';
+    document.documentElement.setAttribute('data-theme', theme);
+
+    var dark = theme === 'dark' ||
+      (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', dark ? '#1c1c1a' : '#ffffff');
   })();
 </script>

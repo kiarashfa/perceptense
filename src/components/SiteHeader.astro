@@ -51,7 +51,13 @@ const isCurrent = (href: string) => current === href;
       ? (media.matches ? 'dark' : 'light')
       : root.getAttribute('data-theme');
 
-  const sync = () => root.setAttribute('data-resolved-theme', resolved() ?? 'light');
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+
+  const sync = () => {
+    const theme = resolved() ?? 'light';
+    root.setAttribute('data-resolved-theme', theme);
+    themeColor?.setAttribute('content', theme === 'dark' ? '#1c1c1a' : '#ffffff');
+  };
 
   document.getElementById('themeToggle')?.addEventListener('click', () => {
     const next = resolved() === 'dark' ? 'light' : 'dark';

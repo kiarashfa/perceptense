@@ -32,6 +32,7 @@ const readJson = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
 const modules = readJson('src/data/modules.json');
 const categories = readJson('src/data/categories.json');
 const site = readJson('src/data/site.json');
+site.description = site.description.replaceAll('{modules}', String(modules.length));
 
 // Static instances of the two subsets the site serves, cut by build_og_fonts.py.
 const FONT_CACHE = path.join(ROOT, 'node_modules/.cache/og-fonts');
@@ -181,12 +182,30 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const label = new Map(categories.map((c) => [c.id, c.label]));
 
-await render(card({
+const siteCard = card({
   accent: SITE_ACCENT,
   overline: `${modules.length} interactive modules`,
   name: site.tagline,
   blurb: site.description,
-}), 'site.png');
+});
+await render(siteCard, 'site.png');
+
+// GitHub's social preview: 1280x640, cropped by up to 40 px on each side. The
+// site card sits centred inside it, its accent band carried to both edges.
+const GH_W = 1280;
+const GH_H = 640;
+const top = (GH_H - H) / 2;
+await sharp({ create: { width: GH_W, height: GH_H, channels: 3, background: PAPER } })
+  .composite([
+    { input: await sharp(Buffer.from(siteCard)).png().toBuffer(), left: (GH_W - W) / 2, top },
+    {
+      input: Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${GH_W}" height="${top + 14}"><rect width="${GH_W}" height="${top + 14}" fill="${SITE_ACCENT}"/></svg>`),
+      left: 0,
+      top: 0,
+    },
+  ])
+  .png({ compressionLevel: 9 })
+  .toFile(path.join(OUT, 'github.png'));
 
 for (const m of modules) {
   await render(card({
@@ -199,4 +218,4 @@ for (const m of modules) {
   }), `${m.slug}.png`);
 }
 
-console.log(`og cards: ${modules.length + 1} -> public/og/`);
+console.log(`og cards: ${modules.length + 1} + github.png -> public/og/`);

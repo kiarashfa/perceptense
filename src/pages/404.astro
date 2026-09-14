@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { path, pageTitle, counts } from '../lib/site';
+---
+<BaseLayout
+  title={pageTitle('Page not found')}
+  description="There is no page at this address. Start again from the home page, the module list or the topics."
+  pathname={path('404')}
+  noindex
+>
+  <div class="page-wrap">
+    <h1>Page not found</h1>
+    <p class="lede">There is no page at this address. Check the link, or pick up from one of these.</p>
+    <ul class="topic-list">
+      <li><a href={path()}>Home</a></li>
+      <li><a href={path('modules')}>All {counts.modules} modules</a></li>
+      <li><a href={path('topics')}>Browse by topic</a></li>
+    </ul>
+  </div>
+</BaseLayout>
