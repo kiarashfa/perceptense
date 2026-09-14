@@ -1,11 +1,15 @@
-"""Prove every built module carries exactly the same words as its legacy page.
+"""Prove every built module carries exactly its approved words.
 
-Compares the .page-wrap region of each legacy file against the built page using
-the HTML5 parsing algorithm, so what is compared is what a browser would show.
-Comments are excluded and element boundaries are separated identically on both
-sides, so only visible text is measured.
+tools/baseline/<slug>.txt holds each module's visible text, one word per line.
+The built .page-wrap is parsed with the HTML5 algorithm, so what is compared is
+what a browser would show: comments, scripts and styles are excluded and element
+boundaries separate words identically.
+
+An approved content change is recorded by building and accepting the module,
+which rewrites its baseline so the change appears as a reviewable diff:
 
     python tools/verify_drift.py
+    python tools/verify_drift.py --accept <slug> [<slug> ...]
 """
 from __future__ import annotations
 
@@ -16,14 +20,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LEGACY = ROOT / 'modules'
-REPAIRED = ROOT / 'tools' / 'repaired'
+BASELINE = ROOT / 'tools' / 'baseline'
 DIST = ROOT / 'dist' / 'modules'
 SKIP = {'script', 'style'}
-
-# The legacy back-link was removed at runtime by shared.js, so users never saw
-# it; the port drops it from the markup as well.
-ALLOWED_REMOVALS = {'All modules', '← All modules'}
 
 
 def read(path: Path) -> str:
@@ -61,48 +60,54 @@ def page_wrap_words(html: str, html5lib) -> list[str]:
     raise SystemExit('no .page-wrap element found')
 
 
-def main() -> int:
+def main(argv: list[str]) -> int:
     try:
         import html5lib
     except ImportError:
         print('html5lib is required: pip install html5lib')
         return 2
 
+    accept = set(argv[argv.index('--accept') + 1:]) if '--accept' in argv else set()
     modules = json.loads((ROOT / 'src' / 'data' / 'modules.json').read_text(encoding='utf-8'))
-    failures = 0
-    notes: list[str] = []
-    total = 0
+    unknown = accept - {m['slug'] for m in modules}
+    if unknown:
+        print(f'unknown module(s): {", ".join(sorted(unknown))}')
+        return 2
 
+    failures = 0
+    total = 0
     for mod in modules:
-        override = REPAIRED / mod['legacyFile']
-        legacy = override if override.exists() else LEGACY / mod['legacyFile']
-        built = DIST / mod['slug'] / 'index.html'
-        if not built.exists():
-            print(f'  {mod["slug"]:44} NOT BUILT')
+        slug = mod['slug']
+        built_page = DIST / slug / 'index.html'
+        baseline = BASELINE / f'{slug}.txt'
+        if not built_page.exists():
+            print(f'  {slug:44} NOT BUILT')
+            failures += 1
+            continue
+        built = page_wrap_words(read(built_page), html5lib)
+
+        if slug in accept:
+            baseline.write_text('\n'.join(built) + '\n', encoding='utf-8', newline='\n')
+            print(f'  {slug:44} ACCEPTED  {len(built)} words')
+        if not baseline.exists():
+            print(f'  {slug:44} NO BASELINE')
             failures += 1
             continue
 
-        a = page_wrap_words(read(legacy), html5lib)
-        b = page_wrap_words(read(built), html5lib)
-        total += len(a)
-        if a == b:
+        approved = read(baseline).split()
+        total += len(approved)
+        if approved == built:
             continue
 
-        matcher = difflib.SequenceMatcher(None, a, b, autojunk=False)
-        runs = [(op, a[i1:i2], b[j1:j2])
+        matcher = difflib.SequenceMatcher(None, approved, built, autojunk=False)
+        runs = [(op, approved[i1:i2], built[j1:j2])
                 for op, i1, i2, j1, j2 in matcher.get_opcodes() if op != 'equal']
-        if all(op == 'delete' and ' '.join(x).strip() in ALLOWED_REMOVALS for op, x, _ in runs):
-            notes.append(f'{mod["slug"]}: legacy back-link removed')
-            continue
-
         failures += 1
-        print(f'  {mod["slug"]:44} DRIFT  {len(a)}w -> {len(b)}w  ({len(runs)} run(s))')
+        print(f'  {slug:44} DRIFT  {len(approved)}w -> {len(built)}w  ({len(runs)} run(s))')
         for op, x, y in runs[:4]:
-            print(f'      {op:7} legacy={" ".join(x)[:100]!r}')
-            print(f'              built ={" ".join(y)[:100]!r}')
+            print(f'      {op:7} approved={" ".join(x)[:100]!r}')
+            print(f'              built   ={" ".join(y)[:100]!r}')
 
-    for n in notes:
-        print(f'  note: {n}')
     print()
     print(f'modules compared : {len(modules)}')
     print(f'words compared   : {total:,}')
@@ -111,4 +116,4 @@ def main() -> int:
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
