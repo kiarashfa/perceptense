@@ -2,7 +2,7 @@
 
 Icons come from two places:
 
-  * assets/icons — the 50 module icons that already ship with the site. Their
+  * public/assets/icons — the 50 module icons that already ship with the site. Their
     fill is hardcoded to each module's accent because they double as favicons,
     so the inline copy is normalised to currentColor and the original is left
     alone.
@@ -22,7 +22,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LOCAL = ROOT / 'assets' / 'icons'
+LOCAL = ROOT / 'public' / 'assets' / 'icons'
 FA = ROOT / 'node_modules' / '@fortawesome' / 'fontawesome-free' / 'svgs'
 OUT = ROOT / 'src' / 'icons'
 

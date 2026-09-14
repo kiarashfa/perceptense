@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-LOCAL_ICONS = ROOT / 'assets' / 'icons'
+LOCAL_ICONS = ROOT / 'public' / 'assets' / 'icons'
 
 STYLE_CLASSES = {'fa-solid', 'fa-regular', 'fa-brands', 'fa-light', 'fa-thin',
                  'fa-duotone', 'fa-sharp', 'fas', 'far', 'fab', 'fal', 'fa'}
