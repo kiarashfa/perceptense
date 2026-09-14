@@ -374,7 +374,7 @@
   height:10px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.6;
+  opacity:0.95;
 }
 
 .triangle-base-right {
@@ -385,7 +385,7 @@
   height:10px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.6;
+  opacity:0.95;
 }
 
 .composition-desc {
@@ -492,7 +492,7 @@
   height:9px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.5;
+  opacity:0.95;
 }
 
 .diagonal-dot-low {
@@ -552,7 +552,7 @@
   height:6px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.6;
+  opacity:0.95;
 }
 
 .radial-dot-left {
@@ -564,7 +564,7 @@
   height:6px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.6;
+  opacity:0.95;
 }
 
 .radial-dot-right {
@@ -576,7 +576,7 @@
   height:6px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.6;
+  opacity:0.95;
 }
 
 .horizon-layout {
@@ -639,7 +639,7 @@
   height:6px;
   border-radius:50%;
   background:var(--accent);
-  opacity:0.5;
+  opacity:0.95;
   top:50%;
   left:58%;
 }
