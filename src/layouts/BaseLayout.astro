@@ -4,6 +4,7 @@ import ThemeScript from '../components/ThemeScript.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { sharedCssHash } from '../lib/assets';
+import { GA_MEASUREMENT_ID } from 'astro:env/server';
 
 interface Props {
   title: string;
@@ -34,7 +35,7 @@ const {
 
 const canonical = new URL(pathname, Astro.site).href;
 const ogImageUrl = new URL(ogImage, Astro.site).href;
-const analyticsId = import.meta.env.PUBLIC_GA_ID;
+const analyticsId = GA_MEASUREMENT_ID;
 ---
 <!doctype html>
 <html lang={site.locale} data-theme="auto" data-module={moduleId ? String(moduleId) : undefined}>

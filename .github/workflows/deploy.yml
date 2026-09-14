@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
 
       - name: Verify
         run: |
