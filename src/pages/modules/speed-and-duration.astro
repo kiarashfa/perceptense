@@ -11,7 +11,7 @@ const mod = modules.find((m) => m.id === 8)!;
 
   
     <div class="u-display-flex u-items-center u-gap-14px u-mb-md">
-      <i class="fa-solid fa-truck-fast u-fs-42px u-text-hex-4e99a3 u-shrink-0"></i>
+      <i class="fa-solid fa-truck-fast u-fs-42px text-accent u-shrink-0"></i>
       <h1 class="module-title u-m-0 u-lh-1-05">Module 8: Speed & Duration</h1>
     </div>
     <p class="module-subtitle">How fast things move and how long things take</p>
@@ -21,10 +21,10 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-a-the-speed-scale-from-snail-to-light">Part A · the speed scale — from snail to light</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Speed comparison (km/h) — logarithmic feel</div>
       <div class="u-fs-11px text-secondary u-mb-md">Each step up is roughly 10× faster. Human intuition covers only the first few rows.</div>
-      <div class="bar-row"><span class="bl">Snail</span><div class="bb u-w-0-3-pct u-bg-hex-e6f1fb u-border-0-5px-solid-hex-b5d4f4"><span class="bv u-text-hex-0c447c u-ml-5px u-fs-10px">0.05 km/h</span></div></div>
+      <div class="bar-row"><span class="bl">Snail</span><div class="bb u-w-0-3-pct u-bg-hex-e6f1fb u-border-0-5px-solid-hex-b5d4f4"><span class="bv text-blue-900 u-ml-5px u-fs-10px">0.05 km/h</span></div></div>
       <div class="bar-row"><span class="bl">Human walk</span><div class="bb u-w-1-7-pct u-bg-hex-b5d4f4"><span class="bv u-text-hex-042c53 u-fs-10px">5 km/h</span></div></div>
       <div class="bar-row"><span class="bl">Cycling</span><div class="bb u-w-5-pct u-bg-hex-85b7eb"><span class="bv u-text-hex-042c53 u-fs-10px">15–25 km/h</span></div></div>
       <div class="bar-row"><span class="bl">City car / sprint</span><div class="bb u-w-11-pct u-bg-hex-378add"><span class="bv u-text-hex-fff u-fs-10px">~30–50 km/h</span></div></div>
@@ -38,9 +38,9 @@ const mod = modules.find((m) => m.id === 8)!;
       <div class="u-mt-md u-bt-0-5px-solid-border-tertiary u-pt-10px">
         <div class="bar-row"><span class="bl">Speed of sound (air)</span><div class="bb u-w-100-pct u-bg-hex-27500a"><span class="bv u-text-hex-eaf3de">1,235 km/h — Mach 1</span></div></div>
         <div class="bar-row"><span class="bl">ISS / orbital speed</span><div class="bb u-w-100-pct u-bg-hex-085041"><span class="bv u-text-hex-e1f5ee">~28,000 km/h</span></div></div>
-        <div class="bar-row"><span class="bl">Speed of light</span><div class="bb u-w-100-pct u-bg-hex-3c3489"><span class="bv u-text-hex-eeedfe">1,080,000,000 km/h</span></div></div>
+        <div class="bar-row"><span class="bl">Speed of light</span><div class="bb u-w-100-pct bg-indigo-900"><span class="bv u-text-purple-50">1,080,000,000 km/h</span></div></div>
       </div>
-      <p class="u-fs-11px text-secondary u-m-10px-0-0">Light is 1,200,000× faster than a plane. The ISS orbits Earth every 92 minutes — 16 sunrises per day.</p>
+      <p class="u-fs-11px text-secondary panel-note">Light is 1,200,000× faster than a plane. The ISS orbits Earth every 92 minutes — 16 sunrises per day.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════
@@ -82,7 +82,7 @@ const mod = modules.find((m) => m.id === 8)!;
     </div>
 
     <!-- Speed units cross-reference -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Speed in all three units — the conversion reference</div>
       <div class="u-fs-11px text-secondary u-mb-md">km/h × 0.278 = m/s &nbsp;·&nbsp; km/h × 0.621 = mph &nbsp;·&nbsp; mph × 1.609 = km/h</div>
       <table class="unit-table">
@@ -97,7 +97,7 @@ const mod = modules.find((m) => m.id === 8)!;
           <tr><td>Speed of sound (sea level)</td><td class="unit-hl">1,235</td><td>343</td><td>767</td></tr>
         </tbody>
       </table>
-      <p class="u-fs-11px text-secondary u-m-10px-0-0">Quick rule: to convert km/h to m/s, divide by 3.6. So 90 km/h = 25 m/s — useful for stopping-distance calculations.</p>
+      <p class="u-fs-11px text-secondary panel-note">Quick rule: to convert km/h to m/s, divide by 3.6. So 90 km/h = 25 m/s — useful for stopping-distance calculations.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════
@@ -105,7 +105,7 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-c-interactive-speed-and-distance-calculator">Part C · interactive speed & distance calculator</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How long does a journey take? Pick a speed and enter a distance.</div>
       <div class="u-display-flex u-gap-md u-items-center u-flex-wrap u-mb-md">
         <select id="speed-select" class="u-flex-1 u-minw-160px">
@@ -128,23 +128,23 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-d-how-long-does-it-actually-take-duration-anchors">Part D · how long does it actually take? duration anchors</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Real-world task durations — most people underestimate these</div>
-      <div class="dur-row"><span class="dur-name">Boiling water (1L)</span><div class="dur-bar-wrap"><div class="dur-bar u-w-1-pct u-bg-hex-85b7eb"></div></div><span class="dur-val">~4 min</span></div>
-      <div class="dur-row"><span class="dur-name">Cooking pasta</span><div class="dur-bar-wrap"><div class="dur-bar u-w-2-pct u-bg-hex-85b7eb"></div></div><span class="dur-val">8–12 min</span></div>
-      <div class="dur-row"><span class="dur-name">Roasting a chicken (1.5kg)</span><div class="dur-bar-wrap"><div class="dur-bar u-w-15-pct u-bg-hex-378add"></div></div><span class="dur-val">~90 min</span></div>
-      <div class="dur-row"><span class="dur-name">Appendix surgery</span><div class="dur-bar-wrap"><div class="dur-bar u-w-5-pct u-bg-hex-ef9f27"></div></div><span class="dur-val">30–60 min</span></div>
-      <div class="dur-row"><span class="dur-name">Hip replacement</span><div class="dur-bar-wrap"><div class="dur-bar u-w-10-pct u-bg-hex-ef9f27"></div></div><span class="dur-val">1–2 hours</span></div>
-      <div class="dur-row"><span class="dur-name">Open-heart surgery</span><div class="dur-bar-wrap"><div class="dur-bar u-w-50-pct u-bg-hex-ba7517"></div></div><span class="dur-val">4–6 hours</span></div>
-      <div class="dur-row"><span class="dur-name">Building a house</span><div class="dur-bar-wrap"><div class="dur-bar u-w-25-pct u-bg-hex-1d9e75"></div></div><span class="dur-val">6–18 months</span></div>
-      <div class="dur-row"><span class="dur-name">Building a skyscraper</span><div class="dur-bar-wrap"><div class="dur-bar u-w-70-pct u-bg-hex-0f6e56"></div></div><span class="dur-val">3–5 years</span></div>
-      <div class="dur-row"><span class="dur-name">Building a nuclear plant</span><div class="dur-bar-wrap"><div class="dur-bar u-w-100-pct u-bg-hex-085041"></div></div><span class="dur-val">10–20 years</span></div>
-      <div class="dur-row"><span class="dur-name">Writing a PhD thesis</span><div class="dur-bar-wrap"><div class="dur-bar u-w-20-pct u-bg-hex-7f77dd"></div></div><span class="dur-val">3–5 years</span></div>
-      <div class="dur-row"><span class="dur-name">Becoming a surgeon</span><div class="dur-bar-wrap"><div class="dur-bar u-w-80-pct u-bg-hex-534ab7"></div></div><span class="dur-val">12–15 years</span></div>
+      <div class="dur-row"><span class="dur-name">Boiling water (1L)</span><div class="fill-space"><div class="dur-bar u-w-1-pct u-bg-hex-85b7eb"></div></div><span class="value-label-narrow">~4 min</span></div>
+      <div class="dur-row"><span class="dur-name">Cooking pasta</span><div class="fill-space"><div class="dur-bar u-w-2-pct u-bg-hex-85b7eb"></div></div><span class="value-label-narrow">8–12 min</span></div>
+      <div class="dur-row"><span class="dur-name">Roasting a chicken (1.5kg)</span><div class="fill-space"><div class="dur-bar u-w-15-pct u-bg-hex-378add"></div></div><span class="value-label-narrow">~90 min</span></div>
+      <div class="dur-row"><span class="dur-name">Appendix surgery</span><div class="fill-space"><div class="dur-bar u-w-5-pct u-bg-hex-ef9f27"></div></div><span class="value-label-narrow">30–60 min</span></div>
+      <div class="dur-row"><span class="dur-name">Hip replacement</span><div class="fill-space"><div class="dur-bar u-w-10-pct u-bg-hex-ef9f27"></div></div><span class="value-label-narrow">1–2 hours</span></div>
+      <div class="dur-row"><span class="dur-name">Open-heart surgery</span><div class="fill-space"><div class="dur-bar u-w-50-pct u-bg-hex-ba7517"></div></div><span class="value-label-narrow">4–6 hours</span></div>
+      <div class="dur-row"><span class="dur-name">Building a house</span><div class="fill-space"><div class="dur-bar u-w-25-pct u-bg-hex-1d9e75"></div></div><span class="value-label-narrow">6–18 months</span></div>
+      <div class="dur-row"><span class="dur-name">Building a skyscraper</span><div class="fill-space"><div class="dur-bar u-w-70-pct u-bg-hex-0f6e56"></div></div><span class="value-label-narrow">3–5 years</span></div>
+      <div class="dur-row"><span class="dur-name">Building a nuclear plant</span><div class="fill-space"><div class="dur-bar u-w-100-pct u-bg-hex-085041"></div></div><span class="value-label-narrow">10–20 years</span></div>
+      <div class="dur-row"><span class="dur-name">Writing a PhD thesis</span><div class="fill-space"><div class="dur-bar u-w-20-pct u-bg-hex-7f77dd"></div></div><span class="value-label-narrow">3–5 years</span></div>
+      <div class="dur-row"><span class="dur-name">Becoming a surgeon</span><div class="fill-space"><div class="dur-bar u-w-80-pct u-bg-hex-534ab7"></div></div><span class="value-label-narrow">12–15 years</span></div>
     </div>
 
     <div class="u-bg-background-warning u-radius-radius-md u-p-11px-14px u-mb-lg">
-      <div class="u-fs-13px u-fw-500 u-text-text-warning u-mb-xs">Why we consistently underestimate durations</div>
+      <div class="u-fs-13px u-fw-500 text-warning u-mb-xs">Why we consistently underestimate durations</div>
       <div class="u-fs-13px text-secondary u-lh-1-6">Psychologists call it <em>planning fallacy</em>: we remember tasks going smoothly and forget interruptions, rework, and dependencies. The fix is to estimate by analogy — how long did the <em>last similar thing</em> actually take? — rather than imagining a perfect run. Projects with no prior reference (building a nuclear plant, for example) are especially prone to massive overruns: the global median nuclear build time has historically exceeded 10 years, with large cost overruns common.</div>
     </div>
 
@@ -187,7 +187,7 @@ const mod = modules.find((m) => m.id === 8)!;
     </div>
 
     <!-- Body signals SVG -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Body signals: how fast does information travel through you?</div>
       <div class="u-fs-11px text-secondary u-mb-md">From stimulus to brain — comparing your own biological "latency"</div>
       <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
@@ -234,14 +234,14 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-f-stopping-distances-speed-kills-because-physics">Part F · stopping distances — speed kills because physics</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Interactive stopping distance calculator</div>
       <div class="u-fs-11px text-secondary u-mb-md">Drag the slider. Stopping distance grows with the <em>square</em> of speed — double your speed, quadruple your stopping distance.</div>
       <div class="stop-slider-wrap">
-        <div class="stop-label"><span>Speed</span><span id="stop-speed-label">90 km/h</span></div>
+        <div class="label-pair-medium"><span>Speed</span><span id="stop-speed-label">90 km/h</span></div>
         <input type="range" id="stop-slider" min="20" max="160" value="90" step="5">
       </div>
-      <svg id="stop-svg" viewBox="0 0 520 70" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block u-m-10px-0">
+      <svg id="stop-svg" viewBox="0 0 520 70" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block gap-y">
         <rect x="0" y="28" width="520" height="24" rx="3" fill="var(--color-background-tertiary)"/>
         <line x1="0" y1="40" x2="520" y2="40" stroke="var(--color-border-secondary)" stroke-width="0.8" stroke-dasharray="12,8"/>
         <rect id="stop-react-bar" x="10" y="30" width="80" height="10" rx="2" fill="#378ADD" opacity="0.85"/>
@@ -256,19 +256,19 @@ const mod = modules.find((m) => m.id === 8)!;
       </svg>
       <div class="stop-breakdown">
         <div class="stop-block">
-          <div class="stop-block-label">Reaction distance</div>
-          <div class="stop-block-val" id="stop-react-val">—</div>
-          <div class="stop-block-sub">~0.75 s reaction time</div>
+          <div class="caption-label">Reaction distance</div>
+          <div class="figure-small" id="stop-react-val">—</div>
+          <div class="stat-sub">~0.75 s reaction time</div>
         </div>
         <div class="stop-block">
-          <div class="stop-block-label">Braking distance (dry)</div>
-          <div class="stop-block-val" id="stop-brake-val">—</div>
-          <div class="stop-block-sub">grows as speed²</div>
+          <div class="caption-label">Braking distance (dry)</div>
+          <div class="figure-small" id="stop-brake-val">—</div>
+          <div class="stat-sub">grows as speed²</div>
         </div>
         <div class="stop-block u-bg-background-info">
-          <div class="stop-block-label u-text-text-info">Total stopping distance</div>
-          <div class="stop-block-val u-text-text-info" id="stop-total-val">—</div>
-          <div class="stop-block-sub" id="stop-context">—</div>
+          <div class="caption-label text-info">Total stopping distance</div>
+          <div class="figure-small text-info" id="stop-total-val">—</div>
+          <div class="stat-sub" id="stop-context">—</div>
         </div>
       </div>
     </div>
@@ -278,7 +278,7 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-g-0-to-100-km-h-the-universal-measure-of-a-car-s-acceleration">Part G · 0 to 100 km/h — the universal measure of a car's acceleration</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">0–100 km/h times across all categories</div>
       <div class="u-fs-11px text-secondary u-mb-md">Bar length = time taken. Shorter = faster. Click a category to explore.</div>
 
@@ -307,7 +307,7 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-h-the-speed-of-light-putting-the-universe-in-perspective">Part H · the speed of light — putting the universe in perspective</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Light travels 300,000 km per second. How far in each timeframe?</div>
       <div class="bar-row"><span class="bl">1 nanosecond</span><div class="bb u-w-0-3-pct u-bg-hex-eeedfe u-border-0-5px-solid-hex-cecbf6"><span class="bv u-text-hex-26215c u-ml-5px u-fs-10px">30 cm — a ruler</span></div></div>
       <div class="bar-row"><span class="bl">1 blink (200ms)</span><div class="bb u-w-1-5-pct u-bg-hex-cecbf6"><span class="bv u-text-hex-26215c u-fs-10px">60,000 km</span></div></div>
@@ -315,12 +315,12 @@ const mod = modules.find((m) => m.id === 8)!;
       <div class="bar-row"><span class="bl">1.3 seconds</span><div class="bb u-w-4-pct u-bg-hex-9790e5"><span class="bv u-text-hex-26215c u-fs-10px">~384,000 km — Earth→Moon</span></div></div>
       <div class="bar-row"><span class="bl">1 minute</span><div class="bb u-w-10-pct u-bg-hex-7f77dd"><span class="bv u-text-hex-fff u-fs-10px">18M km</span></div></div>
       <div class="bar-row"><span class="bl">8 minutes</span><div class="bb u-w-50-pct u-bg-hex-534ab7"><span class="bv u-text-hex-fff">150M km — Earth to Sun</span></div></div>
-      <div class="bar-row"><span class="bl">4.2 years</span><div class="bb u-w-100-pct u-bg-hex-26215c"><span class="bv u-text-hex-cecbf6">nearest star (Proxima Centauri)</span></div></div>
-      <p class="u-fs-12px text-secondary u-m-10px-0-0">When you look at the Sun, you're seeing it as it was 8 minutes ago. The night sky is a time machine — the further you look, the older the light.</p>
+      <div class="bar-row"><span class="bl">4.2 years</span><div class="bb u-w-100-pct u-bg-hex-26215c"><span class="bv text-indigo-200">nearest star (Proxima Centauri)</span></div></div>
+      <p class="u-fs-12px text-secondary panel-note">When you look at the Sun, you're seeing it as it was 8 minutes ago. The night sky is a time machine — the further you look, the older the light.</p>
     </div>
 
     <!-- Cosmic distance explorer -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Cosmic distance explorer</div>
       <div class="u-fs-11px text-secondary u-mb-md">Select a destination to see how long a light-speed signal takes to get there.</div>
       <div class="u-display-flex u-flex-wrap u-gap-6px u-mb-md" id="dest-btn-wrap">
@@ -340,21 +340,21 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-i-the-other-end-of-the-scale-speeds-that-are-almost-imperceptible">Part I · the other end of the scale — speeds that are almost imperceptible</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Incredibly slow — but not zero</div>
       <div class="u-fs-11px text-secondary u-mb-md">All values in mm/year for comparison.</div>
-      <div class="slow-row"><span class="slow-name">Human nail growth</span><div class="slow-bar-wrap"><div class="slow-bar u-w-1-5-pct u-bg-hex-7f77dd"></div></div><span class="slow-val">~42 mm/year</span></div>
-      <div class="slow-row"><span class="slow-name">Human hair growth</span><div class="slow-bar-wrap"><div class="slow-bar u-w-5-pct u-bg-hex-534ab7"></div></div><span class="slow-val">~150 mm/year</span></div>
-      <div class="slow-row"><span class="slow-name">Stalactite growth</span><div class="slow-bar-wrap"><div class="slow-bar u-w-0-3-pct u-bg-hex-85b7eb"></div></div><span class="slow-val">0.1–3 mm/year</span></div>
-      <div class="slow-row"><span class="slow-name">Continental drift</span><div class="slow-bar-wrap"><div class="slow-bar u-w-1-pct u-bg-hex-378add"></div></div><span class="slow-val">~25–50 mm/year</span></div>
-      <div class="slow-row"><span class="slow-name">Tree trunk widening</span><div class="slow-bar-wrap"><div class="slow-bar u-w-0-8-pct u-bg-hex-1d9e75"></div></div><span class="slow-val">~5–20 mm/year</span></div>
-      <div class="slow-row"><span class="slow-name">Sea-level rise (current)</span><div class="slow-bar-wrap"><div class="slow-bar u-w-0-15-pct u-bg-hex-ef9f27"></div></div><span class="slow-val">~3.6 mm/year</span></div>
-      <div class="slow-row"><span class="slow-name">Sahara expansion</span><div class="slow-bar-wrap"><div class="slow-bar u-w-100-pct u-bg-hex-ba7517"></div></div><span class="slow-val">~5,000 m/year</span></div>
-      <p class="u-fs-11px text-secondary u-m-10px-0-0">Continental drift moves at roughly the same speed as your fingernails grow. Africa and South America separate by about the width of your hand every year. Over 100 million years, that's the Atlantic Ocean.</p>
+      <div class="slow-row"><span class="slow-name">Human nail growth</span><div class="fill-space"><div class="slow-bar u-w-1-5-pct u-bg-hex-7f77dd"></div></div><span class="slow-val">~42 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Human hair growth</span><div class="fill-space"><div class="slow-bar u-w-5-pct u-bg-hex-534ab7"></div></div><span class="slow-val">~150 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Stalactite growth</span><div class="fill-space"><div class="slow-bar u-w-0-3-pct u-bg-hex-85b7eb"></div></div><span class="slow-val">0.1–3 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Continental drift</span><div class="fill-space"><div class="slow-bar u-w-1-pct u-bg-hex-378add"></div></div><span class="slow-val">~25–50 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Tree trunk widening</span><div class="fill-space"><div class="slow-bar u-w-0-8-pct u-bg-hex-1d9e75"></div></div><span class="slow-val">~5–20 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Sea-level rise (current)</span><div class="fill-space"><div class="slow-bar u-w-0-15-pct u-bg-hex-ef9f27"></div></div><span class="slow-val">~3.6 mm/year</span></div>
+      <div class="slow-row"><span class="slow-name">Sahara expansion</span><div class="fill-space"><div class="slow-bar u-w-100-pct u-bg-hex-ba7517"></div></div><span class="slow-val">~5,000 m/year</span></div>
+      <p class="u-fs-11px text-secondary panel-note">Continental drift moves at roughly the same speed as your fingernails grow. Africa and South America separate by about the width of your hand every year. Over 100 million years, that's the Atlantic Ocean.</p>
     </div>
 
     <!-- Geological timescale SVG -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Rate vs. cumulative effect — the patience of slow processes</div>
       <div class="u-fs-11px text-secondary u-mb-sm">The Grand Canyon took ~5–6 million years to form — yet the Colorado River only erodes ~0.3 mm of rock per year. Small rates, given enough time, produce colossal results.</div>
       <svg viewBox="0 0 520 130" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
@@ -391,11 +391,11 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-j-guinness-world-records-fastest-of-everything">Part J · Guinness World Records — fastest of everything</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Official world speed records across categories</div>
       <div class="u-fs-11px text-secondary u-mb-md">Click any record card to reveal the story behind it.</div>
       <div id="gwr-grid" class="u-display-grid u-gridcols-repeat-auto-fill-minmax-150px-1fr u-gap-sm"></div>
-      <div id="gwr-detail" class="u-display-none u-mt-md u-bt-0-5px-solid-border-tertiary u-pt-12px">
+      <div id="gwr-detail" class="u-display-none u-mt-md u-bt-0-5px-solid-border-tertiary pad-top">
         <div class="u-fs-11px u-fw-500 text-secondary u-transform-uppercase u-ls-0-06em u-mb-xs" id="gwr-detail-cat"></div>
         <div class="u-fs-18px u-fw-500 u-lh-1-1 u-mb-2px" id="gwr-detail-speed"></div>
         <div class="u-fs-13px u-fw-500 text-primary u-mb-sm" id="gwr-detail-title"></div>
@@ -404,7 +404,7 @@ const mod = modules.find((m) => m.id === 8)!;
     </div>
 
     <!-- GWR log-scale chart -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">All records on one scale (km/h, logarithmic)</div>
       <div class="u-fs-11px text-secondary u-mb-md">Each grid line is 10× faster.</div>
       <svg viewBox="0 0 520 310" xmlns="http://www.w3.org/2000/svg" class="u-w-100-pct u-h-auto u-display-block">
@@ -459,20 +459,20 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-k-fastest-roller-coasters-in-the-world">Part K · fastest roller coasters in the world</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Top-speed coasters — ranked</div>
       <div class="u-fs-11px text-secondary u-mb-md">Click a coaster to explore its stats and story.</div>
       <div id="rc-list" class="u-display-flex u-flex-direction-column u-gap-0"></div>
     </div>
 
-    <div id="rc-detail-box" class="u-display-none u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
-      <div class="u-display-flex u-justify-space-between u-items-flex-start u-flex-wrap u-gap-sm u-mb-md">
+    <div id="rc-detail-box" class="u-display-none u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+      <div class="u-display-flex u-justify-space-between u-align-flex-start u-flex-wrap u-gap-sm u-mb-md">
         <div>
           <div class="u-fs-11px u-fw-500 text-secondary u-transform-uppercase u-ls-0-06em" id="rc-det-loc"></div>
           <div class="u-fs-18px u-fw-500" id="rc-det-name"></div>
         </div>
-        <div class="u-align-right">
-          <div class="u-fs-26px u-fw-500 u-text-text-info" id="rc-det-speed"></div>
+        <div class="u-text-right">
+          <div class="icon-large u-fw-500 text-info" id="rc-det-speed"></div>
           <div class="u-fs-11px text-secondary" id="rc-det-open"></div>
         </div>
       </div>
@@ -500,12 +500,12 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-l-the-large-hadron-collider-the-fastest-thing-humans-have-ever-built">Part L · the Large Hadron Collider — the fastest thing humans have ever built</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem u-overflow-hidden">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-0-7rem u-overflow-hidden">
       <div class="u-display-flex u-flex-wrap u-gap-md u-mb-lg">
         <div class="u-flex-1 u-minw-130px u-bg-background-info u-radius-radius-md u-p-10px-13px">
-          <div class="u-fs-11px u-text-text-info u-mb-2px">Proton speed</div>
-          <div class="u-fs-20px u-fw-500 u-text-text-info">99.9999991% c</div>
-          <div class="u-fs-11px u-text-text-info u-opacity-0-8">~1,079,251,200 km/h</div>
+          <div class="u-fs-11px text-info u-mb-2px">Proton speed</div>
+          <div class="u-fs-20px u-fw-500 text-info">99.9999991% c</div>
+          <div class="u-fs-11px text-info u-opacity-0-8">~1,079,251,200 km/h</div>
         </div>
         <div class="u-flex-1 u-minw-130px u-bg-background-secondary u-radius-radius-md u-p-10px-13px">
           <div class="u-fs-11px text-secondary u-mb-2px">Circumference</div>
@@ -559,7 +559,7 @@ const mod = modules.find((m) => m.id === 8)!;
     </div>
 
     <!-- LHC interactive tabs -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-0-7rem">
       <div class="u-display-flex u-flex-wrap u-gap-6px u-mb-md" id="lhc-tab-btns">
         <button class="dest-btn active" onclick="showLhcTab(this,'speed')">Speed</button>
         <button class="dest-btn" onclick="showLhcTab(this,'scale')">Scale of cold</button>
@@ -571,7 +571,7 @@ const mod = modules.find((m) => m.id === 8)!;
     </div>
 
     <!-- LHC relativistic effects -->
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-lg">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What 99.9999991% of light speed actually means — relativistic effects</div>
       <div class="u-fs-11px text-secondary u-mb-md">At these speeds, Einstein's special relativity isn't a theory — it's a measurable engineering constraint.</div>
       <div class="body-speed-grid u-mb-md">
@@ -623,7 +623,7 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-m-anchor-numbers-to-memorize">Part M · anchor numbers to memorize</h2>
 
-    <div class="u-bg-background-primary u-border-0-5px-solid-border-tertiary u-radius-radius-lg u-p-13px-15px u-mb-1-2rem">
+    <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
       <div class="anchor-row"><span class="pill p-blue">5 km/h</span><div><div class="atext">Human walking speed</div><div class="asub">1 km = 12 min · the foundation of all distance intuition</div></div></div>
       <div class="anchor-row"><span class="pill p-teal">120 km/h</span><div><div class="atext">Motorway car — 2 km per minute</div><div class="asub">100 km = ~50 min driving</div></div></div>
       <div class="anchor-row"><span class="pill p-green">300 km/h</span><div><div class="atext">High-speed train (TGV, Shinkansen)</div><div class="asub">Often faster than flying for &lt;500 km city-centre to city-centre</div></div></div>
@@ -638,7 +638,7 @@ const mod = modules.find((m) => m.id === 8)!;
     ═══════════════════════════════════════════════════ -->
     <h2 class="sec" id="part-n-faster-or-slower-speed-intuition-game">Part N · faster or slower? — speed intuition game</h2>
 
-    <div class="game-card" id="game-wrap">
+    <div class="widget-card" id="game-wrap">
       <div class="game-score-row">
         <div class="game-score">Score: <strong id="game-score">0</strong> / <strong id="game-total">0</strong></div>
         <div class="game-score u-text-text-success" id="game-streak"></div>
@@ -855,8 +855,8 @@ function showCars(btn, cat) {
     row.classList.add('clickable-row');
     row.innerHTML =
       '<span class="car-rank">' + (i + 1) + '</span>' +
-      '<div class="car-name-wrap">' +
-        '<div class="car-name">' + c.name + '</div>' +
+      '<div class="flex-body">' +
+        '<div class="item-name">' + c.name + '</div>' +
         '<div class="muted-text-small">' + c.sub + '</div>' +
       '</div>' +
       '<div class="car-bar-wrap">' +
@@ -949,7 +949,7 @@ gwrRecords.forEach(r => {
   const card = document.createElement('div');
   card.className = 'gwr-record-card';
   card.innerHTML =
-    '<div class="gwr-record-cat">' + r.cat + '</div>' +
+    '<div class="micro-label">' + r.cat + '</div>' +
     '<div class="gwr-record-speed">' + r.speed + '</div>' +
     '<div class="gwr-record-title">' + r.title.split(' (')[0] + '</div>';
   card.querySelector('.gwr-record-speed').style.color = r.color;
@@ -986,8 +986,8 @@ coasters.forEach((c, i) => {
   row.className = 'coaster-row' + (i === coasters.length - 1 ? ' last' : '');
   row.innerHTML =
     '<span class="coaster-rank">#' + c.rank + '</span>' +
-    '<div class="coaster-main"><div class="coaster-name">' + c.name + '</div><div class="muted-text-small">' + c.park + ' · ' + c.location + '</div></div>' +
-    '<div class="coaster-speed-wrap"><span class="coaster-speed">' + c.speed + '</span><span class="coaster-speed-unit"> km/h</span></div>';
+    '<div class="flex-body"><div class="item-name">' + c.name + '</div><div class="muted-text-small">' + c.park + ' · ' + c.location + '</div></div>' +
+    '<div class="coaster-speed-wrap"><span class="coaster-speed">' + c.speed + '</span><span class="micro-text"> km/h</span></div>';
   row.querySelector('.coaster-speed').style.color = c.color;
   row.addEventListener('mouseenter', () => { row.style.background = 'var(--color-background-secondary)'; });
   row.addEventListener('mouseleave', () => { row.style.background = 'none'; });
@@ -1001,7 +1001,7 @@ coasters.forEach((c, i) => {
     document.getElementById('rc-det-body').textContent = c.body;
     const pillBox = document.getElementById('rc-stat-pills');
     pillBox.innerHTML = [['Height', c.height + ' m'], ['Track', c.length + ' m'], ['G-force', c.gforce + ' g'], ['Launch', c.type]]
-      .map(([k,v]) => '<span class="u-bg-background-secondary u-border-0-5px-solid-border-tertiary u-radius-radius-md u-p-3px-9px u-fs-11px text-secondary"><strong class="text-primary">' + v + '</strong> ' + k + '</span>').join('');
+      .map(([k,v]) => '<span class="u-bg-background-secondary bordered u-radius-radius-md u-p-3px-9px u-fs-11px text-secondary"><strong class="text-primary">' + v + '</strong> ' + k + '</span>').join('');
     const pct = Math.min(c.speed / 280, 1);
     document.getElementById('rc-gauge-arc').setAttribute('stroke-dashoffset', String(251.3 - 251.3 * pct));
     document.getElementById('rc-gauge-arc').setAttribute('stroke', c.color);
@@ -1080,7 +1080,7 @@ function chooseAnswer(chosen, btn) {
     b.classList.add(bkey === q.correct ? 'correct' : 'wrong');
   });
   if (correct) { gameScore++; gameStreak++; document.getElementById('game-feedback').innerHTML = '<strong class="u-text-text-success">✓ Correct!</strong> ' + q.fact; }
-  else         { gameStreak = 0; document.getElementById('game-feedback').innerHTML = '<strong class="u-text-text-danger">✗ Not quite.</strong> ' + q.fact; }
+  else         { gameStreak = 0; document.getElementById('game-feedback').innerHTML = '<strong class="text-danger">✗ Not quite.</strong> ' + q.fact; }
   document.getElementById('game-score').textContent = gameScore;
   document.getElementById('game-total').textContent = gameIdx + 1;
   document.getElementById('game-next').style.display = 'block';

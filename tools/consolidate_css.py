@@ -405,6 +405,11 @@ def main(argv: list[str]) -> int:
                 rules[m.group(1)] = (decls, span)
 
         for name, (decls, _span) in rules.items():
+            # --except keeps named classes out of a run, e.g. ones whose move
+            # into shared CSS changed which rule wins on some element
+            if '--except' in argv and name in argv[argv.index('--except') + 1].split(','):
+                skipped['excluded'] += 1
+                continue
             k = block_key(decls)
             target = shared_blocks.get(k) or (utility_blocks.get(k) if UTILITY_NAME.match(name) else None)
             if not target:
