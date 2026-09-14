@@ -55,7 +55,7 @@
 .game-end-label { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 14px; }
 
 /* === 2-col card grid (mobile-safe) === */
-.cgrid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 1rem; }
+.body-speed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 1rem; }
 
 /* === Cars 0-100 table === */
 .car-tab-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
