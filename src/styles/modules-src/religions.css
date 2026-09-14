@@ -71,48 +71,18 @@
   margin:0 auto;
 }
 
-.bb-style {
-  width:55%;
-  background:#e1f5ee;
-}
-
-.bb-confucianism {
-  width:75%;
-  background:#eeedfe;
+.bb-data {
+  background: var(--data-background);
+  width: var(--data-width);
 }
 
 .bv-confucianism {
   color:#3c3489;
 }
 
-.bb-shinto {
-  width:35%;
-  background:#faeeda;
-}
-
-.cscale-dot-style {
-  left:12%;
-  background:#3C3489;
-}
-
-.cscale-dot-shinto {
-  left:30%;
-  background:#633806;
-}
-
-.cscale-dot-taoism {
-  left:55%;
-  background:#085041;
-}
-
-.cscale-dot-buddhism {
-  left:70%;
-  background:#A0845C;
-}
-
-.cscale-dot-protestantism {
-  left:85%;
-  background:#27500a;
+.cscale-dot-data {
+  background: var(--data-background);
+  left: var(--data-left);
 }
 
 .science-models-diagram {

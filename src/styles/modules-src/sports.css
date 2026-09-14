@@ -216,32 +216,8 @@
   margin:0 0 12px;
 }
 
-.cscale-dot-style {
-  left:5%;
-}
-
-.cscale-dot-tour-de-france {
-  left:12%;
-}
-
-.cscale-dot-football-midfield {
-  left:40%;
-}
-
-.cscale-dot-nba {
-  left:55%;
-}
-
-.cscale-dot-swimmer {
-  left:65%;
-}
-
-.cscale-dot-sprint {
-  left:93%;
-}
-
-.cscale-dot-powerlifting {
-  left:98%;
+.cscale-dot-data {
+  left: var(--data-left);
 }
 
 .sports-media {
