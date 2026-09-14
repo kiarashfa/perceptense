@@ -147,9 +147,12 @@
   margin-bottom:6px;
 }
 
+.concept-note {
+  font-size: 11px;
+  color: var(--tint-color);
+}
 .concept-note-blue {
-  font-size:11px;
-  color:#185FA5;
+  --tint-color: #185FA5;
 }
 
 .concept-panel-purple {
@@ -174,8 +177,7 @@
 }
 
 .concept-note-purple {
-  font-size:11px;
-  color:#534AB7;
+  --tint-color: #534AB7;
 }
 
 .concept-panel-green {
@@ -200,8 +202,7 @@
 }
 
 .concept-note-green {
-  font-size:11px;
-  color:#0F6E56;
+  --tint-color: #0F6E56;
 }
 
 .axes-heading {
@@ -270,11 +271,14 @@
   color:#E6F1FB;
 }
 
+.kinsey-desc {
+  font-size: 10px;
+  margin-top: 2px;
+  line-height: 1.3;
+  color: var(--tint-color);
+}
 .kinsey-desc-pale-blue {
-  font-size:10px;
-  color:#B5D4F4;
-  margin-top:2px;
-  line-height:1.3;
+  --tint-color: #B5D4F4;
 }
 
 .kinsey-cell-mostly-hetero {
@@ -291,10 +295,7 @@
 }
 
 .kinsey-desc-light {
-  font-size:10px;
-  color:#E6F1FB;
-  margin-top:2px;
-  line-height:1.3;
+  --tint-color: #E6F1FB;
 }
 
 .kinsey-cell-hetero-leaning {
@@ -312,10 +313,7 @@
 }
 
 .kinsey-desc-stone {
-  font-size:10px;
-  color:#F1EFE8;
-  margin-top:2px;
-  line-height:1.3;
+  --tint-color: #F1EFE8;
 }
 
 .kinsey-cell-homo-leaning {
@@ -326,10 +324,7 @@
 }
 
 .kinsey-desc-blush {
-  font-size:10px;
-  color:#FBEAF0;
-  margin-top:2px;
-  line-height:1.3;
+  --tint-color: #FBEAF0;
 }
 
 .kinsey-cell-mostly-homo {
@@ -353,10 +348,7 @@
 }
 
 .kinsey-desc-pink {
-  font-size:10px;
-  color:#ED93B1;
-  margin-top:2px;
-  line-height:1.3;
+  --tint-color: #ED93B1;
 }
 
 .prevalence-label {
@@ -381,12 +373,15 @@
   margin-top:6px;
 }
 
+.law-dot {
+  background: var(--tint-background);
+}
 .law-dot-style {
-  background:#0C447C;
+  --tint-background: #0C447C;
 }
 
 .law-dot-pink {
-  background:#D4537E;
+  --tint-background: #D4537E;
 }
 
 .generation-chart {
@@ -448,11 +443,11 @@
 }
 
 .law-dot-grey {
-  background:#888780;
+  --tint-background: #888780;
 }
 
 .law-dot-maroon {
-  background:#4B1528;
+  --tint-background: #4B1528;
 }
 
 .legal-status-chart {

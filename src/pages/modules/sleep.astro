@@ -29,11 +29,11 @@ const mod = modules.find((m) => m.id === 22)!;
       <div class="stack-spaced">
         <div class="cycle-caption">A single 90-minute cycle — stages in order</div>
         <div class="cycle-bar">
-          <div class="cycle-block-n1"><span class="stage-label-n1">N1 (5 min)</span></div>
-          <div class="cycle-block-n2"><span class="stage-label-white">N2 (20–25 min)</span></div>
-          <div class="cycle-block-n3"><span class="stage-label-n3">N3 deep (20–40 min)</span></div>
-          <div class="cycle-block-n2-brief"><span class="stage-label-white">N2 brief</span></div>
-          <div class="cycle-block-rem"><span class="stage-label-white">REM (10–60 min)</span></div>
+          <div class="cycle-block-n1"><span class="stage-label stage-label-n1">N1 (5 min)</span></div>
+          <div class="cycle-block-n2"><span class="stage-label stage-label-white">N2 (20–25 min)</span></div>
+          <div class="cycle-block-n3"><span class="stage-label stage-label-n3">N3 deep (20–40 min)</span></div>
+          <div class="cycle-block-n2-brief"><span class="stage-label stage-label-white">N2 brief</span></div>
+          <div class="cycle-block-rem"><span class="stage-label stage-label-white">REM (10–60 min)</span></div>
         </div>
         <div class="cycle-legend">
           <span class="cycle-legend-item"><span class="sleep-media"></span>N1 light</span>
@@ -121,7 +121,7 @@ const mod = modules.find((m) => m.id === 22)!;
     <h2 class="sec" id="part-b-the-four-sleep-stages-what-happens-in-each">Part B · the four sleep stages — what happens in each</h2>
 
     <!-- N1 -->
-    <div class="stage-panel-n1">
+    <div class="stage-panel stage-panel-n1">
       <div class="header-row"><span class="text-strong-medium u-text-hex-042c53">Stage N1 — light sleep / hypnagogic state</span><span class="pill-badge sbadge-style">1–7 min, ~5% of sleep</span></div>
       <div class="sgrid">
         <div class="sbox sbox-style"><p class="sl text-blue-900">Brain waves</p><p class="sv u-text-hex-042c53">Alpha waves slow to theta waves. Easily awakened — "not really asleep yet."</p></div>
@@ -132,7 +132,7 @@ const mod = modules.find((m) => m.id === 22)!;
     </div>
 
     <!-- N2 -->
-    <div class="stage-panel-n2">
+    <div class="stage-panel stage-panel-n2">
       <div class="header-row"><span class="text-strong-medium u-text-hex-26215c">Stage N2 — true sleep</span><span class="pill-badge sbadge-n2">20–30 min per cycle, ~45–50% of total sleep</span></div>
       <div class="sgrid">
         <div class="sbox sbox-n2"><p class="sl text-indigo-900">Brain waves</p><p class="sv u-text-hex-26215c">Sleep spindles (bursts of 12–14 Hz oscillations, 0.5–2 sec) and K-complexes (sharp negative waves). Both are unique to N2.</p></div>
@@ -143,7 +143,7 @@ const mod = modules.find((m) => m.id === 22)!;
     </div>
 
     <!-- N3 -->
-    <div class="stage-panel-n3">
+    <div class="stage-panel stage-panel-n3">
       <div class="header-row"><span class="text-strong-medium text-indigo-200">Stage N3 — deep sleep / slow-wave sleep (SWS)</span><span class="pill-badge sbadge-n3">20–40 min early, near zero later, ~20% of total</span></div>
       <div class="sgrid">
         <div class="sbox bg-indigo-900"><p class="sl sl-n3">Brain waves</p><p class="sv text-indigo-200">Delta waves — the slowest, highest-amplitude brain waves. Less than 1 Hz. The brain is maximally synchronised and "quiet."</p></div>
@@ -154,7 +154,7 @@ const mod = modules.find((m) => m.id === 22)!;
     </div>
 
     <!-- REM -->
-    <div class="stage-panel-rem">
+    <div class="stage-panel stage-panel-rem">
       <div class="header-row"><span class="text-strong-medium sname-rem">REM — Rapid Eye Movement sleep</span><span class="pill-badge sbadge-rem">10–60 min per cycle, ~20–25% of total — dreams here</span></div>
       <div class="sgrid">
         <div class="sbox sbox-rem"><p class="sl text-hex-72243e">Brain waves</p><p class="sv sname-rem">Almost identical to waking brain — fast, low-amplitude, desynchronised. The brain is as active as when awake. Eyes dart rapidly (hence the name). Body is in voluntary muscle paralysis (atonia).</p></div>

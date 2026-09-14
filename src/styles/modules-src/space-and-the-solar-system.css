@@ -214,10 +214,13 @@
   gap:4px;
 }
 
+.sun-layer-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tint-color);
+}
 .sun-layer-name-deep {
-  font-size:12px;
-  font-weight:600;
-  color:#FFDDCC;
+  --tint-color: #FFDDCC;
 }
 
 .sun-layer-range-deep {
@@ -225,11 +228,14 @@
   color:#FFAA88;
 }
 
+.sun-layer-desc {
+  font-size: 11px;
+  margin-top: 3px;
+  line-height: 1.4;
+  color: var(--tint-color);
+}
 .sun-layer-desc-deep {
-  font-size:11px;
-  color:#FFAA88;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #FFAA88;
 }
 
 .sun-layer-radiative {
@@ -243,9 +249,7 @@
 }
 
 .sun-layer-name-convective {
-  font-size:12px;
-  font-weight:600;
-  color:#FFEEDD;
+  --tint-color: #FFEEDD;
 }
 
 .sun-layer-range-convective {
@@ -254,10 +258,7 @@
 }
 
 .sun-layer-desc-convective {
-  font-size:11px;
-  color:#FFCC99;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #FFCC99;
 }
 
 .sun-layer-photosphere {
@@ -266,9 +267,7 @@
 }
 
 .sun-layer-name-photosphere {
-  font-size:12px;
-  font-weight:600;
-  color:#FFF0CC;
+  --tint-color: #FFF0CC;
 }
 
 .sun-layer-range-photosphere {
@@ -277,10 +276,7 @@
 }
 
 .sun-layer-desc-photosphere {
-  font-size:11px;
-  color:#FFE0AA;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #FFE0AA;
 }
 
 .sun-layer-corona {
@@ -290,9 +286,7 @@
 }
 
 .sun-layer-name-corona {
-  font-size:12px;
-  font-weight:600;
-  color:#FFF5E0;
+  --tint-color: #FFF5E0;
 }
 
 .sun-layer-range-corona {
@@ -301,10 +295,7 @@
 }
 
 .sun-layer-desc-corona {
-  font-size:11px;
-  color:#FFE8BB;
-  margin-top:3px;
-  line-height:1.4;
+  --tint-color: #FFE8BB;
 }
 
 .star-dot-style {
@@ -574,10 +565,13 @@
   padding:10px 14px;
 }
 
+.layer-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--tint-color);
+}
 .layer-name-light {
-  font-size:12px;
-  font-weight:500;
-  color:#E6F1FB;
+  --tint-color: #E6F1FB;
 }
 
 .band-range-light {
@@ -585,45 +579,46 @@
   color:#B5D4F4;
 }
 
+.band-desc {
+  font-size: 11px;
+  margin-top: 4px;
+  line-height: 1.4;
+  color: var(--tint-color);
+}
 .band-desc-light {
-  font-size:11px;
-  color:#85B7EB;
-  margin-top:4px;
-  line-height:1.4;
+  --tint-color: #85B7EB;
 }
 
+.atm-band {
+  padding: 10px 14px;
+  background: var(--tint-background);
+  border-left: var(--tint-border-left);
+  border-right: var(--tint-border-right);
+}
 .atm-band-deep-blue {
-  background:#0C447C;
-  padding:10px 14px;
-  border-left:0.5px solid #042C53;
-  border-right:0.5px solid #042C53;
+  --tint-background: #0C447C;
+  --tint-border-left: 0.5px solid #042C53;
+  --tint-border-right: 0.5px solid #042C53;
 }
 
 .atm-band-blue {
-  background:#185FA5;
-  padding:10px 14px;
-  border-left:0.5px solid #042C53;
-  border-right:0.5px solid #042C53;
+  --tint-background: #185FA5;
+  --tint-border-left: 0.5px solid #042C53;
+  --tint-border-right: 0.5px solid #042C53;
 }
 
 .band-desc-mid {
-  font-size:11px;
-  color:#B5D4F4;
-  margin-top:4px;
-  line-height:1.4;
+  --tint-color: #B5D4F4;
 }
 
 .atm-band-pale-blue {
-  background:#B5D4F4;
-  padding:10px 14px;
-  border-left:0.5px solid #85B7EB;
-  border-right:0.5px solid #85B7EB;
+  --tint-background: #B5D4F4;
+  --tint-border-left: 0.5px solid #85B7EB;
+  --tint-border-right: 0.5px solid #85B7EB;
 }
 
 .layer-name-dark {
-  font-size:12px;
-  font-weight:500;
-  color:#042C53;
+  --tint-color: #042C53;
 }
 
 .band-range-dark {
@@ -632,10 +627,7 @@
 }
 
 .band-desc-dark {
-  font-size:11px;
-  color:#0C447C;
-  margin-top:4px;
-  line-height:1.4;
+  --tint-color: #0C447C;
 }
 
 .atm-band-ice {
@@ -652,10 +644,7 @@
 }
 
 .band-desc-blue {
-  font-size:11px;
-  color:#185FA5;
-  margin-top:4px;
-  line-height:1.4;
+  --tint-color: #185FA5;
 }
 
 .karman-note {

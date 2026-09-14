@@ -127,82 +127,77 @@
   margin-bottom:1rem;
 }
 
+.group-panel {
+  border-radius: var(--border-radius-lg);
+  padding: 13px 15px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .group-panel-lvmh {
-  background:#EEEDFE;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #AFA9EC;
+  --tint-background: #EEEDFE;
+  --tint-border: 0.5px solid #AFA9EC;
 }
 
+.group-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--tint-color);
+}
 .group-title-lvmh {
-  font-size:13px;
-  font-weight:500;
-  color:#26215C;
-  margin-bottom:4px;
+  --tint-color: #26215C;
 }
 
+.group-owner {
+  font-size: 11px;
+  margin-bottom: 6px;
+  color: var(--tint-color);
+}
 .group-owner-lvmh {
-  font-size:11px;
-  color:#3C3489;
-  margin-bottom:6px;
+  --tint-color: #3C3489;
 }
 
+.group-brands {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--tint-color);
+}
 .group-brands-lvmh {
-  font-size:11px;
-  color:#534AB7;
-  line-height:1.6;
+  --tint-color: #534AB7;
 }
 
 .group-panel-kering {
-  background:#FAECE7;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #F0997B;
+  --tint-background: #FAECE7;
+  --tint-border: 0.5px solid #F0997B;
 }
 
 .group-title-kering {
-  font-size:13px;
-  font-weight:500;
-  color:#4A1B0C;
-  margin-bottom:4px;
+  --tint-color: #4A1B0C;
 }
 
 .group-owner-kering {
-  font-size:11px;
-  color:#712B13;
-  margin-bottom:6px;
+  --tint-color: #712B13;
 }
 
 .group-brands-kering {
-  font-size:11px;
-  color:#993C1D;
-  line-height:1.6;
+  --tint-color: #993C1D;
 }
 
 .group-panel-richemont {
-  background:#E6F1FB;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .group-title-richemont {
-  font-size:13px;
-  font-weight:500;
-  color:#042C53;
-  margin-bottom:4px;
+  --tint-color: #042C53;
 }
 
 .group-owner-richemont {
-  font-size:11px;
-  color:#0C447C;
-  margin-bottom:6px;
+  --tint-color: #0C447C;
 }
 
 .group-brands-richemont {
-  font-size:11px;
-  color:#185FA5;
-  line-height:1.6;
+  --tint-color: #185FA5;
 }
 
 .size-cat {
@@ -411,18 +406,18 @@
   color:var(--color-text-secondary);
 }
 
+.suit-chip {
+  color: #E8E6DF;
+  border-radius: 3px;
+  padding: 2px 8px;
+  background: var(--tint-background);
+}
 .suit-chip-charcoal {
-  background:#2C2C2A;
-  color:#E8E6DF;
-  border-radius:3px;
-  padding:2px 8px;
+  --tint-background: #2C2C2A;
 }
 
 .suit-chip-black {
-  background:#1A1A18;
-  color:#E8E6DF;
-  border-radius:3px;
-  padding:2px 8px;
+  --tint-background: #1A1A18;
 }
 
 .rule-note {
@@ -448,61 +443,56 @@
   margin-bottom:0;
 }
 
+.scent-panel {
+  border-radius: var(--border-radius-md);
+  padding: 9px 11px;
+  background: var(--tint-background);
+}
 .scent-panel-indigo {
-  background:#26215C;
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
+  --tint-background: #26215C;
 }
 
+.scent-title {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: var(--tint-color);
+}
 .scent-title-indigo {
-  font-size:11px;
-  font-weight:600;
-  color:#CECBF6;
-  margin-bottom:3px;
+  --tint-color: #CECBF6;
 }
 
+.scent-desc {
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--tint-color);
+}
 .scent-desc-indigo {
-  font-size:10px;
-  color:#AFA9EC;
-  line-height:1.5;
+  --tint-color: #AFA9EC;
 }
 
 .scent-panel-blue {
-  background:#185FA5;
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
+  --tint-background: #185FA5;
 }
 
 .scent-title-blue {
-  font-size:11px;
-  font-weight:600;
-  color:#E6F1FB;
-  margin-bottom:3px;
+  --tint-color: #E6F1FB;
 }
 
 .scent-desc-blue {
-  font-size:10px;
-  color:#B5D4F4;
-  line-height:1.5;
+  --tint-color: #B5D4F4;
 }
 
 .scent-panel-teal {
-  background:#1D9E75;
-  border-radius:var(--border-radius-md);
-  padding:9px 11px;
+  --tint-background: #1D9E75;
 }
 
 .scent-title-teal {
-  font-size:11px;
-  font-weight:600;
-  color:#E1F5EE;
-  margin-bottom:3px;
+  --tint-color: #E1F5EE;
 }
 
 .scent-desc-teal {
-  font-size:10px;
-  color:#9FE1CB;
-  line-height:1.5;
+  --tint-color: #9FE1CB;
 }
 
 .showwatch-control {

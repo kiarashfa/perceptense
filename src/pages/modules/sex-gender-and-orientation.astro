@@ -28,17 +28,17 @@ const mod = modules.find((m) => m.id === 23)!;
         <div class="gender-panel">
           <div class="gender-label">Biological sex</div>
           <div class="gender-text">The biological characteristics: chromosomes, hormones, gonads, and anatomy. Primarily determined at conception; develops through fetal development and puberty. Mostly binary in distribution but includes variation (intersex).</div>
-          <div class="concept-note-blue">Assigned at birth based on visible anatomy. May not reflect internal anatomy, chromosomes, or hormones.</div>
+          <div class="concept-note concept-note-blue">Assigned at birth based on visible anatomy. May not reflect internal anatomy, chromosomes, or hormones.</div>
         </div>
         <div class="concept-panel-purple">
           <div class="concept-title-purple">Gender identity</div>
           <div class="concept-desc-purple">A person's internal, psychological sense of their own gender — who they are. May or may not correspond with biological sex. Not the same as gender expression (how you present yourself). A core aspect of self.</div>
-          <div class="concept-note-purple">Not a choice. Research suggests it is established early in development, with neurobiological components.</div>
+          <div class="concept-note concept-note-purple">Not a choice. Research suggests it is established early in development, with neurobiological components.</div>
         </div>
         <div class="concept-panel-green">
           <div class="concept-title-green">Sexual orientation</div>
           <div class="concept-desc-green">The pattern of emotional, romantic, and/or sexual attraction to others. Defined by the gender(s) a person is attracted to, not by their own gender. Distinct from gender identity — transgender people have all orientations.</div>
-          <div class="concept-note-green">Also not a choice. Strong evidence for biological and developmental (prenatal hormonal) contributions.</div>
+          <div class="concept-note concept-note-green">Also not a choice. Strong evidence for biological and developmental (prenatal hormonal) contributions.</div>
         </div>
       </div>
       <div class="note-panel">
@@ -237,13 +237,13 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="panel-title-spaced">Alfred Kinsey's 0–6 scale (1948) — a landmark and a limitation</div>
       <div class="kinsey-wrap">
         <div class="kinsey-bar">
-          <div class="gender-card"><div class="kinsey-num-pale">0</div><div class="kinsey-desc-pale-blue">Exclusively heterosexual</div></div>
-          <div class="kinsey-cell-mostly-hetero"><div class="kinsey-num">1</div><div class="kinsey-desc-light">Mostly hetero, incidental same-sex</div></div>
-          <div class="kinsey-cell-hetero-leaning"><div class="kinsey-num">2</div><div class="kinsey-desc-light">Mostly hetero, more than incidental</div></div>
-          <div class="kinsey-cell-equal"><div class="kinsey-num">3</div><div class="kinsey-desc-stone">Equally hetero and homosexual</div></div>
-          <div class="kinsey-cell-homo-leaning"><div class="kinsey-num">4</div><div class="kinsey-desc-blush">Mostly homosexual, more than incidental</div></div>
-          <div class="kinsey-cell-mostly-homo"><div class="kinsey-num">5</div><div class="kinsey-desc-blush">Mostly homosexual, incidental hetero</div></div>
-          <div class="kinsey-cell-exclusively-homo"><div class="kinsey-num-pink">6</div><div class="kinsey-desc-pink">Exclusively homosexual</div></div>
+          <div class="gender-card"><div class="kinsey-num-pale">0</div><div class="kinsey-desc kinsey-desc-pale-blue">Exclusively heterosexual</div></div>
+          <div class="kinsey-cell-mostly-hetero"><div class="kinsey-num">1</div><div class="kinsey-desc kinsey-desc-light">Mostly hetero, incidental same-sex</div></div>
+          <div class="kinsey-cell-hetero-leaning"><div class="kinsey-num">2</div><div class="kinsey-desc kinsey-desc-light">Mostly hetero, more than incidental</div></div>
+          <div class="kinsey-cell-equal"><div class="kinsey-num">3</div><div class="kinsey-desc kinsey-desc-stone">Equally hetero and homosexual</div></div>
+          <div class="kinsey-cell-homo-leaning"><div class="kinsey-num">4</div><div class="kinsey-desc kinsey-desc-blush">Mostly homosexual, more than incidental</div></div>
+          <div class="kinsey-cell-mostly-homo"><div class="kinsey-num">5</div><div class="kinsey-desc kinsey-desc-blush">Mostly homosexual, incidental hetero</div></div>
+          <div class="kinsey-cell-exclusively-homo"><div class="kinsey-num-pink">6</div><div class="kinsey-desc kinsey-desc-pink">Exclusively homosexual</div></div>
         </div>
       </div>
       <div class="dist-grid">
@@ -320,10 +320,10 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="dot-chart-heading">Dot visualisation — 100 representative people, US adult population (approximate)</div>
       <div id="dotGridWrap" class="dot-field"></div>
       <div class="dot-legend">
-        <div class="legend-item"><div class="key-dot law-dot-style"></div><span>Straight (≈87%)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot law-dot-style"></div><span>Straight (≈87%)</span></div>
         <div class="legend-item"><div class="key-dot bg-indigo-900"></div><span>Gay/lesbian (≈3.5%)</span></div>
         <div class="legend-item"><div class="key-dot bg-accent"></div><span>Bisexual (≈5.5%)</span></div>
-        <div class="legend-item"><div class="key-dot law-dot-pink"></div><span>Other LGBT+ (≈4%)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot law-dot-pink"></div><span>Other LGBT+ (≈4%)</span></div>
       </div>
 
       <div class="note-spaced">
@@ -524,9 +524,9 @@ const mod = modules.find((m) => m.id === 23)!;
       <div class="chip-row u-mb-md">
         <div class="legend-item"><div class="key-dot u-bg-hex-27500a"></div><span>Marriage legal (~36 countries)</span></div>
         <div class="legend-item"><div class="key-dot bg-accent"></div><span>Civil unions / partial recognition (~20 countries)</span></div>
-        <div class="legend-item"><div class="key-dot law-dot-grey"></div><span>No recognition, legal (~70 countries)</span></div>
-        <div class="legend-item"><div class="key-dot law-dot-pink"></div><span>Criminalised (~60 countries)</span></div>
-        <div class="legend-item"><div class="key-dot law-dot-maroon"></div><span>Death penalty possible (~11 countries)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot law-dot-grey"></div><span>No recognition, legal (~70 countries)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot law-dot-pink"></div><span>Criminalised (~60 countries)</span></div>
+        <div class="legend-item"><div class="key-dot law-dot law-dot-maroon"></div><span>Death penalty possible (~11 countries)</span></div>
       </div>
 
       <!-- SVG world bar chart showing approximate country counts -->
@@ -583,17 +583,17 @@ const mod = modules.find((m) => m.id === 23)!;
         <div class="gender-panel">
           <div class="gender-label">Physical health</div>
           <div class="gender-text">Unprotected sex carries risks of sexually transmitted infections (STIs) and, for people with reproductive capacity, unintended pregnancy. Many STIs are asymptomatic for long periods yet cause long-term harm or are transmissible to others. Consistent, correct use of protection dramatically reduces these risks.</div>
-          <div class="concept-note-blue">Prevention is more effective than treatment for most STIs. Many are permanently manageable but not curable.</div>
+          <div class="concept-note concept-note-blue">Prevention is more effective than treatment for most STIs. Many are permanently manageable but not curable.</div>
         </div>
         <div class="concept-panel-purple">
           <div class="concept-title-purple">Consent and autonomy</div>
           <div class="concept-desc-purple">Safe sex is inseparable from consent. Both people have the right to know the risks involved, to agree on protection methods, and to withdraw consent at any point. Removing or sabotaging protection without a partner's knowledge ("stealthing") is a form of sexual assault in many jurisdictions.</div>
-          <div class="concept-note-purple">Informed consent means both partners understand what is and is not being used for protection and agree to it freely.</div>
+          <div class="concept-note concept-note-purple">Informed consent means both partners understand what is and is not being used for protection and agree to it freely.</div>
         </div>
         <div class="concept-panel-green">
           <div class="concept-title-green">Emotional wellbeing</div>
           <div class="concept-desc-green">Anxiety about STIs or unintended pregnancy significantly affects sexual wellbeing and relationship satisfaction. Using protection consistently reduces this background stress. Open communication about sexual health also builds trust and intimacy in relationships.</div>
-          <div class="concept-note-green">Sexual health conversations, though sometimes awkward, consistently improve relationship quality and trust when approached honestly.</div>
+          <div class="concept-note concept-note-green">Sexual health conversations, though sometimes awkward, consistently improve relationship quality and trust when approached honestly.</div>
         </div>
       </div>
       <div class="note-panel">
@@ -941,17 +941,17 @@ const mod = modules.find((m) => m.id === 23)!;
         <div class="gender-panel">
           <div class="gender-label">The shedding event</div>
           <div class="gender-text">A period is the monthly shedding of the uterine lining (endometrium) when pregnancy does not occur. The lining thickens every cycle in preparation for a possible implanted embryo. When no embryo arrives, hormones drop, the lining detaches, and the body expels it through the vagina over roughly 3 to 7 days.</div>
-          <div class="concept-note-blue">Average total blood loss per period: 30–80 ml. Anything consistently above 80 ml is medically defined as heavy menstrual bleeding (menorrhagia).</div>
+          <div class="concept-note concept-note-blue">Average total blood loss per period: 30–80 ml. Anything consistently above 80 ml is medically defined as heavy menstrual bleeding (menorrhagia).</div>
         </div>
         <div class="concept-panel-purple">
           <div class="concept-title-purple">What is in the flow</div>
           <div class="concept-desc-purple">Menstrual fluid is not purely blood. It is roughly half blood and half a mix of endometrial tissue, cervical mucus, vaginal secretions, and small amounts of unfertilised egg material. The dark or brown colour often seen at the start or end is older, oxidised blood; bright red is fresher flow.</div>
-          <div class="concept-note-purple">Clots up to the size of a 10-cent coin are normal. Frequent large clots are not, and they warrant a clinical conversation.</div>
+          <div class="concept-note concept-note-purple">Clots up to the size of a 10-cent coin are normal. Frequent large clots are not, and they warrant a clinical conversation.</div>
         </div>
         <div class="concept-panel-green">
           <div class="concept-title-green">When it begins and ends</div>
           <div class="concept-desc-green">Menarche (first period) typically occurs between ages 9 and 15, with the global average sitting around 12. Menopause (final period) occurs on average around 51, defined retrospectively as 12 consecutive months without bleeding. Between those bookends sit roughly 450 cycles in a typical lifetime, a substantial fraction of a person's life.</div>
-          <div class="concept-note-green">Earlier menarche has shifted globally over the last century, attributed largely to improved nutrition and rising body fat percentages.</div>
+          <div class="concept-note concept-note-green">Earlier menarche has shifted globally over the last century, attributed largely to improved nutrition and rising body fat percentages.</div>
         </div>
       </div>
       <div class="note-panel">

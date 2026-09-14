@@ -189,24 +189,24 @@ const mod = modules.find((m) => m.id === 27)!;
     <h2 class="sec" id="part-e-who-s-who-in-mental-health-the-professional-hierarchy">Part E · who's who in mental health — the professional hierarchy</h2>
 
     <div class="professionals-grid">
-      <div class="pro-panel-psychiatrist">
-        <div class="pro-title-psychiatrist">Psychiatrist (MD)</div>
-        <div class="pro-desc-psychiatrist">Medical doctor who specialised in psychiatry. Can diagnose mental disorders, prescribe medication (antidepressants, antipsychotics, mood stabilisers), and provide therapy. The highest level of medical authority in mental health.</div>
+      <div class="pro-panel pro-panel-psychiatrist">
+        <div class="pro-title pro-title-psychiatrist">Psychiatrist (MD)</div>
+        <div class="pro-desc pro-desc-psychiatrist">Medical doctor who specialised in psychiatry. Can diagnose mental disorders, prescribe medication (antidepressants, antipsychotics, mood stabilisers), and provide therapy. The highest level of medical authority in mental health.</div>
         <div class="pro-training-psychiatrist">Training: medical degree (5–6 years) + psychiatric residency (4–5 years). Can admit patients to hospital. Most appropriate for: severe mental illness (schizophrenia, bipolar disorder), medication management, complex cases.</div>
       </div>
-      <div class="pro-panel-psychologist">
-        <div class="pro-title-psychologist">Clinical psychologist (PhD/PsyD)</div>
-        <div class="pro-desc-psychologist">Doctoral-level specialist trained in psychological assessment, diagnosis, and therapy. Cannot prescribe medication in most countries. Strong emphasis on research and evidence-based practice.</div>
+      <div class="pro-panel pro-panel-psychologist">
+        <div class="pro-title pro-title-psychologist">Clinical psychologist (PhD/PsyD)</div>
+        <div class="pro-desc pro-desc-psychologist">Doctoral-level specialist trained in psychological assessment, diagnosis, and therapy. Cannot prescribe medication in most countries. Strong emphasis on research and evidence-based practice.</div>
         <div class="pro-training-psychologist">Training: undergraduate + doctoral programme (4–7 years) + supervised clinical hours. Can diagnose using DSM/ICD. Most appropriate for: depression, anxiety, PTSD, eating disorders, personality disorders, neuropsychological assessment.</div>
       </div>
-      <div class="pro-panel-psychotherapist">
-        <div class="pro-title-psychotherapist">Psychotherapist / counsellor</div>
-        <div class="pro-desc-psychotherapist">Practises psychotherapy using psychological methods. Training and regulation varies widely by country and approach. "Psychotherapist" is not legally protected in all jurisdictions.</div>
+      <div class="pro-panel pro-panel-psychotherapist">
+        <div class="pro-title pro-title-psychotherapist">Psychotherapist / counsellor</div>
+        <div class="pro-desc pro-desc-psychotherapist">Practises psychotherapy using psychological methods. Training and regulation varies widely by country and approach. "Psychotherapist" is not legally protected in all jurisdictions.</div>
         <div class="pro-training-psychotherapist">Training: varies from 2-year diploma to master's degree. Most appropriate for: relationship issues, life transitions, mild-moderate depression and anxiety, bereavement.</div>
       </div>
-      <div class="pro-panel-neuropsychologist">
-        <div class="pro-title-neuropsychologist">Neuropsychologist</div>
-        <div class="pro-desc-neuropsychologist">Specialist in the relationship between brain function and behaviour. Assesses cognitive deficits from brain injury, stroke, dementia, or developmental conditions. Doctoral level.</div>
+      <div class="pro-panel pro-panel-neuropsychologist">
+        <div class="pro-title pro-title-neuropsychologist">Neuropsychologist</div>
+        <div class="pro-desc pro-desc-neuropsychologist">Specialist in the relationship between brain function and behaviour. Assesses cognitive deficits from brain injury, stroke, dementia, or developmental conditions. Doctoral level.</div>
         <div class="pro-use-neuropsychologist">Most appropriate for: dementia assessment, post-stroke evaluation, traumatic brain injury, ADHD and learning disorder assessment, pre-surgical neurological evaluation.</div>
       </div>
     </div>
@@ -247,17 +247,17 @@ const mod = modules.find((m) => m.id === 27)!;
       <div class="chart-kicker">The memory pipeline (Atkinson-Shiffrin model)</div>
       <div class="memory-pipeline">
         <div class="memory-stage-sensory">
-          <div class="stage-name-blue">Sensory register</div>
+          <div class="stage-name stage-name-blue">Sensory register</div>
           <div class="stage-detail">Duration: &lt;1 second (iconic) / 3–4 s (echoic)<br>Capacity: very large<br>Mostly unconscious</div>
         </div>
         <div class="pipeline-arrow">→</div>
-        <div class="memory-stage-working">
-          <div class="stage-name-blue">Working memory</div>
+        <div class="memory-stage memory-stage-working">
+          <div class="stage-name stage-name-blue">Working memory</div>
           <div class="stage-detail-blue">Duration: 15–30 s without rehearsal<br>Capacity: 7±2 chunks (Miller)<br>Active, conscious processing</div>
         </div>
         <div class="pipeline-arrow">→</div>
-        <div class="memory-stage-long-term">
-          <div class="stage-name-green">Long-term memory</div>
+        <div class="memory-stage memory-stage-long-term">
+          <div class="stage-name stage-name-green">Long-term memory</div>
           <div class="stage-detail-green">Duration: potentially lifelong<br>Capacity: effectively unlimited<br>Encoded through rehearsal &amp; meaning</div>
         </div>
       </div>
@@ -270,22 +270,22 @@ const mod = modules.find((m) => m.id === 27)!;
       <div class="memory-type-card">
         <div class="memory-type-name">Episodic</div>
         <div class="memory-type-desc">Personal events and experiences, with a sense of time and place ("mental time travel"). What you had for breakfast. Your first day at school.</div>
-        <div class="memory-tag-episodic">Hippocampus-dependent · reconstructive · highly fallible</div>
+        <div class="memory-tag memory-tag-episodic">Hippocampus-dependent · reconstructive · highly fallible</div>
       </div>
       <div class="memory-type-card">
         <div class="memory-type-name">Semantic</div>
         <div class="memory-type-desc">General world knowledge, facts, concepts, meanings — detached from personal experience. The capital of France. What a dog is. How grammar works.</div>
-        <div class="memory-tag-semantic">Network of concepts · stable · culturally shared</div>
+        <div class="memory-tag memory-tag-semantic">Network of concepts · stable · culturally shared</div>
       </div>
       <div class="memory-type-card">
         <div class="memory-type-name">Procedural</div>
         <div class="memory-type-desc">Skills and habits — "knowing how." Riding a bike, touch-typing, driving. Largely unconscious; once consolidated, very resistant to forgetting.</div>
-        <div class="memory-tag-procedural">Basal ganglia · cerebellum · highly robust</div>
+        <div class="memory-tag memory-tag-procedural">Basal ganglia · cerebellum · highly robust</div>
       </div>
       <div class="memory-type-card">
         <div class="memory-type-name">Prospective</div>
         <div class="memory-type-desc">Memory for future intentions — "remembering to remember." Taking medication at 8pm. Passing on a message. Often fails without external cues.</div>
-        <div class="memory-tag-prospective">Frontal lobe · event-based vs time-based</div>
+        <div class="memory-tag memory-tag-prospective">Frontal lobe · event-based vs time-based</div>
       </div>
     </div>
 
@@ -370,17 +370,17 @@ const mod = modules.find((m) => m.id === 27)!;
     </div>
 
     <div class="arousal-zones-grid">
-      <div class="zone-panel-under">
-        <div class="zone-title-under">Under-aroused zone</div>
-        <div class="zone-desc-under">Boredom, disengagement, poor attention. Performance is low not from overwhelm but from insufficient motivation. Common during repetitive tasks.</div>
+      <div class="zone-panel zone-panel-under">
+        <div class="zone-title zone-title-under">Under-aroused zone</div>
+        <div class="zone-desc zone-desc-under">Boredom, disengagement, poor attention. Performance is low not from overwhelm but from insufficient motivation. Common during repetitive tasks.</div>
       </div>
-      <div class="zone-panel-optimal">
-        <div class="zone-title-optimal">Optimal zone</div>
-        <div class="zone-desc-optimal">Focused attention, appropriate urgency, high-quality output. This is also the state associated with Csikszentmihalyi's flow. The optimal point varies by task complexity.</div>
+      <div class="zone-panel zone-panel-optimal">
+        <div class="zone-title zone-title-optimal">Optimal zone</div>
+        <div class="zone-desc zone-desc-optimal">Focused attention, appropriate urgency, high-quality output. This is also the state associated with Csikszentmihalyi's flow. The optimal point varies by task complexity.</div>
       </div>
-      <div class="zone-panel-over">
-        <div class="zone-title-over">Over-aroused zone</div>
-        <div class="zone-desc-over">Anxiety, tunnel vision, executive function impairment. Stress hormones (cortisol, adrenaline) narrow attention and impair working memory — fine for running from a tiger, terrible for a job interview.</div>
+      <div class="zone-panel zone-panel-over">
+        <div class="zone-title zone-title-over">Over-aroused zone</div>
+        <div class="zone-desc zone-desc-over">Anxiety, tunnel vision, executive function impairment. Stress hormones (cortisol, adrenaline) narrow attention and impair working memory — fine for running from a tiger, terrible for a job interview.</div>
       </div>
     </div>
 

@@ -173,10 +173,13 @@
   justify-content:center;
 }
 
+.stage-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--tint-color);
+}
 .stage-label-n1 {
-  font-size:10px;
-  color:#042C53;
-  font-weight:500;
+  --tint-color: #042C53;
 }
 
 .cycle-block-n2 {
@@ -188,9 +191,7 @@
 }
 
 .stage-label-white {
-  font-size:10px;
-  color:#fff;
-  font-weight:500;
+  --tint-color: #fff;
 }
 
 .cycle-block-n3 {
@@ -202,9 +203,7 @@
 }
 
 .stage-label-n3 {
-  font-size:10px;
-  color:#CECBF6;
-  font-weight:500;
+  --tint-color: #CECBF6;
 }
 
 .cycle-block-n2-brief {
@@ -392,12 +391,16 @@
   font-family:var(--font-sans, sans-serif);
 }
 
+.stage-panel {
+  border-radius: var(--border-radius-lg, 12px);
+  padding: 13px 15px;
+  margin-bottom: 10px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .stage-panel-n1 {
-  background:#E6F1FB;
-  border:0.5px solid #85B7EB;
-  border-radius:var(--border-radius-lg, 12px);
-  padding:13px 15px;
-  margin-bottom:10px;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .sbadge-style {
@@ -410,11 +413,8 @@
 }
 
 .stage-panel-n2 {
-  background:#EEEDFE;
-  border:0.5px solid #AFA9EC;
-  border-radius:var(--border-radius-lg, 12px);
-  padding:13px 15px;
-  margin-bottom:10px;
+  --tint-background: #EEEDFE;
+  --tint-border: 0.5px solid #AFA9EC;
 }
 
 .sbadge-n2 {
@@ -427,11 +427,8 @@
 }
 
 .stage-panel-n3 {
-  background:#26215C;
-  border:0.5px solid #534AB7;
-  border-radius:var(--border-radius-lg, 12px);
-  padding:13px 15px;
-  margin-bottom:10px;
+  --tint-background: #26215C;
+  --tint-border: 0.5px solid #534AB7;
 }
 
 .sbadge-n3 {
@@ -444,11 +441,8 @@
 }
 
 .stage-panel-rem {
-  background:#FBEAF0;
-  border:0.5px solid #ED93B1;
-  border-radius:var(--border-radius-lg, 12px);
-  padding:13px 15px;
-  margin-bottom:10px;
+  --tint-background: #FBEAF0;
+  --tint-border: 0.5px solid #ED93B1;
 }
 
 .sname-rem {

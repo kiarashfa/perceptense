@@ -229,25 +229,35 @@
   margin-bottom:1rem;
 }
 
+.pro-panel {
+  border-radius: var(--border-radius-lg);
+  padding: 13px 15px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .pro-panel-psychiatrist {
-  background:#EEEDFE;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #AFA9EC;
+  --tint-background: #EEEDFE;
+  --tint-border: 0.5px solid #AFA9EC;
 }
 
+.pro-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: var(--tint-color);
+}
 .pro-title-psychiatrist {
-  font-size:13px;
-  font-weight:500;
-  color:#26215C;
-  margin-bottom:5px;
+  --tint-color: #26215C;
 }
 
+.pro-desc {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+  color: var(--tint-color);
+}
 .pro-desc-psychiatrist {
-  font-size:12px;
-  color:#3C3489;
-  line-height:1.6;
-  margin-bottom:6px;
+  --tint-color: #3C3489;
 }
 
 .pro-training-psychiatrist {
@@ -257,24 +267,16 @@
 }
 
 .pro-panel-psychologist {
-  background:#E6F1FB;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .pro-title-psychologist {
-  font-size:13px;
-  font-weight:500;
-  color:#042C53;
-  margin-bottom:5px;
+  --tint-color: #042C53;
 }
 
 .pro-desc-psychologist {
-  font-size:12px;
-  color:#0C447C;
-  line-height:1.6;
-  margin-bottom:6px;
+  --tint-color: #0C447C;
 }
 
 .pro-training-psychologist {
@@ -284,24 +286,16 @@
 }
 
 .pro-panel-psychotherapist {
-  background:#E1F5EE;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #5DCAA5;
+  --tint-background: #E1F5EE;
+  --tint-border: 0.5px solid #5DCAA5;
 }
 
 .pro-title-psychotherapist {
-  font-size:13px;
-  font-weight:500;
-  color:#04342C;
-  margin-bottom:5px;
+  --tint-color: #04342C;
 }
 
 .pro-desc-psychotherapist {
-  font-size:12px;
-  color:#085041;
-  line-height:1.6;
-  margin-bottom:6px;
+  --tint-color: #085041;
 }
 
 .pro-training-psychotherapist {
@@ -311,24 +305,16 @@
 }
 
 .pro-panel-neuropsychologist {
-  background:#FAEEDA;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #EF9F27;
+  --tint-background: #FAEEDA;
+  --tint-border: 0.5px solid #EF9F27;
 }
 
 .pro-title-neuropsychologist {
-  font-size:13px;
-  font-weight:500;
-  color:#412402;
-  margin-bottom:5px;
+  --tint-color: #412402;
 }
 
 .pro-desc-neuropsychologist {
-  font-size:12px;
-  color:#633806;
-  line-height:1.6;
-  margin-bottom:6px;
+  --tint-color: #633806;
 }
 
 .pro-use-neuropsychologist {
@@ -368,11 +354,14 @@
   flex-shrink:0;
 }
 
+.stage-name {
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: var(--tint-color);
+}
 .stage-name-blue {
-  font-size:11px;
-  font-weight:600;
-  color:#0C447C;
-  margin-bottom:3px;
+  --tint-color: #0C447C;
 }
 
 .stage-detail {
@@ -388,13 +377,17 @@
   padding:0 2px;
 }
 
+.memory-stage {
+  border-radius: var(--border-radius-md);
+  padding: 9px 12px;
+  min-width: 110px;
+  flex-shrink: 0;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .memory-stage-working {
-  background:#E6F1FB;
-  border-radius:var(--border-radius-md);
-  padding:9px 12px;
-  min-width:110px;
-  flex-shrink:0;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .stage-detail-blue {
@@ -404,19 +397,12 @@
 }
 
 .memory-stage-long-term {
-  background:#EAF3DE;
-  border-radius:var(--border-radius-md);
-  padding:9px 12px;
-  min-width:110px;
-  flex-shrink:0;
-  border:0.5px solid #97c459;
+  --tint-background: #EAF3DE;
+  --tint-border: 0.5px solid #97c459;
 }
 
 .stage-name-green {
-  font-size:11px;
-  font-weight:600;
-  color:#27500A;
-  margin-bottom:3px;
+  --tint-color: #27500A;
 }
 
 .stage-detail-green {
@@ -460,40 +446,32 @@
   margin-bottom:5px;
 }
 
+.memory-tag {
+  font-size: 10px;
+  border-radius: 3px;
+  padding: 1px 6px;
+  display: inline-block;
+  background: var(--tint-background);
+  color: var(--tint-color);
+}
 .memory-tag-episodic {
-  font-size:10px;
-  background:#EEEDFE;
-  color:#3C3489;
-  border-radius:3px;
-  padding:1px 6px;
-  display:inline-block;
+  --tint-background: #EEEDFE;
+  --tint-color: #3C3489;
 }
 
 .memory-tag-semantic {
-  font-size:10px;
-  background:#E6F1FB;
-  color:#0C447C;
-  border-radius:3px;
-  padding:1px 6px;
-  display:inline-block;
+  --tint-background: #E6F1FB;
+  --tint-color: #0C447C;
 }
 
 .memory-tag-procedural {
-  font-size:10px;
-  background:#E1F5EE;
-  color:#085041;
-  border-radius:3px;
-  padding:1px 6px;
-  display:inline-block;
+  --tint-background: #E1F5EE;
+  --tint-color: #085041;
 }
 
 .memory-tag-prospective {
-  font-size:10px;
-  background:#FAEEDA;
-  color:#633806;
-  border-radius:3px;
-  padding:1px 6px;
-  display:inline-block;
+  --tint-background: #FAEEDA;
+  --tint-color: #633806;
 }
 
 .list-kicker {
@@ -548,64 +526,60 @@
   margin-bottom:12px;
 }
 
+.zone-panel {
+  border-radius: var(--border-radius-lg);
+  padding: 11px 13px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .zone-panel-under {
-  background:#FAEEDA;
-  border-radius:var(--border-radius-lg);
-  padding:11px 13px;
-  border:0.5px solid #EF9F27;
+  --tint-background: #FAEEDA;
+  --tint-border: 0.5px solid #EF9F27;
 }
 
+.zone-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--tint-color);
+}
 .zone-title-under {
-  font-size:12px;
-  font-weight:600;
-  color:#412402;
-  margin-bottom:4px;
+  --tint-color: #412402;
 }
 
+.zone-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--tint-color);
+}
 .zone-desc-under {
-  font-size:12px;
-  color:#633806;
-  line-height:1.5;
+  --tint-color: #633806;
 }
 
 .zone-panel-optimal {
-  background:#EAF3DE;
-  border-radius:var(--border-radius-lg);
-  padding:11px 13px;
-  border:0.5px solid #97c459;
+  --tint-background: #EAF3DE;
+  --tint-border: 0.5px solid #97c459;
 }
 
 .zone-title-optimal {
-  font-size:12px;
-  font-weight:600;
-  color:#1A3804;
-  margin-bottom:4px;
+  --tint-color: #1A3804;
 }
 
 .zone-desc-optimal {
-  font-size:12px;
-  color:#27500A;
-  line-height:1.5;
+  --tint-color: #27500A;
 }
 
 .zone-panel-over {
-  background:#FCEBEB;
-  border-radius:var(--border-radius-lg);
-  padding:11px 13px;
-  border:0.5px solid #f09595;
+  --tint-background: #FCEBEB;
+  --tint-border: 0.5px solid #f09595;
 }
 
 .zone-title-over {
-  font-size:12px;
-  font-weight:600;
-  color:#550A0A;
-  margin-bottom:4px;
+  --tint-color: #550A0A;
 }
 
 .zone-desc-over {
-  font-size:12px;
-  color:#791F1F;
-  line-height:1.5;
+  --tint-color: #791F1F;
 }
 
 .regulation-note {

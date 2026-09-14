@@ -117,166 +117,129 @@
   font-style:italic;
 }
 
+.branch-panel {
+  border-radius: var(--border-radius-lg);
+  padding: 13px 15px;
+  background: var(--tint-background);
+  border: var(--tint-border);
+}
 .branch-panel-metaphysics {
-  background:#EEEDFE;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #AFA9EC;
+  --tint-background: #EEEDFE;
+  --tint-border: 0.5px solid #AFA9EC;
 }
 
+.branch-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: var(--tint-color);
+}
 .branch-title-metaphysics {
-  font-size:13px;
-  font-weight:500;
-  color:#26215C;
-  margin-bottom:4px;
+  --tint-color: #26215C;
 }
 
+.branch-question {
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-style: italic;
+  color: var(--tint-color);
+}
 .branch-question-metaphysics {
-  font-size:12px;
-  color:#3C3489;
-  margin-bottom:6px;
-  font-style:italic;
+  --tint-color: #3C3489;
 }
 
+.branch-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--tint-color);
+}
 .branch-desc-metaphysics {
-  font-size:12px;
-  color:#534AB7;
-  line-height:1.5;
+  --tint-color: #534AB7;
 }
 
 .branch-panel-epistemology {
-  background:#E6F1FB;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #85B7EB;
+  --tint-background: #E6F1FB;
+  --tint-border: 0.5px solid #85B7EB;
 }
 
 .branch-title-epistemology {
-  font-size:13px;
-  font-weight:500;
-  color:#042C53;
-  margin-bottom:4px;
+  --tint-color: #042C53;
 }
 
 .branch-question-epistemology {
-  font-size:12px;
-  color:#0C447C;
-  margin-bottom:6px;
-  font-style:italic;
+  --tint-color: #0C447C;
 }
 
 .branch-desc-epistemology {
-  font-size:12px;
-  color:#185FA5;
-  line-height:1.5;
+  --tint-color: #185FA5;
 }
 
 .branch-panel-ethics {
-  background:#E1F5EE;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #5DCAA5;
+  --tint-background: #E1F5EE;
+  --tint-border: 0.5px solid #5DCAA5;
 }
 
 .branch-title-ethics {
-  font-size:13px;
-  font-weight:500;
-  color:#04342C;
-  margin-bottom:4px;
+  --tint-color: #04342C;
 }
 
 .branch-question-ethics {
-  font-size:12px;
-  color:#085041;
-  margin-bottom:6px;
-  font-style:italic;
+  --tint-color: #085041;
 }
 
 .branch-desc-ethics {
-  font-size:12px;
-  color:#0F6E56;
-  line-height:1.5;
+  --tint-color: #0F6E56;
 }
 
 .branch-panel-political {
-  background:#FAEEDA;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #EF9F27;
+  --tint-background: #FAEEDA;
+  --tint-border: 0.5px solid #EF9F27;
 }
 
 .branch-title-political {
-  font-size:13px;
-  font-weight:500;
-  color:#412402;
-  margin-bottom:4px;
+  --tint-color: #412402;
 }
 
 .branch-question-political {
-  font-size:12px;
-  color:#633806;
-  margin-bottom:6px;
-  font-style:italic;
+  --tint-color: #633806;
 }
 
 .branch-desc-political {
-  font-size:12px;
-  color:#854F0B;
-  line-height:1.5;
+  --tint-color: #854F0B;
 }
 
 .branch-panel-aesthetics {
-  background:#FBEAF0;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #ED93B1;
+  --tint-background: #FBEAF0;
+  --tint-border: 0.5px solid #ED93B1;
 }
 
 .branch-title-aesthetics {
-  font-size:13px;
-  font-weight:500;
-  color:#4B1528;
-  margin-bottom:4px;
+  --tint-color: #4B1528;
 }
 
 .branch-question-aesthetics {
-  font-size:12px;
-  color:#72243E;
-  margin-bottom:6px;
-  font-style:italic;
+  --tint-color: #72243E;
 }
 
 .branch-desc-aesthetics {
-  font-size:12px;
-  color:#993556;
-  line-height:1.5;
+  --tint-color: #993556;
 }
 
 .branch-panel-logic {
-  background:#F1EFE8;
-  border-radius:var(--border-radius-lg);
-  padding:13px 15px;
-  border:0.5px solid #D3D1C7;
+  --tint-background: #F1EFE8;
+  --tint-border: 0.5px solid #D3D1C7;
 }
 
 .branch-title-logic {
-  font-size:13px;
-  font-weight:500;
-  color:#2C2C2A;
-  margin-bottom:4px;
+  --tint-color: #2C2C2A;
 }
 
 .branch-question-logic {
-  font-size:12px;
-  color:#444441;
-  margin-bottom:6px;
-  font-style:italic;
+  --tint-color: #444441;
 }
 
 .branch-desc-logic {
-  font-size:12px;
-  color:#5F5E5A;
-  line-height:1.5;
+  --tint-color: #5F5E5A;
 }
 
 .ethicsslider {

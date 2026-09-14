@@ -147,10 +147,13 @@
   padding-left:8px;
 }
 
+.zone-pct {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--tint-color);
+}
 .zone-pct-teal {
-  font-size:10px;
-  font-weight:600;
-  color:#04342C;
+  --tint-color: #04342C;
 }
 
 .zone-desc {
@@ -180,9 +183,7 @@
 }
 
 .zone-pct-amber {
-  font-size:10px;
-  font-weight:600;
-  color:#2A1A03;
+  --tint-color: #2A1A03;
 }
 
 .zone-fill-threshold {
@@ -195,9 +196,7 @@
 }
 
 .zone-pct-coral {
-  font-size:10px;
-  font-weight:600;
-  color:#4A1B0C;
+  --tint-color: #4A1B0C;
 }
 
 .zone-fill-max {
@@ -210,9 +209,7 @@
 }
 
 .zone-pct-red {
-  font-size:10px;
-  font-weight:600;
-  color:#791F1F;
+  --tint-color: #791F1F;
 }
 
 .field-wide {

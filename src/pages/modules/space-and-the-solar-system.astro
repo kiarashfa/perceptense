@@ -41,38 +41,38 @@ const mod = modules.find((m) => m.id === 26)!;
       <div class="space-row">
         <div class="space-card">
           <div class="layer-header">
-            <span class="sun-layer-name-deep">Core</span>
+            <span class="sun-layer-name sun-layer-name-deep">Core</span>
             <span class="sun-layer-range-deep">0–25% of radius · ~15 million °C</span>
           </div>
-          <div class="sun-layer-desc-deep">Nuclear fusion occurs here: 4 hydrogen nuclei fuse into 1 helium nucleus, releasing enormous energy as gamma rays. The core fuses ~620 million tonnes of hydrogen per second. Density is ~150 g/cm³ -- 150× water.</div>
+          <div class="sun-layer-desc sun-layer-desc-deep">Nuclear fusion occurs here: 4 hydrogen nuclei fuse into 1 helium nucleus, releasing enormous energy as gamma rays. The core fuses ~620 million tonnes of hydrogen per second. Density is ~150 g/cm³ -- 150× water.</div>
         </div>
         <div class="sun-layer-radiative">
           <div class="layer-header">
-            <span class="sun-layer-name-deep">Radiative zone</span>
+            <span class="sun-layer-name sun-layer-name-deep">Radiative zone</span>
             <span class="sun-layer-range-deep">25–70% of radius · ~7 million °C</span>
           </div>
-          <div class="sun-layer-desc-deep">Energy from the core travels outward as photons, but the plasma is so dense that photons are constantly absorbed and re-emitted -- a single photon takes 100,000–170,000 years to cross this zone. This is why sunlight you see today was "created" at the Sun's core over 100,000 years ago.</div>
+          <div class="sun-layer-desc sun-layer-desc-deep">Energy from the core travels outward as photons, but the plasma is so dense that photons are constantly absorbed and re-emitted -- a single photon takes 100,000–170,000 years to cross this zone. This is why sunlight you see today was "created" at the Sun's core over 100,000 years ago.</div>
         </div>
         <div class="sun-layer-convective">
           <div class="layer-header">
-            <span class="sun-layer-name-convective">Convective zone</span>
+            <span class="sun-layer-name sun-layer-name-convective">Convective zone</span>
             <span class="sun-layer-range-convective">70–100% of radius · ~2 million → 5,500°C</span>
           </div>
-          <div class="sun-layer-desc-convective">Heat is transported by convection -- hot plasma rises, cools at the surface, sinks back down in giant cells. Granules (convection cells ~1,000 km wide) are visible at the surface, each lasting ~10 minutes. The Sun's surface (photosphere) is the visible "surface" we see from Earth.</div>
+          <div class="sun-layer-desc sun-layer-desc-convective">Heat is transported by convection -- hot plasma rises, cools at the surface, sinks back down in giant cells. Granules (convection cells ~1,000 km wide) are visible at the surface, each lasting ~10 minutes. The Sun's surface (photosphere) is the visible "surface" we see from Earth.</div>
         </div>
         <div class="sun-layer-photosphere">
           <div class="layer-header">
-            <span class="sun-layer-name-photosphere">Photosphere</span>
+            <span class="sun-layer-name sun-layer-name-photosphere">Photosphere</span>
             <span class="sun-layer-range-photosphere">500 km thick · ~5,500°C</span>
           </div>
-          <div class="sun-layer-desc-photosphere">The visible surface. Sunspots are cooler regions (~3,800°C) where intense magnetic fields suppress convection -- they appear dark only by contrast. Sunspot activity follows an 11-year cycle that affects space weather on Earth.</div>
+          <div class="sun-layer-desc sun-layer-desc-photosphere">The visible surface. Sunspots are cooler regions (~3,800°C) where intense magnetic fields suppress convection -- they appear dark only by contrast. Sunspot activity follows an 11-year cycle that affects space weather on Earth.</div>
         </div>
         <div class="sun-layer-corona">
           <div class="layer-header">
-            <span class="sun-layer-name-corona">Chromosphere &amp; Corona</span>
+            <span class="sun-layer-name sun-layer-name-corona">Chromosphere &amp; Corona</span>
             <span class="sun-layer-range-corona">Above surface · up to 3 million °C</span>
           </div>
-          <div class="sun-layer-desc-corona">The chromosphere (pink during solar eclipses) extends ~2,000 km above the photosphere. The corona -- the Sun's wispy outer atmosphere -- extends millions of km and is inexplicably hotter than the surface. The solar wind originates here: a stream of charged particles that fills the solar system and drives auroras on Earth.</div>
+          <div class="sun-layer-desc sun-layer-desc-corona">The chromosphere (pink during solar eclipses) extends ~2,000 km above the photosphere. The corona -- the Sun's wispy outer atmosphere -- extends millions of km and is inexplicably hotter than the surface. The solar wind originates here: a stream of charged particles that fills the solar system and drives auroras on Earth.</div>
         </div>
       </div>
     </div>
@@ -295,38 +295,38 @@ const mod = modules.find((m) => m.id === 26)!;
       <div class="atm-stack">
         <div class="atm-band-navy">
           <div class="layer-header">
-            <span class="layer-name-light">Exosphere</span>
+            <span class="layer-name layer-name-light">Exosphere</span>
             <span class="band-range-light">700 km to ~10,000 km</span>
           </div>
-          <div class="band-desc-light">The outermost layer -- atmosphere so thin it merges imperceptibly into interplanetary space. Molecules can escape Earth's gravity. Satellites in very high orbits (GPS: ~20,200 km) orbit here. No weather phenomena. Temperature "definition" breaks down -- molecules travel huge distances between collisions.</div>
+          <div class="band-desc band-desc-light">The outermost layer -- atmosphere so thin it merges imperceptibly into interplanetary space. Molecules can escape Earth's gravity. Satellites in very high orbits (GPS: ~20,200 km) orbit here. No weather phenomena. Temperature "definition" breaks down -- molecules travel huge distances between collisions.</div>
         </div>
-        <div class="atm-band-deep-blue">
+        <div class="atm-band atm-band-deep-blue">
           <div class="layer-header">
-            <span class="layer-name-light">Thermosphere</span>
+            <span class="layer-name layer-name-light">Thermosphere</span>
             <span class="band-range-light">80–700 km</span>
           </div>
-          <div class="band-desc-light">ISS orbits here (~400 km). Temperature rises dramatically with altitude (up to 2,500°C) -- but air is so thin there are almost no molecules to transfer heat. Auroras (Northern/Southern Lights) occur here -- solar wind particles excite atmospheric atoms. Re-entry vehicles experience intense heating here from air compression.</div>
+          <div class="band-desc band-desc-light">ISS orbits here (~400 km). Temperature rises dramatically with altitude (up to 2,500°C) -- but air is so thin there are almost no molecules to transfer heat. Auroras (Northern/Southern Lights) occur here -- solar wind particles excite atmospheric atoms. Re-entry vehicles experience intense heating here from air compression.</div>
         </div>
-        <div class="atm-band-blue">
+        <div class="atm-band atm-band-blue">
           <div class="layer-header">
-            <span class="layer-name-light">Mesosphere</span>
+            <span class="layer-name layer-name-light">Mesosphere</span>
             <span class="band-range-light">50–80 km</span>
           </div>
-          <div class="band-desc-mid">Temperature drops to −90°C at the mesopause (top) -- coldest natural temperature on Earth. Most meteors burn up here (friction with air molecules). Noctilucent clouds form near the top at ~82 km -- rare, beautiful electric-blue clouds of ice crystals, only visible at twilight. Too high for aircraft, too low for satellites -- the "ignorosphere."</div>
+          <div class="band-desc band-desc-mid">Temperature drops to −90°C at the mesopause (top) -- coldest natural temperature on Earth. Most meteors burn up here (friction with air molecules). Noctilucent clouds form near the top at ~82 km -- rare, beautiful electric-blue clouds of ice crystals, only visible at twilight. Too high for aircraft, too low for satellites -- the "ignorosphere."</div>
         </div>
-        <div class="atm-band-pale-blue">
+        <div class="atm-band atm-band-pale-blue">
           <div class="layer-header">
-            <span class="layer-name-dark">Stratosphere</span>
+            <span class="layer-name layer-name-dark">Stratosphere</span>
             <span class="band-range-dark">12–50 km</span>
           </div>
-          <div class="band-desc-dark">Contains the ozone layer (~15–35 km) which absorbs UV radiation -- essential for life on Earth. Temperature increases with altitude here (the opposite of the troposphere) because ozone absorbs UV energy. Very dry, no weather. Commercial aircraft fly at ~10–12 km (just below/at the tropopause). Concorde flew at ~18 km in the lower stratosphere. Weather balloons reach ~30–40 km.</div>
+          <div class="band-desc band-desc-dark">Contains the ozone layer (~15–35 km) which absorbs UV radiation -- essential for life on Earth. Temperature increases with altitude here (the opposite of the troposphere) because ozone absorbs UV energy. Very dry, no weather. Commercial aircraft fly at ~10–12 km (just below/at the tropopause). Concorde flew at ~18 km in the lower stratosphere. Weather balloons reach ~30–40 km.</div>
         </div>
         <div class="atm-band-ice">
           <div class="layer-header">
-            <span class="layer-name-dark">Troposphere</span>
+            <span class="layer-name layer-name-dark">Troposphere</span>
             <span class="band-range-blue">0–12 km (8 km at poles, 16 km at equator)</span>
           </div>
-          <div class="band-desc-blue">All weather happens here. Contains ~75% of the atmosphere's mass and ~99% of its water vapour. Temperature decreases ~6.5°C per km. Mount Everest (8,849 m) is near the top. Beyond the tropopause (the boundary), temperature stops falling -- this inversion "caps" convection and prevents weather systems from penetrating into the stratosphere.</div>
+          <div class="band-desc band-desc-blue">All weather happens here. Contains ~75% of the atmosphere's mass and ~99% of its water vapour. Temperature decreases ~6.5°C per km. Mount Everest (8,849 m) is near the top. Beyond the tropopause (the boundary), temperature stops falling -- this inversion "caps" convection and prevents weather systems from penetrating into the stratosphere.</div>
         </div>
       </div>
       <div class="karman-note">The Kármán line (100 km) is the internationally recognised boundary of space -- the point where the atmosphere is too thin for aircraft to generate lift and orbital mechanics take over.</div>
@@ -594,38 +594,38 @@ const mod = modules.find((m) => m.id === 26)!;
       <div class="atm-stack">
         <div class="atm-band-navy">
           <div class="layer-header">
-            <span class="layer-name-light">Radar ranging</span>
+            <span class="layer-name layer-name-light">Radar ranging</span>
             <span class="band-range-light">Up to ~2 AU</span>
           </div>
-          <div class="band-desc-light">Bouncing radio waves off nearby planets and measuring the round-trip time gives exact distances in the inner Solar System. Used to calibrate the Astronomical Unit precisely to within metres.</div>
+          <div class="band-desc band-desc-light">Bouncing radio waves off nearby planets and measuring the round-trip time gives exact distances in the inner Solar System. Used to calibrate the Astronomical Unit precisely to within metres.</div>
         </div>
-        <div class="atm-band-deep-blue">
+        <div class="atm-band atm-band-deep-blue">
           <div class="layer-header">
-            <span class="layer-name-light">Stellar parallax</span>
+            <span class="layer-name layer-name-light">Stellar parallax</span>
             <span class="band-range-light">Up to ~10,000 light-years</span>
           </div>
-          <div class="band-desc-light">As Earth orbits the Sun, nearby stars appear to shift slightly against background stars. The angle of shift reveals distance geometrically. The Gaia spacecraft measured parallax for over 1 billion stars with extraordinary precision.</div>
+          <div class="band-desc band-desc-light">As Earth orbits the Sun, nearby stars appear to shift slightly against background stars. The angle of shift reveals distance geometrically. The Gaia spacecraft measured parallax for over 1 billion stars with extraordinary precision.</div>
         </div>
-        <div class="atm-band-blue">
+        <div class="atm-band atm-band-blue">
           <div class="layer-header">
-            <span class="layer-name-light">Cepheid variable stars</span>
+            <span class="layer-name layer-name-light">Cepheid variable stars</span>
             <span class="band-range-light">Up to ~100 million light-years</span>
           </div>
-          <div class="band-desc-mid">Cepheid stars pulsate with a period precisely linked to their intrinsic luminosity. Measure the period, know the true brightness, compare to apparent brightness, and you have the distance. Henrietta Swan Leavitt discovered this relationship in 1908, unlocking the scale of the universe.</div>
+          <div class="band-desc band-desc-mid">Cepheid stars pulsate with a period precisely linked to their intrinsic luminosity. Measure the period, know the true brightness, compare to apparent brightness, and you have the distance. Henrietta Swan Leavitt discovered this relationship in 1908, unlocking the scale of the universe.</div>
         </div>
-        <div class="atm-band-pale-blue">
+        <div class="atm-band atm-band-pale-blue">
           <div class="layer-header">
-            <span class="layer-name-dark">Type Ia supernovae</span>
+            <span class="layer-name layer-name-dark">Type Ia supernovae</span>
             <span class="band-range-dark">Up to ~10 billion light-years</span>
           </div>
-          <div class="band-desc-dark">White dwarf stars that explode after accreting enough mass always reach the same intrinsic peak brightness -- a "standard candle." This allowed astronomers to discover in 1998 that the expansion of the universe is accelerating (earning a Nobel Prize in 2011), implying the existence of dark energy.</div>
+          <div class="band-desc band-desc-dark">White dwarf stars that explode after accreting enough mass always reach the same intrinsic peak brightness -- a "standard candle." This allowed astronomers to discover in 1998 that the expansion of the universe is accelerating (earning a Nobel Prize in 2011), implying the existence of dark energy.</div>
         </div>
         <div class="atm-band-ice">
           <div class="layer-header">
-            <span class="layer-name-dark">Cosmic Microwave Background / Hubble's Law</span>
+            <span class="layer-name layer-name-dark">Cosmic Microwave Background / Hubble's Law</span>
             <span class="band-range-blue">Billions of light-years</span>
           </div>
-          <div class="band-desc-blue">The universe's expansion means distant galaxies are redshifted in proportion to their distance (Hubble's Law: v = H₀ x d). The CMB maps the entire observable universe as it was 380,000 years after the Big Bang. Together these fix the universe's age at 13.8 billion years and size at 93 billion light-years (diameter of the observable universe).</div>
+          <div class="band-desc band-desc-blue">The universe's expansion means distant galaxies are redshifted in proportion to their distance (Hubble's Law: v = H₀ x d). The CMB maps the entire observable universe as it was 380,000 years after the Big Bang. Together these fix the universe's age at 13.8 billion years and size at 93 billion light-years (diameter of the observable universe).</div>
         </div>
       </div>
     </div>
@@ -803,12 +803,12 @@ const mod = modules.find((m) => m.id === 26)!;
       <div class="panel-title">Wormhole vs. black hole -- key differences</div>
       <div class="atm-stack">
         <div class="atm-band-navy">
-          <div class="layer-name-light">Black hole</div>
-          <div class="band-desc-light">One-way. Once you cross the event horizon, you cannot leave -- not even information can escape. General relativity predicts a singularity at the centre where density becomes infinite and current physics breaks down. Black holes are confirmed to exist via multiple independent lines of evidence. They destroy information (possibly -- this is the "information paradox").</div>
+          <div class="layer-name layer-name-light">Black hole</div>
+          <div class="band-desc band-desc-light">One-way. Once you cross the event horizon, you cannot leave -- not even information can escape. General relativity predicts a singularity at the centre where density becomes infinite and current physics breaks down. Black holes are confirmed to exist via multiple independent lines of evidence. They destroy information (possibly -- this is the "information paradox").</div>
         </div>
-        <div class="atm-band-blue">
-          <div class="layer-name-light">Wormhole</div>
-          <div class="band-desc-light">Hypothetically two-way (if traversable). Both mouths have horizons in the non-traversable Schwarzschild case, but a traversable wormhole requires the exotic matter to prevent horizon formation. Information is preserved -- it exits the other mouth. Wormholes have never been observed. The ER=EPR conjecture (2013, Maldacena and Susskind) proposes that quantum entanglement and wormholes may be the same phenomenon -- connecting quantum mechanics and general relativity in a profound way.</div>
+        <div class="atm-band atm-band-blue">
+          <div class="layer-name layer-name-light">Wormhole</div>
+          <div class="band-desc band-desc-light">Hypothetically two-way (if traversable). Both mouths have horizons in the non-traversable Schwarzschild case, but a traversable wormhole requires the exotic matter to prevent horizon formation. Information is preserved -- it exits the other mouth. Wormholes have never been observed. The ER=EPR conjecture (2013, Maldacena and Susskind) proposes that quantum entanglement and wormholes may be the same phenomenon -- connecting quantum mechanics and general relativity in a profound way.</div>
         </div>
       </div>
       <div class="warning-block u-mt-md">
