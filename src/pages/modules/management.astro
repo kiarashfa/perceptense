@@ -62,7 +62,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showEra('agile',this)">Agile &amp; Beyond</button>
         <button onclick="showEra('analytics',this)">Analytics &amp; AI</button>
       </div>
-      <div class="explorer-panel" id="era-panel">
+      <div class="explorer-output" id="era-panel">
         <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select an era above to explore management thought through history.</div>
       </div>
     </div>
@@ -81,7 +81,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showMBA('case',this)">Case method</button>
         <button onclick="showMBA('roi',this)">ROI debate</button>
       </div>
-      <div class="explorer-panel" id="mba-panel">
+      <div class="explorer-output" id="mba-panel">
         <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select a lens above to see what the MBA is actually training.</div>
       </div>
     </div>
@@ -98,7 +98,7 @@ const mod = modules.find((m) => m.id === 36)!;
 
     <!-- Timeline: Management thought periods -->
     <div class="scroll-panel">
-      <div class="pc-title">Eras of management thought — approximate influence periods</div>
+      <div class="block-title">Eras of management thought — approximate influence periods</div>
       <div id="pc-chart"></div>
       <div id="pc-axis" class="pc-axis" style="height:18px;"></div>
       <p class="muted-copy" style="margin-top:8px;">Bars show the dominant period of each school's influence, not its precise origin or death date. Eras overlap — they do not replace one another cleanly.</p>
@@ -124,7 +124,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Porter Five Forces — elem card grid -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Porter's Five Forces — click each force to explore</div>
-      <div class="elem-grid" id="forces-grid">
+      <div class="tile-grid-lg" id="forces-grid">
         <div class="elem-card" onclick="showForce('rivalry',this)">
           <div class="elem-card-icon"><i class="fa-solid fa-people-arrows"></i></div>
           <div class="elem-card-label">Competitive Rivalry</div>
@@ -154,7 +154,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel">Porter's generic strategies</div>
       <p class="cnote" style="margin-bottom:12px;">Three internally consistent positions exist. Attempting to occupy two simultaneously — "stuck in the middle" — is the most common strategic failure. Companies that try to be both low-cost and highly differentiated typically achieve neither.</p>
-      <div class="svg-wrap">
+      <div class="scroll-wrap">
         <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:560px; font-family: var(--font-sans);">
           <!-- Axes -->
           <rect x="60" y="20" width="460" height="170" rx="6" fill="none" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
@@ -204,7 +204,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showStrategy('blue',this)">Blue ocean</button>
         <button onclick="showStrategy('disrupt',this)">Disruption</button>
       </div>
-      <div class="explorer-panel" id="strategy-panel">
+      <div class="explorer-output" id="strategy-panel">
         <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select a strategic move to see what it means in practice.</div>
       </div>
     </div>
@@ -254,7 +254,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <h2 class="sec" id="part-c-finance-for-managers-the-numbers-side-of-the-mba">Part C · finance for managers — the numbers side of the MBA</h2>
 
     <!-- Three statements SVG diagram -->
-    <div class="svg-wrap" style="margin-bottom:1rem;">
+    <div class="scroll-wrap" style="margin-bottom:1rem;">
       <svg viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:620px; font-family: var(--font-sans);">
         <!-- Income Statement -->
         <rect x="10" y="10" width="175" height="180" rx="8" fill="var(--color-background-primary)" stroke="var(--accent-border)" stroke-width="1"/>
@@ -324,7 +324,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Financial ratios calculator -->
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Financial ratio calculator — enter figures to compute key ratios</div>
-      <div class="calc-row">
+      <div class="input-row">
         <div class="calc-field">
           <label>Net Income ($)</label>
           <input type="number" id="r-netinc" value="500000" min="0">
@@ -371,7 +371,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Unit economics calculator — richer version with monthly inputs -->
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Unit economics calculator — LTV, payback period, and LTV:CAC ratio</div>
-      <div class="calc-row">
+      <div class="input-row">
         <div class="calc-field">
           <label>Monthly revenue per customer ($)</label>
           <input type="number" id="ue-arpu" value="40" min="0">
@@ -404,11 +404,11 @@ const mod = modules.find((m) => m.id === 36)!;
         <div class="dist-seg" style="width:25%; background:var(--color-border-success); color:var(--color-text-primary);">25%</div>
         <div class="dist-seg" style="width:20%; background:var(--color-border-warning); color:var(--color-text-primary);">20%</div>
       </div>
-      <div class="dist-legend">
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:var(--color-border-info);"></div> Hosting and support (20%)</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#3B7FCC;"></div> Sales and marketing (35%)</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:var(--color-border-success);"></div> Product and R&amp;D (25%)</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:var(--color-border-warning);"></div> Operating profit (20%)</div>
+      <div class="legend-roomy">
+        <div class="legend-item-large"><div class="key-swatch" style="background:var(--color-border-info);"></div> Hosting and support (20%)</div>
+        <div class="legend-item-large"><div class="key-swatch" style="background:#3B7FCC;"></div> Sales and marketing (35%)</div>
+        <div class="legend-item-large"><div class="key-swatch" style="background:var(--color-border-success);"></div> Product and R&amp;D (25%)</div>
+        <div class="legend-item-large"><div class="key-swatch" style="background:var(--color-border-warning);"></div> Operating profit (20%)</div>
       </div>
       <p class="muted-copy">Illustrative, not a universal benchmark. Mature public SaaS companies vary widely: high-growth firms reinvest nearly all margin into sales and marketing, compressing operating profit to near zero. The "Rule of 40" (revenue growth % + operating margin % ≥ 40) is the heuristic investors use to assess whether growth spend is justified.</p>
     </div>
@@ -418,7 +418,7 @@ const mod = modules.find((m) => m.id === 36)!;
       <div class="clabel" style="margin-bottom:8px;">LTV:CAC ratio explorer — drag to see investor signals</div>
       <div class="slider-poles" style="margin-bottom:4px;"><span>0x (destroying value)</span><span>10x (exceptional)</span></div>
       <input type="range" id="ltvcac-slider" min="0" max="100" value="30" oninput="updateLtvCac(this.value)">
-      <div class="slider-row" style="margin-top:8px;">
+      <div class="value-row" style="margin-top:8px;">
         <span style="font-size:12px; color:var(--color-text-secondary);">Ratio:</span>
         <span class="slider-val" id="ltvcac-val">3.0x</span>
         <span id="ltvcac-signal" style="font-size:12px; color:var(--color-text-secondary);"></span>
@@ -445,11 +445,11 @@ const mod = modules.find((m) => m.id === 36)!;
         <div class="dist-seg" style="width:25%; background:#6FA8DC; color:#fff;">Position</div>
         <div class="dist-seg" style="width:35%; background:#A8CEE9; color:var(--color-text-primary);">Execute 4 Ps</div>
       </div>
-      <div class="dist-legend">
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#3B7FCC;"></div> Segmentation (20%)</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#5594D6;"></div> Targeting (20%)</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#6FA8DC;"></div> Positioning (25%)</div>
-        <div class="dist-legend-item"><div class="dist-swatch" style="background:#A8CEE9;"></div> Execution — 4 Ps (35%)</div>
+      <div class="legend-roomy">
+        <div class="legend-item-large"><div class="key-swatch" style="background:#3B7FCC;"></div> Segmentation (20%)</div>
+        <div class="legend-item-large"><div class="key-swatch" style="background:#5594D6;"></div> Targeting (20%)</div>
+        <div class="legend-item-large"><div class="key-swatch" style="background:#6FA8DC;"></div> Positioning (25%)</div>
+        <div class="legend-item-large"><div class="key-swatch" style="background:#A8CEE9;"></div> Execution — 4 Ps (35%)</div>
       </div>
       <p class="muted-copy">Most marketing failures happen in the first two stages, not execution. Companies launch beautiful campaigns targeting "everyone" with an undifferentiated message. The most expensive word in marketing is "everyone."</p>
     </div>
@@ -490,7 +490,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Segmentation types — comparison scale -->
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:8px;">Segmentation approaches — placement on the specificity spectrum</div>
-      <div class="cscale-poles">
+      <div class="pole-labels-top">
         <span>Broad / demographic</span>
         <span>Narrow / behavioural</span>
       </div>
@@ -552,7 +552,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showQuality('agile',this)">Agile</button>
         <button onclick="showQuality('kaizen',this)">Kaizen</button>
       </div>
-      <div class="explorer-panel" id="quality-panel">
+      <div class="explorer-output" id="quality-panel">
         <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select an approach above to explore its principles and applications.</div>
       </div>
     </div>
@@ -596,7 +596,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Leadership styles — comparison scale -->
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:8px;">Leadership styles — placement on the control-to-autonomy spectrum</div>
-      <div class="cscale-poles">
+      <div class="pole-labels-top">
         <span>High control / directive</span>
         <span>High autonomy / delegating</span>
       </div>
@@ -638,7 +638,7 @@ const mod = modules.find((m) => m.id === 36)!;
         <button onclick="showBias('groupthink',this)">Groupthink</button>
         <button onclick="showBias('availability',this)">Availability</button>
       </div>
-      <div class="explorer-panel" id="bias-panel">
+      <div class="explorer-output" id="bias-panel">
         <div class="muted-copy-large" style="color:var(--color-text-tertiary);">Select a bias above to learn how it distorts management decisions.</div>
       </div>
     </div>
@@ -674,18 +674,18 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- VC funding stages -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Venture capital funding stages — typical round sizes and dilution</div>
-      <div class="fund-row"><div class="fund-label">Pre-seed</div><div class="fund-bar" style="width:10%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">$100K–$2M / 5–15% dilution</span></div></div>
-      <div class="fund-row"><div class="fund-label">Seed</div><div class="fund-bar" style="width:25%; background:#6FA8DC;"><span class="bv" style="color:#fff;">$1M–$5M / 15–25%</span></div></div>
-      <div class="fund-row"><div class="fund-label">Series A</div><div class="fund-bar" style="width:45%; background:#5594D6;"><span class="bv" style="color:#fff;">$5M–$25M / 20–30%</span></div></div>
-      <div class="fund-row"><div class="fund-label">Series B</div><div class="fund-bar" style="width:65%; background:#3B7FCC;"><span class="bv" style="color:#fff;">$20M–$100M / 15–25%</span></div></div>
-      <div class="fund-row"><div class="fund-label">Series C+</div><div class="fund-bar" style="width:85%; background:#2A5FA8;"><span class="bv" style="color:#fff;">$100M+ / 10–20% per round</span></div></div>
+      <div class="track-row"><div class="fund-label">Pre-seed</div><div class="fill-bar-tall" style="width:10%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">$100K–$2M / 5–15% dilution</span></div></div>
+      <div class="track-row"><div class="fund-label">Seed</div><div class="fill-bar-tall" style="width:25%; background:#6FA8DC;"><span class="bv" style="color:#fff;">$1M–$5M / 15–25%</span></div></div>
+      <div class="track-row"><div class="fund-label">Series A</div><div class="fill-bar-tall" style="width:45%; background:#5594D6;"><span class="bv" style="color:#fff;">$5M–$25M / 20–30%</span></div></div>
+      <div class="track-row"><div class="fund-label">Series B</div><div class="fill-bar-tall" style="width:65%; background:#3B7FCC;"><span class="bv" style="color:#fff;">$20M–$100M / 15–25%</span></div></div>
+      <div class="track-row"><div class="fund-label">Series C+</div><div class="fill-bar-tall" style="width:85%; background:#2A5FA8;"><span class="bv" style="color:#fff;">$100M+ / 10–20% per round</span></div></div>
       <p class="muted-copy" style="margin-top:8px;">VC economics follow a power law: a single fund-returning investment (a "fund maker") must return the entire fund to be worth the portfolio. A $200M fund needs at least one exit producing $200M+ in proceeds. This explains why VCs push for aggressive growth — the 20 companies that do not break out are write-offs; only the outliers matter.</p>
     </div>
 
     <!-- Equity dilution calculator -->
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Equity dilution calculator — see how multiple rounds affect founder ownership</div>
-      <div class="calc-row">
+      <div class="input-row">
         <div class="calc-field">
           <label>Founder start ownership (%)</label>
           <input type="number" id="d-start" value="100" min="1" max="100">
@@ -712,7 +712,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Business model types — elem card grid -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Business model types — click to explore each</div>
-      <div class="elem-grid" id="biz-grid">
+      <div class="tile-grid-lg" id="biz-grid">
         <div class="elem-card" onclick="showBizModel('saas',this)">
           <div class="elem-card-icon"><i class="fa-solid fa-cloud"></i></div>
           <div class="elem-card-label">SaaS / Subscription</div>
@@ -907,11 +907,11 @@ const mod = modules.find((m) => m.id === 36)!;
       var left = ((p.start - minY) / span * 100).toFixed(1);
       var width = ((p.end - p.start) / span * 100).toFixed(1);
       chartHtml +=
-        '<div class="pc-row">' +
+        '<div class="track-row">' +
         '<div class="pc-label">' + p.label + '</div>' +
         '<div class="pc-track">' +
         '<div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + p.col + ';">' +
-        '<span class="pc-fill-label" style="color:#fff;">' + p.start + '–' + (p.end === 2026 ? 'now' : p.end) + '</span>' +
+        '<span class="period-label-medium" style="color:#fff;">' + p.start + '–' + (p.end === 2026 ? 'now' : p.end) + '</span>' +
         '</div>' +
         '</div>' +
         '</div>';
@@ -922,7 +922,7 @@ const mod = modules.find((m) => m.id === 36)!;
     var axisHtml = '';
     axisMarks.forEach(function(y) {
       var left = ((y - minY) / span * 100).toFixed(1);
-      axisHtml += '<span class="pc-axis-mark" style="left:' + left + '%;">' + y + '</span>';
+      axisHtml += '<span class="axis-tick" style="left:' + left + '%;">' + y + '</span>';
     });
     document.getElementById('pc-axis').innerHTML = axisHtml;
 

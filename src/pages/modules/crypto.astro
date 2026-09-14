@@ -20,22 +20,22 @@ const mod = modules.find((m) => m.id === 38)!;
     <!-- ── PART A ── -->
     <h2 class="sec" id="part-a-the-problem-crypto-solves-trust-without-intermediaries">Part A · the problem crypto solves — trust without intermediaries</h2>
 
-    <div class="model-grid" style="margin-bottom:1rem;">
+    <div class="card-grid-medium" style="margin-bottom:1rem;">
       <div class="card">
         <div class="model-eyebrow">Why this matters</div>
         <div class="model-heading">Crypto is a coordination technology, not magic money</div>
-        <div class="model-body">The core idea is stark: can strangers maintain one shared ledger without a bank, state, or platform owner deciding what is true? Bitcoin answered with proof-of-work. Ethereum added programmable contracts. DeFi, stablecoins, NFTs, DAOs, and the regulatory fight are all consequences of that first design move.</div>
+        <div class="body-muted">The core idea is stark: can strangers maintain one shared ledger without a bank, state, or platform owner deciding what is true? Bitcoin answered with proof-of-work. Ethereum added programmable contracts. DeFi, stablecoins, NFTs, DAOs, and the regulatory fight are all consequences of that first design move.</div>
       </div>
       <div class="card">
         <div class="model-eyebrow">Mental model</div>
         <div class="model-heading">A database with economic armour</div>
-        <div class="model-body">A blockchain is not efficient in the ordinary software sense. It repeats work across thousands of machines on purpose, because redundancy is the price of not trusting one operator. The question is always whether censorship resistance, open settlement, and self-custody are worth that cost in a given use case.</div>
+        <div class="body-muted">A blockchain is not efficient in the ordinary software sense. It repeats work across thousands of machines on purpose, because redundancy is the price of not trusting one operator. The question is always whether censorship resistance, open settlement, and self-custody are worth that cost in a given use case.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Cryptography and trust — the foundations</div>
-      <div class="explorer-btn-row" id="crypto-basics-btns"></div>
+      <div class="button-set-spaced" id="crypto-basics-btns"></div>
       <div class="explorer-panel" id="crypto-basics-panel">Select a concept above.</div>
     </div>
 
@@ -51,7 +51,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Blockchain anatomy — a visual diagram</div>
-      <div class="svg-wrap">
+      <div class="scroll-wrap">
         <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:480px; display:block;">
           <defs>
             <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -98,7 +98,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Consensus mechanisms — how a decentralised network agrees</div>
-      <div class="explorer-btn-row" id="consensus-btns"></div>
+      <div class="button-set-spaced" id="consensus-btns"></div>
       <div class="explorer-panel" id="consensus-panel">Select a mechanism above.</div>
     </div>
 
@@ -115,34 +115,34 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">The blockchain trilemma — and where each chain lands</div>
-      <div class="cscale-wrap">
-        <div class="cscale-axis-labels" style="margin-left:138px;"><span>Decentralised / secure</span><span>Scalable / fast</span></div>
-        <div class="cscale-row">
+      <div class="block-gap">
+        <div class="pole-labels-top" style="margin-left:138px;"><span>Decentralised / secure</span><span>Scalable / fast</span></div>
+        <div class="data-row-even">
           <div class="cscale-name">Bitcoin</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:10%; background:#E07B2A;"></div></div>
           <div class="cscale-note">~7 TPS, maximally decentralised PoW</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">Ethereum L1</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:30%; background:#627EEA;"></div></div>
           <div class="cscale-note">~15 TPS, programmable settlement</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">Optimistic rollup</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:58%; background:#FF0420;"></div></div>
           <div class="cscale-note">High TPS, 7-day challenge period</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">ZK rollup</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:66%; background:#7B3FE4;"></div></div>
           <div class="cscale-note">Proof-based scaling, complex systems</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">Solana</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:84%; background:#9945FF;"></div></div>
           <div class="cscale-note">~3k real TPS, high hardware demands</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">Centralised exchange</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:97%; background:#888;"></div></div>
           <div class="cscale-note">Fast because users trust the operator</div>
@@ -167,7 +167,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Bitcoin price cycles — major bull and bear phases</div>
-      <div class="pc-outer"><div class="pc-inner" id="btc-timeline"></div></div>
+      <div class="scroll-wrap"><div class="wide-min" id="btc-timeline"></div></div>
       <div class="cnote">Each cycle has been driven by a different catalyst: 2013 by Silk Road notoriety and the Cypriot banking crisis; 2017 by ICO mania and retail discovery; 2021 by institutional adoption (Tesla, MicroStrategy) and COVID-era stimulus money; 2024 by the approval of US spot Bitcoin ETFs in January, which attracted over $30 billion of net inflows in their first year.</div>
     </div>
 
@@ -202,7 +202,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Major blockchain platforms — explore and compare</div>
-      <div class="elem-grid" id="chain-grid"></div>
+      <div class="tile-grid-lg" id="chain-grid"></div>
       <div class="elem-detail-panel" id="chain-detail"></div>
     </div>
 
@@ -245,7 +245,7 @@ const mod = modules.find((m) => m.id === 38)!;
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Impermanent loss calculator — 50/50 liquidity pool</div>
       <p style="font-size:13px; color:var(--color-text-secondary); margin:0 0 12px;">Impermanent loss is the cost of providing liquidity when the price ratio of the two pooled tokens changes. Enter the price change of one asset to see how much worse off you are compared to simply holding — before accounting for any trading fees earned.</p>
-      <div class="calc-row">
+      <div class="input-row">
         <div class="calc-field">
           <label>Price change of one asset (%)</label>
           <input type="number" id="il-change" value="100" min="-95" max="10000" step="5">
@@ -290,34 +290,34 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Use case maturity — where crypto applications actually stand</div>
-      <div class="cscale-wrap">
-        <div class="cscale-axis-labels" style="margin-left:138px;"><span>Proven demand</span><span>Speculative / narrative-driven</span></div>
-        <div class="cscale-row">
+      <div class="block-gap">
+        <div class="pole-labels-top" style="margin-left:138px;"><span>Proven demand</span><span>Speculative / narrative-driven</span></div>
+        <div class="data-row-even">
           <div class="cscale-name">Stablecoin settlement</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:12%; background:#27ae60;"></div></div>
           <div class="cscale-note">Clear demand where dollar rails are slow or blocked</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">Bitcoin self-custody</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:20%; background:#E07B2A;"></div></div>
           <div class="cscale-note">Censorship-resistant savings with real track record</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">DeFi trading</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:38%; background:#627EEA;"></div></div>
           <div class="cscale-note">Real usage, but cyclical and risk-heavy</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">DAOs</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:56%; background:#9945FF;"></div></div>
           <div class="cscale-note">Useful treasury tooling, difficult governance</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">NFT art</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:68%; background:#F0B90B;"></div></div>
           <div class="cscale-note">Real niche, heavily distorted by speculation</div>
         </div>
-        <div class="cscale-row">
+        <div class="data-row-even">
           <div class="cscale-name">Metaverse land</div>
           <div class="cscale-track"><div class="cscale-dot" style="left:91%; background:#c0392b;"></div></div>
           <div class="cscale-note">Narrative-first with fragile, thin demand</div>
@@ -330,7 +330,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Regulatory stances by region — explore</div>
-      <div class="explorer-btn-row" id="reg-btns"></div>
+      <div class="button-set-spaced" id="reg-btns"></div>
       <div class="explorer-panel" id="reg-panel">Select a region above.</div>
     </div>
 
@@ -348,7 +348,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="content-panel">
       <div class="clabel" style="margin-bottom:10px;">Dollar-cost averaging calculator — Bitcoin accumulation</div>
-      <div class="calc-row">
+      <div class="input-row">
         <div class="calc-field">
           <label>Monthly investment ($)</label>
           <input type="number" id="dca-amount" value="100" min="1" max="100000">
@@ -372,7 +372,7 @@ const mod = modules.find((m) => m.id === 38)!;
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Crypto market composition — what is the market actually made of?</div>
       <div class="dist-bar" id="market-dist"></div>
-      <div class="dist-legend" id="market-legend"></div>
+      <div class="key-list" id="market-legend"></div>
       <div class="cnote">Market cap figures as of early 2025. Bitcoin dominance has rebounded from 38% at the 2021 alt-coin peak to ~55% in 2025, as retail speculative interest shifted to memecoins and institutional money concentrated in Bitcoin ETFs. "Other" includes thousands of tokens, most of which have negligible real liquidity.</div>
     </div>
 
@@ -552,11 +552,11 @@ const mod = modules.find((m) => m.id === 38)!;
     btcPeriods.forEach(function(p) {
       const l = ((p.start - minY) / range * 100).toFixed(2);
       const w = ((p.end - p.start) / range * 100).toFixed(2);
-      tlHtml += '<div class="pc-row"><div class="pc-label">' + p.label + '</div><div class="pc-track"><div class="pc-fill" style="left:' + l + '%;width:' + w + '%;background:' + p.col + ';"><span class="pc-fill-label" style="color:' + p.text + ';">' + p.note + '</span></div></div></div>';
+      tlHtml += '<div class="period-row-loose"><div class="pc-label">' + p.label + '</div><div class="period-track-tall"><div class="pc-fill" style="left:' + l + '%;width:' + w + '%;background:' + p.col + ';"><span class="pc-fill-label" style="color:' + p.text + ';">' + p.note + '</span></div></div></div>';
     });
     tlHtml += '<div class="pc-axis">';
     [2009,2011,2013,2015,2017,2019,2021,2023,2025].forEach(function(y) {
-      tlHtml += '<span class="pc-axis-mark" style="left:' + ((y - minY) / range * 100).toFixed(2) + '%">' + y + '</span>';
+      tlHtml += '<span class="axis-tick" style="left:' + ((y - minY) / range * 100).toFixed(2) + '%">' + y + '</span>';
     });
     tlHtml += '</div>';
     document.getElementById('btc-timeline').innerHTML = tlHtml;
@@ -641,7 +641,7 @@ const mod = modules.find((m) => m.id === 38)!;
       const card = document.createElement('div');
       card.className = 'elem-card';
       card.id = 'chain-card-' + c.id;
-      card.innerHTML = '<div class="elem-card-icon" style="font-family:var(--font-mono);font-weight:600;color:var(--accent);">' + c.icon + '</div><div class="elem-card-label">' + c.label + '</div><div class="elem-card-sub">' + c.sub + '</div>';
+      card.innerHTML = '<div class="elem-card-icon" style="font-family:var(--font-mono);font-weight:600;color:var(--accent);">' + c.icon + '</div><div class="label-text">' + c.label + '</div><div class="detail-sub">' + c.sub + '</div>';
       card.onclick = function() {
         chainData.forEach(function(x){ const el = document.getElementById('chain-card-' + x.id); if(el) el.classList.remove('active'); });
         card.classList.add('active');
@@ -769,14 +769,14 @@ const mod = modules.find((m) => m.id === 38)!;
     collapses.forEach(function(p) {
       const l = ((p.start - cMin) / cRange * 100).toFixed(2);
       const w = Math.max(((p.end - p.start) / cRange * 100).toFixed(2), 2);
-      clHtml += '<div class="pc-row"><div class="pc-label">' + p.label + '</div><div class="pc-track"><div class="pc-fill" style="left:' + l + '%;width:' + w + '%;background:' + p.col + ';"><span class="pc-fill-label" style="color:' + p.text + ';">' + p.note + '</span></div></div></div>';
+      clHtml += '<div class="period-row-loose"><div class="pc-label">' + p.label + '</div><div class="period-track-tall"><div class="pc-fill" style="left:' + l + '%;width:' + w + '%;background:' + p.col + ';"><span class="pc-fill-label" style="color:' + p.text + ';">' + p.note + '</span></div></div></div>';
     });
     clHtml += '<div class="pc-axis">';
     [2015,2017,2019,2021,2023,2025].forEach(function(y) {
-      clHtml += '<span class="pc-axis-mark" style="left:' + ((y - cMin) / cRange * 100).toFixed(2) + '%">' + y + '</span>';
+      clHtml += '<span class="axis-tick" style="left:' + ((y - cMin) / cRange * 100).toFixed(2) + '%">' + y + '</span>';
     });
     clHtml += '</div>';
-    document.getElementById('collapse-timeline').innerHTML = '<div class="pc-outer"><div class="pc-inner">' + clHtml + '</div></div>';
+    document.getElementById('collapse-timeline').innerHTML = '<div class="scroll-wrap"><div class="wide-min">' + clHtml + '</div></div>';
 
     /* ── Energy bar chart ── */
     const energyData = [
@@ -842,7 +842,7 @@ const mod = modules.find((m) => m.id === 38)!;
       seg.title = s.label + ': ' + s.pct + '%';
       if (s.pct >= 6) seg.textContent = s.pct + '%';
       distBar.appendChild(seg);
-      legHtml += '<div class="dist-leg-item"><div class="dist-leg-dot" style="background:' + s.col + ';"></div>' + s.label + ' ' + s.pct + '%</div>';
+      legHtml += '<div class="legend-item"><div class="key-swatch" style="background:' + s.col + ';"></div>' + s.label + ' ' + s.pct + '%</div>';
     });
     distLeg.innerHTML = legHtml;
 

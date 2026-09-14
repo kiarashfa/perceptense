@@ -16,27 +16,15 @@
     }
     .elem-panel { display:none; }
     .elem-panel.show { display:block; }
-
-    /* ── Period timeline ── */
-    .pc-row { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
     .pc-label {
       font-size:11px; color:var(--color-text-secondary);
       width:140px; flex-shrink:0; text-align:right;
-    }
-    .pc-track {
-      flex:1; height:16px; background:var(--color-background-secondary);
-      border-radius:3px; position:relative; min-width:200px;
     }
     .pc-fill {
       position:absolute; top:0; height:100%; border-radius:3px;
       display:flex; align-items:center; padding:0 5px;
     }
-    .pc-fill-label { font-size:9px; font-weight:600; white-space:nowrap; overflow:hidden; }
     .pc-axis { display:flex; margin-left:148px; margin-bottom:4px; position:relative; height:14px; }
-    .pc-axis-mark {
-      font-size:9px; color:var(--color-text-tertiary);
-      position:absolute; transform:translateX(-50%);
-    }
 
     /* ── Composer explorer ── */
     .composer-grid {
@@ -53,8 +41,6 @@
       background:var(--color-background-secondary);
       border-color:var(--color-border-secondary);
     }
-    .composer-name { font-size:12px; font-weight:600; color:var(--color-text-primary); margin-bottom:2px; }
-    .composer-era { font-size:10px; color:var(--color-text-secondary); }
     .composer-detail {
       background:var(--color-background-primary);
       border:0.5px solid var(--color-border-tertiary);
@@ -94,9 +80,6 @@
     .explorer-panel .ep-title { font-size:13px; font-weight:600; color:var(--color-text-primary); margin-bottom:5px; }
     .explorer-panel .ep-body { font-size:12px; color:var(--color-text-secondary); line-height:1.6; }
     .explorer-panel .ep-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
-
-    /* ── Multi-card elem explorer ── */
-    .mcard-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr)); gap:8px; margin-bottom:10px; }
     .mcard {
       background:var(--color-background-primary);
       border:0.5px solid var(--color-border-tertiary);
@@ -107,8 +90,6 @@
     .mcard:hover { background:var(--color-background-secondary); }
     .mcard.active { background:var(--color-background-secondary); border-color:var(--color-border-secondary); }
     .mcard-icon { font-size:18px; margin-bottom:5px; color:var(--accent); }
-    .mcard-label { font-size:11px; font-weight:600; color:var(--color-text-primary); }
-    .mcard-sub { font-size:10px; color:var(--color-text-tertiary); margin-top:2px; }
     .mcard-detail {
       background:var(--color-background-primary);
       border:0.5px solid var(--color-border-tertiary);
@@ -116,29 +97,20 @@
       padding:13px 15px; margin-bottom:1rem; display:none;
     }
     .mcard-detail.show { display:block; }
-
-    /* ── Comparison scale ── */
-    .cscale-wrap { margin-bottom:12px; }
     .cscale-poles { display:flex; justify-content:space-between; font-size:10px; color:var(--color-text-tertiary); margin-bottom:6px; font-style:italic; }
     .cscale-row { display:flex; align-items:center; gap:8px; margin-bottom:9px; }
     .cscale-name { font-size:11px; color:var(--color-text-secondary); width:130px; flex-shrink:0; text-align:right; }
     .cscale-track { flex:1; height:6px; background:var(--color-background-secondary); border-radius:99px; position:relative; min-width:120px; }
-    .cscale-dot { width:12px; height:12px; border-radius:50%; background:var(--accent); position:absolute; top:-3px; transform:translateX(-50%); }
     .cscale-val { font-size:10px; color:var(--color-text-tertiary); width:28px; flex-shrink:0; }
 
     /* ── Distribution bar ── */
     .dist-bar { display:flex; width:100%; border-radius:var(--border-radius-md); overflow:hidden; height:28px; margin-bottom:10px; }
     .dist-seg { display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:600; color:#fff; transition:flex 0.4s; }
-    .dist-legend { display:flex; flex-wrap:wrap; gap:8px; }
     .dist-legend-item { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--color-text-secondary); }
-    .dist-swatch { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
 
     /* ── SVG diagram wrapper ── */
     .svg-wrap { width:100%; overflow-x:auto; }
     .svg-wrap svg { max-width:100%; display:block; }
-
-    /* ── BPM calculator ── */
-    .calc-row { display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; margin-bottom:10px; }
     .calc-field { display:flex; flex-direction:column; gap:4px; }
     .calc-field label { font-size:11px; color:var(--color-text-secondary); }
     .calc-output {
@@ -147,9 +119,6 @@
       padding:10px 14px; font-size:13px; color:var(--color-text-primary); line-height:1.6;
       min-height:44px;
     }
-
-    /* ── Range slider label pair ── */
-    .slider-poles { display:flex; justify-content:space-between; font-size:10px; color:var(--color-text-tertiary); margin-top:4px; }
 
     /* ── Bar chart ── */
     .bar-row { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
@@ -164,74 +133,8 @@
       .cscale-name { width:90px; }
     }
 
-/* === Shared-ready extracted styles === */
-
-.caption-tiny {
-  font-size:10px;
-  color:var(--color-text-tertiary);
-}
-
-.module-header-icon-accent {
-  font-size:42px;
-  color:var(--accent);
-  flex-shrink:0;
-}
-
-.text-danger {
-  color:var(--color-text-danger);
-}
-
-.text-indigo-700 {
-  color:#534AB7;
-}
-
-.text-info {
-  color:var(--color-text-info);
-}
-
-.text-success {
-  color:var(--color-text-success);
-}
-
-.text-warning {
-  color:var(--color-text-warning);
-}
-
 .u-w-100pct {
   width:100%;
-}
-
-.u-w-120px {
-  width:120px;
-}
-
-/* === Module-specific extracted styles === */
-
-.deep-dive-kicker {
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--accent);
-  margin-bottom:2px;
-}
-
-.music-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:8px;
-}
-
-.card-body {
-  font-size:12px;
-  color:var(--color-text-primary);
-  line-height:1.5;
-}
-
-.scale-caption {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:6px;
 }
 
 .music-row {
@@ -253,18 +156,6 @@
   font-size:11px;
   color:var(--color-text-secondary);
   margin-bottom:8px;
-}
-
-.rhythm-buttons {
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-bottom:8px;
-}
-
-.animaterhythm-control {
-  font-size:11px;
-  padding:3px 10px;
 }
 
 .pc-axis-mark-style {
@@ -350,18 +241,6 @@
   left:97%;
 }
 
-.texture-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:6px;
-}
-
-.chart-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:8px;
-}
-
 .bb-style {
   width:24%;
   background:var(--color-background-info);
@@ -401,12 +280,6 @@
   background:#E8F5F2;
 }
 
-.chart-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-}
-
 .pentaoutput {
   margin-top:10px;
   background:var(--color-background-secondary);
@@ -414,10 +287,6 @@
   padding:10px 14px;
   font-size:12px;
   color:var(--color-text-primary);
-}
-
-.pc-axis-style {
-  margin-left:130px;
 }
 
 .pc-axis-mark-jazz-second {
@@ -478,10 +347,6 @@
   background:var(--accent);
 }
 
-.cscale-val-accent {
-  color:var(--accent);
-}
-
 .cscale-dot-coltrane {
   left:93%;
   background:#16a085;
@@ -489,12 +354,6 @@
 
 .cscale-val-teal {
   color:#16a085;
-}
-
-.complexity-note {
-  font-size:11px;
-  color:var(--color-text-tertiary);
-  margin-top:4px;
 }
 
 .bb-beethoven-fifth {
@@ -585,9 +444,6 @@
   background: var(--color-background-secondary);
   border-color: var(--color-border-secondary);
 }
-.instr-selector-icon { font-size: 22px; margin-bottom: 5px; }
-.instr-selector-name { font-size: 11px; font-weight: 600; color: var(--color-text-primary); line-height: 1.3; }
-.instr-selector-origin { font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px; }
 .instr-detail-panel {
   background: var(--color-background-primary);
   border: 0.5px solid var(--color-border-tertiary);
@@ -596,23 +452,9 @@
   display: none;
 }
 .instr-detail-panel.show { display: block; }
-.instr-detail-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-}
 .instr-detail-big-icon { font-size: 36px; flex-shrink: 0; }
 .instr-detail-title { font-size: 15px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 2px; }
-.instr-detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 8px;
-  margin-bottom: 10px;
-}
 .instr-detail-cell-label { font-size: 10px; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
-.instr-detail-cell-val { font-size: 12px; color: var(--color-text-primary); line-height: 1.5; }
-.range-bar-wrap { margin-top: 8px; }
 .range-bar-track {
   width: 100%; height: 12px;
   background: var(--color-background-tertiary);

@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 40)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-language language-text"></i>
+      <i class="fa-solid fa-language module-icon-large"></i>
       <h1 class="module-title module-heading">Module 40: Language</h1>
     </div>
     <p class="module-subtitle">How language works, where it came from, and what it does to thought</p>
@@ -24,7 +24,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <div class="card u-mb-md">
       <p class="clabel">about this module</p>
       <p class="module-intro">Language is the most sophisticated thing human beings do. Every time you speak or read, you are performing a feat of combinatorial computation that no other species can replicate and that linguists have spent a century struggling to explain. There are roughly 7,000 living languages, structured in wildly different ways, yet they share deep organisational principles that suggest something profound about the human mind. This module gives you the conceptual toolkit to think clearly about what language actually is.</p>
-      <p class="module-outline">Six parts cover: the features that make language unique (A), its structural levels from sound to meaning (B), how we acquire and vary it (C), language and thought (D), major world languages in depth (E), and language in the digital age (F).</p>
+      <p class="muted-flush">Six parts cover: the features that make language unique (A), its structural levels from sound to meaning (B), how we acquire and vary it (C), language and thought (D), major world languages in depth (E), and language in the digital age (F).</p>
     </div>
 
     <!-- Design features -->
@@ -43,7 +43,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showAnimal('bird',this)">Songbird vocalisations</button>
     </div>
     <div class="explorer-panel" id="animal-panel">
-      <p class="explorer-placeholder">Select a communication system above to compare it with human language.</p>
+      <p class="placeholder-text">Select a communication system above to compare it with human language.</p>
     </div>
 
     <!-- Language numbers -->
@@ -97,7 +97,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Distribution bar: speakers by family -->
     <div class="card u-mb-md">
       <p class="clabel">share of world's L1 speakers by language family</p>
-      <div class="dist-bar" id="family-bar"></div>
+      <div class="stacked-bar" id="family-bar"></div>
       <div class="button-row" id="family-legend"></div>
       <p class="cnote">Source: Ethnologue 2024. "Other" includes ~100 smaller families plus language isolates (languages with no known relatives).</p>
     </div>
@@ -196,8 +196,8 @@ const mod = modules.find((m) => m.id === 40)!;
 
     <!-- Multi-card explorer: levels of linguistic structure -->
     <h2 class="sec" id="the-levels-of-linguistic-structure">the levels of linguistic structure</h2>
-    <p class="levels-prompt">Click a level to explore it:</p>
-    <div class="elem-grid" id="level-grid"></div>
+    <p class="lede-flush-tight">Click a level to explore it:</p>
+    <div class="tile-grid-xs" id="level-grid"></div>
     <div class="elem-detail" id="level-detail"></div>
 
     <!-- Phonetics card -->
@@ -219,13 +219,13 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="morphology-building-words-from-pieces">morphology — building words from pieces</h2>
     <div class="card u-mb-md">
       <p class="clabel">morphological types — a comparison scale</p>
-      <div class="cscale-poles"><span>Analytic (no inflection)</span><span>Synthetic (moderate)</span><span>Polysynthetic (extreme)</span></div>
-      <div class="cscale-row"><div class="cscale-name">Mandarin</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">English</div><div class="cscale-track"><div class="cscale-dot cscale-dot-english"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">French</div><div class="cscale-track"><div class="cscale-dot cscale-dot-french"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Russian</div><div class="cscale-track"><div class="cscale-dot cscale-dot-russian"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Turkish</div><div class="cscale-track"><div class="cscale-dot cscale-dot-turkish"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Inuktitut</div><div class="cscale-track"><div class="cscale-dot cscale-dot-inuktitut"></div></div></div>
+      <div class="label-pair"><span>Analytic (no inflection)</span><span>Synthetic (moderate)</span><span>Polysynthetic (extreme)</span></div>
+      <div class="data-row"><div class="cscale-name">Mandarin</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-style"></div></div></div>
+      <div class="data-row"><div class="cscale-name">English</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-english"></div></div></div>
+      <div class="data-row"><div class="cscale-name">French</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-french"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Russian</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-russian"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Turkish</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-turkish"></div></div></div>
+      <div class="data-row"><div class="cscale-name">Inuktitut</div><div class="scale-track-soft"><div class="cscale-dot cscale-dot-inuktitut"></div></div></div>
       <p class="cnote">Turkish "evlerinizden" (from your houses) packs five morphemes into one word. The Inuktitut word "ᑕᑯᒃᓴᐅᓂᕐᒧᑦ" can encode what English needs an entire sentence to express.</p>
     </div>
 
@@ -266,7 +266,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showWriting('abugida',this)">Abugida</button>
     </div>
     <div class="explorer-panel" id="writing-panel">
-      <p class="explorer-placeholder">Select a writing system type above to learn about its structure and examples.</p>
+      <p class="placeholder-text">Select a writing system type above to learn about its structure and examples.</p>
     </div>
 
     <!-- ── PART C ── -->
@@ -276,7 +276,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="first-language-acquisition-the-developmental-timeline">first language acquisition — the developmental timeline</h2>
     <div class="card u-mb-md">
       <p class="clabel">milestones in first language acquisition</p>
-      <div class="pc-wrap">
+      <div class="scroll-x-padded">
         <div class="pc-axis" id="acq-axis"></div>
         <div id="acq-rows"></div>
       </div>
@@ -292,9 +292,9 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="second-language-acquisition-the-age-effect">second language acquisition — the age effect</h2>
     <div class="card u-mb-md">
       <p class="clabel">critical period hypothesis — explore the effect of age on ultimate attainment</p>
-      <p class="age-intro">Adjust your age of first exposure to a second language:</p>
+      <p class="lede-flush-tight">Adjust your age of first exposure to a second language:</p>
       <input type="range" id="age-slider" min="0" max="60" value="12" oninput="updateAgeSlider(this.value)">
-      <div class="slider-labels"><span>Birth (simultaneous)</span><span>Age 30</span><span>Age 60+</span></div>
+      <div class="scale-ends"><span>Birth (simultaneous)</span><span>Age 30</span><span>Age 60+</span></div>
       <div class="slider-val-display" id="age-val">Age 12</div>
       <div class="slider-interp" id="age-interp"></div>
     </div>
@@ -362,7 +362,7 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showUntrans('wabi_sabi',this)">Wabi-sabi</button>
     </div>
     <div class="explorer-panel" id="untrans-panel">
-      <p class="explorer-placeholder">Select a word above to explore what translation cannot capture.</p>
+      <p class="placeholder-text">Select a word above to explore what translation cannot capture.</p>
     </div>
 
     <!-- ── PART E ── -->
@@ -380,14 +380,14 @@ const mod = modules.find((m) => m.id === 40)!;
       <button onclick="showLang('japanese',this)">Japanese</button>
     </div>
     <div class="explorer-panel" id="lang-panel">
-      <p class="explorer-placeholder">Select a language above for a detailed profile.</p>
+      <p class="placeholder-text">Select a language above for a detailed profile.</p>
     </div>
 
     <!-- History of English timeline -->
     <h2 class="sec" id="the-history-of-english-a-period-chart">the history of english — a period chart</h2>
     <div class="card u-mb-md">
       <p class="clabel">major periods and their defining influences</p>
-      <div class="pc-wrap">
+      <div class="scroll-x-padded">
         <div class="pc-axis" id="eng-axis"></div>
         <div id="eng-rows"></div>
       </div>
@@ -407,7 +407,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="machine-translation-from-cold-war-project-to-neural-networks">machine translation — from Cold War project to neural networks</h2>
     <div class="card u-mb-md">
       <p class="clabel">evolution of machine translation</p>
-      <div class="pc-wrap">
+      <div class="scroll-x-padded">
         <div class="pc-axis" id="mt-axis"></div>
         <div id="mt-rows"></div>
       </div>
@@ -429,7 +429,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <h2 class="sec" id="language-loss-a-projection-calculator">language loss — a projection calculator</h2>
     <div class="card u-mb-md">
       <p class="clabel">how long before a language community reaches crisis level?</p>
-      <p class="loss-intro">Enter a language community's current speaker count and annual decline rate to estimate when it reaches 50 speakers (the UNESCO threshold for "critically endangered"):</p>
+      <p class="lede-flush">Enter a language community's current speaker count and annual decline rate to estimate when it reaches 50 speakers (the UNESCO threshold for "critically endangered"):</p>
       <div class="calc-row">
         <div>
           <p class="calc-label">Current speaker count</p>
@@ -458,7 +458,7 @@ const mod = modules.find((m) => m.id === 40)!;
     <!-- Distribution: endangered languages by region -->
     <div class="card u-mb-md">
       <p class="clabel">share of endangered languages by world region</p>
-      <div class="dist-bar" id="region-bar"></div>
+      <div class="stacked-bar" id="region-bar"></div>
       <div class="button-row" id="region-legend"></div>
       <p class="cnote">The Americas and Pacific together account for over half of all endangered languages despite relatively small total speaker populations. Colonial language imposition in the Americas and island isolation in the Pacific both contribute to this concentration.</p>
     </div>
@@ -750,7 +750,7 @@ const mod = modules.find((m) => m.id === 40)!;
     levelData.forEach(function(d) {
       var card = document.createElement('div');
       card.className = 'elem-card';
-      card.innerHTML = '<div class="elem-card-icon">' + d.icon + '</div><div class="elem-card-label">' + d.label + '</div>';
+      card.innerHTML = '<div class="card-icon">' + d.icon + '</div><div class="elem-card-label">' + d.label + '</div>';
       card.onclick = function() {
         var wasActive = card.classList.contains('active');
         document.querySelectorAll('#level-grid .elem-card').forEach(c => c.classList.remove('active'));

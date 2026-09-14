@@ -12,9 +12,9 @@ const mod = modules.find((m) => m.id === 34)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-film module-header-icon-accent"></i>
+      <i class="fa-solid fa-film module-icon-large"></i>
       <div>
-        <div class="deep-dive-kicker">Module 34 — Deep Dive</div>
+        <div class="deep-dive-label">Module 34 — Deep Dive</div>
         <h1 class="module-title module-heading">Cinema</h1>
       </div>
     </div>
@@ -56,7 +56,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Shot types explorer -->
     <div class="content-panel">
       <div class="panel-title">Shot types — the basic vocabulary of film language</div>
-      <div class="shot-grid" id="shotGrid"></div>
+      <div class="tile-grid-tiny" id="shotGrid"></div>
     </div>
     <div id="shotDetail" class="shot-detail"></div>
 
@@ -65,7 +65,7 @@ const mod = modules.find((m) => m.id === 34)!;
       <div class="panel-title">Aspect ratios — the shape of the frame</div>
       <div class="button-row-spaced" id="arButtons"></div>
       <div class="cinema-row">
-        <div id="arFrameWrap" class="ar-wrap arframewrap">
+        <div id="arFrameWrap" class="ar-wrap flex-cell-xwide">
           <div id="arFrame" class="ar-frame"></div>
           <div class="muted-text-small" id="arLabel"></div>
         </div>
@@ -113,25 +113,25 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Director style comparison scale -->
     <div class="content-panel">
       <div class="inline-card-title">Filmmaking approaches — where major directors sit</div>
-      <div class="chart-intro">Approximate positions on key cinematic dimensions. Tendencies, not definitions.</div>
+      <div class="mini-intro-spaced">Approximate positions on key cinematic dimensions. Tendencies, not definitions.</div>
 
       <div class="axis-title">Style: Classical — Experimental / Formal</div>
-      <div class="cscale-row"><div class="cscale-name">Spielberg</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Kubrick</div><div class="cscale-track"><div class="cscale-dot cscale-dot-kubrick"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Godard</div><div class="cscale-track"><div class="cscale-dot cscale-dot-godard"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tarkovsky-style"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Hitchcock</div><div class="cscale-track"><div class="cscale-dot cscale-dot-hitchcock"></div></div></div>
-      <div class="cscale-poles">
+      <div class="data-row-wide"><div class="cscale-name">Spielberg</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-style"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Kubrick</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-kubrick"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Godard</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-godard"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-tarkovsky-style"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Hitchcock</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-hitchcock"></div></div></div>
+      <div class="pole-labels-spaced">
         <span>Genre entertainment, invisible technique</span>
         <span>Self-conscious form, art cinema</span>
       </div>
 
       <div class="axis-title-spaced">Pace: Fast-cut / Dynamic — Long takes / Contemplative</div>
-      <div class="cscale-row"><div class="cscale-name">Michael Bay</div><div class="cscale-track"><div class="cscale-dot cscale-dot-michael-bay"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Scorsese</div><div class="cscale-track"><div class="cscale-dot cscale-dot-scorsese-pace"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Wong Kar-wai</div><div class="cscale-track"><div class="cscale-dot cscale-dot-wong-kar-wai-pace"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tarkovsky-pace"></div></div></div>
-      <div class="cscale-poles">
+      <div class="data-row-wide"><div class="cscale-name">Michael Bay</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-michael-bay"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Scorsese</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-scorsese-pace"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Wong Kar-wai</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-wong-kar-wai-pace"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-tarkovsky-pace"></div></div></div>
+      <div class="pole-labels-spaced">
         <span>High-energy editing, constant motion</span>
         <span>Stillness, duration as meaning</span>
       </div>
@@ -207,9 +207,9 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Sound design range slider -->
     <div class="content-panel">
       <div class="inline-card-title">Sound design — from diegetic to non-diegetic</div>
-      <div class="slider-intro">Move the slider to explore how sound relates to the world of the film.</div>
+      <div class="mini-intro">Move the slider to explore how sound relates to the world of the film.</div>
       <input class="u-w-100pct" type="range" id="soundSlider" min="1" max="5" value="1" oninput="updateSoundSlider(this.value)">
-      <div class="slider-labels">
+      <div class="pole-labels">
         <span>Fully diegetic</span>
         <span>Non-diegetic</span>
       </div>
@@ -237,7 +237,7 @@ const mod = modules.find((m) => m.id === 34)!;
 
     <!-- Box office top films bar chart -->
     <div class="content-panel">
-      <div class="box-office-title">All-time highest-grossing films (adjusted for inflation, worldwide)</div>
+      <div class="row-title">All-time highest-grossing films (adjusted for inflation, worldwide)</div>
       <div class="inflation-note">Inflation-adjusted to 2024 USD. Figures are estimates — historical conversion is inexact.</div>
       <div class="bo-chart-wrap" id="boxOfficeChart"></div>
     </div>
@@ -263,7 +263,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <div class="content-panel">
       <div class="panel-title-spaced">Global box office by genre — approximate shares (2015–2024 average)</div>
       <div class="dist-bar" id="genreDistBar"></div>
-      <div class="dist-legend" id="genreDistLegend"></div>
+      <div class="legend-inline" id="genreDistLegend"></div>
       <div class="source-note">Source: based on MPAA annual reports and Box Office Mojo data. Many films straddle multiple genres; primary classification used.</div>
     </div>
 
@@ -280,21 +280,21 @@ const mod = modules.find((m) => m.id === 34)!;
 
     <!-- Director profiles -->
     <div class="panel-title-spaced">Essential auteurs — click for profile and key films</div>
-    <div class="dir-grid" id="auteurGrid"></div>
+    <div class="card-grid-narrow" id="auteurGrid"></div>
     <div id="auteurDetail" class="dir-detail"></div>
 
     <!-- Director style comparison scale (narrative vs visual) -->
     <div class="content-panel">
       <div class="inline-card-title">Auteur orientation — narrative vs visual primacy</div>
-      <div class="chart-intro">Where each director places their primary emphasis. Neither pole is superior.</div>
+      <div class="mini-intro-spaced">Where each director places their primary emphasis. Neither pole is superior.</div>
       <div class="axis-title">Story/character-first — Image/form-first</div>
-      <div class="cscale-row"><div class="cscale-name">Sidney Lumet</div><div class="cscale-track"><div class="cscale-dot cscale-dot-lumet"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Billy Wilder</div><div class="cscale-track"><div class="cscale-dot cscale-dot-wilder"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Scorsese</div><div class="cscale-track"><div class="cscale-dot cscale-dot-scorsese-auteur"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Wong Kar-wai</div><div class="cscale-track"><div class="cscale-dot cscale-dot-wong-kar-wai-auteur"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Malick</div><div class="cscale-track"><div class="cscale-dot cscale-dot-malick"></div></div></div>
-      <div class="cscale-row"><div class="cscale-name">Tarkovsky</div><div class="cscale-track"><div class="cscale-dot cscale-dot-tarkovsky-auteur"></div></div></div>
-      <div class="cscale-poles">
+      <div class="data-row-wide"><div class="cscale-name">Sidney Lumet</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-lumet"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Billy Wilder</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-wilder"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Scorsese</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-scorsese-auteur"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Wong Kar-wai</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-wong-kar-wai-auteur"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Malick</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-malick"></div></div></div>
+      <div class="data-row-wide"><div class="cscale-name">Tarkovsky</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-tarkovsky-auteur"></div></div></div>
+      <div class="pole-labels-spaced">
         <span>Dialogue, performance, plot mechanics</span>
         <span>Texture, duration, visual poetry</span>
       </div>
@@ -334,7 +334,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <div class="content-panel">
       <div class="panel-title-spaced">Global box office by territory — approximate 2023 shares</div>
       <div class="dist-bar" id="worldDistBar"></div>
-      <div class="dist-legend" id="worldDistLegend"></div>
+      <div class="legend-inline" id="worldDistLegend"></div>
       <div class="source-note">Includes domestic productions. North America and China together represent over half of global theatrical revenue.</div>
     </div>
 
@@ -358,7 +358,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Watchlist difficulty calculator -->
     <div class="calc-wrap">
       <div class="inline-card-title">Film difficulty estimator</div>
-      <div class="slider-intro">How demanding is a film likely to be? Enter rough ratings for three properties.</div>
+      <div class="mini-intro">How demanding is a film likely to be? Enter rough ratings for three properties.</div>
       <div class="calc-row">
         <div class="calc-field">
           <label>Editing pace (1=very fast, 10=very slow)</label>
@@ -380,9 +380,9 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Rewatch value slider -->
     <div class="content-panel">
       <div class="inline-card-title">How many times to watch a film</div>
-      <div class="slider-intro">Move the slider to see what rewatching a specific number of times typically reveals.</div>
+      <div class="mini-intro">Move the slider to see what rewatching a specific number of times typically reveals.</div>
       <input class="u-w-100pct" type="range" id="rewatchSlider" min="1" max="5" value="1" oninput="updateRewatchSlider(this.value)">
-      <div class="slider-labels">
+      <div class="pole-labels">
         <span>First watch</span>
         <span>Fifth watch</span>
       </div>
@@ -446,7 +446,7 @@ const mod = modules.find((m) => m.id === 34)!;
     <!-- Starter watchlist -->
     <h2 class="sec" id="thirty-essential-films-an-annotated-starting-point">Thirty essential films — an annotated starting point</h2>
     <div class="content-panel">
-      <div class="chart-intro">Sorted by approximate difficulty. Start at the top if you're new to serious film-watching; the bottom row requires patience and prior film literacy.</div>
+      <div class="mini-intro-spaced">Sorted by approximate difficulty. Start at the top if you're new to serious film-watching; the bottom row requires patience and prior film literacy.</div>
       <div class="watchlistgrid" id="watchlistGrid"></div>
     </div>
 
@@ -672,7 +672,7 @@ const mod = modules.find((m) => m.id === 34)!;
         const card = document.createElement('div');
         card.className = 'shot-card' + (i === 0 ? ' active' : '');
         const diag = makeShotDiagram(s.diagram);
-        card.innerHTML = `<div class="shot-diagram">${diag}</div><div class="shot-label-inner"><div class="shot-name">${s.name}</div><div class="shot-abbr">${s.abbr}</div></div>`;
+        card.innerHTML = `<div class="shot-diagram">${diag}</div><div class="pad-compact"><div class="shot-name">${s.name}</div><div class="micro-text">${s.abbr}</div></div>`;
         card.onclick = (e) => showShot(i, e.currentTarget);
         grid.appendChild(card);
       });
@@ -781,7 +781,7 @@ const mod = modules.find((m) => m.id === 34)!;
       camMoves.forEach((m, i) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${m.icon}"></i></div><div class="elem-card-label">${m.label}</div><div class="muted-text-small">${m.sub}</div>`;
+        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${m.icon}"></i></div><div class="label-strong">${m.label}</div><div class="muted-text-small">${m.sub}</div>`;
         card.onclick = function() {
           const detail = document.getElementById('camDetail');
           const wasActive = card.classList.contains('active');
@@ -929,7 +929,7 @@ const mod = modules.find((m) => m.id === 34)!;
       genres.forEach((g, i) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${g.icon}"></i></div><div class="elem-card-label">${g.label}</div><div class="muted-text-small">${g.sub}</div>`;
+        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${g.icon}"></i></div><div class="label-strong">${g.label}</div><div class="muted-text-small">${g.sub}</div>`;
         card.onclick = function() {
           const detail = document.getElementById('genreDetail');
           const wasActive = card.classList.contains('active');
@@ -968,7 +968,7 @@ const mod = modules.find((m) => m.id === 34)!;
         bar.appendChild(seg);
         const item = document.createElement('div');
         item.className = 'dist-item';
-        item.innerHTML = `<div class="dist-dot" style="background:${d.col}"></div><span>${d.label} (${d.pct}%)</span>`;
+        item.innerHTML = `<div class="key-dot" style="background:${d.col}"></div><span>${d.label} (${d.pct}%)</span>`;
         legend.appendChild(item);
       });
     }
@@ -1045,7 +1045,7 @@ const mod = modules.find((m) => m.id === 34)!;
       auteurs.forEach((a, i) => {
         const card = document.createElement('div');
         card.className = 'dir-card';
-        card.innerHTML = `<div class="dir-name">${a.name}</div><div class="dir-years">${a.years}</div><span class="dir-tag">${a.tag}</span>`;
+        card.innerHTML = `<div class="card-heading-strong">${a.name}</div><div class="dir-years">${a.years}</div><span class="dir-tag">${a.tag}</span>`;
         card.onclick = function() {
           const detail = document.getElementById('auteurDetail');
           const wasActive = card.classList.contains('active');
@@ -1131,7 +1131,7 @@ const mod = modules.find((m) => m.id === 34)!;
         bar.appendChild(seg);
         const item = document.createElement('div');
         item.className = 'dist-item';
-        item.innerHTML = `<div class="dist-dot" style="background:${d.col}"></div><span>${d.label} (${d.pct}%)</span>`;
+        item.innerHTML = `<div class="key-dot" style="background:${d.col}"></div><span>${d.label} (${d.pct}%)</span>`;
         legend.appendChild(item);
       });
     }
@@ -1161,7 +1161,7 @@ const mod = modules.find((m) => m.id === 34)!;
       watchLayers.forEach((w) => {
         const card = document.createElement('div');
         card.className = 'elem-card';
-        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${w.icon}"></i></div><div class="elem-card-label">${w.label}</div><div class="muted-text-small">${w.sub}</div>`;
+        card.innerHTML = `<div class="elem-card-icon"><i class="fa-solid ${w.icon}"></i></div><div class="label-strong">${w.label}</div><div class="muted-text-small">${w.sub}</div>`;
         card.onclick = function() {
           const detail = document.getElementById('watchDetail');
           const wasActive = card.classList.contains('active');

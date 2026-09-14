@@ -1,9 +1,3 @@
-
-    /* ── Genre explorer cards ── */
-    .genre-grid {
-      display:grid; grid-template-columns:repeat(auto-fit, minmax(110px, 1fr));
-      gap:8px; margin-bottom:10px;
-    }
     .genre-card {
       background:var(--color-background-primary);
       border:0.5px solid var(--color-border-tertiary);
@@ -13,9 +7,6 @@
     }
     .genre-card:hover { background:var(--color-background-secondary); }
     .genre-card.active { background:var(--color-background-secondary); border-color:var(--color-border-secondary); }
-    .genre-icon { font-size:20px; margin-bottom:4px; }
-    .genre-name { font-size:11px; font-weight:600; color:var(--color-text-primary); }
-    .genre-sub  { font-size:10px; color:var(--color-text-secondary); margin-top:2px; line-height:1.3; }
     .genre-detail {
       background:var(--color-background-primary);
       border:0.5px solid var(--color-border-tertiary);
@@ -23,39 +14,19 @@
       padding:13px 15px; margin-bottom:1rem; display:none;
     }
     .genre-detail.show { display:block; }
-
-    /* ── Timeline period bars ── */
-    .pc-row { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
     .pc-label {
       font-size:11px; color:var(--color-text-secondary);
       width:140px; flex-shrink:0; text-align:right;
-    }
-    .pc-track {
-      flex:1; height:16px; background:var(--color-background-secondary);
-      border-radius:3px; position:relative; min-width:200px;
     }
     .pc-fill {
       position:absolute; top:0; height:100%; border-radius:3px;
       display:flex; align-items:center; padding:0 5px;
     }
-    .pc-fill-label { font-size:9px; font-weight:600; white-space:nowrap; overflow:hidden; }
     .pc-axis { display:flex; margin-left:148px; margin-bottom:4px; position:relative; height:14px; }
-    .pc-axis-mark { font-size:9px; color:var(--color-text-tertiary); position:absolute; transform:translateX(-50%); }
-
-    /* ── Comparison scale ── */
-    .cscale-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
     .cscale-name { font-size:12px; color:var(--color-text-primary); width:150px; flex-shrink:0; }
-    .cscale-track { flex:1; height:8px; background:var(--color-background-secondary); border-radius:4px; position:relative; }
     .cscale-dot {
       position:absolute; top:50%; transform:translate(-50%,-50%);
       width:12px; height:12px; border-radius:50%; border:2px solid var(--color-background-primary);
-    }
-    .cscale-poles { display:flex; justify-content:space-between; font-size:10px; color:var(--color-text-tertiary); margin-top:6px; }
-
-    /* ── Elements of game design grid ── */
-    .elem-grid {
-      display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));
-      gap:8px; margin-bottom:10px;
     }
     .elem-card {
       background:var(--color-background-primary);
@@ -67,19 +38,12 @@
     .elem-card:hover { background:var(--color-background-secondary); }
     .elem-card.active { background:var(--color-background-secondary); border-color:var(--color-border-secondary); }
     .elem-icon { font-size:18px; margin-bottom:4px; }
-    .elem-name { font-size:11px; font-weight:600; color:var(--color-text-primary); }
-    .elem-sub  { font-size:10px; color:var(--color-text-secondary); margin-top:2px; }
-/* ── Industry bar chart ── */
-    .ind-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
     .ind-label { font-size:11px; color:var(--color-text-secondary); width:130px; flex-shrink:0; text-align:right; padding-right:8px; }
-    .ind-bar { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 8px; }
-    .ind-val { font-size:10px; font-weight:600; white-space:nowrap; }
 
     /* ── Dot grid for interactivity spectrum ── */
     .dot-row { display:flex; gap:5px; align-items:center; margin-bottom:6px; }
     .dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
     .dot-filled { background:#7E5BBF; }
-    .dot-empty  { background:var(--color-background-secondary); border:0.5px solid var(--color-border-tertiary); }
     .dot-label  { font-size:11px; color:var(--color-text-secondary); margin-left:4px; }
     .ntab {
       font-size:12px; padding:4px 12px;
@@ -98,52 +62,12 @@
       .ind-label { width:90px; font-size:10px; }
     }
 
-/* === Shared-ready extracted styles === */
-
-.detail-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:2px;
-}
-
-.text-amber-900 {
-  color:#633806;
-}
-
-.text-blue-900 {
-  color:#0C447C;
-}
-
-.text-green-800 {
-  color:#27500A;
-}
-
 .text-indigo-900 {
   color:#3C3489;
 }
 
-.text-orange-900 {
-  color:#712B13;
-}
-
 .text-red-900 {
   color:#791F1F;
-}
-
-.text-stone-800 {
-  color:#444441;
-}
-
-.text-white {
-  color:white;
-}
-
-/* === Module-specific extracted styles === */
-
-.game-text {
-  font-size:42px;
-  color:var(--accent);
-  flex-shrink:0;
 }
 
 .deep-dive-kicker {
@@ -153,12 +77,6 @@
   text-transform:uppercase;
   color:#7E5BBF;
   margin-bottom:2px;
-}
-
-.game-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
-  gap:8px;
 }
 
 .game-panel {
@@ -281,12 +199,6 @@
   line-height:1.5;
 }
 
-.chart-intro {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
-}
-
 .interactivity-note {
   margin-top:10px;
   font-size:11px;
@@ -294,45 +206,11 @@
   line-height:1.6;
 }
 
-.flow-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin-bottom:12px;
-  line-height:1.6;
-}
-
-.game-row {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:8px;
-  flex-wrap:wrap;
-}
-
-.slider-label {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  white-space:nowrap;
-}
-
-.challengeslider {
-  flex:1;
-  min-width:120px;
-}
-
 .challengeval {
   font-size:12px;
   font-weight:500;
   color:var(--color-text-primary);
   min-width:60px;
-}
-
-.flow-slider-row {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:12px;
-  flex-wrap:wrap;
 }
 
 .flowresult {
@@ -422,12 +300,6 @@
   gap:8px;
 }
 
-.card-body {
-  font-size:12px;
-  color:var(--color-text-primary);
-  line-height:1.5;
-}
-
 .ind-bar-style {
   width:100%;
   background:#7E5BBF;
@@ -451,12 +323,6 @@
 .ind-bar-books {
   width:22%;
   background:#27A04A;
-}
-
-.sources-note {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-top:8px;
 }
 
 .platform-panel-mobile {
@@ -519,26 +385,6 @@
   line-height:1.6;
 }
 
-.industry-card-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:10px;
-  margin-bottom:1rem;
-}
-
-.canon-intro {
-  font-size:11px;
-  color:var(--color-text-secondary);
-  margin-bottom:10px;
-}
-
-.axis-title {
-  font-size:11px;
-  font-weight:600;
-  color:var(--color-text-secondary);
-  margin-bottom:6px;
-}
-
 .cscale-dot-style {
   left:5%;
   background:#E07B5A;
@@ -562,13 +408,6 @@
 .cscale-dot-dwarf-fortress-design {
   left:97%;
   background:#633806;
-}
-
-.axis-title-spaced {
-  font-size:11px;
-  font-weight:600;
-  color:var(--color-text-secondary);
-  margin:14px 0 6px;
 }
 
 .cscale-dot-stardew-valley {

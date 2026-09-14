@@ -67,21 +67,9 @@
       margin-bottom: 1rem;
       padding: 13px 15px;
     }
-    .explorer-title {
-      color: var(--color-text-primary);
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
     .mini-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 10px;
-      margin-bottom: 1rem;
-    }
-    .dense-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
       gap: 10px;
       margin-bottom: 1rem;
     }
@@ -117,9 +105,6 @@
 
     .period-chart {
       overflow-x: auto;
-    }
-    .pc-inner {
-      min-width: 620px;
     }
     .pc-axis {
       height: 18px;
@@ -176,36 +161,6 @@
       min-width: 420px;
       width: 100%;
     }
-    .svg-scroll {
-      overflow-x: auto;
-    }
-    .svg-caption {
-      color: var(--color-text-tertiary);
-      font-size: 11px;
-      line-height: 1.5;
-      margin-top: 8px;
-    }
-
-    .slider-top {
-      align-items: baseline;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-    .slider-value {
-      color: var(--accent);
-      font-size: 20px;
-      font-weight: 600;
-    }
-    .range-labels {
-      color: var(--color-text-tertiary);
-      display: flex;
-      font-size: 11px;
-      justify-content: space-between;
-      margin-top: 5px;
-    }
     .slider-result {
       background: var(--color-background-secondary);
       border-radius: var(--border-radius-md);
@@ -242,16 +197,6 @@
       font-size: 18px;
       margin-bottom: 4px;
     }
-    .elem-name {
-      color: var(--color-text-primary);
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .elem-sub {
-      color: var(--color-text-secondary);
-      font-size: 10px;
-      margin-top: 2px;
-    }
 
     /* Tax section elem cards use teal accent */
     .tax-elem-card:hover,
@@ -270,17 +215,6 @@
       margin-bottom: 1rem;
       padding: 13px 15px;
     }
-    .compute-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .input-label {
-      color: var(--color-text-secondary);
-      font-size: 11px;
-      margin-bottom: 4px;
-    }
     .compute-output {
       background: var(--color-background-secondary);
       border-radius: var(--border-radius-md);
@@ -291,14 +225,6 @@
       min-height: 44px;
       padding: 10px 12px;
     }
-
-    .distribution-bar {
-      border-radius: var(--border-radius-md);
-      display: flex;
-      height: 28px;
-      margin-bottom: 10px;
-      overflow: hidden;
-    }
     .dist-seg {
       min-width: 2px;
     }
@@ -307,13 +233,6 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 6px;
-    }
-    .legend-item {
-      align-items: center;
-      color: var(--color-text-secondary);
-      display: flex;
-      font-size: 11px;
-      gap: 5px;
     }
     .legend-swatch {
       border-radius: 2px;
@@ -358,13 +277,6 @@
       justify-content: space-between;
       margin: 2px 0 10px 140px;
     }
-
-    .chart-title {
-      color: var(--color-text-primary);
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
     .bar-row {
       margin-bottom: 8px;
     }
@@ -378,25 +290,11 @@
       height: 100%;
       border-radius: 3px;
     }
-    .bar-note {
-      color: var(--color-text-tertiary);
-      font-size: 11px;
-      line-height: 1.5;
-      margin-top: 8px;
-    }
     .tiny-label {
       color: var(--color-text-secondary);
       font-size: 11px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-    }
-    .bracket-slider-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
     }
     .bracket-val {
       color: var(--tax-accent);
@@ -451,30 +349,11 @@
       font-size: 12px;
       line-height: 1.7;
     }
-
-    /* --- Tax timeline (compact) --- */
-    .tax-history-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 8px;
-      margin-bottom: 1rem;
-    }
     .tax-era-year {
       color: var(--tax-accent);
       font-size: 13px;
       font-weight: 600;
       margin-bottom: 3px;
-    }
-    .tax-era-label {
-      color: var(--color-text-primary);
-      font-size: 12px;
-      font-weight: 500;
-      margin-bottom: 3px;
-    }
-    .tax-era-desc {
-      color: var(--color-text-secondary);
-      font-size: 11px;
-      line-height: 1.5;
     }
 
     /* --- Incidence and deadweight visualiser --- */

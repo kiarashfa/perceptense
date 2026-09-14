@@ -12,9 +12,9 @@ const mod = modules.find((m) => m.id === 33)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-music module-header-icon-accent"></i>
+      <i class="fa-solid fa-music module-icon-large"></i>
       <div>
-        <div class="deep-dive-kicker">Module 33 — Deep Dive</div>
+        <div class="deep-dive-label">Module 33 — Deep Dive</div>
         <h1 class="module-title module-heading">Music</h1>
       </div>
     </div>
@@ -41,24 +41,24 @@ const mod = modules.find((m) => m.id === 33)!;
       </div>
 
       <div id="elem-pitch" class="elem-panel show">
-        <div class="music-grid">
+        <div class="tile-grid-wide">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">What it is</div>
-            <div class="card-body">Pitch is the perceived frequency of a sound. A string vibrating 440 times per second (440 Hz) produces A4 — the tuning standard. Double the frequency (880 Hz) and you get A5: an octave higher. The relationship between frequencies is not arbitrary: notes sharing simple integer ratios (2:1, 3:2, 4:3) sound consonant to most listeners. This is physics, not culture — though which pitches are used and how they relate is highly cultural.</div>
+            <div class="body-small">Pitch is the perceived frequency of a sound. A string vibrating 440 times per second (440 Hz) produces A4 — the tuning standard. Double the frequency (880 Hz) and you get A5: an octave higher. The relationship between frequencies is not arbitrary: notes sharing simple integer ratios (2:1, 3:2, 4:3) sound consonant to most listeners. This is physics, not culture — though which pitches are used and how they relate is highly cultural.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Scale systems</div>
-            <div class="card-body">Western music divides the octave into 12 equal semitones (equal temperament — a compromise allowing the same piece to be played in all keys). Indian classical music uses microtones between those 12. Arabic maqam uses quarter-tones. Pentatonic scales (5 notes per octave) appear in music from China, Scotland, West Africa, and the Andes. The 12-tone Western system is one solution among many, not the natural order.</div>
+            <div class="body-small">Western music divides the octave into 12 equal semitones (equal temperament — a compromise allowing the same piece to be played in all keys). Indian classical music uses microtones between those 12. Arabic maqam uses quarter-tones. Pentatonic scales (5 notes per octave) appear in music from China, Scotland, West Africa, and the Andes. The 12-tone Western system is one solution among many, not the natural order.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Harmony</div>
-            <div class="card-body">Multiple pitches sounded simultaneously. The study of which combinations sound consonant (stable) or dissonant (unstable, requiring resolution) forms the basis of Western harmonic theory. Tonality — organising music around a "home" key — dominated Western music from roughly 1600 to 1900. Atonality (Schoenberg, 1908) abandoned this system entirely, producing music with no harmonic "home."</div>
+            <div class="body-small">Multiple pitches sounded simultaneously. The study of which combinations sound consonant (stable) or dissonant (unstable, requiring resolution) forms the basis of Western harmonic theory. Tonality — organising music around a "home" key — dominated Western music from roughly 1600 to 1900. Atonality (Schoenberg, 1908) abandoned this system entirely, producing music with no harmonic "home."</div>
           </div>
         </div>
         <div class="u-mt-md">
-          <div class="scale-caption">The chromatic scale — 12 semitones of one octave (hover for details)</div>
+          <div class="mini-caption">The chromatic scale — 12 semitones of one octave (hover for details)</div>
           <div class="freq-bars" id="freqBars"></div>
-          <div class="caption-tiny" id="freqLabel">C4 = 261.63 Hz — middle C, the reference point of Western keyboard music</div>
+          <div class="micro-caption" id="freqLabel">C4 = 261.63 Hz — middle C, the reference point of Western keyboard music</div>
           <div class="music-row">
             <span>C4</span><span>C#4</span><span>D4</span><span>D#4</span><span>E4</span><span>F4</span>
             <span>F#4</span><span>G4</span><span>G#4</span><span>A4</span><span>A#4</span><span>B4</span>
@@ -67,61 +67,61 @@ const mod = modules.find((m) => m.id === 33)!;
       </div>
 
       <div id="elem-rhythm" class="elem-panel">
-        <div class="music-grid">
+        <div class="tile-grid-wide">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Pulse and metre</div>
-            <div class="card-body">Rhythm is the organisation of sound in time. The pulse (beat) is the underlying regular heartbeat of music. Metre groups beats into recurring patterns: 4/4 (four beats per bar — the most common in Western popular music), 3/4 (waltz time), 6/8 (compound duple), 5/4 (Dave Brubeck's Take Five), 7/8 (Balkan folk music).</div>
+            <div class="body-small">Rhythm is the organisation of sound in time. The pulse (beat) is the underlying regular heartbeat of music. Metre groups beats into recurring patterns: 4/4 (four beats per bar — the most common in Western popular music), 3/4 (waltz time), 6/8 (compound duple), 5/4 (Dave Brubeck's Take Five), 7/8 (Balkan folk music).</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Syncopation</div>
-            <div class="card-body">Emphasis on the weak beats rather than the strong ones. The foundation of jazz, blues, funk, and most African-derived popular music. A 4/4 bar normally stresses beats 1 and 3; syncopation stresses 2 and 4 (the backbeat of rock and roll), or inserts accents between the main beats. Syncopation creates the "groove" by placing emphasis where the listener doesn't expect it.</div>
+            <div class="body-small">Emphasis on the weak beats rather than the strong ones. The foundation of jazz, blues, funk, and most African-derived popular music. A 4/4 bar normally stresses beats 1 and 3; syncopation stresses 2 and 4 (the backbeat of rock and roll), or inserts accents between the main beats. Syncopation creates the "groove" by placing emphasis where the listener doesn't expect it.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Tempo</div>
-            <div class="card-body">How fast the pulse moves. Measured in beats per minute (BPM). Marked in Italian: Largo (very slow, 40–60 BPM), Andante (walking pace, 76–108 BPM), Allegro (fast, 120–156 BPM), Presto (very fast, 168–200 BPM). Human resting heart rate is 60–80 BPM — music at this tempo feels natural; faster tempos excite; slower tempos create solemnity.</div>
+            <div class="body-small">How fast the pulse moves. Measured in beats per minute (BPM). Marked in Italian: Largo (very slow, 40–60 BPM), Andante (walking pace, 76–108 BPM), Allegro (fast, 120–156 BPM), Presto (very fast, 168–200 BPM). Human resting heart rate is 60–80 BPM — music at this tempo feels natural; faster tempos excite; slower tempos create solemnity.</div>
           </div>
         </div>
         <div class="rhythm-demo">
           <div class="rhythm-caption">Rhythm patterns — click to animate</div>
-          <div class="rhythm-buttons">
-            <button class="animaterhythm-control" onclick="animateRhythm([1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0], this)">4/4 basic</button>
-            <button class="animaterhythm-control" onclick="animateRhythm([1,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0], this)">Syncopated</button>
-            <button class="animaterhythm-control" onclick="animateRhythm([1,0,0,1,0,0,1,0,0,1,0,1,0,0,1,0], this)">Afro-Cuban clave</button>
+          <div class="chip-row">
+            <button class="tab-button" onclick="animateRhythm([1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0], this)">4/4 basic</button>
+            <button class="tab-button" onclick="animateRhythm([1,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0], this)">Syncopated</button>
+            <button class="tab-button" onclick="animateRhythm([1,0,0,1,0,0,1,0,0,1,0,1,0,0,1,0], this)">Afro-Cuban clave</button>
           </div>
           <div id="rhythmGrid"></div>
         </div>
       </div>
 
       <div id="elem-timbre" class="elem-panel">
-        <div class="music-grid">
+        <div class="tile-grid-wide">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">What it is</div>
-            <div class="card-body">Timbre is the quality or colour of a sound — what distinguishes a violin from a flute playing the same note at the same volume. It is determined by the harmonic overtones present in the sound. Every instrument produces not just the fundamental frequency but a series of overtones above it; the relative strength of these overtones creates the characteristic sound.</div>
+            <div class="body-small">Timbre is the quality or colour of a sound — what distinguishes a violin from a flute playing the same note at the same volume. It is determined by the harmonic overtones present in the sound. Every instrument produces not just the fundamental frequency but a series of overtones above it; the relative strength of these overtones creates the characteristic sound.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Orchestration</div>
-            <div class="card-body">The art of combining different timbres. Which instruments play which notes, in which register, with what articulation. Berlioz, Rimsky-Korsakov, Debussy, and Ravel were masters of orchestration. Debussy described it as "painting in sound" — the same note played by a horn, a flute, and a violin are three different compositional choices.</div>
+            <div class="body-small">The art of combining different timbres. Which instruments play which notes, in which register, with what articulation. Berlioz, Rimsky-Korsakov, Debussy, and Ravel were masters of orchestration. Debussy described it as "painting in sound" — the same note played by a horn, a flute, and a violin are three different compositional choices.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Extended techniques</div>
-            <div class="card-body">20th century music expanded the timbre palette: prepared piano (Cage — objects placed between strings), sul ponticello (bowing near the bridge for a glassy tone), multiphonics (producing two pitches simultaneously on a wind instrument), electronic synthesis, and digital sampling. Electronic music expands the timbral universe to any imaginable sound.</div>
+            <div class="body-small">20th century music expanded the timbre palette: prepared piano (Cage — objects placed between strings), sul ponticello (bowing near the bridge for a glassy tone), multiphonics (producing two pitches simultaneously on a wind instrument), electronic synthesis, and digital sampling. Electronic music expands the timbral universe to any imaginable sound.</div>
           </div>
         </div>
       </div>
 
       <div id="elem-dynamics" class="elem-panel">
-        <div class="music-grid">
+        <div class="tile-grid-wide">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Volume and expression</div>
-            <div class="card-body">Dynamics is the variation in loudness. Marked in Italian: ppp (very very soft) through pp, p, mp, mf, f, ff, fff (very very loud). Crescendo = gradually louder; diminuendo = gradually softer. Dynamic contrast is one of music's most powerful expressive tools — the Mannheim crescendo (18th-century innovation) was considered startling and thrilling when first heard.</div>
+            <div class="body-small">Dynamics is the variation in loudness. Marked in Italian: ppp (very very soft) through pp, p, mp, mf, f, ff, fff (very very loud). Crescendo = gradually louder; diminuendo = gradually softer. Dynamic contrast is one of music's most powerful expressive tools — the Mannheim crescendo (18th-century innovation) was considered startling and thrilling when first heard.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Articulation</div>
-            <div class="card-body">How notes are begun and ended. Staccato (short, detached), legato (smooth, connected), marcato (heavily accented), tenuto (held for full value), sforzando (sudden forceful accent). A melody played staccato versus legato uses the same pitches at the same rhythm — but feels completely different. Articulation is the difference between a mechanical performance and a musical one.</div>
+            <div class="body-small">How notes are begun and ended. Staccato (short, detached), legato (smooth, connected), marcato (heavily accented), tenuto (held for full value), sforzando (sudden forceful accent). A melody played staccato versus legato uses the same pitches at the same rhythm — but feels completely different. Articulation is the difference between a mechanical performance and a musical one.</div>
           </div>
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Silence</div>
-            <div class="card-body">Silence is not the absence of music but a musical element. Rests are notated, not incidental. John Cage's 4'33" (1952) — four minutes and thirty-three seconds of silence — argues that ambient environmental sound constitutes the music. Beethoven's pregnant silences before a dramatic outburst are as composed as the notes themselves.</div>
+            <div class="body-small">Silence is not the absence of music but a musical element. Rests are notated, not incidental. John Cage's 4'33" (1952) — four minutes and thirty-three seconds of silence — argues that ambient environmental sound constitutes the music. Beethoven's pregnant silences before a dramatic outburst are as composed as the notes themselves.</div>
           </div>
         </div>
       </div>
@@ -131,50 +131,50 @@ const mod = modules.find((m) => m.id === 33)!;
     <div class="content-panel">
       <div class="panel-title">Western classical music — periods at a glance</div>
       <div class="pc-axis">
-        <span class="pc-axis-mark pc-axis-mark-style">1400</span>
-        <span class="pc-axis-mark pc-axis-mark-second">1600</span>
-        <span class="pc-axis-mark pc-axis-mark-third">1750</span>
-        <span class="pc-axis-mark pc-axis-mark-fourth">1850</span>
-        <span class="pc-axis-mark pc-axis-mark-fifth">1920</span>
-        <span class="pc-axis-mark pc-axis-mark-last">Now</span>
+        <span class="axis-tick-small pc-axis-mark-style">1400</span>
+        <span class="axis-tick-small pc-axis-mark-second">1600</span>
+        <span class="axis-tick-small pc-axis-mark-third">1750</span>
+        <span class="axis-tick-small pc-axis-mark-fourth">1850</span>
+        <span class="axis-tick-small pc-axis-mark-fifth">1920</span>
+        <span class="axis-tick-small pc-axis-mark-last">Now</span>
       </div>
-      <div class="pc-row">
+      <div class="data-row-loose">
         <div class="pc-label">Renaissance</div>
-        <div class="pc-track">
+        <div class="period-track">
           <div class="pc-fill pc-fill-style">
-            <span class="pc-fill-label text-warning">Palestrina, Monteverdi</span>
+            <span class="period-label text-warning">Palestrina, Monteverdi</span>
           </div>
         </div>
       </div>
-      <div class="pc-row">
+      <div class="data-row-loose">
         <div class="pc-label">Baroque</div>
-        <div class="pc-track">
+        <div class="period-track">
           <div class="pc-fill pc-fill-baroque">
-            <span class="pc-fill-label text-info">Bach, Handel, Vivaldi</span>
+            <span class="period-label text-info">Bach, Handel, Vivaldi</span>
           </div>
         </div>
       </div>
-      <div class="pc-row">
+      <div class="data-row-loose">
         <div class="pc-label">Classical</div>
-        <div class="pc-track">
+        <div class="period-track">
           <div class="pc-fill pc-fill-classical">
-            <span class="pc-fill-label text-success">Haydn, Mozart, early Beethoven</span>
+            <span class="period-label text-success">Haydn, Mozart, early Beethoven</span>
           </div>
         </div>
       </div>
-      <div class="pc-row">
+      <div class="data-row-loose">
         <div class="pc-label">Romantic</div>
-        <div class="pc-track">
+        <div class="period-track">
           <div class="pc-fill pc-fill-romantic">
-            <span class="pc-fill-label text-indigo-700">Beethoven, Brahms, Wagner, Mahler</span>
+            <span class="period-label text-indigo-700">Beethoven, Brahms, Wagner, Mahler</span>
           </div>
         </div>
       </div>
-      <div class="pc-row">
+      <div class="data-row-loose">
         <div class="pc-label">20th century</div>
-        <div class="pc-track">
+        <div class="period-track">
           <div class="pc-fill pc-fill-twentieth-century">
-            <span class="pc-fill-label text-danger">Stravinsky, Schoenberg, Cage</span>
+            <span class="period-label text-danger">Stravinsky, Schoenberg, Cage</span>
           </div>
         </div>
       </div>
@@ -221,56 +221,56 @@ const mod = modules.find((m) => m.id === 33)!;
     <!-- Texture comparison scale -->
     <div class="content-panel">
       <div class="inline-card-title">Textural complexity — from single line to dense web</div>
-      <div class="cscale-wrap u-mt-md">
+      <div class="gap-below-sm u-mt-md">
         <div class="cscale-poles cscale-poles-style">
           <span>Simple (single voice)</span>
           <span>Dense (many voices)</span>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Gregorian Chant</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-style"></div></div>
           <div class="cscale-val">3%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Folk Song</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-folk-song"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-folk-song"></div></div>
           <div class="cscale-val">12%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Pop Song</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-pop-song"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-pop-song"></div></div>
           <div class="cscale-val">28%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Mozart Quartet</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-mozart-quartet"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-mozart-quartet"></div></div>
           <div class="cscale-val">48%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Bach 5-voice Fugue</div>
-          <div class="cscale-track"><div class="cscale-dot pc-axis-mark-fourth"></div></div>
+          <div class="cscale-track"><div class="scale-marker pc-axis-mark-fourth"></div></div>
           <div class="cscale-val">72%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Mahler 8th Symphony</div>
-          <div class="cscale-track"><div class="cscale-dot pc-axis-mark-fifth"></div></div>
+          <div class="cscale-track"><div class="scale-marker pc-axis-mark-fifth"></div></div>
           <div class="cscale-val">88%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Ligeti Atmospheres</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-ligeti"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-ligeti"></div></div>
           <div class="cscale-val">97%</div>
         </div>
       </div>
-      <p class="texture-note">Positions are illustrative. Ligeti's Atmospheres (1961) uses 56 independent lines for the opening cluster — human perception cannot follow individual voices; the texture is experienced as a mass.</p>
+      <p class="note-small">Positions are illustrative. Ligeti's Atmospheres (1961) uses 56 independent lines for the opening cluster — human perception cannot follow individual voices; the texture is experienced as a mass.</p>
     </div>
 
     <!-- Instrument family breakdown -->
     <div class="content-panel">
       <div class="panel-title-spaced">Orchestral instrument families — approximate proportion of a standard symphony orchestra (~80 players)</div>
       <div class="dist-bar" id="orchDist"></div>
-      <div class="dist-legend" id="orchLegend"></div>
-      <p class="chart-note">The string-heavy imbalance is intentional: strings produce less volume per player than brass or percussion, so large numbers are needed to balance the orchestra. A modern symphony orchestra typically has 32–38 string players against 2–4 of each brass instrument.</p>
+      <div class="legend-inline" id="orchLegend"></div>
+      <p class="note-small-spaced">The string-heavy imbalance is intentional: strings produce less volume per player than brass or percussion, so large numbers are needed to balance the orchestra. A modern symphony orchestra typically has 32–38 string players against 2–4 of each brass instrument.</p>
     </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -296,7 +296,7 @@ const mod = modules.find((m) => m.id === 33)!;
 
     <!-- Multi-card: great works -->
     <h2 class="sec" id="ten-works-every-listener-should-know">Ten works every listener should know</h2>
-    <div class="mcard-grid" id="worksGrid"></div>
+    <div class="tile-grid-sm" id="worksGrid"></div>
     <div id="worksDetail" class="mcard-detail"></div>
 
     <!-- ══════════════════════════════════════════════════
@@ -330,15 +330,15 @@ const mod = modules.find((m) => m.id === 33)!;
       <div class="bar-row"><div class="bl">Pentatonic (global)</div><div class="bb bb-pentatonic"></div><div class="bv text-tertiary">5</div></div>
       <div class="bar-row"><div class="bl">Gamelan (Slendro)</div><div class="bb bb-gamelan-slendro"></div><div class="bv bv-teal">5</div></div>
       <div class="bar-row"><div class="bl">Gamelan (Pelog)</div><div class="bb bb-gamelan-pelog"></div><div class="bv bv-teal">7</div></div>
-      <p class="chart-note">Turkish makam's 53-note division (Hc. Arel-Ezgi theory) represents subdivisions of the octave, not all used in one scale — individual makam scales use 7–8 notes drawn from this pool. "Scale count" measures the resolution of the tuning system, not the number of notes in any given melody.</p>
+      <p class="note-small-spaced">Turkish makam's 53-note division (Hc. Arel-Ezgi theory) represents subdivisions of the octave, not all used in one scale — individual makam scales use 7–8 notes drawn from this pool. "Scale count" measures the resolution of the tuning system, not the number of notes in any given melody.</p>
     </div>
 
     <!-- Range slider: pentatonic regions -->
     <div class="content-panel">
       <div class="compact-card-title">Estimated share of world's musical cultures using pentatonic scales</div>
-      <div class="chart-intro">Scholars estimate that 60–80% of the world's music is based on pentatonic (5-note) scales. Drag the slider to explore what that share implies about the global musical landscape.</div>
+      <div class="intro-text">Scholars estimate that 60–80% of the world's music is based on pentatonic (5-note) scales. Drag the slider to explore what that share implies about the global musical landscape.</div>
       <input class="u-w-100pct" type="range" id="pentaSlider" min="50" max="90" value="70">
-      <div class="slider-poles"><span>50% — conservative estimate</span><span>90% — maximalist estimate</span></div>
+      <div class="pole-labels"><span>50% — conservative estimate</span><span>90% — maximalist estimate</span></div>
       <div class="pentaoutput" id="pentaOutput"></div>
     </div>
 
@@ -355,73 +355,73 @@ const mod = modules.find((m) => m.id === 33)!;
     <!-- Blues/Jazz/Genre timeline -->
     <div class="content-panel">
       <div class="panel-title">Genre development — from blues roots to global pop</div>
-      <div class="pc-axis pc-axis-style">
-        <span class="pc-axis-mark pc-axis-mark-style">1890</span>
-        <span class="pc-axis-mark pc-axis-mark-jazz-second">1920</span>
-        <span class="pc-axis-mark pc-axis-mark-jazz-third">1950</span>
-        <span class="pc-axis-mark pc-axis-mark-jazz-fourth">1980</span>
-        <span class="pc-axis-mark pc-axis-mark-jazz-fifth">2010</span>
-        <span class="pc-axis-mark pc-axis-mark-last">Now</span>
+      <div class="pc-axis track-indent">
+        <span class="axis-tick-small pc-axis-mark-style">1890</span>
+        <span class="axis-tick-small pc-axis-mark-jazz-second">1920</span>
+        <span class="axis-tick-small pc-axis-mark-jazz-third">1950</span>
+        <span class="axis-tick-small pc-axis-mark-jazz-fourth">1980</span>
+        <span class="axis-tick-small pc-axis-mark-jazz-fifth">2010</span>
+        <span class="axis-tick-small pc-axis-mark-last">Now</span>
       </div>
       <div id="genreTimeline"></div>
     </div>
 
     <!-- Genre explorer (multi-card) -->
-    <div class="mcard-grid" id="genreGrid"></div>
+    <div class="tile-grid-sm" id="genreGrid"></div>
     <div id="genreDetail" class="mcard-detail"></div>
 
     <!-- Key figures comparison scale -->
     <div class="content-panel">
       <div class="inline-card-title">Harmonic complexity — key figures in jazz and popular music</div>
-      <div class="cscale-wrap u-mt-md">
+      <div class="gap-below-sm u-mt-md">
         <div class="cscale-poles cscale-poles-style">
           <span>Simpler (blues/folk)</span>
           <span>Complex (jazz harmony)</span>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Robert Johnson</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-robert-johnson"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-robert-johnson"></div></div>
           <div class="cscale-val text-tertiary">8%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Elvis Presley</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-elvis"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-elvis"></div></div>
           <div class="cscale-val cscale-val-style">14%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">The Beatles (early)</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-beatles-early"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-beatles-early"></div></div>
           <div class="cscale-val cscale-val-blue">22%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">The Beatles (late)</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-beatles-late"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-beatles-late"></div></div>
           <div class="cscale-val cscale-val-blue">45%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Duke Ellington</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-ellington"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-ellington"></div></div>
           <div class="cscale-val cscale-val-purple">65%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">Charlie Parker</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-parker"></div></div>
-          <div class="cscale-val cscale-val-accent">80%</div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-parker"></div></div>
+          <div class="cscale-val text-accent">80%</div>
         </div>
         <div class="cscale-row">
           <div class="cscale-name">John Coltrane</div>
-          <div class="cscale-track"><div class="cscale-dot cscale-dot-coltrane"></div></div>
+          <div class="cscale-track"><div class="scale-marker cscale-dot-coltrane"></div></div>
           <div class="cscale-val cscale-val-teal">93%</div>
         </div>
       </div>
-      <p class="complexity-note">Illustrative scale based on chord vocabulary complexity, not musical value. Blues simplicity is a deliberate expressive choice — Robert Johnson's three-chord Delta blues achieves emotional depth that complex harmony cannot.</p>
+      <p class="note-tiny">Illustrative scale based on chord vocabulary complexity, not musical value. Blues simplicity is a deliberate expressive choice — Robert Johnson's three-chord Delta blues achieves emotional depth that complex harmony cannot.</p>
     </div>
 
     <!-- BPM / Tempo calculator -->
     <div class="content-panel">
       <div class="compact-card-title">Tempo calculator — find a song's genre zone</div>
-      <div class="chart-intro">Enter a BPM to find out what genre territory it occupies and what that tempo feels like physiologically.</div>
-      <div class="calc-row">
+      <div class="intro-text">Enter a BPM to find out what genre territory it occupies and what that tempo feels like physiologically.</div>
+      <div class="input-row">
         <div class="calc-field">
           <label>BPM (beats per minute)</label>
           <input class="u-w-120px" type="number" id="bpmInput" min="40" max="300" value="120">
@@ -442,7 +442,7 @@ const mod = modules.find((m) => m.id === 33)!;
     </div>
 
     <!-- Listening guide multi-card -->
-    <div class="mcard-grid" id="listenGrid"></div>
+    <div class="tile-grid-sm" id="listenGrid"></div>
     <div id="listenDetail" class="mcard-detail"></div>
 
     <!-- SVG: How a symphony orchestra is arranged on stage -->
@@ -507,7 +507,7 @@ const mod = modules.find((m) => m.id === 33)!;
           <line x1="20" y1="22" x2="580" y2="22" stroke="var(--color-border-tertiary)" stroke-width="0.5" stroke-dasharray="4,3"/>
         </svg>
       </div>
-      <p class="chart-note">Modern standard seating. Historically, orchestras were arranged differently — Baroque ensembles might be far smaller and seated at keyboard instruments. The current arrangement evolved through the 19th century as orchestras grew from ~30 to 100+ players. Strings are placed closest to the audience because they require the most reinforcement.</p>
+      <p class="note-small-spaced">Modern standard seating. Historically, orchestras were arranged differently — Baroque ensembles might be far smaller and seated at keyboard instruments. The current arrangement evolved through the 19th century as orchestras grew from ~30 to 100+ players. Strings are placed closest to the audience because they require the most reinforcement.</p>
     </div>
 
     <!-- Recommended listening bar chart by difficulty -->
@@ -520,7 +520,7 @@ const mod = modules.find((m) => m.id === 33)!;
       <div class="bar-row"><div class="bl">Debussy — La Mer</div><div class="bb bb-la-mer"></div><div class="bv bv-teal">25 min</div></div>
       <div class="bar-row"><div class="bl">Coltrane — A Love Supreme</div><div class="bb bb-love-supreme"></div><div class="bv bv-violet">33 min</div></div>
       <div class="bar-row"><div class="bl">Mozart Symphony No. 40</div><div class="bb bb-mozart-fortieth"></div><div class="bv text-success">29 min</div></div>
-      <p class="chart-note">Actual runtimes of recordings in the standard repertoire. "Familiarity" requires multiple listens — plan for 5–10 complete hearings before a work fully reveals itself.</p>
+      <p class="note-small-spaced">Actual runtimes of recordings in the standard repertoire. "Familiarity" requires multiple listens — plan for 5–10 complete hearings before a work fully reveals itself.</p>
     </div>
 
 
@@ -806,7 +806,7 @@ const mod = modules.find((m) => m.id === 33)!;
       composers.forEach((c, i) => {
         const card = document.createElement('div');
         card.className = 'composer-card' + (i === 0 ? ' active' : '');
-        card.innerHTML = '<div class="composer-name">' + c.name + '</div><div class="composer-era" style="color:' + c.col + ';">' + c.era + ' · ' + c.years + '</div>';
+        card.innerHTML = '<div class="item-heading-medium">' + c.name + '</div><div class="micro-text" style="color:' + c.col + ';">' + c.era + ' · ' + c.years + '</div>';
         card.onclick = (e) => showComposer(i, e.currentTarget);
         grid.appendChild(card);
       });
@@ -912,7 +912,7 @@ const mod = modules.find((m) => m.id === 33)!;
 
         const li = document.createElement('div');
         li.className = 'dist-legend-item';
-        li.innerHTML = '<div class="dist-swatch" style="background:' + s.color + '"></div>' + s.label + ' (' + s.pct + '%)';
+        li.innerHTML = '<div class="key-swatch" style="background:' + s.color + '"></div>' + s.label + ' (' + s.pct + '%)';
         legend.appendChild(li);
       });
     }
@@ -1000,7 +1000,7 @@ const mod = modules.find((m) => m.id === 33)!;
       works.forEach((w, i) => {
         const card = document.createElement('div');
         card.className = 'mcard';
-        card.innerHTML = '<div class="mcard-icon"><i class="fa-solid ' + w.icon + '"></i></div><div class="mcard-label">' + w.label + '</div><div class="mcard-sub">' + w.sub + '</div>';
+        card.innerHTML = '<div class="mcard-icon"><i class="fa-solid ' + w.icon + '"></i></div><div class="label-tiny-strong">' + w.label + '</div><div class="card-sub">' + w.sub + '</div>';
         card.onclick = () => {
           const isActive = card.classList.contains('active');
           document.querySelectorAll('#worksGrid .mcard').forEach(c => c.classList.remove('active'));
@@ -1157,7 +1157,7 @@ const mod = modules.find((m) => m.id === 33)!;
       genreCards.forEach((w, i) => {
         const card = document.createElement('div');
         card.className = 'mcard';
-        card.innerHTML = '<div class="mcard-icon"><i class="fa-solid ' + w.icon + '"></i></div><div class="mcard-label">' + w.label + '</div><div class="mcard-sub">' + w.sub + '</div>';
+        card.innerHTML = '<div class="mcard-icon"><i class="fa-solid ' + w.icon + '"></i></div><div class="label-tiny-strong">' + w.label + '</div><div class="card-sub">' + w.sub + '</div>';
         card.onclick = () => {
           const isActive = card.classList.contains('active');
           document.querySelectorAll('#genreGrid .mcard').forEach(c => c.classList.remove('active'));
@@ -1214,7 +1214,7 @@ const mod = modules.find((m) => m.id === 33)!;
       listenCards.forEach((w) => {
         const card = document.createElement('div');
         card.className = 'mcard';
-        card.innerHTML = '<div class="mcard-icon"><i class="fa-solid ' + w.icon + '"></i></div><div class="mcard-label">' + w.label + '</div><div class="mcard-sub">' + w.sub + '</div>';
+        card.innerHTML = '<div class="mcard-icon"><i class="fa-solid ' + w.icon + '"></i></div><div class="label-tiny-strong">' + w.label + '</div><div class="card-sub">' + w.sub + '</div>';
         card.onclick = () => {
           const isActive = card.classList.contains('active');
           document.querySelectorAll('#listenGrid .mcard').forEach(c => c.classList.remove('active'));
@@ -1510,23 +1510,23 @@ const mod = modules.find((m) => m.id === 33)!;
       var rangeLeft = ((instr.rangeStart / 87) * 100).toFixed(1);
       var rangeWidth = (((instr.rangeEnd - instr.rangeStart) / 87) * 100).toFixed(1);
       detail.innerHTML =
-        '<div class="instr-detail-header">'
+        '<div class="range-row-medium">'
         + '<div class="instr-detail-big-icon">' + instr.emoji + '</div>'
         + '<div><div class="instr-detail-title">' + instr.name + '</div>'
         + '<div class="muted-text-small">' + instr.subtitle + ' &nbsp;|&nbsp; ' + instr.origin + '</div></div>'
         + '</div>'
-        + '<div class="instr-detail-grid">'
-        + '<div class="sub-card"><div class="instr-detail-cell-label">Family / Classification</div><div class="instr-detail-cell-val">' + instr.family + '</div></div>'
-        + '<div class="sub-card"><div class="instr-detail-cell-label">Inventor / Origin</div><div class="instr-detail-cell-val">' + instr.inventor + '</div></div>'
-        + '<div class="sub-card"><div class="instr-detail-cell-label">Construction</div><div class="instr-detail-cell-val">' + instr.construction + '</div></div>'
-        + '<div class="sub-card"><div class="instr-detail-cell-label">Playing Range</div><div class="instr-detail-cell-val">' + instr.range
-        + '<div class="range-bar-wrap"><div class="range-bar-track">'
+        + '<div class="tile-grid-spaced">'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Family / Classification</div><div class="body-small">' + instr.family + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Inventor / Origin</div><div class="body-small">' + instr.inventor + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Construction</div><div class="body-small">' + instr.construction + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Playing Range</div><div class="body-small">' + instr.range
+        + '<div class="gap-above"><div class="range-bar-track">'
         + '<div class="range-bar-fill" style="left:' + rangeLeft + '%;width:' + rangeWidth + '%;background:' + instr.rangeColor + ';opacity:0.75;"></div>'
         + '</div><div class="range-bar-poles"><span>A0 (piano low)</span><span>C8 (piano high)</span></div></div>'
         + '</div></div>'
-        + '<div class="sub-card"><div class="instr-detail-cell-label">Key Techniques</div><div class="instr-detail-cell-val">' + instr.technique + '</div></div>'
-        + '<div class="sub-card" style="grid-column:1/-1"><div class="instr-detail-cell-label">Legendary Artists</div><div class="instr-detail-cell-val">' + instr.legendary + '</div></div>'
-        + '<div class="sub-card" style="grid-column:1/-1"><div class="instr-detail-cell-label">Essential Listening</div><div class="instr-detail-cell-val">' + instr.works + '</div></div>'
+        + '<div class="sub-card"><div class="instr-detail-cell-label">Key Techniques</div><div class="body-small">' + instr.technique + '</div></div>'
+        + '<div class="sub-card" style="grid-column:1/-1"><div class="instr-detail-cell-label">Legendary Artists</div><div class="body-small">' + instr.legendary + '</div></div>'
+        + '<div class="sub-card" style="grid-column:1/-1"><div class="instr-detail-cell-label">Essential Listening</div><div class="body-small">' + instr.works + '</div></div>'
         + '</div>'
         + '<div class="muted-copy u-mt-md">' + instr.history + '</div>';
       detail.classList.add('show');
@@ -1539,9 +1539,9 @@ const mod = modules.find((m) => m.id === 33)!;
       instrData[family].forEach(function(instr, i) {
         var card = document.createElement('div');
         card.className = 'instr-selector-card' + (i === 0 ? ' active' : '');
-        card.innerHTML = '<div class="instr-selector-icon">' + instr.emoji + '</div>'
-          + '<div class="instr-selector-name">' + instr.name + '</div>'
-          + '<div class="instr-selector-origin">' + instr.origin.split(',')[0] + '</div>';
+        card.innerHTML = '<div class="card-icon">' + instr.emoji + '</div>'
+          + '<div class="card-label-strong">' + instr.name + '</div>'
+          + '<div class="card-sub">' + instr.origin.split(',')[0] + '</div>';
         card.onclick = function() {
           document.querySelectorAll('#instrGrid-' + family + ' .instr-selector-card').forEach(function(c) { c.classList.remove('active'); });
           card.classList.add('active');

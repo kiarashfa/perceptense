@@ -29,9 +29,6 @@
       line-height: 1.5;
     }
     .explorer-panel p:last-child { margin-bottom: 0; }
-
-    /* ── Period chart (timeline) ── */
-    .pc-wrap { overflow-x: auto; padding-bottom: 6px; }
     .pc-axis {
       position: relative;
       height: 20px;
@@ -85,34 +82,12 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
-    /* ── Comparison scale (dot on track) ── */
-    .cscale-poles {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--color-text-secondary);
-      margin-bottom: 4px;
-    }
-    .cscale-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 6px;
-    }
     .cscale-name {
       width: 130px;
       flex-shrink: 0;
       font-size: 12px;
       color: var(--color-text-secondary);
       text-align: right;
-    }
-    .cscale-track {
-      flex: 1;
-      height: 6px;
-      background: var(--color-background-secondary);
-      border-radius: 3px;
-      position: relative;
     }
     .cscale-dot {
       position: absolute;
@@ -122,14 +97,6 @@
       background: var(--accent);
       top: 50%;
       transform: translate(-50%, -50%);
-    }
-
-    /* ── Elem cards (multi-card explorer) ── */
-    .elem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 8px;
-      margin-bottom: 10px;
     }
     .elem-card {
       background: var(--color-background-primary);
@@ -144,10 +111,6 @@
     .elem-card.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
-    }
-    .elem-card-icon {
-      font-size: 22px;
-      margin-bottom: 5px;
     }
     .elem-card-label {
       font-size: 11px;
@@ -175,15 +138,6 @@
       line-height: 1.5;
     }
     .elem-detail p:last-child { margin-bottom: 0; }
-
-    /* ── Pie / distribution bar ── */
-    .dist-bar {
-      display: flex;
-      height: 28px;
-      border-radius: var(--border-radius-md);
-      overflow: hidden;
-      margin-bottom: 10px;
-    }
     .dist-seg {
       display: flex;
       align-items: center;
@@ -206,15 +160,6 @@
       height: 10px;
       border-radius: 3px;
       flex-shrink: 0;
-    }
-
-    /* ── Slider widget ── */
-    .slider-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--color-text-secondary);
-      margin-top: 3px;
     }
     .slider-val-display {
       font-size: 24px;
@@ -324,24 +269,10 @@
   color:#fff;
 }
 
-/* === Module-specific extracted styles === */
-
-.language-text {
-  font-size:42px;
-  color:var(--accent);
-  flex-shrink:0;
-}
-
 .module-intro {
   margin:0 0 8px;
   font-size:13px;
   line-height:1.6;
-  color:var(--color-text-secondary);
-}
-
-.module-outline {
-  margin:0;
-  font-size:12px;
   color:var(--color-text-secondary);
 }
 
@@ -350,11 +281,6 @@
   font-size:12px;
   line-height:1.5;
   color:var(--color-text-secondary);
-}
-
-.explorer-placeholder {
-  color:var(--color-text-tertiary);
-  font-size:12px;
 }
 
 .cgrid-style {
@@ -416,12 +342,6 @@
   font-family:var(--font-sans);
 }
 
-.levels-prompt {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin:0 0 8px;
-}
-
 .bb-tonal {
   width:70%;
   background:#D4884A;
@@ -478,22 +398,10 @@
   border:0.5px solid var(--color-border-tertiary);
 }
 
-.age-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin:0 0 8px;
-}
-
 .translation-intro {
   margin:0 0 6px;
   font-size:12px;
   line-height:1.5;
   color:var(--color-text-secondary);
-}
-
-.loss-intro {
-  font-size:12px;
-  color:var(--color-text-secondary);
-  margin:0 0 10px;
 }
   

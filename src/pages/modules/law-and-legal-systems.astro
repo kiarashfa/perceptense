@@ -40,8 +40,8 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Sources of Law visual -->
     <div class="svg-card">
-      <div class="chart-title">Sources of law and their hierarchy</div>
-      <div class="svg-scroll">
+      <div class="figure-title">Sources of law and their hierarchy</div>
+      <div class="scroll-x">
         <svg class="process-svg" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pyramid showing hierarchy of legal sources">
           <defs>
             <linearGradient id="pyrGrad" x1="0" y1="0" x2="0" y2="1">
@@ -73,16 +73,16 @@ const mod = modules.find((m) => m.id === 39)!;
           <text x="525" y="186" font-size="10" fill="var(--color-text-secondary)">fills gaps, binds parties</text>
         </svg>
       </div>
-      <div class="svg-caption">Higher sources override lower ones when they conflict. Common law countries treat case law as binding through precedent. Civil law countries give it persuasive weight. All modern systems are statute-heavy, but constitutional supremacy is the usual cap.</div>
+      <div class="fine-print">Higher sources override lower ones when they conflict. Common law countries treat case law as binding through precedent. Civil law countries give it persuasive weight. All modern systems are statute-heavy, but constitutional supremacy is the usual cap.</div>
     </div>
 
     <div class="period-chart">
-      <div class="chart-title">Long arc of legal institutions, 1215-2026</div>
-      <div class="pc-inner">
+      <div class="figure-title">Long arc of legal institutions, 1215-2026</div>
+      <div class="wide-min-lg">
         <div class="pc-axis" id="lawTimelineAxis"></div>
         <div id="lawTimelineRows"></div>
       </div>
-      <div class="bar-note">Bars are institutional influence periods, not exact birth and death dates. Magna Carta mattered in 1215, but its myth and legal afterlife became much larger centuries later.</div>
+      <div class="fine-print">Bars are institutional influence periods, not exact birth and death dates. Magna Carta mattered in 1215, but its myth and legal afterlife became much larger centuries later.</div>
     </div>
 
     <div class="mini-buttons" id="traditionButtons">
@@ -95,8 +95,8 @@ const mod = modules.find((m) => m.id === 39)!;
     <div class="explorer-panel" id="traditionDisplay"></div>
 
     <div class="svg-card">
-      <div class="chart-title">How a dispute becomes a legal decision</div>
-      <div class="svg-scroll">
+      <div class="figure-title">How a dispute becomes a legal decision</div>
+      <div class="scroll-x">
         <svg class="process-svg" viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A legal dispute flow from facts to enforcement">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -138,7 +138,7 @@ const mod = modules.find((m) => m.id === 39)!;
           <text x="335" y="232" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)">appeals usually re-check law, not re-try every fact</text>
         </svg>
       </div>
-      <div class="svg-caption">The same skeleton appears in landlord disputes, criminal prosecutions, regulatory challenges, and billion-dollar contract cases. Legal systems differ in procedure, but they all need facts, a legal theory, a forum, proof, a remedy, and enforcement.</div>
+      <div class="fine-print">The same skeleton appears in landlord disputes, criminal prosecutions, regulatory challenges, and billion-dollar contract cases. Legal systems differ in procedure, but they all need facts, a legal theory, a forum, proof, a remedy, and enforcement.</div>
     </div>
 
     <h2 class="sec" id="part-b-and-middot-public-law-the-state-and-the-individual">Part B &middot; public law - the state and the individual</h2>
@@ -164,8 +164,8 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Criminal justice pipeline visual -->
     <div class="svg-card">
-      <div class="chart-title">The criminal justice pipeline: from suspicion to release</div>
-      <div class="svg-scroll">
+      <div class="figure-title">The criminal justice pipeline: from suspicion to release</div>
+      <div class="scroll-x">
         <svg class="process-svg" viewBox="0 0 760 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Criminal justice pipeline">
           <defs>
             <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
@@ -211,23 +211,23 @@ const mod = modules.find((m) => m.id === 39)!;
           <text x="380" y="80" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">Many cases exit at each stage: dropped charges, pleas, acquittals, and suspended sentences</text>
         </svg>
       </div>
-      <div class="svg-caption">Most criminal matters never reach full trial. Plea bargains, cautions, dropped charges, and diversionary programmes resolve large majorities of cases before jury or judge deliberates on guilt.</div>
+      <div class="fine-print">Most criminal matters never reach full trial. Plea bargains, cautions, dropped charges, and diversionary programmes resolve large majorities of cases before jury or judge deliberates on guilt.</div>
     </div>
 
     <div class="slider-box">
-      <div class="slider-top">
+      <div class="header-row-split-spaced">
         <div>
           <div class="clabel">Rights limitation simulator</div>
           <div class="cnote">Move the slider from light inconvenience to severe state intrusion.</div>
         </div>
-        <div><span class="slider-value" id="rightsValue">35</span><span class="cnote"> / 100</span></div>
+        <div><span class="slider-readout-large" id="rightsValue">35</span><span class="cnote"> / 100</span></div>
       </div>
       <input id="rightsSlider" type="range" min="0" max="100" value="35">
-      <div class="range-labels"><span>minor burden</span><span>serious intrusion</span></div>
+      <div class="pole-labels-under"><span>minor burden</span><span>serious intrusion</span></div>
       <div class="slider-result" id="rightsResult"></div>
     </div>
 
-    <div class="dense-grid">
+    <div class="card-grid-narrow">
       <div class="card">
         <div class="clabel">Burden of proof</div>
         <div class="cval">In criminal cases, the prosecution must prove guilt beyond reasonable doubt. In most civil cases, the claimant wins on the balance of probabilities or preponderance of evidence: more likely than not. Some matters sit between those poles. The standard is a policy choice about error: society would rather let some guilty people go free than imprison people on weak proof.</div>
@@ -244,10 +244,10 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Sentencing goals scale -->
     <div class="scale-box">
-      <div class="chart-title">Balance of sentencing aims: punishment-focused vs rehabilitation-focused</div>
+      <div class="figure-title">Balance of sentencing aims: punishment-focused vs rehabilitation-focused</div>
       <div class="scale-poles"><span>punishment-centred</span><span>rehabilitation-centred</span></div>
       <div id="sentenceScale"></div>
-      <div class="bar-note">Positions reflect common academic characterisations of sentencing cultures. Real systems shift depending on politics, crime type, and available resources.</div>
+      <div class="fine-print">Positions reflect common academic characterisations of sentencing cultures. Real systems shift depending on politics, crime type, and available resources.</div>
     </div>
 
     <div class="info-block">A useful public-law question: what is the legal source of this power? If the answer is "the official wants to", you are not looking at law. If the answer is a constitution, statute, regulation, delegated authority, emergency power, or court order, the next question is whether the limits and process were obeyed.</div>
@@ -257,33 +257,33 @@ const mod = modules.find((m) => m.id === 39)!;
     <div class="elem-grid" id="privateCards">
       <div class="elem-card" data-key="contract">
         <i class="fa-solid fa-handshake elem-icon" aria-hidden="true"></i>
-        <div class="elem-name">Contract</div>
-        <div class="elem-sub">promises</div>
+        <div class="label-strong">Contract</div>
+        <div class="sub-caption">promises</div>
       </div>
       <div class="elem-card" data-key="tort">
         <i class="fa-solid fa-car-burst elem-icon" aria-hidden="true"></i>
-        <div class="elem-name">Tort</div>
-        <div class="elem-sub">civil wrongs</div>
+        <div class="label-strong">Tort</div>
+        <div class="sub-caption">civil wrongs</div>
       </div>
       <div class="elem-card" data-key="property">
         <i class="fa-solid fa-key elem-icon" aria-hidden="true"></i>
-        <div class="elem-name">Property</div>
-        <div class="elem-sub">control</div>
+        <div class="label-strong">Property</div>
+        <div class="sub-caption">control</div>
       </div>
       <div class="elem-card" data-key="family">
         <i class="fa-solid fa-people-roof elem-icon" aria-hidden="true"></i>
-        <div class="elem-name">Family</div>
-        <div class="elem-sub">relationships</div>
+        <div class="label-strong">Family</div>
+        <div class="sub-caption">relationships</div>
       </div>
       <div class="elem-card" data-key="equity">
         <i class="fa-solid fa-water elem-icon" aria-hidden="true"></i>
-        <div class="elem-name">Equity</div>
-        <div class="elem-sub">fair remedies</div>
+        <div class="label-strong">Equity</div>
+        <div class="sub-caption">fair remedies</div>
       </div>
       <div class="elem-card" data-key="restitution">
         <i class="fa-solid fa-rotate-left elem-icon" aria-hidden="true"></i>
-        <div class="elem-name">Restitution</div>
-        <div class="elem-sub">unjust gain</div>
+        <div class="label-strong">Restitution</div>
+        <div class="sub-caption">unjust gain</div>
       </div>
     </div>
     <div class="elem-detail elem-detail-panel" id="privateDetail"></div>
@@ -308,28 +308,28 @@ const mod = modules.find((m) => m.id === 39)!;
     </div>
 
     <div class="compute-box">
-      <div class="chart-title">Civil claim expected-value calculator</div>
-      <div class="compute-row">
+      <div class="figure-title">Civil claim expected-value calculator</div>
+      <div class="field-grid-compact">
         <div>
-          <div class="input-label">Claim value</div>
+          <div class="input-caption">Claim value</div>
           <input id="claimValue" type="number" min="0" value="100000">
         </div>
         <div>
-          <div class="input-label">Chance of winning (%)</div>
+          <div class="input-caption">Chance of winning (%)</div>
           <input id="winChance" type="number" min="0" max="100" value="60">
         </div>
         <div>
-          <div class="input-label">Legal costs</div>
+          <div class="input-caption">Legal costs</div>
           <input id="legalCosts" type="number" min="0" value="25000">
         </div>
         <div>
-          <div class="input-label">Settlement offer</div>
+          <div class="input-caption">Settlement offer</div>
           <input id="settlementOffer" type="number" min="0" value="45000">
         </div>
       </div>
       <button type="button" id="calcClaim">Calculate</button>
       <div class="compute-output" id="claimOutput"></div>
-      <div class="bar-note">This is a teaching model, not legal advice. Real litigation also turns on fee-shifting, evidence quality, delay, injunctions, insolvency risk, appeals, reputational cost, and appetite for uncertainty.</div>
+      <div class="fine-print">This is a teaching model, not legal advice. Real litigation also turns on fee-shifting, evidence quality, delay, injunctions, insolvency risk, appeals, reputational cost, and appetite for uncertainty.</div>
     </div>
 
     <h2 class="sec" id="part-d-and-middot-commercial-and-business-law">Part D &middot; commercial and business law</h2>
@@ -362,16 +362,16 @@ const mod = modules.find((m) => m.id === 39)!;
     </div>
 
     <div class="chart-card">
-      <div class="chart-title">Typical duration of IP protection</div>
+      <div class="figure-title">Typical duration of IP protection</div>
       <div id="ipBars"></div>
-      <div class="bar-note">Units are years from a practical starting point. Copyright is shown as 115 years for an author who creates at 35 and dies at 80, under a life-plus-70 system. Trademarks and trade secrets can last indefinitely if renewal or secrecy requirements are maintained.</div>
+      <div class="fine-print">Units are years from a practical starting point. Copyright is shown as 115 years for an author who creates at 35 and dies at 80, under a life-plus-70 system. Trademarks and trade secrets can last indefinitely if renewal or secrecy requirements are maintained.</div>
     </div>
 
     <div class="distribution-box">
-      <div class="chart-title">Where corporate law allocates attention in a boardroom crisis</div>
-      <div class="distribution-bar" id="corpDist"></div>
+      <div class="figure-title">Where corporate law allocates attention in a boardroom crisis</div>
+      <div class="stacked-bar" id="corpDist"></div>
       <div class="legend" id="corpLegend"></div>
-      <div class="bar-note">Heuristic distribution, not a universal dataset. A takeover, insolvency, safety scandal, or data breach shifts the weights dramatically, but the recurring actors stay familiar.</div>
+      <div class="fine-print">Heuristic distribution, not a universal dataset. A takeover, insolvency, safety scandal, or data breach shifts the weights dramatically, but the recurring actors stay familiar.</div>
     </div>
 
     <div class="warning-block">Business law is where clever wording meets hard limits. Liability caps may fail for fraud, cartel fines may ignore private contracts, employee rights may override labels, and a patent that sounds broad may collapse if prior art shows the invention was not new.</div>
@@ -403,13 +403,13 @@ const mod = modules.find((m) => m.id === 39)!;
     <div class="explorer-panel" id="tribunalDisplay"></div>
 
     <div class="distribution-box">
-      <div class="chart-title">Why states often comply when enforcement is weak</div>
-      <div class="distribution-bar" id="intlDist"></div>
+      <div class="figure-title">Why states often comply when enforcement is weak</div>
+      <div class="stacked-bar" id="intlDist"></div>
       <div class="legend" id="intlLegend"></div>
-      <div class="bar-note">This distribution is an explanatory model of compliance pressure, not a measured global average. Different fields vary: aviation law relies heavily on reciprocity and technical coordination; human rights law often relies more on domestic courts and reputation.</div>
+      <div class="fine-print">This distribution is an explanatory model of compliance pressure, not a measured global average. Different fields vary: aviation law relies heavily on reciprocity and technical coordination; human rights law often relies more on domestic courts and reputation.</div>
     </div>
 
-    <div class="dense-grid">
+    <div class="card-grid-narrow">
       <div class="card">
         <div class="clabel">Treaties are not just promises</div>
         <div class="cval">A treaty is a legal instrument between subjects of international law. It may require domestic legislation before individuals can rely on it in national courts, depending on the country's constitutional structure. The Vienna Convention on the Law of Treaties, adopted in 1969, gives the default grammar: consent, reservations, interpretation in good faith, material breach, and pacta sunt servanda, agreements must be kept.</div>
@@ -454,13 +454,13 @@ const mod = modules.find((m) => m.id === 39)!;
     <div class="explorer-panel" id="readingDisplay"></div>
 
     <div class="scale-box">
-      <div class="chart-title">Interpretation styles: text-bound to purpose-bound</div>
+      <div class="figure-title">Interpretation styles: text-bound to purpose-bound</div>
       <div class="scale-poles"><span>text and original meaning dominate</span><span>purpose, fairness, and effects dominate</span></div>
       <div id="interpretScale"></div>
-      <div class="bar-note">Real judges use mixtures. A textualist may still care about statutory structure; a purposivist still starts with enacted words. The dots show centre of gravity, not caricature.</div>
+      <div class="fine-print">Real judges use mixtures. A textualist may still care about statutory structure; a purposivist still starts with enacted words. The dots show centre of gravity, not caricature.</div>
     </div>
 
-    <div class="dense-grid">
+    <div class="card-grid-narrow">
       <div class="note-card">
         <div class="tiny-label">Case reading</div>
         First find the procedural posture: trial, appeal, supreme court, injunction, judicial review, sentencing, or damages. A case about an interim injunction may not decide the final merits at all. Then isolate the holding, not every elegant sentence.
@@ -488,36 +488,36 @@ const mod = modules.find((m) => m.id === 39)!;
     </div>
 
     <!-- Brief history cards -->
-    <div class="tax-history-grid">
+    <div class="panel-grid-spaced">
       <div class="sub-card-roomy">
         <div class="tax-era-year">Ancient world</div>
-        <div class="tax-era-label">Tribute and in-kind levies</div>
-        <div class="tax-era-desc">Egypt, Mesopotamia, Rome: grain, labour, and goods surrendered to the state. Tax collection was often farmed out to private collectors who paid a fixed sum and kept the rest.</div>
+        <div class="small-title">Tribute and in-kind levies</div>
+        <div class="desc-small">Egypt, Mesopotamia, Rome: grain, labour, and goods surrendered to the state. Tax collection was often farmed out to private collectors who paid a fixed sum and kept the rest.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="tax-era-year">Medieval era</div>
-        <div class="tax-era-label">Feudal duties and customs</div>
-        <div class="tax-era-desc">Lords extracted labour and produce; kings levied customs on trade. Merchants negotiated tax exemptions for charters. "No taxation without representation" has roots in this bargaining.</div>
+        <div class="small-title">Feudal duties and customs</div>
+        <div class="desc-small">Lords extracted labour and produce; kings levied customs on trade. Merchants negotiated tax exemptions for charters. "No taxation without representation" has roots in this bargaining.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="tax-era-year">1798-1815</div>
-        <div class="tax-era-label">Income tax invented</div>
-        <div class="tax-era-desc">Britain introduced a temporary income tax to fund the Napoleonic Wars. The idea that income, not just trade or land, could be taxed permanently reshuffled fiscal possibilities.</div>
+        <div class="small-title">Income tax invented</div>
+        <div class="desc-small">Britain introduced a temporary income tax to fund the Napoleonic Wars. The idea that income, not just trade or land, could be taxed permanently reshuffled fiscal possibilities.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="tax-era-year">1913</div>
-        <div class="tax-era-label">U.S. federal income tax</div>
-        <div class="tax-era-desc">The 16th Amendment enabled permanent federal income taxation. Progressive rate structures became the dominant model for taxing individuals across industrialising economies.</div>
+        <div class="small-title">U.S. federal income tax</div>
+        <div class="desc-small">The 16th Amendment enabled permanent federal income taxation. Progressive rate structures became the dominant model for taxing individuals across industrialising economies.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="tax-era-year">1954 onward</div>
-        <div class="tax-era-label">VAT spreads globally</div>
-        <div class="tax-era-desc">France pioneered value-added tax, which became the dominant consumption tax model. Over 170 countries now use some form of VAT or goods-and-services tax.</div>
+        <div class="small-title">VAT spreads globally</div>
+        <div class="desc-small">France pioneered value-added tax, which became the dominant consumption tax model. Over 170 countries now use some form of VAT or goods-and-services tax.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="tax-era-year">2021</div>
-        <div class="tax-era-label">Global minimum corporate tax</div>
-        <div class="tax-era-desc">The OECD Pillar Two agreement set a 15% global minimum corporate tax for large multinationals, attempting to restrain decades of base erosion and profit-shifting.</div>
+        <div class="small-title">Global minimum corporate tax</div>
+        <div class="desc-small">The OECD Pillar Two agreement set a 15% global minimum corporate tax for large multinationals, attempting to restrain decades of base erosion and profit-shifting.</div>
       </div>
     </div>
 
@@ -534,8 +534,8 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Bracket simulator -->
     <div class="content-panel">
-      <div class="chart-title">Progressive income tax bracket simulator</div>
-      <div class="bracket-slider-row">
+      <div class="figure-title">Progressive income tax bracket simulator</div>
+      <div class="header-row-split-spaced">
         <div>
           <div class="clabel">Annual taxable income</div>
           <div class="muted-copy-tight">Drag to see how marginal brackets apply (illustrative rates)</div>
@@ -543,10 +543,10 @@ const mod = modules.find((m) => m.id === 39)!;
         <div><span class="bracket-val" id="bracketIncomeDisplay">$80,000</span></div>
       </div>
       <input id="bracketSlider" type="range" min="0" max="600000" step="1000" value="80000">
-      <div class="range-labels"><span>$0</span><span>$600,000</span></div>
+      <div class="pole-labels-under"><span>$0</span><span>$600,000</span></div>
       <div class="bracket-stack u-mt-md" id="bracketStack"></div>
       <div class="bracket-summary" id="bracketSummary"></div>
-      <div class="bar-note">Illustrative five-bracket structure only. Real systems have more brackets, deductions, credits, surtaxes, and phase-outs. The key insight: only income above each threshold is taxed at the higher rate.</div>
+      <div class="fine-print">Illustrative five-bracket structure only. Real systems have more brackets, deductions, credits, surtaxes, and phase-outs. The key insight: only income above each threshold is taxed at the higher rate.</div>
     </div>
 
     <!-- Incidence explainer -->
@@ -571,15 +571,15 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Revenue composition visual -->
     <div class="distribution-box">
-      <div class="chart-title">Typical revenue composition in a modern OECD economy</div>
-      <div class="distribution-bar" id="taxRevDist"></div>
+      <div class="figure-title">Typical revenue composition in a modern OECD economy</div>
+      <div class="stacked-bar" id="taxRevDist"></div>
       <div class="legend" id="taxRevLegend"></div>
-      <div class="bar-note">Illustrative mix based on OECD averages. Countries differ substantially: Nordic states raise more from personal income and social contributions; the U.S. relies more on income taxes and less on VAT; resource economies use royalties. The mix reflects both policy choices and administrative capacity.</div>
+      <div class="fine-print">Illustrative mix based on OECD averages. Countries differ substantially: Nordic states raise more from personal income and social contributions; the U.S. relies more on income taxes and less on VAT; resource economies use royalties. The mix reflects both policy choices and administrative capacity.</div>
     </div>
 
     <!-- Views on taxation -->
     <div class="chart-card">
-      <div class="chart-title">Major perspectives on taxation</div>
+      <div class="figure-title">Major perspectives on taxation</div>
       <div class="views-tabs" id="viewsTabs">
         <button type="button" data-key="benefits">Benefits view</button>
         <button type="button" data-key="ability">Ability to pay</button>
@@ -608,8 +608,8 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Tariff flow diagram -->
     <div class="content-panel">
-      <div class="chart-title">How a tariff changes the economics of a trade transaction</div>
-      <div class="svg-scroll">
+      <div class="figure-title">How a tariff changes the economics of a trade transaction</div>
+      <div class="scroll-x">
         <svg class="process-svg" viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tariff economic flow diagram">
           <defs>
             <marker id="tarrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
@@ -664,7 +664,7 @@ const mod = modules.find((m) => m.id === 39)!;
           <text x="65" y="182" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">that no longer happen</text>
         </svg>
       </div>
-      <div class="svg-caption">A tariff creates four effects simultaneously: it raises revenue for the government, raises costs for importers, raises prices for consumers, and provides a price umbrella for domestic competitors. Whether the sum of those effects is positive depends on strategic objectives and the welfare weights you assign to each group.</div>
+      <div class="fine-print">A tariff creates four effects simultaneously: it raises revenue for the government, raises costs for importers, raises prices for consumers, and provides a price umbrella for domestic competitors. Whether the sum of those effects is positive depends on strategic objectives and the welfare weights you assign to each group.</div>
     </div>
 
     <!-- Tariff types explorer -->
@@ -679,14 +679,14 @@ const mod = modules.find((m) => m.id === 39)!;
 
     <!-- Tariff vs Free Trade spectrum -->
     <div class="scale-box">
-      <div class="chart-title">Policy positions on the free trade to protectionism spectrum</div>
+      <div class="figure-title">Policy positions on the free trade to protectionism spectrum</div>
       <div class="scale-poles"><span>full free trade</span><span>high protectionism</span></div>
       <div id="tradeSpectrum"></div>
-      <div class="bar-note">Positions reflect common characterisations in trade economics. Most real policies are mixed: countries maintain free trade rhetoric while protecting specific industries through quotas, standards, subsidies, or strategic tariffs.</div>
+      <div class="fine-print">Positions reflect common characterisations in trade economics. Most real policies are mixed: countries maintain free trade rhetoric while protecting specific industries through quotas, standards, subsidies, or strategic tariffs.</div>
     </div>
 
     <!-- Tax and trade key concepts -->
-    <div class="dense-grid">
+    <div class="card-grid-narrow">
       <div class="card">
         <div class="clabel">Laffer curve idea</div>
         <div class="cval">At a zero tax rate the state collects nothing. At a 100% rate almost nobody works or declares income, so the state again collects near nothing. In between lies a revenue-maximising rate. The Laffer curve idea is uncontroversial as a concept; the fierce dispute is where that peak sits for different taxes, because the answer determines whether cutting tax rates raises or lowers revenue.</div>
@@ -892,7 +892,7 @@ const mod = modules.find((m) => m.id === 39)!;
           btn.classList.remove('active');
         });
         buttonEl.classList.add('active');
-        document.getElementById(displayId).innerHTML = '<div class="explorer-title">' + item.title + '</div><div class="muted-copy">' + item.body + '</div>';
+        document.getElementById(displayId).innerHTML = '<div class="panel-title-large">' + item.title + '</div><div class="muted-copy">' + item.body + '</div>';
       }
 
       document.querySelectorAll('#traditionButtons button').forEach(function(button) {
@@ -952,7 +952,7 @@ const mod = modules.find((m) => m.id === 39)!;
         card.classList.add('active');
         const detail = document.getElementById('privateDetail');
         detail.classList.add('show');
-        detail.innerHTML = '<div class="explorer-title">' + item.title + '</div><div class="muted-copy">' + item.body + '</div>';
+        detail.innerHTML = '<div class="panel-title-large">' + item.title + '</div><div class="muted-copy">' + item.body + '</div>';
       }
 
       document.querySelectorAll('#privateCards .elem-card').forEach(function(card) {

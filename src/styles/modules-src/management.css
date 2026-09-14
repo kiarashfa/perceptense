@@ -9,25 +9,6 @@
       border-color: var(--accent-border);
       color: var(--accent);
     }
-    .explorer-panel {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      min-height: 80px;
-    }
-    .pc-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--color-text-primary);
-      margin-bottom: 12px;
-    }
-    .pc-row {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 6px;
-    }
     .pc-label {
       font-size: 11px;
       color: var(--color-text-secondary);
@@ -53,31 +34,12 @@
       align-items: center;
       padding: 0 6px;
     }
-    .pc-fill-label {
-      font-size: 10px;
-      font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
-    }
     .pc-axis {
       display: flex;
       margin-left: 130px;
       margin-top: 6px;
       position: relative;
       min-width: 200px;
-    }
-    .pc-axis-mark {
-      position: absolute;
-      font-size: 10px;
-      color: var(--color-text-tertiary);
-      transform: translateX(-50%);
-    }
-    .cscale-poles {
-      display: flex;
-      justify-content: space-between;
-      font-size: 11px;
-      color: var(--color-text-tertiary);
-      margin-bottom: 6px;
     }
     .cscale-name {
       font-size: 12px;
@@ -122,33 +84,6 @@
       font-size: 11px;
       font-weight: 500;
     }
-    .dist-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      margin-bottom: 1rem;
-    }
-    .dist-legend-item {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      color: var(--color-text-secondary);
-    }
-    .dist-swatch {
-      width: 10px;
-      height: 10px;
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-
-    /* ── Elem card grid ── */
-    .elem-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 8px;
-      margin-bottom: 10px;
-    }
     .elem-card {
       background: var(--color-background-secondary);
       border: 0.5px solid var(--color-border-tertiary);
@@ -183,21 +118,6 @@
       display: none;
     }
     .elem-detail-panel.show { display: block; }
-
-    /* ── SVG diagram wrap ── */
-    .svg-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      margin-bottom: 1rem;
-    }
-
-    /* ── Range slider output ── */
-    .slider-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 6px;
-    }
     .slider-val {
       font-size: 18px;
       font-weight: 500;
@@ -211,13 +131,6 @@
       justify-content: space-between;
       font-size: 11px;
       color: var(--color-text-tertiary);
-    }
-    .calc-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: flex-end;
-      margin-bottom: 10px;
     }
     .calc-field {
       display: flex;
@@ -273,14 +186,6 @@
       padding: 0 6px;
       flex-shrink: 0;
     }
-
-    /* ── Funding stage bars ── */
-    .fund-row {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 6px;
-    }
     .fund-label {
       font-size: 12px;
       color: var(--color-text-secondary);
@@ -288,13 +193,6 @@
       flex-shrink: 0;
       text-align: right;
       padding-right: 10px;
-    }
-    .fund-bar {
-      height: 22px;
-      border-radius: 3px;
-      display: flex;
-      align-items: center;
-      padding: 0 8px;
     }
 
     /* ── Responsive ── */

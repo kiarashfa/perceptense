@@ -12,9 +12,9 @@ const mod = modules.find((m) => m.id === 31)!;
   
 
     <div class="module-header">
-      <i class="fa-solid fa-book-open module-header-icon-accent"></i>
+      <i class="fa-solid fa-book-open module-icon-large"></i>
       <div>
-        <div class="deep-dive-kicker">Module 31 — Deep Dive</div>
+        <div class="deep-dive-label">Module 31 — Deep Dive</div>
         <h1 class="module-title module-heading">Literature</h1>
       </div>
     </div>
@@ -62,34 +62,34 @@ const mod = modules.find((m) => m.id === 31)!;
         <div class="panel-title">The major literary genres — click to explore</div>
         <div class="genre-grid">
           <div class="genre-card active" onclick="showGenre('poetry', this)">
-            <div class="genre-icon">📜</div>
-            <div class="genre-name">Poetry</div>
-            <div class="genre-sub">The oldest and densest</div>
+            <div class="card-icon">📜</div>
+            <div class="label-strong">Poetry</div>
+            <div class="card-sub-muted">The oldest and densest</div>
           </div>
           <div class="genre-card" onclick="showGenre('novel', this)">
-            <div class="genre-icon">📗</div>
-            <div class="genre-name">Novel</div>
-            <div class="genre-sub">The modern form</div>
+            <div class="card-icon">📗</div>
+            <div class="label-strong">Novel</div>
+            <div class="card-sub-muted">The modern form</div>
           </div>
           <div class="genre-card" onclick="showGenre('shortstory', this)">
-            <div class="genre-icon">📄</div>
-            <div class="genre-name">Short story</div>
-            <div class="genre-sub">Concentrated prose</div>
+            <div class="card-icon">📄</div>
+            <div class="label-strong">Short story</div>
+            <div class="card-sub-muted">Concentrated prose</div>
           </div>
           <div class="genre-card" onclick="showGenre('drama', this)">
-            <div class="genre-icon">🎭</div>
-            <div class="genre-name">Drama</div>
-            <div class="genre-sub">Writing for performance</div>
+            <div class="card-icon">🎭</div>
+            <div class="label-strong">Drama</div>
+            <div class="card-sub-muted">Writing for performance</div>
           </div>
           <div class="genre-card" onclick="showGenre('essay', this)">
-            <div class="genre-icon">✍️</div>
-            <div class="genre-name">Essay</div>
-            <div class="genre-sub">Thought made visible</div>
+            <div class="card-icon">✍️</div>
+            <div class="label-strong">Essay</div>
+            <div class="card-sub-muted">Thought made visible</div>
           </div>
           <div class="genre-card" onclick="showGenre('epic', this)">
-            <div class="genre-icon">⚔️</div>
-            <div class="genre-name">Epic</div>
-            <div class="genre-sub">The founding form</div>
+            <div class="card-icon">⚔️</div>
+            <div class="label-strong">Epic</div>
+            <div class="card-sub-muted">The founding form</div>
           </div>
         </div>
       </div>
@@ -98,60 +98,60 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Timeline: forms of literature across history -->
       <div class="content-panel">
         <div class="panel-title">Literary forms across time — approximate dominance</div>
-        <div class="chart-intro">Each era is dominated by different forms. These are rough centres of gravity, not rigid boundaries.</div>
+        <div class="mini-intro">Each era is dominated by different forms. These are rough centres of gravity, not rigid boundaries.</div>
         <div class="pc-axis">
-          <span class="pc-axis-mark pc-axis-mark-style">–800 BCE</span>
-          <span class="pc-axis-mark pc-axis-mark-second">500 CE</span>
-          <span class="pc-axis-mark pc-axis-mark-third">1500</span>
-          <span class="pc-axis-mark pc-axis-mark-fourth">1700</span>
-          <span class="pc-axis-mark pc-axis-mark-fifth">1850</span>
-          <span class="pc-axis-mark pc-axis-mark-last">Now</span>
+          <span class="axis-tick-small pc-axis-mark-style">–800 BCE</span>
+          <span class="axis-tick-small pc-axis-mark-second">500 CE</span>
+          <span class="axis-tick-small pc-axis-mark-third">1500</span>
+          <span class="axis-tick-small pc-axis-mark-fourth">1700</span>
+          <span class="axis-tick-small pc-axis-mark-fifth">1850</span>
+          <span class="axis-tick-small pc-axis-mark-last">Now</span>
         </div>
-        <div class="pc-row">
+        <div class="data-row-loose">
           <div class="pc-label">Oral epic &amp; lyric poetry</div>
-          <div class="pc-track">
+          <div class="period-track">
             <div class="pc-fill pc-fill-style">
-              <span class="pc-fill-label text-indigo-900">Homer, Sappho, Virgil</span>
+              <span class="period-label text-indigo-900">Homer, Sappho, Virgil</span>
             </div>
           </div>
         </div>
-        <div class="pc-row">
+        <div class="data-row-loose">
           <div class="pc-label">Drama (stage)</div>
-          <div class="pc-track">
+          <div class="period-track">
             <div class="pc-fill pc-fill-drama">
-              <span class="pc-fill-label text-warning">Sophocles → Shakespeare → Ibsen</span>
+              <span class="period-label text-warning">Sophocles → Shakespeare → Ibsen</span>
             </div>
           </div>
         </div>
-        <div class="pc-row">
+        <div class="data-row-loose">
           <div class="pc-label">Lyric &amp; narrative poetry</div>
-          <div class="pc-track">
+          <div class="period-track">
             <div class="pc-fill pc-fill-poetry">
-              <span class="pc-fill-label text-info">Dominant through Romantic era</span>
+              <span class="period-label text-info">Dominant through Romantic era</span>
             </div>
           </div>
         </div>
-        <div class="pc-row">
+        <div class="data-row-loose">
           <div class="pc-label">Novel</div>
-          <div class="pc-track">
+          <div class="period-track">
             <div class="pc-fill pc-fill-novel">
-              <span class="pc-fill-label text-success">Defoe, Austen → Present</span>
+              <span class="period-label text-success">Defoe, Austen → Present</span>
             </div>
           </div>
         </div>
-        <div class="pc-row">
+        <div class="data-row-loose">
           <div class="pc-label">Personal essay</div>
-          <div class="pc-track">
+          <div class="period-track">
             <div class="pc-fill pc-fill-essay">
-              <span class="pc-fill-label text-orange-900">Montaigne (1580) → Now</span>
+              <span class="period-label text-orange-900">Montaigne (1580) → Now</span>
             </div>
           </div>
         </div>
-        <div class="pc-row">
+        <div class="data-row-loose">
           <div class="pc-label">Short story</div>
-          <div class="pc-track">
+          <div class="period-track">
             <div class="pc-fill pc-fill-short-story">
-              <span class="pc-fill-label text-danger">Poe, Chekhov → Now</span>
+              <span class="period-label text-danger">Poe, Chekhov → Now</span>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Distribution bar -->
       <div class="content-panel">
         <div class="panel-title">Where readers spend their time — approximate distribution of literary reading</div>
-        <div class="dist-bar">
+        <div class="stacked-bar-compact">
           <div class="dist-seg dist-seg-style"><span class="seg-label">52% Novels</span></div>
           <div class="dist-seg dist-seg-short-story"><span class="seg-label">15% SS</span></div>
           <div class="dist-seg dist-seg-nonfiction"><span class="seg-label">12% NF</span></div>
@@ -168,13 +168,13 @@ const mod = modules.find((m) => m.id === 31)!;
           <div class="dist-seg dist-seg-poetry"><span class="seg-label-small">7% Poetry</span></div>
           <div class="dist-seg dist-seg-other"><span class="seg-label-small">4%+</span></div>
         </div>
-        <div class="dist-legend">
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-style"></div>Novel</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot bg-teal-500"></div>Short story</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-coral"></div>Literary non-fiction</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-teal"></div>Drama / Play</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot bg-amber-500"></div>Poetry</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-lavender"></div>Other (essay, etc.)</div>
+        <div class="key-list">
+          <div class="legend-item"><div class="key-dot dist-leg-dot-style"></div>Novel</div>
+          <div class="legend-item"><div class="key-dot bg-accent"></div>Short story</div>
+          <div class="legend-item"><div class="key-dot dist-leg-dot-coral"></div>Literary non-fiction</div>
+          <div class="legend-item"><div class="key-dot dist-leg-dot-teal"></div>Drama / Play</div>
+          <div class="legend-item"><div class="key-dot bg-amber-500"></div>Poetry</div>
+          <div class="legend-item"><div class="key-dot dist-leg-dot-lavender"></div>Other (essay, etc.)</div>
         </div>
         <div class="muted-text-small">Rough indicative estimates based on sales and reading surveys. Poetry's small share understates its cultural presence — most people who don't "read poetry" quote it constantly without knowing.</div>
       </div>
@@ -198,7 +198,7 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Metre visualiser -->
       <div class="content-panel">
         <div class="inline-card-title">Metre in English poetry — hear the beat</div>
-        <div class="metre-intro">Stressed syllables are highlighted. Iambic pentameter — the metre of Shakespeare and Milton — has 5 iambs (unstressed-stressed) per line: 10 syllables, naturally close to spoken English rhythm.</div>
+        <div class="mini-intro-spaced">Stressed syllables are highlighted. Iambic pentameter — the metre of Shakespeare and Milton — has 5 iambs (unstressed-stressed) per line: 10 syllables, naturally close to spoken English rhythm.</div>
         <div class="u-mb-md">
           <div class="poem-citation">Shakespeare, Sonnet 18 — iambic pentameter (5 iambs per line)</div>
           <div class="metre-line">
@@ -237,7 +237,7 @@ const mod = modules.find((m) => m.id === 31)!;
 
       <!-- Poetic forms explorer (multi-card) -->
       <h2 class="sec" id="poetic-forms-the-containers-of-verse">poetic forms — the containers of verse</h2>
-      <div class="form-intro">Form is not decoration. The sonnet's 14-line constraint forces a compression that shapes thought. The haiku's 17-syllable limit demands that one image contain a world. Click each form to see how it works.</div>
+      <div class="lede-text-loose">Form is not decoration. The sonnet's 14-line constraint forces a compression that shapes thought. The haiku's 17-syllable limit demands that one image contain a world. Click each form to see how it works.</div>
       <div class="elem-grid" id="form-grid"></div>
       <div class="elem-detail elem-detail-panel" id="form-detail"></div>
 
@@ -246,14 +246,14 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Key devices — click to see how each one works</div>
         <div class="button-row-compact" id="device-btns"></div>
-        <div class="explorer-display" id="device-display"></div>
+        <div class="explorer-output" id="device-display"></div>
       </div>
 
       <!-- Comparison scale: poetry traditions -->
       <h2 class="sec" id="poetry-traditions-a-comparative-map">poetry traditions — a comparative map</h2>
       <div class="content-panel">
         <div class="compact-card-title">Major poets — formal vs free verse tendency</div>
-        <div class="cscale-wrap">
+        <div class="block-gap">
           <div class="cscale-poles">
             <span>Strictly formal (fixed metre &amp; rhyme)</span>
             <span>Pure free verse (no fixed metre)</span>
@@ -268,10 +268,10 @@ const mod = modules.find((m) => m.id === 31)!;
     ══════════════════════════════════════════════════ -->
 
       <!-- Bar chart: poetry reading stats -->
-      <div class="bar-chart-wrap content-panel">
+      <div class="block-gap content-panel">
         <div class="panel-title">Most-assigned poets in English literature courses (approximate relative frequency)</div>
         <div id="poet-bars"></div>
-        <div class="bar-chart-note">Based on syllabi analysis from US and UK universities. Shakespeare's sonnets, though technically poetry, are often taught in drama courses and undercounted here.</div>
+        <div class="caption-spaced">Based on syllabi analysis from US and UK universities. Shakespeare's sonnets, though technically poetry, are often taught in drama courses and undercounted here.</div>
       </div>
 
     </div><!-- /part-1 -->
@@ -288,13 +288,13 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Novel history timeline -->
       <div class="content-panel">
         <div class="inline-card-title">The novel in time — major phases</div>
-        <div class="chart-intro">Each phase produced a distinct set of formal techniques and concerns.</div>
+        <div class="mini-intro">Each phase produced a distinct set of formal techniques and concerns.</div>
         <div id="novel-timeline"></div>
       </div>
 
       <!-- Narrative elements multi-card -->
       <h2 class="sec" id="narrative-elements-the-building-blocks-of-fiction">narrative elements — the building blocks of fiction</h2>
-      <div class="form-intro">Every novel deploys these elements. The craft is in their combination — and in the choices the novelist makes about which to foreground and which to suppress.</div>
+      <div class="lede-text-loose">Every novel deploys these elements. The craft is in their combination — and in the choices the novelist makes about which to foreground and which to suppress.</div>
       <div class="elem-grid" id="narr-grid"></div>
       <div class="elem-detail elem-detail-panel" id="narr-detail"></div>
 
@@ -303,14 +303,14 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Major novelistic traditions — select a tradition</div>
         <div class="button-row-compact" id="trad-btns"></div>
-        <div class="explorer-display" id="trad-display"></div>
+        <div class="explorer-output" id="trad-display"></div>
       </div>
 
       <!-- Slider: narrative distance -->
       <div class="content-panel">
         <div class="inline-card-title">Narrative distance — the spectrum from intimate to remote</div>
-        <div class="chart-intro">How close is the narrator to the character's consciousness? Slide to explore the full range.</div>
-        <div class="literature-row">
+        <div class="mini-intro">How close is the narrator to the character's consciousness? Slide to explore the full range.</div>
+        <div class="axis-ends-tight">
           <span>Deep inside a character's mind</span>
           <span>Distant, god-like narrator</span>
         </div>
@@ -320,7 +320,7 @@ const mod = modules.find((m) => m.id === 31)!;
 
       <!-- SVG: anatomy of a chapter -->
       <div class="scroll-panel">
-        <div class="diagram-title">Anatomy of a chapter — the narrative cycle</div>
+        <div class="block-title">Anatomy of a chapter — the narrative cycle</div>
         <svg class="literature-media" viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
@@ -370,11 +370,11 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Reading time calculator -->
       <div class="calc-wrap">
         <div class="panel-title">Reading time calculator — how long will a novel take?</div>
-        <div class="calc-row">
+        <div class="control-row-tight">
           <span class="calc-label">Novel word count (words)</span>
           <input class="u-w-130px" type="number" id="u-w-130px" value="100000" min="10000" max="800000">
         </div>
-        <div class="calc-row">
+        <div class="control-row-tight">
           <span class="calc-label">Your reading speed (WPM)</span>
           <input class="u-w-130px" type="number" id="read-speed" value="250" min="50" max="700">
           <select class="u-fs-12px" id="u-fs-12px" onchange="applySpeedPreset(this.value)">
@@ -385,7 +385,7 @@ const mod = modules.find((m) => m.id === 31)!;
             <option value="500">Speed reader (500)</option>
           </select>
         </div>
-        <div class="calc-row">
+        <div class="control-row-tight">
           <span class="calc-label">Minutes reading per day</span>
           <input class="u-w-130px" type="number" id="read-mins" value="30" min="5" max="480">
         </div>
@@ -410,7 +410,7 @@ const mod = modules.find((m) => m.id === 31)!;
 
       <!-- Greek tragedy structure SVG -->
       <div class="scroll-panel">
-        <div class="diagram-title">Greek tragedy structure — the five-act arc</div>
+        <div class="block-title">Greek tragedy structure — the five-act arc</div>
         <svg class="literature-media" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
           <!-- Background line -->
           <line x1="30" y1="160" x2="670" y2="160" stroke="#AFA9EC" stroke-width="1"/>
@@ -443,7 +443,7 @@ const mod = modules.find((m) => m.id === 31)!;
           <text x="350" y="15" text-anchor="middle" font-size="9" fill="#E07B5A" font-style="italic">hamartia (fatal flaw) leads here</text>
           <text x="350" y="25" text-anchor="middle" font-size="9" fill="#E07B5A" font-style="italic">catharsis felt by audience throughout</text>
         </svg>
-        <div class="tragedy-note">Aristotle identified hamartia (a fatal error or character flaw), peripeteia (sudden reversal of fortune), anagnorisis (recognition of the truth), and catharsis (the emotional purging experienced by the audience) as the key mechanisms of tragedy in his Poetics (c. 335 BCE). All four are present in Sophocles's Oedipus Rex — still the clearest illustration of each concept.</div>
+        <div class="caption-spaced">Aristotle identified hamartia (a fatal error or character flaw), peripeteia (sudden reversal of fortune), anagnorisis (recognition of the truth), and catharsis (the emotional purging experienced by the audience) as the key mechanisms of tragedy in his Poetics (c. 335 BCE). All four are present in Sophocles's Oedipus Rex — still the clearest illustration of each concept.</div>
       </div>
 
       <!-- Playwright explorer panel -->
@@ -451,20 +451,20 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Select a playwright to explore their contribution</div>
         <div class="button-row-compact" id="playwright-btns"></div>
-        <div class="explorer-display" id="playwright-display"></div>
+        <div class="explorer-output" id="playwright-display"></div>
       </div>
 
       <!-- Drama types comparison scale -->
       <div class="content-panel">
         <div class="compact-card-title">Major plays — realism vs stylisation spectrum</div>
-        <div class="cscale-wrap">
+        <div class="block-gap">
           <div class="cscale-poles">
             <span>Naturalistic realism (slice of life)</span>
             <span>Highly stylised / abstract</span>
           </div>
           <div id="play-scale"></div>
         </div>
-        <div class="spectrum-note">Naturalistic theatre aims to reproduce ordinary life; stylised theatre draws attention to its own artifice. Both are valid — Chekhov's naturalism and Brecht's alienation effect are equally sophisticated responses to the same problem of representation.</div>
+        <div class="caption-small">Naturalistic theatre aims to reproduce ordinary life; stylised theatre draws attention to its own artifice. Both are valid — Chekhov's naturalism and Brecht's alienation effect are equally sophisticated responses to the same problem of representation.</div>
       </div>
 
     <!-- ══════════════════════════════════════════════════
@@ -474,8 +474,8 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Dramatic unities slider -->
       <div class="content-panel">
         <div class="inline-card-title">The Three Unities — how much did playwrights follow Aristotle's rules?</div>
-        <div class="chart-intro">Aristotle described unity of action (one main plot). Later neoclassical critics added unity of time (24-hour limit) and unity of place (one location). Slide to explore how different eras treated these constraints.</div>
-        <div class="literature-row">
+        <div class="mini-intro">Aristotle described unity of action (one main plot). Later neoclassical critics added unity of time (24-hour limit) and unity of place (one location). Slide to explore how different eras treated these constraints.</div>
+        <div class="axis-ends-tight">
           <span>Strict adherence (French neoclassical)</span>
           <span>Complete freedom (Shakespeare)</span>
         </div>
@@ -497,7 +497,7 @@ const mod = modules.find((m) => m.id === 31)!;
       <!-- Movements timeline (period chart) -->
       <div class="content-panel">
         <div class="inline-card-title">Literary movements — historical periods</div>
-        <div class="chart-intro">Movements overlap substantially — dates mark rough centres of dominance, not hard boundaries.</div>
+        <div class="mini-intro">Movements overlap substantially — dates mark rough centres of dominance, not hard boundaries.</div>
         <div id="movement-timeline"></div>
       </div>
 
@@ -506,20 +506,20 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Select a movement to explore its core ideas</div>
         <div class="button-row-compact" id="movement-btns"></div>
-        <div class="explorer-display" id="movement-display"></div>
+        <div class="explorer-output" id="movement-display"></div>
       </div>
 
       <!-- Bar chart: modernist novels by word count -->
-      <div class="bar-chart-wrap content-panel">
+      <div class="block-gap content-panel">
         <div class="panel-title">Length of canonical modernist novels (thousands of words)</div>
         <div id="modernist-bars"></div>
-        <div class="bar-chart-note">Modernism embraced both extreme compression (The Great Gatsby: 47k words) and radical expansion (In Search of Lost Time: ~1.5 million words). Length was itself an argument about how consciousness works.</div>
+        <div class="caption-spaced">Modernism embraced both extreme compression (The Great Gatsby: 47k words) and radical expansion (In Search of Lost Time: ~1.5 million words). Length was itself an argument about how consciousness works.</div>
       </div>
 
       <!-- Distribution: influences on modernism -->
       <div class="content-panel">
         <div class="panel-title-spaced">What shaped Modernism? — approximate weight of influences</div>
-        <div class="dist-bar">
+        <div class="stacked-bar-compact">
           <div class="dist-seg dist-seg-freud"><span class="seg-label-small">28% Freud/psychology</span></div>
           <div class="dist-seg dist-seg-wwi"><span class="seg-label-small">22% WWI trauma</span></div>
           <div class="dist-seg dist-seg-impressionism"><span class="seg-label-small">18% Impressionism</span></div>
@@ -527,13 +527,13 @@ const mod = modules.find((m) => m.id === 31)!;
           <div class="dist-seg dist-seg-nietzsche"><span class="seg-label-small">10% Nietzsche</span></div>
           <div class="dist-seg dist-seg-influence-other"><span class="seg-label-small">6% other</span></div>
         </div>
-        <div class="dist-legend">
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-indigo"></div>Freudian psychoanalysis</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot bg-teal-500"></div>WWI / social collapse</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-coral"></div>Impressionist painting</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-teal"></div>Bergson's theory of time</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot bg-amber-500"></div>Nietzsche / philosophy</div>
-          <div class="dist-leg-item"><div class="dist-leg-dot dist-leg-dot-lavender"></div>Other</div>
+        <div class="key-list">
+          <div class="legend-item"><div class="key-dot dist-leg-dot-indigo"></div>Freudian psychoanalysis</div>
+          <div class="legend-item"><div class="key-dot bg-accent"></div>WWI / social collapse</div>
+          <div class="legend-item"><div class="key-dot dist-leg-dot-coral"></div>Impressionist painting</div>
+          <div class="legend-item"><div class="key-dot dist-leg-dot-teal"></div>Bergson's theory of time</div>
+          <div class="legend-item"><div class="key-dot bg-amber-500"></div>Nietzsche / philosophy</div>
+          <div class="legend-item"><div class="key-dot dist-leg-dot-lavender"></div>Other</div>
         </div>
         <div class="muted-text-small">Illustrative proportions — Modernism was not a single movement but a cluster of responses to a common sense that 19th-century forms were inadequate to 20th-century experience.</div>
       </div>
@@ -558,44 +558,44 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Canon formation mechanisms — click to explore</div>
         <div class="button-row-compact" id="canon-btns"></div>
-        <div class="explorer-display" id="canon-display"></div>
+        <div class="explorer-output" id="canon-display"></div>
       </div>
 
       <!-- Global traditions multi-card -->
       <h2 class="sec" id="beyond-the-west-global-literary-traditions">beyond the west — global literary traditions</h2>
-      <div class="form-intro">The Western canon occupies a fraction of global literary production. These traditions have their own canonical works, formal conventions, and centuries of critical commentary.</div>
+      <div class="lede-text-loose">The Western canon occupies a fraction of global literary production. These traditions have their own canonical works, formal conventions, and centuries of critical commentary.</div>
       <div class="elem-grid" id="global-grid"></div>
       <div class="elem-detail elem-detail-panel" id="global-detail"></div>
 
       <!-- Comparison scale: canon positions -->
       <div class="content-panel">
         <div class="compact-card-title">Critical positions on the canon — a spectrum of views</div>
-        <div class="cscale-wrap">
+        <div class="block-gap">
           <div class="cscale-poles">
             <span>Defend the canon as is</span>
             <span>Abolish the canon entirely</span>
           </div>
           <div id="canon-scale"></div>
         </div>
-        <div class="spectrum-note">Most serious literary critics occupy the middle ground: expand the canon to include excluded voices while retaining the standards of craft and durability that gave the original canon its usefulness.</div>
+        <div class="caption-small">Most serious literary critics occupy the middle ground: expand the canon to include excluded voices while retaining the standards of craft and durability that gave the original canon its usefulness.</div>
       </div>
 
       <!-- Bar chart: Nobel Prize in Literature by region -->
-      <div class="bar-chart-wrap content-panel">
+      <div class="block-gap content-panel">
         <div class="panel-title">Nobel Prize in Literature by region (1901–2023, total laureates)</div>
         <div id="nobel-bars"></div>
-        <div class="bar-chart-note">Europe has won approximately 70% of all Nobel Prizes in Literature. The Swedish Academy has faced sustained criticism for its Eurocentric bias, particularly regarding African, Asian, and Latin American writers.</div>
+        <div class="caption-spaced">Europe has won approximately 70% of all Nobel Prizes in Literature. The Swedish Academy has faced sustained criticism for its Eurocentric bias, particularly regarding African, Asian, and Latin American writers.</div>
       </div>
 
       <!-- Reading list calculator -->
       <div class="calc-wrap">
         <div class="panel-title">Essential reading calculator — how long to read the core canon?</div>
-        <div class="chart-intro">The "core" Western canon is roughly 100 major works (Homer through to the 20th century). How long would it actually take?</div>
-        <div class="calc-row">
+        <div class="mini-intro">The "core" Western canon is roughly 100 major works (Homer through to the 20th century). How long would it actually take?</div>
+        <div class="control-row-tight">
           <span class="calc-label">Number of works to read</span>
           <input class="u-w-100px" type="number" id="u-w-100px" value="100" min="10" max="500">
         </div>
-        <div class="calc-row">
+        <div class="control-row-tight">
           <span class="calc-label">Average words per work</span>
           <input class="u-w-120px" type="number" id="u-w-120px" value="80000" min="5000" max="500000">
           <select class="u-fs-12px" id="len-preset" onchange="applyLenPreset(this.value)">
@@ -606,11 +606,11 @@ const mod = modules.find((m) => m.id === 31)!;
             <option value="300000">Major novel (~300k)</option>
           </select>
         </div>
-        <div class="calc-row">
+        <div class="control-row-tight">
           <span class="calc-label">Reading minutes per day</span>
           <input class="u-w-100px" type="number" id="canon-mins" value="45" min="5" max="480">
         </div>
-        <div class="calc-row">
+        <div class="control-row-tight">
           <span class="calc-label">Your reading speed (WPM)</span>
           <input class="u-w-100px" type="number" id="canon-wpm" value="250" min="50" max="700">
         </div>
@@ -643,14 +643,14 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Common errors when engaging with literary texts</div>
         <div class="button-row-compact" id="mistake-btns"></div>
-        <div class="explorer-display" id="mistake-display"></div>
+        <div class="explorer-output" id="mistake-display"></div>
       </div>
 
       <!-- Reading habits slider -->
       <div class="content-panel">
         <div class="inline-card-title">Reading speed vs comprehension — the trade-off</div>
-        <div class="chart-intro">There is no single right speed. The appropriate pace depends entirely on what you're reading and why. Move the slider to see the trade-off.</div>
-        <div class="literature-row">
+        <div class="mini-intro">There is no single right speed. The appropriate pace depends entirely on what you're reading and why. Move the slider to see the trade-off.</div>
+        <div class="axis-ends-tight">
           <span>Very slow (50–100 WPM) — studying</span>
           <span>Very fast (500+ WPM) — skimming</span>
         </div>
@@ -660,7 +660,7 @@ const mod = modules.find((m) => m.id === 31)!;
 
       <!-- SVG: the reading process diagram -->
       <div class="scroll-panel">
-        <div class="diagram-title">How a skilled reader processes a literary text</div>
+        <div class="block-title">How a skilled reader processes a literary text</div>
         <svg class="literature-media" viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
@@ -722,7 +722,7 @@ const mod = modules.find((m) => m.id === 31)!;
 
       <!-- Annotation tracker -->
       <h2 class="sec" id="a-reading-list-to-get-started-25-essential-works">a reading list to get started — 25 essential works</h2>
-      <div class="form-intro">These 25 works provide the foundation for literary literacy. They span form, era, and tradition — and each one teaches you something the others don't. Progress is shown as approximate reading time at 250 WPM reading 30 minutes per day.</div>
+      <div class="lede-text-loose">These 25 works provide the foundation for literary literacy. They span form, era, and tradition — and each one teaches you something the others don't. Progress is shown as approximate reading time at 250 WPM reading 30 minutes per day.</div>
       <div class="tracker-grid" id="reading-tracker"></div>
 
     </div><!-- /part-6 -->
@@ -738,7 +738,7 @@ const mod = modules.find((m) => m.id === 31)!;
 
       <!-- Myth origins SVG diagram -->
       <div class="scroll-panel">
-        <div class="diagram-title">Where myths come from — and where they go</div>
+        <div class="block-title">Where myths come from — and where they go</div>
         <svg class="literature-media" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="arr-myth" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
@@ -783,7 +783,7 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Greek deities by domain</div>
         <div class="button-row-spaced" id="deity-cat-btns"></div>
-        <div class="explorer-display" id="deity-cat-display"></div>
+        <div class="explorer-output" id="deity-cat-display"></div>
       </div>
 
       <!-- Twelve Olympians panel -->
@@ -800,14 +800,14 @@ const mod = modules.find((m) => m.id === 31)!;
       <div class="content-panel">
         <div class="panel-title">Other major figures in Greek mythology — click to explore</div>
         <div class="button-row-compact" id="beyond-btns"></div>
-        <div class="explorer-display" id="beyond-display"></div>
+        <div class="explorer-output" id="beyond-display"></div>
       </div>
 
       <!-- Myth themes scale -->
       <h2 class="sec" id="recurring-myth-themes-universality-across-cultures">recurring myth themes — universality across cultures</h2>
       <div class="content-panel">
         <div class="compact-card-title">How widely a theme appears across world mythologies</div>
-        <div class="cscale-wrap">
+        <div class="block-gap">
           <div class="cscale-poles">
             <span>Greek-specific</span>
             <span>Universal across all cultures</span>
@@ -818,10 +818,10 @@ const mod = modules.find((m) => m.id === 31)!;
       </div>
 
       <!-- Myth-to-word bar chart -->
-      <div class="bar-chart-wrap content-panel">
+      <div class="block-gap content-panel">
         <div class="panel-title">Greek and Roman myth words in everyday English — approximate frequency rank</div>
         <div id="myth-word-bars"></div>
-        <div class="bar-chart-note">These are words derived directly from mythological figures or episodes, now used without any mythological awareness. The gods live on invisibly in the language.</div>
+        <div class="caption-spaced">These are words derived directly from mythological figures or episodes, now used without any mythological awareness. The gods live on invisibly in the language.</div>
       </div>
 
 
@@ -1450,9 +1450,9 @@ const mod = modules.find((m) => m.id === 31)!;
     if (!gridEl) return;
     gridEl.innerHTML = items.map((item, i) =>
       `<div class="elem-card" id="${gridId}-card-${i}" onclick="showElemDetail('${gridId}','${detailId}',${i})">
-        <div class="elem-card-icon">${item.icon}</div>
-        <div class="elem-card-label">${item.label}</div>
-        <div class="elem-card-sub">${item.sub}</div>
+        <div class="card-icon-small">${item.icon}</div>
+        <div class="label-strong">${item.label}</div>
+        <div class="card-sub-muted">${item.sub}</div>
       </div>`
     ).join('');
   }
@@ -1479,9 +1479,9 @@ const mod = modules.find((m) => m.id === 31)!;
     const el = document.getElementById(containerId);
     if (!el) return;
     el.innerHTML = items.map(item =>
-      `<div class="cscale-row">
+      `<div class="data-row">
         <div class="cscale-name">${item.name}</div>
-        <div class="cscale-track"><div class="cscale-dot" style="left:${item.pos}%;"></div></div>
+        <div class="range-track"><div class="cscale-dot" style="left:${item.pos}%;"></div></div>
       </div>`
     ).join('');
   }
@@ -1519,15 +1519,15 @@ const mod = modules.find((m) => m.id === 31)!;
     for (let y = Math.ceil(minY / step) * step; y <= maxY; y += step) {
       axisMarks.push({ year: y, pct: Math.round((y - minY) / range * 100) });
     }
-    const axisHtml = `<div class="pc-axis">${axisMarks.map(m => `<span class="pc-axis-mark" style="left:${m.pct}%">${m.year}</span>`).join('')}</div>`;
+    const axisHtml = `<div class="pc-axis">${axisMarks.map(m => `<span class="axis-tick-small" style="left:${m.pct}%">${m.year}</span>`).join('')}</div>`;
     const rowsHtml = items.map(item => {
       const left = Math.round((item.start - minY) / range * 100);
       const width = Math.round((item.end - item.start) / range * 100);
-      return `<div class="pc-row">
+      return `<div class="data-row-loose">
         <div class="pc-label" style="font-size:10px;">${item.label}</div>
-        <div class="pc-track">
+        <div class="period-track">
           <div class="pc-fill" style="left:${left}%; width:${width}%; background:${item.col};">
-            <span class="pc-fill-label" style="color:${item.tcol};">${item.note}</span>
+            <span class="period-label" style="color:${item.tcol};">${item.note}</span>
           </div>
         </div>
       </div>`;
@@ -1609,10 +1609,10 @@ This is entirely achievable — a committed reader spending 45 minutes a day can
       const days = Math.ceil(item.words / wpm / minsPerDay);
       const pct = Math.min(100, Math.round(item.words / 500000 * 100));
       return `<div class="tracker-card">
-        <div class="tracker-title">${item.title}</div>
-        <div class="tracker-meta">${item.author} · ${item.era} · ~${(item.words/1000).toFixed(0)}k words</div>
+        <div class="item-heading-medium">${item.title}</div>
+        <div class="mini-caption">${item.author} · ${item.era} · ~${(item.words/1000).toFixed(0)}k words</div>
         <div class="tracker-bar"><div class="tracker-fill" style="width:${pct}%;"></div></div>
-        <div class="tracker-pct">~${days} days at 30 min/day</div>
+        <div class="micro-caption">~${days} days at 30 min/day</div>
       </div>`;
     }).join('');
   }
@@ -1771,9 +1771,9 @@ This is entirely achievable — a committed reader spending 45 minutes a day can
     if (!gridEl) return;
     gridEl.innerHTML = olympians.map((item, i) =>
       `<div class="elem-card" onclick="showOlympianDetail(${i})">
-        <div class="elem-card-icon">${item.icon}</div>
-        <div class="elem-card-label">${item.label}</div>
-        <div class="elem-card-sub">${item.sub}</div>
+        <div class="card-icon-small">${item.icon}</div>
+        <div class="label-strong">${item.label}</div>
+        <div class="card-sub-muted">${item.sub}</div>
       </div>`
     ).join("");
   }

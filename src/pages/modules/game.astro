@@ -13,7 +13,7 @@ const mod = modules.find((m) => m.id === 35)!;
 
   <!-- Header -->
   <div class="module-header">
-    <i class="fa-solid fa-gamepad game-text"></i>
+    <i class="fa-solid fa-gamepad module-icon-large"></i>
     <div>
       <div class="deep-dive-kicker">Module 35 — Deep Dive</div>
       <h1 class="module-title module-heading">Games</h1>
@@ -34,7 +34,7 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- What makes a game a game -->
   <div class="content-panel">
     <div class="panel-title">What makes something a game? — the defining properties</div>
-    <div class="game-grid">
+    <div class="tile-grid-wide">
       <div class="game-panel">
         <div class="game-label">Rules</div>
         <div class="element-desc-rules">Every game is defined by constraints: what you can and cannot do. Rules create the possibility of meaningful choice by limiting the space of action. Chess without the rules for how pieces move is not chess — it is just a board. The designer's first job is rule-making, and the art of it is creating rules that produce interesting choices.</div>
@@ -65,12 +65,12 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- Games vs other art forms: interactivity spectrum -->
   <div class="content-panel">
     <div class="compact-card-title">Interactivity spectrum — how art forms differ by audience agency</div>
-    <div class="chart-intro">How much can the audience shape the work they're experiencing?</div>
-    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot-label">Painting — fixed, singular. Viewer chooses where to look, nothing else.</div></div>
-    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot-label">Film — fixed sequence, fixed duration. Zero structural agency.</div></div>
-    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot-label">Novel — reader sets pace; some choose own path (hypertext fiction).</div></div>
-    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-empty"></div><div class="dot dot-empty"></div><div class="dot-label">Music performance — interpretation varies; improvisation (jazz) adds agency.</div></div>
-    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-empty"></div><div class="dot-label">Linear video game — choices within constraints; branching narrative.</div></div>
+    <div class="mini-intro-spaced">How much can the audience shape the work they're experiencing?</div>
+    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot-label">Painting — fixed, singular. Viewer chooses where to look, nothing else.</div></div>
+    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot-label">Film — fixed sequence, fixed duration. Zero structural agency.</div></div>
+    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot-label">Novel — reader sets pace; some choose own path (hypertext fiction).</div></div>
+    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot swatch-empty"></div><div class="dot swatch-empty"></div><div class="dot-label">Music performance — interpretation varies; improvisation (jazz) adds agency.</div></div>
+    <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot swatch-empty"></div><div class="dot-label">Linear video game — choices within constraints; branching narrative.</div></div>
     <div class="dot-row"><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot dot-filled"></div><div class="dot-label">Open-world / sandbox game — enormous agency; player generates meaning.</div></div>
     <div class="interactivity-note">The interactivity of games is not simply more of the same thing other art forms offer. It is a qualitatively different relationship between work and audience. Critics who evaluate games as if they were films — judging the story, the visuals, the music — miss the most important dimension entirely: the quality of the choices the player is given, and what those choices feel like.</div>
   </div>
@@ -89,13 +89,13 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- Element explorer -->
   <div class="content-panel">
     <div class="panel-title">Core design elements — click to explore</div>
-    <div class="elem-grid">
-      <div class="elem-card active" onclick="showElem('mechanics',this)"><div class="elem-icon">⚙️</div><div class="elem-name">Mechanics</div><div class="elem-sub">Rules &amp; systems</div></div>
-      <div class="elem-card" onclick="showElem('feedback',this)"><div class="elem-icon">🔄</div><div class="elem-name">Feedback loops</div><div class="elem-sub">Positive &amp; negative</div></div>
-      <div class="elem-card" onclick="showElem('difficulty',this)"><div class="elem-icon">📈</div><div class="elem-name">Difficulty curve</div><div class="elem-sub">Flow &amp; frustration</div></div>
-      <div class="elem-card" onclick="showElem('agency',this)"><div class="elem-icon">🎭</div><div class="elem-name">Player agency</div><div class="elem-sub">Meaningful choice</div></div>
-      <div class="elem-card" onclick="showElem('space',this)"><div class="elem-icon">🗺️</div><div class="elem-name">Game space</div><div class="elem-sub">World &amp; level design</div></div>
-      <div class="elem-card" onclick="showElem('economy',this)"><div class="elem-icon">💰</div><div class="elem-name">Game economy</div><div class="elem-sub">Resources &amp; trade-offs</div></div>
+    <div class="tile-grid-md">
+      <div class="elem-card active" onclick="showElem('mechanics',this)"><div class="elem-icon">⚙️</div><div class="label-tiny-strong">Mechanics</div><div class="sub-caption">Rules &amp; systems</div></div>
+      <div class="elem-card" onclick="showElem('feedback',this)"><div class="elem-icon">🔄</div><div class="label-tiny-strong">Feedback loops</div><div class="sub-caption">Positive &amp; negative</div></div>
+      <div class="elem-card" onclick="showElem('difficulty',this)"><div class="elem-icon">📈</div><div class="label-tiny-strong">Difficulty curve</div><div class="sub-caption">Flow &amp; frustration</div></div>
+      <div class="elem-card" onclick="showElem('agency',this)"><div class="elem-icon">🎭</div><div class="label-tiny-strong">Player agency</div><div class="sub-caption">Meaningful choice</div></div>
+      <div class="elem-card" onclick="showElem('space',this)"><div class="elem-icon">🗺️</div><div class="label-tiny-strong">Game space</div><div class="sub-caption">World &amp; level design</div></div>
+      <div class="elem-card" onclick="showElem('economy',this)"><div class="elem-icon">💰</div><div class="label-tiny-strong">Game economy</div><div class="sub-caption">Resources &amp; trade-offs</div></div>
     </div>
   </div>
   <div id="elem-display" class="elem-detail elem-detail-panel show"></div>
@@ -103,15 +103,15 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- Flow curve interactive -->
   <div class="content-panel">
     <div class="compact-card-title">The flow channel — challenge vs. skill</div>
-    <div class="flow-intro">Csikszentmihalyi's flow theory describes an optimal experience zone where challenge and skill are perfectly matched. Games live or die on how well they navigate this. Drag the slider to see where different difficulty states fall.</div>
-    <div class="game-row">
-      <div class="slider-label">Challenge level:</div>
-      <input class="challengeslider" type="range" id="challengeSlider" min="1" max="10" value="5" oninput="updateFlow()">
+    <div class="lede-roomy">Csikszentmihalyi's flow theory describes an optimal experience zone where challenge and skill are perfectly matched. Games live or die on how well they navigate this. Drag the slider to see where different difficulty states fall.</div>
+    <div class="control-row-compact">
+      <div class="inline-label">Challenge level:</div>
+      <input class="flex-cell-wide" type="range" id="challengeSlider" min="1" max="10" value="5" oninput="updateFlow()">
       <div class="challengeval" id="challengeVal">5 / 10</div>
     </div>
-    <div class="flow-slider-row">
-      <div class="slider-label">Player skill:</div>
-      <input class="challengeslider" type="range" id="skillSlider" min="1" max="10" value="5" oninput="updateFlow()">
+    <div class="control-row-spaced">
+      <div class="inline-label">Player skill:</div>
+      <input class="flex-cell-wide" type="range" id="skillSlider" min="1" max="10" value="5" oninput="updateFlow()">
       <div class="challengeval" id="skillVal">5 / 10</div>
     </div>
     <div class="flowresult" id="flowResult"></div>
@@ -132,40 +132,40 @@ const mod = modules.find((m) => m.id === 35)!;
   <div class="content-panel">
     <div class="panel-title">Video game history — eras and their defining characteristics</div>
     <div class="pc-axis">
-      <span class="pc-axis-mark pc-axis-mark-style">1970</span>
-      <span class="pc-axis-mark pc-axis-mark-second">1983</span>
-      <span class="pc-axis-mark pc-axis-mark-third">1993</span>
-      <span class="pc-axis-mark pc-axis-mark-fourth">2001</span>
-      <span class="pc-axis-mark pc-axis-mark-fifth">2010</span>
-      <span class="pc-axis-mark pc-axis-mark-last">Now</span>
+      <span class="axis-tick-small pc-axis-mark-style">1970</span>
+      <span class="axis-tick-small pc-axis-mark-second">1983</span>
+      <span class="axis-tick-small pc-axis-mark-third">1993</span>
+      <span class="axis-tick-small pc-axis-mark-fourth">2001</span>
+      <span class="axis-tick-small pc-axis-mark-fifth">2010</span>
+      <span class="axis-tick-small pc-axis-mark-last">Now</span>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">Arcade era</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-style"><span class="pc-fill-label text-amber-900">Pong, Space Invaders, Pac-Man</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-style"><span class="period-label text-amber-900">Pong, Space Invaders, Pac-Man</span></div></div>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">8-bit home console</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-eight-bit"><span class="pc-fill-label text-blue-900">NES, Atari 2600</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-eight-bit"><span class="period-label text-blue-900">NES, Atari 2600</span></div></div>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">16-bit / SNES era</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-sixteen-bit"><span class="pc-fill-label text-green-800">SNES, Mega Drive</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-sixteen-bit"><span class="period-label text-green-800">SNES, Mega Drive</span></div></div>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">3D revolution / PS1</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-three-d"><span class="pc-fill-label text-indigo-900">PlayStation, N64, Doom</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-three-d"><span class="period-label text-indigo-900">PlayStation, N64, Doom</span></div></div>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">Online &amp; PS2 era</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-online-era"><span class="pc-fill-label text-orange-900">PS2, Xbox, World of Warcraft</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-online-era"><span class="period-label text-orange-900">PS2, Xbox, World of Warcraft</span></div></div>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">HD &amp; mobile era</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-hd-mobile"><span class="pc-fill-label text-red-900">PS3/360, iPhone, indie boom</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-hd-mobile"><span class="period-label text-red-900">PS3/360, iPhone, indie boom</span></div></div>
     </div>
-    <div class="pc-row">
+    <div class="data-row-loose">
       <div class="pc-label">Live service / streaming</div>
-      <div class="pc-track"><div class="pc-fill pc-fill-live-service"><span class="pc-fill-label text-stone-800">PS4/5, Fortnite, Game Pass</span></div></div>
+      <div class="period-track"><div class="pc-fill pc-fill-live-service"><span class="period-label text-stone-800">PS4/5, Fortnite, Game Pass</span></div></div>
     </div>
   </div>
 
@@ -183,16 +183,16 @@ const mod = modules.find((m) => m.id === 35)!;
 
   <div class="genres-intro">Game genres are defined primarily by their core <em>mechanics</em> — what the player is fundamentally doing — rather than by theme or setting (as in literature or film). A game about a space war can be a first-person shooter, a real-time strategy game, or a visual novel depending on what actions the player takes. The same theme can generate completely different experiences. Click a genre to explore.</div>
 
-  <div class="genre-grid">
-    <div class="genre-card active" onclick="showGenre('action',this)"><div class="genre-icon">⚔️</div><div class="genre-name">Action</div><div class="genre-sub">Reflexes &amp; combat</div></div>
-    <div class="genre-card" onclick="showGenre('rpg',this)"><div class="genre-icon">🧙</div><div class="genre-name">RPG</div><div class="genre-sub">Character &amp; story</div></div>
-    <div class="genre-card" onclick="showGenre('strategy',this)"><div class="genre-icon">♟️</div><div class="genre-name">Strategy</div><div class="genre-sub">Planning &amp; systems</div></div>
-    <div class="genre-card" onclick="showGenre('simulation',this)"><div class="genre-icon">🌆</div><div class="genre-name">Simulation</div><div class="genre-sub">Modelling worlds</div></div>
-    <div class="genre-card" onclick="showGenre('puzzle',this)"><div class="genre-icon">🧩</div><div class="genre-name">Puzzle</div><div class="genre-sub">Logic &amp; insight</div></div>
-    <div class="genre-card" onclick="showGenre('platformer',this)"><div class="genre-icon">🍄</div><div class="genre-name">Platformer</div><div class="genre-sub">Space &amp; movement</div></div>
-    <div class="genre-card" onclick="showGenre('adventure',this)"><div class="genre-icon">🗺️</div><div class="genre-name">Adventure</div><div class="genre-sub">Exploration &amp; narrative</div></div>
-    <div class="genre-card" onclick="showGenre('sports',this)"><div class="genre-icon">⚽</div><div class="genre-name">Sports / Racing</div><div class="genre-sub">Skill &amp; competition</div></div>
-    <div class="genre-card" onclick="showGenre('indie',this)"><div class="genre-icon">💎</div><div class="genre-name">Indie</div><div class="genre-sub">Auteur &amp; experiment</div></div>
+  <div class="tile-grid-sm">
+    <div class="genre-card active" onclick="showGenre('action',this)"><div class="card-icon-small">⚔️</div><div class="label-tiny-strong">Action</div><div class="card-sub-muted">Reflexes &amp; combat</div></div>
+    <div class="genre-card" onclick="showGenre('rpg',this)"><div class="card-icon-small">🧙</div><div class="label-tiny-strong">RPG</div><div class="card-sub-muted">Character &amp; story</div></div>
+    <div class="genre-card" onclick="showGenre('strategy',this)"><div class="card-icon-small">♟️</div><div class="label-tiny-strong">Strategy</div><div class="card-sub-muted">Planning &amp; systems</div></div>
+    <div class="genre-card" onclick="showGenre('simulation',this)"><div class="card-icon-small">🌆</div><div class="label-tiny-strong">Simulation</div><div class="card-sub-muted">Modelling worlds</div></div>
+    <div class="genre-card" onclick="showGenre('puzzle',this)"><div class="card-icon-small">🧩</div><div class="label-tiny-strong">Puzzle</div><div class="card-sub-muted">Logic &amp; insight</div></div>
+    <div class="genre-card" onclick="showGenre('platformer',this)"><div class="card-icon-small">🍄</div><div class="label-tiny-strong">Platformer</div><div class="card-sub-muted">Space &amp; movement</div></div>
+    <div class="genre-card" onclick="showGenre('adventure',this)"><div class="card-icon-small">🗺️</div><div class="label-tiny-strong">Adventure</div><div class="card-sub-muted">Exploration &amp; narrative</div></div>
+    <div class="genre-card" onclick="showGenre('sports',this)"><div class="card-icon-small">⚽</div><div class="label-tiny-strong">Sports / Racing</div><div class="card-sub-muted">Skill &amp; competition</div></div>
+    <div class="genre-card" onclick="showGenre('indie',this)"><div class="card-icon-small">💎</div><div class="label-tiny-strong">Indie</div><div class="card-sub-muted">Auteur &amp; experiment</div></div>
   </div>
   <div id="genre-display" class="genre-detail show"></div>
 
@@ -219,37 +219,37 @@ const mod = modules.find((m) => m.id === 35)!;
     </div>
     <div id="ntab-diegetic" class="npanel show">
       <div class="card-grid-compact">
-        <div class="sub-card"><div class="detail-label">What it is</div><div class="card-body">Story told through the game world itself — objects, architecture, graffiti, body positions, environmental details — without interrupting play. The player pieces together what happened from evidence, like an archaeologist. Pioneered by Looking Glass Studios (Thief, System Shock) and mastered by Valve (Half-Life, Portal, Dark Souls).</div></div>
-        <div class="sub-card"><div class="detail-label">Why it works</div><div class="card-body">Never interrupts the player's agency. The player discovers rather than receives the story, making them an active participant in the narrative, not just a spectator. Dark Souls tells the entire history of its world through item descriptions and NPC fragments — players who don't look find nothing; players who look find everything.</div></div>
-        <div class="sub-card"><div class="detail-label">Key examples</div><div class="card-body">Dark Souls / Elden Ring (FromSoftware), BioShock (audio diaries and architecture), Firewatch (environment as character), Disco Elysium (world as political history), What Remains of Edith Finch (domestic spaces as biography).</div></div>
+        <div class="sub-card"><div class="caption-label">What it is</div><div class="body-small">Story told through the game world itself — objects, architecture, graffiti, body positions, environmental details — without interrupting play. The player pieces together what happened from evidence, like an archaeologist. Pioneered by Looking Glass Studios (Thief, System Shock) and mastered by Valve (Half-Life, Portal, Dark Souls).</div></div>
+        <div class="sub-card"><div class="caption-label">Why it works</div><div class="body-small">Never interrupts the player's agency. The player discovers rather than receives the story, making them an active participant in the narrative, not just a spectator. Dark Souls tells the entire history of its world through item descriptions and NPC fragments — players who don't look find nothing; players who look find everything.</div></div>
+        <div class="sub-card"><div class="caption-label">Key examples</div><div class="body-small">Dark Souls / Elden Ring (FromSoftware), BioShock (audio diaries and architecture), Firewatch (environment as character), Disco Elysium (world as political history), What Remains of Edith Finch (domestic spaces as biography).</div></div>
       </div>
     </div>
     <div id="ntab-cutscene" class="npanel">
       <div class="card-grid-compact">
-        <div class="sub-card"><div class="detail-label">What it is</div><div class="card-body">Pre-authored cinematic sequences that interrupt play to advance the story — removing player control for a period. Borrowed directly from cinema. The dominant storytelling mode of AAA Japanese games (Metal Gear Solid, Final Fantasy) and prestige Western action games (Uncharted, The Last of Us).</div></div>
-        <div class="sub-card"><div class="detail-label">The trade-off</div><div class="card-body">Cutscenes allow cinematic control — the designer determines exactly what the player sees and hears, enabling elaborate emotional storytelling. But they are fundamentally non-interactive: watching a cutscene is watching a film. The moment you press "skip," the cutscene reveals its fragility. The best games (The Last of Us Part II) use cutscenes that feel earned by the gameplay that precedes them.</div></div>
-        <div class="sub-card"><div class="detail-label">Key examples</div><div class="card-body">Metal Gear Solid (Hideo Kojima — cutscenes as auteur cinema), The Last of Us series, Final Fantasy series, God of War (2018 notably uses no cuts — the entire game is one unbroken camera take), Red Dead Redemption 2.</div></div>
+        <div class="sub-card"><div class="caption-label">What it is</div><div class="body-small">Pre-authored cinematic sequences that interrupt play to advance the story — removing player control for a period. Borrowed directly from cinema. The dominant storytelling mode of AAA Japanese games (Metal Gear Solid, Final Fantasy) and prestige Western action games (Uncharted, The Last of Us).</div></div>
+        <div class="sub-card"><div class="caption-label">The trade-off</div><div class="body-small">Cutscenes allow cinematic control — the designer determines exactly what the player sees and hears, enabling elaborate emotional storytelling. But they are fundamentally non-interactive: watching a cutscene is watching a film. The moment you press "skip," the cutscene reveals its fragility. The best games (The Last of Us Part II) use cutscenes that feel earned by the gameplay that precedes them.</div></div>
+        <div class="sub-card"><div class="caption-label">Key examples</div><div class="body-small">Metal Gear Solid (Hideo Kojima — cutscenes as auteur cinema), The Last of Us series, Final Fantasy series, God of War (2018 notably uses no cuts — the entire game is one unbroken camera take), Red Dead Redemption 2.</div></div>
       </div>
     </div>
     <div id="ntab-emergent" class="npanel">
       <div class="card-grid-compact">
-        <div class="sub-card"><div class="detail-label">What it is</div><div class="card-body">No authored narrative at all — story arises spontaneously from the interaction of game systems. The designer creates rules; the player generates story. A Minecraft player describes an epic siege they survived; another describes a trading empire they built. Neither experience was written by any designer. The game was just the context.</div></div>
-        <div class="sub-card"><div class="detail-label">Why it matters</div><div class="card-body">Emergent narrative is uniquely possible in games. It is the most interactive form of storytelling — the player is not discovering a story someone wrote but generating a story that has never existed before. The "stories" players tell about their Dwarf Fortress fortresses or their Crusader Kings dynasties are genuine narratives that arose without an author.</div></div>
-        <div class="sub-card"><div class="detail-label">Key examples</div><div class="card-body">Dwarf Fortress (procedurally generated civilisation histories), Minecraft (player-authored world), Crusader Kings III (medieval dynasty simulation), RimWorld (colony survival story generator), Caves of Qud.</div></div>
+        <div class="sub-card"><div class="caption-label">What it is</div><div class="body-small">No authored narrative at all — story arises spontaneously from the interaction of game systems. The designer creates rules; the player generates story. A Minecraft player describes an epic siege they survived; another describes a trading empire they built. Neither experience was written by any designer. The game was just the context.</div></div>
+        <div class="sub-card"><div class="caption-label">Why it matters</div><div class="body-small">Emergent narrative is uniquely possible in games. It is the most interactive form of storytelling — the player is not discovering a story someone wrote but generating a story that has never existed before. The "stories" players tell about their Dwarf Fortress fortresses or their Crusader Kings dynasties are genuine narratives that arose without an author.</div></div>
+        <div class="sub-card"><div class="caption-label">Key examples</div><div class="body-small">Dwarf Fortress (procedurally generated civilisation histories), Minecraft (player-authored world), Crusader Kings III (medieval dynasty simulation), RimWorld (colony survival story generator), Caves of Qud.</div></div>
       </div>
     </div>
     <div id="ntab-branching" class="npanel">
       <div class="card-grid-compact">
-        <div class="sub-card"><div class="detail-label">What it is</div><div class="card-body">The player makes explicit narrative choices (dialogue options, major decisions) that change the story's direction, characters, and ending. Promises the player that their choices matter. The dominant mode of Western RPGs (Baldur's Gate, Mass Effect, The Witcher) and visual novels (Disco Elysium).</div></div>
-        <div class="sub-card"><div class="detail-label">The challenges</div><div class="card-body">Every branch must be written, tested, and voiced — costs spiral exponentially. Most "choices" in branching games are actually convergent, meeting again a few scenes later ("illusion of choice"). True branching at scale is extraordinarily expensive. Mass Effect 3's ending controversy arose partly because players had spent 100 hours feeling their choices mattered — and then found the ending ignored them.</div></div>
-        <div class="sub-card"><div class="detail-label">Key examples</div><div class="card-body">Disco Elysium (branching as political self-definition), Planescape: Torment (1999 — still a benchmark), The Witcher 3 (consequences delayed by 20+ hours), Spec Ops: The Line (uses the player's assumed genre expectations as a trap), Telltale's The Walking Dead.</div></div>
+        <div class="sub-card"><div class="caption-label">What it is</div><div class="body-small">The player makes explicit narrative choices (dialogue options, major decisions) that change the story's direction, characters, and ending. Promises the player that their choices matter. The dominant mode of Western RPGs (Baldur's Gate, Mass Effect, The Witcher) and visual novels (Disco Elysium).</div></div>
+        <div class="sub-card"><div class="caption-label">The challenges</div><div class="body-small">Every branch must be written, tested, and voiced — costs spiral exponentially. Most "choices" in branching games are actually convergent, meeting again a few scenes later ("illusion of choice"). True branching at scale is extraordinarily expensive. Mass Effect 3's ending controversy arose partly because players had spent 100 hours feeling their choices mattered — and then found the ending ignored them.</div></div>
+        <div class="sub-card"><div class="caption-label">Key examples</div><div class="body-small">Disco Elysium (branching as political self-definition), Planescape: Torment (1999 — still a benchmark), The Witcher 3 (consequences delayed by 20+ hours), Spec Ops: The Line (uses the player's assumed genre expectations as a trap), Telltale's The Walking Dead.</div></div>
       </div>
     </div>
     <div id="ntab-mechanical" class="npanel">
       <div class="card-grid-compact">
-        <div class="sub-card"><div class="detail-label">What it is</div><div class="card-body">The game's mechanics are themselves the narrative. What the player does — the verbs available to them — expresses the game's meaning directly. In Papers Please, the mechanic of stamping documents "approved" or "rejected" is the story: bureaucratic complicity and moral compromise. No cutscene is needed; the act itself carries the meaning.</div></div>
-        <div class="sub-card"><div class="detail-label">Why it's uniquely gamelike</div><div class="card-body">No other art form can make the audience perform the very action the work is about. A film about corruption shows you corruption. Papers Please makes you be corrupt. Lucas Pope, Braid designer Jonathan Blow, and Undertale creator Toby Fox have each built their games' entire meaning into what the player is asked to do — the mechanic is not delivering the message, it is the message.</div></div>
-        <div class="sub-card"><div class="detail-label">Key examples</div><div class="card-body">Papers Please (bureaucratic complicity as mechanic), Undertale (killing as mechanic questioned), Spec Ops: The Line (shooter mechanics as moral trap), Braid (time reversal as grief metaphor), Hades (repeated failure as narrative structure), Celeste (platforming difficulty as mental illness metaphor).</div></div>
+        <div class="sub-card"><div class="caption-label">What it is</div><div class="body-small">The game's mechanics are themselves the narrative. What the player does — the verbs available to them — expresses the game's meaning directly. In Papers Please, the mechanic of stamping documents "approved" or "rejected" is the story: bureaucratic complicity and moral compromise. No cutscene is needed; the act itself carries the meaning.</div></div>
+        <div class="sub-card"><div class="caption-label">Why it's uniquely gamelike</div><div class="body-small">No other art form can make the audience perform the very action the work is about. A film about corruption shows you corruption. Papers Please makes you be corrupt. Lucas Pope, Braid designer Jonathan Blow, and Undertale creator Toby Fox have each built their games' entire meaning into what the player is asked to do — the mechanic is not delivering the message, it is the message.</div></div>
+        <div class="sub-card"><div class="caption-label">Key examples</div><div class="body-small">Papers Please (bureaucratic complicity as mechanic), Undertale (killing as mechanic questioned), Spec Ops: The Line (shooter mechanics as moral trap), Braid (time reversal as grief metaphor), Hades (repeated failure as narrative structure), Celeste (platforming difficulty as mental illness metaphor).</div></div>
       </div>
     </div>
   </div>
@@ -269,19 +269,19 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- Revenue bar chart -->
   <div class="content-panel">
     <div class="inline-card-title">Games industry vs other entertainment — annual revenue comparison</div>
-    <div class="chart-intro">Global annual revenue, approximate 2023 figures</div>
-    <div class="ind-row"><div class="ind-label">Video games</div><div class="ind-bar ind-bar-style"><span class="ind-val text-white">~$184B</span></div></div>
-    <div class="ind-row"><div class="ind-label">Streaming video (Netflix etc.)</div><div class="ind-bar ind-bar-streaming"><span class="ind-val text-white">~$115B</span></div></div>
-    <div class="ind-row"><div class="ind-label">Box office (film)</div><div class="ind-bar ind-bar-box-office"><span class="ind-val text-white">~$87B</span></div></div>
-    <div class="ind-row"><div class="ind-label">Music (recorded)</div><div class="ind-bar ind-bar-music"><span class="ind-val text-white">~$37B</span></div></div>
-    <div class="ind-row"><div class="ind-label">Books (global)</div><div class="ind-bar ind-bar-books"><span class="ind-val text-white">~$41B</span></div></div>
-    <div class="sources-note">Sources: Newzoo, IFPI, PwC. Approximate and include adjacent markets. Games figure includes mobile, console, and PC segments.</div>
+    <div class="mini-intro-spaced">Global annual revenue, approximate 2023 figures</div>
+    <div class="data-row"><div class="ind-label">Video games</div><div class="fill-bar ind-bar-style"><span class="bar-value white-text">~$184B</span></div></div>
+    <div class="data-row"><div class="ind-label">Streaming video (Netflix etc.)</div><div class="fill-bar ind-bar-streaming"><span class="bar-value white-text">~$115B</span></div></div>
+    <div class="data-row"><div class="ind-label">Box office (film)</div><div class="fill-bar ind-bar-box-office"><span class="bar-value white-text">~$87B</span></div></div>
+    <div class="data-row"><div class="ind-label">Music (recorded)</div><div class="fill-bar ind-bar-music"><span class="bar-value white-text">~$37B</span></div></div>
+    <div class="data-row"><div class="ind-label">Books (global)</div><div class="fill-bar ind-bar-books"><span class="bar-value white-text">~$41B</span></div></div>
+    <div class="caption-roomy">Sources: Newzoo, IFPI, PwC. Approximate and include adjacent markets. Games figure includes mobile, console, and PC segments.</div>
   </div>
 
   <!-- Platform comparison -->
   <div class="content-panel">
     <div class="panel-title">Platform comparison — the three major gaming platforms</div>
-    <div class="game-grid">
+    <div class="tile-grid-wide">
       <div class="platform-panel-mobile">
         <div class="platform-title-mobile">📱 Mobile (~50% of revenue)</div>
         <div class="platform-desc-mobile">The dominant platform by revenue — primarily through free-to-play games with in-app purchases. Candy Crush Saga made more per year than most Hollywood blockbusters. Mobile democratised access but also generated the most predatory monetisation models (gacha, loot boxes, energy timers). The average "mobile gamer" plays different games and for different reasons than the average console gamer.</div>
@@ -298,7 +298,7 @@ const mod = modules.find((m) => m.id === 35)!;
   </div>
 
   <!-- How games are made -->
-  <div class="industry-card-grid">
+  <div class="card-grid-roomy">
     <div class="card">
       <p class="clabel">AAA development</p>
       <p class="cval">$100M–$300M+ budgets, 5–7 years, 500+ people</p>
@@ -338,19 +338,19 @@ const mod = modules.find((m) => m.id === 35)!;
     <div class="card-grid-compact">
       <div class="sub-card-roomy">
         <div class="detail-label-spaced">The feeling of becoming competent</div>
-        <div class="card-body">Only games can make you feel the genuine progression from helplessness to mastery. Dark Souls is built entirely around this arc: the player dies hundreds of times, then defeats the boss. That victory is earned by the player, not gifted by the author. No film can make you actually improve at anything. Celeste uses this structure to tell a story about depression and self-belief — the difficulty of the game is the argument.</div>
+        <div class="body-small">Only games can make you feel the genuine progression from helplessness to mastery. Dark Souls is built entirely around this arc: the player dies hundreds of times, then defeats the boss. That victory is earned by the player, not gifted by the author. No film can make you actually improve at anything. Celeste uses this structure to tell a story about depression and self-belief — the difficulty of the game is the argument.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="detail-label-spaced">Complicity and moral weight</div>
-        <div class="card-body">When you choose to betray a character in The Witcher 3, or fail to save a child in This War of Mine, the failure is yours in a way that a film's tragedy never can be. Spec Ops: The Line uses the player's genre expectations (military shooter) to implicate them in war crimes — you do the thing the game's story condemns because the game genre told you to. No other medium can engineer complicity this way.</div>
+        <div class="body-small">When you choose to betray a character in The Witcher 3, or fail to save a child in This War of Mine, the failure is yours in a way that a film's tragedy never can be. Spec Ops: The Line uses the player's genre expectations (military shooter) to implicate them in war crimes — you do the thing the game's story condemns because the game genre told you to. No other medium can engineer complicity this way.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="detail-label-spaced">Systems thinking made visible</div>
-        <div class="card-body">Strategy games and simulations let players understand complex systems by inhabiting them. Playing Civilization teaches more about the dynamics of empire, resource scarcity, and technological competition than most textbooks. Playing Pandemic (the boardgame) teaches epidemiology through experience. This pedagogical power of interactive simulation is unique to games and largely unexplored by mainstream game design.</div>
+        <div class="body-small">Strategy games and simulations let players understand complex systems by inhabiting them. Playing Civilization teaches more about the dynamics of empire, resource scarcity, and technological competition than most textbooks. Playing Pandemic (the boardgame) teaches epidemiology through experience. This pedagogical power of interactive simulation is unique to games and largely unexplored by mainstream game design.</div>
       </div>
       <div class="sub-card-roomy">
         <div class="detail-label-spaced">Presence and embodiment</div>
-        <div class="card-body">VR games aside, first-person video games create a persistent sense of being somewhere — of inhabiting a body in a space. You don't watch Master Chief, you are Master Chief. This embodiment produces empathy differently from film's character identification: you take the actions yourself. Journey (thatgamecompany, 2012) uses this to create a wordless experience of companionship that has moved players to tears through nothing but shared walking in a desert.</div>
+        <div class="body-small">VR games aside, first-person video games create a persistent sense of being somewhere — of inhabiting a body in a space. You don't watch Master Chief, you are Master Chief. This embodiment produces empathy differently from film's character identification: you take the actions yourself. Journey (thatgamecompany, 2012) uses this to create a wordless experience of companionship that has moved players to tears through nothing but shared walking in a desert.</div>
       </div>
     </div>
   </div>
@@ -358,7 +358,7 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- The canon -->
   <div class="content-panel">
     <div class="panel-title">A working canon — games every serious person should know</div>
-    <div class="canon-intro">Not a ranking, but a set of works that demonstrate what games can be. Selected for artistic ambition, formal innovation, or cultural significance.</div>
+    <div class="mini-intro">Not a ranking, but a set of works that demonstrate what games can be. Selected for artistic ambition, formal innovation, or cultural significance.</div>
     <div id="canonBtns" class="button-row-compact"></div>
   </div>
   <div id="canon-display" class="content-panel"></div>
@@ -366,22 +366,22 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- Comparison scales -->
   <div class="content-panel">
     <div class="inline-card-title">Canonical games — where they sit on key dimensions</div>
-    <div class="chart-intro">Design emphasis: these are approximate positions reflecting a game's primary artistic concerns.</div>
+    <div class="mini-intro-spaced">Design emphasis: these are approximate positions reflecting a game's primary artistic concerns.</div>
     <div class="axis-title">Authored narrative ←————————→ Emergent / Systems-driven</div>
-    <div class="cscale-row"><div class="cscale-name">The Last of Us II</div><div class="cscale-track"><div class="cscale-dot cscale-dot-style"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Disco Elysium</div><div class="cscale-track"><div class="cscale-dot cscale-dot-disco-elysium"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Elden Ring</div><div class="cscale-track"><div class="cscale-dot cscale-dot-elden-ring"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Minecraft</div><div class="cscale-track"><div class="cscale-dot cscale-dot-minecraft"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Dwarf Fortress</div><div class="cscale-track"><div class="cscale-dot cscale-dot-dwarf-fortress-design"></div></div></div>
-    <div class="cscale-poles"><span>← Story written by designer</span><span>Story generated by player + systems →</span></div>
+    <div class="data-row-wide"><div class="cscale-name">The Last of Us II</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-style"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Disco Elysium</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-disco-elysium"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Elden Ring</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-elden-ring"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Minecraft</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-minecraft"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Dwarf Fortress</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-dwarf-fortress-design"></div></div></div>
+    <div class="pole-labels-spaced"><span>← Story written by designer</span><span>Story generated by player + systems →</span></div>
 
     <div class="axis-title-spaced">Accessible ←——→ Demanding / Punishing</div>
-    <div class="cscale-row"><div class="cscale-name">Stardew Valley</div><div class="cscale-track"><div class="cscale-dot cscale-dot-stardew-valley"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">The Witcher 3</div><div class="cscale-track"><div class="cscale-dot cscale-dot-witcher"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Celeste</div><div class="cscale-track"><div class="cscale-dot cscale-dot-celeste"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Dark Souls</div><div class="cscale-track"><div class="cscale-dot cscale-dot-dark-souls"></div></div></div>
-    <div class="cscale-row"><div class="cscale-name">Dwarf Fortress</div><div class="cscale-track"><div class="cscale-dot cscale-dot-dwarf-fortress-difficulty"></div></div></div>
-    <div class="cscale-poles"><span>← Low barrier; wide audience</span><span>Steep learning curve; core audience →</span></div>
+    <div class="data-row-wide"><div class="cscale-name">Stardew Valley</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-stardew-valley"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">The Witcher 3</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-witcher"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Celeste</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-celeste"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Dark Souls</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-dark-souls"></div></div></div>
+    <div class="data-row-wide"><div class="cscale-name">Dwarf Fortress</div><div class="scale-track-thick"><div class="cscale-dot cscale-dot-dwarf-fortress-difficulty"></div></div></div>
+    <div class="pole-labels-spaced"><span>← Low barrier; wide audience</span><span>Steep learning curve; core audience →</span></div>
   </div>
 
   <!-- Q&A -->
