@@ -7,19 +7,12 @@
       --tax-accent-bg: #E4F4F0;
       --tax-accent-border: #8ECBBE;
     }
-
-    .module-head {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 0.6rem;
-    }
-    .module-head i {
+    .module-header i {
       color: var(--accent);
       flex-shrink: 0;
       font-size: 42px;
     }
-    .module-head .module-title {
+    .module-header .module-title {
       line-height: 1.05;
       margin: 0;
     }

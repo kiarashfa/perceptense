@@ -1,8 +1,5 @@
-
-/* ── Part C lift explorer ── */
-.lift-btn-row { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-.lift-btn-row button { font-size:12px; padding:4px 11px; }
-.lift-btn-row button.active { background:var(--color-background-secondary); border-color:var(--color-border-primary); }
+.button-row button { font-size:12px; padding:4px 11px; }
+.button-row button.active { background:var(--color-background-secondary); border-color:var(--color-border-primary); }
 
 /* ── Responsive lift display grid (2-col above 520px, 1-col below) ── */
 .lift-inner-grid {
@@ -22,11 +19,8 @@
   gap:10px;
   margin-bottom:1rem;
 }
-
-/* ── Part H — training programmes tab strip ── */
-.prog-tabs { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
-.prog-tabs button { font-size:12px; padding:4px 12px; }
-.prog-tabs button.active { background:var(--color-background-secondary); border-color:var(--color-border-primary); }
+.button-row-compact button { font-size:12px; padding:4px 12px; }
+.button-row-compact button.active { background:var(--color-background-secondary); border-color:var(--color-border-primary); }
 
 /* ── Part I — rep range table ── */
 .rep-table { width:100%; border-collapse:collapse; font-size:12px; }

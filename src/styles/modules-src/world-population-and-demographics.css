@@ -54,8 +54,7 @@
     .tab-btn { font-size: 12px; font-weight: 500; padding: 5px 13px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: none; color: var(--color-text-secondary); cursor: pointer; transition: all 0.12s; font-family: var(--font-sans); }
     .tab-btn:hover { background: var(--color-background-primary); color: var(--color-text-primary); }
     .tab-btn.active { background: var(--color-text-primary); color: var(--color-background-primary); border-color: var(--color-text-primary); }
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
+    .elem-detail-panel.active { display: block; }
 
     /* Responsive cgrid override for 2-col on mobile */
     @media (max-width: 500px) {

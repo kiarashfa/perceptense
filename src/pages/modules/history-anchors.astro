@@ -472,7 +472,7 @@ function buildEmpireBars() {
       <div class="empire-bar-label">${emp.name}</div>
       <div class="empire-bar-track">
         <div class="empire-bar-fill">
-          <span class="empire-bar-val">${dur.toLocaleString()} yrs</span>
+          <span class="bv">${dur.toLocaleString()} yrs</span>
         </div>
       </div>
     </div>`;
@@ -483,7 +483,7 @@ function buildEmpireBars() {
     const dur = emp.end - emp.start;
     bar.style.width = Math.round((dur / maxDur) * 100) + '%';
     bar.style.background = emp.color;
-    const val = bar.querySelector('.empire-bar-val');
+    const val = bar.querySelector('.bv');
     if (val) val.style.color = emp.textColor;
   });
 }
@@ -555,7 +555,7 @@ function showConcurrent(idx) {
   const w = concurrentWorlds[idx];
   let html = `<p class="u-fs-13px u-fw-500 text-primary u-m-0-0-10px">${w.desc}</p>`;
   w.regions.forEach(r => {
-    html += `<div class="region-row">
+    html += `<div class="anchor-row">
       <span class="region-pill">${r.name}</span>
       <span class="region-text">${r.text}</span>
     </div>`;

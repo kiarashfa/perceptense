@@ -5,9 +5,6 @@
 .sub-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 2px; }
 .sub-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
 .sub-note { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; line-height: 1.4; }
-
-/* ── panel / interactive box ── */
-.panel { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 1rem; }
 /* ── SVG diagrams ── */
 .svg-wrap { overflow-x: auto; margin-bottom: 1rem; }
 .svg-wrap svg { display: block; margin: 0 auto; max-width: 100%; }

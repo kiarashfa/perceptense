@@ -20,11 +20,8 @@
       border-bottom: 0.5px solid var(--q-blue-border);
       padding-bottom: 5px;
     }
-
-    /* ---- EXPLORER PANEL ---- */
-    .explorer-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-    .explorer-btns button { padding: 4px 11px; font-size: 12px; }
-    .explorer-btns button.active {
+    .button-row-compact button { padding: 4px 11px; font-size: 12px; }
+    .button-row-compact button.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
       color: var(--accent);

@@ -10,7 +10,7 @@ const mod = modules.find((m) => m.id === 47)!;
 <ModuleLayout mod={mod}>
 
   
-    <div class="module-head">
+    <div class="module-header">
       <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
       <h1 class="module-title">Module 47: Logic</h1>
     </div>
@@ -30,7 +30,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="muted-copy-large">Logic's central insight is that validity depends on form, not subject matter. "All A are B; C is A; therefore C is B" keeps the same structure whether A means mammals, legal contracts, integers, or fictional creatures. A valid argument guarantees only this: if the premises are true, the conclusion cannot be false. A sound argument is stronger because it is valid and its premises are actually true.</div>
     </div>
 
-    <div class="explorer-buttons" aria-label="Logic foundations">
+    <div class="button-row-compact" aria-label="Logic foundations">
       <button onclick="showLogicCore('validity', this)">Validity</button>
       <button onclick="showLogicCore('soundness', this)">Soundness</button>
       <button onclick="showLogicCore('form', this)">Form</button>
@@ -104,7 +104,7 @@ const mod = modules.find((m) => m.id === 47)!;
     <div class="content-panel">
       <div class="chart-title">Truth table explorer</div>
       <div class="muted-copy-large">Select a connective and watch how the truth value changes. The table columns use a fixed layout so the shape stays stable while students compare operators.</div>
-      <div class="explorer-buttons" aria-label="Truth table explorer">
+      <div class="button-row-compact" aria-label="Truth table explorer">
         <button onclick="showTruthTable('and', this)">AND</button>
         <button onclick="showTruthTable('or', this)">OR</button>
         <button onclick="showTruthTable('not', this)">NOT</button>
@@ -150,7 +150,7 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
 
     <h2 class="sec" id="part-c-fallacies-the-patterns-of-bad-reasoning">Part C - fallacies: the patterns of bad reasoning</h2>
-    <div class="explorer-buttons" aria-label="Fallacy explorer">
+    <div class="button-row-compact" aria-label="Fallacy explorer">
       <button onclick="showFallacy('consequent', this)">Affirming consequent</button>
       <button onclick="showFallacy('antecedent', this)">Denying antecedent</button>
       <button onclick="showFallacy('middle', this)">Undistributed middle</button>
@@ -265,7 +265,7 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
 
     <h2 class="sec" id="part-f-logical-and-self-reference-paradoxes">Part F - logical and self-reference paradoxes</h2>
-    <div class="explorer-buttons" aria-label="Self reference paradoxes">
+    <div class="button-row-compact" aria-label="Self reference paradoxes">
       <button onclick="showParadox('liar', this)">Liar</button>
       <button onclick="showParadox('russell', this)">Russell</button>
       <button onclick="showParadox('grelling', this)">Grelling-Nelson</button>
@@ -343,7 +343,7 @@ const mod = modules.find((m) => m.id === 47)!;
       </div>
     </div>
 
-    <div class="explorer-buttons" aria-label="Probability paradoxes">
+    <div class="button-row-compact" aria-label="Probability paradoxes">
       <button onclick="showProbParadox('monty', this)">Monty Hall</button>
       <button onclick="showProbParadox('simpson', this)">Simpson</button>
       <button onclick="showProbParadox('petersburg', this)">St. Petersburg</button>
@@ -388,7 +388,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="cscale-row"><div class="cscale-name">Predestination</div><div class="cscale-track"><span class="cscale-dot" data-left="92"></span></div></div>
     </div>
 
-    <div class="explorer-buttons" aria-label="Philosophical paradoxes">
+    <div class="button-row-compact" aria-label="Philosophical paradoxes">
       <button onclick="showPhilParadox('trolley', this)">Trolley</button>
       <button onclick="showPhilParadox('sorites', this)">Sorites</button>
       <button onclick="showPhilParadox('theseus', this)">Theseus</button>
@@ -478,7 +478,7 @@ const mod = modules.find((m) => m.id === 47)!;
 
     <!-- Cognitive bias explorer -->
     <h2 class="sec" style="margin-top:1.5rem" id="cognitive-biases-that-corrupt-decisions">Cognitive biases that corrupt decisions</h2>
-    <div class="explorer-buttons" aria-label="Cognitive bias explorer">
+    <div class="button-row-compact" aria-label="Cognitive bias explorer">
       <button onclick="showBias('anchoring', this)">Anchoring</button>
       <button onclick="showBias('availability', this)">Availability</button>
       <button onclick="showBias('overconfidence', this)">Overconfidence</button>

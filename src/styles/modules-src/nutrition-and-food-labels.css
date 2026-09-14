@@ -57,8 +57,7 @@
   background: var(--color-background-secondary);
   color: var(--color-text-primary);
 }
-.macro-panel { display: none; }
-.macro-panel.show { display: block; }
+.elem-detail-panel.show { display: block; }
 
 /* ── Hunger quiz ── */
 .quiz-opt {

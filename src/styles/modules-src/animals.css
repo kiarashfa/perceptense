@@ -32,15 +32,7 @@
       color: var(--color-text-secondary);
       line-height: 1.55;
     }
-
-    /* ── Explorer panel ── */
-    .explorer-btns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-    .explorer-btns button.active {
+    .button-row-compact button.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
       color: var(--color-text-primary);

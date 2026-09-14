@@ -11,7 +11,7 @@ const mod = modules.find((m) => m.id === 48)!;
 
   
 
-    <div class="module-head">
+    <div class="module-header">
       <i class="fa-solid fa-chart-line module-icon" aria-hidden="true"></i>
       <h1 class="module-title">Module 48: FIRE Sector</h1>
     </div>
@@ -37,7 +37,7 @@ const mod = modules.find((m) => m.id === 48)!;
       </div>
     </div>
 
-    <div class="explorer-buttons" aria-label="FIRE sector explorer">
+    <div class="button-row-compact" aria-label="FIRE sector explorer">
       <button onclick="showSector('finance', this)">Finance</button>
       <button onclick="showSector('insurance', this)">Insurance</button>
       <button onclick="showSector('realestate', this)">Real estate</button>
@@ -131,7 +131,7 @@ const mod = modules.find((m) => m.id === 48)!;
 
     <div class="info-block">Finance is the art of moving purchasing power across time. A mortgage moves tomorrow's income into today's house purchase. A bond moves today's cash into promised future interest. A stock converts uncertain future profits into a tradable claim. The whole system works only because contracts, accounting, courts, clearing systems, and central banks make promises believable enough to trade.</div>
 
-    <div class="explorer-buttons" aria-label="finance instrument explorer">
+    <div class="button-row-compact" aria-label="finance instrument explorer">
       <button onclick="showFinance('banks', this)">Banks</button>
       <button onclick="showFinance('central', this)">Central banks</button>
       <button onclick="showFinance('stocks', this)">Stocks</button>
@@ -226,7 +226,7 @@ const mod = modules.find((m) => m.id === 48)!;
         <div class="elem-sub">rare, huge losses</div>
       </div>
     </div>
-    <div id="insurance-detail" class="elem-detail"></div>
+    <div id="insurance-detail" class="elem-detail-panel"></div>
 
     <h2 class="sec" id="part-d-real-estate-the-world-s-largest-asset-class">Part D · real estate: the world's largest asset class</h2>
 
@@ -328,7 +328,7 @@ const mod = modules.find((m) => m.id === 48)!;
       </div>
     </div>
 
-    <div class="explorer-buttons" aria-label="intermediary incentive explorer">
+    <div class="button-row-compact" aria-label="intermediary incentive explorer">
       <button onclick="showBroker('commission', this)">Commission</button>
       <button onclick="showBroker('spread', this)">Spread</button>
       <button onclick="showBroker('fiduciary', this)">Fiduciary duty</button>
@@ -342,7 +342,7 @@ const mod = modules.find((m) => m.id === 48)!;
 
     <div class="info-block">Financial regulation exists because private losses can become public disasters. A restaurant failure is painful but local. A major bank failure can freeze payments, payrolls, credit lines, and confidence across the economy. That is systemic risk: the damage spreads through linkages, leverage, fire sales, and panic.</div>
 
-    <div class="explorer-buttons" aria-label="regulator explorer">
+    <div class="button-row-compact" aria-label="regulator explorer">
       <button onclick="showRegulator('prudential', this)">Prudential</button>
       <button onclick="showRegulator('conduct', this)">Conduct</button>
       <button onclick="showRegulator('markets', this)">Markets</button>

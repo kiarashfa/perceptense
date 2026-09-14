@@ -1,8 +1,7 @@
 
     #partA,#partB,#partC,#partD,#partE,#partF{margin-bottom:2rem}
     .dim-tab{font-size:12px;padding:4px 12px;border-radius:var(--border-radius-md);border:.5px solid var(--color-border-secondary);background:none;color:var(--color-text-secondary);cursor:pointer}
-    .dim-tab.active{background:var(--color-background-secondary);color:var(--color-text-primary);font-weight:600}
-    .dim-panel{display:none}.dim-panel.show{display:block}
+    .dim-tab.active{background:var(--color-background-secondary);color:var(--color-text-primary);font-weight:600}.elem-detail-panel.show{display:block}
     .cscale-wrap{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:13px 15px;margin-bottom:1rem}
     .cscale-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
     .cscale-name{font-size:12px;color:var(--color-text-primary);width:130px;flex-shrink:0}

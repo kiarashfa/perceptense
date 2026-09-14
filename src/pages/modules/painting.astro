@@ -33,7 +33,7 @@ const mod = modules.find((m) => m.id === 32)!;
         <button class="dim-tab" onclick="showDim('formal',this)">Formal</button>
         <button class="dim-tab" onclick="showDim('icono',this)">Iconographic</button>
       </div>
-      <div id="dim-material" class="dim-panel show">
+      <div id="dim-material" class="elem-detail-panel show">
         <div class="painting-grid">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Pigment</div>
@@ -49,7 +49,7 @@ const mod = modules.find((m) => m.id === 32)!;
           </div>
         </div>
       </div>
-      <div id="dim-formal" class="dim-panel">
+      <div id="dim-formal" class="elem-detail-panel">
         <div class="painting-grid">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Composition</div>
@@ -65,7 +65,7 @@ const mod = modules.find((m) => m.id === 32)!;
           </div>
         </div>
       </div>
-      <div id="dim-icono" class="dim-panel">
+      <div id="dim-icono" class="elem-detail-panel">
         <div class="painting-grid">
           <div class="sub-card-roomy">
             <div class="detail-label-spaced">Genre hierarchy</div>
@@ -496,7 +496,7 @@ const mod = modules.find((m) => m.id === 32)!;
 window.addEventListener('DOMContentLoaded', function() {
 /* DIM TABS */
   window.showDim = function(key, btn) {
-    document.querySelectorAll('.dim-panel').forEach(function(p){ p.classList.remove('show'); });
+    document.querySelectorAll('.elem-detail-panel').forEach(function(p){ p.classList.remove('show'); });
     document.querySelectorAll('.dim-tab').forEach(function(b){ b.classList.remove('active'); });
     document.getElementById('dim-'+key).classList.add('show');
     btn.classList.add('active');

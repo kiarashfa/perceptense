@@ -115,7 +115,9 @@ def dynamic_prefixes(page: str) -> set[str]:
     matches looks unreachable and a rename would never reach the generated
     element. Anything starting with one of these fragments is left alone.
     """
-    return {m.group(1) for m in DYNAMIC.finditer(page)}
+    # getElementById('hub-' + type) builds an id, not a class name.
+    return {m.group(1) for m in DYNAMIC.finditer(page)
+            if not re.search(r'getElementById\(\s*$', page[max(0, m.start() - 20):m.start() - 1])}
 
 
 def class_positions_outside_class_attr(text: str, name: str) -> bool:
@@ -213,10 +215,148 @@ def sweep_dead(apply: bool) -> int:
     return 0
 
 
+def shared_components() -> dict[tuple, str]:
+    """Declaration block -> shared component class, utilities excluded."""
+    blocks: dict[tuple, str] = {}
+    for selector, decls, _ in iter_rules(read(SHARED)):
+        m = SINGLE_CLASS.match(selector)
+        if m and not m.group(1).startswith('u-') and block_key(decls) not in blocks:
+            blocks[block_key(decls)] = m.group(1)
+    return blocks
+
+
+def word(name: str) -> str:
+    return r'(?<![\w-])' + re.escape(name) + r'(?![\w-])'
+
+
+def rename_in_class_attrs(text: str, name: str, target: str) -> str:
+    def swap(m: re.Match) -> str:
+        classes = m.group(1).split()
+        if name not in classes:
+            return m.group(0)
+        out: list[str] = []
+        for c in classes:
+            c = target if c == name else c
+            if c not in out:
+                out.append(c)
+        return f'class="{" ".join(out)}"'
+    return re.sub(r'\bclass="([^"]*)"', swap, text)
+
+
+def rename_compound(apply: bool) -> int:
+    """Fold a class that other selectors depend on into its shared component.
+
+    A class whose own rule restates a shared component but which the module also
+    uses in compound selectors (.tabs button.active, .panel.show) is renamed
+    throughout the module — every selector and every class attribute, including
+    markup that scripts build — and its redundant rule is dropped. That is exact
+    only while the shared name appears nowhere in the module, so existing rules
+    cannot start matching the renamed elements. Several classes may fold into
+    one shared name only when their compound rules are identical.
+    """
+    shared = shared_components()
+    planned: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    skipped: dict[str, int] = defaultdict(int)
+
+    for css_file in sorted(MODULE_CSS.glob('*.css')):
+        slug = css_file.stem
+        page = PAGES / f'{slug}.astro'
+        if not page.exists():
+            continue
+        css = read(css_file)
+        raw = read(page)
+        markup = markup_only(raw)
+        script = region(raw, 'script')
+        style = region(raw, 'style')
+        built = dynamic_prefixes(raw)
+        rules = list(iter_rules(css))
+
+        occurrences: dict[str, int] = defaultdict(int)
+        blocks: dict[str, dict] = {}
+        for selector, decls, _ in rules:
+            m = SINGLE_CLASS.match(selector)
+            if m:
+                occurrences[m.group(1)] += 1
+                blocks[m.group(1)] = decls
+
+        candidates: dict[str, list[tuple[str, tuple]]] = defaultdict(list)
+        for name, decls in blocks.items():
+            target = shared.get(block_key(decls))
+            dotted = r'(?<![\w-])\.' + re.escape(name) + r'(?![\w-])'
+            if not target or target == name or len(re.findall(dotted, css)) == 1:
+                continue                    # nothing compound: the plain merge covers it
+            if occurrences[name] != 1:
+                skipped['declared more than once'] += 1
+                continue
+            if re.search(word(target), raw) or re.search(word(target), css):
+                skipped['shared name already used in the module'] += 1
+                continue
+            if re.search(word(name), style):
+                skipped['named in a style block'] += 1
+                continue
+            if any(name.startswith(p) for p in built):
+                skipped['assembled at runtime'] += 1
+                continue
+            # an id that happens to share the name is not a class reference
+            text = re.sub(r'\bid="[^"]*"', 'id=""', markup + script)
+            if class_positions_outside_class_attr(text, name):
+                skipped['referenced outside a class attribute'] += 1
+                continue
+            signature = tuple(sorted(
+                (re.sub(dotted, '.§', re.sub(r'\s+', ' ', s).strip()), block_key(d))
+                for s, d, _ in rules if re.search(dotted, s)))
+            candidates[target].append((name, signature))
+
+        for target, group in candidates.items():
+            if len({sig for _, sig in group}) > 1:
+                skipped['differs from another class folding into the same name'] += len(group)
+                continue
+            planned[slug].extend((name, target) for name, _ in group)
+
+    total = sum(len(v) for v in planned.values())
+    print(f'modules affected            : {len(planned)}')
+    print(f'compound renames planned    : {total}')
+    print('skipped for safety          : ' + (', '.join(f'{k} x{v}' for k, v in skipped.items()) or 'none'))
+    print()
+    for slug, pairs in sorted(planned.items()):
+        print(f'  {slug:44} ' + ', '.join(f'{a} -> {b}' for a, b in pairs))
+
+    if not apply:
+        print('\nreport only; pass --apply to rewrite')
+        return 0
+
+    for slug, pairs in planned.items():
+        page = PAGES / f'{slug}.astro'
+        css_file = MODULE_CSS / f'{slug}.css'
+        original = read(page)
+        css = read(css_file)
+        parts = split_parts(original)
+        for name, target in pairs:
+            css = re.sub(r'(?<![\w-])\.' + re.escape(name) + r'(?![\w-])', f'.{target}', css)
+            parts = [(rename_in_class_attrs(t, name, target) if k != 'style' else t, k)
+                     for t, k in parts]
+        for target in {t for _, t in pairs}:
+            while any(s.strip() == f'.{target}' for s, _, _ in iter_rules(css)):
+                css = drop_rule(css, target)
+
+        rewritten = ''.join(t for t, _ in parts)
+        if region(original, 'style') != region(rewritten, 'style'):
+            raise SystemExit(f'{slug}: a style block changed; refusing to write')
+        if (blank_class_attrs(region(original, 'script'))
+                != blank_class_attrs(region(rewritten, 'script'))):
+            raise SystemExit(f'{slug}: a script changed outside a class attribute; refusing to write')
+        write(page, rewritten)
+        write(css_file, css)
+    print(f'\nrewritten: {len(planned)} page(s), {len(planned)} stylesheet(s)')
+    return 0
+
+
 def main(argv: list[str]) -> int:
     apply = '--apply' in argv
     if '--dead' in argv:
         return sweep_dead(apply)
+    if '--compound' in argv:
+        return rename_compound(apply)
 
     # Utility classes are never merge targets: folding a meaningful name like
     # .diagram-svg into .u-shrink-0 removes a rule but moves a styling decision
@@ -275,7 +415,8 @@ def main(argv: list[str]) -> int:
             # A class a script builds can move too, but only when the script
             # mentions it purely as markup — never as a selector, a classList
             # argument, or a string it compares against.
-            if class_positions_outside_class_attr(markup + script, name):
+            # an id that happens to share the name is not a class reference
+            if class_positions_outside_class_attr(re.sub(r'\bid="[^"]*"', 'id=""', markup + script), name):
                 skipped['referenced outside a class attribute'] += 1
                 continue
             if not re.search(r'\bclass="[^"]*(?<![\w-])' + re.escape(name) + r'(?![\w-])',

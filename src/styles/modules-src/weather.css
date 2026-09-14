@@ -1,12 +1,4 @@
-
-    /* ── Flex-wrap helper for button rows ── */
-    .btn-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-    .btn-row button {
+    .button-row button {
       font-size: 12px;
       padding: 3px 10px;
     }

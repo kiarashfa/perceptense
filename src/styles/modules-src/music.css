@@ -566,8 +566,7 @@
   border-color: var(--color-border-primary);
   font-weight: 600;
 }
-.instr-family-panel { display: none; }
-.instr-family-panel.show { display: block; }
+.elem-detail-panel.show { display: block; }
 .instr-selector-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));

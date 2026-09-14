@@ -1,14 +1,4 @@
-
-    /* === Scale ladder SVG diagram === */
-    .scale-ladder-wrap {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-      overflow-x: auto;
-    }
-    .scale-ladder-wrap svg { display: block; width: 100%; height: auto; }
+    .scroll-panel svg { display: block; width: 100%; height: auto; }
 
     /* === Size comparison builder === */
     .cmp-row {
@@ -64,15 +54,6 @@
       margin-top: 10px;
     }
     .cmp-result strong { color: var(--color-text-primary); }
-
-    /* === Estimation game === */
-    .game-panel {
-      background: var(--color-background-primary);
-      border: 0.5px solid var(--color-border-tertiary);
-      border-radius: var(--border-radius-lg);
-      padding: 13px 15px;
-      margin-bottom: 1rem;
-    }
     .game-q {
       font-size: 14px;
       font-weight: 500;

@@ -4,19 +4,12 @@
       --accent-bg: #EEEDFE;
       --accent-border: #AFA9EC;
     }
-
-    .module-head {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 0.6rem;
-    }
-    .module-head i {
+    .module-header i {
       font-size: 42px;
       color: var(--accent);
       flex-shrink: 0;
     }
-    .module-head .module-title {
+    .module-header .module-title {
       margin: 0;
       line-height: 1.05;
     }
@@ -86,18 +79,11 @@
     .mono {
       font-family: var(--font-mono);
     }
-
-    .explorer-buttons {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-    .explorer-buttons button {
+    .button-row-compact button {
       font-size: 12px;
       padding: 4px 10px;
     }
-    .explorer-buttons button.active,
+    .button-row-compact button.active,
     .elem-card.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);

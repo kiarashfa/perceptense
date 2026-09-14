@@ -254,7 +254,7 @@ const mod = modules.find((m) => m.id === 29)!;
         <button class="tab-btn" data-tab="fertil-low"  onclick="switchTab('fertil-tabs','fertil-panels',this)">Low fertility</button>
       </div>
       <div id="fertil-panels">
-        <div class="tab-panel active" id="fertil-high">
+        <div class="elem-detail-panel active" id="fertil-high">
           <div class="fertil-grid">
             <div class="sub-card-compact"><div class="fertil-country">Niger</div><div class="fertil-rate text-hex-f09595">6.7</div><div class="fertil-label">Highest in the world</div></div>
             <div class="sub-card-compact"><div class="fertil-country">Mali</div><div class="fertil-rate text-hex-f09595">5.9</div><div class="fertil-label">West Africa</div></div>
@@ -265,7 +265,7 @@ const mod = modules.find((m) => m.id === 29)!;
           </div>
           <p class="demographics-text">Sub-Saharan Africa will drive nearly all of global population growth in the 21st century.</p>
         </div>
-        <div class="tab-panel" id="fertil-mid">
+        <div class="elem-detail-panel" id="fertil-mid">
           <div class="fertil-grid">
             <div class="sub-card-compact"><div class="fertil-country">India</div><div class="fertil-rate fertil-rate-style-3">2.0</div><div class="fertil-label">Just below replacement</div></div>
             <div class="sub-card-compact"><div class="fertil-country">Indonesia</div><div class="fertil-rate fertil-rate-style-3">2.2</div><div class="fertil-label">Southeast Asia</div></div>
@@ -275,7 +275,7 @@ const mod = modules.find((m) => m.id === 29)!;
             <div class="sub-card-compact"><div class="fertil-country">France</div><div class="fertil-rate fertil-rate-style-3">1.8</div><div class="fertil-label">Highest in W. Europe</div></div>
           </div>
         </div>
-        <div class="tab-panel" id="fertil-low">
+        <div class="elem-detail-panel" id="fertil-low">
           <div class="fertil-grid">
             <div class="sub-card-compact"><div class="fertil-country">South Korea</div><div class="fertil-rate fertil-rate-style-4">0.72</div><div class="fertil-label">Lowest ever recorded</div></div>
             <div class="sub-card-compact"><div class="fertil-country">Hong Kong</div><div class="fertil-rate fertil-rate-style-4">0.75</div><div class="fertil-label">City-state extreme</div></div>
@@ -601,7 +601,7 @@ const mod = modules.find((m) => m.id === 29)!;
     /* --- Tab switcher --- */
     function switchTab(tabGroupId, panelGroupId, clickedBtn) {
       const tabBtns   = document.getElementById(tabGroupId).querySelectorAll('.tab-btn');
-      const panels    = document.getElementById(panelGroupId).querySelectorAll('.tab-panel');
+      const panels    = document.getElementById(panelGroupId).querySelectorAll('.elem-detail-panel');
       const targetId  = clickedBtn.dataset.tab;
       tabBtns.forEach(b => b.classList.remove('active'));
       panels.forEach(p => p.classList.remove('active'));

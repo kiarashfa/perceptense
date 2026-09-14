@@ -4,15 +4,7 @@
       --accent-bg: #e6f6fb;
       --accent-border: #9dd4e4;
     }
-
-    /* ── Explorer panel ── */
-    .explorer-btns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-    .explorer-btns button.active {
+    .button-row-compact button.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
       color: var(--accent);

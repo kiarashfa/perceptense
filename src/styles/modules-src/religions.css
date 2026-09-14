@@ -4,10 +4,8 @@
       --accent-bg: #F5EDE0;
       --accent-border: #C9A87A;
     }
-
-    .explorer-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-    .explorer-btns button { font-size: 11px; padding: 3px 11px; }
-    .explorer-btns button.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); }
+    .button-row-compact button { font-size: 11px; padding: 3px 11px; }
+    .button-row-compact button.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); }
 
     .explorer-panel {
       background: var(--color-background-primary);
