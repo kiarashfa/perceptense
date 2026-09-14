@@ -108,9 +108,9 @@ if (report.length) {
   console.log('divergent: ' + report.map((r) => r.slug).join(' '));
   console.log();
 }
-for (const r of report.slice(0, 12)) {
+for (const r of report.slice(0, 60)) {
   console.log(`  ${r.slug}${r.note ? '  [' + r.note + ']' : ''}`);
-  for (const x of (r.roots || []).slice(0, 4)) {
+  for (const x of (r.roots || []).slice(0, 200)) {
     console.log(`      y=${String(x.y).padStart(5)} ${x.tag}.${x.cls}  dw=${x.dw ?? '?'} dh=${x.dh ?? '?'}  ${x.why}`);
   }
 }
