@@ -791,8 +791,8 @@ const tlEvents = [
    BIAS CHART (Part F)
 ───────────────────────────────────────────────────────── */
 const biasData = [
-  { name: 'Confirmation bias', pct: 92, col: 'var(--accent)', textCol: '#ffffff' },
-  { name: 'Availability heuristic', pct: 85, col: '#7BB5BD', textCol: '#ffffff' },
+  { name: 'Confirmation bias', pct: 92, col: 'var(--accent)', textCol: '#1a1a18' },
+  { name: 'Availability heuristic', pct: 85, col: '#7BB5BD', textCol: '#1a1a18' },
   { name: 'Self-serving bias', pct: 80, col: '#0C447C', textCol: '#ffffff' },
   { name: 'Anchoring effect', pct: 76, col: '#2E6FA3', textCol: '#ffffff' },
   { name: 'In-group bias', pct: 72, col: '#633806', textCol: '#ffffff' },
@@ -983,7 +983,7 @@ const emotions = [
     const card = document.createElement('div');
     card.className = 'emotion-card';
     card.style.cssText = `background:${em.bg}; border-color:${em.col}30;`;
-    card.innerHTML = `<div class="emotion-name" style="color:${em.col};">${em.name}</div><div class="emotion-sub" style="color:${em.col}; opacity:0.75;">${em.sub}</div>`;
+    card.innerHTML = `<div class="emotion-name" style="color:${em.col};">${em.name}</div><div class="emotion-sub" style="color:${em.col}; opacity:0.8;">${em.sub}</div>`;
     card.addEventListener('click', () => {
       document.querySelectorAll('.emotion-card').forEach(c => c.classList.remove('active'));
       card.classList.add('active');
