@@ -92,8 +92,9 @@
       }
     ],
     "slug": "weight-and-mass",
-    "description": "How much things weigh — from paperclips to cars",
-    "accent": "#6F7D8C"
+    "description": "How much things weigh, from paperclips to cars: anchor numbers, a unit converter, your weight across the solar system and estimating weight from size.",
+    "accent": "#6F7D8C",
+    "summary": "How much things weigh, from paperclips to cars: anchor numbers, a unit converter, your weight across the solar system and estimating weight from size."
   },
   {
     "id": 2,
@@ -288,8 +289,9 @@
       }
     ],
     "slug": "geography-and-distance",
-    "description": "Countries, oceans, and how far things are",
-    "accent": "#1B99F2"
+    "description": "Country areas, continents, distances between cities, landmark heights, oceans, population density and what latitude tells you, with anchor numbers to memorize.",
+    "accent": "#1B99F2",
+    "summary": "Country areas, continents, distances between cities, landmark heights, oceans, population density and what latitude tells you, with anchor numbers to memorize."
   },
   {
     "id": 4,
@@ -413,8 +415,9 @@
       }
     ],
     "slug": "nutrition-and-food-labels",
-    "description": "Calories, macronutrients, and how to read what's in your food",
-    "accent": "#4FAE57"
+    "description": "Calories, macronutrients, fibre and the glycaemic index, reading food labels and comparing food energy, with an interactive calculator and label decoder.",
+    "accent": "#4FAE57",
+    "summary": "Calories, macronutrients, fibre and the glycaemic index, reading food labels and comparing food energy, with an interactive calculator and label decoder."
   },
   {
     "id": 5,
@@ -535,8 +538,9 @@
       }
     ],
     "slug": "money-and-economy",
-    "description": "Millions, billions, GDP, inflation, debt, and financial scale",
-    "accent": "#2F8F46"
+    "description": "Millions to trillions, company revenues, GDP, inflation, how money is created, national debt, compound interest and the personal finance numbers worth knowing.",
+    "accent": "#2F8F46",
+    "summary": "Millions to trillions, company revenues, GDP, inflation, how money is created, national debt, compound interest and the personal finance numbers worth knowing."
   },
   {
     "id": 6,
@@ -652,8 +656,9 @@
       }
     ],
     "slug": "big-infrastructure",
-    "description": "Bridges, dams, airports, and mega-projects",
-    "accent": "#D18B2C"
+    "description": "What bridges, dams, airports and mega-projects cost, how much vehicles carry, world records, why projects overrun, and architecture and urban planning.",
+    "accent": "#D18B2C",
+    "summary": "What bridges, dams, airports and mega-projects cost, how much vehicles carry, world records, why projects overrun, and architecture and urban planning."
   },
   {
     "id": 7,
@@ -757,8 +762,9 @@
       }
     ],
     "slug": "time-and-scale",
-    "description": "Seconds to centuries — building time intuition",
-    "accent": "#7A6CCF"
+    "description": "Seconds to centuries: orders of magnitude, the cosmic and historical time scales, time zones, calendars of the world, and why time doesn't feel equal.",
+    "accent": "#7A6CCF",
+    "summary": "Seconds to centuries: orders of magnitude, the cosmic and historical time scales, time zones, calendars of the world, and why time doesn't feel equal."
   },
   {
     "id": 8,
@@ -882,8 +888,9 @@
       }
     ],
     "slug": "speed-and-duration",
-    "description": "How fast things move and how long things take",
-    "accent": "#D94A3A"
+    "description": "How fast things move and how long things take, from snail to light: speed anchors, stopping distances, 0 to 100 km/h, body speeds and a speed calculator.",
+    "accent": "#D94A3A",
+    "summary": "How fast things move and how long things take, from snail to light: speed anchors, stopping distances, 0 to 100 km/h, body speeds and a speed calculator."
   },
   {
     "id": 9,
@@ -994,8 +1001,9 @@
       }
     ],
     "slug": "size-and-scale",
-    "description": "Atoms to galaxies — orders of magnitude",
-    "accent": "#3A96B0"
+    "description": "Atoms to galaxies across 42 orders of magnitude: metric prefixes, an interactive zoom, scale anchors, ratio shockers and the emptiness of matter.",
+    "accent": "#3A96B0",
+    "summary": "Atoms to galaxies across 42 orders of magnitude: metric prefixes, an interactive zoom, scale anchors, ratio shockers and the emptiness of matter."
   },
   {
     "id": 10,
@@ -1113,8 +1121,9 @@
       }
     ],
     "slug": "history-anchors",
-    "description": "A navigable map of the last 5,000 years",
-    "accent": "#B07A3A"
+    "description": "A navigable map of the last 5,000 years: seven eras, 60 anchor events, an interactive timeline, empire lifespans, concurrent worlds and a history quiz.",
+    "accent": "#B07A3A",
+    "summary": "A navigable map of the last 5,000 years: seven eras, 60 anchor events, an interactive timeline, empire lifespans, concurrent worlds and a history quiz."
   },
   {
     "id": 11,
@@ -1213,8 +1222,9 @@
       }
     ],
     "slug": "temperature",
-    "description": "From absolute zero to the surface of the Sun",
-    "accent": "#D45A45"
+    "description": "From absolute zero to the surface of the Sun: what temperatures feel like, Fahrenheit and Celsius tricks, how heat moves and the body as a thermal machine.",
+    "accent": "#D45A45",
+    "summary": "From absolute zero to the surface of the Sun: what temperatures feel like, Fahrenheit and Celsius tricks, how heat moves and the body as a thermal machine."
   },
   {
     "id": 12,
@@ -1326,8 +1336,9 @@
       }
     ],
     "slug": "probability-and-risk",
-    "description": "Odds, chance, and how to think about risk",
-    "accent": "#6B5CC8"
+    "description": "Odds, chance and risk: relative vs absolute risk, cognitive biases, false positives, the birthday paradox, expected value and the Monty Hall problem.",
+    "accent": "#6B5CC8",
+    "summary": "Odds, chance and risk: relative vs absolute risk, cognitive biases, false positives, the birthday paradox, expected value and the Monty Hall problem."
   },
   {
     "id": 13,
@@ -1428,8 +1439,9 @@
       }
     ],
     "slug": "percentages-and-ratios",
-    "description": "Mental math tricks for everyday numbers",
-    "accent": "#2F9E9E"
+    "description": "Mental math for everyday numbers: percent vs percentage points, how percentages mislead, ratios, compound growth and reading numbers in the news.",
+    "accent": "#2F9E9E",
+    "summary": "Mental math for everyday numbers: percent vs percentage points, how percentages mislead, ratios, compound growth and reading numbers in the news."
   },
   {
     "id": 14,
@@ -1533,8 +1545,9 @@
       }
     ],
     "slug": "materials",
-    "description": "Steel, concrete, wood — what things are made of and why",
-    "accent": "#7A8793"
+    "description": "Steel, concrete, wood and more: what defines a material, strength-to-weight, why things break or bend, thermal expansion, atomic bonds and environmental cost.",
+    "accent": "#7A8793",
+    "summary": "Steel, concrete, wood and more: what defines a material, strength-to-weight, why things break or bend, thermal expansion, atomic bonds and environmental cost."
   },
   {
     "id": 15,
@@ -1636,8 +1649,9 @@
       }
     ],
     "slug": "chemistry",
-    "description": "Functional groups, reactions, and molecular logic",
-    "accent": "#8A62B3"
+    "description": "Chemistry as molecular logic: polarity, the main functional groups, pH, key reactions, smell and taste, boiling points and chemistry in the kitchen.",
+    "accent": "#8A62B3",
+    "summary": "Chemistry as molecular logic: polarity, the main functional groups, pH, key reactions, smell and taste, boiling points and chemistry in the kitchen."
   },
   {
     "id": 16,
@@ -1739,8 +1753,9 @@
       }
     ],
     "slug": "engineering-rules-of-thumb",
-    "description": "Quick estimates for how things are built",
-    "accent": "#C47A2C"
+    "description": "Quick estimates for how things are built: engineers' rules of thumb, a back-of-envelope calculator, the main disciplines, famous failures and Fermi estimation.",
+    "accent": "#C47A2C",
+    "summary": "Quick estimates for how things are built: engineers' rules of thumb, a back-of-envelope calculator, the main disciplines, famous failures and Fermi estimation."
   },
   {
     "id": 17,
@@ -1969,8 +1984,9 @@
       }
     ],
     "slug": "diplomacy",
-    "description": "International organizations, treaties, and soft power",
-    "accent": "#2E8B7D"
+    "description": "International organizations, treaties and soft power: the UN system, the Security Council veto, major groupings, sanctions and reading diplomatic language.",
+    "accent": "#2E8B7D",
+    "summary": "International organizations, treaties and soft power: the UN system, the Security Council veto, major groupings, sanctions and reading diplomatic language."
   },
   {
     "id": 19,
@@ -2202,8 +2218,9 @@
       }
     ],
     "slug": "drinks",
-    "description": "Spirits, cocktails, wine, beer, and coffee",
-    "accent": "#E8CE3F"
+    "description": "Spirits, cocktails, wine, beer and coffee: bartender units, spirit families, how beer is made, ten classic cocktails, the coffee menu and serving temperatures.",
+    "accent": "#E8CE3F",
+    "summary": "Spirits, cocktails, wine, beer and coffee: bartender units, spirit families, how beer is made, ten classic cocktails, the coffee menu and serving temperatures."
   },
   {
     "id": 21,
@@ -2323,8 +2340,9 @@
       }
     ],
     "slug": "fashion",
-    "description": "Fabrics, brands, dress codes, and style",
-    "accent": "#5EBDBD"
+    "description": "Fabrics, brands, dress codes and style: the industry and its conglomerates, size conversion, fast fashion, fashion history, colour and the anatomy of a suit.",
+    "accent": "#5EBDBD",
+    "summary": "Fabrics, brands, dress codes and style: the industry and its conglomerates, size conversion, fast fashion, fashion history, colour and the anatomy of a suit."
   },
   {
     "id": 22,
@@ -2421,8 +2439,9 @@
       }
     ],
     "slug": "sleep",
-    "description": "Cycles, stages, hygiene, and circadian rhythms",
-    "accent": "#5967B2"
+    "description": "Sleep cycles and stages, dreams, sleep hormones, what deprivation breaks, chronotypes, the evidence behind sleep hygiene, napping, and sleep across a lifetime.",
+    "accent": "#5967B2",
+    "summary": "Sleep cycles and stages, dreams, sleep hormones, what deprivation breaks, chronotypes, the evidence behind sleep hygiene, napping, and sleep across a lifetime."
   },
   {
     "id": 23,
@@ -2552,8 +2571,9 @@
       }
     ],
     "slug": "sex-gender-and-orientation",
-    "description": "Biology, identity, and social constructs",
-    "accent": "#F5A9B8"
+    "description": "Biological sex, gender identity and sexual orientation as distinct concepts: the biology, the Kinsey scale and its limits, prevalence and what research shows.",
+    "accent": "#F5A9B8",
+    "summary": "Biological sex, gender identity and sexual orientation as distinct concepts: the biology, the Kinsey scale and its limits, prevalence and what research shows."
   },
   {
     "id": 24,
@@ -2660,8 +2680,9 @@
       }
     ],
     "slug": "fitness-and-exercise",
-    "description": "Lifts, cardio, programming, and body mechanics",
-    "accent": "#545244"
+    "description": "Aerobic vs anaerobic training, metabolism, the compound lifts, breathing, protein, recovery, rep ranges and programming, cardio and VO2 max, and common myths.",
+    "accent": "#545244",
+    "summary": "Aerobic vs anaerobic training, metabolism, the compound lifts, breathing, protein, recovery, rep ranges and programming, cardio and VO2 max, and common myths."
   },
   {
     "id": 25,
@@ -2777,8 +2798,9 @@
       }
     ],
     "slug": "weather",
-    "description": "Fronts, clouds, pressure, and forecasting",
-    "accent": "#54BADE"
+    "description": "Fronts, clouds, pressure and forecasting: pressure systems, reading the sky, wind and the Beaufort scale, what a 60% chance of rain means, and severe weather.",
+    "accent": "#54BADE",
+    "summary": "Fronts, clouds, pressure and forecasting: pressure systems, reading the sky, wind and the Beaufort scale, what a 60% chance of rain means, and severe weather."
   },
   {
     "id": 26,
@@ -2901,8 +2923,9 @@
       }
     ],
     "slug": "space-and-the-solar-system",
-    "description": "Planets, distances, and cosmic scale",
-    "accent": "#B34915"
+    "description": "The Sun, the planets and the outer solar system, the Moon, Earth's atmosphere, key space distances, what the universe is made of, and landmark space missions.",
+    "accent": "#B34915",
+    "summary": "The Sun, the planets and the outer solar system, the Moon, Earth's atmosphere, key space distances, what the universe is made of, and landmark space missions."
   },
   {
     "id": 27,
@@ -3013,8 +3036,9 @@
       }
     ],
     "slug": "psychology",
-    "description": "Biases, memory, motivation, and mental models",
-    "accent": "#8B6CC4"
+    "description": "Biases, memory, motivation and mental models: founding figures, therapy types, the Big Five personality model, stress and performance, and emotions.",
+    "accent": "#8B6CC4",
+    "summary": "Biases, memory, motivation and mental models: founding figures, therapy types, the Big Five personality model, stress and performance, and emotions."
   },
   {
     "id": 28,
@@ -3156,8 +3180,9 @@
       }
     ],
     "slug": "philosophy",
-    "description": "Ethics, logic, epistemology, and big questions",
-    "accent": "#6F5A8D"
+    "description": "Ethics, logic, epistemology and the big questions: the branches of philosophy, its history from the ancient Greeks to today, thought experiments and fallacies.",
+    "accent": "#6F5A8D",
+    "summary": "Ethics, logic, epistemology and the big questions: the branches of philosophy, its history from the ancient Greeks to today, thought experiments and fallacies."
   },
   {
     "id": 29,
@@ -3367,8 +3392,9 @@
       }
     ],
     "slug": "art",
-    "description": "Movements, techniques, and visual literacy",
-    "accent": "#D25B8F"
+    "description": "Movements, techniques and visual literacy: the seven arts, the major movements, how to read a painting, what gives a work value, and medium and scale.",
+    "accent": "#D25B8F",
+    "summary": "Movements, techniques and visual literacy: the seven arts, the major movements, how to read a painting, what gives a work value, and medium and scale."
   },
   {
     "id": 31,
@@ -3574,8 +3600,9 @@
       }
     ],
     "slug": "literature",
-    "description": "Language, narrative, and the written word as art form",
-    "accent": "#8A6DB5"
+    "description": "Language, narrative and the written word as art: poetic forms and devices, the novel and its traditions, drama and key playwrights, and literary movements.",
+    "accent": "#8A6DB5",
+    "summary": "Language, narrative and the written word as art: poetic forms and devices, the novel and its traditions, drama and key playwrights, and literary movements."
   },
   {
     "id": 32,
@@ -3745,8 +3772,9 @@
       }
     ],
     "slug": "painting",
-    "description": "From pigment to meaning — the oldest and deepest visual art",
-    "accent": "#4E99A3"
+    "description": "From pigment to meaning: what painting is, how the medium shapes what can be said, how to read a painting like an art historian, and movements in depth.",
+    "accent": "#4E99A3",
+    "summary": "From pigment to meaning: what painting is, how the medium shapes what can be said, how to read a painting like an art historian, and movements in depth."
   },
   {
     "id": 33,
@@ -3891,8 +3919,9 @@
       }
     ],
     "slug": "music",
-    "description": "Sound, time, and the art of organised listening",
-    "accent": "#E07B5A"
+    "description": "Sound, time and organised listening: the elements of music, Western classical, non-Western traditions, jazz, blues and popular music, and how to listen.",
+    "accent": "#E07B5A",
+    "summary": "Sound, time and organised listening: the elements of music, Western classical, non-Western traditions, jazz, blues and popular music, and how to listen."
   },
   {
     "id": 34,
@@ -4031,8 +4060,9 @@
       }
     ],
     "slug": "cinema",
-    "description": "The youngest art — moving images, time, and the grammar of film",
-    "accent": "#5DCAA5"
+    "description": "The youngest art: film language and mise-en-scène, how cinema evolved, genre, the auteurs, world cinema beyond Hollywood and thirty essential films.",
+    "accent": "#5DCAA5",
+    "summary": "The youngest art: film language and mise-en-scène, how cinema evolved, genre, the auteurs, world cinema beyond Hollywood and thirty essential films."
   },
   {
     "id": 35,
@@ -4319,8 +4349,9 @@
       }
     ],
     "slug": "technology",
-    "description": "How computers work, how the internet runs, and what AI actually is",
-    "accent": "#8A8A7F"
+    "description": "How computers work, how the internet runs and what AI actually is: hardware, software, networks, data and databases, and emerging technologies.",
+    "accent": "#8A8A7F",
+    "summary": "How computers work, how the internet runs and what AI actually is: hardware, software, networks, data and databases, and emerging technologies."
   },
   {
     "id": 38,
@@ -4742,8 +4773,9 @@
       }
     ],
     "slug": "language",
-    "description": "How language works, where it came from, and what it does to thought",
-    "accent": "#3A96B0"
+    "description": "How language works, where it came from and what it does to thought: language families, sounds, word structure, syntax, meaning and writing systems.",
+    "accent": "#3A96B0",
+    "summary": "How language works, where it came from and what it does to thought: language families, sounds, word structure, syntax, meaning and writing systems."
   },
   {
     "id": 41,

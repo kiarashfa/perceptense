@@ -94,8 +94,8 @@ def main() -> int:
                 qa.append({'q': q.get_text(' ', strip=True), 'a': a.get_text(' ', strip=True)})
         mod['qa'] = qa
 
-        # Search metadata is derived from text the site already carries, never invented.
-        mod['description'] = mod['subtitle'] or mod.get('blurb', '')
+        # A hand-written summary wins; otherwise the page's own subtitle stands in.
+        mod['description'] = mod.get('summary') or mod['subtitle'] or mod.get('blurb', '')
 
     (DATA / 'modules.json').write_text(
         json.dumps(modules, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
