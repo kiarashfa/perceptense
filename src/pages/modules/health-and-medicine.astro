@@ -769,7 +769,7 @@ function calcCalories() {
 }
 
 /* ===== CHARTS ===== */
-function buildBarChart(containerId, data, maxVal, colorFn) {
+function buildBarChart(containerId, data, maxVal, colorFn, fgFn) {
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
@@ -779,7 +779,7 @@ function buildBarChart(containerId, data, maxVal, colorFn) {
     row.className = 'bar-row';
     row.innerHTML = `<div class="bl">${item.label}</div>
       <div class="bb" style="width:${Math.max(pct * 0.65, 2)}%;background:${colorFn(item)};max-width:62%;">
-        <span class="bv" style="color:#fff;">${item.display}</span>
+        <span class="bv" style="color:${fgFn ? fgFn(item) : '#fff'};">${item.display}</span>
       </div>`;
     container.appendChild(row);
   });
@@ -797,14 +797,14 @@ buildBarChart('death-chart', [
   { label: 'Diarrhoeal diseases', val: 1.5, display: '1.5M' },
   { label: 'Diabetes', val: 1.5, display: '1.5M' },
   { label: 'Kidney disease', val: 1.3, display: '1.3M' }
-], 9, () => 'var(--accent)');
+], 9, () => 'var(--accent)', () => '#1a1a18');
 
 // Publication bias
 buildBarChart('pub-bias-chart', [
   { label: 'Positive trials published', val: 94, display: '94%' },
   { label: 'Negative trials published', val: 43, display: '43%' },
   { label: 'Ambiguous trials published', val: 57, display: '57%' }
-], 100, item => item.label.includes('Positive') ? 'var(--accent)' : item.label.includes('Ambiguous') ? '#ef9f27' : '#f09595');
+], 100, item => item.label.includes('Positive') ? 'var(--accent)' : item.label.includes('Ambiguous') ? '#ef9f27' : '#f09595', () => '#1a1a18');
 
 // Healthcare spending
 buildBarChart('spend-chart', [
@@ -817,7 +817,7 @@ buildBarChart('spend-chart', [
   { label: 'UK', val: 5493, display: '$5,493' },
   { label: 'Japan', val: 4666, display: '$4,666' },
   { label: 'OECD average', val: 4986, display: '$4,986' }
-], 12318, item => item.label === 'USA' ? '#f09595' : item.label === 'OECD average' ? '#ef9f27' : 'var(--accent)');
+], 12318, item => item.label === 'USA' ? '#f09595' : item.label === 'OECD average' ? '#ef9f27' : 'var(--accent)', () => '#1a1a18');
 
 // Mental health burden
 buildBarChart('mh-chart', [
@@ -828,7 +828,7 @@ buildBarChart('mh-chart', [
   { label: 'Bipolar disorder', val: 45, display: '45M' },
   { label: 'Eating disorders', val: 21, display: '21M' },
   { label: 'ADHD', val: 19, display: '19M' }
-], 215, () => '#8b6cc4');
+], 215, () => '#8565C1');
 
 // Diet chart
 buildBarChart('diet-chart', [
@@ -838,7 +838,7 @@ buildBarChart('diet-chart', [
   { label: 'Red/processed meat (CRC)', val: 18, display: '+18%' },
   { label: 'Sugar-sweetened drinks (T2D)', val: 26, display: '+26%' },
   { label: 'UPF diet (CVD mortality)', val: 32, display: '+32%' }
-], 36, item => item.display.startsWith('-') ? 'var(--accent)' : '#f09595');
+], 36, item => item.display.startsWith('-') ? 'var(--accent)' : '#f09595', () => '#1a1a18');
 
 // AMR chart
 buildBarChart('amr-chart', [
@@ -846,7 +846,7 @@ buildBarChart('amr-chart', [
   { label: '2030 (projected)', val: 2.4, display: '2.4M' },
   { label: '2040 (projected)', val: 5.8, display: '5.8M' },
   { label: '2050 (projected)', val: 10, display: '10M' }
-], 10, item => item.label.includes('current') ? 'var(--accent)' : item.label.includes('2030') ? '#ef9f27' : '#f09595');
+], 10, item => item.label.includes('current') ? 'var(--accent)' : item.label.includes('2030') ? '#ef9f27' : '#f09595', () => '#1a1a18');
 
 /* ===== EVIDENCE PYRAMID ===== */
 (function buildEvidencePyramid() {
@@ -867,7 +867,7 @@ buildBarChart('amr-chart', [
     row.innerHTML = `<div class="ev-bar-label text-secondary">${i === 0 ? 'Strongest' : i === levels.length-1 ? 'Weakest' : ''}</div>
       <div style="flex:1;">
         <div class="fill-bar" style="width:${lv.width}%;background:${i < 2 ? lv.bg : 'var(--color-background-secondary)'};border:0.5px solid var(--color-border-tertiary);">
-          <span style="font-size:11px;font-weight:500;color:${i < 2 ? '#fff' : 'var(--color-text-secondary)'};">${lv.label}</span>
+          <span style="font-size:11px;font-weight:500;color:${i < 2 ? '#1a1a18' : 'var(--color-text-secondary)'};">${lv.label}</span>
         </div>
         <div style="font-size:10px;color:var(--color-text-tertiary);margin-left:4px;">${lv.note}</div>
       </div>`;
@@ -880,12 +880,12 @@ buildBarChart('amr-chart', [
   const el = document.getElementById('drug-timeline');
   if (!el) return;
   const phases = [
-    { label: 'Discovery', start: 0, end: 3, bg: 'var(--accent)', col: '#fff' },
-    { label: 'Preclinical', start: 3, end: 6, bg: '#5aaca5', col: '#fff' },
-    { label: 'Phase I (safety, n~80)', start: 6, end: 8, bg: '#ef9f27', col: '#fff' },
-    { label: 'Phase II (efficacy, n~300)', start: 8, end: 10, bg: '#e08020', col: '#fff' },
-    { label: 'Phase III (large RCT, n~10k)', start: 10, end: 13, bg: '#c8601a', col: '#fff' },
-    { label: 'Regulatory review', start: 13, end: 14.5, bg: '#8b6cc4', col: '#fff' },
+    { label: 'Discovery', start: 0, end: 3, bg: 'var(--accent)', col: '#1a1a18' },
+    { label: 'Preclinical', start: 3, end: 6, bg: '#5aaca5', col: '#1a1a18' },
+    { label: 'Phase I (safety, n~80)', start: 6, end: 8, bg: '#ef9f27', col: '#1a1a18' },
+    { label: 'Phase II (efficacy, n~300)', start: 8, end: 10, bg: '#e08020', col: '#1a1a18' },
+    { label: 'Phase III (large RCT, n~10k)', start: 10, end: 13, bg: '#ba5918', col: '#fff' },
+    { label: 'Regulatory review', start: 13, end: 14.5, bg: '#8565C1', col: '#fff' },
     { label: 'Post-market (Phase IV)', start: 14.5, end: 17, bg: '#6c4faa', col: '#fff' }
   ];
   const min = 0, max = 17;
@@ -919,7 +919,7 @@ buildBarChart('amr-chart', [
     { label: 'Spanish Flu', start: 1918, end: 1920, bg: '#f09595', col: '#7a1f1f', dead: '50–100M' },
     { label: 'Asian Flu', start: 1957, end: 1958, bg: '#faeeda', col: '#633806', dead: '1–4M' },
     { label: 'HIV/AIDS (ongoing)', start: 1981, end: 2010, bg: '#EEEDFE', col: '#3C3489', dead: '36M+' },
-    { label: 'COVID-19', start: 2020, end: 2023, bg: 'var(--accent)', col: '#fff', dead: '7–20M' }
+    { label: 'COVID-19', start: 2020, end: 2023, bg: 'var(--accent)', col: '#1a1a18', dead: '7–20M' }
   ];
   const minY = 1300, maxY = 2025;
   const track = document.createElement('div');
@@ -948,9 +948,9 @@ buildBarChart('amr-chart', [
   const el = document.getElementById('determinants-dist');
   if (!el) return;
   const segs = [
-    { label: 'Socioeconomic factors', pct: 40, bg: 'var(--accent)', col: '#fff' },
-    { label: 'Health behaviours', pct: 30, bg: '#ef9f27', col: '#fff' },
-    { label: 'Clinical care', pct: 20, bg: '#8b6cc4', col: '#fff' },
+    { label: 'Socioeconomic factors', pct: 40, bg: 'var(--accent)', col: '#1a1a18' },
+    { label: 'Health behaviours', pct: 30, bg: '#ef9f27', col: '#1a1a18' },
+    { label: 'Clinical care', pct: 20, bg: '#8565C1', col: '#fff' },
     { label: 'Physical environment', pct: 10, bg: '#f09595', col: '#7a1f1f' }
   ];
   const bar = document.createElement('div');
@@ -976,13 +976,13 @@ buildBarChart('amr-chart', [
   const el = document.getElementById('treatment-scale');
   if (!el) return;
   const items = [
-    { label: 'Paracetamol', pos: 10, col: 'var(--accent)' },
-    { label: 'NSAIDs', pos: 22, col: 'var(--accent)' },
-    { label: 'Opioids', pos: 55, col: '#ef9f27' },
-    { label: 'Corticosteroids', pos: 45, col: '#8b6cc4' },
-    { label: 'Chemotherapy', pos: 80, col: '#f09595' },
-    { label: 'Immunotherapy', pos: 72, col: '#e08020' },
-    { label: 'CRISPR therapy', pos: 90, col: '#8b6cc4' }
+    { label: 'Paracetamol', pos: 10, col: 'var(--accent)', cls: 'hm-c-accent' },
+    { label: 'NSAIDs', pos: 22, col: 'var(--accent)', cls: 'hm-c-accent' },
+    { label: 'Opioids', pos: 55, col: '#ef9f27', cls: 'hm-c-amber' },
+    { label: 'Corticosteroids', pos: 45, col: '#8b6cc4', cls: 'hm-c-purple' },
+    { label: 'Chemotherapy', pos: 80, col: '#f09595', cls: 'hm-c-red' },
+    { label: 'Immunotherapy', pos: 72, col: '#e08020', cls: 'hm-c-orange' },
+    { label: 'CRISPR therapy', pos: 90, col: '#8b6cc4', cls: 'hm-c-purple' }
   ];
   const wrap = document.createElement('div');
   wrap.style.position = 'relative';
@@ -994,8 +994,8 @@ buildBarChart('amr-chart', [
     dot.style.cssText = `left:${item.pos}%;background:${item.col};`;
     dot.title = item.label;
     const lbl = document.createElement('div');
-    lbl.className = 'scale-dot-label';
-    lbl.style.cssText = `left:${item.pos}%;color:${item.col};font-size:10px;`;
+    lbl.className = 'scale-dot-label ' + item.cls;
+    lbl.style.cssText = `left:${item.pos}%;font-size:10px;`;
     lbl.textContent = item.label;
     track.appendChild(dot);
     track.appendChild(lbl);
@@ -1013,13 +1013,13 @@ buildBarChart('amr-chart', [
   const el = document.getElementById('cam-scale');
   if (!el) return;
   const items = [
-    { label: 'Acupuncture (pain)', pos: 62, col: 'var(--accent)' },
-    { label: 'CBT-based mindfulness', pos: 70, col: 'var(--accent)' },
-    { label: 'Chiropractic (MSK)', pos: 45, col: '#ef9f27' },
-    { label: 'Herbal medicine (varies)', pos: 35, col: '#ef9f27' },
-    { label: 'Reiki / energy healing', pos: 8, col: '#f09595' },
-    { label: 'Homeopathy', pos: 3, col: '#f09595' },
-    { label: 'Naturopathy (general)', pos: 18, col: '#e08020' }
+    { label: 'Acupuncture (pain)', pos: 62, col: 'var(--accent)', cls: 'hm-c-accent' },
+    { label: 'CBT-based mindfulness', pos: 70, col: 'var(--accent)', cls: 'hm-c-accent' },
+    { label: 'Chiropractic (MSK)', pos: 45, col: '#ef9f27', cls: 'hm-c-amber' },
+    { label: 'Herbal medicine (varies)', pos: 35, col: '#ef9f27', cls: 'hm-c-amber' },
+    { label: 'Reiki / energy healing', pos: 8, col: '#f09595', cls: 'hm-c-red' },
+    { label: 'Homeopathy', pos: 3, col: '#f09595', cls: 'hm-c-red' },
+    { label: 'Naturopathy (general)', pos: 18, col: '#e08020', cls: 'hm-c-orange' }
   ];
   const wrap = document.createElement('div');
   wrap.style.position = 'relative';
@@ -1030,8 +1030,8 @@ buildBarChart('amr-chart', [
     dot.className = 'scale-dot';
     dot.style.cssText = `left:${item.pos}%;background:${item.col};`;
     const lbl = document.createElement('div');
-    lbl.className = 'scale-dot-label';
-    lbl.style.cssText = `left:${item.pos}%;color:${item.col};font-size:10px;`;
+    lbl.className = 'scale-dot-label ' + item.cls;
+    lbl.style.cssText = `left:${item.pos}%;font-size:10px;`;
     lbl.textContent = item.label;
     track.appendChild(dot);
     track.appendChild(lbl);

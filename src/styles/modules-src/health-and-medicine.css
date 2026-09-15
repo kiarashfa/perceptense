@@ -19,6 +19,21 @@
 .scale-track { position:relative; height:6px; background:var(--color-background-secondary); border-radius:3px; margin:20px 0 30px; }
 .scale-dot { position:absolute; top:50%; transform:translate(-50%,-50%); width:13px; height:13px; border-radius:50%; border:2px solid var(--color-background-primary); cursor:default; }
 .scale-dot-label { position:absolute; top:12px; transform:translateX(-50%); font-size:10px; color:var(--color-text-secondary); white-space:nowrap; }
+.hm-c-accent { color: #3D7880; }
+html[data-theme="dark"] .hm-c-accent { color: var(--accent); }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .hm-c-accent { color: var(--accent); } }
+.hm-c-amber { color: #9D630C; }
+html[data-theme="dark"] .hm-c-amber { color: #ef9f27; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .hm-c-amber { color: #ef9f27; } }
+.hm-c-purple { color: #7F5DBE; }
+html[data-theme="dark"] .hm-c-purple { color: #997ECB; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .hm-c-purple { color: #997ECB; } }
+.hm-c-red { color: #DC1F1F; }
+html[data-theme="dark"] .hm-c-red { color: #f09595; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .hm-c-red { color: #f09595; } }
+.hm-c-orange { color: #A65F17; }
+html[data-theme="dark"] .hm-c-orange { color: #e08020; }
+@media (prefers-color-scheme: dark) { html[data-theme="auto"] .hm-c-orange { color: #e08020; } }
 .scale-pole { display:flex; justify-content:space-between; font-size:11px; color:var(--color-text-tertiary); margin-top:-18px; margin-bottom:12px; }
 
 /* === Pie / distribution bar === */
