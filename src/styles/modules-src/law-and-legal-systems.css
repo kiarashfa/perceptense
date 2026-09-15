@@ -43,12 +43,23 @@
       color: var(--accent);
       font-weight: 600;
     }
+    html[data-theme="dark"] .mini-buttons:not(.tax-mini-buttons) button.active { color: #9078B5; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .mini-buttons:not(.tax-mini-buttons) button.active { color: #9078B5; } }
     .tax-mini-buttons button.active {
       background: var(--tax-accent-bg);
       border-color: var(--tax-accent-border);
-      color: var(--tax-accent);
+      color: #2D7968;
       font-weight: 600;
     }
+    .law-accent-text { color: var(--accent); fill: var(--accent); }
+    html[data-theme="dark"] .law-accent-text { color: #9078B5; fill: #9078B5; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .law-accent-text { color: #9078B5; fill: #9078B5; } }
+    .pyr-tier-text { fill: #1a1a18; }
+    html[data-theme="dark"] .pyr-tier-text { fill: #fff; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .pyr-tier-text { fill: #fff; } }
+    .law-accent-bg { background: var(--accent); }
+    html[data-theme="dark"] .law-accent-bg { background: #9078B5; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .law-accent-bg { background: #9078B5; } }
     .explorer-panel,
     .detail-panel,
     .period-chart,
@@ -298,6 +309,8 @@
       font-size: 20px;
       font-weight: 600;
     }
+    html[data-theme="dark"] .bracket-val { color: #36937E; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .bracket-val { color: #36937E; } }
     .bracket-stack {
       display: flex;
       flex-direction: column;
@@ -352,6 +365,8 @@
       font-weight: 600;
       margin-bottom: 3px;
     }
+    html[data-theme="dark"] .tax-era-year { color: #36937E; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .tax-era-year { color: #36937E; } }
 
     /* --- Incidence and deadweight visualiser --- */
     .tax-compare-grid {
@@ -375,7 +390,7 @@
     .views-tabs button.active {
       background: var(--tax-accent-bg);
       border-color: var(--tax-accent-border);
-      color: var(--tax-accent);
+      color: #2D7968;
       font-weight: 600;
     }
 

@@ -51,10 +51,10 @@ const mod = modules.find((m) => m.id === 39)!;
           </defs>
           <!-- tiers -->
           <polygon points="350,14 420,60 280,60" fill="var(--accent)" opacity="0.9"/>
-          <text x="350" y="44" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-background-primary)">Constitution</text>
+          <text x="350" y="44" text-anchor="middle" font-size="10" font-weight="600" class="pyr-tier-text">Constitution</text>
 
           <polygon points="280,65 420,65 455,110 245,110" fill="var(--accent)" opacity="0.7"/>
-          <text x="350" y="93" text-anchor="middle" font-size="10" font-weight="600" fill="var(--color-background-primary)">Statutes &amp; Codes</text>
+          <text x="350" y="93" text-anchor="middle" font-size="10" font-weight="600" class="pyr-tier-text">Statutes &amp; Codes</text>
 
           <polygon points="245,115 455,115 498,165 202,165" fill="var(--accent)" opacity="0.5"/>
           <text x="350" y="145" text-anchor="middle" font-size="10" font-weight="500" fill="var(--color-text-primary)">Regulations &amp; Delegated Law</text>
@@ -120,7 +120,7 @@ const mod = modules.find((m) => m.id === 39)!;
           <text x="590" y="76" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">evidence standard</text>
           <line x1="590" y1="92" x2="590" y2="128" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></line>
           <rect x="530" y="128" width="120" height="58" rx="8" fill="var(--accent-bg)" stroke="var(--accent-border)"></rect>
-          <text x="590" y="152" text-anchor="middle" font-size="13" fill="var(--accent)">decision</text>
+          <text x="590" y="152" text-anchor="middle" font-size="13" class="law-accent-text">decision</text>
           <text x="590" y="170" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">judgment or order</text>
           <line x1="530" y1="157" x2="480" y2="157" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></line>
           <rect x="360" y="128" width="120" height="58" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)"></rect>
@@ -189,7 +189,7 @@ const mod = modules.find((m) => m.id === 39)!;
           <line x1="286" y1="40" x2="300" y2="40" stroke="var(--color-text-secondary)" stroke-width="1.5" marker-end="url(#arrow2)"/>
 
           <rect x="302" y="20" width="82" height="40" rx="6" fill="var(--accent-bg)" stroke="var(--accent-border)"/>
-          <text x="343" y="38" text-anchor="middle" font-size="10" font-weight="600" fill="var(--accent)">Trial</text>
+          <text x="343" y="38" text-anchor="middle" font-size="10" font-weight="600" class="law-accent-text">Trial</text>
           <text x="343" y="52" text-anchor="middle" font-size="9" fill="var(--color-text-secondary)">proof / acquit</text>
           <line x1="384" y1="40" x2="398" y2="40" stroke="var(--color-text-secondary)" stroke-width="1.5" marker-end="url(#arrow2)"/>
 
@@ -817,12 +817,12 @@ const mod = modules.find((m) => m.id === 39)!;
 
     window.addEventListener('DOMContentLoaded', function() {
       const timelineItems = [
-        { label: 'Magna Carta afterlife', start: 1215, end: 1700, col: 'var(--accent)', bg: 'var(--accent-bg)', text: '1215-1700' },
+        { label: 'Magna Carta afterlife', start: 1215, end: 1700, colClass: 'law-accent-text', bg: 'var(--accent-bg)', text: '1215-1700' },
         { label: 'Common law courts', start: 1250, end: 2026, col: 'var(--color-text-info)', bg: 'var(--color-background-info)', text: 'precedent tradition' },
         { label: 'Equity tradition', start: 1400, end: 1875, col: 'var(--color-text-success)', bg: 'var(--color-background-success)', text: 'Chancery' },
         { label: 'Modern constitutionalism', start: 1787, end: 2026, col: 'var(--color-text-warning)', bg: 'var(--color-background-warning)', text: '1787-present' },
         { label: 'Napoleonic Code influence', start: 1804, end: 2026, col: 'var(--color-text-danger)', bg: 'var(--color-background-danger)', text: 'civil code model' },
-        { label: 'International human rights', start: 1948, end: 2026, col: 'var(--accent)', bg: 'var(--accent-bg)', text: '1948-present' }
+        { label: 'International human rights', start: 1948, end: 2026, colClass: 'law-accent-text', bg: 'var(--accent-bg)', text: '1948-present' }
       ];
 
       function buildPeriodChart(items, axisId, rowsId, min, max, marks) {
@@ -850,9 +850,9 @@ const mod = modules.find((m) => m.id === 39)!;
           fill.style.left = ((item.start - min) / (max - min) * 100) + '%';
           fill.style.width = ((item.end - item.start) / (max - min) * 100) + '%';
           fill.style.background = item.bg;
-          fill.style.color = item.col;
+          if (item.col) fill.style.color = item.col;
           const fillLabel = document.createElement('span');
-          fillLabel.className = 'pc-fill-label';
+          fillLabel.className = 'pc-fill-label' + (item.colClass ? ' ' + item.colClass : '');
           fillLabel.textContent = item.text;
           fill.appendChild(fillLabel);
           track.appendChild(fill);
@@ -1013,7 +1013,7 @@ const mod = modules.find((m) => m.id === 39)!;
 
       function buildBars() {
         const bars = [
-          { label: 'Utility patent', value: 20, max: 120, note: '20 years', color: 'var(--accent)' },
+          { label: 'Utility patent', value: 20, max: 120, note: '20 years', bgClass: 'law-accent-bg' },
           { label: 'Design patent', value: 15, max: 120, note: '15 years', color: 'var(--color-text-info)' },
           { label: 'Copyright example', value: 115, max: 120, note: 'life + 70 example', color: 'var(--color-text-success)' },
           { label: 'Trademark term', value: 10, max: 120, note: '10, renewable', color: 'var(--color-text-warning)' },
@@ -1027,7 +1027,8 @@ const mod = modules.find((m) => m.id === 39)!;
           row.innerHTML = '<div class="bl">' + bar.label + '</div><div class="bb"><div class="bar-fill"></div></div><div class="bv">' + bar.note + '</div>';
           const fill = row.querySelector('.bar-fill');
           fill.style.width = (bar.value / bar.max * 100) + '%';
-          fill.style.background = bar.color;
+          if (bar.color) fill.style.background = bar.color;
+          if (bar.bgClass) fill.classList.add(bar.bgClass);
           container.appendChild(row);
         });
       }
