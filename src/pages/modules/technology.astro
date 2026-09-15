@@ -103,7 +103,7 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="muted-copy" style="margin-bottom:12px;">Computers manage a ruthless trade-off: fast memory is expensive and small; cheap memory is slow and large. The hierarchy solves this by keeping frequently used data in small, fast caches close to the CPU and archiving rarely used data on slow, dense drives. The latency gap between levels is staggering: L1 cache access takes ~1 nanosecond; a hard drive seek takes ~10 milliseconds — a 10-million-fold difference.</div>
       <div class="svg-wrap">
         <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:720px;">
-          <polygon points="360,18 460,52 260,52" fill="var(--accent)" opacity="0.85"/>
+          <polygon points="360,18 460,52 260,52" fill="var(--accent)"/>
           <rect x="220" y="58" width="280" height="34" rx="4" fill="var(--accent)" opacity="0.6"/>
           <rect x="170" y="98" width="380" height="34" rx="4" fill="var(--accent)" opacity="0.4"/>
           <rect x="110" y="138" width="500" height="34" rx="4" fill="var(--accent)" opacity="0.25"/>
@@ -118,7 +118,7 @@ const mod = modules.find((m) => m.id === 37)!;
           <text x="684" y="119" font-size="10" fill="var(--color-text-tertiary)" text-anchor="start">~100 ns</text>
           <text x="684" y="159" font-size="10" fill="var(--color-text-tertiary)" text-anchor="start">~100 µs</text>
           <text x="684" y="198" font-size="10" fill="var(--color-text-tertiary)" text-anchor="start">~10 ms</text>
-          <text x="360" y="38" font-size="10" fill="var(--color-background-primary)" font-weight="500" text-anchor="middle">32–64 KB per core</text>
+          <text x="360" y="38" font-size="10" fill="#000" font-weight="500" text-anchor="middle">32–64 KB per core</text>
           <text x="360" y="78" font-size="10" fill="var(--color-text-primary)" text-anchor="middle">256 KB – 32 MB</text>
           <text x="360" y="118" font-size="10" fill="var(--color-text-primary)" text-anchor="middle">8 – 128 GB</text>
           <text x="360" y="158" font-size="10" fill="var(--color-text-primary)" text-anchor="middle">500 GB – 4 TB</text>
@@ -163,11 +163,11 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="panel-title">Programming fundamentals — algorithms and complexity</div>
       <div class="muted-copy" style="margin-bottom:12px;">All programs combine four primitives: variables (named storage), conditionals (if/then branching), loops (repeating an action), and functions (reusable named blocks of code). Algorithms are recipes for solving problems. Complexity notation (Big-O) measures how an algorithm's time or memory use scales with input size. A linear-search algorithm on a list of a million items might require a million comparisons in the worst case (O(n)); a binary-search tree can find the same item in just 20 comparisons (O(log n)). That difference is what separates scalable software from software that grinds to a halt.</div>
       <div class="chart-title">Algorithm complexity — comparisons needed to search 1,000,000 items</div>
-      <div class="bar-row"><div class="bl">O(1) — hash lookup</div><div class="bb" style="width:0.5%; background:var(--accent); opacity:0.9;"><span class="bv" style="color:var(--color-background-primary); padding-left:4px;">1</span></div></div>
-      <div class="bar-row"><div class="bl">O(log n) — binary</div><div class="bb" style="width:1.5%; background:var(--accent); opacity:0.75;"><span class="bv" style="padding-left:6px;">20</span></div></div>
-      <div class="bar-row"><div class="bl">O(√n) — sqrt</div><div class="bb" style="width:3%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px;">1,000</span></div></div>
-      <div class="bar-row"><div class="bl">O(n) — linear</div><div class="bb" style="width:50%; background:var(--accent); opacity:0.45;"><span class="bv" style="padding-left:6px;">1,000,000</span></div></div>
-      <div class="bar-row"><div class="bl">O(n²) — quadratic</div><div class="bb" style="width:100%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:var(--color-text-danger);">10¹²</span></div></div>
+      <div class="bar-row"><div class="bl">O(1) — hash lookup</div><div class="bb" style="width:0.5%; background:var(--accent); opacity:0.9;"><span class="bv" style="color:#000; padding-left:4px;">1</span></div></div>
+      <div class="bar-row"><div class="bl">O(log n) — binary</div><div class="bb" style="width:1.5%; background:var(--accent); opacity:0.75;"><span class="bv" style="padding-left:6px; color:#000;">20</span></div></div>
+      <div class="bar-row"><div class="bl">O(√n) — sqrt</div><div class="bb" style="width:3%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px; color:#000;">1,000</span></div></div>
+      <div class="bar-row"><div class="bl">O(n) — linear</div><div class="bb" style="width:50%; background:var(--accent); opacity:0.45;"><span class="bv" style="padding-left:6px; color:#000;">1,000,000</span></div></div>
+      <div class="bar-row"><div class="bl">O(n²) — quadratic</div><div class="bb" style="width:100%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:#791f1f;">10¹²</span></div></div>
       <p class="chart-note">Bars are log-scaled for visibility. O(n²) would be 1,000,000x wider than O(n) on a true linear scale.</p>
     </div>
 
@@ -195,7 +195,7 @@ const mod = modules.find((m) => m.id === 37)!;
           <text x="155" y="50" font-size="9" fill="var(--color-text-tertiary)" text-anchor="middle">① DNS</text>
           <line x1="130" y1="80" x2="310" y2="80" stroke="var(--accent)" stroke-width="1.5"/>
           <polygon points="305,76 315,80 305,84" fill="var(--accent)"/>
-          <text x="220" y="73" font-size="9" fill="var(--accent)" text-anchor="middle">② HTTP GET</text>
+          <text x="220" y="73" font-size="9" class="tech-accent-text" fill="currentColor" text-anchor="middle">② HTTP GET</text>
           <line x1="410" y1="80" x2="570" y2="80" stroke="var(--accent)" stroke-width="1.5"/>
           <polygon points="565,76 575,80 565,84" fill="var(--accent)"/>
           <line x1="570" y1="90" x2="410" y2="98" stroke="var(--color-border-secondary)" stroke-width="1" stroke-dasharray="4 3"/>
@@ -204,7 +204,7 @@ const mod = modules.find((m) => m.id === 37)!;
           <line x1="630" y1="105" x2="630" y2="118" stroke="var(--color-border-tertiary)" stroke-width="1" stroke-dasharray="3 2"/>
           <text x="650" y="113" font-size="9" fill="var(--color-text-tertiary)">SQL</text>
           <rect x="185" y="128" width="130" height="22" rx="5" fill="var(--accent-bg)" stroke="var(--accent-border)" stroke-width="0.5"/>
-          <text x="250" y="142" font-size="10" fill="var(--accent)" text-anchor="middle">TLS encryption (HTTPS)</text>
+          <text x="250" y="142" font-size="10" class="tech-accent-text" fill="currentColor" text-anchor="middle">TLS encryption (HTTPS)</text>
         </svg>
       </div>
     </div>
@@ -214,11 +214,11 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="panel-title">Open source — the invisible infrastructure of the internet</div>
       <div class="muted-copy" style="margin-bottom:12px;">Open source software is code whose licence allows anyone to inspect, use, modify, and redistribute it. The economics seem paradoxical — why would companies give away valuable software? The answer is that shared infrastructure lowers everyone's costs: no single company wants to write their own TCP/IP stack or cryptography library. Linux runs 96% of the world's top 1 million web servers, all Android devices, and most cloud infrastructure. Git (created by Linus Torvalds in 2005 in two weeks) is the version-control system behind essentially all professional software development.</div>
       <div class="chart-title">Open source prevalence — selected categories (% of market using OSS)</div>
-      <div class="bar-row"><div class="bl">Web servers</div><div class="bb" style="width:96%; background:var(--accent); opacity:0.8;"><span class="bv" style="color:var(--color-background-primary);">96%</span></div></div>
-      <div class="bar-row"><div class="bl">Cloud infra (Linux)</div><div class="bb" style="width:90%; background:var(--accent); opacity:0.7;"><span class="bv" style="color:var(--color-background-primary);">90%</span></div></div>
-      <div class="bar-row"><div class="bl">Mobile OS (Android)</div><div class="bb" style="width:72%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px;">72%</span></div></div>
-      <div class="bar-row"><div class="bl">AI/ML frameworks</div><div class="bb" style="width:85%; background:var(--accent); opacity:0.55;"><span class="bv" style="padding-left:6px;">~85%</span></div></div>
-      <div class="bar-row"><div class="bl">Desktop OS</div><div class="bb" style="width:4%; background:var(--accent); opacity:0.45;"><span class="bv" style="padding-left:6px;">~4%</span></div></div>
+      <div class="bar-row"><div class="bl">Web servers</div><div class="bb" style="width:96%; background:var(--accent); opacity:0.8;"><span class="bv" style="color:#000;">96%</span></div></div>
+      <div class="bar-row"><div class="bl">Cloud infra (Linux)</div><div class="bb" style="width:90%; background:var(--accent); opacity:0.7;"><span class="bv" style="color:#000;">90%</span></div></div>
+      <div class="bar-row"><div class="bl">Mobile OS (Android)</div><div class="bb" style="width:72%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px; color:#000;">72%</span></div></div>
+      <div class="bar-row"><div class="bl">AI/ML frameworks</div><div class="bb" style="width:85%; background:var(--accent); opacity:0.55;"><span class="bv" style="padding-left:6px; color:#000;">~85%</span></div></div>
+      <div class="bar-row"><div class="bl">Desktop OS</div><div class="bb" style="width:4%; background:var(--accent); opacity:0.45;"><span class="bv" style="padding-left:6px; color:#000;">~4%</span></div></div>
       <p class="chart-note">Source: W3Techs (servers), Statcounter (mobile). Desktop Linux share remains low despite its dominance in servers and embedded systems.</p>
     </div>
 
@@ -250,11 +250,11 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="panel-title">Cloud computing and the platform economy</div>
       <div class="muted-copy" style="margin-bottom:12px;">Cloud computing means renting computation, storage, and networking from a provider rather than owning servers. AWS launched in 2006 and within a decade disrupted the entire enterprise IT industry. The three layers are IaaS (raw virtual machines), PaaS (you manage only your code), and SaaS (you manage nothing — think Gmail). Network effects made the winners dominant: AWS, Azure, and Google Cloud control roughly 65% of the market.</div>
       <div class="chart-title">Cloud provider market share — global infrastructure (2024)</div>
-      <div class="bar-row"><div class="bl">Amazon AWS</div><div class="bb" style="width:31%; background:#ef9f27; opacity:0.85;"><span class="bv" style="padding-left:6px; color:var(--color-text-warning);">31%</span></div></div>
-      <div class="bar-row"><div class="bl">Microsoft Azure</div><div class="bb" style="width:24%; background:var(--color-text-info); opacity:0.75;"><span class="bv" style="padding-left:6px; color:var(--color-text-info);">24%</span></div></div>
-      <div class="bar-row"><div class="bl">Google Cloud</div><div class="bb" style="width:11%; background:var(--accent); opacity:0.7;"><span class="bv" style="padding-left:6px;">11%</span></div></div>
-      <div class="bar-row"><div class="bl">Alibaba Cloud</div><div class="bb" style="width:4%; background:var(--color-text-secondary); opacity:0.5;"><span class="bv" style="padding-left:6px;">4%</span></div></div>
-      <div class="bar-row"><div class="bl">Others</div><div class="bb" style="width:30%; background:var(--color-border-tertiary); opacity:0.8;"><span class="bv" style="padding-left:6px;">30%</span></div></div>
+      <div class="bar-row"><div class="bl">Amazon AWS</div><div class="bb" style="width:31%; background:#ef9f27; opacity:0.85;"><span class="bv" style="padding-left:6px; color:#633806;">31%</span></div></div>
+      <div class="bar-row"><div class="bl">Microsoft Azure</div><div class="bb" style="width:24%; background:var(--color-text-info); opacity:0.75;"><span class="bv tech-bv-invert-token" style="padding-left:6px;">24%</span></div></div>
+      <div class="bar-row"><div class="bl">Google Cloud</div><div class="bb" style="width:11%; background:var(--accent); opacity:0.7;"><span class="bv" style="padding-left:6px; color:#000;">11%</span></div></div>
+      <div class="bar-row"><div class="bl">Alibaba Cloud</div><div class="bb" style="width:4%; background:var(--color-text-secondary); opacity:0.5;"><span class="bv tech-bv-invert-token" style="padding-left:6px;">4%</span></div></div>
+      <div class="bar-row"><div class="bl">Others</div><div class="bb" style="width:30%; background:var(--color-border-tertiary); opacity:0.8;"><span class="bv tech-bv-invert-track" style="padding-left:6px;">30%</span></div></div>
       <p class="chart-note">Source: Synergy Research Group, Q4 2024 estimates.</p>
     </div>
 
@@ -302,7 +302,7 @@ const mod = modules.find((m) => m.id === 37)!;
             <input type="number" id="daysInput" value="365" min="1">
           </div>
         </div>
-        <button onclick="calcMetadata()" style="background:var(--accent-bg); border-color:var(--accent-border); color:var(--accent);">Calculate metadata records</button>
+        <button onclick="calcMetadata()" class="tech-accent-text" style="background:var(--accent-bg); border-color:var(--accent-border);">Calculate metadata records</button>
         <div class="calc-output" id="metadataOutput">Enter your usage above and calculate.</div>
       </div>
       <div class="warning-block" style="margin-bottom:0;">The phrase "data is the new oil" is catchy and wrong in one important way. Oil is used up when burned; data can be copied, combined, and reused indefinitely. That makes data less like fuel and more like memory with economic power attached.</div>
@@ -399,8 +399,8 @@ const mod = modules.find((m) => m.id === 37)!;
           <circle cx="480" cy="140" r="12" fill="var(--accent-bg)" stroke="var(--accent-border)" stroke-width="1.5"/>
           <circle cx="620" cy="80" r="14" fill="var(--accent)" stroke="none"/>
           <circle cx="620" cy="120" r="14" fill="var(--accent)" stroke="none"/>
-          <text x="620" y="84" font-size="9" fill="var(--color-background-primary)" text-anchor="middle" font-weight="500">cat</text>
-          <text x="620" y="124" font-size="9" fill="var(--color-background-primary)" text-anchor="middle" font-weight="500">dog</text>
+          <text x="620" y="84" font-size="9" fill="#000" text-anchor="middle" font-weight="500">cat</text>
+          <text x="620" y="124" font-size="9" fill="#000" text-anchor="middle" font-weight="500">dog</text>
           <path d="M 606 155 Q 340 195 74 155" stroke="var(--color-text-danger)" stroke-width="1.2" stroke-dasharray="5 3" fill="none"/>
           <polygon points="78,149 68,157 80,163" fill="var(--color-text-danger)"/>
           <text x="340" y="194" font-size="9" fill="var(--color-text-danger)" text-anchor="middle">backpropagation — error signal adjusts all weights</text>
@@ -441,12 +441,12 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="panel-title">AI and the economy — tasks, jobs, and what changes</div>
       <div class="muted-copy" style="margin-bottom:12px;">The automation question is not "will AI take jobs?" but "which tasks will be automated, how fast, and what will workers do instead?" A 2023 Goldman Sachs analysis estimated that 300 million jobs globally could be affected, with knowledge workers — lawyers, financial analysts, programmers — more exposed than expected. History is reassuring in aggregate: the Industrial Revolution created far more jobs than it destroyed. But the workers who lost handloom jobs in 1820 didn't smoothly transition to factory work. Jobs are bundles of tasks, relationships, accountability, and physical context. Automating 40 percent of a job rarely means deleting 40 percent of workers on schedule.</div>
       <div class="chart-title">Task exposure to AI automation by sector (Goldman Sachs / McKinsey, 2023)</div>
-      <div class="bar-row"><div class="bl">Legal / admin</div><div class="bb" style="width:44%; background:#f09595; opacity:0.75;"><span class="bv" style="padding-left:6px; color:var(--color-text-danger);">44%</span></div></div>
-      <div class="bar-row"><div class="bl">Office / admin</div><div class="bb" style="width:46%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:var(--color-text-danger);">46%</span></div></div>
-      <div class="bar-row"><div class="bl">Software / IT</div><div class="bb" style="width:37%; background:#ef9f27; opacity:0.7;"><span class="bv" style="padding-left:6px; color:var(--color-text-warning);">37%</span></div></div>
-      <div class="bar-row"><div class="bl">Education</div><div class="bb" style="width:27%; background:#ef9f27; opacity:0.6;"><span class="bv" style="padding-left:6px; color:var(--color-text-warning);">27%</span></div></div>
-      <div class="bar-row"><div class="bl">Construction</div><div class="bb" style="width:6%; background:var(--accent); opacity:0.65;"><span class="bv" style="padding-left:6px; color:var(--accent);">6%</span></div></div>
-      <div class="bar-row"><div class="bl">Maintenance</div><div class="bb" style="width:4%; background:var(--accent); opacity:0.5;"><span class="bv" style="padding-left:6px;">4%</span></div></div>
+      <div class="bar-row"><div class="bl">Legal / admin</div><div class="bb" style="width:44%; background:#f09595; opacity:0.75;"><span class="bv" style="padding-left:6px; color:#791f1f;">44%</span></div></div>
+      <div class="bar-row"><div class="bl">Office / admin</div><div class="bb" style="width:46%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:#791f1f;">46%</span></div></div>
+      <div class="bar-row"><div class="bl">Software / IT</div><div class="bb" style="width:37%; background:#ef9f27; opacity:0.7;"><span class="bv" style="padding-left:6px; color:#633806;">37%</span></div></div>
+      <div class="bar-row"><div class="bl">Education</div><div class="bb" style="width:27%; background:#ef9f27; opacity:0.6;"><span class="bv" style="padding-left:6px; color:#633806;">27%</span></div></div>
+      <div class="bar-row"><div class="bl">Construction</div><div class="bb" style="width:6%; background:var(--accent); opacity:0.65;"><span class="bv" style="padding-left:6px; color:#000;">6%</span></div></div>
+      <div class="bar-row"><div class="bl">Maintenance</div><div class="bb" style="width:4%; background:var(--accent); opacity:0.5;"><span class="bv" style="padding-left:6px; color:#000;">4%</span></div></div>
       <p class="chart-note">"Exposed" means tasks that could be automated; it does not mean those jobs will disappear.</p>
     </div>
 
@@ -642,7 +642,7 @@ const mod = modules.find((m) => m.id === 37)!;
       var width = ((d.end - d.start) / tSpan * 100).toFixed(1);
       return '<div class="period-row"><div class="pc-label">' + d.label + '</div>'
         + '<div class="pc-track"><div class="pc-fill" style="left:' + left + '%; width:' + width + '%; background:' + d.col + '; opacity:0.75;">'
-        + '<span class="pc-fill-label" style="color:#fff;">' + d.start + '–' + d.end + '</span>'
+        + '<span class="pc-fill-label" style="color:#000;">' + d.start + '–' + d.end + '</span>'
         + '</div></div></div>';
     }).join('');
 
@@ -762,12 +762,12 @@ const mod = modules.find((m) => m.id === 37)!;
        PART D · INTERNET + NETWORKS
     ══════════════════════════════════════════════ */
     var distSegs = [
-      { label: 'Video streaming', pct: 55, bg: '#2E9E6B', text: '#fff' },
-      { label: 'Social / UGC video', pct: 15, bg: 'var(--accent)', text: '#fff' },
-      { label: 'Gaming', pct: 9, bg: '#D4A843', text: '#fff' },
-      { label: 'File sharing', pct: 8, bg: '#7F77DD', text: '#fff' },
-      { label: 'Web browsing', pct: 6, bg: '#C88B3A', text: '#fff' },
-      { label: 'Other', pct: 7, bg: '#9E9E9E', text: '#fff' }
+      { label: 'Video streaming', pct: 55, bg: '#2E9E6B', text: '#000' },
+      { label: 'Social / UGC video', pct: 15, bg: 'var(--accent)', text: '#000' },
+      { label: 'Gaming', pct: 9, bg: '#D4A843', text: '#000' },
+      { label: 'File sharing', pct: 8, bg: '#7F77DD', text: '#000' },
+      { label: 'Web browsing', pct: 6, bg: '#C88B3A', text: '#000' },
+      { label: 'Other', pct: 7, bg: '#9E9E9E', text: '#000' }
     ];
     var distBarEl = document.getElementById('internet-dist');
     var distLegEl = document.getElementById('internet-legend');
@@ -915,12 +915,12 @@ const mod = modules.find((m) => m.id === 37)!;
 
     /* AI MODALITY DIST BAR */
     var aiMod = [
-      { label: 'Natural language (text)', pct: 40, bg: '#2E9E6B', text: '#fff' },
-      { label: 'Image generation', pct: 20, bg: 'var(--accent)', text: '#fff' },
-      { label: 'Computer vision', pct: 15, bg: '#3C8FD4', text: '#fff' },
-      { label: 'Speech / audio', pct: 12, bg: '#7F77DD', text: '#fff' },
-      { label: 'Code generation', pct: 8, bg: '#D4A843', text: '#fff' },
-      { label: 'Video generation', pct: 5, bg: '#C88B3A', text: '#fff' }
+      { label: 'Natural language (text)', pct: 40, bg: '#2E9E6B', text: '#000' },
+      { label: 'Image generation', pct: 20, bg: 'var(--accent)', text: '#000' },
+      { label: 'Computer vision', pct: 15, bg: '#3C8FD4', text: '#000' },
+      { label: 'Speech / audio', pct: 12, bg: '#7F77DD', text: '#000' },
+      { label: 'Code generation', pct: 8, bg: '#D4A843', text: '#000' },
+      { label: 'Video generation', pct: 5, bg: '#C88B3A', text: '#000' }
     ];
     document.getElementById('ai-modality-dist').innerHTML = aiMod.map(function(s) {
       return '<div class="dist-seg" style="width:' + s.pct + '%; background:' + s.bg + '; color:' + s.text + ';">' + (s.pct >= 10 ? s.pct + '%' : '') + '</div>';

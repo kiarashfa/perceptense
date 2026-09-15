@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #2E9E6B;
-      --accent-bg: #e1f5ee;
-      --accent-border: #7ecfab;
-    }
     .pc-axis {
       display: flex;
       position: relative;
@@ -57,7 +52,7 @@
     .explorer-btn.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
-      color: var(--accent);
+      color: #5A5950;
     }
     .explorer-panel {
       background: var(--color-background-secondary);
@@ -70,7 +65,7 @@
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--accent);
+      color: #5A5950;
       margin-bottom: 4px;
     }
     .ep-meta {
@@ -94,7 +89,7 @@
       background: var(--accent-bg);
     }
     .elem-card-icon { font-size: 20px; margin-bottom: 4px; color: var(--color-text-secondary); }
-    .elem-card.active .elem-card-icon { color: var(--accent); }
+    .elem-card.active .elem-card-icon { color: #5A5950; }
     .elem-detail-box {
       display: none;
       background: var(--color-background-primary);
@@ -157,7 +152,7 @@
       text-align: center;
       font-size: 22px;
       font-weight: 500;
-      color: var(--accent);
+      color: #5A5950;
       margin: 8px 0 4px;
       font-variant-numeric: tabular-nums;
     }
@@ -176,7 +171,7 @@
       margin-bottom: 8px;
     }
     .slider-output {
-      color: var(--accent);
+      color: #5A5950;
       font-weight: 500;
       font-size: 15px;
       white-space: nowrap;
@@ -221,7 +216,7 @@
     .success-block {
       background: var(--accent-bg);
       border: 0.5px solid var(--accent-border);
-      color: var(--accent);
+      color: #5A5950;
       border-radius: var(--border-radius-lg);
       padding: 11px 14px;
       font-size: 13px;
@@ -271,4 +266,37 @@
       .cscale-name { width: 90px; font-size: 11px; }
       .cscale-poles-left { margin-left: 94px; }
     }
+
+html[data-theme="dark"] .explorer-btn.active,
+html[data-theme="dark"] .ep-kicker,
+html[data-theme="dark"] .elem-card.active .elem-card-icon,
+html[data-theme="dark"] .slider-live,
+html[data-theme="dark"] .slider-output,
+html[data-theme="dark"] .success-block { color: #A0A093; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .explorer-btn.active,
+  html[data-theme="auto"] .ep-kicker,
+  html[data-theme="auto"] .elem-card.active .elem-card-icon,
+  html[data-theme="auto"] .slider-live,
+  html[data-theme="auto"] .slider-output,
+  html[data-theme="auto"] .success-block { color: #A0A093; }
+}
+
+.tech-accent-text { color: #5A5950; }
+html[data-theme="dark"] .tech-accent-text { color: #A0A093; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .tech-accent-text { color: #A0A093; }
+}
+
+.tech-bv-invert-token { color: #fff; }
+html[data-theme="dark"] .tech-bv-invert-token { color: #000; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .tech-bv-invert-token { color: #000; }
+}
+
+.tech-bv-invert-track { color: #000; }
+html[data-theme="dark"] .tech-bv-invert-track { color: #fff; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .tech-bv-invert-track { color: #fff; }
+}
   
