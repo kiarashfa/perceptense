@@ -303,4 +303,11 @@
   left: var(--data-left);
 }
 
+html[data-theme="dark"] .deep-dive-kicker { color: #A88CDA; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .deep-dive-kicker { color: #A88CDA; }
+}
+
+.game-bar-dark-text { color: #000; }
+
   
