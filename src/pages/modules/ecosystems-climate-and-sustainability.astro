@@ -61,11 +61,11 @@ const mod = modules.find((m) => m.id === 50)!;
     <!-- Species interactions multi-card explorer -->
     <div class="panel-title">Community interactions — click a type to explore</div>
     <div class="interact-grid">
-      <div class="interact-card active" onclick="showInteract('mutualism',this)"><div class="interact-sign" style="color:#1D9E75">+/+</div><div class="small-title">Mutualism</div></div>
-      <div class="interact-card" onclick="showInteract('commensalism',this)"><div class="interact-sign" style="color:#185FA5">+/0</div><div class="small-title">Commensalism</div></div>
-      <div class="interact-card" onclick="showInteract('parasitism',this)"><div class="interact-sign" style="color:#993C1D">+/−</div><div class="small-title">Parasitism</div></div>
-      <div class="interact-card" onclick="showInteract('predation',this)"><div class="interact-sign" style="color:#791F1F">+/−</div><div class="small-title">Predation</div></div>
-      <div class="interact-card" onclick="showInteract('competition',this)"><div class="interact-sign" style="color:#633806">−/−</div><div class="small-title">Competition</div></div>
+      <div class="interact-card active" onclick="showInteract('mutualism',this)"><div class="interact-sign eco-text-green">+/+</div><div class="small-title">Mutualism</div></div>
+      <div class="interact-card" onclick="showInteract('commensalism',this)"><div class="interact-sign eco-text-blue">+/0</div><div class="small-title">Commensalism</div></div>
+      <div class="interact-card" onclick="showInteract('parasitism',this)"><div class="interact-sign eco-text-red">+/−</div><div class="small-title">Parasitism</div></div>
+      <div class="interact-card" onclick="showInteract('predation',this)"><div class="interact-sign eco-text-darkred">+/−</div><div class="small-title">Predation</div></div>
+      <div class="interact-card" onclick="showInteract('competition',this)"><div class="interact-sign eco-text-brown">−/−</div><div class="small-title">Competition</div></div>
       <div class="interact-card" onclick="showInteract('amensalism',this)"><div class="interact-sign" style="color:var(--color-text-tertiary)">−/0</div><div class="small-title">Amensalism</div></div>
     </div>
     <div id="interact-display" class="sub-card muted-copy-large"></div>
@@ -85,7 +85,7 @@ const mod = modules.find((m) => m.id === 50)!;
       <div class="trophic-tier" style="width:80px; height:34px; background:#791F1F; font-size:10px;">Apex predators<br><span style="font-size:9px; opacity:0.8">~0.1% energy</span></div>
       <div class="trophic-tier" style="width:160px; height:34px; background:#993C1D;">Carnivores — ~1%</div>
       <div class="trophic-tier" style="width:260px; height:34px; background:#633806;">Herbivores — ~10%</div>
-      <div class="trophic-tier" style="width:380px; height:38px; background:#1D9E75; font-size:12px;">Producers — 100% NPP captured</div>
+      <div class="trophic-tier" style="width:380px; height:38px; background:#1D9E75; font-size:12px; color:#1a1a18;">Producers — 100% NPP captured</div>
     </div>
     <div class="muted-text-small u-mb-md">Net Primary Production of Earth's biosphere: ~120 billion tonnes of carbon per year. Humans appropriate roughly 25–40% of terrestrial NPP through agriculture, grazing, and land clearing.</div>
 
@@ -110,8 +110,8 @@ const mod = modules.find((m) => m.id === 50)!;
       <defs>
         <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="var(--color-text-secondary)"/></marker>
         <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#1D9E75"/></marker>
-        <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#185FA5"/></marker>
-        <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#993C1D"/></marker>
+        <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" class="eco-marker-blue"/></marker>
+        <marker id="arr-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" class="eco-marker-red"/></marker>
       </defs>
       <!-- Atmosphere box -->
       <rect x="230" y="10" width="240" height="50" rx="6" class="svg-node"/>
@@ -131,19 +131,19 @@ const mod = modules.find((m) => m.id === 50)!;
       <text x="350" y="260" text-anchor="middle" font-size="10" fill="#ef9f27">10,000+ GtC</text>
       <!-- Arrows: photosynthesis -->
       <path d="M210,155 L230,55" class="cycle-path-green"/>
-      <text x="200" y="115" font-size="9" fill="#1D9E75" text-anchor="end">photosynthesis</text>
+      <text x="200" y="115" font-size="9" class="eco-text-green" text-anchor="end">photosynthesis</text>
       <!-- Arrows: respiration -->
       <path d="M240,60 L210,145" class="cycle-path"/>
       <text x="245" y="90" font-size="9" fill="var(--color-text-secondary)">respiration</text>
       <!-- Arrows: ocean exchange -->
       <path d="M470,60 L490,140" class="cycle-path-blue"/>
-      <text x="496" y="95" font-size="9" fill="#185FA5">ocean uptake</text>
+      <text x="496" y="95" font-size="9" class="eco-text-blue">ocean uptake</text>
       <!-- Arrows: outgassing -->
       <path d="M500,135 L460,65" class="cycle-path"/>
       <text x="526" y="100" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">outgassing</text>
       <!-- Arrows: fossil fuel burning (red) -->
       <path d="M350,220 L350,68" class="cycle-path-red"/>
-      <text x="360" y="170" font-size="9" fill="#993C1D">burning (+10 GtC/yr)</text>
+      <text x="360" y="170" font-size="9" class="eco-text-red">burning (+10 GtC/yr)</text>
     </svg>
 
     <!-- Cycles explorer panel -->
@@ -223,8 +223,8 @@ const mod = modules.find((m) => m.id === 50)!;
     <!-- Planetary boundary distribution bar -->
     <div class="panel-title">Status of nine planetary boundaries (2023)</div>
     <div class="dist-bar">
-      <div class="dist-seg" style="width:22.2%; background:#1D9E75; color:#fff;">Safe</div>
-      <div class="dist-seg" style="width:33.3%; background:#ef9f27; color:#fff;">Zone of uncertainty</div>
+      <div class="dist-seg" style="width:22.2%; background:#1D9E75; color:#1a1a18;">Safe</div>
+      <div class="dist-seg" style="width:33.3%; background:#ef9f27; color:#1a1a18;">Zone of uncertainty</div>
       <div class="dist-seg" style="width:44.5%; background:#791F1F; color:#fff;">Transgressed</div>
     </div>
     <div class="dist-legend">
@@ -263,11 +263,11 @@ const mod = modules.find((m) => m.id === 50)!;
     <!-- Climate feedbacks -->
     <div class="panel-title">Feedbacks — amplifiers and dampeners of warming</div>
     <div class="two-col-grid">
-      <div class="sub-card" style="border-left:3px solid #791F1F;">
+      <div class="sub-card eco-border-darkred" style="border-left-width:3px; border-left-style:solid;">
         <div class="inline-card-title">Positive feedbacks (amplify)</div>
         <div class="muted-copy">Ice-albedo: melting white ice exposes dark ocean/land, absorbing more heat. Water vapour: warmer air holds more water vapour, the most potent greenhouse gas. Permafrost: thawing permafrost releases stored methane and CO2. Amazon dieback: drought-stressed forest releases rather than absorbs carbon.</div>
       </div>
-      <div class="sub-card" style="border-left:3px solid #1D9E75;">
+      <div class="sub-card eco-border-green" style="border-left-width:3px; border-left-style:solid;">
         <div class="inline-card-title">Negative feedbacks (dampen)</div>
         <div class="muted-copy">Planck response: warmer objects radiate more energy, eventually restoring balance. Cloud feedbacks (partially): some cloud types reflect incoming solar radiation. Weathering: higher CO2 accelerates silicate weathering, drawing down atmospheric CO2 over geological time. The Planck response is the reason Earth doesn't experience runaway warming on human timescales.</div>
       </div>
@@ -277,7 +277,7 @@ const mod = modules.find((m) => m.id === 50)!;
     <div class="panel-title">Thermohaline circulation — the global ocean conveyor</div>
     <svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin-bottom:10px;">
       <!-- ocean background -->
-      <rect x="0" y="0" width="700" height="220" rx="8" fill="#0c2540" opacity="0.7"/>
+      <rect x="0" y="0" width="700" height="220" rx="8" fill="#0c2540"/>
       <!-- surface warm current -->
       <path d="M30,80 Q150,30 350,60 Q500,85 660,70" stroke="#ef9f27" stroke-width="3" fill="none" stroke-dasharray="0" marker-end="url(#arr-red)"/>
       <text x="350" y="50" text-anchor="middle" font-size="10" fill="#ef9f27" font-weight="600">Warm surface current (poleward)</text>
@@ -379,7 +379,7 @@ const mod = modules.find((m) => m.id === 50)!;
       <div class="dist-seg" style="width:23%; background:#252523; color:#a8a69e; font-size:9px;">Coal 23%</div>
       <div class="dist-seg" style="width:23%; background:#0c2540; color:#85b7eb; font-size:9px;">Gas 23%</div>
       <div class="dist-seg" style="width:10%; background:#142808; color:#97c459; font-size:9px;">Hydro 10%</div>
-      <div class="dist-seg" style="width:8%; background:#1D9E75; color:#fff; font-size:9px;">Wind+Solar 8%</div>
+      <div class="dist-seg" style="width:8%; background:#1D9E75; color:#1a1a18; font-size:9px;">Wind+Solar 8%</div>
       <div class="dist-seg" style="width:5%; background:#534AB7; color:#fff; font-size:9px;">Nuclear 5%</div>
       <div class="dist-seg" style="width:4%; background:#633806; color:#FAEEDA; font-size:9px;">Other 4%</div>
     </div>
@@ -516,17 +516,17 @@ const mod = modules.find((m) => m.id === 50)!;
       <!-- mesopelagic -->
       <line x1="100" y1="103" x2="600" y2="103" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
       <text x="95" y="107" text-anchor="end" font-size="10" fill="var(--color-text-secondary)">1,000m</text>
-      <text x="350" y="83" text-anchor="middle" font-size="10" fill="#85b7eb">MESOPELAGIC — twilight zone · daily vertical migrators</text>
+      <text x="350" y="83" text-anchor="middle" font-size="10" fill="#e8e6df">MESOPELAGIC — twilight zone · daily vertical migrators</text>
       <!-- bathypelagic -->
       <line x1="100" y1="154" x2="600" y2="154" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
       <text x="95" y="158" text-anchor="end" font-size="10" fill="var(--color-text-secondary)">4,000m</text>
-      <text x="350" y="134" text-anchor="middle" font-size="10" fill="#6e9ec4">BATHYPELAGIC — midnight zone · no light · giant squid</text>
+      <text x="350" y="134" text-anchor="middle" font-size="10" fill="#e8e6df">BATHYPELAGIC — midnight zone · no light · giant squid</text>
       <!-- abyssal -->
       <line x1="100" y1="230" x2="600" y2="230" stroke="rgba(255,255,255,0.07)" stroke-width="0.5"/>
       <text x="95" y="234" text-anchor="end" font-size="10" fill="var(--color-text-secondary)">6,000m</text>
-      <text x="350" y="198" text-anchor="middle" font-size="10" fill="#4a7aaa">ABYSSAL — sediment plains · 60% of Earth's surface</text>
+      <text x="350" y="198" text-anchor="middle" font-size="10" fill="#e8e6df">ABYSSAL — sediment plains · 60% of Earth's surface</text>
       <!-- hadal -->
-      <text x="350" y="255" text-anchor="middle" font-size="10" fill="#2a5980">HADAL — trenches to 11,034m (Mariana) · amphipods, snailfish</text>
+      <text x="350" y="255" text-anchor="middle" font-size="10" fill="#e8e6df">HADAL — trenches to 11,034m (Mariana) · amphipods, snailfish</text>
     </svg>
 
     <!-- Ocean acidification + plastic explorer -->
@@ -578,11 +578,11 @@ const mod = modules.find((m) => m.id === 50)!;
     <!-- Individual vs systemic action -->
     <div class="panel-title">Individual action vs systemic change — the genuine debate</div>
     <div class="two-col-grid">
-      <div class="sub-card" style="border-left:3px solid #185FA5;">
+      <div class="sub-card eco-border-blue" style="border-left-width:3px; border-left-style:solid;">
         <div class="inline-card-title">The case for individual action</div>
         <div class="muted-copy">Demand signals markets. Consumer choices have driven plant-based food from niche to mainstream in a decade. Individual action normalises behaviours and creates political permission for policy. Personal choices have direct emissions impact: a vegan diet saves ~1.5 tCO2e/year in wealthy nations. Moral consistency matters: it's hard to advocate for climate policy while flying constantly.</div>
       </div>
-      <div class="sub-card" style="border-left:3px solid #1D9E75;">
+      <div class="sub-card eco-border-green" style="border-left-width:3px; border-left-style:solid;">
         <div class="inline-card-title">The case for systemic focus</div>
         <div class="muted-copy">The "personal carbon footprint" concept was popularised by BP in a 2004 advertising campaign to shift responsibility from corporations to individuals. Top 100 companies are responsible for 71% of global emissions. The poor have tiny footprints and bear the greatest harm. Political action — voting, advocacy, strikes — can achieve emissions reductions that dwarf any individual consumption change.</div>
       </div>
@@ -734,12 +734,12 @@ showInteract('mutualism', document.querySelector('[onclick="showInteract(\'mutua
 // ── CARRYING CAPACITY SLIDER ───────────────────────────────────────────────────
 function updateKSlider(v) {
   v = parseInt(v);
-  let status, color, growth, detail;
-  if (v < 25) { status='Far below K'; color='#1D9E75'; growth='Rapid exponential growth. Resources abundant. Birth rate >> death rate. Population doubling time: weeks to months for fast-reproducing species.'; detail='This is the "J-curve" phase of logistic growth. In nature: colonisation of a new habitat, population recovery after disturbance, plague species at the start of an outbreak.'; }
-  else if (v < 75) { status='Approaching K — healthy zone'; color='#185FA5'; growth='Growth rate is positive but decelerating. Resources becoming limiting. Competition intensifying. Most wild populations spend most of their time in this zone.'; detail='The inflection point of the logistic curve is at K/2 — maximum growth rate per unit time occurs at half the carrying capacity. This is why fisheries management aims to maintain fish stocks at ~K/2 (Maximum Sustainable Yield).'; }
-  else if (v < 100) { status='Near K — resource-limited'; color='#ef9f27'; growth='Growth nearly zero. High density stress: disease spreads more easily, food per individual drops, territorial conflict increases. Birth rate ≈ death rate.'; detail='Many regulated populations oscillate around K with cycles of overshoot and decline. Predator-prey cycles (Lotka-Volterra model) emerge from this dynamic. Human populations in pre-industrial Europe were largely K-limited by food, disease, and land.'; }
-  else { status='Overshoot — above K'; color='#791F1F'; growth='Population exceeds carrying capacity. Resources being depleted faster than they regenerate. Death rate rising. Crash incoming unless carrying capacity increases or population declines rapidly.'; detail='Classic example: St Matthew Island reindeer (Alaska). 29 reindeer introduced in 1944. By 1963: 6,000. By 1966: 42 survivors after population crash, with lichen pastures permanently degraded. Relevance to human systems: aquifer depletion, soil exhaustion, and fisheries collapse all represent carrying capacity overshoot.'; }
-  document.getElementById('k-output').innerHTML = '<div class="figure-xl" style="color:'+color+'">'+v+'% of K</div><div class="muted-small" style="margin-bottom:6px;">Status: '+status+'</div><div class="muted-copy">'+growth+'</div><div class="muted-copy u-mt-sm">'+detail+'</div>';
+  let status, colorClass, growth, detail;
+  if (v < 25) { status='Far below K'; colorClass='eco-text-green'; growth='Rapid exponential growth. Resources abundant. Birth rate >> death rate. Population doubling time: weeks to months for fast-reproducing species.'; detail='This is the "J-curve" phase of logistic growth. In nature: colonisation of a new habitat, population recovery after disturbance, plague species at the start of an outbreak.'; }
+  else if (v < 75) { status='Approaching K — healthy zone'; colorClass='eco-text-blue'; growth='Growth rate is positive but decelerating. Resources becoming limiting. Competition intensifying. Most wild populations spend most of their time in this zone.'; detail='The inflection point of the logistic curve is at K/2 — maximum growth rate per unit time occurs at half the carrying capacity. This is why fisheries management aims to maintain fish stocks at ~K/2 (Maximum Sustainable Yield).'; }
+  else if (v < 100) { status='Near K — resource-limited'; colorClass='eco-risk-moderate'; growth='Growth nearly zero. High density stress: disease spreads more easily, food per individual drops, territorial conflict increases. Birth rate ≈ death rate.'; detail='Many regulated populations oscillate around K with cycles of overshoot and decline. Predator-prey cycles (Lotka-Volterra model) emerge from this dynamic. Human populations in pre-industrial Europe were largely K-limited by food, disease, and land.'; }
+  else { status='Overshoot — above K'; colorClass='eco-text-darkred'; growth='Population exceeds carrying capacity. Resources being depleted faster than they regenerate. Death rate rising. Crash incoming unless carrying capacity increases or population declines rapidly.'; detail='Classic example: St Matthew Island reindeer (Alaska). 29 reindeer introduced in 1944. By 1963: 6,000. By 1966: 42 survivors after population crash, with lichen pastures permanently degraded. Relevance to human systems: aquifer depletion, soil exhaustion, and fisheries collapse all represent carrying capacity overshoot.'; }
+  document.getElementById('k-output').innerHTML = '<div class="figure-xl '+colorClass+'">'+v+'% of K</div><div class="muted-small" style="margin-bottom:6px;">Status: '+status+'</div><div class="muted-copy">'+growth+'</div><div class="muted-copy u-mt-sm">'+detail+'</div>';
 }
 updateKSlider(50);
 
@@ -788,16 +788,16 @@ showBiome('rainforest', document.querySelector('[onclick="showBiome(\'rainforest
 (function buildExtinction() {
   const el = document.getElementById('extinction-chart');
   const data = [
-    { label:'Background (fossil record)', val:1, color:'#1D9E75', note:'~1 per million species-years' },
-    { label:'1900–1950 estimate', val:14, color:'#ef9f27', note:'~14x background' },
-    { label:'1970–2000 estimate', val:100, color:'#993C1D', note:'~100x background' },
-    { label:'Current central estimate', val:500, color:'#791F1F', note:'~500x background (range: 100–1000x)' }
+    { label:'Background (fossil record)', val:1, color:'#1D9E75', fg:'#1a1a18', note:'~1 per million species-years' },
+    { label:'1900–1950 estimate', val:14, color:'#ef9f27', fg:'#1a1a18', note:'~14x background' },
+    { label:'1970–2000 estimate', val:100, color:'#993C1D', fg:'#fff', note:'~100x background' },
+    { label:'Current central estimate', val:500, color:'#791F1F', fg:'#fff', note:'~500x background (range: 100–1000x)' }
   ];
   const maxVal = 500;
   let html = '';
   data.forEach(d => {
     const w = Math.round(d.val / maxVal * 100);
-    html += '<div class="bar-row u-mb-sm"><div class="bl" style="font-size:11px;width:160px;">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,2)+'%; opacity:0.9;"><span class="bv" style="color:#fff;">'+d.note+'</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl" style="font-size:11px;width:160px;">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,2)+'%; opacity:0.9;"><span class="bv" style="color:'+d.fg+';">'+d.note+'</span></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -852,15 +852,15 @@ showTipping('amaz', document.querySelector('[onclick="showTipping(\'amaz\',this)
 (function buildGHG() {
   const el = document.getElementById('ghg-chart');
   const data = [
-    { label:'CO₂', val:66, color:'#993C1D', note:'66% of enhanced forcing' },
-    { label:'Methane', val:17, color:'#ef9f27', note:'17% · 80x CO₂ over 20yr' },
-    { label:'Nitrous oxide', val:6, color:'#534AB7', note:'6% · 298x CO₂ over 100yr' },
-    { label:'F-gases', val:2, color:'#185FA5', note:'2% · up to 23,000x CO₂' },
-    { label:'Water vapour (feedback)', val:9, color:'#1D9E75', note:'9% · amplification feedback only' }
+    { label:'CO₂', val:66, color:'#993C1D', fg:'#fff', note:'66% of enhanced forcing' },
+    { label:'Methane', val:17, color:'#ef9f27', fg:'#1a1a18', note:'17% · 80x CO₂ over 20yr' },
+    { label:'Nitrous oxide', val:6, color:'#534AB7', fg:'#fff', note:'6% · 298x CO₂ over 100yr' },
+    { label:'F-gases', val:2, color:'#185FA5', fg:'#fff', note:'2% · up to 23,000x CO₂' },
+    { label:'Water vapour (feedback)', val:9, color:'#1D9E75', fg:'#1a1a18', note:'9% · amplification feedback only' }
   ];
   let html = '';
   data.forEach(d => {
-    html += '<div class="data-row"><div class="ghg-label">'+d.label+'</div><div class="track-plain"><div class="ghg-fill" style="width:'+d.val+'%;background:'+d.color+'">'+d.val+'% — '+d.note+'</div></div></div>';
+    html += '<div class="data-row"><div class="ghg-label">'+d.label+'</div><div class="track-plain"><div class="ghg-fill" style="width:'+d.val+'%;background:'+d.color+';color:'+d.fg+'">'+d.val+'% — '+d.note+'</div></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -899,7 +899,7 @@ function calcSLR() {
     'At <strong>'+temp+'°C warming</strong> by year <strong>'+year+'</strong>:<br>' +
     'Projected sea level rise: <strong>'+projTotal+' cm ('+Math.round(projTotal/100 * 10)/10+' m)</strong><br>' +
     'Approximate additional people exposed to annual flooding: <strong>~'+threatPeople.toLocaleString()+'</strong><br>' +
-    'Risk level: <strong style="color:'+(risk==='very high'?'#791F1F':risk==='high'?'#993C1D':'#ef9f27')+'">'+risk.charAt(0).toUpperCase()+risk.slice(1)+'</strong><br>' +
+    'Risk level: <strong class="'+(risk==='very high'?'eco-risk-veryhigh':risk==='high'?'eco-risk-high':'eco-risk-moderate')+'">'+risk.charAt(0).toUpperCase()+risk.slice(1)+'</strong><br>' +
     '<span class="muted-text-small">Model: simplified from IPCC AR6 likely range. Does not account for potential ice sheet instability above 2°C which could add 0.5–1.5m additional rise.</span>';
 }
 calcSLR();
@@ -996,10 +996,10 @@ showEnergy('solar', document.querySelector('[onclick="showEnergy(\'solar\',this)
   track.className = 'tl-track';
   const min = 1977, max = 2023, range = max - min;
   const bars = [
-    { label:'$76/W', start:1977, end:1985, color:'#791F1F' },
-    { label:'$10/W', start:1985, end:2000, color:'#993C1D' },
-    { label:'$1/W', start:2000, end:2012, color:'#ef9f27' },
-    { label:'$0.20/W', start:2012, end:2023, color:'#1D9E75' }
+    { label:'$76/W', start:1977, end:1985, color:'#791F1F', fg:'#fff' },
+    { label:'$10/W', start:1985, end:2000, color:'#993C1D', fg:'#fff' },
+    { label:'$1/W', start:2000, end:2012, color:'#ef9f27', fg:'#1a1a18' },
+    { label:'$0.20/W', start:2012, end:2023, color:'#1D9E75', fg:'#1a1a18' }
   ];
   bars.forEach(b => {
     const bar = document.createElement('div');
@@ -1007,7 +1007,7 @@ showEnergy('solar', document.querySelector('[onclick="showEnergy(\'solar\',this)
     bar.style.left = ((b.start-min)/range*100)+'%';
     bar.style.width = ((b.end-b.start)/range*100)+'%';
     bar.style.background = b.color;
-    bar.style.color = '#fff';
+    bar.style.color = b.fg;
     bar.textContent = b.label;
     track.appendChild(bar);
   });
@@ -1069,15 +1069,15 @@ showNetzero('credible', document.querySelector('[onclick="showNetzero(\'credible
 (function buildHIPPO() {
   const el = document.getElementById('hippo-chart');
   const data = [
-    { label:'H — Habitat loss', val:80, color:'#791F1F' },
-    { label:'I — Invasive species', val:55, color:'#993C1D' },
-    { label:'P — Pollution', val:40, color:'#ef9f27' },
-    { label:'P — Population (human, incl. overexploitation)', val:35, color:'#633806' },
-    { label:'O — Overexploitation (direct)', val:38, color:'#185FA5' }
+    { label:'H — Habitat loss', val:80, color:'#791F1F', fg:'#fff' },
+    { label:'I — Invasive species', val:55, color:'#993C1D', fg:'#fff' },
+    { label:'P — Pollution', val:40, color:'#ef9f27', fg:'#1a1a18' },
+    { label:'P — Population (human, incl. overexploitation)', val:35, color:'#633806', fg:'#fff' },
+    { label:'O — Overexploitation (direct)', val:38, color:'#185FA5', fg:'#fff' }
   ];
   let html = '';
   data.forEach(d => {
-    html += '<div class="bar-row u-mb-sm"><div class="bl" style="width:200px;font-size:11px;">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+d.val+'%; opacity:0.9; min-width:60px;"><span class="bv" style="color:#fff;">'+d.val+'% of species at risk</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl" style="width:200px;font-size:11px;">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+d.val+'%; opacity:0.9; min-width:60px;"><span class="bv" style="color:'+d.fg+';">'+d.val+'% of species at risk</span></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -1102,16 +1102,16 @@ showRewild('yellowstone', document.querySelector('[onclick="showRewild(\'yellows
 (function buildKeystone() {
   const el = document.getElementById('keystone-chart');
   const data = [
-    { label:'Sea otter (kelp coast)', val:95, color:'#185FA5' },
-    { label:'Gray wolf (boreal/tundra)', val:90, color:'#534AB7' },
-    { label:'African elephant', val:85, color:'#633806' },
-    { label:'Fig trees (tropical)', val:78, color:'#1D9E75' },
-    { label:'Beavers', val:75, color:'#ef9f27' },
-    { label:'Prairie dogs', val:65, color:'#993C1D' }
+    { label:'Sea otter (kelp coast)', val:95, color:'#185FA5', fg:'#fff' },
+    { label:'Gray wolf (boreal/tundra)', val:90, color:'#534AB7', fg:'#fff' },
+    { label:'African elephant', val:85, color:'#633806', fg:'#fff' },
+    { label:'Fig trees (tropical)', val:78, color:'#1D9E75', fg:'#1a1a18' },
+    { label:'Beavers', val:75, color:'#ef9f27', fg:'#1a1a18' },
+    { label:'Prairie dogs', val:65, color:'#993C1D', fg:'#fff' }
   ];
   let html = '';
   data.forEach(d => {
-    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+d.val+'%; opacity:0.9;"><span class="bv" style="color:#fff;">'+d.val+'/100</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+d.val+'%; opacity:0.9;"><span class="bv" style="color:'+d.fg+';">'+d.val+'/100</span></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -1168,21 +1168,21 @@ showOcean('acid', document.querySelector('[onclick="showOcean(\'acid\',this)"]')
 (function buildPersonal() {
   const el = document.getElementById('personal-chart');
   const data = [
-    { label:'One fewer child (annual)', val:58.6, color:'#791F1F' },
-    { label:'Car-free (vs avg car)', val:2.4, color:'#993C1D' },
-    { label:'Avoid transatlantic flight', val:1.6, color:'#ef9f27' },
-    { label:'Vegan diet', val:1.5, color:'#1D9E75' },
-    { label:'Electric vehicle', val:1.0, color:'#185FA5' },
-    { label:'Heat pump (vs gas boiler)', val:0.9, color:'#534AB7' },
-    { label:'Recycling (all household)', val:0.21, color:'#633806' },
-    { label:'LED lights', val:0.10, color:'#a8a69e' }
+    { label:'One fewer child (annual)', val:58.6, color:'#791F1F', fg:'#fff' },
+    { label:'Car-free (vs avg car)', val:2.4, color:'#993C1D', fg:'#fff' },
+    { label:'Avoid transatlantic flight', val:1.6, color:'#ef9f27', fg:'#1a1a18' },
+    { label:'Vegan diet', val:1.5, color:'#1D9E75', fg:'#1a1a18' },
+    { label:'Electric vehicle', val:1.0, color:'#185FA5', fg:'#fff' },
+    { label:'Heat pump (vs gas boiler)', val:0.9, color:'#534AB7', fg:'#fff' },
+    { label:'Recycling (all household)', val:0.21, color:'#633806', fg:'#fff' },
+    { label:'LED lights', val:0.10, color:'#a8a69e', fg:'#1a1a18' }
   ];
   const maxVal = 5; // cap for visual (the child figure is outlier-scale)
   let html = '';
   data.forEach(d => {
     const w = Math.min(d.val / maxVal * 100, 100);
     const note = d.val > maxVal ? ' (chart capped — actual: '+d.val+' tCO₂e)' : '';
-    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,3)+'%; opacity:0.9;"><span class="bv" style="color:#fff;">'+d.val+' tCO₂e/yr'+note+'</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,3)+'%; opacity:0.9;"><span class="bv" style="color:'+d.fg+';">'+d.val+' tCO₂e/yr'+note+'</span></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -1191,16 +1191,16 @@ showOcean('acid', document.querySelector('[onclick="showOcean(\'acid\',this)"]')
 (function buildRecycling() {
   const el = document.getElementById('recycling-chart');
   const data = [
-    { label:'Aluminium cans', val:67, color:'#1D9E75' },
-    { label:'Paper/cardboard', val:58, color:'#185FA5' },
-    { label:'Glass', val:35, color:'#534AB7' },
-    { label:'Steel', val:33, color:'#633806' },
-    { label:'Plastic (all types)', val:9, color:'#791F1F' },
-    { label:'Electronic waste', val:17, color:'#993C1D' }
+    { label:'Aluminium cans', val:67, color:'#1D9E75', fg:'#1a1a18' },
+    { label:'Paper/cardboard', val:58, color:'#185FA5', fg:'#fff' },
+    { label:'Glass', val:35, color:'#534AB7', fg:'#fff' },
+    { label:'Steel', val:33, color:'#633806', fg:'#fff' },
+    { label:'Plastic (all types)', val:9, color:'#791F1F', fg:'#fff' },
+    { label:'Electronic waste', val:17, color:'#993C1D', fg:'#fff' }
   ];
   let html = '';
   data.forEach(d => {
-    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+d.val+'%; opacity:0.9;"><span class="bv" style="color:#fff;">'+d.val+'% recycled globally</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+d.val+'%; opacity:0.9;"><span class="bv" style="color:'+d.fg+';">'+d.val+'% recycled globally</span></div></div>';
   });
   el.innerHTML = html;
 })();
