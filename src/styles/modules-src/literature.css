@@ -1,10 +1,4 @@
 
-    :root {
-      --accent: #8A6DB5;
-      --accent-bg: #EEEDFE;
-      --accent-border: #AFA9EC;
-    }
-
     .part-section { margin-bottom:2rem; }
 
     /* ── Genre explorer ── */
@@ -113,7 +107,7 @@
       border-radius:4px; font-size:11px; font-family:var(--font-mono);
       padding:3px 5px; min-width:24px;
     }
-    .syl-s { background:var(--accent-bg); color:var(--accent); border:0.5px solid var(--accent-border); font-weight:700; }
+    .syl-s { background:var(--accent-bg); color:#6B5399; border:0.5px solid var(--accent-border); font-weight:700; }
     .syl-u { background:var(--color-background-secondary); color:var(--color-text-secondary); border:0.5px solid var(--color-border-tertiary); }
     .metre-label { font-size:10px; color:var(--color-text-tertiary); margin-left:6px; font-style:italic; }
 
@@ -257,14 +251,18 @@
 
 .seg-label {
   font-size:10px;
-  color:white;
+  color:#000;
   font-weight:600;
 }
 
 .seg-label-small {
   font-size:9px;
-  color:white;
+  color:#000;
   font-weight:600;
+}
+
+.seg-label-light {
+  color:#fff;
 }
 
 .dist-leg-dot {
@@ -300,5 +298,16 @@
 
 .dist-leg-dot-indigo {
   --tint-background: #534AB7;
+}
+
+html[data-theme="dark"] .syl-s { color: #A88CDA; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .syl-s { color: #A88CDA; }
+}
+
+.lit-accent-text { color: #534AB7; }
+html[data-theme="dark"] .lit-accent-text { color: #A090D8; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .lit-accent-text { color: #A090D8; }
 }
   
