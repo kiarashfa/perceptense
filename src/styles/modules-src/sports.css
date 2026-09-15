@@ -1,10 +1,83 @@
 
     :root {
-      --accent-dark: #1A7A35;
       --football-bg: #EAF3DE;
       --football-border: #97C459;
       --football-text: #27500A;
     }
+    .sports-accent-text { color: #5E728C; fill: #5E728C; }
+    html[data-theme="dark"] .sports-accent-text { color: var(--accent); fill: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sports-accent-text { color: var(--accent); fill: var(--accent); } }
+    .sports-accent-bg { background: #5E728C; }
+    html[data-theme="dark"] .sports-accent-bg { background: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sports-accent-bg { background: var(--accent); } }
+
+    /* ── Chart palette: theme-safe fill + text pairs ── */
+    .sp-blue { background: #2563EB; color: #fff; }
+    .sp-blue .pc-fill-label { color: #fff; }
+    html[data-theme="dark"] .sp-blue { background: #3870ED; color: #000; }
+    html[data-theme="dark"] .sp-blue .pc-fill-label { color: #000; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-blue { background: #3870ED; color: #000; } html[data-theme="auto"] .sp-blue .pc-fill-label { color: #000; } }
+
+    .sp-red { background: #DC2626; color: #fff; }
+    .sp-red .pc-fill-label { color: #fff; }
+    html[data-theme="dark"] .sp-red { background: #DE3535; color: #000; }
+    html[data-theme="dark"] .sp-red .pc-fill-label { color: #000; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-red { background: #DE3535; color: #000; } html[data-theme="auto"] .sp-red .pc-fill-label { color: #000; } }
+
+    .sp-green { background: #269C48; color: #000; }
+    .sp-green .pc-fill-label { color: #000; }
+    html[data-theme="dark"] .sp-green { background: #27A04A; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-green { background: #27A04A; } }
+
+    .sp-amber { background: #CC7006; color: #000; }
+    .sp-amber .pc-fill-label { color: #000; }
+    html[data-theme="dark"] .sp-amber { background: #D97706; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-amber { background: #D97706; } }
+
+    .sp-purple { background: #7C3AED; color: #fff; }
+    .sp-purple .pc-fill-label { color: #fff; }
+    html[data-theme="dark"] .sp-purple { background: #8D54EF; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-purple { background: #8D54EF; } }
+
+    .sp-cyan { background: #0891B2; color: #000; }
+    .sp-cyan .pc-fill-label { color: #000; }
+
+    .sp-teal { background: #059669; color: #000; }
+    .sp-teal .pc-fill-label { color: #000; }
+
+    .sp-lightblue { background: #2C87F8; color: #000; }
+    .sp-lightblue .pc-fill-label { color: #000; }
+    html[data-theme="dark"] .sp-lightblue { background: #60A5FA; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-lightblue { background: #60A5FA; } }
+
+    .sp-darkblue { background: #1D4ED8; color: #fff; }
+    .sp-darkblue .pc-fill-label { color: #fff; }
+    html[data-theme="dark"] .sp-darkblue { background: #446FE6; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-darkblue { background: #446FE6; } }
+
+    .sp-gold { background: #BD7A08; color: #000; }
+    .sp-gold .pc-fill-label { color: #000; }
+    html[data-theme="dark"] .sp-gold { background: #F59E0B; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-gold { background: #F59E0B; } }
+
+    .sp-grey { background: #6B7280; color: #fff; }
+    .sp-grey .pc-fill-label { color: #fff; }
+    html[data-theme="dark"] .sp-grey { background: #6F7785; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-grey { background: #6F7785; } }
+
+    .sp-orange { background: #EA580C; color: #000; }
+    .sp-orange .pc-fill-label { color: #000; }
+
+    .sp-lightgrey { background: #808998; color: #000; }
+    .sp-lightgrey .pc-fill-label { color: #000; }
+    html[data-theme="dark"] .sp-lightgrey { background: #9CA3AF; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .sp-lightgrey { background: #9CA3AF; } }
+
+    /* ── Formation diagram: player labels on the translucent pitch ── */
+    .pos-label-accent { fill: #1a1a18; }
+    .pos-label-team { fill: #1a1a18; }
+    html[data-theme="dark"] .pos-label-team { fill: #fff; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .pos-label-team { fill: #fff; } }
 
     /* ── Football section headers ── */
     .sec-football {
@@ -31,7 +104,7 @@
     .explorer-btns button.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #fff;
+      color: #1a1a18;
     }
     .explorer-panel {
       background: var(--color-background-secondary);
@@ -68,9 +141,15 @@
       padding: 12px 10px; text-align: center;
       cursor: pointer; transition: all 0.15s;
     }
-    .elem-card:hover { border-color: var(--accent); }
-    .elem-card.active { background: var(--accent-bg); border-color: var(--accent); }
-    .elem-card .ec-icon { font-size: 22px; margin-bottom: 5px; color: var(--accent); }
+    .elem-card:hover { border-color: #5E728C; }
+    html[data-theme="dark"] .elem-card:hover { border-color: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .elem-card:hover { border-color: var(--accent); } }
+    .elem-card.active { background: var(--accent-bg); border-color: #5E728C; }
+    html[data-theme="dark"] .elem-card.active { border-color: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .elem-card.active { border-color: var(--accent); } }
+    .elem-card .ec-icon { font-size: 22px; margin-bottom: 5px; color: #5E728C; }
+    html[data-theme="dark"] .elem-card .ec-icon { color: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .elem-card .ec-icon { color: var(--accent); } }
     .elem-card .ec-label { font-size: 11.5px; font-weight: 600; color: var(--color-text-primary); }
     .elem-detail {
       display: none;
@@ -94,7 +173,7 @@
 
     /* ── Pie / distribution bar ── */
     .distbar-track { display: flex; height: 32px; border-radius: var(--border-radius-md); overflow: hidden; margin-bottom: 10px; }
-    .distbar-track div { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff; }
+    .distbar-track div { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; }
     .distbar-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; }
     .distbar-legend div { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--color-text-secondary); }
     .distbar-legend span { display: inline-block; width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
@@ -128,6 +207,16 @@
       padding: 16px 18px; margin-bottom: 10px;
     }
     .card-football .clabel { color: var(--football-text); }
+    .card-football .body-paragraph,
+    .card-football .body-paragraph-after,
+    .card-football .body-paragraph-last,
+    .card-football .body-paragraph-spaced,
+    .card-football .chart-intro,
+    .card-football .chart-note,
+    .card-football .data-note,
+    .card-football .revenue-note {
+      color: var(--football-text);
+    }
 
     /* ── Info / highlight boxes ── */
     .info-box {

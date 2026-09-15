@@ -260,36 +260,36 @@ const mod = modules.find((m) => m.id === 41)!;
           <rect x="20" y="10" width="480" height="320" rx="6" fill="var(--accent-bg)" opacity="0.4"/>
           <!-- Players: GK -->
           <circle cx="60" cy="170" r="14" fill="var(--accent)" opacity="0.9"/>
-          <text x="60" y="174" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">GK</text>
+          <text x="60" y="174" text-anchor="middle" font-size="9" class="pos-label-accent" font-weight="700">GK</text>
           <!-- Defenders -->
           <circle cx="130" cy="110" r="13" fill="var(--accent)" opacity="0.8"/>
-          <text x="130" y="114" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">LB</text>
+          <text x="130" y="114" text-anchor="middle" font-size="9" class="pos-label-accent" font-weight="700">LB</text>
           <circle cx="155" cy="155" r="13" fill="var(--accent)" opacity="0.8"/>
-          <text x="155" y="159" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CB</text>
+          <text x="155" y="159" text-anchor="middle" font-size="9" class="pos-label-accent" font-weight="700">CB</text>
           <circle cx="155" cy="185" r="13" fill="var(--accent)" opacity="0.8"/>
-          <text x="155" y="189" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CB</text>
+          <text x="155" y="189" text-anchor="middle" font-size="9" class="pos-label-accent" font-weight="700">CB</text>
           <circle cx="130" cy="230" r="13" fill="var(--accent)" opacity="0.8"/>
-          <text x="130" y="234" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">RB</text>
+          <text x="130" y="234" text-anchor="middle" font-size="9" class="pos-label-accent" font-weight="700">RB</text>
           <!-- Midfielders -->
           <circle cx="240" cy="145" r="13" fill="#2563EB" opacity="0.85"/>
-          <text x="240" y="149" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CM</text>
+          <text x="240" y="149" text-anchor="middle" font-size="9" class="pos-label-team" font-weight="700">CM</text>
           <circle cx="220" cy="175" r="13" fill="#2563EB" opacity="0.85"/>
-          <text x="220" y="179" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">DM</text>
+          <text x="220" y="179" text-anchor="middle" font-size="9" class="pos-label-team" font-weight="700">DM</text>
           <circle cx="240" cy="205" r="13" fill="#2563EB" opacity="0.85"/>
-          <text x="240" y="209" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">CM</text>
+          <text x="240" y="209" text-anchor="middle" font-size="9" class="pos-label-team" font-weight="700">CM</text>
           <!-- Forwards -->
           <circle cx="360" cy="120" r="13" fill="#DC2626" opacity="0.85"/>
-          <text x="360" y="124" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">LW</text>
+          <text x="360" y="124" text-anchor="middle" font-size="8" class="pos-label-team" font-weight="700">LW</text>
           <circle cx="390" cy="170" r="13" fill="#DC2626" opacity="0.85"/>
-          <text x="390" y="174" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">ST</text>
+          <text x="390" y="174" text-anchor="middle" font-size="8" class="pos-label-team" font-weight="700">ST</text>
           <circle cx="360" cy="220" r="13" fill="#DC2626" opacity="0.85"/>
-          <text x="360" y="224" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">RW</text>
+          <text x="360" y="224" text-anchor="middle" font-size="8" class="pos-label-team" font-weight="700">RW</text>
           <!-- Direction arrow -->
           <defs><marker id="arr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><polygon points="0 0, 7 3.5, 0 7" fill="var(--color-text-tertiary)"/></marker></defs>
           <line x1="430" y1="315" x2="480" y2="315" stroke="var(--color-text-tertiary)" stroke-width="1" marker-end="url(#arr)"/>
           <text x="426" y="310" font-size="9" fill="var(--color-text-tertiary)" text-anchor="end">Attack</text>
           <!-- Legend -->
-          <circle cx="30" cy="25" r="7" fill="var(--accent)"/>
+          <circle cx="30" cy="25" r="7" fill="#5E728C"/>
           <text x="40" y="29" font-size="9" fill="var(--color-text-secondary)">Defenders/GK</text>
           <circle cx="130" cy="25" r="7" fill="#2563EB"/>
           <text x="140" y="29" font-size="9" fill="var(--color-text-secondary)">Midfielders</text>
@@ -823,12 +823,12 @@ const mod = modules.find((m) => m.id === 41)!;
     };
 
     // ─── Utility ───
-    function barRow(label, val, maxVal, colour, unit) {
+    function barRow(label, val, maxVal, colourClass, unit) {
       const pct = Math.min(100, (val / maxVal) * 100);
       return `<div class="bar-row">
         <div class="bl" style="width:160px;font-size:12px;color:var(--color-text-secondary);">${label}</div>
         <div class="bb" style="flex:1;background:var(--color-background-tertiary);border-radius:4px;height:20px;position:relative;">
-          <div style="position:absolute;left:0;top:0;height:100%;width:${pct}%;background:${colour};border-radius:4px;"></div>
+          <div class="${colourClass}" style="position:absolute;left:0;top:0;height:100%;width:${pct}%;border-radius:4px;"></div>
         </div>
         <div class="bv" style="width:60px;text-align:right;font-size:12px;font-weight:600;color:var(--color-text-primary);">${val}${unit}</div>
       </div>`;
@@ -848,7 +848,7 @@ const mod = modules.find((m) => m.id === 41)!;
       { name: 'Golf', val: 450 },
     ];
     const popEl = document.getElementById('sport-pop-chart');
-    popEl.innerHTML = popData.map(d => barRow(d.name, d.val, 3500, 'var(--accent)', 'm')).join('');
+    popEl.innerHTML = popData.map(d => barRow(d.name, d.val, 3500, 'sports-accent-bg', 'm')).join('');
 
     // ─── Salary chart ───
     const salaryData = [
@@ -861,7 +861,7 @@ const mod = modules.find((m) => m.id === 41)!;
       { name: 'Patrick Mahomes (NFL)', val: 58 },
     ];
     const salEl = document.getElementById('salary-chart');
-    salEl.innerHTML = salaryData.map(d => barRow(d.name, d.val, 200, '#2563EB', 'm')).join('');
+    salEl.innerHTML = salaryData.map(d => barRow(d.name, d.val, 200, 'sp-blue', 'm')).join('');
 
     // ─── Training / VO2 max slider ───
     const trainingSlider = document.getElementById('training-weeks');
@@ -883,13 +883,13 @@ const mod = modules.find((m) => m.id === 41)!;
 
     // ─── Tactics timeline ───
     const tacticsEras = [
-      { label: '2-3-5 / Pyramid', start: 1863, end: 1925, col: '#27A04A' },
-      { label: 'WM (Herbert Chapman)', start: 1925, end: 1953, col: '#2563EB' },
-      { label: 'Catenaccio / 4-3-3', start: 1950, end: 1970, col: '#DC2626' },
-      { label: 'Total Football', start: 1965, end: 1978, col: '#D97706' },
-      { label: '4-4-2 era', start: 1970, end: 2005, col: '#7C3AED' },
-      { label: 'Pressing revolution', start: 2005, end: 2015, col: '#0891B2' },
-      { label: 'Positional / xG era', start: 2012, end: 2024, col: '#059669' },
+      { label: '2-3-5 / Pyramid', start: 1863, end: 1925, cls: 'sp-green' },
+      { label: 'WM (Herbert Chapman)', start: 1925, end: 1953, cls: 'sp-blue' },
+      { label: 'Catenaccio / 4-3-3', start: 1950, end: 1970, cls: 'sp-red' },
+      { label: 'Total Football', start: 1965, end: 1978, cls: 'sp-amber' },
+      { label: '4-4-2 era', start: 1970, end: 2005, cls: 'sp-purple' },
+      { label: 'Pressing revolution', start: 2005, end: 2015, cls: 'sp-cyan' },
+      { label: 'Positional / xG era', start: 2012, end: 2024, cls: 'sp-teal' },
     ];
     const minY = 1863, maxY = 2024, span = maxY - minY;
     const ttEl = document.getElementById('tactics-timeline');
@@ -899,7 +899,7 @@ const mod = modules.find((m) => m.id === 41)!;
       return `<div class="value-row">
         <div class="pc-label">${e.label}</div>
         <div class="period-track-tall">
-          <div class="pc-fill" style="left:${left}%;width:${width}%;background:${e.col};">
+          <div class="pc-fill ${e.cls}" style="left:${left}%;width:${width}%;">
             <span class="pc-fill-label">${e.start}–${e.end}</span>
           </div>
         </div>
@@ -948,16 +948,16 @@ const mod = modules.find((m) => m.id === 41)!;
 
     // ─── PPDA chart ───
     const ppdaData = [
-      { name: 'Liverpool 2019–20', val: 6.2, col: '#DC2626' },
-      { name: 'Man City 2022–23', val: 7.8, col: '#60A5FA' },
-      { name: 'Napoli 2022–23', val: 8.1, col: '#2563EB' },
-      { name: 'Brighton 2022–23', val: 9.3, col: '#1D4ED8' },
-      { name: 'Arsenal 2023–24', val: 8.5, col: '#DC2626' },
-      { name: 'Atletico Madrid', val: 15.2, col: '#D97706' },
-      { name: 'Burnley 2023', val: 18.7, col: '#7C3AED' },
+      { name: 'Liverpool 2019–20', val: 6.2, cls: 'sp-red' },
+      { name: 'Man City 2022–23', val: 7.8, cls: 'sp-lightblue' },
+      { name: 'Napoli 2022–23', val: 8.1, cls: 'sp-blue' },
+      { name: 'Brighton 2022–23', val: 9.3, cls: 'sp-darkblue' },
+      { name: 'Arsenal 2023–24', val: 8.5, cls: 'sp-red' },
+      { name: 'Atletico Madrid', val: 15.2, cls: 'sp-amber' },
+      { name: 'Burnley 2023', val: 18.7, cls: 'sp-purple' },
     ];
     const ppdaEl = document.getElementById('ppda-chart');
-    ppdaEl.innerHTML = ppdaData.map(d => barRow(d.name, d.val, 20, d.col, '')).join('');
+    ppdaEl.innerHTML = ppdaData.map(d => barRow(d.name, d.val, 20, d.cls, '')).join('');
 
     // ─── xG calculator ───
     window.calcXG = function() {
@@ -1061,15 +1061,15 @@ const mod = modules.find((m) => m.id === 41)!;
 
     // ─── World Cup distribution bar ───
     const wcWins = [
-      { name: 'Brazil', wins: 5, col: '#F59E0B' },
-      { name: 'Germany/WG', wins: 4, col: '#6B7280' },
-      { name: 'Italy', wins: 4, col: '#2563EB' },
-      { name: 'Argentina', wins: 3, col: '#60A5FA' },
-      { name: 'France', wins: 2, col: '#1D4ED8' },
-      { name: 'Uruguay', wins: 2, col: '#7C3AED' },
-      { name: 'England', wins: 1, col: '#DC2626' },
-      { name: 'Spain', wins: 1, col: '#EA580C' },
-      { name: 'Others', wins: 0, col: '#9CA3AF' },
+      { name: 'Brazil', wins: 5, cls: 'sp-gold' },
+      { name: 'Germany/WG', wins: 4, cls: 'sp-grey' },
+      { name: 'Italy', wins: 4, cls: 'sp-blue' },
+      { name: 'Argentina', wins: 3, cls: 'sp-lightblue' },
+      { name: 'France', wins: 2, cls: 'sp-darkblue' },
+      { name: 'Uruguay', wins: 2, cls: 'sp-purple' },
+      { name: 'England', wins: 1, cls: 'sp-red' },
+      { name: 'Spain', wins: 1, cls: 'sp-orange' },
+      { name: 'Others', wins: 0, cls: 'sp-lightgrey' },
     ];
     const total = 22;
     const wcEl = document.getElementById('wc-distbar');
@@ -1077,8 +1077,8 @@ const mod = modules.find((m) => m.id === 41)!;
     track.className = 'distbar-track';
     wcWins.filter(d => d.wins > 0).forEach(d => {
       const seg = document.createElement('div');
+      seg.className = d.cls;
       seg.style.width = ((d.wins / total) * 100) + '%';
-      seg.style.background = d.col;
       seg.title = `${d.name}: ${d.wins}`;
       if (d.wins > 1) seg.textContent = d.wins;
       track.appendChild(seg);
@@ -1086,47 +1086,47 @@ const mod = modules.find((m) => m.id === 41)!;
     const legend = document.createElement('div');
     legend.className = 'distbar-legend';
     wcWins.filter(d => d.wins > 0).forEach(d => {
-      legend.innerHTML += `<div><span style="background:${d.col}"></span>${d.name} (${d.wins})</div>`;
+      legend.innerHTML += `<div><span class="${d.cls}"></span>${d.name} (${d.wins})</div>`;
     });
     wcEl.appendChild(track);
     wcEl.appendChild(legend);
 
     // ─── Revenue breakdown distribution bar ───
     const revData = [
-      { name: 'Broadcasting', pct: 45, col: '#27A04A' },
-      { name: 'Commercial/Sponsorship', pct: 35, col: '#2563EB' },
-      { name: 'Matchday', pct: 20, col: '#D97706' },
+      { name: 'Broadcasting', pct: 45, cls: 'sp-green' },
+      { name: 'Commercial/Sponsorship', pct: 35, cls: 'sp-blue' },
+      { name: 'Matchday', pct: 20, cls: 'sp-amber' },
     ];
     const revEl = document.getElementById('revenue-distbar');
     const revTrack = document.createElement('div');
     revTrack.className = 'distbar-track';
     revData.forEach(d => {
       const seg = document.createElement('div');
+      seg.className = d.cls;
       seg.style.width = d.pct + '%';
-      seg.style.background = d.col;
       seg.textContent = d.pct + '%';
       revTrack.appendChild(seg);
     });
     const revLegend = document.createElement('div');
     revLegend.className = 'distbar-legend';
     revData.forEach(d => {
-      revLegend.innerHTML += `<div><span style="background:${d.col}"></span>${d.name} (${d.pct}%)</div>`;
+      revLegend.innerHTML += `<div><span class="${d.cls}"></span>${d.name} (${d.pct}%)</div>`;
     });
     revEl.appendChild(revTrack);
     revEl.appendChild(revLegend);
 
     // ─── UCL prize money chart ───
     const uclData = [
-      { name: 'Participation fee', val: 15.64, col: '#27A04A' },
-      { name: 'Per group/league win', val: 2.8, col: '#2563EB' },
-      { name: 'Round of 16 qualification', val: 9.6, col: '#7C3AED' },
-      { name: 'Reaching QF', val: 10.5, col: '#D97706' },
-      { name: 'Reaching SF', val: 12.5, col: '#0891B2' },
-      { name: 'Runner-up bonus', val: 15.5, col: '#DC2626' },
-      { name: 'Winner bonus', val: 20, col: '#F59E0B' },
+      { name: 'Participation fee', val: 15.64, cls: 'sp-green' },
+      { name: 'Per group/league win', val: 2.8, cls: 'sp-blue' },
+      { name: 'Round of 16 qualification', val: 9.6, cls: 'sp-purple' },
+      { name: 'Reaching QF', val: 10.5, cls: 'sp-amber' },
+      { name: 'Reaching SF', val: 12.5, cls: 'sp-cyan' },
+      { name: 'Runner-up bonus', val: 15.5, cls: 'sp-red' },
+      { name: 'Winner bonus', val: 20, cls: 'sp-gold' },
     ];
     const uclEl = document.getElementById('ucl-chart');
-    uclEl.innerHTML = uclData.map(d => barRow(d.name, d.val, 25, d.col, 'm')).join('');
+    uclEl.innerHTML = uclData.map(d => barRow(d.name, d.val, 25, d.cls, 'm')).join('');
 
     // ─── League explorer ───
     const leagues = {
@@ -1174,7 +1174,7 @@ const mod = modules.find((m) => m.id === 41)!;
       { name: '2023 final', val: 14.3 },
     ];
     const wwcEl = document.getElementById('wwc-chart');
-    wwcEl.innerHTML = wwcData.map(d => barRow(d.name, d.val, 15, '#DC2626', 'm')).join('');
+    wwcEl.innerHTML = wwcData.map(d => barRow(d.name, d.val, 15, 'sp-red', 'm')).join('');
 
     // ─── Manager explorer ───
     const managers = {
@@ -1223,15 +1223,15 @@ const mod = modules.find((m) => m.id === 41)!;
 
     // ─── Manager success factors chart ───
     const mgrData = [
-      { name: 'Club wage bill', val: 75, col: '#27A04A' },
-      { name: 'Squad depth (injuries)', val: 52, col: '#2563EB' },
-      { name: 'Transfer window success', val: 44, col: '#D97706' },
-      { name: 'Tactical system fit', val: 38, col: '#7C3AED' },
-      { name: 'Manager\'s track record', val: 31, col: '#0891B2' },
-      { name: 'Managerial "effect"', val: 18, col: '#DC2626' },
+      { name: 'Club wage bill', val: 75, cls: 'sp-green' },
+      { name: 'Squad depth (injuries)', val: 52, cls: 'sp-blue' },
+      { name: 'Transfer window success', val: 44, cls: 'sp-amber' },
+      { name: 'Tactical system fit', val: 38, cls: 'sp-purple' },
+      { name: 'Manager\'s track record', val: 31, cls: 'sp-cyan' },
+      { name: 'Managerial "effect"', val: 18, cls: 'sp-red' },
     ];
     const mgrEl = document.getElementById('mgr-success-chart');
-    mgrEl.innerHTML = mgrData.map(d => barRow(d.name, d.val, 100, d.col, '%')).join('');
+    mgrEl.innerHTML = mgrData.map(d => barRow(d.name, d.val, 100, d.cls, '%')).join('');
 
     // ─── Manager tenure slider ───
     const mgrSlider = document.getElementById('mgr-tenure');
