@@ -975,7 +975,7 @@ function calcOOM() {
     <strong>Ratio:</strong> ${ratio.toExponential(3)}<br>
     <strong>Orders of magnitude:</strong> ${ordersRound} (each order = 10×)<br>
     <strong>What this means:</strong> The larger is ${ratioStr} times the size of the smaller.
-    ${orders >= 3 ? ' That gap spans ' + Math.round(orders) + ' powers of ten — roughly the difference between ' + scaleHint(orders) + '.' : ''}
+    ${orders >= 3 ? ' That gap spans ' + Math.round(orders) + ' powers of ten, roughly the difference between ' + scaleHint(orders) + '.' : ''}
   `;
 }
 

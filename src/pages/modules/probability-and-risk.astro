@@ -895,7 +895,7 @@ function computeEV() {
   const probWarn = Math.abs(totalProb - 100) > 0.5;
   note.innerHTML = probWarn
     ? `<span class="pr-c-caution">⚠ Probabilities sum to ${totalProb.toFixed(1)}%, they should sum to 100% for a valid expected value.</span>`
-    : `Probabilities sum to ${totalProb.toFixed(1)}%. ${ev > 0 ? 'This is a positive expected value decision.' : ev < 0 ? 'This is a negative expected value decision — you lose on average.' : 'Break-even expected value.'}`;
+    : `Probabilities sum to ${totalProb.toFixed(1)}%. ${ev > 0 ? 'This is a positive expected value decision.' : ev < 0 ? 'This is a negative expected value decision: you lose on average.' : 'Break-even expected value.'}`;
 }
 
 /* ========================================================
@@ -1250,7 +1250,7 @@ function updateCond() {
       <div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">P(A | B): probability of A <em>given</em> B has occurred</div>
       <div class="${isIndependent ? '' : 'pr-c-orange'}" style="font-size:14px; font-weight:600; color:${isIndependent ? 'var(--color-text-primary)' : ''};">${fmt(pAgivenB)}
         <span style="font-size:11px; font-weight:400; color:var(--color-text-secondary);">
-          ${isIndependent ? '= P(A) — knowing B tells you nothing about A' : '≠ P(A) — B raises the probability of A'}
+          ${isIndependent ? '= P(A): knowing B tells you nothing about A' : '≠ P(A): B raises the probability of A'}
         </span>
       </div>
     </div>

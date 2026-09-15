@@ -692,7 +692,7 @@ const calcs = {
       const total = pLoad + cLoad;
       const perM2 = total / area;
       return `Total load: <strong>${total.toLocaleString()} kg</strong> (<strong>${perM2.toFixed(0)} kg/m²</strong>)<br>
-      <span style="color:var(--color-text-secondary); font-size:12px;">People: ${pLoad} kg (${people} × 80 kg avg). Contents: ${cLoad} kg. Typical floor ratings: residential 150 kg/m², office 250 kg/m², storage 500–1,000 kg/m². Your ${perM2.toFixed(0)} kg/m² is ${perM2 <= 150 ? 'within residential limits' : perM2 <= 250 ? 'within office limits' : 'above typical office floor rating — consult a structural engineer'}.</span>`;
+      <span style="color:var(--color-text-secondary); font-size:12px;">People: ${pLoad} kg (${people} × 80 kg avg). Contents: ${cLoad} kg. Typical floor ratings: residential 150 kg/m², office 250 kg/m², storage 500–1,000 kg/m². Your ${perM2.toFixed(0)} kg/m² is ${perM2 <= 150 ? 'within residential limits' : perM2 <= 250 ? 'within office limits' : 'above typical office floor rating: consult a structural engineer'}.</span>`;
     }
   },
   wind: {

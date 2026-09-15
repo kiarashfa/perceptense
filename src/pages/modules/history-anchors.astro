@@ -769,7 +769,7 @@ function renderQuizQuestion() {
   if (quizIdx >= quizQuestions.length) {
     document.getElementById('quiz-container').innerHTML = `
       <div class="u-fs-15px u-fw-500 text-primary u-mb-sm">Finished! Score: ${quizScoreVal} / ${quizQuestions.length}</div>
-      <div class="u-fs-13px text-secondary">${quizScoreVal >= 8 ? 'Excellent calibration.' : quizScoreVal >= 5 ? 'Good — a few surprises in there.' : 'History is full of surprises. Worth reviewing the anchors.'}</div>`;
+      <div class="u-fs-13px text-secondary">${quizScoreVal >= 8 ? 'Excellent calibration.' : quizScoreVal >= 5 ? 'Good, a few surprises in there.' : 'History is full of surprises. Worth reviewing the anchors.'}</div>`;
     document.getElementById('quiz-restart').style.display = 'inline-block';
     return;
   }
