@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 42)!;
   
 
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:0.6rem;">
-      <i class="fa-solid fa-paw" style="font-size:42px;color:var(--accent);flex-shrink:0;" aria-hidden="true"></i>
+      <i class="fa-solid fa-paw animals-accent-text" style="font-size:42px;flex-shrink:0;" aria-hidden="true"></i>
       <h1 class="module-title" style="margin:0;line-height:1.05;">Module 42: Animals</h1>
     </div>
     <p class="module-subtitle">The diversity, biology, behaviour, and human relationship with the animal kingdom</p>
@@ -99,7 +99,7 @@ const mod = modules.find((m) => m.id === 42)!;
           .phy-root  { font-family: var(--font-sans); font-size: 11px; font-weight: 500; fill: var(--color-text-primary); }
           .phy-dot   { fill: var(--accent); }
         </style>
-        <circle class="phy-dot" cx="30" cy="130" r="4"/>
+        <circle class="animals-accent-text" cx="30" cy="130" r="4"/>
         <text class="phy-root" x="36" y="134">Animalia</text>
         <line class="phy-line" x1="34" y1="130" x2="100" y2="130"/>
         <path class="phy-line" d="M100,130 L100,60"/>
@@ -139,12 +139,12 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- Biomass bar chart -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="panel-title">Animal biomass by group (approximate, gigatonnes of carbon)</div>
-      <div class="bar-row"><div class="bl">Arthropods</div><div class="bb" style="width:82%;background:#7DAA3C;"><span class="bv" style="color:#fff;">~1,000 Gt C (insects dominate)</span></div></div>
-      <div class="bar-row"><div class="bl">Marine fish</div><div class="bb" style="width:10%;background:var(--accent);"><span class="bv" style="color:#fff;">~0.8</span></div></div>
-      <div class="bar-row"><div class="bl">Livestock</div><div class="bb" style="width:9%;background:#D4A843;"><span class="bv" style="color:#fff;">~0.1</span></div></div>
-      <div class="bar-row"><div class="bl">Humans</div><div class="bb" style="width:6%;background:#888;"><span class="bv" style="color:#fff;">~0.06</span></div></div>
+      <div class="bar-row"><div class="bl">Arthropods</div><div class="bb" style="width:82%;background:#7DAA3C;"><span class="bv" style="color:#1a1a18;">~1,000 Gt C (insects dominate)</span></div></div>
+      <div class="bar-row"><div class="bl">Marine fish</div><div class="bb" style="width:10%;background:var(--accent);"><span class="bv" style="color:#1a1a18;">~0.8</span></div></div>
+      <div class="bar-row"><div class="bl">Livestock</div><div class="bb" style="width:9%;background:#D4A843;"><span class="bv" style="color:#1a1a18;">~0.1</span></div></div>
+      <div class="bar-row"><div class="bl">Humans</div><div class="bb" style="width:6%;background:#888;"><span class="bv" style="color:#1a1a18;">~0.06</span></div></div>
       <div class="bar-row"><div class="bl">Wild mammals</div><div class="bb" style="width:5%;background:#C1440E;min-width:24px;"><span class="bv" style="color:#fff;">~0.007</span></div></div>
-      <div class="bar-row"><div class="bl">Wild birds</div><div class="bb" style="width:3%;background:#B5A26A;min-width:24px;"><span class="bv" style="color:#fff;">~0.002</span></div></div>
+      <div class="bar-row"><div class="bl">Wild birds</div><div class="bb" style="width:3%;background:#B5A26A;min-width:24px;"><span class="bv" style="color:#1a1a18;">~0.002</span></div></div>
       <div class="footnote-tight">Source: Bar-On et al., 2018, PNAS. Insects alone outweigh all terrestrial vertebrates combined by a factor of 17. Wild mammals represent less than 5% of mammalian biomass — livestock and humans constitute the rest.</div>
     </div>
 
@@ -204,20 +204,20 @@ const mod = modules.find((m) => m.id === 42)!;
     <div class="card" style="margin-bottom:1rem;">
       <div class="panel-title">Invertebrate diversity: share of all described animal species</div>
       <div class="dist-bar">
-        <div class="dist-seg" style="width:59%;background:#7DAA3C;color:#fff;">Insects 59%</div>
-        <div class="dist-seg" style="width:10%;background:var(--accent);color:#fff;">Arachnids</div>
+        <div class="dist-seg" style="width:59%;background:#7DAA3C;color:#1a1a18;">Insects 59%</div>
+        <div class="dist-seg" style="width:10%;background:var(--accent);color:#1a1a18;">Arachnids</div>
         <div class="dist-seg" style="width:8%;background:#D4A843;color:#1a1a18;">Molluscs</div>
-        <div class="dist-seg" style="width:6%;background:#C88B3A;color:#fff;">Crustaceans</div>
-        <div class="dist-seg" style="width:5%;background:#B5A26A;color:#fff;">Nematodes</div>
-        <div class="dist-seg" style="width:8%;background:#7B6FBD;color:#fff;">Other inv.</div>
-        <div class="dist-seg" style="width:4%;background:#888;color:#fff;">Vertebrates</div>
+        <div class="dist-seg" style="width:6%;background:#C88B3A;color:#1a1a18;">Crustaceans</div>
+        <div class="dist-seg" style="width:5%;background:#B5A26A;color:#1a1a18;">Nematodes</div>
+        <div class="dist-seg" style="width:8%;background:#786BBB;color:#fff;">Other inv.</div>
+        <div class="dist-seg" style="width:4%;background:#888;color:#1a1a18;">Vertebrates</div>
       </div>
       <div class="dist-legend">
         <div class="legend-item-large"><div class="dist-swatch" style="background:#7DAA3C;"></div>Insects ~59%</div>
         <div class="legend-item-large"><div class="dist-swatch" style="background:var(--accent);"></div>Arachnids ~10%</div>
         <div class="legend-item-large"><div class="dist-swatch" style="background:#D4A843;"></div>Molluscs ~8%</div>
         <div class="legend-item-large"><div class="dist-swatch" style="background:#C88B3A;"></div>Crustaceans ~6%</div>
-        <div class="legend-item-large"><div class="dist-swatch" style="background:#7B6FBD;"></div>Other invertebrates ~8%</div>
+        <div class="legend-item-large"><div class="dist-swatch" style="background:#786BBB;"></div>Other invertebrates ~8%</div>
         <div class="legend-item-large"><div class="dist-swatch" style="background:#888;"></div>Vertebrates ~4%</div>
       </div>
       <div class="footnote-tight">Proportions are rounded and shift as taxonomists describe new species. The main lesson is stable: vertebrates are conspicuous, but invertebrates carry most animal diversity. The known insect total (~950,000 species) almost certainly understates true diversity — estimates of undescribed insects range from 5 to 10 million.</div>
@@ -225,10 +225,10 @@ const mod = modules.find((m) => m.id === 42)!;
 
     <!-- Invertebrate multi-card explorer -->
     <div class="tile-grid-sm" id="invert-grid">
-      <div class="elem-card" onclick="showInvert('insects',this)"><div class="elem-card-icon"><i class="fa-solid fa-bug" style="color:var(--accent);"></i></div><div class="card-label">Insects</div></div>
-      <div class="elem-card" onclick="showInvert('arachnids',this)"><div class="elem-card-icon"><i class="fa-solid fa-spider" style="color:var(--accent);"></i></div><div class="card-label">Arachnids</div></div>
-      <div class="elem-card" onclick="showInvert('molluscs',this)"><div class="elem-card-icon"><i class="fa-solid fa-water" style="color:var(--accent);"></i></div><div class="card-label">Molluscs</div></div>
-      <div class="elem-card" onclick="showInvert('marine',this)"><div class="elem-card-icon"><i class="fa-solid fa-star" style="color:var(--accent);"></i></div><div class="card-label">Marine</div></div>
+      <div class="elem-card" onclick="showInvert('insects',this)"><div class="elem-card-icon"><i class="fa-solid fa-bug animals-accent-text"></i></div><div class="card-label">Insects</div></div>
+      <div class="elem-card" onclick="showInvert('arachnids',this)"><div class="elem-card-icon"><i class="fa-solid fa-spider animals-accent-text"></i></div><div class="card-label">Arachnids</div></div>
+      <div class="elem-card" onclick="showInvert('molluscs',this)"><div class="elem-card-icon"><i class="fa-solid fa-water animals-accent-text"></i></div><div class="card-label">Molluscs</div></div>
+      <div class="elem-card" onclick="showInvert('marine',this)"><div class="elem-card-icon"><i class="fa-solid fa-star animals-accent-text"></i></div><div class="card-label">Marine</div></div>
     </div>
     <div class="elem-detail" id="invert-detail"></div>
 
@@ -390,12 +390,12 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- Migration bar chart -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="panel-title">Greatest animal migrations (round-trip km per year)</div>
-      <div class="bar-row"><div class="bl">Arctic Tern</div><div class="bb" style="width:100%;background:#7DAA3C;"><span class="bv" style="color:#fff;">90,000 km — pole to pole</span></div></div>
-      <div class="bar-row"><div class="bl">Bar-tailed Godwit</div><div class="bb" style="width:26%;background:var(--accent);"><span class="bv" style="color:#fff;">24,000 km</span></div></div>
-      <div class="bar-row"><div class="bl">Humpback Whale</div><div class="bb" style="width:19%;background:#5B6FE4;"><span class="bv" style="color:#fff;">17,000 km</span></div></div>
-      <div class="bar-row"><div class="bl">Leatherback Turtle</div><div class="bb" style="width:8%;background:#B5A26A;"><span class="bv" style="color:#fff;">7,200 km</span></div></div>
+      <div class="bar-row"><div class="bl">Arctic Tern</div><div class="bb" style="width:100%;background:#7DAA3C;"><span class="bv" style="color:#1a1a18;">90,000 km — pole to pole</span></div></div>
+      <div class="bar-row"><div class="bl">Bar-tailed Godwit</div><div class="bb" style="width:26%;background:var(--accent);"><span class="bv" style="color:#1a1a18;">24,000 km</span></div></div>
+      <div class="bar-row"><div class="bl">Humpback Whale</div><div class="bb" style="width:19%;background:#566BE3;"><span class="bv" style="color:#fff;">17,000 km</span></div></div>
+      <div class="bar-row"><div class="bl">Leatherback Turtle</div><div class="bb" style="width:8%;background:#B5A26A;"><span class="bv" style="color:#1a1a18;">7,200 km</span></div></div>
       <div class="bar-row"><div class="bl">Monarch Butterfly</div><div class="bb" style="width:10%;background:#D4A843;"><span class="bv" style="color:#1a1a18;">9,000 km</span></div></div>
-      <div class="bar-row"><div class="bl">Wildebeest</div><div class="bb" style="width:4%;background:#C88B3A;min-width:28px;"><span class="bv" style="color:#fff;">3,200 km</span></div></div>
+      <div class="bar-row"><div class="bl">Wildebeest</div><div class="bb" style="width:4%;background:#C88B3A;min-width:28px;"><span class="bv" style="color:#1a1a18;">3,200 km</span></div></div>
       <div class="footnote-tight">The bar-tailed godwit holds the non-stop flight record: 12,200 km Alaska to New Zealand, 11 days, no landing. It achieves this by atrophying its digestive organs before departure to save weight, and rebuilding them on arrival. Migration is not tourism — it is a strategy for tracking food, breeding sites, and seasonal weather. The route can be as important as the destination: stopover wetlands and wind corridors are invisible infrastructure whose destruction collapses migration systems.</div>
     </div>
 
@@ -512,8 +512,8 @@ const mod = modules.find((m) => m.id === 42)!;
     <!-- Extinction rate chart -->
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Extinction rate: current vs background (extinctions per million species per year)</div>
-      <div class="bar-row"><div class="bl">Background rate</div><div class="bb" style="width:1%;background:#7DAA3C;min-width:28px;"><span class="bv" style="color:#fff;">&nbsp;0.1–1</span></div></div>
-      <div class="bar-row"><div class="bl">20th-century rate</div><div class="bb" style="width:30%;background:#D4A843;"><span class="bv" style="color:#fff;">~100x background</span></div></div>
+      <div class="bar-row"><div class="bl">Background rate</div><div class="bb" style="width:1%;background:#7DAA3C;min-width:28px;"><span class="bv" style="color:#1a1a18;">&nbsp;0.1–1</span></div></div>
+      <div class="bar-row"><div class="bl">20th-century rate</div><div class="bb" style="width:30%;background:#D4A843;"><span class="bv" style="color:#1a1a18;">~100x background</span></div></div>
       <div class="bar-row"><div class="bl">Current estimate</div><div class="bb" style="width:100%;background:#C1440E;"><span class="bv" style="color:#fff;">100–1,000x background</span></div></div>
       <div class="footnote-tight">Ceballos et al. (2017) estimate that since 1900, populations of vertebrates have declined by 60%. The number of individuals lost — not just species — is the hidden dimension of the crisis. A species that loses 99% of its individuals is "not extinct" on a spreadsheet but has lost almost all ecological function and is extremely vulnerable to stochastic extinction.</div>
     </div>
@@ -685,13 +685,13 @@ const mod = modules.find((m) => m.id === 42)!;
 
     /* ════ PART B — Vertebrate class timeline ════ */
     const VERT_PERIODS = [
-      { label: 'Jawless fish',          start: 520, end: 0,  col: 'var(--accent)', text: '#fff' },
-      { label: 'Cartilaginous fish',    start: 450, end: 0,  col: '#378ADD', text: '#fff' },
-      { label: 'Bony fish',             start: 420, end: 0,  col: '#7DAA3C', text: '#fff' },
+      { label: 'Jawless fish',          start: 520, end: 0,  col: 'var(--accent)', text: '#1a1a18' },
+      { label: 'Cartilaginous fish',    start: 450, end: 0,  col: '#378ADD', text: '#1a1a18' },
+      { label: 'Bony fish',             start: 420, end: 0,  col: '#7DAA3C', text: '#1a1a18' },
       { label: 'Amphibians',            start: 370, end: 0,  col: '#D4A843', text: '#1a1a18' },
       { label: 'Reptiles',              start: 310, end: 0,  col: '#C1440E', text: '#fff' },
-      { label: 'Mammals',               start: 220, end: 0,  col: '#7B6FBD', text: '#fff' },
-      { label: 'Birds',                 start: 160, end: 0,  col: '#B5A26A', text: '#fff' }
+      { label: 'Mammals',               start: 220, end: 0,  col: '#786BBB', text: '#fff' },
+      { label: 'Birds',                 start: 160, end: 0,  col: '#B5A26A', text: '#1a1a18' }
     ];
     const VERT_MAX = 540;
     const vertContainer = document.getElementById('vert-timeline');

@@ -4,9 +4,14 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: #59792B;
       margin-bottom: 4px;
     }
+    html[data-theme="dark"] .teaser-part { color: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .teaser-part { color: var(--accent); } }
+    .animals-accent-text { color: #59792B; fill: #59792B; }
+    html[data-theme="dark"] .animals-accent-text { color: var(--accent); fill: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .animals-accent-text { color: var(--accent); fill: var(--accent); } }
     .teaser-title {
       font-size: 13px;
       font-weight: 500;
@@ -29,12 +34,14 @@
     }
     .exp-meta {
       font-size: 11px;
-      color: var(--accent);
+      color: #59792B;
       font-weight: 500;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin-bottom: 8px;
     }
+    html[data-theme="dark"] .exp-meta { color: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .exp-meta { color: var(--accent); } }
     .exp-stat {
       display: inline-block;
       margin-top: 8px;
