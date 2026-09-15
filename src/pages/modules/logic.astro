@@ -1039,11 +1039,11 @@ const mod = modules.find((m) => m.id === 47)!;
       };
 
       const timelineItems = [
-        { label: 'Aristotle syllogistic', start: -350, end: -320, col: 'var(--accent)', bg: 'var(--accent-bg)', text: 'var(--accent)' },
+        { label: 'Aristotle syllogistic', start: -350, end: -320, col: 'var(--accent)', bg: 'var(--accent-bg)', colClass: 'logic-accent-text' },
         { label: 'Stoic propositional logic', start: -300, end: -100, col: 'var(--color-background-info)', bg: 'var(--color-background-info)', text: 'var(--color-text-info)' },
         { label: 'Medieval scholastic logic', start: 1100, end: 1500, col: 'var(--color-background-success)', bg: 'var(--color-background-success)', text: 'var(--color-text-success)' },
         { label: 'Boole algebra of logic', start: 1847, end: 1854, col: 'var(--color-background-warning)', bg: 'var(--color-background-warning)', text: 'var(--color-text-warning)' },
-        { label: 'Frege quantifiers', start: 1879, end: 1893, col: 'var(--accent)', bg: 'var(--accent-bg)', text: 'var(--accent)' },
+        { label: 'Frege quantifiers', start: 1879, end: 1893, col: 'var(--accent)', bg: 'var(--accent-bg)', colClass: 'logic-accent-text' },
         { label: 'Russell and Whitehead', start: 1910, end: 1913, col: 'var(--color-background-info)', bg: 'var(--color-background-info)', text: 'var(--color-text-info)' },
         { label: 'Godel incompleteness', start: 1931, end: 1931, col: 'var(--color-background-danger)', bg: 'var(--color-background-danger)', text: 'var(--color-text-danger)' },
         { label: 'Turing computability', start: 1936, end: 1937, col: 'var(--color-background-success)', bg: 'var(--color-background-success)', text: 'var(--color-text-success)' }
@@ -1316,7 +1316,7 @@ const mod = modules.find((m) => m.id === 47)!;
           const end = Math.min(item.end, max);
           const left = ((start - min) / (max - min)) * 100;
           const width = Math.max(((end - start) / (max - min)) * 100, 1.6);
-          html += '<div class="data-row-loose"><div class="pc-label">' + item.label + '</div><div class="pc-track"><div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + item.bg + ';color:' + item.text + '"><span class="period-label-ellipsis">' + item.start + '</span></div></div></div>';
+          html += '<div class="data-row-loose"><div class="pc-label">' + item.label + '</div><div class="pc-track"><div class="pc-fill' + (item.colClass ? ' ' + item.colClass : '') + '" style="left:' + left + '%;width:' + width + '%;background:' + item.bg + ';' + (item.text ? 'color:' + item.text : '') + '"><span class="period-label-ellipsis">' + item.start + '</span></div></div></div>';
         });
         html += '</div><div class="fine-print">Bars mark active periods or publication moments. Single-year breakthroughs are widened so they remain visible on small screens.</div>';
         chart.innerHTML = html;

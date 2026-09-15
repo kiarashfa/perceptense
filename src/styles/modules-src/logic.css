@@ -1,9 +1,14 @@
 
+    .logic-accent-text { color: var(--accent); fill: var(--accent); }
+    html[data-theme="dark"] .logic-accent-text { color: #8A84CE; fill: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .logic-accent-text { color: #8A84CE; fill: #8A84CE; } }
     .module-header i {
       font-size: 42px;
       color: var(--accent);
       flex-shrink: 0;
     }
+    html[data-theme="dark"] .module-header i { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .module-header i { color: #8A84CE; } }
     .module-header .module-title {
       margin: 0;
       line-height: 1.05;
@@ -65,6 +70,9 @@
       border-color: var(--accent-border);
       color: var(--accent);
     }
+    html[data-theme="dark"] .button-row-compact button.active,
+    html[data-theme="dark"] .elem-card.active { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .button-row-compact button.active, html[data-theme="auto"] .elem-card.active { color: #8A84CE; } }
     .explorer-panel {
       background: var(--color-background-primary);
       border: 0.5px solid var(--color-border-tertiary);
@@ -132,6 +140,8 @@
       color: var(--accent);
       margin-bottom: 5px;
     }
+    html[data-theme="dark"] .elem-icon { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .elem-icon { color: #8A84CE; } }
     .elem-name {
       font-size: 13px;
       font-weight: 600;
@@ -195,6 +205,8 @@
       color: var(--accent);
       font-weight: 600;
     }
+    html[data-theme="dark"] .slider-value { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .slider-value { color: #8A84CE; } }
     .live-result,
     .calc-result {
       background: var(--color-background-secondary);
@@ -369,6 +381,8 @@
       border-color: var(--accent-border);
       color: var(--accent);
     }
+    html[data-theme="dark"] .mh-door.picked { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .mh-door.picked { color: #8A84CE; } }
     .mh-door.revealed {
       background: var(--color-background-warning);
       border-color: var(--color-border-warning);
