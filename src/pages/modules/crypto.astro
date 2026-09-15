@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 38)!;
   
 
     <div style="display:flex; align-items:center; gap:14px; margin-bottom:0.6rem;">
-      <i class="fa-brands fa-bitcoin" style="font-size:42px; color:var(--accent); flex-shrink:0;"></i>
+      <i class="fa-brands fa-bitcoin crypto-accent-text" style="font-size:42px; flex-shrink:0;"></i>
       <h1 class="module-title" style="margin:0; line-height:1.05;">Module 38: Crypto</h1>
     </div>
     <p class="module-subtitle">Blockchain, Bitcoin, DeFi, and the promises and problems of decentralised finance</p>
@@ -61,7 +61,7 @@ const mod = modules.find((m) => m.id === 38)!;
           <rect x="10" y="30" width="170" height="140" rx="10" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="1"/>
           <rect x="10" y="30" width="170" height="28" rx="10" fill="var(--accent)" opacity="0.7"/>
           <rect x="10" y="48" width="170" height="10" rx="0" fill="var(--accent)" opacity="0.7"/>
-          <text x="95" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#fff">Block #1 (Genesis)</text>
+          <text x="95" y="50" text-anchor="middle" font-size="12" font-weight="500" class="cb-header-text">Block #1 (Genesis)</text>
           <text x="20" y="78" font-size="10" fill="var(--color-text-secondary)">Prev Hash: 0000000...</text>
           <text x="20" y="96" font-size="10" fill="var(--color-text-secondary)">Nonce: 2,083,236,893</text>
           <text x="20" y="114" font-size="10" fill="var(--color-text-secondary)">Timestamp: Jan 3 2009</text>
@@ -72,7 +72,7 @@ const mod = modules.find((m) => m.id === 38)!;
           <rect x="215" y="30" width="170" height="140" rx="10" fill="var(--color-background-secondary)" stroke="var(--color-border-tertiary)" stroke-width="1"/>
           <rect x="215" y="30" width="170" height="28" rx="10" fill="var(--accent)" opacity="0.55"/>
           <rect x="215" y="48" width="170" height="10" rx="0" fill="var(--accent)" opacity="0.55"/>
-          <text x="300" y="50" text-anchor="middle" font-size="12" font-weight="500" fill="#fff">Block #2</text>
+          <text x="300" y="50" text-anchor="middle" font-size="12" font-weight="500" class="cb-header-text">Block #2</text>
           <text x="225" y="78" font-size="10" fill="var(--color-text-secondary)">Prev Hash: 000000000019d6...</text>
           <text x="225" y="96" font-size="10" fill="var(--color-text-secondary)">Nonce: 1,639,830,024</text>
           <text x="225" y="114" font-size="10" fill="var(--color-text-secondary)">Timestamp: Jan 9 2009</text>
@@ -539,13 +539,13 @@ const mod = modules.find((m) => m.id === 38)!;
 
     /* ── BTC Timeline ── */
     const btcPeriods = [
-      { label: 'Genesis to Silk Road', start: 2009, end: 2013, col: '#E07B2A', text: '#fff', note: '$0 → $1,200' },
-      { label: 'First bear market', start: 2013, end: 2015, col: '#888', text: '#fff', note: '$1,200 → $200' },
-      { label: '2017 ICO bull run', start: 2015, end: 2018, col: '#E07B2A', text: '#fff', note: '$200 → $20,000' },
-      { label: 'Crypto winter', start: 2018, end: 2020, col: '#888', text: '#fff', note: '$20k → $3,500' },
-      { label: '2020-21 bull market', start: 2020, end: 2022, col: '#E07B2A', text: '#fff', note: '$4k → $69,000' },
+      { label: 'Genesis to Silk Road', start: 2009, end: 2013, col: '#E07B2A', text: '#000', note: '$0 → $1,200' },
+      { label: 'First bear market', start: 2013, end: 2015, col: '#888', text: '#000', note: '$1,200 → $200' },
+      { label: '2017 ICO bull run', start: 2015, end: 2018, col: '#E07B2A', text: '#000', note: '$200 → $20,000' },
+      { label: 'Crypto winter', start: 2018, end: 2020, col: '#888', text: '#000', note: '$20k → $3,500' },
+      { label: '2020-21 bull market', start: 2020, end: 2022, col: '#E07B2A', text: '#000', note: '$4k → $69,000' },
       { label: '2022 bear (FTX)', start: 2022, end: 2023, col: '#c0392b', text: '#fff', note: '$69k → $15,500' },
-      { label: 'ETF era bull', start: 2023, end: 2025, col: '#E07B2A', text: '#fff', note: '$16k → $100k+' }
+      { label: 'ETF era bull', start: 2023, end: 2025, col: '#E07B2A', text: '#000', note: '$16k → $100k+' }
     ];
     const minY = 2009, maxY = 2025, range = maxY - minY;
     let tlHtml = '';
@@ -574,7 +574,7 @@ const mod = modules.find((m) => m.id === 38)!;
     let subHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Block reward (BTC) per era — proportional bars</div>';
     subsidyData.forEach(function(d) {
       const pct = (d.val / 50 * 100).toFixed(2);
-      subHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(pct, 0.5) + '%;background:var(--accent);"><span class="bv" style="color:#fff;">' + d.display + '</span></div></div>';
+      subHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(pct, 0.5) + '%;background:var(--accent);"><span class="bv" style="color:#000;">' + d.display + '</span></div></div>';
     });
     document.getElementById('subsidy-chart').innerHTML = subHtml;
 
@@ -641,7 +641,7 @@ const mod = modules.find((m) => m.id === 38)!;
       const card = document.createElement('div');
       card.className = 'elem-card';
       card.id = 'chain-card-' + c.id;
-      card.innerHTML = '<div class="elem-card-icon" style="font-family:var(--font-mono);font-weight:600;color:var(--accent);">' + c.icon + '</div><div class="label-text">' + c.label + '</div><div class="detail-sub">' + c.sub + '</div>';
+      card.innerHTML = '<div class="elem-card-icon crypto-accent-text" style="font-family:var(--font-mono);font-weight:600;">' + c.icon + '</div><div class="label-text">' + c.label + '</div><div class="detail-sub">' + c.sub + '</div>';
       card.onclick = function() {
         chainData.forEach(function(x){ const el = document.getElementById('chain-card-' + x.id); if(el) el.classList.remove('active'); });
         card.classList.add('active');
@@ -653,31 +653,31 @@ const mod = modules.find((m) => m.id === 38)!;
 
     /* ── TPS bar chart ── */
     const tpsData = [
-      { label: 'Visa (capacity)', val: 24000, pct: 100, col: '#27ae60' },
-      { label: 'Solana (claimed)', val: 65000, pct: 100, col: '#9945FF' },
-      { label: 'Solana (real load)', val: 3500, pct: 14.6, col: '#7b5ea7' },
-      { label: 'BNB Chain', val: 2000, pct: 8.3, col: '#F0B90B' },
-      { label: 'Ethereum L2s', val: 4000, pct: 16.7, col: '#FF0420' },
-      { label: 'Ethereum mainnet', val: 15, pct: 0.1, col: '#627EEA' },
-      { label: 'Bitcoin', val: 7, pct: 0.03, col: '#E07B2A' }
+      { label: 'Visa (capacity)', val: 24000, pct: 100, col: '#27ae60', text: '#000' },
+      { label: 'Solana (claimed)', val: 65000, pct: 100, col: '#9945FF', text: '#fff' },
+      { label: 'Solana (real load)', val: 3500, pct: 14.6, col: '#7b5ea7', text: '#fff' },
+      { label: 'BNB Chain', val: 2000, pct: 8.3, col: '#F0B90B', text: '#000' },
+      { label: 'Ethereum L2s', val: 4000, pct: 16.7, col: '#FF0420', text: '#000' },
+      { label: 'Ethereum mainnet', val: 15, pct: 0.1, col: '#627EEA', text: '#000' },
+      { label: 'Bitcoin', val: 7, pct: 0.03, col: '#E07B2A', text: '#000' }
     ];
     let tpsHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Transactions per second (proportional to Visa capacity)</div>';
     tpsData.forEach(function(d) {
-      tpsHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:#fff;">' + d.val.toLocaleString() + ' TPS</span></div></div>';
+      tpsHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">' + d.val.toLocaleString() + ' TPS</span></div></div>';
     });
     document.getElementById('tps-chart').innerHTML = tpsHtml;
 
     /* ── TVL bar chart ── */
     const tvlData = [
-      { label: 'Peak (Nov 2021)', val: 180, pct: 100, col: '#E07B2A' },
-      { label: 'Post-Terra (Jul 2022)', val: 72, pct: 40, col: '#e67e22' },
-      { label: 'Post-FTX (Jan 2023)', val: 39, pct: 22, col: '#c0392b' },
-      { label: 'Recovery (Jan 2024)', val: 58, pct: 32, col: '#E07B2A' },
-      { label: 'Bull peak (Dec 2024)', val: 120, pct: 67, col: '#E07B2A' }
+      { label: 'Peak (Nov 2021)', val: 180, pct: 100, col: '#E07B2A', text: '#000' },
+      { label: 'Post-Terra (Jul 2022)', val: 72, pct: 40, col: '#e67e22', text: '#000' },
+      { label: 'Post-FTX (Jan 2023)', val: 39, pct: 22, col: '#c0392b', text: '#fff' },
+      { label: 'Recovery (Jan 2024)', val: 58, pct: 32, col: '#E07B2A', text: '#000' },
+      { label: 'Bull peak (Dec 2024)', val: 120, pct: 67, col: '#E07B2A', text: '#000' }
     ];
     let tvlHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">DeFi total value locked — $bn</div>';
     tvlData.forEach(function(d) {
-      tvlHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + d.pct + '%;background:' + d.col + ';"><span class="bv" style="color:#fff;">$' + d.val + 'bn</span></div></div>';
+      tvlHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + d.pct + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">$' + d.val + 'bn</span></div></div>';
     });
     document.getElementById('tvl-chart').innerHTML = tvlHtml;
 
@@ -705,31 +705,31 @@ const mod = modules.find((m) => m.id === 38)!;
 
     /* ── DeFi failure modes bar chart (new from alt) ── */
     const failureData = [
-      { label: 'Key theft', val: 28, col: '#c0392b' },
-      { label: 'Custody fraud', val: 24, col: '#e74c3c' },
-      { label: 'Smart contracts', val: 18, col: '#E07B2A' },
-      { label: 'Bridge exploits', val: 14, col: '#e67e22' },
-      { label: 'Oracle / design', val: 10, col: '#888' },
-      { label: 'Governance', val: 6, col: '#999' }
+      { label: 'Key theft', val: 28, col: '#c0392b', text: '#fff' },
+      { label: 'Custody fraud', val: 24, col: '#e74c3c', text: '#000' },
+      { label: 'Smart contracts', val: 18, col: '#E07B2A', text: '#000' },
+      { label: 'Bridge exploits', val: 14, col: '#e67e22', text: '#000' },
+      { label: 'Oracle / design', val: 10, col: '#888', text: '#000' },
+      { label: 'Governance', val: 6, col: '#999', text: '#000' }
     ];
     let failHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Share of crypto losses by failure type, 2020-2024 (% of total value lost)</div>';
     failureData.forEach(function(d) {
-      failHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + d.val + '%;background:' + d.col + ';"><span class="bv" style="color:#fff;">' + d.val + '%</span></div></div>';
+      failHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + d.val + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">' + d.val + '%</span></div></div>';
     });
     document.getElementById('failure-chart').innerHTML = failHtml;
 
     /* ── NFT chart ── */
     const nftData = [
-      { label: 'Q1 2021 (early)', val: 1.5, pct: 2.2, col: '#E07B2A' },
-      { label: 'Q3 2021 (boom)', val: 10.7, pct: 15.5, col: '#E07B2A' },
-      { label: 'Peak: Mar 2022', val: 69, pct: 100, col: '#E07B2A' },
-      { label: 'Dec 2022', val: 4.7, pct: 6.8, col: '#c0392b' },
-      { label: 'Dec 2023', val: 1.8, pct: 2.6, col: '#c0392b' },
-      { label: 'Jan 2025', val: 2.2, pct: 3.2, col: '#888' }
+      { label: 'Q1 2021 (early)', val: 1.5, pct: 2.2, col: '#E07B2A', text: '#000' },
+      { label: 'Q3 2021 (boom)', val: 10.7, pct: 15.5, col: '#E07B2A', text: '#000' },
+      { label: 'Peak: Mar 2022', val: 69, pct: 100, col: '#E07B2A', text: '#000' },
+      { label: 'Dec 2022', val: 4.7, pct: 6.8, col: '#c0392b', text: '#fff' },
+      { label: 'Dec 2023', val: 1.8, pct: 2.6, col: '#c0392b', text: '#fff' },
+      { label: 'Jan 2025', val: 2.2, pct: 3.2, col: '#888', text: '#000' }
     ];
     let nftHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">NFT monthly trading volume — $bn (OpenSea + Blur combined)</div>';
     nftData.forEach(function(d) {
-      nftHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:#fff;">$' + d.val + 'bn</span></div></div>';
+      nftHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">$' + d.val + 'bn</span></div></div>';
     });
     document.getElementById('nft-chart').innerHTML = nftHtml;
 
@@ -758,8 +758,8 @@ const mod = modules.find((m) => m.id === 38)!;
     /* ── Collapse timeline ── */
     const collapses = [
       { label: 'The DAO hack', start: 2016.4, end: 2016.6, col: '#c0392b', text: '#fff', note: '$60M Ether' },
-      { label: 'BitConnect', start: 2016.5, end: 2018.1, col: '#e74c3c', text: '#fff', note: '$2.4B Ponzi' },
-      { label: 'PlusToken', start: 2018.0, end: 2019.6, col: '#e74c3c', text: '#fff', note: '$2.9B exit scam' },
+      { label: 'BitConnect', start: 2016.5, end: 2018.1, col: '#e74c3c', text: '#000', note: '$2.4B Ponzi' },
+      { label: 'PlusToken', start: 2018.0, end: 2019.6, col: '#e74c3c', text: '#000', note: '$2.9B exit scam' },
       { label: 'Terra/Luna', start: 2022.3, end: 2022.45, col: '#c0392b', text: '#fff', note: '$60B UST collapse' },
       { label: 'Celsius/3AC', start: 2022.45, end: 2022.6, col: '#c0392b', text: '#fff', note: '$30B insolvencies' },
       { label: 'FTX collapse', start: 2022.8, end: 2022.95, col: '#8e0000', text: '#fff', note: '$32B fraud' }
@@ -780,15 +780,15 @@ const mod = modules.find((m) => m.id === 38)!;
 
     /* ── Energy bar chart ── */
     const energyData = [
-      { label: 'Global banking', val: 260, pct: 100, col: '#2c3e50' },
-      { label: 'Bitcoin mining', val: 150, pct: 57.7, col: '#E07B2A' },
-      { label: 'Gold mining', val: 130, pct: 50, col: '#F0B90B' },
-      { label: 'YouTube streaming', val: 244, pct: 93.8, col: '#c0392b' },
-      { label: 'Ethereum (post-Merge)', val: 0.01, pct: 0.004, col: '#627EEA' }
+      { label: 'Global banking', val: 260, pct: 100, col: '#2c3e50', text: '#fff' },
+      { label: 'Bitcoin mining', val: 150, pct: 57.7, col: '#E07B2A', text: '#000' },
+      { label: 'Gold mining', val: 130, pct: 50, col: '#F0B90B', text: '#000' },
+      { label: 'YouTube streaming', val: 244, pct: 93.8, col: '#c0392b', text: '#fff' },
+      { label: 'Ethereum (post-Merge)', val: 0.01, pct: 0.004, col: '#627EEA', text: '#000' }
     ];
     let energyHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Estimated annual energy consumption — TWh/year</div>';
     energyData.forEach(function(d) {
-      energyHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:#fff;">' + d.val + ' TWh</span></div></div>';
+      energyHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">' + d.val + ' TWh</span></div></div>';
     });
     document.getElementById('energy-chart').innerHTML = energyHtml;
 
@@ -822,13 +822,13 @@ const mod = modules.find((m) => m.id === 38)!;
 
     /* ── Market cap distribution ── */
     const marketSegs = [
-      { label: 'Bitcoin', pct: 55, col: '#E07B2A', text: '#fff' },
-      { label: 'Ethereum', pct: 12, col: '#627EEA', text: '#fff' },
-      { label: 'Stablecoins', pct: 9, col: '#27ae60', text: '#fff' },
+      { label: 'Bitcoin', pct: 55, col: '#E07B2A', text: '#000' },
+      { label: 'Ethereum', pct: 12, col: '#627EEA', text: '#000' },
+      { label: 'Stablecoins', pct: 9, col: '#27ae60', text: '#000' },
       { label: 'BNB', pct: 3, col: '#F0B90B', text: '#333' },
       { label: 'Solana', pct: 5, col: '#9945FF', text: '#fff' },
       { label: 'XRP', pct: 5, col: '#346AA9', text: '#fff' },
-      { label: 'Other', pct: 11, col: '#888', text: '#fff' }
+      { label: 'Other', pct: 11, col: '#888', text: '#000' }
     ];
     const distBar = document.getElementById('market-dist');
     const distLeg = document.getElementById('market-legend');

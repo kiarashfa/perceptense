@@ -64,6 +64,13 @@
     .model-eyebrow { font-size: 10px; font-weight: 600; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 5px; }
     .model-heading { font-size: 14px; font-weight: 600; color: var(--color-text-primary); line-height: 1.25; margin-bottom: 5px; }
 
+    .crypto-accent-text { color: #A95919; }
+    html[data-theme="dark"] .crypto-accent-text { color: var(--accent); }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .crypto-accent-text { color: var(--accent); } }
+    .cb-header-text { fill: #1a1a18; }
+    html[data-theme="dark"] .cb-header-text { fill: #fff; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .cb-header-text { fill: #fff; } }
+
     @media (max-width: 500px) {
       .bl { width: 90px; font-size: 11px; }
       .pc-label { width: 80px; font-size: 10px; }
