@@ -474,7 +474,7 @@ const mod = modules.find((m) => m.id === 33)!;
 
           <!-- Cellos (middle right) -->
           <ellipse cx="400" cy="175" rx="62" ry="26" fill="#FDF0EB" stroke="var(--accent-border)" stroke-width="0.8"/>
-          <text x="400" y="172" text-anchor="middle" font-size="10" font-weight="600" fill="var(--accent)">Cellos</text>
+          <text x="400" y="172" text-anchor="middle" font-size="10" font-weight="600" fill="#993C1D">Cellos</text>
           <text x="400" y="184" text-anchor="middle" font-size="9" fill="var(--color-text-tertiary)">~10 players</text>
 
           <!-- Double basses (back left) -->
@@ -891,11 +891,11 @@ const mod = modules.find((m) => m.id === 33)!;
        ORCHESTRA DISTRIBUTION BAR
     ════════════════════════════════════ */
     const orchSections = [
-      { label:'Strings', pct:52, color:'#4A90D9' },
-      { label:'Woodwinds', pct:18, color:'#27AE60' },
-      { label:'Brass', pct:16, color:'#E07B5A' },
-      { label:'Percussion', pct:10, color:'#8E44AD' },
-      { label:'Harp/other', pct:4, color:'#F39C12' }
+      { label:'Strings', pct:52, color:'#4A90D9', tcol:'#000' },
+      { label:'Woodwinds', pct:18, color:'#27AE60', tcol:'#000' },
+      { label:'Brass', pct:16, color:'#E07B5A', tcol:'#000' },
+      { label:'Percussion', pct:10, color:'#8E44AD', tcol:'#fff' },
+      { label:'Harp/other', pct:4, color:'#F39C12', tcol:'#000' }
     ];
 
     function buildOrchDist() {
@@ -907,6 +907,7 @@ const mod = modules.find((m) => m.id === 33)!;
         seg.className = 'dist-seg';
         seg.style.flex = s.pct + '';
         seg.style.background = s.color;
+        seg.style.color = s.tcol;
         seg.textContent = s.pct > 8 ? s.pct + '%' : '';
         bar.appendChild(seg);
 
@@ -1102,15 +1103,15 @@ const mod = modules.find((m) => m.id === 33)!;
     const genres = [
       { label:'Blues', start:1890, end:2025, col:'#555', bg:'#EBEBEB' },
       { label:'Gospel', start:1865, end:2025, col:'#8E44AD', bg:'#F0EBF8' },
-      { label:'Jazz (early)', start:1895, end:1940, col:'#2980B9', bg:'#E6F1FB' },
+      { label:'Jazz (early)', start:1895, end:1940, col:'#0C447C', bg:'#E6F1FB' },
       { label:'Swing', start:1930, end:1950, col:'#1A6B5A', bg:'#E8F5F2' },
-      { label:'Bebop', start:1942, end:1960, col:'#E07B5A', bg:'#FDF0EB' },
+      { label:'Bebop', start:1942, end:1960, col:'#993C1D', bg:'#FDF0EB' },
       { label:'Rock & Roll', start:1951, end:2025, col:'#C0392B', bg:'#FCEBEB' },
       { label:'Soul / R&B', start:1954, end:2025, col:'#633806', bg:'#FAEEDA' },
-      { label:'Free Jazz', start:1959, end:1975, col:'#2980B9', bg:'#E6F1FB' },
-      { label:'Funk', start:1965, end:2025, col:'#27AE60', bg:'#EAF3DE' },
+      { label:'Free Jazz', start:1959, end:1975, col:'#0C447C', bg:'#E6F1FB' },
+      { label:'Funk', start:1965, end:2025, col:'#27500A', bg:'#EAF3DE' },
       { label:'Hip-Hop', start:1973, end:2025, col:'#8E44AD', bg:'#F0EBF8' },
-      { label:'Electronic', start:1977, end:2025, col:'#16A085', bg:'#E8F5F2' }
+      { label:'Electronic', start:1977, end:2025, col:'#085041', bg:'#E8F5F2' }
     ];
 
     function buildGenreTimeline() {
@@ -1246,7 +1247,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Chordophone -- bowed string (violin family)',
           construction: 'Spruce top, maple back and sides, four strings tuned G3-D4-A4-E5. Played with a horsehair bow. Body shape amplifies and colours string vibrations.',
           range: 'G3 to A7 (over 4 octaves)',
-          rangeStart: 30, rangeEnd: 81, rangeColor: '#4A90D9',
+          rangeStart: 30, rangeEnd: 81, rangeColor: '#3080d4',
           technique: 'Bowing (arco), plucking (pizzicato), muted playing (con sordino), harmonics, sul ponticello (near bridge), col legno (bow stick on string).',
           legendary: 'Nicolo Paganini (1782-1840) -- pushed technical limits so far that contemporaries suspected supernatural assistance; Jascha Heifetz (1901-1987) -- perhaps the most technically flawless violinist ever recorded; Hilary Hahn (b. 1979) -- leading contemporary virtuoso.',
           works: 'Bach Chaconne from Partita No. 2; Beethoven Violin Concerto; Brahms Violin Concerto; Sibelius Violin Concerto.'
@@ -1260,7 +1261,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Chordophone -- bowed string',
           construction: 'Four strings tuned C2-G2-D3-A3. Larger than violin, held between the knees. End-pin added in the 19th century for stability.',
           range: 'C2 to C6 (around 4 octaves)',
-          rangeStart: 14, rangeEnd: 62, rangeColor: '#E07B5A',
+          rangeStart: 14, rangeEnd: 62, rangeColor: '#d7572d',
           technique: 'Same bow techniques as violin plus thumb position for high register. The richest vibrato of any string instrument.',
           legendary: 'Pablo Casals (1876-1973) -- revived Bach\'s cello suites from obscurity; Jacqueline du Pre (1945-1987) -- electrifying interpreter of the Elgar Concerto; Yo-Yo Ma (b. 1955) -- the most recorded cellist in history.',
           works: 'Bach Cello Suites; Dvorak Cello Concerto; Elgar Cello Concerto; Shostakovich Cello Concertos.'
@@ -1274,7 +1275,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Chordophone -- plucked string',
           construction: 'Classical: spruce top, rosewood back/sides, nylon strings. Electric: solid or semi-hollow body, steel strings, magnetic pickups converting string vibration to electrical signal.',
           range: 'E2 to B5 (classical); extended with effects on electric',
-          rangeStart: 16, rangeEnd: 48, rangeColor: '#27AE60',
+          rangeStart: 16, rangeEnd: 48, rangeColor: '#219250',
           technique: 'Classical: fingerstyle. Flamenco: rasgueado (rapid fan strumming). Electric: flatpicking, legato (hammer-ons and pull-offs), bending, vibrato, tapping.',
           legendary: 'Andres Segovia (1893-1987) -- brought classical guitar to the concert hall; Jimi Hendrix (1942-1970) -- reinvented the electric guitar as sound sculpture; Django Reinhardt (1910-1953) -- invented gypsy jazz with two usable fingers.',
           works: 'Bach Lute Suites (transcribed); Villa-Lobos Etudes; Rodrigo Concierto de Aranjuez; virtually all rock and pop.'
@@ -1288,7 +1289,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Chordophone -- struck string (also classified as percussion)',
           construction: 'Cast-iron frame bearing 220+ strings at up to 900 kg total tension. Hammers covered in compressed felt. Three pedals: sustain, soft, sostenuto.',
           range: 'A0 to C8 (88 keys -- the full reference range)',
-          rangeStart: 0, rangeEnd: 87, rangeColor: '#8E44AD',
+          rangeStart: 0, rangeEnd: 87, rangeColor: '#a663c2',
           technique: 'Touch weight, legato and staccato articulation, pedalling, voicing (controlling relative loudness of individual fingers).',
           legendary: 'Franz Liszt (1811-1886) -- invented the modern piano recital; Frederic Chopin (1810-1849) -- made the piano sing; Glenn Gould (1932-1982) -- the most individual interpretive voice of the 20th century; Martha Argerich (b. 1941) -- perhaps the greatest living pianist.',
           works: 'Beethoven Sonatas; Chopin Etudes and Nocturnes; Bach Goldberg Variations; Debussy Preludes.'
@@ -1302,7 +1303,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Chordophone -- plucked string',
           construction: '47 strings spanning 6.5 octaves. Seven pedals alter string tension enabling all keys. Column, neck, and soundboard form a triangular frame.',
           range: 'C1 to G7 (6.5 octaves)',
-          rangeStart: 2, rangeEnd: 78, rangeColor: '#F39C12',
+          rangeStart: 2, rangeEnd: 78, rangeColor: '#b17009',
           technique: 'Plucking with thumb and three fingers of each hand. Harmonics. Glissandi (rapid sweeps across strings, unique to the harp). Bisbigliando (rapid repeated notes creating a shimmering effect).',
           legendary: 'Nicanor Zabaleta (1907-1993) -- brought the harp into the concert hall as a solo instrument; Carlos Salzedo (1885-1961) -- extended harp technique to rival 20th-century piano writing.',
           works: 'Debussy La Mer (orchestral); Ravel Introduction and Allegro; Mozart Flute and Harp Concerto.'
@@ -1316,7 +1317,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Chordophone -- bowed and plucked string',
           construction: 'Four strings (some five-string models) tuned E1-A1-D2-G2. Largest standard string instrument at over 180 cm. Played standing or on a stool.',
           range: 'E1 to G4 (orchestral)',
-          rangeStart: 6, rangeEnd: 42, rangeColor: '#555555',
+          rangeStart: 6, rangeEnd: 42, rangeColor: '#7e7e7e',
           technique: 'German or French bow grip (two distinct schools). Pizzicato slap bass technique in jazz. Thumb position for upper register solos.',
           legendary: 'Charles Mingus (1922-1979) -- jazz composer and virtuoso bassist; Gary Karr (b. 1941) -- premier classical soloist; Ron Carter (b. 1937) -- the most recorded bassist in jazz history.',
           works: 'Bottesini Concertos; Mingus Ah Um (jazz); Koussevitzky Concerto.'
@@ -1332,7 +1333,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Aerophone -- edge-blown (no reed)',
           construction: 'Silver, gold, or platinum tube approximately 67 cm long. Player blows across an embouchure hole. 16 keys cover tone holes.',
           range: 'C4 to D7 (piccolo extends up to C8)',
-          rangeStart: 38, rangeEnd: 75, rangeColor: '#4A90D9',
+          rangeStart: 38, rangeEnd: 75, rangeColor: '#3080d4',
           technique: 'Embouchure control for tone production. Flutter-tonguing (rolling the tongue for a tremolo effect). Harmonics. Extended techniques: multiphonics, whisper tones, key clicks.',
           legendary: 'Jean-Pierre Rampal (1922-2000) -- single-handedly elevated the flute to a recital-worthy solo instrument; James Galway (b. 1939) -- the "man with the golden flute"; Emmanuel Pahud (b. 1970) -- leading contemporary performer.',
           works: 'Bach B minor Suite; Mozart Flute Concertos; Debussy Syrinx (solo flute); Prokofiev Flute Sonata.'
@@ -1346,7 +1347,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Aerophone -- single-reed woodwind',
           construction: 'Cylindrical tube with a single cane reed vibrating against a mouthpiece. Boehm or Oehler keywork. Standard Bb clarinet is ~59 cm.',
           range: 'E3 to G6 (Bb clarinet, over 3 octaves)',
-          rangeStart: 24, rangeEnd: 63, rangeColor: '#27AE60',
+          rangeStart: 24, rangeEnd: 63, rangeColor: '#219250',
           technique: 'Crossing the break (the register transition) is the central technical challenge. Glissando (bending pitch by relaxing embouchure). Altissimo register for extended range.',
           legendary: 'Anton Stadler (1753-1812) -- Mozart\'s friend for whom the Concerto was written; Benny Goodman (1909-1986) -- "King of Swing", brought clarinet to popular music; Sabine Meyer (b. 1959) -- leading contemporary classical player.',
           works: 'Mozart Clarinet Concerto; Brahms Clarinet Quintet; Gershwin Rhapsody in Blue (opening glissando).'
@@ -1360,7 +1361,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Aerophone -- double-reed woodwind',
           construction: 'Conical wooden tube ~65 cm. Double reed made by the player from cane. Reed-making is a craft skill requiring years of dedicated practice.',
           range: 'Bb3 to A6 (2.5 octaves)',
-          rangeStart: 33, rangeEnd: 63, rangeColor: '#E07B5A',
+          rangeStart: 33, rangeEnd: 63, rangeColor: '#d7572d',
           technique: 'Circular breathing allows continuous tone without breaks. Extreme dynamic range from ppp to ff.',
           legendary: 'Heinz Holliger (b. 1939) -- extended the instrument\'s technical possibilities beyond anything previously imagined; Leon Goossens (1897-1988) -- elevated the English orchestral oboe style.',
           works: 'Bach Oboe Concertos; Richard Strauss Oboe Concerto; Britten Six Metamorphoses for solo oboe.'
@@ -1374,7 +1375,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Aerophone -- brass (lip-vibrated)',
           construction: 'Brass tubing approximately 1.4 m total length. Three piston valves route air through additional tubing. Bell projects sound forward.',
           range: 'E3 to D6 (Bb trumpet)',
-          rangeStart: 24, rangeEnd: 61, rangeColor: '#C0392B',
+          rangeStart: 24, rangeEnd: 61, rangeColor: '#d55143',
           technique: 'Lip buzzing into a cup mouthpiece. Half-valving (partially depressing for microtones). Mutes (straight, cup, harmon/wah-wah, plunger) dramatically alter timbre.',
           legendary: 'Louis Armstrong (1901-1971) -- transformed jazz improvisation; Miles Davis (1926-1991) -- reinvented jazz multiple times; Clifford Brown (1930-1956) -- bebop master; Maurice Andre (1933-2012) -- supreme classical technician.',
           works: 'Bach Brandenburg Concerto No. 2; Haydn Trumpet Concerto; Miles Davis Kind of Blue.'
@@ -1388,7 +1389,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Aerophone -- single-reed woodwind (despite metal body)',
           construction: 'Conical metal tube with a single-reed mouthpiece. Family ranges from sopranino to contrabass; alto (Eb) and tenor (Bb) are most common.',
           range: 'Bb3 to F#6 (alto saxophone)',
-          rangeStart: 33, rangeEnd: 60, rangeColor: '#F39C12',
+          rangeStart: 33, rangeEnd: 60, rangeColor: '#b17009',
           technique: 'Altissimo register (above written high F using harmonics). Multiphonics. Subtone (breathy low register). Growling (vocalising into the instrument while playing).',
           legendary: 'Charlie Parker (1920-1955) -- alto saxophone, the voice of bebop; John Coltrane (1926-1967) -- tenor and soprano, sheets of sound and modal exploration; Sonny Rollins (b. 1930) -- the supreme improviser.',
           works: 'John Coltrane A Love Supreme; Charlie Parker Ornithology; Glazunov Saxophone Concerto; Ravel Bolero saxophone solo.'
@@ -1402,7 +1403,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Aerophone -- brass (lip-vibrated)',
           construction: 'About 3.7 m of coiled tubing ending in a widely flared bell -- the widest bore of any brass instrument. The player\'s right hand inside the bell provides subtle pitch and timbre adjustments.',
           range: 'B1 to F5 (the widest range of any brass instrument)',
-          rangeStart: 12, rangeEnd: 52, rangeColor: '#8E44AD',
+          rangeStart: 12, rangeEnd: 52, rangeColor: '#a663c2',
           technique: 'Stopped horn (hand fully inside bell -- a distinct, nasal tone quality). Brassy (open, projecting). Natural horn technique. Extremely sensitive to lip tension.',
           legendary: 'Dennis Brain (1921-1957) -- the supreme horn player of the 20th century; Barry Tuckwell (1931-2020); Stefan Dohr (b. 1963).',
           works: 'Mozart Horn Concertos; Brahms Horn Trio; Britten Serenade for Tenor, Horn and Strings; Richard Strauss Horn Concertos.'
@@ -1418,7 +1419,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Membranophone -- struck (kettle drum)',
           construction: 'Copper or fiberglass hemispherical shell with a calfskin or plastic head. Pedal mechanism tightens or loosens the head to change pitch. Standard orchestra uses 4-5 timpani.',
           range: 'D2 to A3 per drum; four drums cover roughly D2 to D4',
-          rangeStart: 14, rangeEnd: 38, rangeColor: '#C0392B',
+          rangeStart: 14, rangeEnd: 38, rangeColor: '#d55143',
           technique: 'Stroke placement (center vs near edge changes tone). Muffling with the hand. Rolls with two mallets. Glissando (sliding pitch with pedal while rolling).',
           legendary: 'Saul Goodman (1907-1996) -- first chair New York Philharmonic for decades; Evelyn Glennie (b. 1965) -- profoundly deaf percussionist, extraordinary soloist.',
           works: 'Beethoven 9th Symphony (solo passages); Bartok Sonata for Two Pianos and Percussion; Handel Music for the Royal Fireworks.'
@@ -1432,7 +1433,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Membranophone -- struck',
           construction: 'Cylindrical shell (metal or wood) with two heads. 8-14 wire snares stretched across the bottom head. Tension rods tune both heads.',
           range: 'Unpitched (tuned to a region around B3-C4)',
-          rangeStart: 37, rangeEnd: 40, rangeColor: '#27AE60',
+          rangeStart: 37, rangeEnd: 40, rangeColor: '#219250',
           technique: 'Open roll (alternating single strokes at high speed). Flam (grace note before the main stroke). Drag (two grace notes). Rimshot (striking head and rim simultaneously for sharp accent).',
           legendary: 'Gene Krupa (1909-1973) -- made the drum kit a solo instrument; Buddy Rich (1917-1987) -- considered the greatest technical drum kit player; Max Roach (1924-2007) -- elevated jazz drumming to melodic composition.',
           works: 'Ravel Bolero (extended snare drum ostinato); Prokofiev Lieutenant Kije Suite; virtually all popular music.'
@@ -1446,7 +1447,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Idiophone -- struck (mallet percussion)',
           construction: 'Graduated rosewood or synthetic bars on a frame. Tubular metal resonators below each bar. Range typically 4.3 to 5 octaves. Played with 2-4 mallets.',
           range: 'C2 to C7 (5-octave concert marimba)',
-          rangeStart: 14, rangeEnd: 74, rangeColor: '#8E44AD',
+          rangeStart: 14, rangeEnd: 74, rangeColor: '#a663c2',
           technique: 'Four-mallet technique (two mallets per hand). Single-stroke roll, double lateral roll. Independent voicing of each mallet. Dampening with the mallet head.',
           legendary: 'Keiko Abe (b. 1937, Japan) -- expanded solo repertoire and modern technique; Evelyn Glennie (b. 1965) -- solo career spanning classical, jazz and world music.',
           works: 'Bach Cello Suites (transcribed for marimba); Abe Prism; Bartok Music for Strings, Percussion and Celesta.'
@@ -1460,7 +1461,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Both chordophone and idiophone -- hybrid percussion',
           construction: 'Standard concert grand piano with objects placed between strings according to a precise score notation specifying material and node points. Each preparation alters the timbre of specific notes.',
           range: 'Full piano range, but most notes altered beyond recognition',
-          rangeStart: 0, rangeEnd: 87, rangeColor: '#E07B5A',
+          rangeStart: 0, rangeEnd: 87, rangeColor: '#d7572d',
           technique: 'Standard piano technique applied to transformed tones. The performer cannot always predict the exact result -- preparation is partly experimental.',
           legendary: 'John Cage (1912-1992) -- inventor and primary exponent; Maro Ajemian (1921-1978) -- premiere performer of Cage\'s Sonatas; Margaret Leng Tan (b. 1945) -- leading contemporary interpreter.',
           works: 'John Cage Sonatas and Interludes for Prepared Piano; Cage Music of Changes.'
@@ -1474,7 +1475,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Membranophone -- goblet drum',
           construction: 'Goblet-shaped hardwood shell with a goatskin head tensioned by ropes and iron rings. The shape creates three distinct tones: bass (center, open), tone (edge, open), slap (edge, snap technique).',
           range: 'Unpitched; three distinct tonal qualities (bass, tone, slap)',
-          rangeStart: 28, rangeEnd: 48, rangeColor: '#27AE60',
+          rangeStart: 28, rangeEnd: 48, rangeColor: '#219250',
           technique: 'Three fundamental strokes: bass (flat hand center), tone (fingers edge, clear), slap (snapping finger edge, sharp crack). Polyrhythmic interlocking with other drums.',
           legendary: 'Mamady Keita (1950-2021) -- the most celebrated djembe master; Famoudou Konate (b. 1944).',
           works: 'West African traditional ceremonial repertoire; Keita recordings documenting Mande rhythms.'
@@ -1488,7 +1489,7 @@ const mod = modules.find((m) => m.id === 33)!;
           family: 'Membranophone -- two drums (treble + bass)',
           construction: 'Two drums: dayan (right, treble, cylindrical wood, tuned to the tonic) and bayan (left, bass, metal or clay hemispherical). Siyahi loading on both heads.',
           range: 'Dayan tuned to tonic; bayan covers unpitched lower range',
-          rangeStart: 35, rangeEnd: 55, rangeColor: '#F39C12',
+          rangeStart: 35, rangeEnd: 55, rangeColor: '#b17009',
           technique: 'Dozens of named strokes (bols) for each drum. Thaas (straight pattern), kayda (theme and variations), rela (fast pattern). Speed, clarity, and creative improvisation within tala.',
           legendary: 'Alla Rakha (1919-2000) -- partnered with Ravi Shankar for decades; Zakir Hussain (b. 1951) -- the most celebrated living tabla player.',
           works: 'Any Hindustani classical performance; Zakir Hussain collaborations with Western jazz and classical musicians.'
@@ -1521,7 +1522,7 @@ const mod = modules.find((m) => m.id === 33)!;
         + '<div class="sub-card"><div class="instr-detail-cell-label">Construction</div><div class="body-small">' + instr.construction + '</div></div>'
         + '<div class="sub-card"><div class="instr-detail-cell-label">Playing Range</div><div class="body-small">' + instr.range
         + '<div class="gap-above"><div class="range-bar-track">'
-        + '<div class="range-bar-fill" style="left:' + rangeLeft + '%;width:' + rangeWidth + '%;background:' + instr.rangeColor + ';opacity:0.75;"></div>'
+        + '<div class="range-bar-fill" style="left:' + rangeLeft + '%;width:' + rangeWidth + '%;background:' + instr.rangeColor + ';"></div>'
         + '</div><div class="range-bar-poles"><span>A0 (piano low)</span><span>C8 (piano high)</span></div></div>'
         + '</div></div>'
         + '<div class="sub-card"><div class="instr-detail-cell-label">Key Techniques</div><div class="body-small">' + instr.technique + '</div></div>'
@@ -1556,20 +1557,20 @@ const mod = modules.find((m) => m.id === 33)!;
       var container = document.getElementById('instrRangeChart');
       if (!container) return;
       var allInstrs = [
-        { name: 'Piano',            start: 0,  end: 87, color: '#8E44AD' },
-        { name: 'Harp',             start: 2,  end: 78, color: '#F39C12' },
-        { name: 'Violin',           start: 30, end: 81, color: '#4A90D9' },
-        { name: 'Flute',            start: 38, end: 75, color: '#2980B9' },
-        { name: 'Marimba (5-oct)',  start: 14, end: 74, color: '#9B59B6' },
-        { name: 'Cello',            start: 14, end: 62, color: '#E07B5A' },
-        { name: 'Clarinet (Bb)',    start: 24, end: 63, color: '#27AE60' },
-        { name: 'Oboe',             start: 33, end: 63, color: '#D35400' },
-        { name: 'Trumpet (Bb)',     start: 24, end: 61, color: '#C0392B' },
-        { name: 'Alto Sax',         start: 33, end: 60, color: '#E67E22' },
-        { name: 'French Horn',      start: 12, end: 52, color: '#8E44AD' },
-        { name: 'Guitar',           start: 16, end: 48, color: '#27AE60' },
-        { name: 'Double Bass',      start: 6,  end: 42, color: '#555555' },
-        { name: 'Timpani (set)',    start: 14, end: 38, color: '#C0392B' }
+        { name: 'Piano',            start: 0,  end: 87, color: '#a663c2' },
+        { name: 'Harp',             start: 2,  end: 78, color: '#b17009' },
+        { name: 'Violin',           start: 30, end: 81, color: '#3080d4' },
+        { name: 'Flute',            start: 38, end: 75, color: '#2b85c0' },
+        { name: 'Marimba (5-oct)',  start: 14, end: 74, color: '#a367bc' },
+        { name: 'Cello',            start: 14, end: 62, color: '#d7572d' },
+        { name: 'Clarinet (Bb)',    start: 24, end: 63, color: '#219250' },
+        { name: 'Oboe',             start: 33, end: 63, color: '#d65500' },
+        { name: 'Trumpet (Bb)',     start: 24, end: 61, color: '#d55143' },
+        { name: 'Alto Sax',         start: 33, end: 60, color: '#c06616' },
+        { name: 'French Horn',      start: 12, end: 52, color: '#a663c2' },
+        { name: 'Guitar',           start: 16, end: 48, color: '#219250' },
+        { name: 'Double Bass',      start: 6,  end: 42, color: '#7e7e7e' },
+        { name: 'Timpani (set)',    start: 14, end: 38, color: '#d55143' }
       ];
       allInstrs.forEach(function(inst) {
         var row = document.createElement('div');
@@ -1582,7 +1583,7 @@ const mod = modules.find((m) => m.id === 33)!;
         var fill = document.createElement('div');
         var left = (inst.start / 87 * 100).toFixed(1);
         var width = ((inst.end - inst.start) / 87 * 100).toFixed(1);
-        fill.style.cssText = 'position:absolute;top:0;height:100%;border-radius:3px;left:' + left + '%;width:' + width + '%;background:' + inst.color + ';opacity:0.75;';
+        fill.style.cssText = 'position:absolute;top:0;height:100%;border-radius:3px;left:' + left + '%;width:' + width + '%;background:' + inst.color + ';';
         var semVal = document.createElement('div');
         semVal.className = 'bv';
         semVal.style.cssText = 'font-size:10px;color:var(--color-text-tertiary);width:50px;flex-shrink:0;';

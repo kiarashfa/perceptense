@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #E07B5A;
-      --accent-bg: #FDF0EB;
-      --accent-border: #F0B49A;
-    }
     .elem-tab {
       font-size:12px; padding:4px 12px;
       border-radius:var(--border-radius-md);
@@ -195,7 +190,7 @@
 }
 
 .bv-teal {
-  color:#1A6B5A;
+  color:#1f806c;
 }
 
 .pentaoutput {
@@ -213,23 +208,23 @@
 }
 
 .cscale-val-style {
-  color:#c0392b;
+  color:#cf3d2e;
 }
 
 .cscale-val-blue {
-  color:#2980b9;
+  color:#2678ad;
 }
 
 .cscale-val-purple {
-  color:#8e44ad;
+  color:#9c53bb;
 }
 
 .cscale-val-teal {
-  color:#16a085;
+  color:#12806b;
 }
 
 .bv-violet {
-  color:#7B5AB5;
+  color:#8162b8;
 }
 
 /* ── Part G: Instrument family tabs ── */
@@ -308,4 +303,26 @@
   font-size: 9px; color: var(--color-text-tertiary);
   margin-top: 3px;
 }
+
+.bv.text-info { color: var(--color-text-info); }
+.bv.text-warning { color: var(--color-text-warning); }
+.bv.text-success { color: var(--color-text-success); }
+.bv.text-danger { color: var(--color-text-danger); }
+
+html[data-theme="dark"] .bv-teal { color: #259980; }
+html[data-theme="dark"] .cscale-val-style { color: #d96457; }
+html[data-theme="dark"] .cscale-val-blue { color: #2e8fce; }
+html[data-theme="dark"] .cscale-val-purple { color: #ad70c7; }
+html[data-theme="dark"] .cscale-val-teal { color: #159a80; }
+html[data-theme="dark"] .bv-violet { color: #957bc4; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .bv-teal { color: #259980; }
+  html[data-theme="auto"] .cscale-val-style { color: #d96457; }
+  html[data-theme="auto"] .cscale-val-blue { color: #2e8fce; }
+  html[data-theme="auto"] .cscale-val-purple { color: #ad70c7; }
+  html[data-theme="auto"] .cscale-val-teal { color: #159a80; }
+  html[data-theme="auto"] .bv-violet { color: #957bc4; }
+}
+
+.cscale-val.text-accent { color: var(--accent-text); }
   
