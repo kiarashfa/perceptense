@@ -6,8 +6,7 @@ Mass
 How
 much
 things
-weigh
-—
+weigh:
 from
 paperclips
 to
@@ -306,8 +305,7 @@ from
 g
 to
 100,000
-kg
-—
+kg:
 each
 column
 step
@@ -394,8 +392,7 @@ object.
 Build
 your
 weight
-intuition
-—
+intuition:
 no
 looking
 things
@@ -418,8 +415,7 @@ it's
 worth
 knowing
 the
-extremes
-—
+extremes,
 both
 to
 calibrate
@@ -448,8 +444,7 @@ have
 ~25
 trillion
 of
-them
-—
+them,
 totalling
 ~2
 kg
@@ -719,8 +714,7 @@ billion
 kg
 of
 water
-droplets
-—
+droplets,
 yet
 so
 diffuse
@@ -735,8 +729,7 @@ Giza
 kg
 ~6
 billion
-kg
-—
+kg,
 about
 2.3
 million
@@ -814,8 +807,7 @@ small.
 ⚖️
 Mass
 vs.
-Weight
-—
+Weight:
 what's
 the
 difference?
@@ -827,8 +819,7 @@ and
 "mass"
 are
 used
-interchangeably
-—
+interchangeably,
 and
 that's
 fine.
@@ -899,8 +890,7 @@ and
 displaying
 it
 as
-kg
-—
+kg,
 a
 convenient
 convention.
@@ -1162,8 +1152,7 @@ not
 bit
 heavier"
 than
-water
-—
+water:
 it
 is
 almost
@@ -1294,8 +1283,7 @@ young
 ones)
 can
 range
-widely
-—
+widely,
 perhaps
 20–50
 kg
@@ -1343,8 +1331,7 @@ Show
 answer
 About
 0.9
-kg
-—
+kg,
 essentially
 1
 kg.
@@ -1383,8 +1370,7 @@ kind
 held
 in
 bank
-vaults)
-—
+vaults):
 how
 heavy
 is
@@ -1403,8 +1389,7 @@ banks
 weighs
 400
 troy
-ounces
-—
+ounces,
 about
 12.4
 kg.
@@ -1489,8 +1474,7 @@ rate
 at
 "up
 to
-20g"
-—
+20g":
 it
 comfortably
 covers
@@ -1547,8 +1531,7 @@ why
 oil
 floats
 on
-water
-—
+water:
 it's
 less
 dense.
@@ -1560,8 +1543,7 @@ by
 contrast,
 weighs
 ~1,400
-g
-—
+g,
 40%
 heavier
 than

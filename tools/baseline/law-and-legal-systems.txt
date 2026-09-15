@@ -22,8 +22,7 @@ A
 ·
 what
 law
-is
--
+is:
 the
 foundations
 of
@@ -528,8 +527,7 @@ Part
 B
 ·
 public
-law
--
+law:
 the
 state
 and
@@ -1179,8 +1177,7 @@ Part
 C
 ·
 private
-law
--
+law:
 rights
 and
 obligations
@@ -1937,8 +1934,7 @@ Part
 E
 ·
 international
-law
--
+law:
 states,
 courts,
 and
@@ -2391,8 +2387,7 @@ how
 to
 read
 the
-law
--
+law:
 practical
 legal
 literacy
@@ -2861,8 +2856,7 @@ G
 ·
 taxation
 and
-tariffs
--
+tariffs:
 how
 governments
 raise

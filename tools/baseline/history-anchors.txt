@@ -15,8 +15,7 @@ A
 ·
 the
 7
-eras
-—
+eras:
 your
 skeleton
 map
@@ -76,8 +75,7 @@ Part
 B
 ·
 interactive
-timeline
-—
+timeline:
 click
 any
 event
@@ -107,8 +105,7 @@ C
 the
 60
 anchor
-events
-—
+events:
 your
 permanent
 mental
@@ -117,8 +114,7 @@ Part
 D
 ·
 proximity
-shockers
-—
+shockers:
 things
 that
 feel
@@ -161,8 +157,7 @@ The
 pyramids
 are
 genuinely
-ancient
-—
+ancient,
 even
 to
 the
@@ -198,8 +193,7 @@ photo
 of
 Napoleon
 ever
-existed
-—
+existed:
 he
 died
 just
@@ -246,8 +240,7 @@ fax
 service
 opened
 in
-1865
-—
+1865,
 the
 same
 year
@@ -289,8 +282,7 @@ guillotine
 execution
 in
 France
-1977
-—
+1977,
 same
 year
 as
@@ -339,8 +331,7 @@ go
 extinct
 until
 ~1700
-BC
-—
+BC,
 while
 the
 Great
@@ -459,8 +450,7 @@ slavery
 and
 died
 in
-1913
-—
+1913,
 a
 decade
 after
@@ -518,7 +508,6 @@ long
 did
 they
 last?
-—
 empire
 &
 civilisation
@@ -588,8 +577,7 @@ Part
 G
 ·
 concurrent
-worlds
-—
+worlds:
 what
 was
 happening
@@ -625,8 +613,7 @@ Part
 H
 ·
 depth
-calculator
-—
+calculator:
 where
 does
 a
@@ -659,8 +646,7 @@ I
 the
 speed
 of
-change
-—
+change:
 how
 long
 between
@@ -718,8 +704,7 @@ Part
 J
 ·
 history
-quiz
-—
+quiz:
 test
 your
 calibration
@@ -727,8 +712,7 @@ calibration
 questions.
 No
 multiple-choice
-tricks
-—
+tricks:
 just
 "before
 or
@@ -746,8 +730,7 @@ K
 ·
 wars
 in
-depth
-—
+depth:
 the
 conflicts
 that
@@ -756,8 +739,7 @@ the
 world
 Ten
 defining
-conflicts
-—
+conflicts:
 each
 one
 a
@@ -788,8 +770,7 @@ L
 Iran
 through
 the
-ages
-—
+ages:
 3,000
 years
 of
@@ -809,8 +790,7 @@ continuous
 civilisational
 histories
 on
-Earth
-—
+Earth,
 encompassing
 some
 of
@@ -863,8 +843,7 @@ answer
 The
 Long
 19th
-Century
-—
+Century:
 the
 industrialising,
 empire-building
@@ -935,8 +914,7 @@ squarely
 the
 Victorian
 industrial
-age
-—
+age:
 steam
 power,
 nation-states
@@ -1006,8 +984,7 @@ Americas
 (1492)
 and
 today
-(2025)
-—
+(2025),
 533
 years.
 Rome
@@ -1094,8 +1071,7 @@ was
 extraordinarily
 compressed
 with
-change
-—
+change:
 more
 transformation
 per
@@ -1181,8 +1157,7 @@ Germany
 are
 not
 ancient
-history
-—
+history:
 they
 are
 within
@@ -1227,8 +1202,7 @@ Mozart?
 Show
 answer
 Both,
-yes
-—
+yes,
 and
 the
 overlap
@@ -1246,8 +1220,7 @@ Beethoven
 were
 almost
 exact
-contemporaries
-—
+contemporaries,
 born
 one
 year
@@ -1290,12 +1263,10 @@ French
 military.
 All
 three
-—
-Napoleon,
+(Napoleon,
 Beethoven,
 and
-Mozart
-—
+Mozart)
 were
 alive
 simultaneously
@@ -1329,8 +1300,7 @@ closer
 than
 most
 Westerners
-realise
-—
+realise,
 and
 the
 flow
@@ -1409,8 +1379,7 @@ Renaissance
 didn't
 emerge
 from
-nowhere
-—
+nowhere:
 it
 inherited
 from
@@ -1428,8 +1397,7 @@ does
 the
 20th
 century
-represent
-—
+represent,
 and
 why
 does
@@ -1458,8 +1426,7 @@ just
 100
 of
 those
-years
-—
+years,
 exactly
 2%.
 Yet
@@ -1580,8 +1547,7 @@ is
 called
 the
 "Axial
-Age"
-—
+Age":
 within
 a
 few
@@ -1651,8 +1617,7 @@ modern
 democracies.
 Reasonable
 historians
-disagree
-—
+disagree:
 the
 point
 is

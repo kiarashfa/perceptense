@@ -18,7 +18,7 @@ const mod = modules.find((m) => m.id === 38)!;
     <p class="module-subtitle">Blockchain, Bitcoin, DeFi, and the promises and problems of decentralised finance</p>
 
     <!-- ── PART A ── -->
-    <h2 class="sec" id="part-a-the-problem-crypto-solves-trust-without-intermediaries">Part A · the problem crypto solves — trust without intermediaries</h2>
+    <h2 class="sec" id="part-a-the-problem-crypto-solves-trust-without-intermediaries">Part A · the problem crypto solves: trust without intermediaries</h2>
 
     <div class="card-grid-medium" style="margin-bottom:1rem;">
       <div class="card">
@@ -34,23 +34,23 @@ const mod = modules.find((m) => m.id === 38)!;
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:8px;">Cryptography and trust — the foundations</div>
+      <div class="clabel" style="margin-bottom:8px;">Cryptography and trust: the foundations</div>
       <div class="button-set-spaced" id="crypto-basics-btns"></div>
       <div class="explorer-panel" id="crypto-basics-panel">Select a concept above.</div>
     </div>
 
-    <div class="info-block">The common misconception is that Bitcoin made copying digital files impossible. It did not. It made it economically and socially very difficult to rewrite a particular shared history of ownership — and that distinction matters enormously.</div>
+    <div class="info-block">The common misconception is that Bitcoin made copying digital files impossible. It did not. It made it economically and socially very difficult to rewrite a particular shared history of ownership, and that distinction matters enormously.</div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel">Satoshi's Bitcoin whitepaper — what it actually proposed</div>
-      <div class="cnote" style="margin-top:6px;">The nine-page "Bitcoin: A Peer-to-Peer Electronic Cash System" was posted to a cryptography mailing list on 31 October 2008. It proposed a chain of digitally signed transactions, timestamped by a distributed network using proof-of-work, where the longest chain represents the consensus truth. The whitepaper never used the word "blockchain" — that term came later. Satoshi Nakamoto mined the genesis block on 3 January 2009, embedding a newspaper headline: "Chancellor on brink of second bailout for banks." This was both a timestamp and a statement of intent. Satoshi's true identity remains unknown; they disappeared from public communication in 2011, holding an estimated 1.1 million BTC — coins they have never moved.</div>
+      <div class="clabel">Satoshi's Bitcoin whitepaper: what it actually proposed</div>
+      <div class="cnote" style="margin-top:6px;">The nine-page "Bitcoin: A Peer-to-Peer Electronic Cash System" was posted to a cryptography mailing list on 31 October 2008. It proposed a chain of digitally signed transactions, timestamped by a distributed network using proof-of-work, where the longest chain represents the consensus truth. The whitepaper never used the word "blockchain": that term came later. Satoshi Nakamoto mined the genesis block on 3 January 2009, embedding a newspaper headline: "Chancellor on brink of second bailout for banks." This was both a timestamp and a statement of intent. Satoshi's true identity remains unknown; they disappeared from public communication in 2011, holding an estimated 1.1 million BTC, coins they have never moved.</div>
     </div>
 
     <!-- ── PART B ── -->
     <h2 class="sec" id="part-b-how-blockchain-works">Part B · how blockchain works</h2>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">Blockchain anatomy — a visual diagram</div>
+      <div class="clabel" style="margin-bottom:10px;">Blockchain anatomy: a visual diagram</div>
       <div class="scroll-wrap">
         <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; min-width:480px; display:block;">
           <defs>
@@ -90,14 +90,14 @@ const mod = modules.find((m) => m.id === 38)!;
           <text x="430" y="132" font-size="10" fill="var(--color-text-secondary)">Merkle Root: 9b0...</text>
           <rect x="424" y="143" width="162" height="22" rx="5" fill="var(--color-background-tertiary)"/>
           <text x="505" y="158" text-anchor="middle" font-size="10" font-weight="500" fill="var(--color-text-primary)">Hash: 000000006a625...</text>
-          <text x="350" y="192" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)">Each block's "Prev Hash" must match the previous block's hash exactly — altering any block breaks every block after it</text>
+          <text x="350" y="192" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)">Each block's "Prev Hash" must match the previous block's hash exactly: altering any block breaks every block after it</text>
         </svg>
       </div>
       <div class="cnote">Immutability is a consequence of the data structure, not a rule. To alter Block #2, an attacker must also redo the proof-of-work for Block #3, #4, and every block since, faster than the honest network is adding new ones. With Bitcoin's ~600 exahash/s of global hash rate, this is computationally impossible for any realistic attacker.</div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:8px;">Consensus mechanisms — how a decentralised network agrees</div>
+      <div class="clabel" style="margin-bottom:8px;">Consensus mechanisms: how a decentralised network agrees</div>
       <div class="button-set-spaced" id="consensus-btns"></div>
       <div class="explorer-panel" id="consensus-panel">Select a mechanism above.</div>
     </div>
@@ -105,16 +105,16 @@ const mod = modules.find((m) => m.id === 38)!;
     <div class="cgrid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-bottom:1rem;">
       <div class="card">
         <div class="clabel">Mining and validators</div>
-        <div class="cnote" style="margin-top:4px;">Bitcoin miners do not verify transactions out of altruism. They compete for a block reward — currently 3.125 BTC per block after the April 2024 halving, plus transaction fees. This game-theoretic incentive makes honest behaviour more profitable than attacking the network: a miner controlling 51% of hash power would earn more by mining honestly than by attempting a reorg that would likely crash the price of the coins they hold. In Ethereum's proof-of-stake model, validators lock up 32 ETH as collateral. Dishonest validators are "slashed" — a portion of their stake is destroyed. The capital-at-risk creates skin in the game without burning energy.</div>
+        <div class="cnote" style="margin-top:4px;">Bitcoin miners do not verify transactions out of altruism. They compete for a block reward, currently 3.125 BTC per block after the April 2024 halving, plus transaction fees. This game-theoretic incentive makes honest behaviour more profitable than attacking the network: a miner controlling 51% of hash power would earn more by mining honestly than by attempting a reorg that would likely crash the price of the coins they hold. In Ethereum's proof-of-stake model, validators lock up 32 ETH as collateral. Dishonest validators are "slashed": a portion of their stake is destroyed. The capital-at-risk creates skin in the game without burning energy.</div>
       </div>
       <div class="card">
         <div class="clabel">Wallets, keys, and addresses</div>
-        <div class="cnote" style="margin-top:4px;">A Bitcoin wallet does not hold coins. It holds a private key — a 256-bit random number — from which a public key is derived using elliptic curve cryptography, and from which a public address is derived by hashing. Coins are on the blockchain, associated with an address; the private key proves ownership and authorises spending. Lose the private key, lose access permanently. The 12-or-24-word "seed phrase" is simply a human-readable encoding of the private key. "Not your keys, not your coins" became a mantra after the FTX collapse — about $8 billion of customer coins vanished because users had entrusted their keys to Sam Bankman-Fried's exchange rather than holding them directly.</div>
+        <div class="cnote" style="margin-top:4px;">A Bitcoin wallet does not hold coins. It holds a private key, a 256-bit random number, from which a public key is derived using elliptic curve cryptography, and from which a public address is derived by hashing. Coins are on the blockchain, associated with an address; the private key proves ownership and authorises spending. Lose the private key, lose access permanently. The 12-or-24-word "seed phrase" is simply a human-readable encoding of the private key. "Not your keys, not your coins" became a mantra after the FTX collapse: about $8 billion of customer coins vanished because users had entrusted their keys to Sam Bankman-Fried's exchange rather than holding them directly.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">The blockchain trilemma — and where each chain lands</div>
+      <div class="clabel" style="margin-bottom:10px;">The blockchain trilemma, and where each chain lands</div>
       <div class="block-gap">
         <div class="pole-labels-top" style="margin-left:138px;"><span>Decentralised / secure</span><span>Scalable / fast</span></div>
         <div class="data-row-even">
@@ -152,33 +152,33 @@ const mod = modules.find((m) => m.id === 38)!;
     </div>
 
     <!-- ── PART C ── -->
-    <h2 class="sec" id="part-c-bitcoin-the-original-and-what-it-is-and-isn-t">Part C · Bitcoin — the original and what it is (and isn't)</h2>
+    <h2 class="sec" id="part-c-bitcoin-the-original-and-what-it-is-and-isn-t">Part C · Bitcoin: the original and what it is (and isn't)</h2>
 
     <div class="cgrid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-bottom:1rem;">
       <div class="card">
         <div class="clabel">The store of value thesis</div>
-        <div class="cnote" style="margin-top:4px;">Bitcoin's maximum supply is hardcoded at 21 million coins, of which approximately 19.7 million have already been mined. New coins are issued roughly every 10 minutes as a block reward, but that reward halves every 210,000 blocks (roughly four years). The 2024 halving cut it to 3.125 BTC; around 2140, new issuance will stop entirely. The inflation hedge argument holds that because central banks can expand fiat money supply at will (the Fed doubled M2 between 2020 and 2022), a provably scarce asset should hold value over long timeframes. The counterargument: Bitcoin's 30-day volatility has frequently exceeded 80% annualised, making it a poor store of value in any short or medium timeframe — it correlates more with risk appetite than with inflation.</div>
+        <div class="cnote" style="margin-top:4px;">Bitcoin's maximum supply is hardcoded at 21 million coins, of which approximately 19.7 million have already been mined. New coins are issued roughly every 10 minutes as a block reward, but that reward halves every 210,000 blocks (roughly four years). The 2024 halving cut it to 3.125 BTC; around 2140, new issuance will stop entirely. The inflation hedge argument holds that because central banks can expand fiat money supply at will (the Fed doubled M2 between 2020 and 2022), a provably scarce asset should hold value over long timeframes. The counterargument: Bitcoin's 30-day volatility has frequently exceeded 80% annualised, making it a poor store of value in any short or medium timeframe: it correlates more with risk appetite than with inflation.</div>
       </div>
       <div class="card">
         <div class="clabel">Bitcoin as a payment system</div>
-        <div class="cnote" style="margin-top:4px;">Bitcoin was originally titled "A Peer-to-Peer Electronic Cash System" — but it has largely failed at the cash part. Bitcoin's base layer processes about 7 transactions per second, compared to Visa's 24,000. Block confirmation takes 10 minutes on average, and fees spiked to $60 per transaction during the 2021 bull market. The Lightning Network is a layer-2 payment protocol that routes payments through off-chain state channels, settling only occasionally on-chain. El Salvador made Bitcoin legal tender in 2021, but adoption was limited, and the IMF pressured them to scale back the mandate as a condition of a $1.4 billion loan in 2024. The main practical use case for Bitcoin today is as a speculative asset and cross-border settlement rail, not everyday spending.</div>
+        <div class="cnote" style="margin-top:4px;">Bitcoin was originally titled "A Peer-to-Peer Electronic Cash System", but it has largely failed at the cash part. Bitcoin's base layer processes about 7 transactions per second, compared to Visa's 24,000. Block confirmation takes 10 minutes on average, and fees spiked to $60 per transaction during the 2021 bull market. The Lightning Network is a layer-2 payment protocol that routes payments through off-chain state channels, settling only occasionally on-chain. El Salvador made Bitcoin legal tender in 2021, but adoption was limited, and the IMF pressured them to scale back the mandate as a condition of a $1.4 billion loan in 2024. The main practical use case for Bitcoin today is as a speculative asset and cross-border settlement rail, not everyday spending.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">Bitcoin price cycles — major bull and bear phases</div>
+      <div class="clabel" style="margin-bottom:10px;">Bitcoin price cycles: major bull and bear phases</div>
       <div class="scroll-wrap"><div class="wide-min" id="btc-timeline"></div></div>
       <div class="cnote">Each cycle has been driven by a different catalyst: 2013 by Silk Road notoriety and the Cypriot banking crisis; 2017 by ICO mania and retail discovery; 2021 by institutional adoption (Tesla, MicroStrategy) and COVID-era stimulus money; 2024 by the approval of US spot Bitcoin ETFs in January, which attracted over $30 billion of net inflows in their first year.</div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:8px;">Block subsidy per halving era — Bitcoin's declining issuance schedule</div>
+      <div class="clabel" style="margin-bottom:8px;">Block subsidy per halving era, Bitcoin's declining issuance schedule</div>
       <div id="subsidy-chart"></div>
-      <div class="cnote">The subsidy halves every 210,000 blocks. In 2009, miners earned 50 BTC per block; by 2140, the reward rounds to 0 satoshis. From that point, transaction fees must be sufficient to compensate miners — this is the long-run security debate. The chart uses a proportional scale, so the 3.125 BTC era (2024) appears vanishingly small against the original 50 BTC era.</div>
+      <div class="cnote">The subsidy halves every 210,000 blocks. In 2009, miners earned 50 BTC per block; by 2140, the reward rounds to 0 satoshis. From that point, transaction fees must be sufficient to compensate miners: this is the long-run security debate. The chart uses a proportional scale, so the 3.125 BTC era (2024) appears vanishingly small against the original 50 BTC era.</div>
     </div>
 
     <div class="content-panel">
-      <div class="clabel">Bitcoin halving supply model — explore the cumulative schedule</div>
+      <div class="clabel">Bitcoin halving supply model: explore the cumulative schedule</div>
       <p style="font-size:13px; color:var(--color-text-secondary); margin:6px 0 12px;">Drag to see how much BTC will have been mined by each halving event.</p>
       <input type="range" id="halving-slider" min="1" max="32" value="4" oninput="updateHalving(this.value)">
       <div class="slider-labels"><span>Halving #1 (2012)</span><span>Halving #32 (~2140, last)</span></div>
@@ -192,16 +192,16 @@ const mod = modules.find((m) => m.id === 38)!;
     <div class="cgrid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-bottom:1rem;">
       <div class="card">
         <div class="clabel">What Ethereum added</div>
-        <div class="cnote" style="margin-top:4px;">Vitalik Buterin published the Ethereum whitepaper in 2013, at age 19. His insight: Bitcoin's scripting language was deliberately limited to simple payment logic. What if the blockchain were a general-purpose computer? Ethereum added the Ethereum Virtual Machine (EVM) — a sandboxed computing environment that runs on every node simultaneously. Smart contracts are programs stored on this computer. Once deployed, they run exactly as coded, without any possibility of downtime, censorship, or third-party interference. Gas fees are the payment for computation: every operation costs a specific amount of gas, preventing infinite loops from stalling the network. The Merge in September 2022 switched Ethereum from proof-of-work to proof-of-stake, reducing its energy consumption by an estimated 99.95%.</div>
+        <div class="cnote" style="margin-top:4px;">Vitalik Buterin published the Ethereum whitepaper in 2013, at age 19. His insight: Bitcoin's scripting language was deliberately limited to simple payment logic. What if the blockchain were a general-purpose computer? Ethereum added the Ethereum Virtual Machine (EVM), a sandboxed computing environment that runs on every node simultaneously. Smart contracts are programs stored on this computer. Once deployed, they run exactly as coded, without any possibility of downtime, censorship, or third-party interference. Gas fees are the payment for computation: every operation costs a specific amount of gas, preventing infinite loops from stalling the network. The Merge in September 2022 switched Ethereum from proof-of-work to proof-of-stake, reducing its energy consumption by an estimated 99.95%.</div>
       </div>
       <div class="card">
         <div class="clabel">Tokens, NFTs, and the EVM ecosystem</div>
-        <div class="cnote" style="margin-top:4px;">The ERC-20 token standard, introduced in 2015, enabled anyone to issue a fungible token on Ethereum in minutes. This spawned the 2017 ICO boom (and subsequent crash), the 2020 DeFi summer, and thousands of essentially worthless tokens. ERC-721 is the non-fungible token standard: each token is unique and not interchangeable with any other. The 2021 NFT boom peaked when Beeple's digital artwork "Everydays: The First 5000 Days" sold at Christie's for $69 million. The critical misconception: owning an NFT does not mean owning the underlying image file — it means owning a blockchain record pointing to a URL, which may or may not still exist. Most NFT projects lost 90-99% of their peak value by 2023.</div>
+        <div class="cnote" style="margin-top:4px;">The ERC-20 token standard, introduced in 2015, enabled anyone to issue a fungible token on Ethereum in minutes. This spawned the 2017 ICO boom (and subsequent crash), the 2020 DeFi summer, and thousands of essentially worthless tokens. ERC-721 is the non-fungible token standard: each token is unique and not interchangeable with any other. The 2021 NFT boom peaked when Beeple's digital artwork "Everydays: The First 5000 Days" sold at Christie's for $69 million. The critical misconception: owning an NFT does not mean owning the underlying image file: it means owning a blockchain record pointing to a URL, which may or may not still exist. Most NFT projects lost 90-99% of their peak value by 2023.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:8px;">Major blockchain platforms — explore and compare</div>
+      <div class="clabel" style="margin-bottom:8px;">Major blockchain platforms: explore and compare</div>
       <div class="tile-grid-lg chain-grid-3up" id="chain-grid"></div>
       <div class="elem-detail-panel" id="chain-detail"></div>
     </div>
@@ -213,29 +213,29 @@ const mod = modules.find((m) => m.id === 38)!;
     </div>
 
     <!-- ── PART E ── -->
-    <h2 class="sec" id="part-e-defi-decentralised-finance">Part E · DeFi — decentralised finance</h2>
+    <h2 class="sec" id="part-e-defi-decentralised-finance">Part E · DeFi: decentralised finance</h2>
 
     <div class="cgrid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-bottom:1rem;">
       <div class="card">
-        <div class="clabel">What DeFi is — replacing banks with code</div>
-        <div class="cnote" style="margin-top:4px;">Traditional finance requires permission: to open a bank account, to get a loan, to trade an asset. DeFi protocols are open to anyone with an Ethereum address. At its 2021 peak, DeFi held over $180 billion in total value locked (TVL). By 2023, that had collapsed to around $40 billion — primarily because DeFi's yields depend on token inflation and speculative activity that cannot be sustained. The "composability" of DeFi — the fact that protocols can be stacked like building blocks — is real and powerful. It is also a risk amplifier: one failing protocol can trigger cascading liquidations across everything built on top of it.</div>
+        <div class="clabel">What DeFi is: replacing banks with code</div>
+        <div class="cnote" style="margin-top:4px;">Traditional finance requires permission: to open a bank account, to get a loan, to trade an asset. DeFi protocols are open to anyone with an Ethereum address. At its 2021 peak, DeFi held over $180 billion in total value locked (TVL). By 2023, that had collapsed to around $40 billion: primarily because DeFi's yields depend on token inflation and speculative activity that cannot be sustained. The "composability" of DeFi, the fact that protocols can be stacked like building blocks, is real and powerful. It is also a risk amplifier: one failing protocol can trigger cascading liquidations across everything built on top of it.</div>
       </div>
       <div class="card">
-        <div class="clabel">Uniswap and AMMs — prices from pools</div>
-        <div class="cnote" style="margin-top:4px;">Uniswap's x*y=k formula means the product of the two token quantities in a pool must remain constant. If a pool holds 100 ETH and 300,000 USDC, the implied price is ~$3,000 per ETH. A buyer pushing the ETH balance down to 95 must push USDC up to 315,789 — paying ~$3,158 per ETH. Arbitrageurs keep pools near external market prices, which means liquidity providers are effectively selling what rises and buying what falls. This is automated price discovery without an order book, but it introduces impermanent loss for liquidity providers.</div>
+        <div class="clabel">Uniswap and AMMs: prices from pools</div>
+        <div class="cnote" style="margin-top:4px;">Uniswap's x*y=k formula means the product of the two token quantities in a pool must remain constant. If a pool holds 100 ETH and 300,000 USDC, the implied price is ~$3,000 per ETH. A buyer pushing the ETH balance down to 95 must push USDC up to 315,789, paying ~$3,158 per ETH. Arbitrageurs keep pools near external market prices, which means liquidity providers are effectively selling what rises and buying what falls. This is automated price discovery without an order book, but it introduces impermanent loss for liquidity providers.</div>
       </div>
       <div class="card">
-        <div class="clabel">Lending protocols — collateral first</div>
-        <div class="cnote" style="margin-top:4px;">Aave and Compound do not lend like banks. They require overcollateralised loans: a borrower might deposit $10,000 of ETH to borrow $6,000 of USDC. If the collateral value falls below a liquidation threshold, automated liquidators repay the debt and seize the collateral at a discount. There is no personal credit scoring and no relationship with a lender — the code enforces the rules. This makes DeFi lending capital-inefficient but also means it cannot easily fail the way a bank can through fractional reserves.</div>
+        <div class="clabel">Lending protocols: collateral first</div>
+        <div class="cnote" style="margin-top:4px;">Aave and Compound do not lend like banks. They require overcollateralised loans: a borrower might deposit $10,000 of ETH to borrow $6,000 of USDC. If the collateral value falls below a liquidation threshold, automated liquidators repay the debt and seize the collateral at a discount. There is no personal credit scoring and no relationship with a lender: the code enforces the rules. This makes DeFi lending capital-inefficient but also means it cannot easily fail the way a bank can through fractional reserves.</div>
       </div>
       <div class="card">
-        <div class="clabel">Stablecoins — crypto's dollar rail</div>
-        <div class="cnote" style="margin-top:4px;">Stablecoins are the workhorse of DeFi because they remove volatility while keeping blockchain settlement. USDT and USDC are fiat-backed promises; DAI is crypto-collateralised and overcollateralised. TerraUSD was algorithmic and relied on an arbitrage relationship with LUNA to maintain its peg — a mechanism that is only as stable as confidence in the system itself. In May 2022, confidence broke, redemptions accelerated, LUNA supply hyperinflated, and $60 billion of market cap vanished in 72 hours. The lesson: a stablecoin is only as good as its collateral, redemption mechanism, and behaviour under stress.</div>
+        <div class="clabel">Stablecoins: crypto's dollar rail</div>
+        <div class="cnote" style="margin-top:4px;">Stablecoins are the workhorse of DeFi because they remove volatility while keeping blockchain settlement. USDT and USDC are fiat-backed promises; DAI is crypto-collateralised and overcollateralised. TerraUSD was algorithmic and relied on an arbitrage relationship with LUNA to maintain its peg, a mechanism that is only as stable as confidence in the system itself. In May 2022, confidence broke, redemptions accelerated, LUNA supply hyperinflated, and $60 billion of market cap vanished in 72 hours. The lesson: a stablecoin is only as good as its collateral, redemption mechanism, and behaviour under stress.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">DeFi total value locked (TVL) — rise and fall</div>
+      <div class="clabel" style="margin-bottom:10px;">DeFi total value locked (TVL), rise and fall</div>
       <div id="tvl-chart"></div>
       <div class="cnote">TVL is denominated in USD and is doubly volatile: it falls when users withdraw funds and when underlying token prices fall. The 2022 collapse was a sequence of cascading failures: Terra/Luna (May), Three Arrows Capital insolvency (June), Celsius Network freeze (June), and finally FTX (November). Each failure removed liquidity and confidence simultaneously.</div>
     </div>
@@ -243,8 +243,8 @@ const mod = modules.find((m) => m.id === 38)!;
     <div class="danger-block">The word "yield" is dangerous in DeFi. Sometimes it means real fees paid by traders or borrowers. Sometimes it means token emissions that dilute existing holders. Sometimes it means hidden leverage that will unwind violently. The right question is never "what APY?" It is: who is paying me, why, in what asset, and what can break?</div>
 
     <div class="content-panel">
-      <div class="clabel" style="margin-bottom:10px;">Impermanent loss calculator — 50/50 liquidity pool</div>
-      <p style="font-size:13px; color:var(--color-text-secondary); margin:0 0 12px;">Impermanent loss is the cost of providing liquidity when the price ratio of the two pooled tokens changes. Enter the price change of one asset to see how much worse off you are compared to simply holding — before accounting for any trading fees earned.</p>
+      <div class="clabel" style="margin-bottom:10px;">Impermanent loss calculator: 50/50 liquidity pool</div>
+      <p style="font-size:13px; color:var(--color-text-secondary); margin:0 0 12px;">Impermanent loss is the cost of providing liquidity when the price ratio of the two pooled tokens changes. Enter the price change of one asset to see how much worse off you are compared to simply holding, before accounting for any trading fees earned.</p>
       <div class="input-row">
         <div class="calc-field">
           <label>Price change of one asset (%)</label>
@@ -259,11 +259,11 @@ const mod = modules.find((m) => m.id === 38)!;
         </div>
       </div>
       <div class="calc-output" id="il-output">Enter values above and click Calculate.</div>
-      <div class="cnote" style="margin-top:8px;">Formula: pool value relative to hold = 2√r / (1+r), where r is the new price ratio. This ignores gas costs, time-varying fee volume, price path dependence, and smart-contract risk. Impermanent loss is only "impermanent" if the price returns to the entry ratio — if it does not, the loss is realised on exit.</div>
+      <div class="cnote" style="margin-top:8px;">Formula: pool value relative to hold = 2√r / (1+r), where r is the new price ratio. This ignores gas costs, time-varying fee volume, price path dependence, and smart-contract risk. Impermanent loss is only "impermanent" if the price returns to the entry ratio; if it does not, the loss is realised on exit.</div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">DeFi failure modes — where the money actually goes (breakdown by category, 2020-2024)</div>
+      <div class="clabel" style="margin-bottom:10px;">DeFi failure modes: where the money actually goes (breakdown by category, 2020-2024)</div>
       <div id="failure-chart"></div>
       <div class="cnote">Key theft (often through social engineering rather than brute force) and custody fraud account for over half of all losses. Smart contract exploits get the most press but are third. Bridge exploits are disproportionately large in dollar terms because bridges are single points of failure concentrating billions of dollars. Even audited contracts are not safe: the Ronin Bridge hack ($625 million, 2022) exploited compromised validator keys, not the contract code itself.</div>
     </div>
@@ -272,24 +272,24 @@ const mod = modules.find((m) => m.id === 38)!;
     <h2 class="sec" id="part-f-nfts-daos-and-web3">Part F · NFTs, DAOs, and Web3</h2>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">NFT market cycle — trading volume over time</div>
+      <div class="clabel" style="margin-bottom:10px;">NFT market cycle: trading volume over time</div>
       <div id="nft-chart"></div>
-      <div class="cnote">The NFT market collapsed roughly 97% from peak to trough. Legitimate remaining use cases include music royalty tokenisation (artists receive automatic payments when their NFT is resold), gaming items with verifiable scarcity, event ticketing (preventing scalping by tying tickets to identity), and digital certificates of provenance for physical artworks. The core misconception was that "ownership" of an NFT conferred rights over the underlying content — in almost every case it does not.</div>
+      <div class="cnote">The NFT market collapsed roughly 97% from peak to trough. Legitimate remaining use cases include music royalty tokenisation (artists receive automatic payments when their NFT is resold), gaming items with verifiable scarcity, event ticketing (preventing scalping by tying tickets to identity), and digital certificates of provenance for physical artworks. The core misconception was that "ownership" of an NFT conferred rights over the underlying content; in almost every case it does not.</div>
     </div>
 
     <div class="cgrid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-bottom:1rem;">
       <div class="card">
-        <div class="clabel">DAOs — decentralised autonomous organisations</div>
-        <div class="cnote" style="margin-top:4px;">A DAO is an organisation governed by on-chain votes, with rules encoded in smart contracts. Token holders vote on proposals — treasury spending, protocol changes, or personnel decisions. MakerDAO governs the DAI stablecoin system; Uniswap DAO controls a $3 billion treasury. The reality check: voter turnout in most DAOs is below 5%, and governance token ownership is heavily concentrated — the top 10 addresses in many DAOs control over 50% of voting power. The 2016 "The DAO" hack remains instructive: a vulnerability allowed an attacker to drain $60 million of Ether, and the Ethereum community controversially hard-forked the blockchain to reverse the theft, demonstrating that "code is law" has limits when the code contains bugs.</div>
+        <div class="clabel">DAOs: decentralised autonomous organisations</div>
+        <div class="cnote" style="margin-top:4px;">A DAO is an organisation governed by on-chain votes, with rules encoded in smart contracts. Token holders vote on proposals: treasury spending, protocol changes, or personnel decisions. MakerDAO governs the DAI stablecoin system; Uniswap DAO controls a $3 billion treasury. The reality check: voter turnout in most DAOs is below 5%, and governance token ownership is heavily concentrated: the top 10 addresses in many DAOs control over 50% of voting power. The 2016 "The DAO" hack remains instructive: a vulnerability allowed an attacker to drain $60 million of Ether, and the Ethereum community controversially hard-forked the blockchain to reverse the theft, demonstrating that "code is law" has limits when the code contains bugs.</div>
       </div>
       <div class="card">
-        <div class="clabel">Web3 — the vision and the critique</div>
-        <div class="cnote" style="margin-top:4px;">Web1 (1990s) was read-only: static pages. Web2 (2004-present) is read-write but centralised: your content lives on platform servers under platform terms. Web3 promises read-write-own: digital assets, identity, and data controlled by users through cryptographic keys. The critique, articulated by Moxie Marlinspike (Signal founder): users do not want to run servers. In practice, "decentralised" Web3 apps still rely on centralised infrastructure — Alchemy and Infura provide the API nodes most DApps use; a 2022 Cloudflare outage took down large portions of the DeFi ecosystem. The decentralisation is often a frontend illusion over centralised backends.</div>
+        <div class="clabel">Web3: the vision and the critique</div>
+        <div class="cnote" style="margin-top:4px;">Web1 (1990s) was read-only: static pages. Web2 (2004-present) is read-write but centralised: your content lives on platform servers under platform terms. Web3 promises read-write-own: digital assets, identity, and data controlled by users through cryptographic keys. The critique, articulated by Moxie Marlinspike (Signal founder): users do not want to run servers. In practice, "decentralised" Web3 apps still rely on centralised infrastructure: Alchemy and Infura provide the API nodes most DApps use; a 2022 Cloudflare outage took down large portions of the DeFi ecosystem. The decentralisation is often a frontend illusion over centralised backends.</div>
       </div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">Use case maturity — where crypto applications actually stand</div>
+      <div class="clabel" style="margin-bottom:10px;">Use case maturity: where crypto applications actually stand</div>
       <div class="block-gap">
         <div class="pole-labels-top" style="margin-left:138px;"><span>Proven demand</span><span>Speculative / narrative-driven</span></div>
         <div class="data-row-even">
@@ -329,15 +329,15 @@ const mod = modules.find((m) => m.id === 38)!;
     <h2 class="sec" id="part-g-regulation-collapses-and-the-bigger-picture">Part G · regulation, collapses, and the bigger picture</h2>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:8px;">Regulatory stances by region — explore</div>
+      <div class="clabel" style="margin-bottom:8px;">Regulatory stances by region: explore</div>
       <div class="button-set-spaced" id="reg-btns"></div>
       <div class="explorer-panel" id="reg-panel">Select a region above.</div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">Major collapses and failures — a timeline</div>
+      <div class="clabel" style="margin-bottom:10px;">Major collapses and failures: a timeline</div>
       <div id="collapse-timeline"></div>
-      <div class="cnote">The pattern across every major collapse is consistent: (1) an unsustainable yield or price appreciation attracts capital; (2) leverage amplifies the system; (3) a small disruption triggers liquidations; (4) liquidity dries up faster than any regulator can respond. FTX was not a DeFi failure — it was an old-fashioned fraud where customer funds were used to prop up Alameda Research. The crypto framing was largely irrelevant; it was a custody failure with a crypto wrapper.</div>
+      <div class="cnote">The pattern across every major collapse is consistent: (1) an unsustainable yield or price appreciation attracts capital; (2) leverage amplifies the system; (3) a small disruption triggers liquidations; (4) liquidity dries up faster than any regulator can respond. FTX was not a DeFi failure; it was an old-fashioned fraud where customer funds were used to prop up Alameda Research. The crypto framing was largely irrelevant; it was a custody failure with a crypto wrapper.</div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
@@ -347,7 +347,7 @@ const mod = modules.find((m) => m.id === 38)!;
     </div>
 
     <div class="content-panel">
-      <div class="clabel" style="margin-bottom:10px;">Dollar-cost averaging calculator — Bitcoin accumulation</div>
+      <div class="clabel" style="margin-bottom:10px;">Dollar-cost averaging calculator: Bitcoin accumulation</div>
       <div class="input-row">
         <div class="calc-field">
           <label>Monthly investment ($)</label>
@@ -366,11 +366,11 @@ const mod = modules.find((m) => m.id === 38)!;
         </div>
       </div>
       <div class="calc-output" id="dca-output">Enter values above and click Calculate.</div>
-      <div class="cnote" style="margin-top:8px;">This uses a simple compound growth model and does not account for taxes, exchange fees, or Bitcoin's extreme volatility. Historical Bitcoin CAGR from 2015 to 2024 was approximately 50% — but includes multiple 80%+ drawdowns. A 20% annual return assumption is conservative relative to history but aggressive relative to traditional assets. Past performance is not predictive.</div>
+      <div class="cnote" style="margin-top:8px;">This uses a simple compound growth model and does not account for taxes, exchange fees, or Bitcoin's extreme volatility. Historical Bitcoin CAGR from 2015 to 2024 was approximately 50%, but includes multiple 80%+ drawdowns. A 20% annual return assumption is conservative relative to history but aggressive relative to traditional assets. Past performance is not predictive.</div>
     </div>
 
     <div class="card" style="margin-bottom:1rem;">
-      <div class="clabel" style="margin-bottom:10px;">Crypto market composition — what is the market actually made of?</div>
+      <div class="clabel" style="margin-bottom:10px;">Crypto market composition: what is the market actually made of?</div>
       <div class="dist-bar" id="market-dist"></div>
       <div class="key-list" id="market-legend"></div>
       <div class="cnote">Market cap figures as of early 2025. Bitcoin dominance has rebounded from 38% at the 2021 alt-coin peak to ~55% in 2025, as retail speculative interest shifted to memecoins and institutional money concentrated in Bitcoin ETFs. "Other" includes thousands of tokens, most of which have negligible real liquidity.</div>
@@ -383,11 +383,11 @@ const mod = modules.find((m) => m.id === 38)!;
       </div>
       <div class="card" style="background:var(--color-background-danger); border-color:var(--color-border-danger);">
         <div class="clabel" style="color:var(--color-text-danger);">What crypto has failed to deliver (so far)</div>
-        <div class="cnote" style="margin-top:4px; color:var(--color-text-danger);">Everyday payments: crypto is rarely used to buy things. Banking the unbanked: most DeFi requires significant capital and technical literacy — and can become "selling volatile risk to people with fewer protections." Truly decentralised governance: most protocols are controlled by a small group of insiders and VCs. Privacy: Bitcoin is pseudonymous, not anonymous — blockchain analysis firms routinely trace transactions. Web3 applications that non-technical people want to use at scale, beyond speculation.</div>
+        <div class="cnote" style="margin-top:4px; color:var(--color-text-danger);">Everyday payments: crypto is rarely used to buy things. Banking the unbanked: most DeFi requires significant capital and technical literacy, and can become "selling volatile risk to people with fewer protections." Truly decentralised governance: most protocols are controlled by a small group of insiders and VCs. Privacy: Bitcoin is pseudonymous, not anonymous: blockchain analysis firms routinely trace transactions. Web3 applications that non-technical people want to use at scale, beyond speculation.</div>
       </div>
       <div class="card">
         <div class="clabel">Ask who bears loss</div>
-        <div class="cnote" style="margin-top:4px;">Every crypto design has a loss allocation rule. In a bank failure, deposit insurance, regulators, shareholders, creditors, and courts fight over loss over months or years. In crypto, loss may fall instantly and irrevocably on key holders, liquidity providers, token buyers, bridge users, or governance voters. The absence of an intermediary does not mean the absence of trust. It means trust moved — from institutions to code, to auditors, to token distributions, to anonymous developers. Understanding where trust actually lives is the most important question before using any crypto product.</div>
+        <div class="cnote" style="margin-top:4px;">Every crypto design has a loss allocation rule. In a bank failure, deposit insurance, regulators, shareholders, creditors, and courts fight over loss over months or years. In crypto, loss may fall instantly and irrevocably on key holders, liquidity providers, token buyers, bridge users, or governance voters. The absence of an intermediary does not mean the absence of trust. It means trust moved: from institutions to code, to auditors, to token distributions, to anonymous developers. Understanding where trust actually lives is the most important question before using any crypto product.</div>
       </div>
     </div>
 
@@ -397,61 +397,61 @@ const mod = modules.find((m) => m.id === 38)!;
     <div class="qa">
       <div class="qa-q">Is Bitcoin actually scarce if anyone can create a new cryptocurrency?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Bitcoin's 21-million cap is enforced by the rules of the network, but nothing stops anyone from copying Bitcoin's code and creating "Bitcoin2" with the same supply cap. Thousands have done so. The distinction is network effect and security: Bitcoin's value is partly a function of its hash rate (making it the most secure proof-of-work chain by an enormous margin), its liquidity, its regulatory clarity, and its 15-year track record. A copy starts with none of these. The analogy is not "gold vs fake gold" but "original Levi's 501s vs a manufacturer making identical jeans" — technically identical, but the brand and history matter to buyers.</div>
+      <div class="qa-ans">Bitcoin's 21-million cap is enforced by the rules of the network, but nothing stops anyone from copying Bitcoin's code and creating "Bitcoin2" with the same supply cap. Thousands have done so. The distinction is network effect and security: Bitcoin's value is partly a function of its hash rate (making it the most secure proof-of-work chain by an enormous margin), its liquidity, its regulatory clarity, and its 15-year track record. A copy starts with none of these. The analogy is not "gold vs fake gold" but "original Levi's 501s vs a manufacturer making identical jeans", technically identical, but the brand and history matter to buyers.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Could a government just ban Bitcoin?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">China effectively banned it in 2021 — and succeeded in moving the majority of Bitcoin mining out of China within months. But Bitcoin's global node network continued running without interruption. Banning Bitcoin in one country primarily harms citizens of that country, rather than shutting down the network itself. A coordinated global ban would require unprecedented international cooperation. The US approach post-2024 has moved in the opposite direction: Bitcoin ETFs are now listed on NYSE and Nasdaq, and the current administration has explicitly embraced crypto. A ban in the US would face serious constitutional challenges around property rights.</div>
+      <div class="qa-ans">China effectively banned it in 2021, and succeeded in moving the majority of Bitcoin mining out of China within months. But Bitcoin's global node network continued running without interruption. Banning Bitcoin in one country primarily harms citizens of that country, rather than shutting down the network itself. A coordinated global ban would require unprecedented international cooperation. The US approach post-2024 has moved in the opposite direction: Bitcoin ETFs are now listed on NYSE and Nasdaq, and the current administration has explicitly embraced crypto. A ban in the US would face serious constitutional challenges around property rights.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">If blockchain is immutable, how was the 2016 Ethereum hack reversed?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">The Ethereum community voted to execute a hard fork — a change to the protocol rules that rewrote the chain's history to return the stolen funds. The majority of miners adopted the new chain; a minority refused on principle and continued the original chain, now called Ethereum Classic (ETC). This episode revealed that "immutability" in practice means "immutable unless a sufficient majority of stakeholders agree to change it" — much closer to how traditional institutions work than crypto advocates typically acknowledge. It remains the most honest example of the limits of the "code is law" ideology.</div>
+      <div class="qa-ans">The Ethereum community voted to execute a hard fork: a change to the protocol rules that rewrote the chain's history to return the stolen funds. The majority of miners adopted the new chain; a minority refused on principle and continued the original chain, now called Ethereum Classic (ETC). This episode revealed that "immutability" in practice means "immutable unless a sufficient majority of stakeholders agree to change it", much closer to how traditional institutions work than crypto advocates typically acknowledge. It remains the most honest example of the limits of the "code is law" ideology.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Is crypto primarily used for crime?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Chainalysis estimated that in 2023, approximately 0.34% of all cryptocurrency transaction volume was associated with illicit activity. In absolute terms that was about $24 billion, which sounds large until you note that the UN estimates $800 billion to $2 trillion is laundered through traditional financial channels annually. Cash is far more useful for crime: it leaves no audit trail. Bitcoin's blockchain is a permanent, public record — every law enforcement agency now has blockchain analytics tools. The persistent "crypto is for criminals" framing reflects the early Silk Road era and has not kept up with the data.</div>
+      <div class="qa-ans">Chainalysis estimated that in 2023, approximately 0.34% of all cryptocurrency transaction volume was associated with illicit activity. In absolute terms that was about $24 billion, which sounds large until you note that the UN estimates $800 billion to $2 trillion is laundered through traditional financial channels annually. Cash is far more useful for crime: it leaves no audit trail. Bitcoin's blockchain is a permanent, public record: every law enforcement agency now has blockchain analytics tools. The persistent "crypto is for criminals" framing reflects the early Silk Road era and has not kept up with the data.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">What would it actually take for Bitcoin to replace the US dollar?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">The US dollar functions as a global reserve currency because the US has the world's largest economy and deepest capital markets, US Treasuries are the world's primary risk-free asset, and the dollar is stable enough to serve as a unit of account. Bitcoin satisfies none of these conditions currently. To serve as a unit of account, volatility would need to drop to low single-digit percentages annually — comparable to gold's. That would likely require a market cap 50-100x today's. Even ardent Bitcoin proponents like Michael Saylor generally argue for Bitcoin as a reserve asset ("digital gold"), not as a transaction currency replacing the dollar — those are very different claims.</div>
+      <div class="qa-ans">The US dollar functions as a global reserve currency because the US has the world's largest economy and deepest capital markets, US Treasuries are the world's primary risk-free asset, and the dollar is stable enough to serve as a unit of account. Bitcoin satisfies none of these conditions currently. To serve as a unit of account, volatility would need to drop to low single-digit percentages annually, comparable to gold's. That would likely require a market cap 50-100x today's. Even ardent Bitcoin proponents like Michael Saylor generally argue for Bitcoin as a reserve asset ("digital gold"), not as a transaction currency replacing the dollar; those are very different claims.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Who are the real winners from the crypto industry so far?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Early Bitcoin miners and holders who sold near peaks (2013, 2017, 2021). Venture capital funds that invested in infrastructure rather than tokens — Andreessen Horowitz's a16z Crypto raised over $7 billion across its funds. Exchanges: Coinbase generated $3.1 billion in revenue in 2021. Layer-1 blockchain foundations and their early-employee token holders. On the other side: retail investors who bought near peaks — the 2021 peak saw over $1 trillion in aggregate paper wealth destroyed in the subsequent bear market, with losses concentrated among retail participants. The distribution of outcomes has been steeply unequal, with sophisticated early entrants extracting value from subsequent retail waves.</div>
+      <div class="qa-ans">Early Bitcoin miners and holders who sold near peaks (2013, 2017, 2021). Venture capital funds that invested in infrastructure rather than tokens: Andreessen Horowitz's a16z Crypto raised over $7 billion across its funds. Exchanges: Coinbase generated $3.1 billion in revenue in 2021. Layer-1 blockchain foundations and their early-employee token holders. On the other side: retail investors who bought near peaks: the 2021 peak saw over $1 trillion in aggregate paper wealth destroyed in the subsequent bear market, with losses concentrated among retail participants. The distribution of outcomes has been steeply unequal, with sophisticated early entrants extracting value from subsequent retail waves.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">If blockchains are so inefficient, why use them at all?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Use them when the inefficiency buys something valuable: censorship resistance, shared settlement between parties that do not trust one operator, self-custody, or public auditability. A normal database is better for a payroll app, a private inventory system, or a social network run by one company. A blockchain starts making sense when the operator itself is the risk. That is why the strongest use cases cluster around money, settlement, and assets that need neutral infrastructure — not around applications where a trusted company would do the job better, faster, and cheaper.</div>
+      <div class="qa-ans">Use them when the inefficiency buys something valuable: censorship resistance, shared settlement between parties that do not trust one operator, self-custody, or public auditability. A normal database is better for a payroll app, a private inventory system, or a social network run by one company. A blockchain starts making sense when the operator itself is the risk. That is why the strongest use cases cluster around money, settlement, and assets that need neutral infrastructure, not around applications where a trusted company would do the job better, faster, and cheaper.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Is Bitcoin anonymous?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Bitcoin is pseudonymous, not anonymous. Addresses are alphanumeric strings, but every transaction is public forever, so blockchain analytics firms can cluster behaviour and connect addresses to exchanges, sanctions lists, hacks, and real identities. Privacy can improve with careful coin control or dedicated privacy tools (like Wasabi Wallet's CoinJoin), but ordinary users leak information constantly through exchange KYC, on-chain patterns, and IP addresses. Cash is often more private in daily life than transparent blockchains — one of the more counterintuitive facts about Bitcoin's design.</div>
+      <div class="qa-ans">Bitcoin is pseudonymous, not anonymous. Addresses are alphanumeric strings, but every transaction is public forever, so blockchain analytics firms can cluster behaviour and connect addresses to exchanges, sanctions lists, hacks, and real identities. Privacy can improve with careful coin control or dedicated privacy tools (like Wasabi Wallet's CoinJoin), but ordinary users leak information constantly through exchange KYC, on-chain patterns, and IP addresses. Cash is often more private in daily life than transparent blockchains, one of the more counterintuitive facts about Bitcoin's design.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Did Ethereum's Merge make transactions cheaper?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">No. The Merge changed Ethereum's consensus mechanism from proof-of-work to proof-of-stake, cutting energy use by about 99.95%. It did not increase execution capacity enough to significantly reduce gas fees. The cheaper-transaction strategy is rollups and data availability improvements — specifically the Dencun upgrade in March 2024, which introduced "blobs" for L2 data storage and cut L2 fees by roughly 90%. The Merge and the fee reduction are often conflated, but they are entirely separate technical changes with different timelines.</div>
+      <div class="qa-ans">No. The Merge changed Ethereum's consensus mechanism from proof-of-work to proof-of-stake, cutting energy use by about 99.95%. It did not increase execution capacity enough to significantly reduce gas fees. The cheaper-transaction strategy is rollups and data availability improvements, specifically the Dencun upgrade in March 2024, which introduced "blobs" for L2 data storage and cut L2 fees by roughly 90%. The Merge and the fee reduction are often conflated, but they are entirely separate technical changes with different timelines.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Are stablecoins safer than volatile crypto?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">They are safer on price volatility, but they introduce a different set of risks: issuer solvency, reserve quality, legal jurisdiction, and redemption mechanics under stress. A fiat-backed stablecoin depends entirely on the quality and accessibility of its reserves — Tether (USDT) has been criticised for years over reserve transparency. A crypto-collateralised stablecoin like DAI depends on its liquidation system functioning during market crashes. An algorithmic stablecoin that relies mainly on confidence can fail with brutal speed, as TerraUSD demonstrated in May 2022. "Stable" describes the price target, not the underlying risk profile.</div>
+      <div class="qa-ans">They are safer on price volatility, but they introduce a different set of risks: issuer solvency, reserve quality, legal jurisdiction, and redemption mechanics under stress. A fiat-backed stablecoin depends entirely on the quality and accessibility of its reserves: Tether (USDT) has been criticised for years over reserve transparency. A crypto-collateralised stablecoin like DAI depends on its liquidation system functioning during market crashes. An algorithmic stablecoin that relies mainly on confidence can fail with brutal speed, as TerraUSD demonstrated in May 2022. "Stable" describes the price target, not the underlying risk profile.</div>
     </div>
 
     <div class="qa">
@@ -475,23 +475,23 @@ const mod = modules.find((m) => m.id === 38)!;
     const cryptoBasics = {
       hash: {
         title: 'Hash functions',
-        body: 'A hash function takes any input and produces a fixed-length output (SHA-256 always produces 64 hex characters). Critical properties: deterministic (same input, same output), one-way (you cannot reverse it to find the input), and avalanche-effect (changing one character in the input completely changes the output). Bitcoin uses SHA-256 twice. Hashes serve as tamper-evident fingerprints: if you know the hash of a 1GB file, you can verify the file has not been altered by recomputing the hash in seconds. Miners search for a nonce such that the block header hash falls below a target value — this is the "work" in proof-of-work.'
+        body: 'A hash function takes any input and produces a fixed-length output (SHA-256 always produces 64 hex characters). Critical properties: deterministic (same input, same output), one-way (you cannot reverse it to find the input), and avalanche-effect (changing one character in the input completely changes the output). Bitcoin uses SHA-256 twice. Hashes serve as tamper-evident fingerprints: if you know the hash of a 1GB file, you can verify the file has not been altered by recomputing the hash in seconds. Miners search for a nonce such that the block header hash falls below a target value: this is the "work" in proof-of-work.'
       },
       pubkey: {
         title: 'Public/private key cryptography',
-        body: 'Asymmetric cryptography uses a mathematically linked key pair. The private key is a secret that must never be exposed. The public key (and the address derived from it) can be shared freely. Ownership becomes the ability to sign: the private key creates proof of authorisation; the public key lets anyone verify it without learning the private key. The maths (elliptic curve cryptography over secp256k1) makes deriving the private key from the public key computationally infeasible — requiring more operations than there are atoms in the observable universe on any foreseeable hardware. Self-custody is powerful precisely because no account reset exists.'
+        body: 'Asymmetric cryptography uses a mathematically linked key pair. The private key is a secret that must never be exposed. The public key (and the address derived from it) can be shared freely. Ownership becomes the ability to sign: the private key creates proof of authorisation; the public key lets anyone verify it without learning the private key. The maths (elliptic curve cryptography over secp256k1) makes deriving the private key from the public key computationally infeasible, requiring more operations than there are atoms in the observable universe on any foreseeable hardware. Self-custody is powerful precisely because no account reset exists.'
       },
       sig: {
         title: 'Digital signatures',
-        body: 'A digital signature proves that a private key approved a specific message, and that it has not been altered. In Bitcoin, when you send a transaction, your wallet signs it with your private key. Miners verify the signature using your public key before including it in a block. This means transactions cannot be forged — only the keyholder can authorise a spend from their address. This is the mechanism that eliminates the need for a trusted intermediary in payment verification: you can broadcast a transaction through entirely hostile networks without trusting the messenger, because the signature travels with it.'
+        body: 'A digital signature proves that a private key approved a specific message, and that it has not been altered. In Bitcoin, when you send a transaction, your wallet signs it with your private key. Miners verify the signature using your public key before including it in a block. This means transactions cannot be forged, only the keyholder can authorise a spend from their address. This is the mechanism that eliminates the need for a trusted intermediary in payment verification: you can broadcast a transaction through entirely hostile networks without trusting the messenger, because the signature travels with it.'
       },
       merkle: {
         title: 'Merkle trees',
-        body: 'A Merkle tree is a binary tree of hashes. Each leaf node is a transaction hash; each parent node is the hash of its two children; the root ("Merkle root") summarises all transactions in the block in a single 32-byte hash. This structure makes it computationally cheap to prove that a specific transaction is included in a block (a "Merkle proof") without downloading the entire blockchain. Light clients — mobile wallets — use Merkle proofs to verify transactions without running a full node, which is why Bitcoin can be used on a phone without storing 600GB of blockchain data.'
+        body: 'A Merkle tree is a binary tree of hashes. Each leaf node is a transaction hash; each parent node is the hash of its two children; the root ("Merkle root") summarises all transactions in the block in a single 32-byte hash. This structure makes it computationally cheap to prove that a specific transaction is included in a block (a "Merkle proof") without downloading the entire blockchain. Light clients, mobile wallets, use Merkle proofs to verify transactions without running a full node, which is why Bitcoin can be used on a phone without storing 600GB of blockchain data.'
       },
       satoshi: {
         title: 'Satoshi Nakamoto',
-        body: 'The pseudonymous inventor of Bitcoin posted the nine-page whitepaper on 31 October 2008 and mined the genesis block on 3 January 2009, embedding: "Chancellor on brink of second bailout for banks." Satoshi communicated via email and forum posts until April 2011, then disappeared entirely. Their true identity remains unknown despite decades of speculation. Estimates suggest they hold around 1.1 million BTC — worth over $100 billion at peak prices — in coins they have never moved. The decision not to sell, ever, is itself part of Bitcoin\'s founding mythology: the creator had no monetary incentive to undermine what they built.'
+        body: 'The pseudonymous inventor of Bitcoin posted the nine-page whitepaper on 31 October 2008 and mined the genesis block on 3 January 2009, embedding: "Chancellor on brink of second bailout for banks." Satoshi communicated via email and forum posts until April 2011, then disappeared entirely. Their true identity remains unknown despite decades of speculation. Estimates suggest they hold around 1.1 million BTC, worth over $100 billion at peak prices, in coins they have never moved. The decision not to sell, ever, is itself part of Bitcoin\'s founding mythology: the creator had no monetary incentive to undermine what they built.'
       }
     };
 
@@ -519,19 +519,19 @@ const mod = modules.find((m) => m.id === 38)!;
     const consensusData = {
       pow: {
         title: 'Proof of Work',
-        body: 'Miners compete to find a "nonce" — a number — such that hashing the block header produces a result below a target value (starts with enough zeros). This requires trillions of hash computations per second and is the definition of "work." The difficulty adjusts every 2,016 blocks (~2 weeks) to keep block time at ~10 minutes regardless of how much hash rate joins the network. PoW is battle-tested — 15 years without a successful 51% attack on Bitcoin — but consumes ~150 TWh/year of electricity. It is the only consensus mechanism that has run a trillion-dollar network at scale for over a decade.'
+        body: 'Miners compete to find a "nonce", a number, such that hashing the block header produces a result below a target value (starts with enough zeros). This requires trillions of hash computations per second and is the definition of "work." The difficulty adjusts every 2,016 blocks (~2 weeks) to keep block time at ~10 minutes regardless of how much hash rate joins the network. PoW is battle-tested, 15 years without a successful 51% attack on Bitcoin, but consumes ~150 TWh/year of electricity. It is the only consensus mechanism that has run a trillion-dollar network at scale for over a decade.'
       },
       pos: {
         title: 'Proof of Stake',
-        body: 'Validators lock up ("stake") cryptocurrency as collateral. They are selected to propose and attest to blocks in proportion to their stake. Dishonest behaviour — signing two conflicting blocks — results in "slashing," where a portion of the stake is destroyed. Ethereum\'s PoS requires 32 ETH to run a validator node (~$80,000 at current prices), creating a high minimum that many users access through staking pools like Lido. PoS uses 99.95% less energy than PoW. The theoretical criticism: it may entrench the wealthy (large stakers earn more), though proponents argue PoW already entrenches industrial miners with cheap electricity.'
+        body: 'Validators lock up ("stake") cryptocurrency as collateral. They are selected to propose and attest to blocks in proportion to their stake. Dishonest behaviour, signing two conflicting blocks, results in "slashing," where a portion of the stake is destroyed. Ethereum\'s PoS requires 32 ETH to run a validator node (~$80,000 at current prices), creating a high minimum that many users access through staking pools like Lido. PoS uses 99.95% less energy than PoW. The theoretical criticism: it may entrench the wealthy (large stakers earn more), though proponents argue PoW already entrenches industrial miners with cheap electricity.'
       },
       dpos: {
         title: 'Delegated Proof of Stake',
-        body: 'Token holders vote for a small set of "delegates" or "block producers" (typically 21, as in EOS or BNB Chain) who rotate through block production. This dramatically increases throughput — BNB Chain processes ~2,000 TPS — but sacrifices decentralisation. With only 21 validators, collusion is far easier than in a network with 500,000+ Ethereum validators. DPoS chains have experienced coordinated governance attacks and cartel behaviour among validator sets. Solana uses a variant called Tower BFT, which is closer to practical Byzantine fault tolerance combined with a verifiable delay function for ordering.'
+        body: 'Token holders vote for a small set of "delegates" or "block producers" (typically 21, as in EOS or BNB Chain) who rotate through block production. This dramatically increases throughput, BNB Chain processes ~2,000 TPS, but sacrifices decentralisation. With only 21 validators, collusion is far easier than in a network with 500,000+ Ethereum validators. DPoS chains have experienced coordinated governance attacks and cartel behaviour among validator sets. Solana uses a variant called Tower BFT, which is closer to practical Byzantine fault tolerance combined with a verifiable delay function for ordering.'
       },
       pbft: {
         title: 'Practical Byzantine Fault Tolerance',
-        body: 'PBFT and its derivatives (used in Cosmos, Algorand) require validators to communicate directly with each other in rounds to achieve consensus, rather than competing via hash power. This achieves near-instant finality — once a block is committed, it cannot be reversed — but does not scale well beyond ~100-200 validators before communication overhead becomes prohibitive. Cosmos\'s Tendermint consensus achieves 1-6 second finality with up to 175 validators. The trade-off is that the validator set must be known in advance, requiring some permissioning compared to the open participation of PoW.'
+        body: 'PBFT and its derivatives (used in Cosmos, Algorand) require validators to communicate directly with each other in rounds to achieve consensus, rather than competing via hash power. This achieves near-instant finality, once a block is committed, it cannot be reversed, but does not scale well beyond ~100-200 validators before communication overhead becomes prohibitive. Cosmos\'s Tendermint consensus achieves 1-6 second finality with up to 175 validators. The trade-off is that the validator set must be known in advance, requiring some permissioning compared to the open participation of PoW.'
       }
     };
 
@@ -571,7 +571,7 @@ const mod = modules.find((m) => m.id === 38)!;
       { label: '2028 est.', val: 1.5625, display: '1.5625 BTC' },
       { label: '2032 est.', val: 0.78125, display: '0.781 BTC' }
     ];
-    let subHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Block reward (BTC) per era — proportional bars</div>';
+    let subHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Block reward (BTC) per era: proportional bars</div>';
     subsidyData.forEach(function(d) {
       const pct = (d.val / 50 * 100).toFixed(2);
       subHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(pct, 0.5) + '%;background:var(--accent);"><span class="bv" style="color:#000;">' + d.display + '</span></div></div>';
@@ -621,17 +621,17 @@ const mod = modules.find((m) => m.id === 38)!;
       {
         id: 'bnb', label: 'BNB Chain', sub: 'DPoS · ~2k TPS', icon: 'B',
         title: 'BNB Chain (BSC)',
-        body: 'Binance\'s EVM-compatible chain. Launched 2020. Only 21 validators (all originally affiliated with Binance), making it the most centralised major chain. Extremely cheap fees (typically under $0.05). High throughput via delegated proof of stake. The ecosystem has been disproportionately targeted by rug pulls and scams due to low deployment costs and high retail traffic. In October 2022, a cross-chain bridge exploit drained $568 million, temporarily halting the entire chain — something impossible on Bitcoin or Ethereum.'
+        body: 'Binance\'s EVM-compatible chain. Launched 2020. Only 21 validators (all originally affiliated with Binance), making it the most centralised major chain. Extremely cheap fees (typically under $0.05). High throughput via delegated proof of stake. The ecosystem has been disproportionately targeted by rug pulls and scams due to low deployment costs and high retail traffic. In October 2022, a cross-chain bridge exploit drained $568 million, temporarily halting the entire chain, something impossible on Bitcoin or Ethereum.'
       },
       {
         id: 'arb', label: 'Arbitrum', sub: 'ETH L2 · fast', icon: 'A',
         title: 'Arbitrum (ARB)',
-        body: 'Ethereum\'s largest Layer-2 by TVL, using "optimistic rollup" technology. Transactions are batched off-chain, compressed, and posted to Ethereum mainnet. "Optimistic" means transactions are assumed valid by default; a 7-day challenge period allows fraudulent ones to be disputed. Fees are typically 10-100x cheaper than Ethereum mainnet. Arbitrum processes over 3 million transactions per day. It inherits Ethereum\'s security — unlike a separate layer-1, an Arbitrum attacker would need to break Ethereum itself to steal funds. ARB governance token launched in March 2023.'
+        body: 'Ethereum\'s largest Layer-2 by TVL, using "optimistic rollup" technology. Transactions are batched off-chain, compressed, and posted to Ethereum mainnet. "Optimistic" means transactions are assumed valid by default; a 7-day challenge period allows fraudulent ones to be disputed. Fees are typically 10-100x cheaper than Ethereum mainnet. Arbitrum processes over 3 million transactions per day. It inherits Ethereum\'s security: unlike a separate layer-1, an Arbitrum attacker would need to break Ethereum itself to steal funds. ARB governance token launched in March 2023.'
       },
       {
         id: 'ada', label: 'Cardano', sub: 'PoS · research-led', icon: '₳',
         title: 'Cardano (ADA)',
-        body: 'Launched 2017 by Ethereum co-founder Charles Hoskinson, with an academic research-driven approach: every protocol upgrade goes through peer-reviewed papers. This has made development extremely slow — smart contracts only launched in September 2021, years after Ethereum. Ouroboros is its custom proof-of-stake protocol. Cardano has a dedicated community and significant market cap but relatively little real on-chain activity compared to Ethereum or Solana. Often criticised as a "research project" with limited production adoption; defenders argue its rigorous approach will produce more secure code long-term.'
+        body: 'Launched 2017 by Ethereum co-founder Charles Hoskinson, with an academic research-driven approach: every protocol upgrade goes through peer-reviewed papers. This has made development extremely slow: smart contracts only launched in September 2021, years after Ethereum. Ouroboros is its custom proof-of-stake protocol. Cardano has a dedicated community and significant market cap but relatively little real on-chain activity compared to Ethereum or Solana. Often criticised as a "research project" with limited production adoption; defenders argue its rigorous approach will produce more secure code long-term.'
       }
     ];
 
@@ -675,7 +675,7 @@ const mod = modules.find((m) => m.id === 38)!;
       { label: 'Recovery (Jan 2024)', val: 58, pct: 32, col: '#E07B2A', text: '#000' },
       { label: 'Bull peak (Dec 2024)', val: 120, pct: 67, col: '#E07B2A', text: '#000' }
     ];
-    let tvlHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">DeFi total value locked — $bn</div>';
+    let tvlHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">DeFi total value locked: $bn</div>';
     tvlData.forEach(function(d) {
       tvlHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + d.pct + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">$' + d.val + 'bn</span></div></div>';
     });
@@ -727,7 +727,7 @@ const mod = modules.find((m) => m.id === 38)!;
       { label: 'Dec 2023', val: 1.8, pct: 2.6, col: '#c0392b', text: '#fff' },
       { label: 'Jan 2025', val: 2.2, pct: 3.2, col: '#888', text: '#000' }
     ];
-    let nftHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">NFT monthly trading volume — $bn (OpenSea + Blur combined)</div>';
+    let nftHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">NFT monthly trading volume: $bn (OpenSea + Blur combined)</div>';
     nftData.forEach(function(d) {
       nftHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">$' + d.val + 'bn</span></div></div>';
     });
@@ -741,15 +741,15 @@ const mod = modules.find((m) => m.id === 38)!;
       },
       eu: {
         title: 'European Union (MiCA)',
-        body: 'The EU passed MiCA (Markets in Crypto-Assets Regulation) in 2023 — the world\'s most comprehensive crypto regulatory framework. It came into full force in December 2024. MiCA establishes clear categories for crypto-assets, requires stablecoin issuers to maintain sufficient reserves and face volume limits, mandates licensing for crypto-asset service providers, and bans anonymous tokens. It explicitly exempted truly decentralised protocols with no identifiable issuer. MiCA is not perfect, but it is a serious attempt at one regional rulebook — a single framework replacing a patchwork of national approaches. Critics argue it creates compliance burdens that will drive innovation elsewhere; proponents argue it creates legal certainty that attracts institutional capital.'
+        body: 'The EU passed MiCA (Markets in Crypto-Assets Regulation) in 2023: the world\'s most comprehensive crypto regulatory framework. It came into full force in December 2024. MiCA establishes clear categories for crypto-assets, requires stablecoin issuers to maintain sufficient reserves and face volume limits, mandates licensing for crypto-asset service providers, and bans anonymous tokens. It explicitly exempted truly decentralised protocols with no identifiable issuer. MiCA is not perfect, but it is a serious attempt at one regional rulebook: a single framework replacing a patchwork of national approaches. Critics argue it creates compliance burdens that will drive innovation elsewhere; proponents argue it creates legal certainty that attracts institutional capital.'
       },
       china: {
-        title: 'China — ban trading, keep the research',
-        body: 'China moved aggressively against crypto trading and mining, culminating in the September 2021 crackdown that pushed a large share of Bitcoin hash rate out of the country. The state did not reject digital finance: it pursued the digital yuan (e-CNY) CBDC and controlled blockchain infrastructure. Bitcoin\'s hash rate dropped ~50% in weeks, then fully recovered within six months as miners relocated to Kazakhstan, Russia, and the US — demonstrating that the Bitcoin network is essentially unbannable. Chinese citizens can still access crypto via VPNs but face legal risk. The ban has not prevented Chinese nationals from being among the largest crypto holders globally, typically through offshore entities.'
+        title: 'China: ban trading, keep the research',
+        body: 'China moved aggressively against crypto trading and mining, culminating in the September 2021 crackdown that pushed a large share of Bitcoin hash rate out of the country. The state did not reject digital finance: it pursued the digital yuan (e-CNY) CBDC and controlled blockchain infrastructure. Bitcoin\'s hash rate dropped ~50% in weeks, then fully recovered within six months as miners relocated to Kazakhstan, Russia, and the US, demonstrating that the Bitcoin network is essentially unbannable. Chinese citizens can still access crypto via VPNs but face legal risk. The ban has not prevented Chinese nationals from being among the largest crypto holders globally, typically through offshore entities.'
       },
       other: {
         title: 'El Salvador, UAE, and emerging markets',
-        body: 'El Salvador made Bitcoin legal tender in September 2021 — symbolically huge, practically mixed. The Chivo wallet saw initial adoption but declining use, and everyday payment adoption remained limited. It showed that sovereign adoption can move narratives, but legal tender status does not automatically create merchant demand, price stability, or broad trust. In January 2024, El Salvador agreed to remove Bitcoin\'s legal tender status as an IMF loan condition. The UAE (DIFC and ADGM) has become a major crypto hub offering clear regulatory frameworks and zero capital gains tax. Nigeria, Turkey, Argentina, and other high-inflation emerging markets have seen grassroots crypto adoption driven by currency devaluation — arguably the strongest real-world validation of Bitcoin\'s value proposition.'
+        body: 'El Salvador made Bitcoin legal tender in September 2021, symbolically huge, practically mixed. The Chivo wallet saw initial adoption but declining use, and everyday payment adoption remained limited. It showed that sovereign adoption can move narratives, but legal tender status does not automatically create merchant demand, price stability, or broad trust. In January 2024, El Salvador agreed to remove Bitcoin\'s legal tender status as an IMF loan condition. The UAE (DIFC and ADGM) has become a major crypto hub offering clear regulatory frameworks and zero capital gains tax. Nigeria, Turkey, Argentina, and other high-inflation emerging markets have seen grassroots crypto adoption driven by currency devaluation, arguably the strongest real-world validation of Bitcoin\'s value proposition.'
       }
     };
 
@@ -788,7 +788,7 @@ const mod = modules.find((m) => m.id === 38)!;
       { label: 'YouTube streaming', val: 244, pct: 93.8, col: '#c0392b', text: '#fff' },
       { label: 'Ethereum (post-Merge)', val: 0.01, pct: 0.004, col: '#627EEA', text: '#000' }
     ];
-    let energyHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Estimated annual energy consumption — TWh/year</div>';
+    let energyHtml = '<div style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin-bottom:8px;">Estimated annual energy consumption: TWh/year</div>';
     energyData.forEach(function(d) {
       energyHtml += '<div class="bar-row"><div class="bl">' + d.label + '</div><div class="bb" style="width:' + Math.max(d.pct,0.5) + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.text + ';">' + d.val + ' TWh</span></div></div>';
     });

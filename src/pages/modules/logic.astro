@@ -16,7 +16,7 @@ const mod = modules.find((m) => m.id === 47)!;
     </div>
     <p class="module-subtitle">The rules of valid reasoning, formal systems, and the paradoxes that break them</p>
 
-    <h2 class="sec" id="part-a-what-logic-is-the-science-of-valid-reasoning">Part A - what logic is: the science of valid reasoning</h2>
+    <h2 class="sec" id="part-a-what-logic-is-the-science-of-valid-reasoning">Part A: what logic is: the science of valid reasoning</h2>
     <div class="teaser-grid">
       <div class="teaser-card">
         <div class="teaser-num">Overview</div>
@@ -44,7 +44,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="muted-copy-large">Aristotle, writing around 350 BCE, made the syllogism famous: all humans are mortal; Socrates is human; therefore Socrates is mortal. The Stoics then developed propositional logic, with if-then arguments closer to modern computing. George Boole turned logic into algebra in 1847. Gottlob Frege's 1879 <span class="mono">Begriffsschrift</span> added quantifiers and variables, which is why modern logic can say "for every number there is a larger number" without pretending every argument is about Socrates. The short version: logic moved from classifying sentences to designing languages precise enough for mathematics and machines.</div>
     </div>
 
-    <h2 class="sec" id="part-b-classical-logic-the-foundations">Part B - classical logic: the foundations</h2>
+    <h2 class="sec" id="part-b-classical-logic-the-foundations">Part B: classical logic: the foundations</h2>
     <div class="diagram-card">
       <div class="chart-title">Argument anatomy</div>
       <svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flow diagram showing how premises and inference rules produce a conclusion">
@@ -149,7 +149,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="fine-print">These are reusable argument skeletons. Logic asks whether the skeleton preserves truth; other fields decide whether the starting premises deserve belief.</div>
     </div>
 
-    <h2 class="sec" id="part-c-fallacies-the-patterns-of-bad-reasoning">Part C - fallacies: the patterns of bad reasoning</h2>
+    <h2 class="sec" id="part-c-fallacies-the-patterns-of-bad-reasoning">Part C: fallacies: the patterns of bad reasoning</h2>
     <div class="button-row-compact" aria-label="Fallacy explorer">
       <button onclick="showFallacy('consequent', this)">Affirming consequent</button>
       <button onclick="showFallacy('antecedent', this)">Denying antecedent</button>
@@ -180,7 +180,7 @@ const mod = modules.find((m) => m.id === 47)!;
 
     <div class="logic-warning">A bias is not automatically a fallacy. Confirmation bias is a psychological tendency to seek friendly evidence; a fallacy is a defect in an argument. They overlap when a person turns selective attention into a conclusion, as in "I found three stories that confirm my belief, so the belief is established."</div>
 
-    <h2 class="sec" id="part-d-formal-systems-and-their-limits-godel-hilbert-and-turing">Part D - formal systems and their limits: Godel, Hilbert, and Turing</h2>
+    <h2 class="sec" id="part-d-formal-systems-and-their-limits-godel-hilbert-and-turing">Part D: formal systems and their limits: Godel, Hilbert, and Turing</h2>
     <div id="logic-timeline" class="scroll-panel"></div>
 
     <div class="cgrid">
@@ -216,7 +216,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div id="selfref-output" class="live-result"></div>
     </div>
 
-    <h2 class="sec" id="part-e-probability-and-decision-theory-logic-under-uncertainty">Part E - probability and decision theory: logic under uncertainty</h2>
+    <h2 class="sec" id="part-e-probability-and-decision-theory-logic-under-uncertainty">Part E: probability and decision theory: logic under uncertainty</h2>
     <div class="calc-box">
       <div class="chart-title">Bayes calculator: base rates change everything</div>
       <div class="field-grid">
@@ -264,7 +264,7 @@ const mod = modules.find((m) => m.id === 47)!;
       </div>
     </div>
 
-    <h2 class="sec" id="part-f-logical-and-self-reference-paradoxes">Part F - logical and self-reference paradoxes</h2>
+    <h2 class="sec" id="part-f-logical-and-self-reference-paradoxes">Part F: logical and self-reference paradoxes</h2>
     <div class="button-row-compact" aria-label="Self reference paradoxes">
       <button onclick="showParadox('liar', this)">Liar</button>
       <button onclick="showParadox('russell', this)">Russell</button>
@@ -276,7 +276,7 @@ const mod = modules.find((m) => m.id === 47)!;
 
     <div class="logic-note">Self-reference is not automatically forbidden. A book can say "this book has 300 pages" without exploding. The danger appears when a system is strong enough to encode statements about its own truth or provability while also pretending there is only one level of language. Alfred Tarski's hierarchy separates object language from metalanguage precisely to stop truth from chasing its own tail.</div>
 
-    <h2 class="sec" id="part-g-mathematical-and-infinity-paradoxes">Part G - mathematical and infinity paradoxes</h2>
+    <h2 class="sec" id="part-g-mathematical-and-infinity-paradoxes">Part G: mathematical and infinity paradoxes</h2>
     <div class="tile-grid-xs" aria-label="Infinity paradox explorer">
       <div class="elem-card" onclick="showInfinity('zeno', this)">
         <div class="elem-icon"><i class="fa-solid fa-person-running"></i></div>
@@ -316,7 +316,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div id="birthday-output" class="live-result"></div>
     </div>
 
-    <h2 class="sec" id="part-h-probability-and-decision-paradoxes">Part H - probability and decision paradoxes</h2>
+    <h2 class="sec" id="part-h-probability-and-decision-paradoxes">Part H: probability and decision paradoxes</h2>
     <div class="logic-bar-chart">
       <div class="chart-title">Monty Hall win rates after the host opens a goat door</div>
       <div class="bar-row"><div class="bl">Always switch</div><div class="bb"><div class="bar-fill" data-width="66.7" data-color="var(--accent)"></div></div><div class="bv">66.7%</div></div>
@@ -372,7 +372,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div id="ev-result" class="calc-result"></div>
     </div>
 
-    <h2 class="sec" id="part-i-philosophical-and-metaphysical-paradoxes">Part I - philosophical and metaphysical paradoxes</h2>
+    <h2 class="sec" id="part-i-philosophical-and-metaphysical-paradoxes">Part I: philosophical and metaphysical paradoxes</h2>
     <div class="scale-box">
       <div class="chart-title">Paradoxes by what they pressure</div>
       <div class="scale-poles">
@@ -405,7 +405,7 @@ const mod = modules.find((m) => m.id === 47)!;
       <div class="muted-copy-large">The Sorites paradox pressures vague predicates like "heap" and "bald." The Ship of Theseus pressures identity through time. The Fermi paradox pressures estimates about life, technology, and detectability in a galaxy with roughly 100 to 400 billion stars. Olbers' paradox looked at a dark night sky and refuted an infinite, eternal, static universe before modern cosmology supplied the mechanism: the observable universe has finite age and is expanding.</div>
     </div>
 
-    <h2 class="sec" id="part-j-decision-making-and-critical-thinking-logic-applied-to-real-choices">Part J - decision making and critical thinking: logic applied to real choices</h2>
+    <h2 class="sec" id="part-j-decision-making-and-critical-thinking-logic-applied-to-real-choices">Part J: decision making and critical thinking: logic applied to real choices</h2>
 
     <div class="teaser-grid">
       <div class="teaser-card">
@@ -666,7 +666,7 @@ const mod = modules.find((m) => m.id === 47)!;
 
     <div class="logic-note">The difference between a good reasoner and a bad one is not intelligence. It is the willingness to be wrong. Every technique in this section is designed to make it slightly easier to discover and admit an error before it becomes expensive.</div>
 
-    <h2 class="sec" id="part-k-q-and-a">Part K - Q&A</h2>
+    <h2 class="sec" id="part-k-q-and-a">Part K: Q&A</h2>
     <div class="qa">
       <div class="qa-q">If an argument is valid, does that mean the conclusion is true?</div>
       <button class="qa-btn">show answer</button>

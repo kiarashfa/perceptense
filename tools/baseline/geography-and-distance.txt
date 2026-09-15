@@ -113,8 +113,7 @@ area
 Asia
 (44.6M
 km²)
-largest
-—
+largest:
 30%
 of
 Earth's
@@ -161,8 +160,7 @@ looks
 on
 most
 world
-maps
-—
+maps:
 the
 Mercator
 projection
@@ -202,8 +200,7 @@ seven
 continents
 Continent
 by
-continent
-—
+continent:
 the
 key
 numbers
@@ -391,8 +388,7 @@ of
 world
 population
 Asia
-59%
-—
+59%,
 nearly
 3
 in
@@ -432,8 +428,7 @@ land
 and
 18%
 of
-people
-—
+people,
 but
 Africa's
 population
@@ -554,7 +549,7 @@ the
 continent's
 land.
 The
-Mississippi–Missouri
+Mississippi-Missouri
 river
 system
 is
@@ -616,8 +611,7 @@ The
 most
 densely
 networked
-continent
-—
+continent:
 44
 countries
 in
@@ -684,8 +678,7 @@ world's
 most
 linguistically
 diverse
-places
-—
+places:
 over
 800
 languages
@@ -803,8 +796,7 @@ km
 1
 hour
 of
-flying
-—
+flying,
 but
 this
 is
@@ -983,8 +975,7 @@ Europe
 Japan
 23.7%
 of
-circumference
-—
+circumference:
 less
 than
 ¼
@@ -998,8 +989,7 @@ km
 h
 Earth
 circumference
-100%
-—
+100%:
 full
 lap
 around
@@ -1065,8 +1055,7 @@ within
 each
 panel.
 Panel
-A
-—
+A:
 Buildings
 (0
 –
@@ -1120,8 +1109,7 @@ Burj
 ~276
 floors.
 Panel
-B
-—
+B:
 Full
 scale
 (0
@@ -1226,8 +1214,7 @@ reaches
 88%
 of
 that
-height
-—
+height,
 almost
 into
 plane
@@ -1256,8 +1243,7 @@ areas
 Pacific
 (165M
 km²)
-largest
-—
+largest:
 bigger
 than
 all
@@ -1414,8 +1400,7 @@ populated
 large
 countries
 on
-Earth
-—
+Earth,
 roughly
 40×
 denser
@@ -1434,8 +1419,7 @@ Bangladesh
 people
 in
 148,000
-km²
-—
+km²:
 smaller
 than
 Greece.
@@ -1460,8 +1444,7 @@ country.
 people
 in
 41,500
-km²
-—
+km²:
 smaller
 than
 Switzerland.
@@ -1478,8 +1461,7 @@ countries.
 people
 in
 1.56M
-km²
-—
+km²:
 the
 18th
 largest
@@ -1510,7 +1492,7 @@ place
 0°
 The
 Equator
-—
+:
 hot
 and
 humid
@@ -1531,7 +1513,7 @@ Tropics
 (Cancer
 /
 Capricorn)
-—
+:
 subtropical,
 often
 desert
@@ -1552,7 +1534,7 @@ at
 Mediterranean
 climate
 band
-—
+:
 warm,
 dry
 summers;
@@ -1575,7 +1557,7 @@ Europe
 /
 Canada
 band
-—
+:
 four
 proper
 seasons,
@@ -1591,7 +1573,7 @@ Vancouver
 (49.3°N).
 60°
 Sub-Arctic
-—
+:
 long
 cold
 winters,
@@ -1614,7 +1596,7 @@ nights).
 66.5°
 Arctic
 Circle
-—
+:
 at
 least
 one
@@ -1641,7 +1623,7 @@ inside.
 90°
 The
 Poles
-—
+:
 6
 months
 of
@@ -1654,7 +1636,7 @@ South
 Pole
 has
 the
-Amundsen–Scott
+Amundsen-Scott
 research
 station;
 North
@@ -1668,8 +1650,7 @@ ice.
 Famous
 cities
 by
-latitude
-—
+latitude:
 some
 surprises
 0°
@@ -1726,8 +1707,7 @@ most
 of
 Canada's
 major
-cities
-—
+cities:
 it
 sits
 at
@@ -1847,8 +1827,7 @@ floors
 828
 m
 Burj
-Khalifa
-—
+Khalifa:
 tallest
 building
 About
@@ -1862,8 +1841,7 @@ equivalent
 165M
 km²
 Pacific
-Ocean
-—
+Ocean:
 larger
 than
 all
@@ -1901,8 +1879,7 @@ sense?
 Show
 answer
 Yes,
-broadly
-—
+broadly:
 Tokyo
 to
 LA
@@ -1981,8 +1958,7 @@ the
 USA
 26
 times
-over
-—
+over,
 and
 yet
 Japan's
@@ -2108,8 +2084,7 @@ That's
 why
 most
 people
-fly
-—
+fly:
 the
 same
 journey
@@ -2134,8 +2109,7 @@ area?
 Show
 answer
 Slightly
-larger
-—
+larger,
 and
 this
 surprises
@@ -2169,8 +2143,7 @@ vs
 the
 USA's
 ~340
-million
-—
+million:
 more
 than
 twice
@@ -2198,8 +2171,7 @@ all
 land
 on
 Earth
-combined
-—
+combined:
 true
 or
 false?

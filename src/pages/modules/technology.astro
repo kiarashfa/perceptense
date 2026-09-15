@@ -20,13 +20,13 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- ══════════════════════════════════════════════
          PART A · THE LONG ARC OF TECHNOLOGY
     ══════════════════════════════════════════════ -->
-    <h2 class="sec" id="part-a-what-technology-is-the-long-arc-from-tools-to-intelligence">Part A · what technology is — the long arc from tools to intelligence</h2>
+    <h2 class="sec" id="part-a-what-technology-is-the-long-arc-from-tools-to-intelligence">Part A · what technology is: the long arc from tools to intelligence</h2>
 
-    <div class="success-block">Technology is not "gadgets." It is any reliable method for amplifying human capability: a stone blade, double-entry bookkeeping, refrigeration, GPS, antibiotics, a search engine, or a shipping container. The through-line across 10,000 years is simple — technology converts scarce human attention into repeatable systems that the next person can use without rediscovering.</div>
+    <div class="success-block">Technology is not "gadgets." It is any reliable method for amplifying human capability: a stone blade, double-entry bookkeeping, refrigeration, GPS, antibiotics, a search engine, or a shipping container. The through-line across 10,000 years is simple: technology converts scarce human attention into repeatable systems that the next person can use without rediscovering.</div>
 
     <!-- Long-arc technology waves timeline -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Technology waves — 10,000 BCE to today</div>
+      <div class="panel-title">Technology waves: 10,000 BCE to today</div>
       <div class="muted-copy" style="margin-bottom:12px;">Each wave does not replace the previous one. Agriculture, electrification, and computing are all still running. What changes is which wave provides the primary constraint on human productivity. Bars are deliberately approximate.</div>
       <div class="block-gap">
         <div id="longaxis" class="pc-axis"></div>
@@ -37,7 +37,7 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Technology waves explorer -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Each wave — what it actually changed</div>
+      <div class="panel-title">Each wave: what it actually changed</div>
       <div class="button-row-compact" id="waveButtons">
         <button onclick="showWave('tools',this)">Tools</button>
         <button onclick="showWave('agriculture',this)">Agriculture</button>
@@ -52,23 +52,23 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- ══════════════════════════════════════════════
          PART B · HOW COMPUTERS WORK
     ══════════════════════════════════════════════ -->
-    <h2 class="sec" id="part-b-how-computers-work-the-hardware">Part B · how computers work — the hardware</h2>
+    <h2 class="sec" id="part-b-how-computers-work-the-hardware">Part B · how computers work: the hardware</h2>
 
     <!-- Computing history timeline -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">The history of computing — from Babbage to the smartphone</div>
+      <div class="panel-title">The history of computing: from Babbage to the smartphone</div>
       <div class="muted-copy" style="margin-bottom:12px;">Every major computing era was unlocked by a single physical breakthrough. The leap from mechanical gears to vacuum tubes to transistors to integrated circuits follows a pattern: each generation was roughly 1,000x smaller, faster, and cheaper than the last. The smartphone in your pocket contains more processing power than the entire Apollo program's ground control.</div>
       <div class="block-gap">
         <div id="timeline-axis" class="pc-axis"></div>
         <div id="timeline-rows"></div>
       </div>
-      <p class="chart-note">Bars show approximate active period of each computing paradigm. Eras overlap — transistors didn't replace tubes overnight.</p>
+      <p class="chart-note">Bars show approximate active period of each computing paradigm. Eras overlap: transistors didn't replace tubes overnight.</p>
     </div>
 
     <!-- Moore's Law slider -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Moore's Law — transistors, limits, and what comes next</div>
-      <div class="muted-copy" style="margin-bottom:12px;">In 1965, Gordon Moore noticed that the number of transistors on a chip was doubling roughly every two years, and predicted this would continue. It held for 50 years. A 1971 Intel 4004 had 2,300 transistors; a 2023 Apple M2 Ultra has 134 billion — a 58-million-fold increase. But physics is catching up: transistors are now measured in nanometres, with TSMC's 3nm process meaning gate lengths are just a handful of silicon atoms wide. The law is slowing, but chipmakers have responded with 3D stacking, chiplets, and specialised silicon (GPUs, TPUs).</div>
+      <div class="panel-title">Moore's Law: transistors, limits, and what comes next</div>
+      <div class="muted-copy" style="margin-bottom:12px;">In 1965, Gordon Moore noticed that the number of transistors on a chip was doubling roughly every two years, and predicted this would continue. It held for 50 years. A 1971 Intel 4004 had 2,300 transistors; a 2023 Apple M2 Ultra has 134 billion, a 58-million-fold increase. But physics is catching up: transistors are now measured in nanometres, with TSMC's 3nm process meaning gate lengths are just a handful of silicon atoms wide. The law is slowing, but chipmakers have responded with 3D stacking, chiplets, and specialised silicon (GPUs, TPUs).</div>
       <div class="content-panel" style="margin-bottom:0;">
         <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Drag to explore: transistor count doublings since 1971</label>
         <input type="range" id="moore-slider" min="0" max="25" value="10" oninput="updateMoore(this.value)">
@@ -92,15 +92,15 @@ const mod = modules.find((m) => m.id === 37)!;
         <div class="calc-output" id="bin-output" style="font-family:var(--font-mono); font-size:13px;"></div>
       </div>
       <div class="card">
-        <div class="panel-title">The CPU — fetch, decode, execute</div>
-        <div class="muted-copy">A CPU executes a simple three-step cycle billions of times per second: fetch an instruction from memory, decode what it means, and execute it. Clock speed (measured in GHz) tells you how many cycles per second, but cycles per instruction and parallelism matter more than raw frequency. Modern CPUs have multiple cores — effectively separate processors on one chip. A GPU has thousands of simpler cores optimised for doing the same operation on thousands of data points simultaneously, which is why they dominate deep learning. Apple's M-series chips integrate CPU, GPU, and memory on one die, slashing the latency cost of data movement.</div>
+        <div class="panel-title">The CPU: fetch, decode, execute</div>
+        <div class="muted-copy">A CPU executes a simple three-step cycle billions of times per second: fetch an instruction from memory, decode what it means, and execute it. Clock speed (measured in GHz) tells you how many cycles per second, but cycles per instruction and parallelism matter more than raw frequency. Modern CPUs have multiple cores: effectively separate processors on one chip. A GPU has thousands of simpler cores optimised for doing the same operation on thousands of data points simultaneously, which is why they dominate deep learning. Apple's M-series chips integrate CPU, GPU, and memory on one die, slashing the latency cost of data movement.</div>
       </div>
     </div>
 
     <!-- Memory hierarchy SVG -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Memory and storage — the hierarchy and latency scale</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Computers manage a ruthless trade-off: fast memory is expensive and small; cheap memory is slow and large. The hierarchy solves this by keeping frequently used data in small, fast caches close to the CPU and archiving rarely used data on slow, dense drives. The latency gap between levels is staggering: L1 cache access takes ~1 nanosecond; a hard drive seek takes ~10 milliseconds — a 10-million-fold difference.</div>
+      <div class="panel-title">Memory and storage: the hierarchy and latency scale</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Computers manage a ruthless trade-off: fast memory is expensive and small; cheap memory is slow and large. The hierarchy solves this by keeping frequently used data in small, fast caches close to the CPU and archiving rarely used data on slow, dense drives. The latency gap between levels is staggering: L1 cache access takes ~1 nanosecond; a hard drive seek takes ~10 milliseconds, a 10-million-fold difference.</div>
       <div class="svg-wrap">
         <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:720px;">
           <polygon points="360,18 460,52 260,52" fill="var(--accent)"/>
@@ -128,7 +128,7 @@ const mod = modules.find((m) => m.id === 37)!;
       <!-- Latency perspective slider -->
       <div class="content-panel" style="margin-bottom:0;">
         <div class="slider-top">
-          <label style="font-size:12px; color:var(--color-text-secondary);">Latency perspective — drag to feel how fast or slow different delays are to a CPU</label>
+          <label style="font-size:12px; color:var(--color-text-secondary);">Latency perspective: drag to feel how fast or slow different delays are to a CPU</label>
           <div class="slider-output"><span id="latencyValue">100</span> ns</div>
         </div>
         <input id="latencySlider" type="range" min="1" max="10000000" value="100" step="1" oninput="updateLatency(this.value)">
@@ -139,8 +139,8 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Semiconductor explorer -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">The semiconductor industry — chips, geopolitics, and nm nodes</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Making a modern chip requires depositing dozens of atomic-thin layers onto a silicon wafer using extreme ultraviolet (EUV) light — a technology that only one company in the world, ASML of the Netherlands, can build. TSMC in Taiwan manufactures chips for Apple, NVIDIA, AMD, and most of the world's electronics industry. This concentration makes chip supply chains extraordinarily fragile and geopolitically sensitive.</div>
+      <div class="panel-title">The semiconductor industry: chips, geopolitics, and nm nodes</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Making a modern chip requires depositing dozens of atomic-thin layers onto a silicon wafer using extreme ultraviolet (EUV) light: a technology that only one company in the world, ASML of the Netherlands, can build. TSMC in Taiwan manufactures chips for Apple, NVIDIA, AMD, and most of the world's electronics industry. This concentration makes chip supply chains extraordinarily fragile and geopolitically sensitive.</div>
       <div class="button-row-compact" id="semi-btns"></div>
       <div class="explorer-panel" id="semi-panel"><div class="body-text-relaxed" style="color:var(--color-text-tertiary);">Select a topic above.</div></div>
     </div>
@@ -148,32 +148,32 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- ══════════════════════════════════════════════
          PART C · SOFTWARE
     ══════════════════════════════════════════════ -->
-    <h2 class="sec" id="part-c-software-how-computers-are-programmed">Part C · software — how computers are programmed</h2>
+    <h2 class="sec" id="part-c-software-how-computers-are-programmed">Part C · software: how computers are programmed</h2>
 
     <!-- Software layers elem-card grid -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Software layers — from machine code to applications</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Software is built in layers of abstraction, each one hiding the complexity below. Machine code is pure binary executed by the CPU; you never write it. Assembly gives human-readable names to those instructions but is still hardware-specific. High-level languages (Python, JavaScript, C++) compile or interpret down through these layers. An operating system sits in the middle, managing hardware resources so applications don't have to. The average smartphone app depends on dozens of such layers — understanding even one helps demystify all of computing.</div>
+      <div class="panel-title">Software layers: from machine code to applications</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Software is built in layers of abstraction, each one hiding the complexity below. Machine code is pure binary executed by the CPU; you never write it. Assembly gives human-readable names to those instructions but is still hardware-specific. High-level languages (Python, JavaScript, C++) compile or interpret down through these layers. An operating system sits in the middle, managing hardware resources so applications don't have to. The average smartphone app depends on dozens of such layers; understanding even one helps demystify all of computing.</div>
       <div class="tile-grid-md tile-grid-6up" id="layer-grid"></div>
       <div class="elem-detail-box" id="layer-detail"></div>
     </div>
 
     <!-- Algorithm complexity bar chart -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Programming fundamentals — algorithms and complexity</div>
+      <div class="panel-title">Programming fundamentals: algorithms and complexity</div>
       <div class="muted-copy" style="margin-bottom:12px;">All programs combine four primitives: variables (named storage), conditionals (if/then branching), loops (repeating an action), and functions (reusable named blocks of code). Algorithms are recipes for solving problems. Complexity notation (Big-O) measures how an algorithm's time or memory use scales with input size. A linear-search algorithm on a list of a million items might require a million comparisons in the worst case (O(n)); a binary-search tree can find the same item in just 20 comparisons (O(log n)). That difference is what separates scalable software from software that grinds to a halt.</div>
-      <div class="chart-title">Algorithm complexity — comparisons needed to search 1,000,000 items</div>
-      <div class="bar-row"><div class="bl">O(1) — hash lookup</div><div class="bb" style="width:0.5%; background:var(--accent); opacity:0.9;"><span class="bv" style="color:#000; padding-left:4px;">1</span></div></div>
-      <div class="bar-row"><div class="bl">O(log n) — binary</div><div class="bb" style="width:1.5%; background:var(--accent); opacity:0.75;"><span class="bv" style="padding-left:6px; color:#000;">20</span></div></div>
-      <div class="bar-row"><div class="bl">O(√n) — sqrt</div><div class="bb" style="width:3%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px; color:#000;">1,000</span></div></div>
-      <div class="bar-row"><div class="bl">O(n) — linear</div><div class="bb" style="width:50%; background:var(--accent); opacity:0.45;"><span class="bv" style="padding-left:6px; color:#000;">1,000,000</span></div></div>
-      <div class="bar-row"><div class="bl">O(n²) — quadratic</div><div class="bb" style="width:100%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:#791f1f;">10¹²</span></div></div>
+      <div class="chart-title">Algorithm complexity: comparisons needed to search 1,000,000 items</div>
+      <div class="bar-row"><div class="bl">O(1): hash lookup</div><div class="bb" style="width:0.5%; background:var(--accent); opacity:0.9;"><span class="bv" style="color:#000; padding-left:4px;">1</span></div></div>
+      <div class="bar-row"><div class="bl">O(log n): binary</div><div class="bb" style="width:1.5%; background:var(--accent); opacity:0.75;"><span class="bv" style="padding-left:6px; color:#000;">20</span></div></div>
+      <div class="bar-row"><div class="bl">O(√n): sqrt</div><div class="bb" style="width:3%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px; color:#000;">1,000</span></div></div>
+      <div class="bar-row"><div class="bl">O(n): linear</div><div class="bb" style="width:50%; background:var(--accent); opacity:0.45;"><span class="bv" style="padding-left:6px; color:#000;">1,000,000</span></div></div>
+      <div class="bar-row"><div class="bl">O(n²): quadratic</div><div class="bb" style="width:100%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:#791f1f;">10¹²</span></div></div>
       <p class="chart-note">Bars are log-scaled for visibility. O(n²) would be 1,000,000x wider than O(n) on a true linear scale.</p>
     </div>
 
     <!-- HTTP diagram -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">How the web works — HTTP, DNS, and the request cycle</div>
+      <div class="panel-title">How the web works: HTTP, DNS, and the request cycle</div>
       <div class="muted-copy" style="margin-bottom:12px;">When you type a URL into a browser, a precise sequence unfolds in under 200 milliseconds. First, a DNS lookup translates the domain name into an IP address. Then a TCP connection is established (the "three-way handshake"). The browser sends an HTTP GET request to the server, which responds with HTML. The browser parses that HTML, discovers CSS and JavaScript files, requests those too, and renders the page. HTTPS adds TLS encryption so the content can't be read in transit. APIs work the same way but return structured data (usually JSON) instead of HTML.</div>
       <div class="svg-wrap">
         <svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:700px;">
@@ -211,9 +211,9 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Open source bar chart -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Open source — the invisible infrastructure of the internet</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Open source software is code whose licence allows anyone to inspect, use, modify, and redistribute it. The economics seem paradoxical — why would companies give away valuable software? The answer is that shared infrastructure lowers everyone's costs: no single company wants to write their own TCP/IP stack or cryptography library. Linux runs 96% of the world's top 1 million web servers, all Android devices, and most cloud infrastructure. Git (created by Linus Torvalds in 2005 in two weeks) is the version-control system behind essentially all professional software development.</div>
-      <div class="chart-title">Open source prevalence — selected categories (% of market using OSS)</div>
+      <div class="panel-title">Open source: the invisible infrastructure of the internet</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Open source software is code whose licence allows anyone to inspect, use, modify, and redistribute it. The economics seem paradoxical: why would companies give away valuable software? The answer is that shared infrastructure lowers everyone's costs: no single company wants to write their own TCP/IP stack or cryptography library. Linux runs 96% of the world's top 1 million web servers, all Android devices, and most cloud infrastructure. Git (created by Linus Torvalds in 2005 in two weeks) is the version-control system behind essentially all professional software development.</div>
+      <div class="chart-title">Open source prevalence: selected categories (% of market using OSS)</div>
       <div class="bar-row"><div class="bl">Web servers</div><div class="bb" style="width:96%; background:var(--accent); opacity:0.8;"><span class="bv" style="color:#000;">96%</span></div></div>
       <div class="bar-row"><div class="bl">Cloud infra (Linux)</div><div class="bb" style="width:90%; background:var(--accent); opacity:0.7;"><span class="bv" style="color:#000;">90%</span></div></div>
       <div class="bar-row"><div class="bl">Mobile OS (Android)</div><div class="bb" style="width:72%; background:var(--accent); opacity:0.6;"><span class="bv" style="padding-left:6px; color:#000;">72%</span></div></div>
@@ -229,8 +229,8 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Internet traffic distribution bar -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">How the internet works — packets, protocols, and physical infrastructure</div>
-      <div class="muted-copy" style="margin-bottom:12px;">The internet is a network of networks held together by a shared set of protocols, chiefly TCP/IP. When you send data, it's broken into small packets (typically 1,500 bytes), each of which is routed independently across any available path and reassembled at the destination. TCP provides reliability — it retransmits any dropped packets. UDP skips that guarantee for speed (used in video calls and gaming). The physical layer is largely fibre optic cables, including 550+ submarine cable systems carrying ~99% of international internet traffic.</div>
+      <div class="panel-title">How the internet works: packets, protocols, and physical infrastructure</div>
+      <div class="muted-copy" style="margin-bottom:12px;">The internet is a network of networks held together by a shared set of protocols, chiefly TCP/IP. When you send data, it's broken into small packets (typically 1,500 bytes), each of which is routed independently across any available path and reassembled at the destination. TCP provides reliability: it retransmits any dropped packets. UDP skips that guarantee for speed (used in video calls and gaming). The physical layer is largely fibre optic cables, including 550+ submarine cable systems carrying ~99% of international internet traffic.</div>
       <div class="chart-title">Global internet traffic by type (approximate 2024)</div>
       <div class="stacked-bar" id="internet-dist"></div>
       <div class="legend-roomy" id="internet-legend"></div>
@@ -239,8 +239,8 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Cybersecurity explorer -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Cybersecurity fundamentals — how attacks and defences work</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Most security failures are not dramatic technical exploits — they're human failures. The 2020 SolarWinds attack, which compromised US government systems for months, began by compromising a software update. The 2016 Bangladesh Bank heist ($81 million stolen) used phishing emails. Encryption is foundational: HTTPS wraps every web transaction in TLS, using public-key cryptography so two parties who've never met can establish a shared secret in milliseconds.</div>
+      <div class="panel-title">Cybersecurity fundamentals: how attacks and defences work</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Most security failures are not dramatic technical exploits; they're human failures. The 2020 SolarWinds attack, which compromised US government systems for months, began by compromising a software update. The 2016 Bangladesh Bank heist ($81 million stolen) used phishing emails. Encryption is foundational: HTTPS wraps every web transaction in TLS, using public-key cryptography so two parties who've never met can establish a shared secret in milliseconds.</div>
       <div class="button-row-compact" id="sec-btns"></div>
       <div class="explorer-panel" id="sec-panel"><div class="body-text-relaxed" style="color:var(--color-text-tertiary);">Select an attack or defence type above.</div></div>
     </div>
@@ -248,8 +248,8 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- Cloud + network effects -->
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Cloud computing and the platform economy</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Cloud computing means renting computation, storage, and networking from a provider rather than owning servers. AWS launched in 2006 and within a decade disrupted the entire enterprise IT industry. The three layers are IaaS (raw virtual machines), PaaS (you manage only your code), and SaaS (you manage nothing — think Gmail). Network effects made the winners dominant: AWS, Azure, and Google Cloud control roughly 65% of the market.</div>
-      <div class="chart-title">Cloud provider market share — global infrastructure (2024)</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Cloud computing means renting computation, storage, and networking from a provider rather than owning servers. AWS launched in 2006 and within a decade disrupted the entire enterprise IT industry. The three layers are IaaS (raw virtual machines), PaaS (you manage only your code), and SaaS (you manage nothing, think Gmail). Network effects made the winners dominant: AWS, Azure, and Google Cloud control roughly 65% of the market.</div>
+      <div class="chart-title">Cloud provider market share: global infrastructure (2024)</div>
       <div class="bar-row"><div class="bl">Amazon AWS</div><div class="bb" style="width:31%; background:#ef9f27; opacity:0.85;"><span class="bv" style="padding-left:6px; color:#633806;">31%</span></div></div>
       <div class="bar-row"><div class="bl">Microsoft Azure</div><div class="bb" style="width:24%; background:var(--color-text-info); opacity:0.75;"><span class="bv tech-bv-invert-token" style="padding-left:6px;">24%</span></div></div>
       <div class="bar-row"><div class="bl">Google Cloud</div><div class="bb" style="width:11%; background:var(--accent); opacity:0.7;"><span class="bv" style="padding-left:6px; color:#000;">11%</span></div></div>
@@ -260,8 +260,8 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Network effects comparison scale -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Network effects — why tech markets tend toward monopoly</div>
-      <div class="muted-copy" style="margin-bottom:12px;">A network effect occurs when a product becomes more valuable as more people use it. The telephone is the textbook example: worthless alone, priceless at scale. Modern platforms weaponise this: Facebook's 3 billion users aren't just customers — they're the product and the moat simultaneously. Direct network effects (WhatsApp: more users = more contacts) are stronger than indirect ones. Data network effects (TikTok: more watching = better recommendations) are among the most powerful because they compound automatically with scale.</div>
+      <div class="panel-title">Network effects: why tech markets tend toward monopoly</div>
+      <div class="muted-copy" style="margin-bottom:12px;">A network effect occurs when a product becomes more valuable as more people use it. The telephone is the textbook example: worthless alone, priceless at scale. Modern platforms weaponise this: Facebook's 3 billion users aren't just customers; they're the product and the moat simultaneously. Direct network effects (WhatsApp: more users = more contacts) are stronger than indirect ones. Data network effects (TikTok: more watching = better recommendations) are among the most powerful because they compound automatically with scale.</div>
       <div class="cscale-axis-labels cscale-poles-left"><span>Weak / contestable</span><span>Strong / winner-take-all</span></div>
       <div id="netfx-scale"></div>
     </div>
@@ -274,18 +274,18 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="cgrid" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); margin-bottom:10px;">
       <div class="card">
         <div class="panel-title">How databases work</div>
-        <div class="muted-copy">A relational database organises data into tables of rows and columns, with relationships enforced between them. SQL is the 50-year-old standard for querying them. ACID properties (Atomicity, Consistency, Isolation, Durability) ensure that a bank transfer either completes fully or rolls back entirely — there's no state where money disappears. NoSQL databases (MongoDB, Cassandra, Redis) sacrifice some of these guarantees for horizontal scale or specialised access patterns. PostgreSQL and MySQL together power the majority of the world's web applications.</div>
+        <div class="muted-copy">A relational database organises data into tables of rows and columns, with relationships enforced between them. SQL is the 50-year-old standard for querying them. ACID properties (Atomicity, Consistency, Isolation, Durability) ensure that a bank transfer either completes fully or rolls back entirely: there's no state where money disappears. NoSQL databases (MongoDB, Cassandra, Redis) sacrifice some of these guarantees for horizontal scale or specialised access patterns. PostgreSQL and MySQL together power the majority of the world's web applications.</div>
       </div>
       <div class="card">
-        <div class="panel-title">Big data — when scale changes everything</div>
-        <div class="muted-copy">Big data is defined by the three Vs: Volume (petabytes), Velocity (streams arriving in real time), and Variety (text, images, logs — not just clean tables). Traditional SQL databases choke on this. Hadoop (2006) distributed processing across thousands of commodity servers; Spark (2014) made it faster by keeping data in RAM. The real insight of the big data era: storing everything first and asking questions later is often more valuable than deciding in advance what to record. The hard part is rarely storage — it's deciding which data is trustworthy.</div>
+        <div class="panel-title">Big data: when scale changes everything</div>
+        <div class="muted-copy">Big data is defined by the three Vs: Volume (petabytes), Velocity (streams arriving in real time), and Variety (text, images, logs, not just clean tables). Traditional SQL databases choke on this. Hadoop (2006) distributed processing across thousands of commodity servers; Spark (2014) made it faster by keeping data in RAM. The real insight of the big data era: storing everything first and asking questions later is often more valuable than deciding in advance what to record. The hard part is rarely storage; it's deciding which data is trustworthy.</div>
       </div>
     </div>
 
     <!-- Privacy card + metadata calculator -->
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Privacy, surveillance, and what your data actually reveals</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Surveillance capitalism (Shoshana Zuboff's term) is the business model of extracting behavioural data, predicting future behaviour, and selling those predictions to advertisers. Metadata — who you call, when, for how long, from where — can reveal more than message content: a 2014 Stanford study showed that phone metadata alone could identify medical conditions, legal issues, and religious affiliations with high accuracy. Anonymisation is far weaker than assumed: a 2019 Nature study showed 99.98% of Americans could be re-identified from just 15 demographic attributes in "anonymous" datasets.</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Surveillance capitalism (Shoshana Zuboff's term) is the business model of extracting behavioural data, predicting future behaviour, and selling those predictions to advertisers. Metadata, who you call, when, for how long, from where, can reveal more than message content: a 2014 Stanford study showed that phone metadata alone could identify medical conditions, legal issues, and religious affiliations with high accuracy. Anonymisation is far weaker than assumed: a 2019 Nature study showed 99.98% of Americans could be re-identified from just 15 demographic attributes in "anonymous" datasets.</div>
       <div class="content-panel" style="margin-bottom:10px;">
         <div style="font-size:12px; color:var(--color-text-secondary); margin-bottom:8px; font-weight:500;">Metadata exposure calculator</div>
         <div class="input-row-compact">
@@ -311,22 +311,22 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- ══════════════════════════════════════════════
          PART F · ARTIFICIAL INTELLIGENCE
     ══════════════════════════════════════════════ -->
-    <h2 class="sec" id="part-f-artificial-intelligence-what-it-is-how-it-works-and-what-it-means">Part F · artificial intelligence — what it is, how it works, and what it means</h2>
+    <h2 class="sec" id="part-f-artificial-intelligence-what-it-is-how-it-works-and-what-it-means">Part F · artificial intelligence: what it is, how it works, and what it means</h2>
 
     <!-- AI type elem-card grid -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">What AI actually is — and the difference between types</div>
-      <div class="muted-copy" style="margin-bottom:12px;">AI is not a single thing. The term covers everything from a spam filter to GPT-4. Today's AI systems are all "narrow" — they do one thing well, but understanding does not transfer. A chess engine that beats Magnus Carlsen cannot play draughts. The long-hypothesised "artificial general intelligence" (AGI) — a system that can learn any task a human can — does not yet exist, and experts disagree sharply on whether current approaches could ever produce it.</div>
+      <div class="panel-title">What AI actually is, and the difference between types</div>
+      <div class="muted-copy" style="margin-bottom:12px;">AI is not a single thing. The term covers everything from a spam filter to GPT-4. Today's AI systems are all "narrow": they do one thing well, but understanding does not transfer. A chess engine that beats Magnus Carlsen cannot play draughts. The long-hypothesised "artificial general intelligence" (AGI), a system that can learn any task a human can, does not yet exist, and experts disagree sharply on whether current approaches could ever produce it.</div>
       <div class="tile-grid-md tile-grid-6up" id="ai-type-grid"></div>
       <div class="elem-detail-box" id="ai-type-detail"></div>
     </div>
 
     <!-- ML data scale slider -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Machine learning — how computers learn from data</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Traditional programming is explicit: a programmer writes rules. Machine learning inverts this: the system is given labelled examples and learns the rules itself. In supervised learning, a model is trained on input-output pairs. In unsupervised learning, the model finds structure without labels. Reinforcement learning trains an agent to maximise reward through trial and error — the method behind AlphaGo. The quality and size of training data matters enormously: a model trained on biased data will produce biased outputs.</div>
+      <div class="panel-title">Machine learning: how computers learn from data</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Traditional programming is explicit: a programmer writes rules. Machine learning inverts this: the system is given labelled examples and learns the rules itself. In supervised learning, a model is trained on input-output pairs. In unsupervised learning, the model finds structure without labels. Reinforcement learning trains an agent to maximise reward through trial and error: the method behind AlphaGo. The quality and size of training data matters enormously: a model trained on biased data will produce biased outputs.</div>
       <div class="content-panel" style="margin-bottom:0;">
-        <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Training data scale — explore how data size affects model capability</label>
+        <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Training data scale: explore how data size affects model capability</label>
         <input type="range" id="ml-slider" min="1" max="10" value="4" oninput="updateMLSlider(this.value)">
         <div class="slider-end-labels"><span>1,000 examples</span><span>1 trillion tokens</span></div>
         <div class="slider-live" id="ml-val">1 million</div>
@@ -336,8 +336,8 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Neural network SVG -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Neural networks and deep learning — the architecture</div>
-      <div class="muted-copy" style="margin-bottom:12px;">A neural network consists of layers of "neurons" (simple mathematical functions) connected by "weights" (numbers that scale each connection). During training, the network makes a prediction, computes an error, then uses backpropagation to adjust every weight slightly in the direction that reduces that error. "Deep" learning simply means many layers; depth allows the network to learn hierarchical features — edges to shapes to objects. The 2012 AlexNet paper, which used a deep convolutional network to win ImageNet by a crushing margin, triggered the modern AI era.</div>
+      <div class="panel-title">Neural networks and deep learning: the architecture</div>
+      <div class="muted-copy" style="margin-bottom:12px;">A neural network consists of layers of "neurons" (simple mathematical functions) connected by "weights" (numbers that scale each connection). During training, the network makes a prediction, computes an error, then uses backpropagation to adjust every weight slightly in the direction that reduces that error. "Deep" learning simply means many layers; depth allows the network to learn hierarchical features: edges to shapes to objects. The 2012 AlexNet paper, which used a deep convolutional network to win ImageNet by a crushing margin, triggered the modern AI era.</div>
       <div class="svg-wrap">
         <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:680px;">
           <text x="60" y="15" font-size="10" fill="var(--color-text-tertiary)" text-anchor="middle">Input</text>
@@ -403,43 +403,43 @@ const mod = modules.find((m) => m.id === 37)!;
           <text x="620" y="124" font-size="9" fill="#000" text-anchor="middle" font-weight="500">dog</text>
           <path d="M 606 155 Q 340 195 74 155" stroke="var(--color-text-danger)" stroke-width="1.2" stroke-dasharray="5 3" fill="none"/>
           <polygon points="78,149 68,157 80,163" fill="var(--color-text-danger)"/>
-          <text x="340" y="194" font-size="9" fill="var(--color-text-danger)" text-anchor="middle">backpropagation — error signal adjusts all weights</text>
+          <text x="340" y="194" font-size="9" fill="var(--color-text-danger)" text-anchor="middle">backpropagation: error signal adjusts all weights</text>
         </svg>
       </div>
     </div>
 
     <!-- LLMs + context window slider -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Large language models — how ChatGPT and Claude actually work</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Large language models are neural networks trained on vast text corpora to predict the next token (roughly a word-fragment) in a sequence. The transformer architecture (introduced in the 2017 paper "Attention Is All You Need") uses a mechanism called "attention" to weigh the relevance of every other token in a sequence when predicting the next one. Pre-training on internet-scale text teaches grammar, facts, reasoning patterns, and coding; fine-tuning and RLHF (reinforcement learning from human feedback) then shapes the model's behaviour. The key misconception: LLMs don't "know" things the way humans do — they're extremely powerful interpolation engines over statistical patterns in text.</div>
+      <div class="panel-title">Large language models: how ChatGPT and Claude actually work</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Large language models are neural networks trained on vast text corpora to predict the next token (roughly a word-fragment) in a sequence. The transformer architecture (introduced in the 2017 paper "Attention Is All You Need") uses a mechanism called "attention" to weigh the relevance of every other token in a sequence when predicting the next one. Pre-training on internet-scale text teaches grammar, facts, reasoning patterns, and coding; fine-tuning and RLHF (reinforcement learning from human feedback) then shapes the model's behaviour. The key misconception: LLMs don't "know" things the way humans do: they're extremely powerful interpolation engines over statistical patterns in text.</div>
       <!-- Token context window slider -->
       <div class="content-panel" style="margin-bottom:10px;">
         <div class="slider-top">
-          <div style="font-size:12px; color:var(--color-text-secondary);">Transformer context window — how much text can the model see at once?</div>
+          <div style="font-size:12px; color:var(--color-text-secondary);">Transformer context window: how much text can the model see at once?</div>
           <div class="slider-output"><span id="tokenValue">8,000</span> tokens</div>
         </div>
         <input id="tokenSlider" type="range" min="1000" max="200000" value="8000" step="1000" oninput="updateTokens(this.value)">
         <div class="slider-end-labels"><span>short prompt</span><span>chapter</span><span>book-scale context</span></div>
         <div class="live-note" id="tokenNote"></div>
       </div>
-      <div class="info-block" style="margin-bottom:0;">The "hallucination" problem: LLMs generate plausible-sounding text, not verified facts. When asked about something outside their training distribution, they frequently confabulate — producing confident, grammatically perfect falsehoods. This is not a bug to be patched; it's an inherent feature of predicting plausible text.</div>
+      <div class="info-block" style="margin-bottom:0;">The "hallucination" problem: LLMs generate plausible-sounding text, not verified facts. When asked about something outside their training distribution, they frequently confabulate, producing confident, grammatically perfect falsehoods. This is not a bug to be patched; it's an inherent feature of predicting plausible text.</div>
     </div>
 
     <div class="danger-block">The best AI misconception to drop: "it is just autocomplete." Next-token prediction sounds trivial until the training data, model size, and compute scale force the system to learn grammar, facts, code patterns, visual concepts, and reasoning heuristics as compression strategies. It still makes mistakes, but the mechanism is more powerful than the slogan suggests.</div>
 
     <!-- AI risk comparison scale -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">AI risk and governance — alignment, bias, and the big questions</div>
+      <div class="panel-title">AI risk and governance: alignment, bias, and the big questions</div>
       <div class="muted-copy" style="margin-bottom:12px;">The alignment problem asks: how do you ensure an increasingly capable AI system pursues the goals its designers actually intended, not a subtly different proxy? More immediate risks include bias encoded in training data (facial recognition systems having substantially higher error rates for darker-skinned women, per Joy Buolamwini's 2018 Gender Shades study), and autonomous weapons systems making lethal decisions below human decision latency. The EU AI Act (2024) is the world's first major AI regulation, classifying systems by risk and banning certain applications outright.</div>
-      <div class="chart-title" style="margin-bottom:8px;">AI concerns — where researchers place different risks (consensus view)</div>
+      <div class="chart-title" style="margin-bottom:8px;">AI concerns: where researchers place different risks (consensus view)</div>
       <div class="cscale-axis-labels cscale-poles-left"><span>Speculative / long-term</span><span>Immediate / well-documented</span></div>
       <div id="ai-risk-scale"></div>
     </div>
 
     <!-- AI economy bar chart -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">AI and the economy — tasks, jobs, and what changes</div>
-      <div class="muted-copy" style="margin-bottom:12px;">The automation question is not "will AI take jobs?" but "which tasks will be automated, how fast, and what will workers do instead?" A 2023 Goldman Sachs analysis estimated that 300 million jobs globally could be affected, with knowledge workers — lawyers, financial analysts, programmers — more exposed than expected. History is reassuring in aggregate: the Industrial Revolution created far more jobs than it destroyed. But the workers who lost handloom jobs in 1820 didn't smoothly transition to factory work. Jobs are bundles of tasks, relationships, accountability, and physical context. Automating 40 percent of a job rarely means deleting 40 percent of workers on schedule.</div>
+      <div class="panel-title">AI and the economy: tasks, jobs, and what changes</div>
+      <div class="muted-copy" style="margin-bottom:12px;">The automation question is not "will AI take jobs?" but "which tasks will be automated, how fast, and what will workers do instead?" A 2023 Goldman Sachs analysis estimated that 300 million jobs globally could be affected, with knowledge workers (lawyers, financial analysts, programmers) more exposed than expected. History is reassuring in aggregate: the Industrial Revolution created far more jobs than it destroyed. But the workers who lost handloom jobs in 1820 didn't smoothly transition to factory work. Jobs are bundles of tasks, relationships, accountability, and physical context. Automating 40 percent of a job rarely means deleting 40 percent of workers on schedule.</div>
       <div class="chart-title">Task exposure to AI automation by sector (Goldman Sachs / McKinsey, 2023)</div>
       <div class="bar-row"><div class="bl">Legal / admin</div><div class="bb" style="width:44%; background:#f09595; opacity:0.75;"><span class="bv" style="padding-left:6px; color:#791f1f;">44%</span></div></div>
       <div class="bar-row"><div class="bl">Office / admin</div><div class="bb" style="width:46%; background:#f09595; opacity:0.7;"><span class="bv" style="padding-left:6px; color:#791f1f;">46%</span></div></div>
@@ -453,7 +453,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <!-- Computer vision distribution bar -->
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Computer vision, speech, and multimodal AI</div>
-      <div class="muted-copy" style="margin-bottom:12px;">Computer vision uses convolutional neural networks (CNNs) — filters that scan images for edges, textures, and shapes at increasing levels of abstraction. Diffusion models (Stable Diffusion, DALL-E, Midjourney) generate images by learning to reverse a process of adding noise. Multimodal models combine vision and language: GPT-4V, Gemini, and Claude can reason about images, charts, and documents. Speech recognition improved dramatically when converted to a sequence-to-sequence problem: Whisper (OpenAI, 2022) achieves near-human performance across 99 languages with a single model.</div>
+      <div class="muted-copy" style="margin-bottom:12px;">Computer vision uses convolutional neural networks (CNNs): filters that scan images for edges, textures, and shapes at increasing levels of abstraction. Diffusion models (Stable Diffusion, DALL-E, Midjourney) generate images by learning to reverse a process of adding noise. Multimodal models combine vision and language: GPT-4V, Gemini, and Claude can reason about images, charts, and documents. Speech recognition improved dramatically when converted to a sequence-to-sequence problem: Whisper (OpenAI, 2022) achieves near-human performance across 99 languages with a single model.</div>
       <div class="chart-title">AI capability frontier by modality (approximate state, 2024)</div>
       <div class="stacked-bar" id="ai-modality-dist"></div>
       <div class="legend-roomy" id="ai-modality-legend"></div>
@@ -466,10 +466,10 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Quantum card + slider -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Quantum computing — superposition, entanglement, and the hype-reality gap</div>
-      <div class="muted-copy" style="margin-bottom:12px;">A classical bit is either 0 or 1. A qubit can exist in a superposition of both simultaneously until measured. Quantum algorithms (Shor's for factoring, Grover's for search) exploit quantum interference to amplify correct answers. Shor's algorithm could break RSA encryption in polynomial time. The practical reality: today's best machines have ~100-1,000 physical qubits but require extensive error-correction because qubits are extremely fragile. A cryptographically relevant quantum computer likely needs millions of logical qubits. Quantum computers will not make spreadsheets or websites faster — the real near-term value is chemistry, materials science, and optimisation research.</div>
+      <div class="panel-title">Quantum computing: superposition, entanglement, and the hype-reality gap</div>
+      <div class="muted-copy" style="margin-bottom:12px;">A classical bit is either 0 or 1. A qubit can exist in a superposition of both simultaneously until measured. Quantum algorithms (Shor's for factoring, Grover's for search) exploit quantum interference to amplify correct answers. Shor's algorithm could break RSA encryption in polynomial time. The practical reality: today's best machines have ~100-1,000 physical qubits but require extensive error-correction because qubits are extremely fragile. A cryptographically relevant quantum computer likely needs millions of logical qubits. Quantum computers will not make spreadsheets or websites faster; the real near-term value is chemistry, materials science, and optimisation research.</div>
       <div class="content-panel" style="margin-bottom:0;">
-        <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Qubit count scale — explore progress from today toward cryptographic relevance</label>
+        <label style="font-size:12px; color:var(--color-text-secondary); display:block; margin-bottom:6px;">Qubit count scale: explore progress from today toward cryptographic relevance</label>
         <input type="range" id="qubit-slider" min="1" max="8" value="3" oninput="updateQubit(this.value)">
         <div class="slider-end-labels"><span>50 qubits (2019)</span><span>4,000,000 qubits (needed)</span></div>
         <div class="slider-live" id="qubit-val">1,000</div>
@@ -479,7 +479,7 @@ const mod = modules.find((m) => m.id === 37)!;
 
     <!-- Frontier elem-card grid — expanded with energy, space, AR -->
     <div class="card" style="margin-bottom:10px;">
-      <div class="panel-title">Frontier technologies — five more fields reshaping the next decade</div>
+      <div class="panel-title">Frontier technologies: five more fields reshaping the next decade</div>
       <div class="muted-copy" style="margin-bottom:12px;">The frontier is uneven. AlphaFold transformed protein-structure prediction years before robots could fold laundry reliably. Electric vehicles arrived before fully autonomous taxis. Technology does not advance as one smooth front; it breaks through wherever physics, data, money, regulation, and user tolerance happen to align.</div>
       <div class="tile-grid-md" id="frontier-grid"></div>
       <div class="elem-detail-box" id="frontier-detail"></div>
@@ -491,7 +491,7 @@ const mod = modules.find((m) => m.id === 37)!;
       <div class="muted-copy" style="margin-bottom:12px;">A frontier technology can be scientifically real and economically immature at the same time. The winning question is not "is it possible?" but "what exact job does it do better than the existing system, at what cost, against what incumbent?" The scale below plots estimated real-world deployment versus media attention for each technology.</div>
       <div class="cscale-axis-labels cscale-poles-left"><span>Mostly promise or labs</span><span>Large real-world deployment</span></div>
       <div id="hype-scale"></div>
-      <p class="chart-note">Positions reflect expert consensus as of 2024-2025. They shift — lithium batteries moved sharply right between 2015 and 2023.</p>
+      <p class="chart-note">Positions reflect expert consensus as of 2024-2025. They shift: lithium batteries moved sharply right between 2015 and 2023.</p>
     </div>
 
     <!-- ══════════════════════════════════════════════
@@ -502,35 +502,35 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="qa">
       <div class="qa-q">If Moore's Law is ending, does that mean computing stops getting faster?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Not at all — it means the specific improvement mechanism of shrinking transistors is slowing, but computing capabilities are improving through other dimensions. Chipmakers are stacking chips vertically (3D NAND, HBM memory), using specialised silicon (GPU clusters for AI, TPUs for inference), and designing at the system level rather than the transistor level. Apple's M-series chips outperform comparable Intel chips not because they have smaller transistors, but because of better memory architecture, tighter CPU-GPU integration, and superior compiler support. Progress continues; the roadmap just looks different.</div>
+      <div class="qa-ans">Not at all: it means the specific improvement mechanism of shrinking transistors is slowing, but computing capabilities are improving through other dimensions. Chipmakers are stacking chips vertically (3D NAND, HBM memory), using specialised silicon (GPU clusters for AI, TPUs for inference), and designing at the system level rather than the transistor level. Apple's M-series chips outperform comparable Intel chips not because they have smaller transistors, but because of better memory architecture, tighter CPU-GPU integration, and superior compiler support. Progress continues; the roadmap just looks different.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">If computers are just 0s and 1s, why do they feel so flexible?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Because layers of abstraction compound. A transistor makes a bit reliable; logic gates combine bits; instructions combine gates into arithmetic and memory; programming languages combine instructions into human-readable commands. By the time you reach a browser or game engine, the primitive 0/1 choices are buried under millions of reusable conventions. Flexibility comes from stacking simple reliable layers until the top layer feels expressive — the same way individual words become literature.</div>
+      <div class="qa-ans">Because layers of abstraction compound. A transistor makes a bit reliable; logic gates combine bits; instructions combine gates into arithmetic and memory; programming languages combine instructions into human-readable commands. By the time you reach a browser or game engine, the primitive 0/1 choices are buried under millions of reusable conventions. Flexibility comes from stacking simple reliable layers until the top layer feels expressive, the same way individual words become literature.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Why do tech companies need to collect so much personal data? Could they work without it?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Advertising-funded platforms like Google and Meta could theoretically run on contextual advertising (ads matched to content rather than to the individual) as they did in the 1990s. The reason they don't is money: personalised advertising commands roughly 3-5x higher prices than contextual. The data also compounds — more data improves the model, which improves targeting, which increases advertiser willingness to pay. Subscription-funded models (Netflix, Spotify) require far less personal data, which is why their data practices are less controversial.</div>
+      <div class="qa-ans">Advertising-funded platforms like Google and Meta could theoretically run on contextual advertising (ads matched to content rather than to the individual) as they did in the 1990s. The reason they don't is money: personalised advertising commands roughly 3-5x higher prices than contextual. The data also compounds: more data improves the model, which improves targeting, which increases advertiser willingness to pay. Subscription-funded models (Netflix, Spotify) require far less personal data, which is why their data practices are less controversial.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Why is cybersecurity so hard if encryption is mathematically strong?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Encryption protects data under specific assumptions: keys stay secret, endpoints are honest, software is patched, and users are not tricked. Attackers often avoid the math entirely. They phish a password, exploit an old library, bribe an insider, steal a session token, or compromise a vendor. Security is a system property, and the system includes tired people, old code, business incentives, and emergency exceptions. The 2020 SolarWinds breach — one of the worst in US government history — exploited trusted software updates, not broken cryptography.</div>
+      <div class="qa-ans">Encryption protects data under specific assumptions: keys stay secret, endpoints are honest, software is patched, and users are not tricked. Attackers often avoid the math entirely. They phish a password, exploit an old library, bribe an insider, steal a session token, or compromise a vendor. Security is a system property, and the system includes tired people, old code, business incentives, and emergency exceptions. The 2020 SolarWinds breach, one of the worst in US government history, exploited trusted software updates, not broken cryptography.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">Is AI genuinely "understanding" language, or is it doing something fundamentally different?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">This is one of the most contested questions in AI. LLMs demonstrably pass many benchmarks that were assumed to require comprehension — the bar exam, medical licensing tests, complex reasoning chains. But they also fail in ways no human would, making bizarre errors on simple tasks or hallucinating facts with complete confidence. The practical stance is neither worship nor dismissal: treat them as powerful pattern engines that need verification, context, and good judgment around consequences. They do not have human experience, goals, or grounded perception by default, but they learn rich statistical structure that supports translation, summarisation, programming, and explanation in ways that look meaningfully cognitive.</div>
+      <div class="qa-ans">This is one of the most contested questions in AI. LLMs demonstrably pass many benchmarks that were assumed to require comprehension: the bar exam, medical licensing tests, complex reasoning chains. But they also fail in ways no human would, making bizarre errors on simple tasks or hallucinating facts with complete confidence. The practical stance is neither worship nor dismissal: treat them as powerful pattern engines that need verification, context, and good judgment around consequences. They do not have human experience, goals, or grounded perception by default, but they learn rich statistical structure that supports translation, summarisation, programming, and explanation in ways that look meaningfully cognitive.</div>
     </div>
 
     <div class="qa">
-      <div class="qa-q">What does HTTPS actually protect — and what doesn't it protect?</div>
+      <div class="qa-q">What does HTTPS actually protect, and what doesn't it protect?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
       <div class="qa-ans">HTTPS (HTTP over TLS) encrypts the content of communication between your browser and a server, making it unreadable to eavesdroppers. It also authenticates the server: the certificate proves you're talking to google.com, not an impostor. What HTTPS does not protect: the fact that you visited google.com (visible in DNS lookups and IP routing), what you do once connected (visible to Google), data breaches at the server end, or malware on your own device. The padlock icon means the channel is private and authentic; it does not mean the destination is trustworthy.</div>
     </div>
@@ -538,19 +538,19 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="qa">
       <div class="qa-q">Should we be worried about AI taking over? Is the existential risk case credible?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">The existential risk case — that a sufficiently capable AI system might pursue goals misaligned with human survival — is taken seriously by a minority of mainstream researchers (including at major AI labs like Anthropic and DeepMind) and dismissed by many others as premature or unfalsifiable. The serious version of the argument is not about malevolence but about specification failure: a highly capable system optimising for a proxy goal might achieve that goal in ways that destroy everything humans care about as a side effect. Both things can be true simultaneously: present-day AI causes real harm and future AI might pose deeper risks.</div>
+      <div class="qa-ans">The existential risk case, that a sufficiently capable AI system might pursue goals misaligned with human survival, is taken seriously by a minority of mainstream researchers (including at major AI labs like Anthropic and DeepMind) and dismissed by many others as premature or unfalsifiable. The serious version of the argument is not about malevolence but about specification failure: a highly capable system optimising for a proxy goal might achieve that goal in ways that destroy everything humans care about as a side effect. Both things can be true simultaneously: present-day AI causes real harm and future AI might pose deeper risks.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">How should I judge a new technology claim?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">Ask what bottleneck it removes, what it costs, and what must change around it for adoption. A lab demo is not a supply chain, a prototype is not a business, and a benchmark is not a user habit. Look for constraints: energy, latency, regulation, manufacturing yield, training data, maintenance, liability, and integration with old systems. The future usually arrives through boring compatibility work after the spectacular demo. Fusion energy, for example, has been "30 years away" for 70 years — not because the physics is wrong, but because engineering at scale is a different problem than physics in a lab.</div>
+      <div class="qa-ans">Ask what bottleneck it removes, what it costs, and what must change around it for adoption. A lab demo is not a supply chain, a prototype is not a business, and a benchmark is not a user habit. Look for constraints: energy, latency, regulation, manufacturing yield, training data, maintenance, liability, and integration with old systems. The future usually arrives through boring compatibility work after the spectacular demo. Fusion energy, for example, has been "30 years away" for 70 years, not because the physics is wrong, but because engineering at scale is a different problem than physics in a lab.</div>
     </div>
 
     <div class="qa">
       <div class="qa-q">What does the cloud actually change for companies and individuals?</div>
       <button class="qa-btn" onclick="toggleQA(this)">show answer</button>
-      <div class="qa-ans">The cloud converts computing from equipment you buy into capacity you rent. That matters because demand is spiky: a startup can scale from one server to thousands without building a data centre. It also centralises power in hyperscalers that can afford custom chips, global fibre, cooling expertise, and security teams. The tradeoff is dependence: outages, pricing changes, data residency rules, and vendor lock-in become strategic risks. A 2021 Fastly outage took down Amazon, the Guardian, the Financial Times, and CNN for about an hour — the cost of centralisation made visible.</div>
+      <div class="qa-ans">The cloud converts computing from equipment you buy into capacity you rent. That matters because demand is spiky: a startup can scale from one server to thousands without building a data centre. It also centralises power in hyperscalers that can afford custom chips, global fibre, cooling expertise, and security teams. The tradeoff is dependence: outages, pricing changes, data residency rules, and vendor lock-in become strategic risks. A 2021 Fastly outage took down Amazon, the Guardian, the Financial Times, and CNN for about an hour: the cost of centralisation made visible.</div>
     </div>
 
   
@@ -658,14 +658,14 @@ const mod = modules.find((m) => m.id === 37)!;
       else display = Math.round(count).toLocaleString();
       document.getElementById('moore-val').textContent = display + ' transistors';
       var milestones = {
-        0: 'Intel 4004 (1971) — first commercial microprocessor; powered calculators.',
-        4: 'Intel 8086 (1978) — the chip IBM chose for the PC, launching the Wintel era.',
-        8: 'Intel 486 (1989) — 1M transistors; first chip capable of running Windows.',
-        10: 'Pentium III (1999) — multimedia PCs, early internet browsing.',
-        14: 'Intel Core 2 Duo (2006) — dual-core era; performance per watt improves sharply.',
-        18: 'AMD Ryzen (2017) — 5B transistors; competitive with Intel for the first time in years.',
-        22: 'Apple M1 (2020) — 16B transistors on ARM; beats Intel x86 in performance per watt.',
-        25: 'Apple M2 Ultra / NVIDIA H100 (2023) — 134B+ transistors; powers ChatGPT infrastructure.'
+        0: 'Intel 4004 (1971): first commercial microprocessor; powered calculators.',
+        4: 'Intel 8086 (1978): the chip IBM chose for the PC, launching the Wintel era.',
+        8: 'Intel 486 (1989): 1M transistors; first chip capable of running Windows.',
+        10: 'Pentium III (1999): multimedia PCs, early internet browsing.',
+        14: 'Intel Core 2 Duo (2006): dual-core era; performance per watt improves sharply.',
+        18: 'AMD Ryzen (2017): 5B transistors; competitive with Intel for the first time in years.',
+        22: 'Apple M1 (2020): 16B transistors on ARM; beats Intel x86 in performance per watt.',
+        25: 'Apple M2 Ultra / NVIDIA H100 (2023): 134B+ transistors; powers ChatGPT infrastructure.'
       };
       var keys = Object.keys(milestones).map(Number).sort(function(a,b){return a-b;});
       var best = keys[0];
@@ -708,11 +708,11 @@ const mod = modules.find((m) => m.id === 37)!;
 
     /* SEMICONDUCTOR EXPLORER */
     var semiData = {
-      fab:        { title: 'Chip fabrication — how a chip is made', body: 'Chip fabrication begins with a silicon wafer (ultrapure silicon, 300mm diameter). Using photolithography, circuits are "printed" onto the wafer by shining extreme ultraviolet (EUV) light through a mask. Up to 100+ layers are deposited and etched. A single 300mm wafer might yield 700 chips. The entire process requires cleanrooms where particle contamination is measured in parts per trillion. TSMC runs over 50 steps of EUV lithography per chip, each one potentially the source of a defect that ruins the entire chip.', meta: 'Only ASML (Netherlands) makes EUV machines, at ~$380M each' },
-      tsmc:       { title: 'TSMC — the most important company most people have never heard of', body: 'Taiwan Semiconductor Manufacturing Company (TSMC), founded in 1987 by Morris Chang, manufactures chips designed by Apple, NVIDIA, AMD, Qualcomm, and most of the world\'s electronics industry. TSMC has ~57% share of global semiconductor fabrication revenue and over 90% of the most advanced node capacity. If Taiwan\'s chip production were disrupted — by earthquake, conflict, or blockade — the global electronics industry would halt within months.', meta: 'Taiwan produces ~65% of global semiconductor value' },
-      geopolitics:{ title: 'Chip wars — the geopolitics of semiconductor supply', body: 'The US CHIPS Act (2022, $52 billion) and the EU Chips Act (2023, €43 billion) both attempt to onshore advanced semiconductor manufacturing. US export controls (2022-2023) blocked NVIDIA from selling its most powerful AI chips to China and prevented ASML from supplying EUV machines. China\'s national semiconductor programme exceeds $150 billion in government investment. Neither China nor Europe can yet produce EUV machines — the supply chain spans 5,000+ suppliers across 40 countries, accumulated over 30 years.', meta: 'ASML is a monopoly — there are zero alternative EUV suppliers' },
-      nodes:      { title: 'What "nm nodes" actually mean today', body: 'When Intel released its 22nm process in 2012, the nm figure roughly corresponded to a transistor gate length. Since ~14nm, this relationship broke down. "3nm" from TSMC (2022) does not mean any dimension is 3 nanometres — it\'s a marketing label for transistor density and power efficiency. Apple\'s A17 Pro (TSMC 3nm) has ~133 million transistors per mm². ENIAC (1945) had 18,000 vacuum tubes in 680 square feet. The "3nm" chip is roughly 200 billion times denser per unit area.', meta: 'Apple A17 Pro: 19 billion transistors in 66.3mm²' },
-      power:      { title: 'Energy and the AI compute crisis', body: 'Training GPT-4 is estimated to have consumed over 50 GWh of electricity — enough to power 4,600 average US homes for a year. A single ChatGPT query uses roughly 10x the electricity of a Google search. Data centres consumed ~200 TWh globally in 2022; AI workloads are projected to push this above 1,000 TWh by 2030. Major tech companies have responded by signing long-term nuclear power agreements: Microsoft contracted output from a restarted Three Mile Island unit; Google signed deals with Kairos Power for small modular reactors.', meta: 'Microsoft, Google, Amazon all signed nuclear power deals in 2024' }
+      fab:        { title: 'Chip fabrication: how a chip is made', body: 'Chip fabrication begins with a silicon wafer (ultrapure silicon, 300mm diameter). Using photolithography, circuits are "printed" onto the wafer by shining extreme ultraviolet (EUV) light through a mask. Up to 100+ layers are deposited and etched. A single 300mm wafer might yield 700 chips. The entire process requires cleanrooms where particle contamination is measured in parts per trillion. TSMC runs over 50 steps of EUV lithography per chip, each one potentially the source of a defect that ruins the entire chip.', meta: 'Only ASML (Netherlands) makes EUV machines, at ~$380M each' },
+      tsmc:       { title: 'TSMC: the most important company most people have never heard of', body: 'Taiwan Semiconductor Manufacturing Company (TSMC), founded in 1987 by Morris Chang, manufactures chips designed by Apple, NVIDIA, AMD, Qualcomm, and most of the world\'s electronics industry. TSMC has ~57% share of global semiconductor fabrication revenue and over 90% of the most advanced node capacity. If Taiwan\'s chip production were disrupted (by earthquake, conflict, or blockade) the global electronics industry would halt within months.', meta: 'Taiwan produces ~65% of global semiconductor value' },
+      geopolitics:{ title: 'Chip wars: the geopolitics of semiconductor supply', body: 'The US CHIPS Act (2022, $52 billion) and the EU Chips Act (2023, €43 billion) both attempt to onshore advanced semiconductor manufacturing. US export controls (2022-2023) blocked NVIDIA from selling its most powerful AI chips to China and prevented ASML from supplying EUV machines. China\'s national semiconductor programme exceeds $150 billion in government investment. Neither China nor Europe can yet produce EUV machines: the supply chain spans 5,000+ suppliers across 40 countries, accumulated over 30 years.', meta: 'ASML is a monopoly: there are zero alternative EUV suppliers' },
+      nodes:      { title: 'What "nm nodes" actually mean today', body: 'When Intel released its 22nm process in 2012, the nm figure roughly corresponded to a transistor gate length. Since ~14nm, this relationship broke down. "3nm" from TSMC (2022) does not mean any dimension is 3 nanometres: it\'s a marketing label for transistor density and power efficiency. Apple\'s A17 Pro (TSMC 3nm) has ~133 million transistors per mm². ENIAC (1945) had 18,000 vacuum tubes in 680 square feet. The "3nm" chip is roughly 200 billion times denser per unit area.', meta: 'Apple A17 Pro: 19 billion transistors in 66.3mm²' },
+      power:      { title: 'Energy and the AI compute crisis', body: 'Training GPT-4 is estimated to have consumed over 50 GWh of electricity, enough to power 4,600 average US homes for a year. A single ChatGPT query uses roughly 10x the electricity of a Google search. Data centres consumed ~200 TWh globally in 2022; AI workloads are projected to push this above 1,000 TWh by 2030. Major tech companies have responded by signing long-term nuclear power agreements: Microsoft contracted output from a restarted Three Mile Island unit; Google signed deals with Kairos Power for small modular reactors.', meta: 'Microsoft, Google, Amazon all signed nuclear power deals in 2024' }
     };
     var semiLabels = { fab: 'Fabrication', tsmc: 'TSMC', geopolitics: 'Chip Wars', nodes: 'nm Nodes', power: 'Energy & AI' };
     var semiBtnsEl = document.getElementById('semi-btns');
@@ -734,12 +734,12 @@ const mod = modules.find((m) => m.id === 37)!;
        PART C · SOFTWARE LAYERS
     ══════════════════════════════════════════════ */
     var layerData = [
-      { icon: 'fa-solid fa-bolt', label: 'Machine Code', detail: 'Raw binary instructions executed directly by the CPU. A single instruction like "add two registers" is encoded as a specific bit pattern. Nobody writes machine code by hand — assemblers and compilers generate it. The hidden achievement of computing is that one programmer can write "sort this list" and a stack of tools turns it into thousands of precise instructions.', tag: 'Layer 0' },
-      { icon: 'fa-solid fa-code', label: 'Assembly', detail: 'Human-readable mnemonics for machine instructions: MOV, ADD, JMP. Assembly is CPU-specific — x86 assembly won\'t run on ARM. Used for performance-critical code (bootloaders, device drivers, cryptographic kernels) and for understanding malware.', tag: 'Layer 1' },
+      { icon: 'fa-solid fa-bolt', label: 'Machine Code', detail: 'Raw binary instructions executed directly by the CPU. A single instruction like "add two registers" is encoded as a specific bit pattern. Nobody writes machine code by hand; assemblers and compilers generate it. The hidden achievement of computing is that one programmer can write "sort this list" and a stack of tools turns it into thousands of precise instructions.', tag: 'Layer 0' },
+      { icon: 'fa-solid fa-code', label: 'Assembly', detail: 'Human-readable mnemonics for machine instructions: MOV, ADD, JMP. Assembly is CPU-specific: x86 assembly won\'t run on ARM. Used for performance-critical code (bootloaders, device drivers, cryptographic kernels) and for understanding malware.', tag: 'Layer 1' },
       { icon: 'fa-solid fa-terminal', label: 'C / C++', detail: 'High-level languages that compile down to near-machine-code performance. C (1972) is the language of operating systems, databases, and embedded systems. Linux, Windows, macOS kernels, PostgreSQL, and Chrome\'s V8 JS engine are all written in C/C++.', tag: 'Layer 2' },
-      { icon: 'fa-solid fa-server', label: 'Operating System', detail: 'The OS manages hardware resources — CPU scheduling, memory allocation, file systems, networking — and creates illusions: every program feels like it has its own machine, even though many processes share hardware. It also provides a stable API so applications don\'t need to know which specific hardware they\'re running on.', tag: 'Layer 3' },
-      { icon: 'fa-brands fa-python', label: 'Python / JS', detail: 'Interpreted high-level languages that trade performance for productivity. Python dominates data science and AI due to libraries like NumPy, PyTorch, and pandas. JavaScript is the only programming language that runs natively in browsers — every interactive website runs on it. A runtime (Node.js, V8) provides memory management, standard libraries, and portability.', tag: 'Layer 4' },
-      { icon: 'fa-solid fa-window-maximize', label: 'Applications', detail: 'The programs users interact with: browsers, word processors, games. A modern web app might use JavaScript in the browser, Python on the server, PostgreSQL for data, Redis for caching, and Kubernetes to orchestrate containers — each layer abstracting the one below. A wrong data model here causes real-world harm: systems that can\'t represent refunds, time zones, or edge cases injure reality until reality pushes back.', tag: 'Layer 5' }
+      { icon: 'fa-solid fa-server', label: 'Operating System', detail: 'The OS manages hardware resources, CPU scheduling, memory allocation, file systems, networking, and creates illusions: every program feels like it has its own machine, even though many processes share hardware. It also provides a stable API so applications don\'t need to know which specific hardware they\'re running on.', tag: 'Layer 3' },
+      { icon: 'fa-brands fa-python', label: 'Python / JS', detail: 'Interpreted high-level languages that trade performance for productivity. Python dominates data science and AI due to libraries like NumPy, PyTorch, and pandas. JavaScript is the only programming language that runs natively in browsers: every interactive website runs on it. A runtime (Node.js, V8) provides memory management, standard libraries, and portability.', tag: 'Layer 4' },
+      { icon: 'fa-solid fa-window-maximize', label: 'Applications', detail: 'The programs users interact with: browsers, word processors, games. A modern web app might use JavaScript in the browser, Python on the server, PostgreSQL for data, Redis for caching, and Kubernetes to orchestrate containers, each layer abstracting the one below. A wrong data model here causes real-world harm: systems that can\'t represent refunds, time zones, or edge cases injure reality until reality pushes back.', tag: 'Layer 5' }
     ];
     var layerGrid = document.getElementById('layer-grid');
     var layerDetail = document.getElementById('layer-detail');
@@ -783,9 +783,9 @@ const mod = modules.find((m) => m.id === 37)!;
     var secData = {
       phishing:   { title: 'Phishing', body: 'An attacker sends a convincing fake email to trick recipients into clicking a malicious link or entering credentials. Spear phishing targets specific individuals with personalised detail. Over 80% of cyberattacks begin with a phishing email. The 2020 Twitter hack, which compromised Barack Obama and Elon Musk\'s accounts, began with a phone call to a Twitter employee pretending to be IT support. The strongest defence is phishing-resistant authentication such as passkeys or hardware security keys.', tag: 'Social Engineering' },
       ransomware: { title: 'Ransomware', body: 'Malware that encrypts a victim\'s files and demands payment in cryptocurrency for the decryption key. WannaCry (2017) spread via a stolen NSA exploit and encrypted 230,000 computers in 150 countries in four days, including a third of NHS trusts in the UK. The Colonial Pipeline attack (2021) shut down fuel supply to the US East Coast for six days. Backups help only if they are offline, tested, and restorable. Ransomware-as-a-Service platforms allow non-technical criminals to deploy sophisticated attacks for a revenue share.', tag: 'Malware' },
-      ddos:       { title: 'DDoS — overwhelm capacity', body: 'A distributed denial-of-service attack floods a service with traffic from many machines, often compromised devices. It does not need to break in; it just needs to make legitimate access impossible. The 2016 Mirai botnet attack used 600,000 compromised IoT devices (security cameras, routers) to knock offline major websites including Twitter, Netflix, and Reddit by targeting DNS provider Dyn. Defence uses filtering, rate limits, anycast networks, traffic scrubbing, and enough spare capacity that the flood becomes expensive for the attacker.', tag: 'Attack' },
-      supply:     { title: 'Supply chain attacks — compromise trust upstream', body: 'Modern software imports thousands of packages, containers, build tools, and vendor services. A supply chain attack poisons something trusted so many downstream targets install the problem themselves. The SolarWinds breach (2020) showed how a signed software update could become a delivery vehicle for espionage, compromising US Treasury, State Department, and NSA networks. The npm/PyPI ecosystems are attacked hundreds of times per year through typosquatting and malicious package uploads.', tag: 'Attack' },
-      sqli:       { title: 'SQL Injection', body: 'A technique that manipulates database queries by injecting SQL code through user input fields. If a login form constructs the query "SELECT * FROM users WHERE username=\'[input]\'" without sanitisation, entering username: \' OR \'1\'=\'1 bypasses authentication entirely. SQL injection caused the 2009 Heartland Payment Systems breach (130 million credit cards), one of the largest data breaches in history. Parameterised queries prevent it entirely — this vulnerability should not exist in new code.', tag: 'Code Injection' },
+      ddos:       { title: 'DDoS: overwhelm capacity', body: 'A distributed denial-of-service attack floods a service with traffic from many machines, often compromised devices. It does not need to break in; it just needs to make legitimate access impossible. The 2016 Mirai botnet attack used 600,000 compromised IoT devices (security cameras, routers) to knock offline major websites including Twitter, Netflix, and Reddit by targeting DNS provider Dyn. Defence uses filtering, rate limits, anycast networks, traffic scrubbing, and enough spare capacity that the flood becomes expensive for the attacker.', tag: 'Attack' },
+      supply:     { title: 'Supply chain attacks: compromise trust upstream', body: 'Modern software imports thousands of packages, containers, build tools, and vendor services. A supply chain attack poisons something trusted so many downstream targets install the problem themselves. The SolarWinds breach (2020) showed how a signed software update could become a delivery vehicle for espionage, compromising US Treasury, State Department, and NSA networks. The npm/PyPI ecosystems are attacked hundreds of times per year through typosquatting and malicious package uploads.', tag: 'Attack' },
+      sqli:       { title: 'SQL Injection', body: 'A technique that manipulates database queries by injecting SQL code through user input fields. If a login form constructs the query "SELECT * FROM users WHERE username=\'[input]\'" without sanitisation, entering username: \' OR \'1\'=\'1 bypasses authentication entirely. SQL injection caused the 2009 Heartland Payment Systems breach (130 million credit cards), one of the largest data breaches in history. Parameterised queries prevent it entirely: this vulnerability should not exist in new code.', tag: 'Code Injection' },
       tls:        { title: 'TLS Encryption (HTTPS)', body: 'Transport Layer Security uses asymmetric cryptography (RSA or elliptic curve) to establish a shared secret, then switches to symmetric encryption (AES) for speed. Your browser gets the server\'s public key from its certificate, verifies the certificate was signed by a trusted authority, generates a random session key, encrypts it with the server\'s public key, and sends it. Only the server can decrypt it. All subsequent traffic is encrypted and authenticated. TLS 1.3 (2018) made this faster and eliminated several historical vulnerabilities.', tag: 'Defence' },
       mfa:        { title: 'Multi-factor authentication', body: 'Authentication factors are something you know (password), something you have (phone), and something you are (biometric). Adding a second factor makes credential theft useless: even if an attacker has your password, they can\'t log in without your phone. TOTP apps generate 6-digit codes that change every 30 seconds via a shared secret. Hardware keys (YubiKey, FIDO2) are phishing-resistant because they cryptographically bind authentication to the specific website domain. Google\'s mandatory TOTP rollout reduced account takeovers by 99.7%.', tag: 'Defence' }
     };
@@ -842,12 +842,12 @@ const mod = modules.find((m) => m.id === 37)!;
        PART F · AI
     ══════════════════════════════════════════════ */
     var aiTypeData = [
-      { icon: 'fa-solid fa-filter', label: 'Rule-based AI', detail: 'Expert systems encode human knowledge as explicit if-then rules. IBM\'s Deep Blue (1997) beat Garry Kasparov using a tree search over chess positions evaluated by handwritten rules. Rule-based systems are transparent and predictable but brittle — they fail on inputs their designers didn\'t anticipate. They still matter in planning, theorem proving, compilers, and business rules.', tag: 'Narrow AI' },
-      { icon: 'fa-solid fa-chart-line', label: 'Machine Learning', detail: 'Systems that learn patterns from data rather than following explicit rules. Classical ML includes decision trees, random forests, SVMs, and gradient boosting — these dominated data science before 2015 and remain widely used. The danger is that a model can learn the shortcut in the dataset rather than the truth in the world: if all healthy patients in training data happen to be photographed with good lighting, the model may learn to diagnose health from lighting.', tag: 'Narrow AI' },
-      { icon: 'fa-solid fa-brain', label: 'Deep Learning', detail: 'Neural networks with many layers, trained end-to-end on large datasets. Deep learning powers image recognition (CNNs), speech recognition, and most modern AI applications. It took off when data, GPUs, better algorithms, and large benchmarks converged. It is powerful because it learns features rather than requiring engineers to specify them — the same architecture that classifies images can, with different training data, detect cancer, play Go, or generate code.', tag: 'Narrow AI' },
-      { icon: 'fa-solid fa-comment-dots', label: 'Large Language Models', detail: 'Transformer-based models trained on internet-scale text to predict tokens. GPT-4, Claude, Gemini. Exhibit emergent capabilities — abilities not explicitly trained for, like multi-step reasoning and code generation — that appeared at sufficient scale. Pre-training builds broad capability; instruction tuning and RLHF shapes behaviour. Not yet AGI; excellent at interpolation, poor at genuine novel reasoning, and prone to hallucination.', tag: 'Narrow AI' },
-      { icon: 'fa-solid fa-image', label: 'Generative AI', detail: 'Models that create new content: text (LLMs), images (DALL-E, Midjourney, Stable Diffusion), audio (Suno, ElevenLabs), video (Sora). Diffusion models dominate image generation — they learn to reverse a process of adding Gaussian noise to images. A single Stable Diffusion model generates images that would have required a skilled artist hours of work. Training data rights are a serious unresolved legal question.', tag: 'Narrow AI' },
-      { icon: 'fa-solid fa-infinity', label: 'AGI (hypothetical)', detail: 'Artificial General Intelligence — a system that can learn any intellectual task a human can, with comparable flexibility and generalisation. Does not yet exist. Definitions vary: some researchers argue frontier LLMs already exhibit proto-AGI behaviour; others require genuine world-modelling, causal reasoning, and continuous learning. OpenAI, Anthropic, and DeepMind explicitly name AGI development as their stated goal. Whether current scaling approaches can get there is genuinely contested.', tag: 'Not yet built' }
+      { icon: 'fa-solid fa-filter', label: 'Rule-based AI', detail: 'Expert systems encode human knowledge as explicit if-then rules. IBM\'s Deep Blue (1997) beat Garry Kasparov using a tree search over chess positions evaluated by handwritten rules. Rule-based systems are transparent and predictable but brittle: they fail on inputs their designers didn\'t anticipate. They still matter in planning, theorem proving, compilers, and business rules.', tag: 'Narrow AI' },
+      { icon: 'fa-solid fa-chart-line', label: 'Machine Learning', detail: 'Systems that learn patterns from data rather than following explicit rules. Classical ML includes decision trees, random forests, SVMs, and gradient boosting; these dominated data science before 2015 and remain widely used. The danger is that a model can learn the shortcut in the dataset rather than the truth in the world: if all healthy patients in training data happen to be photographed with good lighting, the model may learn to diagnose health from lighting.', tag: 'Narrow AI' },
+      { icon: 'fa-solid fa-brain', label: 'Deep Learning', detail: 'Neural networks with many layers, trained end-to-end on large datasets. Deep learning powers image recognition (CNNs), speech recognition, and most modern AI applications. It took off when data, GPUs, better algorithms, and large benchmarks converged. It is powerful because it learns features rather than requiring engineers to specify them: the same architecture that classifies images can, with different training data, detect cancer, play Go, or generate code.', tag: 'Narrow AI' },
+      { icon: 'fa-solid fa-comment-dots', label: 'Large Language Models', detail: 'Transformer-based models trained on internet-scale text to predict tokens. GPT-4, Claude, Gemini. Exhibit emergent capabilities (abilities not explicitly trained for, like multi-step reasoning and code generation) that appeared at sufficient scale. Pre-training builds broad capability; instruction tuning and RLHF shapes behaviour. Not yet AGI; excellent at interpolation, poor at genuine novel reasoning, and prone to hallucination.', tag: 'Narrow AI' },
+      { icon: 'fa-solid fa-image', label: 'Generative AI', detail: 'Models that create new content: text (LLMs), images (DALL-E, Midjourney, Stable Diffusion), audio (Suno, ElevenLabs), video (Sora). Diffusion models dominate image generation: they learn to reverse a process of adding Gaussian noise to images. A single Stable Diffusion model generates images that would have required a skilled artist hours of work. Training data rights are a serious unresolved legal question.', tag: 'Narrow AI' },
+      { icon: 'fa-solid fa-infinity', label: 'AGI (hypothetical)', detail: 'Artificial General Intelligence: a system that can learn any intellectual task a human can, with comparable flexibility and generalisation. Does not yet exist. Definitions vary: some researchers argue frontier LLMs already exhibit proto-AGI behaviour; others require genuine world-modelling, causal reasoning, and continuous learning. OpenAI, Anthropic, and DeepMind explicitly name AGI development as their stated goal. Whether current scaling approaches can get there is genuinely contested.', tag: 'Not yet built' }
     ];
     document.getElementById('ai-type-grid').innerHTML = aiTypeData.map(function(d, i) {
       return '<div class="elem-card" id="atc-' + i + '" onclick="showAIType(' + i + ')">'
@@ -869,13 +869,13 @@ const mod = modules.find((m) => m.id === 37)!;
 
     /* ML DATA SCALE SLIDER */
     var mlLevels = [
-      { count: '1,000', unit: 'examples', cap: 'Toy datasets — enough to classify MNIST digits with basic accuracy. Research demos, student projects.' },
-      { count: '10,000', unit: 'examples', cap: 'Fine-tuning territory — sufficient to adapt a pretrained model for a narrow task (e.g. classifying medical images).' },
-      { count: '100,000', unit: 'examples', cap: 'Industrial applications — enough to train reliable CV systems for quality control, fraud detection.' },
+      { count: '1,000', unit: 'examples', cap: 'Toy datasets: enough to classify MNIST digits with basic accuracy. Research demos, student projects.' },
+      { count: '10,000', unit: 'examples', cap: 'Fine-tuning territory: sufficient to adapt a pretrained model for a narrow task (e.g. classifying medical images).' },
+      { count: '100,000', unit: 'examples', cap: 'Industrial applications: enough to train reliable CV systems for quality control, fraud detection.' },
       { count: '1 million', unit: 'examples', cap: 'ImageNet scale. The benchmark that defined modern deep learning. AlexNet (2012) trained on 1.2M images.' },
-      { count: '10 million', unit: 'examples', cap: 'Large-scale vision models — Google Brain and Facebook\'s JFT-300M era. Accuracy improves substantially at this scale.' },
+      { count: '10 million', unit: 'examples', cap: 'Large-scale vision models: Google Brain and Facebook\'s JFT-300M era. Accuracy improves substantially at this scale.' },
       { count: '1 billion', unit: 'words', cap: 'Early language models (GPT-1, 2018) trained at this scale. Basic text generation, simple question answering.' },
-      { count: '100 billion', unit: 'tokens', cap: 'GPT-3 (2020) trained on ~300B tokens. Emergence of few-shot learning — models solve tasks from examples alone.' },
+      { count: '100 billion', unit: 'tokens', cap: 'GPT-3 (2020) trained on ~300B tokens. Emergence of few-shot learning: models solve tasks from examples alone.' },
       { count: '1 trillion', unit: 'tokens', cap: 'GPT-4 / Claude / Gemini territory. Essentially all indexed text humanity has produced. Strong reasoning, coding, multilinguality.' },
       { count: '~10 trillion', unit: 'tokens', cap: 'Approaching the limit of available high-quality human text. Synthetic data generation and curated corpora become essential.' },
       { count: '100 trillion+', unit: 'tokens (synthetic)', cap: 'Frontier models (2025+) supplement human text with AI-generated synthetic data and agent-generated experience.' }
@@ -936,10 +936,10 @@ const mod = modules.find((m) => m.id === 37)!;
 
     /* QUANTUM SLIDER */
     var qubitLevels = [
-      { val: 50,      year: '2019',       note: 'Google\'s Sycamore — "quantum supremacy" demo on a contrived sampling problem. No practical application.' },
-      { val: 127,     year: '2021',       note: 'IBM Eagle — first to break the 100 qubit barrier. Error rates remain too high for useful computation without correction.' },
-      { val: 433,     year: '2022',       note: 'IBM Osprey — 433 qubits. Physical qubit count rising; logical qubit count remains tiny.' },
-      { val: 1000,    year: '2023',       note: 'IBM Condor — 1,121 qubits, first to exceed 1,000. Physical milestone; logical usefulness still limited.' },
+      { val: 50,      year: '2019',       note: 'Google\'s Sycamore: "quantum supremacy" demo on a contrived sampling problem. No practical application.' },
+      { val: 127,     year: '2021',       note: 'IBM Eagle: first to break the 100 qubit barrier. Error rates remain too high for useful computation without correction.' },
+      { val: 433,     year: '2022',       note: 'IBM Osprey: 433 qubits. Physical qubit count rising; logical qubit count remains tiny.' },
+      { val: 1000,    year: '2023',       note: 'IBM Condor: 1,121 qubits, first to exceed 1,000. Physical milestone; logical usefulness still limited.' },
       { val: 10000,   year: '~2026 est.', note: 'Target for early error-corrected logical qubits. First potential practical applications: chemistry simulation.' },
       { val: 100000,  year: '~2030 est.', note: 'Required for meaningful quantum advantage in optimisation and drug discovery.' },
       { val: 1000000, year: '~2035 est.', note: 'Lower bound for breaking RSA-2048. Post-quantum cryptography standards are being finalised now (NIST 2024).' },
@@ -950,7 +950,7 @@ const mod = modules.find((m) => m.id === 37)!;
       var d = qubitLevels[Math.min(val, qubitLevels.length - 1)];
       var display = d.val >= 1000000 ? (d.val/1000000).toFixed(1) + 'M' : d.val >= 1000 ? (d.val/1000).toFixed(0) + 'K' : d.val;
       document.getElementById('qubit-val').textContent = display + ' qubits';
-      document.getElementById('qubit-sub').textContent = d.year + ' — ' + d.note;
+      document.getElementById('qubit-sub').textContent = d.year + ': ' + d.note;
     };
     window.updateQubit(3);
 
@@ -963,11 +963,11 @@ const mod = modules.find((m) => m.id === 37)!;
       { icon: 'fa-solid fa-glasses', label: 'Spatial computing', sub: 'interfaces in 3D', key: 'ar' }
     ];
     var frontierDetails = {
-      bio: { title: 'Biotechnology — code meets cells', body: 'CRISPR-Cas9 (developed 2012, Nobel Prize 2020) allows targeted editing of DNA sequences at specific locations with unprecedented precision and cost. The first CRISPR therapy was approved by the FDA in 2023 for sickle cell disease. More transformative still is AI\'s impact on biology: AlphaFold 2 (DeepMind, 2020) predicted the 3D structure of essentially all known proteins — a problem that had occupied structural biologists for 50 years. The EMBL-EBI database now holds predicted structures for over 200 million proteins. Biology is harder than software because cells are noisy, evolved systems with side effects, but sequencing, synthesis, AI protein models, and lab automation are making it increasingly engineerable.', tag: 'Here now' },
-      robotics: { title: 'Robotics — intelligence must survive contact with physics', body: 'Industrial robots have been in factories since 1961 (Unimate, GM). What\'s new is software intelligence. Industrial robots succeeded first because factories constrain the environment. Humanoid robots (Figure AI, Tesla Optimus) are targeting general-purpose warehouse tasks by 2026. Waymo now operates commercial robotaxi services in San Francisco, Phoenix, and Los Angeles. The fundamental challenge of physical AI is the "sim-to-real gap": systems trained in simulation often fail in messy physical reality. Atoms are less forgiving than pixels.', tag: 'Emerging' },
-      energy: { title: 'Energy technology — the hidden constraint on everything', body: 'Batteries, solar panels, power electronics, grid software, and transmission lines shape what other technologies can do. Lithium-ion battery pack prices fell by roughly 90% from 2010 to the early 2020s, enabling modern electric vehicles and grid storage. But grids are built slowly, and storage must handle not only daily cycles but weather, seasons, regulation, and public acceptance. The AI compute boom has made energy the primary constraint on frontier AI development: Google, Microsoft, and Amazon have all signed nuclear power deals specifically to power data centres.', tag: 'Here now' },
-      space: { title: 'Space systems — launch cost changes the business model', body: 'SpaceX\'s Falcon 9 reusable first stage reduced launch costs from ~$50,000/kg to ~$2,700/kg, making large satellite constellations economically viable. The result is less a romantic space age than a data infrastructure age: Starlink provides broadband to 3+ million users in 100 countries, while Planet Labs\' 200+ satellites photograph every point on Earth daily. Military and intelligence applications are equally transformative. Space is still harsh, regulated, and expensive, but cheaper launch changes what can be deployed, replaced, and scaled.', tag: 'Here now' },
-      ar: { title: 'Spatial computing — interfaces leave the rectangle', body: 'Augmented and mixed reality try to place digital objects into the physical world. The challenge is not drawing a floating window; it is latency (must be under 20ms to avoid nausea), optics (enough field of view without weight), battery life, social acceptability, input, privacy, and making tasks genuinely better. Apple Vision Pro (2024) established a premium benchmark but at $3,500 and 600g, it is not a mass-market device. The most useful near-term applications are industrial training, surgery planning, design review, and remote assistance — rather than all-day consumer glasses.', tag: 'Emerging' }
+      bio: { title: 'Biotechnology: code meets cells', body: 'CRISPR-Cas9 (developed 2012, Nobel Prize 2020) allows targeted editing of DNA sequences at specific locations with unprecedented precision and cost. The first CRISPR therapy was approved by the FDA in 2023 for sickle cell disease. More transformative still is AI\'s impact on biology: AlphaFold 2 (DeepMind, 2020) predicted the 3D structure of essentially all known proteins: a problem that had occupied structural biologists for 50 years. The EMBL-EBI database now holds predicted structures for over 200 million proteins. Biology is harder than software because cells are noisy, evolved systems with side effects, but sequencing, synthesis, AI protein models, and lab automation are making it increasingly engineerable.', tag: 'Here now' },
+      robotics: { title: 'Robotics: intelligence must survive contact with physics', body: 'Industrial robots have been in factories since 1961 (Unimate, GM). What\'s new is software intelligence. Industrial robots succeeded first because factories constrain the environment. Humanoid robots (Figure AI, Tesla Optimus) are targeting general-purpose warehouse tasks by 2026. Waymo now operates commercial robotaxi services in San Francisco, Phoenix, and Los Angeles. The fundamental challenge of physical AI is the "sim-to-real gap": systems trained in simulation often fail in messy physical reality. Atoms are less forgiving than pixels.', tag: 'Emerging' },
+      energy: { title: 'Energy technology: the hidden constraint on everything', body: 'Batteries, solar panels, power electronics, grid software, and transmission lines shape what other technologies can do. Lithium-ion battery pack prices fell by roughly 90% from 2010 to the early 2020s, enabling modern electric vehicles and grid storage. But grids are built slowly, and storage must handle not only daily cycles but weather, seasons, regulation, and public acceptance. The AI compute boom has made energy the primary constraint on frontier AI development: Google, Microsoft, and Amazon have all signed nuclear power deals specifically to power data centres.', tag: 'Here now' },
+      space: { title: 'Space systems: launch cost changes the business model', body: 'SpaceX\'s Falcon 9 reusable first stage reduced launch costs from ~$50,000/kg to ~$2,700/kg, making large satellite constellations economically viable. The result is less a romantic space age than a data infrastructure age: Starlink provides broadband to 3+ million users in 100 countries, while Planet Labs\' 200+ satellites photograph every point on Earth daily. Military and intelligence applications are equally transformative. Space is still harsh, regulated, and expensive, but cheaper launch changes what can be deployed, replaced, and scaled.', tag: 'Here now' },
+      ar: { title: 'Spatial computing: interfaces leave the rectangle', body: 'Augmented and mixed reality try to place digital objects into the physical world. The challenge is not drawing a floating window; it is latency (must be under 20ms to avoid nausea), optics (enough field of view without weight), battery life, social acceptability, input, privacy, and making tasks genuinely better. Apple Vision Pro (2024) established a premium benchmark but at $3,500 and 600g, it is not a mass-market device. The most useful near-term applications are industrial training, surgery planning, design review, and remote assistance, rather than all-day consumer glasses.', tag: 'Emerging' }
     };
     document.getElementById('frontier-grid').innerHTML = frontierData.map(function(d, i) {
       return '<div class="elem-card" id="ftc-' + i + '" onclick="showFrontierCard(\'' + d.key + '\',' + i + ')">'

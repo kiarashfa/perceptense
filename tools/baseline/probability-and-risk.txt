@@ -47,8 +47,7 @@ that
 "happens."
 1
 in
-10
-—
+10:
 e.g.
 chance
 of
@@ -61,8 +60,7 @@ given
 month
 1
 in
-100
-—
+100:
 e.g.
 chance
 of
@@ -77,8 +75,7 @@ of
 driving
 1
 in
-1,000
-—
+1,000:
 e.g.
 dying
 in
@@ -88,8 +85,7 @@ accident
 this
 year
 (UK/Western
-Europe)
-—
+Europe),
 showing
 200
 dots
@@ -104,8 +100,7 @@ in
 this
 grid
 takes
-effort
-—
+effort,
 and
 this
 is
@@ -160,8 +155,7 @@ a
 billion"
 is
 20,000
-stadiums
-—
+stadiums,
 the
 entire
 population
@@ -174,8 +168,7 @@ B
 ·
 the
 probability
-scale
-—
+scale:
 real
 anchors
 ~1
@@ -238,8 +231,7 @@ drive
 daily
 and
 feel
-safe
-—
+safe,
 but
 across
 a
@@ -314,8 +306,7 @@ in
 15,000)
 is
 much
-higher
-—
+higher,
 which
 is
 why
@@ -357,8 +348,7 @@ the
 jackpot.
 The
 probability
-spectrum
-—
+spectrum:
 logarithmic
 scale
 Each
@@ -381,8 +371,7 @@ as
 lightning
 and
 car
-accidents
-—
+accidents,
 but
 it
 feels
@@ -434,8 +423,7 @@ C
 ·
 the
 biggest
-trap
-—
+trap:
 relative
 vs
 absolute
@@ -498,7 +486,7 @@ ask:
 likely
 than
 what?"
-—
+:
 what
 is
 the
@@ -518,8 +506,7 @@ is
 doubling
 it
 gives
-0.002%
-—
+0.002%,
 almost
 nothing.
 A
@@ -544,8 +531,7 @@ Part
 D
 ·
 cognitive
-biases
-—
+biases:
 why
 our
 probability
@@ -623,8 +609,7 @@ it,
 probably
 less
 than
-1%
-—
+1%,
 because
 false
 positives
@@ -692,8 +677,7 @@ than
 is
 a
 bank
-teller"
-—
+teller",
 but
 it
 can't
@@ -739,8 +723,7 @@ of
 catastrophe
 deserves
 serious
-attention
-—
+attention,
 but
 emotionally,
 it
@@ -776,8 +759,7 @@ for
 almost
 every
 negative
-event
-—
+event:
 car
 accidents,
 divorce,
@@ -854,8 +836,7 @@ and
 gambling
 industries
 are
-profitable
-—
+profitable:
 they
 exploit
 opposite
@@ -870,8 +851,7 @@ E
 the
 false
 positive
-problem
-—
+problem:
 most
 surprising
 result
@@ -879,8 +859,7 @@ in
 probability
 Adjust
 the
-sliders
-—
+sliders:
 what
 does
 a
@@ -967,8 +946,7 @@ tests,
 only
 99
 are
-genuine
-—
+genuine,
 exactly
 50%.
 The
@@ -1011,8 +989,7 @@ F
 ·
 the
 birthday
-paradox
-—
+paradox:
 probability
 defies
 intuition
@@ -1034,8 +1011,7 @@ where
 the
 probability
 crosses
-50%
-—
+50%;
 most
 people
 guess
@@ -1046,8 +1022,7 @@ high.
 60
 The
 full
-curve
-—
+curve:
 probability
 of
 a
@@ -1074,8 +1049,7 @@ people
 already
 in
 the
-room
-—
+room:
 the
 number
 of
@@ -1089,8 +1063,7 @@ G
 risk
 in
 real
-life
-—
+life:
 the
 numbers
 that
@@ -1124,8 +1097,7 @@ more
 readily
 than
 unfamiliar
-ones
-—
+ones,
 even
 when
 unfamiliar
@@ -1240,8 +1212,7 @@ death
 risk
 per
 100,000
-people
-—
+people:
 visual
 comparison
 Bar
@@ -1282,8 +1253,7 @@ Part
 H
 ·
 expected
-value
-—
+value:
 probability
 ×
 impact
@@ -1387,8 +1357,7 @@ both
 have
 EV
 =
-£10
-—
+£10,
 but
 they
 are
@@ -1445,15 +1414,13 @@ I
 the
 Monty
 Hall
-problem
-—
+problem:
 why
 switching
 wins
 Play
 the
-game
-—
+game,
 then
 run
 1,000
@@ -1505,8 +1472,7 @@ Switch
 doors
 Play
 again
-Simulation
-—
+Simulation:
 run
 it
 yourself
@@ -1568,8 +1534,7 @@ then
 eliminates
 a
 losing
-door
-—
+door,
 but
 crucially,
 this
@@ -1611,8 +1576,7 @@ the
 law
 of
 large
-numbers
-—
+numbers:
 why
 randomness
 evens
@@ -1621,8 +1585,7 @@ Flip
 a
 coin
 many
-times
-—
+times,
 watch
 the
 proportion
@@ -1654,8 +1617,7 @@ the
 law
 of
 large
-numbers
-—
+numbers,
 not
 magic,
 but
@@ -1746,8 +1708,7 @@ conclude
 the
 coin
 is
-biased
-—
+biased,
 but
 in
 other
@@ -1771,8 +1732,7 @@ Part
 K
 ·
 conditional
-probability
-—
+probability:
 when
 events
 are
@@ -1850,8 +1810,7 @@ P(A∩B)
 A
 B
 no
-overlap
-—
+overlap:
 cannot
 both
 occur
@@ -1866,8 +1825,7 @@ on
 both
 Saturday
 and
-Sunday?"
-—
+Sunday?":
 people
 often
 add
@@ -1918,8 +1876,7 @@ impressed?
 Show
 answer
 Not
-necessarily
-—
+necessarily:
 you
 need
 the
@@ -1949,8 +1906,7 @@ real
 1
 percentage
 point
-benefit
-—
+benefit,
 meaningful.
 But
 if
@@ -1964,8 +1920,7 @@ drug
 brings
 it
 to
-0.1%
-—
+0.1%,
 an
 absolute
 reduction
@@ -2036,8 +1991,7 @@ Exactly
 Each
 flip
 is
-independent
-—
+independent:
 the
 coin
 has
@@ -2190,8 +2144,7 @@ results,
 only
 99
 are
-real
-—
+real:
 that's
 99/1,098
 ≈
@@ -2320,8 +2273,7 @@ better
 in
 pure
 expected
-value
-—
+value,
 but
 Route
 A's
@@ -2394,8 +2346,7 @@ answer
 It's
 a
 relative
-risk
-—
+risk,
 but
 the
 base
@@ -2457,8 +2408,7 @@ That's
 an
 enormous
 absolute
-risk
-—
+risk,
 and
 this
 is
@@ -2523,8 +2473,7 @@ really
 2/3
 if
 you
-switch
-—
+switch,
 or
 is
 it
@@ -2549,8 +2498,7 @@ host's
 action
 is
 not
-random
-—
+random:
 the
 host
 always
@@ -2600,8 +2548,7 @@ the
 two
 doors
 into
-one
-—
+one,
 but
 the
 2/3
@@ -2715,8 +2662,7 @@ about
 0.4%.
 That
 seems
-impressive
-—
+impressive,
 but
 if
 there

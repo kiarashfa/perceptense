@@ -18,10 +18,10 @@ const mod = modules.find((m) => m.id === 4)!;
     <p class="module-subtitle">Calories, macronutrients, and how to read what's in your food</p>
 
     <!-- ═══════════════════════════════════════════════════════ PART A -->
-    <h2 class="sec" id="part-a-the-calorie-confusion-kcal-vs-cal">Part A · the calorie confusion — kcal vs cal</h2>
+    <h2 class="sec" id="part-a-the-calorie-confusion-kcal-vs-cal">Part A · the calorie confusion: kcal vs cal</h2>
 
     <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The calorie confusion — kcal vs cal</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">The calorie confusion: kcal vs cal</div>
       <div class="u-fs-13px text-secondary u-lh-1-7">
         Food "calories" are actually <strong class="text-primary">kilocalories (kcal)</strong>. 1 food calorie = 1,000 physics calories. When a label says "250 calories," it means 250 kcal. This is one of the most widespread unit confusions in everyday life. From here on, "calorie" means food calorie = kcal.
       </div>
@@ -51,12 +51,12 @@ const mod = modules.find((m) => m.id === 4)!;
         <text x="498" y="47" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">(SI energy unit)</text>
         <text x="498" y="60" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui,sans-serif">used in physics &amp; engineering</text>
         <!-- label at bottom -->
-        <text x="330" y="84" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Food labels in the US use "Calories" (capital C) — always meaning kcal. EU labels show both kcal and kJ.</text>
+        <text x="330" y="84" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Food labels in the US use "Calories" (capital C), always meaning kcal. EU labels show both kcal and kJ.</text>
       </svg>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART B -->
-    <h2 class="sec" id="part-b-macronutrients-what-s-in-your-food">Part B · macronutrients — what's in your food</h2>
+    <h2 class="sec" id="part-b-macronutrients-what-s-in-your-food">Part B · macronutrients: what's in your food</h2>
 
     <div class="cgrid">
       <div class="card">
@@ -83,7 +83,7 @@ const mod = modules.find((m) => m.id === 4)!;
 
     <!-- Macronutrient deep-dive explorer -->
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">The three macronutrients — what they actually do</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">The three macronutrients: what they actually do</div>
       <div class="u-display-flex u-gap-6px u-flex-wrap u-mb-md" role="tablist" aria-label="Macronutrient details">
         <button class="macro-btn active" onclick="showMacro('carb')" role="tab" aria-selected="true" aria-controls="macro-carb" id="tab-carb">Carbohydrates</button>
         <button class="macro-btn" onclick="showMacro('fat')" role="tab" aria-selected="false" aria-controls="macro-fat" id="tab-fat">Fat</button>
@@ -94,9 +94,9 @@ const mod = modules.find((m) => m.id === 4)!;
         <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
           <div class="u-flex-1 u-min-w-200px">
             <div class="u-fs-12px text-secondary u-lh-1-7">
-              <strong class="text-primary">Primary role:</strong> Fast energy. The brain alone uses ~120g of glucose per day — about half your carb intake. Carbs are the body's preferred fuel for high-intensity work.<br><br>
-              <strong class="text-primary">Simple vs complex:</strong> Sugar (glucose, fructose, sucrose) = simple carbs — digested in minutes, spike blood sugar fast. Starch (bread, rice, pasta) and fibre = complex carbs — slower digestion, steadier energy.<br><br>
-              <strong class="text-primary">Storage:</strong> Excess carbs convert to glycogen (stored in liver and muscle, ~400–500g total) or, once glycogen is full, to fat. Glycogen is why you can run a 10km without eating — you're burning stored carbs.
+              <strong class="text-primary">Primary role:</strong> Fast energy. The brain alone uses ~120g of glucose per day, about half your carb intake. Carbs are the body's preferred fuel for high-intensity work.<br><br>
+              <strong class="text-primary">Simple vs complex:</strong> Sugar (glucose, fructose, sucrose) = simple carbs, digested in minutes, spike blood sugar fast. Starch (bread, rice, pasta) and fibre = complex carbs, slower digestion, steadier energy.<br><br>
+              <strong class="text-primary">Storage:</strong> Excess carbs convert to glycogen (stored in liver and muscle, ~400–500g total) or, once glycogen is full, to fat. Glycogen is why you can run a 10km without eating: you're burning stored carbs.
             </div>
           </div>
           <!-- mini SVG: blood sugar spike comparison -->
@@ -126,9 +126,9 @@ const mod = modules.find((m) => m.id === 4)!;
         <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
           <div class="u-flex-1 u-min-w-200px">
             <div class="u-fs-12px text-secondary u-lh-1-7">
-              <strong class="text-primary">Primary role:</strong> Long-term energy storage, cell membrane construction, fat-soluble vitamin transport (A, D, E, K), hormone production. Fat is not the enemy — it's essential.<br><br>
-              <strong class="text-primary">Types matter:</strong> Unsaturated fats (olive oil, avocado, nuts) are associated with better cardiovascular outcomes. Saturated fats (butter, red meat) should be moderate. Trans fats (partially hydrogenated oils) are the ones to genuinely avoid — largely banned in many countries now.<br><br>
-              <strong class="text-primary">Density insight:</strong> At 9 kcal/g, fat is the most energy-dense macronutrient — 2.25× more than carbs or protein. A tablespoon of olive oil (~14g) has ~125 kcal. This is why cooking oils add calories faster than people expect.
+              <strong class="text-primary">Primary role:</strong> Long-term energy storage, cell membrane construction, fat-soluble vitamin transport (A, D, E, K), hormone production. Fat is not the enemy; it's essential.<br><br>
+              <strong class="text-primary">Types matter:</strong> Unsaturated fats (olive oil, avocado, nuts) are associated with better cardiovascular outcomes. Saturated fats (butter, red meat) should be moderate. Trans fats (partially hydrogenated oils) are the ones to genuinely avoid, largely banned in many countries now.<br><br>
+              <strong class="text-primary">Density insight:</strong> At 9 kcal/g, fat is the most energy-dense macronutrient, 2.25× more than carbs or protein. A tablespoon of olive oil (~14g) has ~125 kcal. This is why cooking oils add calories faster than people expect.
             </div>
           </div>
           <div class="u-shrink-0">
@@ -158,9 +158,9 @@ const mod = modules.find((m) => m.id === 4)!;
         <div class="u-display-flex u-gap-14px u-align-flex-start u-flex-wrap">
           <div class="u-flex-1 u-min-w-200px">
             <div class="u-fs-12px text-secondary u-lh-1-7">
-              <strong class="text-primary">Primary role:</strong> Building and repairing tissue — muscle, skin, enzymes, antibodies, hormones. The body cannot store protein the way it stores fat or glycogen, so it needs a daily supply.<br><br>
-              <strong class="text-primary">Complete vs incomplete:</strong> Proteins are made of 20 amino acids; 9 are "essential" (must come from food). Animal proteins (meat, eggs, dairy) are "complete" — they contain all 9. Most plant proteins are incomplete, but combining sources (e.g. rice + beans) covers all 9.<br><br>
-              <strong class="text-primary">Satiety superpower:</strong> Protein is the most satiating macronutrient — gram for gram, it keeps you full longer than carbs or fat. This is why high-protein breakfasts reduce total daily calorie intake in studies. The mechanism: protein raises GLP-1 and PYY (satiety hormones) more than other macros.
+              <strong class="text-primary">Primary role:</strong> Building and repairing tissue: muscle, skin, enzymes, antibodies, hormones. The body cannot store protein the way it stores fat or glycogen, so it needs a daily supply.<br><br>
+              <strong class="text-primary">Complete vs incomplete:</strong> Proteins are made of 20 amino acids; 9 are "essential" (must come from food). Animal proteins (meat, eggs, dairy) are "complete": they contain all 9. Most plant proteins are incomplete, but combining sources (e.g. rice + beans) covers all 9.<br><br>
+              <strong class="text-primary">Satiety superpower:</strong> Protein is the most satiating macronutrient: gram for gram, it keeps you full longer than carbs or fat. This is why high-protein breakfasts reduce total daily calorie intake in studies. The mechanism: protein raises GLP-1 and PYY (satiety hormones) more than other macros.
             </div>
           </div>
           <div class="u-shrink-0">
@@ -175,7 +175,7 @@ const mod = modules.find((m) => m.id === 4)!;
               <!-- carbs -->
               <rect x="20" y="80" width="60" height="22" rx="3" class="nutri-bar-blue" opacity="0.85"/>
               <text x="24" y="95" font-size="9" fill="#fff" font-weight="600" font-family="system-ui,sans-serif">Carbs ████</text>
-              <text x="20" y="113" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Relative — varies by food type &amp; individual</text>
+              <text x="20" y="113" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">Relative: varies by food type &amp; individual</text>
             </svg>
           </div>
         </div>
@@ -183,7 +183,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART C -->
-    <h2 class="sec" id="part-c-reading-real-food-what-s-actually-inside">Part C · reading real food — what's actually inside</h2>
+    <h2 class="sec" id="part-c-reading-real-food-what-s-actually-inside">Part C · reading real food: what's actually inside</h2>
 
     <div class="block-spaced">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Protein in 200g of cooked chicken breast</div>
@@ -199,7 +199,7 @@ const mod = modules.find((m) => m.id === 4)!;
         <div class="bar-label"><span>Total weight</span><span>200 g</span></div>
         <div class="bar-track"><div class="bar-fill u-w-100-pct u-bg-border-secondary"></div></div>
       </div>
-      <p class="u-fs-12px text-secondary u-m-6px-0-0">Rule of thumb: cooked chicken breast = ~23% protein by weight. So 200g gives you about 46g of protein — roughly what a 75kg person needs in an entire day.</p>
+      <p class="u-fs-12px text-secondary u-m-6px-0-0">Rule of thumb: cooked chicken breast = ~23% protein by weight. So 200g gives you about 46g of protein, roughly what a 75kg person needs in an entire day.</p>
     </div>
 
     <div class="block-spaced">
@@ -225,7 +225,7 @@ const mod = modules.find((m) => m.id === 4)!;
 
     <!-- NEW: How to read a nutrition label -->
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How to read a nutrition label — annotated</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">How to read a nutrition label: annotated</div>
       <div class="u-display-flex u-gap-20px u-flex-wrap u-align-flex-start">
 
         <!-- Replica label -->
@@ -261,8 +261,8 @@ const mod = modules.find((m) => m.id === 4)!;
         <div class="u-flex-1 u-min-w-200px u-fs-12px text-secondary u-lh-1-8">
           <div class="u-mb-sm"><strong class="text-primary">① Serving size is the key trap.</strong> Everything on this label is <em>per serving</em>. This container has 8 servings. Eat the whole box = multiply everything by 8. Most people don't.</div>
           <div class="u-mb-sm"><strong class="text-primary">② Calories = the headline number.</strong> 230 kcal per serving. Quick mental check: is this a meal or a snack? 230 kcal is a light snack for most adults.</div>
-          <div class="u-mb-sm"><strong class="text-primary">③ % Daily Value is based on 2,000 kcal/day.</strong> 5% DV = low. 20% DV = high. Use it to compare products, not as gospel — your needs differ.</div>
-          <div class="u-mb-sm"><strong class="text-primary">④ Added Sugars vs Total Sugars.</strong> "Total Sugars" includes naturally occurring sugar (fruit, milk). "Added Sugars" is the dangerous one — 10g here = 40% of the WHO daily max in one serving.</div>
+          <div class="u-mb-sm"><strong class="text-primary">③ % Daily Value is based on 2,000 kcal/day.</strong> 5% DV = low. 20% DV = high. Use it to compare products, not as gospel: your needs differ.</div>
+          <div class="u-mb-sm"><strong class="text-primary">④ Added Sugars vs Total Sugars.</strong> "Total Sugars" includes naturally occurring sugar (fruit, milk). "Added Sugars" is the dangerous one: 10g here = 40% of the WHO daily max in one serving.</div>
           <div><strong class="text-primary">⑤ Protein has no % DV.</strong> Regulators consider deficiency rare in Western diets. For active people, aim for body weight in kg × 1.2–2.0g daily.</div>
         </div>
       </div>
@@ -270,7 +270,7 @@ const mod = modules.find((m) => m.id === 4)!;
 
     <!-- NEW: Sugar visualiser -->
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Sugar in teaspoons — a visual gut-check</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">Sugar in teaspoons: a visual gut-check</div>
       <div class="u-fs-12px text-secondary u-mb-md">Each cube = 1 teaspoon (~4g) of sugar. WHO daily max for adults = 6 teaspoons (25g).</div>
       <div class="u-display-flex u-gap-sm u-flex-wrap u-mb-md" role="radiogroup" aria-label="Select a food to see its sugar content">
         <button class="macro-btn active" onclick="showSugar('coke','Can of Coke (330ml)',9,'#E24B4A')" aria-pressed="true">Coke (330ml)</button>
@@ -305,14 +305,14 @@ const mod = modules.find((m) => m.id === 4)!;
         <span class="bl">Sitting at a desk</span>
         <div class="bb u-w-100-pct u-bg-hex-e1f5ee u-border-0-5px-solid-hex-9fe1cb"><span class="bv text-green-900">~75 min</span></div>
       </div>
-      <p class="u-fs-11px text-secondary panel-note">100 kcal = roughly a small apple, a plain rice cake with peanut butter, or 3 squares of dark chocolate. Exercise burns less than most people think — that croissant (250 kcal) needs 30 min of running to offset.</p>
+      <p class="u-fs-11px text-secondary panel-note">100 kcal = roughly a small apple, a plain rice cake with peanut butter, or 3 squares of dark chocolate. Exercise burns less than most people think: that croissant (250 kcal) needs 30 min of running to offset.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART E -->
-    <h2 class="sec" id="part-e-energy-in-the-world-from-food-to-nuclear-weapons">Part E · energy in the world — from food to nuclear weapons</h2>
+    <h2 class="sec" id="part-e-energy-in-the-world-from-food-to-nuclear-weapons">Part E · energy in the world: from food to nuclear weapons</h2>
 
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Energy released — logarithmic scale (in joules, J)</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Energy released: logarithmic scale (in joules, J)</div>
       <div class="u-fs-11px text-secondary u-mb-md">Each step up is ~1,000× more energy. 1 food calorie = 4,184 joules.</div>
       <div class="energy-chart">
         <div class="bar-row" data-val="~10 J"><span class="bl">Lifting 1 kg by 1 metre</span><div class="bb u-w-0-4-pct u-bg-hex-e6f1fb u-border-0-5px-solid-hex-b5d4f4"><span class="bv text-blue-900 u-ml-4px u-fs-10px">~10 J</span></div></div>
@@ -322,9 +322,9 @@ const mod = modules.find((m) => m.id === 4)!;
         <div class="bar-row" data-val="~250 MJ–1 GJ"><span class="bl">Lightning bolt</span><div class="bb u-w-6-pct u-bg-blue-700"><span class="bv u-text-white u-fs-10px">~250 MJ–1 GJ</span></div></div>
         <div class="bar-row" data-val="~1.7 GJ"><span class="bl">Full tank of car petrol (~50L)</span><div class="bb u-w-8-pct u-bg-blue-900"><span class="bv u-text-blue-50 u-fs-10px">~1.7 GJ</span></div></div>
         <div class="bar-row" data-val="~63 TJ"><span class="bl">Hiroshima bomb (Little Boy)</span><div class="bb u-w-30-pct u-bg-brown-800"><span class="bv u-text-white">~63 TJ (63 trillion J)</span></div></div>
-        <div class="bar-row" data-val="~210 PJ — 3,300× Hiroshima"><span class="bl">Largest H-bomb ever (Tsar Bomba)</span><div class="bb u-w-100-pct bg-indigo-900"><span class="bv u-text-purple-50">~210 PJ — 3,300× Hiroshima</span></div></div>
+        <div class="bar-row" data-val="~210 PJ: 3,300× Hiroshima"><span class="bl">Largest H-bomb ever (Tsar Bomba)</span><div class="bb u-w-100-pct bg-indigo-900"><span class="bv u-text-purple-50">~210 PJ, 3,300× Hiroshima</span></div></div>
       </div>
-      <p class="u-fs-11px text-secondary panel-note">Surprising fact: a typical lightning bolt (~250 MJ to ~1 GJ) contains <em>less</em> total energy than a full car petrol tank (~1.7 GJ). The difference is delivery speed — a lightning bolt releases its energy in microseconds. Your petrol tank releases it over hours. Energy rate (power) matters as much as total energy.</p>
+      <p class="u-fs-11px text-secondary panel-note">Surprising fact: a typical lightning bolt (~250 MJ to ~1 GJ) contains <em>less</em> total energy than a full car petrol tank (~1.7 GJ). The difference is delivery speed: a lightning bolt releases its energy in microseconds. Your petrol tank releases it over hours. Energy rate (power) matters as much as total energy.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART F -->
@@ -359,12 +359,12 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART G (NEW) -->
-    <h2 class="sec" id="part-g-fibre-the-forgotten-macronutrient">Part G · fibre — the forgotten macronutrient</h2>
+    <h2 class="sec" id="part-g-fibre-the-forgotten-macronutrient">Part G · fibre: the forgotten macronutrient</h2>
 
     <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Why fibre deserves its own section</div>
       <div class="u-fs-13px text-secondary u-lh-1-7">
-        Fibre is a carbohydrate the body cannot digest — it passes through mostly intact, but does critical work on the way. It is not "inert bulk." It feeds gut bacteria (your microbiome), slows glucose absorption, lowers cholesterol, and keeps bowel movements regular. Most adults in wealthy countries eat about half the recommended amount.
+        Fibre is a carbohydrate the body cannot digest: it passes through mostly intact, but does critical work on the way. It is not "inert bulk." It feeds gut bacteria (your microbiome), slows glucose absorption, lowers cholesterol, and keeps bowel movements regular. Most adults in wealthy countries eat about half the recommended amount.
       </div>
     </div>
 
@@ -377,7 +377,7 @@ const mod = modules.find((m) => m.id === 4)!;
       <div class="card">
         <p class="clabel">Fibre in an apple (medium)</p>
         <p class="cval">~4.5 g</p>
-        <p class="cnote">Apple juice has almost zero — the fibre is in the pulp. Whole fruit, not juice.</p>
+        <p class="cnote">Apple juice has almost zero: the fibre is in the pulp. Whole fruit, not juice.</p>
       </div>
       <div class="card">
         <p class="clabel">Fibre in white bread (slice)</p>
@@ -393,7 +393,7 @@ const mod = modules.find((m) => m.id === 4)!;
 
     <!-- Fibre sources comparison chart SVG -->
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Fibre content per serving — common foods compared</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-md">Fibre content per serving: common foods compared</div>
       <div class="bar-row"><span class="bl">Lentils, 100g cooked</span><div class="bb u-w-80-pct u-bg-green-600"><span class="bv u-text-white">8 g</span></div></div>
       <div class="bar-row"><span class="bl">Black beans, 100g cooked</span><div class="bb u-w-75-pct u-bg-green-500"><span class="bv u-text-white">7.5 g</span></div></div>
       <div class="bar-row"><span class="bl">Oats, 40g dry (1 serving)</span><div class="bb u-w-40-pct u-bg-green-400"><span class="bv u-text-hex-04342c">4 g</span></div></div>
@@ -408,7 +408,7 @@ const mod = modules.find((m) => m.id === 4)!;
     <h2 class="sec" id="part-h-food-label-estimation-game">Part H · food label estimation game</h2>
 
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Guess the calories — 5 rounds</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Guess the calories: 5 rounds</div>
       <div class="u-fs-12px text-secondary u-mb-md">You'll be shown a real food and a quantity. Pick the closest calorie estimate.</div>
       <div id="cg-progress" class="u-fs-11px text-tertiary u-mb-sm"></div>
       <div id="cg-question" class="u-fs-14px u-fw-500 text-primary u-mb-md"></div>
@@ -418,7 +418,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART I (NEW) -->
-    <h2 class="sec" id="part-i-the-glycaemic-index-why-not-all-carbs-are-equal">Part I · the glycaemic index — why not all carbs are equal</h2>
+    <h2 class="sec" id="part-i-the-glycaemic-index-why-not-all-carbs-are-equal">Part I · the glycaemic index: why not all carbs are equal</h2>
 
     <div class="u-bg-background-secondary u-radius-radius-md u-p-11px-14px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What is the glycaemic index (GI)?</div>
@@ -488,7 +488,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px block-spaced">
-      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">GI — the nuances that matter</div>
+      <div class="u-fs-13px u-fw-500 text-primary u-mb-sm">GI: the nuances that matter</div>
       <div class="anchor-row">
         <span class="pill p-amber">GL &gt; GI</span>
         <div><div class="atext">Glycaemic Load = GI × carb amount ÷ 100</div><div class="asub">Watermelon has a high GI (80) but a low GL (~5 per serving) because it's mostly water. GL is a better real-world metric than GI alone.</div></div>
@@ -504,7 +504,7 @@ const mod = modules.find((m) => m.id === 4)!;
     </div>
 
     <!-- ═══════════════════════════════════════════════════════ PART J (NEW) -->
-    <h2 class="sec" id="part-j-food-label-decoder-interactive">Part J · food label decoder — interactive</h2>
+    <h2 class="sec" id="part-j-food-label-decoder-interactive">Part J · food label decoder: interactive</h2>
 
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">Calculate calories from a label</div>
@@ -545,7 +545,7 @@ const mod = modules.find((m) => m.id === 4)!;
       </div>
       <div class="anchor-row">
         <span class="pill p-blue">23%</span>
-        <div><div class="atext">Protein content of cooked chicken breast</div><div class="asub">200g chicken ≈ 46g protein — nearly a full day's requirement.</div></div>
+        <div><div class="atext">Protein content of cooked chicken breast</div><div class="asub">200g chicken ≈ 46g protein, nearly a full day's requirement.</div></div>
       </div>
       <div class="anchor-row">
         <span class="pill p-amber">25 g</span>
@@ -887,19 +887,19 @@ const mod = modules.find((m) => m.id === 4)!;
     <div class="qa">
       <p class="qa-q">3. A person eats a 550 kcal Big Mac and then goes for a 30-minute jog. Have they burned it off?</p>
       <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
-      <div class="qa-ans">Not quite. Running burns roughly 10–12 kcal per minute at moderate pace, so 30 minutes = ~300–360 kcal. The Big Mac has 550 kcal — so you'd need closer to 50 minutes of running to fully offset it. This is the key insight: it is much faster to consume calories than to burn them. A 2-second bite of a burger takes 4 minutes of running to undo. This is why diet (what you eat) has far more impact on weight than exercise alone.</div>
+      <div class="qa-ans">Not quite. Running burns roughly 10–12 kcal per minute at moderate pace, so 30 minutes = ~300–360 kcal. The Big Mac has 550 kcal: so you'd need closer to 50 minutes of running to fully offset it. This is the key insight: it is much faster to consume calories than to burn them. A 2-second bite of a burger takes 4 minutes of running to undo. This is why diet (what you eat) has far more impact on weight than exercise alone.</div>
     </div>
 
     <div class="qa">
       <p class="qa-q">4. A food label says "per 100g: 15g fat, 45g carbohydrate, 8g protein." Roughly how many kcal per 100g?</p>
       <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
-      <div class="qa-ans">About 347 kcal. Fat: 15g × 9 kcal/g = 135 kcal. Carbs: 45g × 4 kcal/g = 180 kcal. Protein: 8g × 4 kcal/g = 32 kcal. Total: 135 + 180 + 32 = 347 kcal per 100g. The fat contributes the most calories despite being only 15g — because fat is 9 kcal/g, more than double carbs or protein. This is the fundamental label-reading skill: multiply and add.</div>
+      <div class="qa-ans">About 347 kcal. Fat: 15g × 9 kcal/g = 135 kcal. Carbs: 45g × 4 kcal/g = 180 kcal. Protein: 8g × 4 kcal/g = 32 kcal. Total: 135 + 180 + 32 = 347 kcal per 100g. The fat contributes the most calories despite being only 15g: because fat is 9 kcal/g, more than double carbs or protein. This is the fundamental label-reading skill: multiply and add.</div>
     </div>
 
     <div class="qa">
       <p class="qa-q">5. You see two cereals. Cereal A: 30g serving, GI 70, 22g carbs. Cereal B: 40g serving, GI 40, 28g carbs. Which has the higher glycaemic load?</p>
       <button class="qa-btn" onclick="this.style.display='none';this.nextElementSibling.classList.add('show')">Show answer</button>
-      <div class="qa-ans">Cereal A: GL = 70 × 22 ÷ 100 = 15.4. Cereal B: GL = 40 × 28 ÷ 100 = 11.2. Cereal A has the higher GL despite its smaller serving size. The high GI (70) overwhelms the lower carb quantity. This is why GL is more useful than GI alone — it accounts for how much carbohydrate you're actually eating.</div>
+      <div class="qa-ans">Cereal A: GL = 70 × 22 ÷ 100 = 15.4. Cereal B: GL = 40 × 28 ÷ 100 = 11.2. Cereal A has the higher GL despite its smaller serving size. The high GI (70) overwhelms the lower carb quantity. This is why GL is more useful than GI alone: it accounts for how much carbohydrate you're actually eating.</div>
     </div>
 
     <div class="qa">
@@ -1040,11 +1040,11 @@ calcLabel();
 
 /* ─── Calorie guessing game ─── */
 var cgQuestions = [
-  { q: '1 tablespoon of olive oil (15 ml)', answer: 120, choices: [40, 80, 120, 190], fact: 'Fat is 9 kcal/g — denser than any other macro. 15ml of olive oil weighs ~14g, so 14 × 9 ≈ 126 kcal. Cooking oils add calories faster than almost anything.' },
-  { q: '100g of boiled white rice', answer: 130, choices: [55, 130, 210, 340], fact: 'Cooked rice is mostly water — about 70% by weight. That dilutes the calories significantly. Raw rice would be ~360 kcal per 100g.' },
-  { q: 'A medium avocado (~150g)', answer: 240, choices: [80, 150, 240, 380], fact: 'Avocados are ~15% fat by weight — unusually high for a fruit. But it\'s mostly unsaturated fat. At 9 kcal/g, fat adds up even in "healthy" foods.' },
+  { q: '1 tablespoon of olive oil (15 ml)', answer: 120, choices: [40, 80, 120, 190], fact: 'Fat is 9 kcal/g, denser than any other macro. 15ml of olive oil weighs ~14g, so 14 × 9 ≈ 126 kcal. Cooking oils add calories faster than almost anything.' },
+  { q: '100g of boiled white rice', answer: 130, choices: [55, 130, 210, 340], fact: 'Cooked rice is mostly water, about 70% by weight. That dilutes the calories significantly. Raw rice would be ~360 kcal per 100g.' },
+  { q: 'A medium avocado (~150g)', answer: 240, choices: [80, 150, 240, 380], fact: 'Avocados are ~15% fat by weight, unusually high for a fruit. But it\'s mostly unsaturated fat. At 9 kcal/g, fat adds up even in "healthy" foods.' },
   { q: 'A glass of whole milk (250ml)', answer: 150, choices: [60, 150, 230, 310], fact: 'Whole milk is ~3.5% fat and 4.7% lactose (sugar). 250ml ≈ 150 kcal. Skimmed milk is ~85 kcal for the same volume.' },
-  { q: '2 large eggs (scrambled, no butter)', answer: 150, choices: [80, 150, 220, 300], fact: 'Each large egg is roughly 75 kcal — mostly from protein (6g) and fat (5g). The yolk contains all the fat and most of the micronutrients.' }
+  { q: '2 large eggs (scrambled, no butter)', answer: 150, choices: [80, 150, 220, 300], fact: 'Each large egg is roughly 75 kcal, mostly from protein (6g) and fat (5g). The yolk contains all the fat and most of the micronutrients.' }
 ];
 var cgCurrent = 0, cgScore = 0, cgAnswered = false;
 
@@ -1099,7 +1099,7 @@ function cgShowScore() {
   document.getElementById('cg-feedback').textContent = '';
   var sb = document.getElementById('cg-score-board');
   sb.style.display = 'block';
-  var msgs = ['Keep studying — the facts are worth knowing!', 'Decent start — the macro maths will click with practice.', 'Good — you have solid food number intuition.', 'Great — that\'s real nutritional literacy.', 'Perfect score — you\'ve got a genuine sense for food energy.'];
+  var msgs = ['Keep studying: the facts are worth knowing!', 'Decent start: the macro maths will click with practice.', 'Good: you have solid food number intuition.', 'Great: that\'s real nutritional literacy.', 'Perfect score: you\'ve got a genuine sense for food energy.'];
   sb.innerHTML = '<strong>Score: ' + cgScore + ' / ' + cgQuestions.length + '</strong><br>'
     + '<span class="muted-small">' + msgs[Math.min(cgScore, msgs.length - 1)] + '</span><br><br>'
     + '<button onclick="cgRestart()" class="replay-btn">↺ Play again</button>';

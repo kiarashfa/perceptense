@@ -23,8 +23,7 @@ Part
 A
 ·
 world
-population
-—
+population:
 alive
 and
 ever
@@ -89,8 +88,7 @@ existed
 is
 alive
 right
-now
-—
+now,
 more
 than
 any
@@ -142,8 +140,7 @@ billion
 milestone
 ~1800
 1
-billion
-—
+billion:
 all
 of
 human
@@ -163,8 +160,7 @@ this
 point
 1930
 2
-billion
-—
+billion:
 130
 years
 after
@@ -178,8 +174,7 @@ improved
 agriculture
 1960
 3
-billion
-—
+billion,
 just
 30
 years
@@ -193,8 +188,7 @@ Revolution
 beginning
 1975
 4
-billion
-—
+billion:
 15
 years
 later
@@ -210,8 +204,7 @@ rate
 (~2.1%/yr)
 1987
 5
-billion
-—
+billion:
 12
 years
 later
@@ -226,8 +219,7 @@ July
 1987
 1999
 6
-billion
-—
+billion:
 12
 years
 later
@@ -240,8 +232,7 @@ falling
 worldwide
 2011
 7
-billion
-—
+billion:
 12
 years
 later
@@ -255,8 +246,7 @@ and
 falling
 2022
 8
-billion
-—
+billion:
 11
 years
 later
@@ -268,8 +258,7 @@ November
 2022
 ~2037
 9
-billion
-—
+billion:
 ~15
 years
 (projected)
@@ -434,8 +423,7 @@ D
 ·
 where
 people
-live
-—
+live:
 regional
 breakdown
 Share
@@ -781,8 +769,7 @@ one.
 The
 world's
 age
-structure
-—
+structure:
 100
 people
 Each
@@ -824,8 +811,7 @@ fast.
 Life
 expectancy
 at
-birth
-—
+birth:
 selected
 countries
 (2025)
@@ -885,8 +871,7 @@ achievements.
 Part
 F
 ·
-urbanisation
-—
+urbanisation:
 the
 great
 migration
@@ -958,8 +943,7 @@ rural
 70%
 rural
 2007
-50%
-—
+50%:
 historic
 milestone
 2025
@@ -1043,8 +1027,7 @@ Part
 G
 ·
 future
-projections
-—
+projections:
 where
 are
 we
@@ -1097,8 +1080,7 @@ hold
 billion
 people
 by
-2100
-—
+2100,
 up
 from
 1.4B
@@ -1146,8 +1128,7 @@ and
 high
 scenarios
 is
-enormous
-—
+enormous:
 everything
 hinges
 on
@@ -1162,8 +1143,7 @@ or
 slowly.
 The
 demographic
-dividend
-—
+dividend:
 why
 it
 matters
@@ -1204,8 +1184,7 @@ Africa
 is
 entering
 this
-window
-—
+window:
 the
 world's
 youngest
@@ -1251,8 +1230,7 @@ a
 65+
 share
 of
-~30%
-—
+~30%:
 1
 in
 3
@@ -1267,8 +1245,7 @@ strain.
 Part
 H
 ·
-interactive
-—
+interactive:
 population
 calculator
 How
@@ -1465,8 +1442,7 @@ than
 in
 any
 previous
-era
-—
+era,
 yet
 we're
 still
@@ -1664,15 +1640,13 @@ toward
 This
 won't
 fully
-happen
-—
+happen:
 immigration
 and
 policy
 changes
 are
-likely
-—
+likely,
 but
 it
 illustrates
@@ -1725,8 +1699,7 @@ was
 a
 genuine
 turning
-point
-—
+point:
 humanity
 became
 an
@@ -1758,8 +1731,7 @@ reaching
 billion
 people
 by
-2100
-—
+2100,
 roughly
 40%
 of

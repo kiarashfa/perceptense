@@ -411,7 +411,7 @@ context
 --
 stellar
 classification
-(Morgan–Keenan)
+(Morgan-Keenan)
 O-type
 --
 Blue

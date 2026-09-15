@@ -15,8 +15,7 @@ that
 break
 them
 Part
-A
--
+A:
 what
 logic
 is:
@@ -249,8 +248,7 @@ mathematics
 and
 machines.
 Part
-B
--
+B:
 classical
 logic:
 the
@@ -420,8 +418,7 @@ premises
 deserve
 belief.
 Part
-C
--
+C:
 fallacies:
 the
 patterns
@@ -549,8 +546,7 @@ belief
 is
 established."
 Part
-D
--
+D:
 formal
 systems
 and
@@ -777,8 +773,7 @@ its
 own
 sentences
 Part
-E
--
+E:
 probability
 and
 decision
@@ -940,8 +935,7 @@ You:
 Other:
 1
 Part
-F
--
+F:
 logical
 and
 self-reference
@@ -1013,8 +1007,7 @@ its
 own
 tail.
 Part
-G
--
+G:
 mathematical
 and
 infinity
@@ -1051,8 +1044,7 @@ many
 pairwise
 comparisons
 Part
-H
--
+H:
 probability
 and
 decision
@@ -1186,8 +1178,7 @@ it
 fails
 Calculate
 Part
-I
--
+I:
 philosophical
 and
 metaphysical
@@ -1302,8 +1293,7 @@ and
 is
 expanding.
 Part
-J
--
+J:
 decision
 making
 and
@@ -1896,8 +1886,7 @@ it
 becomes
 expensive.
 Part
-K
--
+K:
 Q&A
 If
 an
