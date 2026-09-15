@@ -12,7 +12,7 @@ const mod = modules.find((m) => m.id === 46)!;
   
 
     <div style="display:flex;align-items:center;gap:14px;margin-bottom:0.6rem;">
-      <i class="fa-solid fa-mask" style="font-size:42px;color:var(--accent);flex-shrink:0;"></i>
+      <i class="fa-solid fa-mask fear-accent-text" style="font-size:42px;flex-shrink:0;"></i>
       <h1 class="module-title" style="margin:0;line-height:1.05;">Module 46: Fear</h1>
     </div>
     <p class="module-subtitle">The biology, psychology, culture, and clinical shape of our oldest alarm system</p>
@@ -52,7 +52,7 @@ const mod = modules.find((m) => m.id === 46)!;
   <svg viewBox="0 0 950 390" role="img" aria-label="Diagram of the sensory fear pathway through thalamus, amygdala, cortex, hippocampus, hypothalamus, and body response" style="width:100%; height:auto;">
     <defs>
       <marker id="arrowFear" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-        <path d="M0,0 L8,4 L0,8 Z" fill="var(--accent)"/>
+        <path d="M0,0 L8,4 L0,8 Z" class="fear-accent-text"/>
       </marker>
       <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
         <path d="M0,0 L8,4 L0,8 Z" fill="var(--color-text-success)"/>
@@ -105,22 +105,22 @@ const mod = modules.find((m) => m.id === 46)!;
 
     <!-- CONNECTIONS AND ARROWS -->
     <!-- Sensory Input -> Thalamus -->
-    <line x1="160" y1="192.5" x2="220" y2="192.5" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrowFear)"/>
+    <line x1="160" y1="192.5" x2="220" y2="192.5" class="fear-accent-stroke" stroke-width="2" marker-end="url(#arrowFear)"/>
 
     <!-- Low Road: Thalamus -> Amygdala -->
-    <line x1="330" y1="160" x2="435" y2="85" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrowFear)"/>
+    <line x1="330" y1="160" x2="435" y2="85" class="fear-accent-stroke" stroke-width="2" marker-end="url(#arrowFear)"/>
 
     <!-- High Road: Thalamus -> Cortex -->
     <line x1="330" y1="225" x2="435" y2="300" stroke="var(--color-text-success)" stroke-width="2" marker-end="url(#arrowGreen)"/>
 
     <!-- Amygdala -> Hypothalamus -->
-    <line x1="550" y1="52.5" x2="630" y2="52.5" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrowFear)"/>
+    <line x1="550" y1="52.5" x2="630" y2="52.5" class="fear-accent-stroke" stroke-width="2" marker-end="url(#arrowFear)"/>
 
     <!-- Cortex -> Hippocampus -->
     <line x1="550" y1="332.5" x2="630" y2="332.5" stroke="var(--color-text-success)" stroke-width="2" marker-end="url(#arrowGreen)"/>
 
     <!-- Hypothalamus -> Body -->
-    <line x1="710" y1="85" x2="835" y2="165" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrowFear)"/>
+    <line x1="710" y1="85" x2="835" y2="165" class="fear-accent-stroke" stroke-width="2" marker-end="url(#arrowFear)"/>
 
     <!-- Feedback: Hippocampus -> Amygdala -->
     <line x1="700" y1="300" x2="505" y2="85" stroke="var(--color-text-secondary)" stroke-width="1.5" marker-end="url(#arrowGrey)"/>
@@ -128,7 +128,7 @@ const mod = modules.find((m) => m.id === 46)!;
 
     <!-- PATH LABELS -->
     <!-- Low road text -->
-    <text x="390" y="125" text-anchor="end" font-size="12" fill="var(--accent)" font-family="system-ui,sans-serif" font-weight="500">low road: crude, fast (~12 ms)</text>
+    <text x="390" y="125" text-anchor="end" font-size="12" class="fear-accent-text" font-family="system-ui,sans-serif" font-weight="500">low road: crude, fast (~12 ms)</text>
 
     <!-- High road text (split into two lines to prevent overlap) -->
     <text x="220" y="265" text-anchor="start" font-size="12" fill="var(--color-text-success)" font-family="system-ui,sans-serif" font-weight="500">high road: detailed,</text>
@@ -642,12 +642,12 @@ window.addEventListener('DOMContentLoaded', function() {
      PART B — PTSD bar chart
   ════════════════════════════════════════════════════ */
   var ptsdData = [
-    { label: 'Sexual assault', val: 33, col: '#9B3030' },
-    { label: 'Combat / war zone', val: 20, col: '#C04040' },
-    { label: 'Childhood abuse', val: 24, col: '#B03838' },
-    { label: 'Serious accident', val: 7, col: '#C87070' },
-    { label: 'Natural disaster', val: 5, col: '#D09090' },
-    { label: 'General trauma', val: 8, col: '#DBA0A0' }
+    { label: 'Sexual assault', val: 33, col: '#9B3030', fg: '#fff' },
+    { label: 'Combat / war zone', val: 20, col: '#C04040', fg: '#fff' },
+    { label: 'Childhood abuse', val: 24, col: '#B03838', fg: '#fff' },
+    { label: 'Serious accident', val: 7, col: '#C87070', fg: '#1a1a18' },
+    { label: 'Natural disaster', val: 5, col: '#D09090', fg: '#1a1a18' },
+    { label: 'General trauma', val: 8, col: '#DBA0A0', fg: '#1a1a18' }
   ];
   var ptsdContainer = document.getElementById('ptsd-bars');
   var maxPtsd = 35;
@@ -656,7 +656,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var row = document.createElement('div');
     row.className = 'bar-row';
     row.innerHTML = '<div class="bl">' + d.label + '</div>' +
-      '<div class="bb" style="width:' + w + '%;background:' + d.col + ';"><span class="bv" style="color:#fff;">' + d.val + '%</span></div>';
+      '<div class="bb" style="width:' + w + '%;background:' + d.col + ';"><span class="bv" style="color:' + d.fg + ';">' + d.val + '%</span></div>';
     ptsdContainer.appendChild(row);
   });
 
@@ -668,7 +668,7 @@ window.addEventListener('DOMContentLoaded', function() {
     { label: 'Little Albert (Watson)', start: 1920, end: 1930, bg: 'var(--color-background-danger)', col: 'var(--color-text-danger)', text: 'human fear learning' },
     { label: 'Mowrer two-factor theory', start: 1947, end: 1975, bg: 'var(--color-background-warning)', col: 'var(--color-text-warning)', text: 'fear + avoidance' },
     { label: 'Seligman preparedness', start: 1971, end: 1995, bg: 'var(--color-background-success)', col: 'var(--color-text-success)', text: 'evolved readiness' },
-    { label: 'LeDoux fear circuits', start: 1994, end: 2015, bg: 'var(--accent-bg)', col: 'var(--accent)', text: 'low road / high road' },
+    { label: 'LeDoux fear circuits', start: 1994, end: 2015, bg: 'var(--accent-bg)', colClass: 'fear-accent-text', text: 'low road / high road' },
     { label: 'Inhibitory learning models', start: 2008, end: 2026, bg: 'var(--color-background-secondary)', col: 'var(--color-text-primary)', text: 'extinction = new learning' }
   ];
   buildTimeline('sci-axis', 'sci-timeline', sciItems, 1900, 2026, [1900, 1930, 1960, 1990, 2020]);
@@ -721,15 +721,15 @@ window.addEventListener('DOMContentLoaded', function() {
      PART B — Risk perception bar chart (from ver2)
   ════════════════════════════════════════════════════ */
   var riskData = [
-    { label: 'Heart disease', val: 655000, fear: 'Low', col: '#888' },
-    { label: 'Cancer', val: 602000, fear: 'Medium', col: '#999' },
-    { label: 'Drug overdose', val: 72000, fear: 'Low-medium', col: '#B09090' },
-    { label: 'Car accidents', val: 38000, fear: 'Low (chosen)', col: '#B08080' },
-    { label: 'Falls', val: 35000, fear: 'Low', col: '#A09090' },
-    { label: 'Homicide', val: 19000, fear: 'High', col: '#C04040' },
-    { label: 'Plane crash (US)', val: 400, fear: 'High', col: '#B03030' },
-    { label: 'Terrorism (US)', val: 100, fear: 'Very high', col: '#9B3030' },
-    { label: 'Lightning', val: 20, fear: 'Medium', col: '#909040' }
+    { label: 'Heart disease', val: 655000, fear: 'Low', col: '#888', fg: '#1a1a18' },
+    { label: 'Cancer', val: 602000, fear: 'Medium', col: '#999', fg: '#1a1a18' },
+    { label: 'Drug overdose', val: 72000, fear: 'Low-medium', col: '#B09090', fg: '#1a1a18' },
+    { label: 'Car accidents', val: 38000, fear: 'Low (chosen)', col: '#B08080', fg: '#1a1a18' },
+    { label: 'Falls', val: 35000, fear: 'Low', col: '#A09090', fg: '#1a1a18' },
+    { label: 'Homicide', val: 19000, fear: 'High', col: '#C04040', fg: '#fff' },
+    { label: 'Plane crash (US)', val: 400, fear: 'High', col: '#B03030', fg: '#fff' },
+    { label: 'Terrorism (US)', val: 100, fear: 'Very high', col: '#9B3030', fg: '#fff' },
+    { label: 'Lightning', val: 20, fear: 'Medium', col: '#909040', fg: '#1a1a18' }
   ];
   var maxRisk = 700000;
   var riskBarsEl = document.getElementById('risk-bars');
@@ -739,7 +739,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var row = document.createElement('div');
     row.className = 'bar-row';
     row.innerHTML = '<div class="bl">' + d.label + '</div>' +
-      '<div class="bb" style="width:' + w + '%;background:' + d.col + ';min-width:30px;"><span class="bv" style="color:#fff;">' + label + ' · Fear: ' + d.fear + '</span></div>';
+      '<div class="bb" style="width:' + w + '%;background:' + d.col + ';min-width:30px;"><span class="bv" style="color:' + d.fg + ';">' + label + ' · Fear: ' + d.fear + '</span></div>';
     riskBarsEl.appendChild(row);
   });
 
@@ -804,10 +804,10 @@ window.addEventListener('DOMContentLoaded', function() {
   ════════════════════════════════════════════════════ */
   var fearPeriods = [
     { label: 'Witch trials (Europe)', start: 1450, end: 1750, bg: '#FCEBEB', col: '#9B3030', text: '1450–1750' },
-    { label: 'French Terror', start: 1793, end: 1795, bg: '#FAD5D5', col: '#C04040', text: '1793–95' },
+    { label: 'French Terror', start: 1793, end: 1795, bg: '#FAD5D5', col: '#AD3939', text: '1793–95' },
     { label: 'Red Scare I (US)', start: 1917, end: 1920, bg: '#FCEBEB', col: '#9B3030', text: '1917–20' },
     { label: 'McCarthyism (US)', start: 1950, end: 1957, bg: '#FAD5D5', col: '#A03030', text: '1950–57' },
-    { label: 'Satanic Panic (US/UK)', start: 1980, end: 1994, bg: '#FCEBEB', col: '#C05050', text: '1980–94' },
+    { label: 'Satanic Panic (US/UK)', start: 1980, end: 1994, bg: '#FCEBEB', col: '#BB4343', text: '1980–94' },
     { label: 'War on Terror era', start: 2001, end: 2020, bg: '#FAD5D5', col: '#803030', text: '2001–20' },
     { label: 'Anti-immigration panic', start: 2015, end: 2024, bg: '#FCEBEB', col: '#B04040', text: '2015–24' }
   ];
@@ -1009,12 +1009,12 @@ window.addEventListener('DOMContentLoaded', function() {
      PART G — Phobia distribution bar
   ════════════════════════════════════════════════════ */
   var distData = [
-    { label: 'Animal', pct: 29, col: '#9B3030' },
-    { label: 'Situational', pct: 22, col: '#C04040' },
-    { label: 'Social anxiety', pct: 18, col: '#D06060' },
-    { label: 'Natural environment', pct: 14, col: '#C08080' },
-    { label: 'Blood/injection', pct: 10, col: '#D09090' },
-    { label: 'Other', pct: 7, col: '#DDAAAA' }
+    { label: 'Animal', pct: 29, col: '#9B3030', fg: '#fff' },
+    { label: 'Situational', pct: 22, col: '#C04040', fg: '#fff' },
+    { label: 'Social anxiety', pct: 18, col: '#D06060', fg: '#1a1a18' },
+    { label: 'Natural environment', pct: 14, col: '#C08080', fg: '#1a1a18' },
+    { label: 'Blood/injection', pct: 10, col: '#D09090', fg: '#1a1a18' },
+    { label: 'Other', pct: 7, col: '#DDAAAA', fg: '#1a1a18' }
   ];
   var distBarEl = document.getElementById('phobia-dist-bar');
   var distLegendEl = document.getElementById('phobia-dist-legend');
@@ -1023,7 +1023,7 @@ window.addEventListener('DOMContentLoaded', function() {
     seg.className = 'dist-seg';
     seg.style.width = d.pct + '%';
     seg.style.background = d.col;
-    seg.style.color = '#fff';
+    seg.style.color = d.fg;
     seg.textContent = d.pct >= 10 ? d.pct + '%' : '';
     seg.title = d.label + ': ' + d.pct + '%';
     distBarEl.appendChild(seg);
@@ -1130,11 +1130,11 @@ window.addEventListener('DOMContentLoaded', function() {
         var left  = ((item.start - minY) / range * 100).toFixed(1);
         var width = ((item.end   - item.start) / range * 100).toFixed(1);
         var bg = item.bg || item.col || '#ccc';
-        var col = item.col || 'var(--color-text-primary)';
+        var col = item.col || (item.colClass ? '' : 'var(--color-text-primary)');
         var label = item.text || (item.start + '–' + item.end);
         return '<div class="data-row"><div class="pc-label">' + item.label + '</div>' +
           '<div class="pc-track"><div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + bg + ';">' +
-          '<span class="period-label-medium" style="color:' + col + ';">' + label + '</span></div></div></div>';
+          '<span class="period-label-medium' + (item.colClass ? ' ' + item.colClass : '') + '" style="color:' + col + ';">' + label + '</span></div></div></div>';
       }).join('');
     }
   }
