@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #3A96B0;
-      --accent-bg: #e6f6fb;
-      --accent-border: #9dd4e4;
-    }
     .button-row-compact button.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);

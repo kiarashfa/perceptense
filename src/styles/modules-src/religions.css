@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #A0845C;
-      --accent-bg: #F5EDE0;
-      --accent-border: #C9A87A;
-    }
     .button-row-compact button { font-size: 11px; padding: 3px 11px; }
     .button-row-compact button.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); }
     .ep-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 8px; }

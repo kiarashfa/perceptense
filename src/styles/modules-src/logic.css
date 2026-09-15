@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #534AB7;
-      --accent-bg: #EEEDFE;
-      --accent-border: #AFA9EC;
-    }
     .module-header i {
       font-size: 42px;
       color: var(--accent);

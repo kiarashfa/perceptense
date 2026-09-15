@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #E07B2A;
-      --accent-bg: #FDF3E8;
-      --accent-border: #E0A86A;
-    }
     .explorer-btn {
       font-size: 12px; padding: 5px 13px;
       border-radius: var(--border-radius-md);
