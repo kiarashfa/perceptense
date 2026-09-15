@@ -8,7 +8,7 @@
     .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 
     /* Fertility explorer */
-    .fertil-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin-top: 10px; }
+    .fertil-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; margin-top: 10px; }
     .fertil-country { font-size: 11px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
     .fertil-rate { font-size: 18px; font-weight: 500; }
     .life-fill { height: 100%; border-radius: 3px; display: flex; align-items: center; padding-left: 8px; }

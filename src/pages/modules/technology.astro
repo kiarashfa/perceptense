@@ -154,7 +154,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">Software layers — from machine code to applications</div>
       <div class="muted-copy" style="margin-bottom:12px;">Software is built in layers of abstraction, each one hiding the complexity below. Machine code is pure binary executed by the CPU; you never write it. Assembly gives human-readable names to those instructions but is still hardware-specific. High-level languages (Python, JavaScript, C++) compile or interpret down through these layers. An operating system sits in the middle, managing hardware resources so applications don't have to. The average smartphone app depends on dozens of such layers — understanding even one helps demystify all of computing.</div>
-      <div class="tile-grid-md" id="layer-grid"></div>
+      <div class="tile-grid-md tile-grid-6up" id="layer-grid"></div>
       <div class="elem-detail-box" id="layer-detail"></div>
     </div>
 
@@ -317,7 +317,7 @@ const mod = modules.find((m) => m.id === 37)!;
     <div class="card" style="margin-bottom:10px;">
       <div class="panel-title">What AI actually is — and the difference between types</div>
       <div class="muted-copy" style="margin-bottom:12px;">AI is not a single thing. The term covers everything from a spam filter to GPT-4. Today's AI systems are all "narrow" — they do one thing well, but understanding does not transfer. A chess engine that beats Magnus Carlsen cannot play draughts. The long-hypothesised "artificial general intelligence" (AGI) — a system that can learn any task a human can — does not yet exist, and experts disagree sharply on whether current approaches could ever produce it.</div>
-      <div class="tile-grid-md" id="ai-type-grid"></div>
+      <div class="tile-grid-md tile-grid-6up" id="ai-type-grid"></div>
       <div class="elem-detail-box" id="ai-type-detail"></div>
     </div>
 
@@ -576,7 +576,7 @@ const mod = modules.find((m) => m.id === 37)!;
       { label: 'Internet era', start: 1991, end: 2026, col: 'var(--color-text-primary)', bg: 'var(--color-background-secondary)', text: '1991 – now' },
       { label: 'Modern AI wave', start: 2012, end: 2026, col: 'var(--color-text-success)', bg: 'var(--accent-bg)', text: '2012 – now' }
     ];
-    buildPeriodChart(longPeriods, 'longaxis', 'longrows', -10000, 2026, [-10000, -5000, 0, 1500, 1800, 1950, 2026]);
+    buildPeriodChart(longPeriods, 'longaxis', 'longrows', -10000, 2026, [-10000, -5000, 0, 2026]);
 
     function buildPeriodChart(rows, axisId, rowsId, minYear, maxYear, marks) {
       var axis = document.getElementById(axisId);
@@ -590,8 +590,9 @@ const mod = modules.find((m) => m.id === 37)!;
       target.innerHTML = rows.map(function(row) {
         var left = ((row.start - minYear) / span) * 100;
         var width = ((row.end - row.start) / span) * 100;
+        var tiny = width < 3;
         return '<div class="period-row"><div class="pc-label">' + row.label + '</div>'
-          + '<div class="pc-track"><div class="pc-fill" style="left:' + left.toFixed(2) + '%; width:' + width.toFixed(2) + '%; background:' + row.bg + '; color:' + row.col + ';">'
+          + '<div class="pc-track"><div class="pc-fill' + (tiny ? ' pc-fill-tiny' : '') + '" style="left:' + left.toFixed(2) + '%; width:' + width.toFixed(2) + '%; background:' + row.bg + '; color:' + row.col + ';">'
           + '<span class="pc-fill-label">' + row.text + '</span></div></div></div>';
       }).join('');
     }

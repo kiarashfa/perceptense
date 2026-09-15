@@ -89,7 +89,7 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- Element explorer -->
   <div class="content-panel">
     <div class="panel-title">Core design elements — click to explore</div>
-    <div class="tile-grid-md">
+    <div class="tile-grid-md elements-grid-6up">
       <div class="elem-card active" onclick="showElem('mechanics',this)"><div class="elem-icon">⚙️</div><div class="label-tiny-strong">Mechanics</div><div class="sub-caption">Rules &amp; systems</div></div>
       <div class="elem-card" onclick="showElem('feedback',this)"><div class="elem-icon">🔄</div><div class="label-tiny-strong">Feedback loops</div><div class="sub-caption">Positive &amp; negative</div></div>
       <div class="elem-card" onclick="showElem('difficulty',this)"><div class="elem-icon">📈</div><div class="label-tiny-strong">Difficulty curve</div><div class="sub-caption">Flow &amp; frustration</div></div>
@@ -183,16 +183,16 @@ const mod = modules.find((m) => m.id === 35)!;
 
   <div class="genres-intro">Game genres are defined primarily by their core <em>mechanics</em> — what the player is fundamentally doing — rather than by theme or setting (as in literature or film). A game about a space war can be a first-person shooter, a real-time strategy game, or a visual novel depending on what actions the player takes. The same theme can generate completely different experiences. Click a genre to explore.</div>
 
-  <div class="tile-grid-sm">
-    <div class="genre-card active" onclick="showGenre('action',this)"><div class="card-icon-small">⚔️</div><div class="label-tiny-strong">Action</div><div class="card-sub-muted">Reflexes &amp; combat</div></div>
-    <div class="genre-card" onclick="showGenre('rpg',this)"><div class="card-icon-small">🧙</div><div class="label-tiny-strong">RPG</div><div class="card-sub-muted">Character &amp; story</div></div>
-    <div class="genre-card" onclick="showGenre('strategy',this)"><div class="card-icon-small">♟️</div><div class="label-tiny-strong">Strategy</div><div class="card-sub-muted">Planning &amp; systems</div></div>
-    <div class="genre-card" onclick="showGenre('simulation',this)"><div class="card-icon-small">🌆</div><div class="label-tiny-strong">Simulation</div><div class="card-sub-muted">Modelling worlds</div></div>
-    <div class="genre-card" onclick="showGenre('puzzle',this)"><div class="card-icon-small">🧩</div><div class="label-tiny-strong">Puzzle</div><div class="card-sub-muted">Logic &amp; insight</div></div>
-    <div class="genre-card" onclick="showGenre('platformer',this)"><div class="card-icon-small">🍄</div><div class="label-tiny-strong">Platformer</div><div class="card-sub-muted">Space &amp; movement</div></div>
-    <div class="genre-card" onclick="showGenre('adventure',this)"><div class="card-icon-small">🗺️</div><div class="label-tiny-strong">Adventure</div><div class="card-sub-muted">Exploration &amp; narrative</div></div>
-    <div class="genre-card" onclick="showGenre('sports',this)"><div class="card-icon-small">⚽</div><div class="label-tiny-strong">Sports / Racing</div><div class="card-sub-muted">Skill &amp; competition</div></div>
-    <div class="genre-card" onclick="showGenre('indie',this)"><div class="card-icon-small">💎</div><div class="label-tiny-strong">Indie</div><div class="card-sub-muted">Auteur &amp; experiment</div></div>
+  <div class="tile-grid-sm genres-grid-9up">
+    <div class="genre-card active" onclick="showGenre('action',this)"><div class="card-icon-small">⚔️</div><div class="label-tiny-strong">Action</div></div>
+    <div class="genre-card" onclick="showGenre('rpg',this)"><div class="card-icon-small">🧙</div><div class="label-tiny-strong">RPG</div></div>
+    <div class="genre-card" onclick="showGenre('strategy',this)"><div class="card-icon-small">♟️</div><div class="label-tiny-strong">Strategy</div></div>
+    <div class="genre-card" onclick="showGenre('simulation',this)"><div class="card-icon-small">🌆</div><div class="label-tiny-strong">Simulation</div></div>
+    <div class="genre-card" onclick="showGenre('puzzle',this)"><div class="card-icon-small">🧩</div><div class="label-tiny-strong">Puzzle</div></div>
+    <div class="genre-card" onclick="showGenre('platformer',this)"><div class="card-icon-small">🍄</div><div class="label-tiny-strong">Platformer</div></div>
+    <div class="genre-card" onclick="showGenre('adventure',this)"><div class="card-icon-small">🗺️</div><div class="label-tiny-strong">Adventure</div></div>
+    <div class="genre-card" onclick="showGenre('sports',this)"><div class="card-icon-small">⚽</div><div class="label-tiny-strong">Sports / Racing</div></div>
+    <div class="genre-card" onclick="showGenre('indie',this)"><div class="card-icon-small">💎</div><div class="label-tiny-strong">Indie</div></div>
   </div>
   <div id="genre-display" class="genre-detail show"></div>
 
@@ -298,7 +298,7 @@ const mod = modules.find((m) => m.id === 35)!;
   </div>
 
   <!-- How games are made -->
-  <div class="card-grid-roomy">
+  <div class="card-grid-roomy dev-grid-2up">
     <div class="card">
       <p class="clabel">AAA development</p>
       <p class="cval">$100M–$300M+ budgets, 5–7 years, 500+ people</p>
@@ -335,7 +335,7 @@ const mod = modules.find((m) => m.id === 35)!;
   <!-- What games uniquely say -->
   <div class="content-panel">
     <div class="panel-title">What games can express that no other medium can</div>
-    <div class="card-grid-compact">
+    <div class="card-grid-compact express-grid-2up">
       <div class="sub-card-roomy">
         <div class="detail-label-spaced">The feeling of becoming competent</div>
         <div class="body-small">Only games can make you feel the genuine progression from helplessness to mastery. Dark Souls is built entirely around this arc: the player dies hundreds of times, then defeats the boss. That victory is earned by the player, not gifted by the author. No film can make you actually improve at anything. Celeste uses this structure to tell a story about depression and self-belief — the difficulty of the game is the argument.</div>
@@ -649,7 +649,7 @@ function showGenre(key, card) {
       <div style="font-size:15px; font-weight:500; color:var(--color-text-primary);">${g.name}</div>
       <div style="font-size:11px; font-weight:500; background:${g.bg}; color:${g.col}; border-radius:99px; padding:2px 9px;">game genre</div>
     </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px; margin-bottom:8px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px; margin-bottom:8px;">
       <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">What it is</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${g.what}</div></div>
       <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Core appeal</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${g.appeal}</div></div>
       <div style="background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 11px;"><div style="font-size:11px; color:var(--color-text-secondary); margin-bottom:2px;">Design challenges</div><div style="font-size:12px; color:var(--color-text-primary); line-height:1.5;">${g.design}</div></div>

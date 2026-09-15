@@ -137,10 +137,10 @@ const mod = modules.find((m) => m.id === 50)!;
       <text x="245" y="90" font-size="9" fill="var(--color-text-secondary)">respiration</text>
       <!-- Arrows: ocean exchange -->
       <path d="M470,60 L490,140" class="cycle-path-blue"/>
-      <text x="496" y="95" font-size="9" class="eco-text-blue">ocean uptake</text>
+      <text x="478" y="76" font-size="9" class="eco-text-blue">ocean uptake</text>
       <!-- Arrows: outgassing -->
       <path d="M500,135 L460,65" class="cycle-path"/>
-      <text x="526" y="100" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">outgassing</text>
+      <text x="513" y="124" font-size="9" fill="var(--color-text-secondary)" text-anchor="middle">outgassing</text>
       <!-- Arrows: fossil fuel burning (red) -->
       <path d="M350,220 L350,68" class="cycle-path-red"/>
       <text x="360" y="170" font-size="9" class="eco-text-red">burning (+10 GtC/yr)</text>
@@ -807,12 +807,12 @@ showBiome('rainforest', document.querySelector('[onclick="showBiome(\'rainforest
   const track = document.getElementById('hotspot-track');
   if (!track) return;
   const hotspots = [
-    { label:'Cerrado (Brazil)', x:25, color:'#ef9f27' },
-    { label:'Cape Floristic (S. Africa)', x:45, color:'#1D9E75' },
-    { label:'Mediterranean Basin', x:55, color:'#185FA5' },
-    { label:'Eastern Himalayas', x:65, color:'#534AB7' },
+    { label:'Cerrado (Brazil)', x:15, color:'#ef9f27' },
+    { label:'Cape Floristic (S. Africa)', x:32, color:'#1D9E75' },
+    { label:'Mediterranean Basin', x:48, color:'#185FA5' },
+    { label:'Eastern Himalayas', x:63, color:'#534AB7' },
     { label:'Sundaland (SE Asia)', x:80, color:'#791F1F' },
-    { label:'Caribbean', x:90, color:'#993C1D' }
+    { label:'Caribbean', x:93, color:'#993C1D' }
   ];
   hotspots.forEach(h => {
     const dot = document.createElement('div');
@@ -1026,12 +1026,12 @@ showEnergy('solar', document.querySelector('[onclick="showEnergy(\'solar\',this)
   const track = document.getElementById('carbon-price-track');
   if (!track) return;
   const prices = [
-    { label:'Voluntary offsets (~$5)', x:3, color:'#791F1F' },
-    { label:'China ETS (~$10)', x:7, color:'#993C1D' },
-    { label:'California (~$38)', x:25, color:'#ef9f27' },
-    { label:'Canada ($65)', x:43, color:'#633806' },
-    { label:'EU ETS (~$80)', x:53, color:'#185FA5' },
-    { label:'IMF minimum needed ($130)', x:87, color:'#1D9E75' }
+    { label:'Voluntary offsets (~$5)', x:6, color:'#791F1F' },
+    { label:'China ETS (~$10)', x:20, color:'#993C1D' },
+    { label:'California (~$38)', x:38, color:'#ef9f27' },
+    { label:'Canada ($65)', x:54, color:'#633806' },
+    { label:'EU ETS (~$80)', x:68, color:'#185FA5' },
+    { label:'IMF minimum needed ($130)', x:90, color:'#1D9E75' }
   ];
   prices.forEach(p => {
     const dot = document.createElement('div');

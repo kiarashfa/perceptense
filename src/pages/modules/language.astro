@@ -590,6 +590,7 @@ const mod = modules.find((m) => m.id === 40)!;
       document.getElementById('animal-panel').innerHTML =
         '<h4>' + d.title + '</h4><p>' + d.body + '</p><p style="font-size:12px;color:var(--color-text-tertiary);">' + d.status + '</p>';
     };
+    showAnimal('bees', document.querySelector('#animal-btns button'));
 
     // ── Writing systems explorer ──
     var writingData = {
@@ -627,6 +628,7 @@ const mod = modules.find((m) => m.id === 40)!;
       document.getElementById('writing-panel').innerHTML =
         '<h4>' + d.title + '</h4><p>' + d.body + '</p><p style="font-size:12px;color:var(--color-text-secondary);"><span style="font-weight:500;">Examples:</span> ' + d.examples + '</p>';
     };
+    showWriting('logographic', document.querySelector('#writing-btns button'));
 
     // ── Language family distribution bar ──
     var families = [
@@ -694,6 +696,8 @@ const mod = modules.find((m) => m.id === 40)!;
         var mark = document.createElement('div');
         mark.className = 'pc-axis-mark';
         mark.style.left = (i / axisMarks * 100) + '%';
+        if (i === 0) { mark.style.transform = 'translateX(0)'; }
+        else if (i === axisMarks) { mark.style.transform = 'translateX(-100%)'; }
         mark.textContent = val + (unit === 'months' ? 'm' : '');
         axisDiv.appendChild(mark);
       }
@@ -831,6 +835,7 @@ const mod = modules.find((m) => m.id === 40)!;
       document.getElementById('untrans-panel').innerHTML =
         '<h4>' + d.title + '</h4><p>' + d.body + '</p><p style="font-size:12px;color:var(--color-text-tertiary);">Language: ' + d.language + '</p>';
     };
+    showUntrans('saudade', document.querySelector('#untrans-btns button'));
 
     // ── Major world languages explorer ──
     var langData = {
@@ -871,6 +876,7 @@ const mod = modules.find((m) => m.id === 40)!;
       document.getElementById('lang-panel').innerHTML =
         '<h4>' + d.title + '</h4><p>' + d.body + '</p>';
     };
+    showLang('mandarin', document.querySelector('#lang-btns button'));
 
     // ── Endangered languages by region bar ──
     var regions = [

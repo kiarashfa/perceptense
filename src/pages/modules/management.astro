@@ -124,7 +124,7 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Porter Five Forces — elem card grid -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Porter's Five Forces — click each force to explore</div>
-      <div class="tile-grid-lg" id="forces-grid">
+      <div class="tile-grid-lg forces-grid-5up" id="forces-grid">
         <div class="elem-card" onclick="showForce('rivalry',this)">
           <div class="elem-card-icon"><i class="fa-solid fa-people-arrows"></i></div>
           <div class="elem-card-label">Competitive Rivalry</div>
@@ -1103,6 +1103,7 @@ const mod = modules.find((m) => m.id === 36)!;
       document.querySelectorAll('#bias-btns button').forEach(function(b) { b.classList.remove('active'); });
       btn.classList.add('active');
     };
+    showBias('confirmation', document.querySelector('#bias-btns button'));
 
     /* ── Business model explorer ── */
     const BIZ_MODELS = {

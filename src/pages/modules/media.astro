@@ -160,7 +160,7 @@ const mod = modules.find((m) => m.id === 44)!;
       </div>
     </div>
 
-    <div class="cgrid cgrid-style">
+    <div class="cgrid cgrid-style cgrid-3up">
       <div class="card">
         <div class="clabel">The objectivity norm</div>
         <div class="muted-copy-tight">The objectivity norm emerged in American journalism in the early 20th century as a commercial strategy as much as an ethical one: if a paper claimed no political affiliation, it could sell to readers across the political spectrum. By the mid-century it had hardened into professional dogma. The model requires reporters to present "both sides" and attribute claims rather than assess their truth. Its core problem: it treats balance as synonymous with accuracy. Climate science coverage, for decades, gave equal weight to 97% of climate scientists and 3% of contrarians — a structurally false balance.</div>
@@ -178,7 +178,7 @@ const mod = modules.find((m) => m.id === 44)!;
     <h2 class="sec" id="types-of-journalism">types of journalism</h2>
 
     <!-- MULTI-CARD EXPLORER: types of journalism -->
-    <div class="tile-grid-md" id="jtype-grid"></div>
+    <div class="tile-grid-md jtype-grid-6up" id="jtype-grid"></div>
     <div class="elem-detail" id="jtype-detail"></div>
 
     <h2 class="sec" id="press-freedom">press freedom</h2>
@@ -419,7 +419,7 @@ const mod = modules.find((m) => m.id === 44)!;
 
     <h2 class="sec" id="advertising-ethics-and-pr">advertising ethics and PR</h2>
 
-    <div class="cgrid cgrid-style">
+    <div class="cgrid cgrid-style cgrid-1up">
       <div class="card">
         <div class="clabel">Regulation landscape</div>
         <div class="muted-copy-tight">UK advertising is regulated by the Advertising Standards Authority (ASA), which operates a self-regulatory system with real enforcement power — it can remove ads and ban advertisers. In the US, the Federal Trade Commission (FTC) regulates deceptive advertising at the federal level. Key prohibitions that vary by country: tobacco advertising is banned from broadcast in the UK since 1965 and in the US since 1971; alcohol advertising is restricted but not banned; political advertising in the UK is banned on broadcast but allowed in print and online; in the US, political advertising has near-absolute protection under the First Amendment, creating a distinctive environment where lies in political ads face almost no legal consequence.</div>
@@ -456,7 +456,7 @@ const mod = modules.find((m) => m.id === 44)!;
 
     <h2 class="sec" id="the-algorithm">the algorithm</h2>
 
-    <div class="cgrid cgrid-style">
+    <div class="cgrid cgrid-style cgrid-1up">
       <div class="card">
         <div class="clabel">Engagement optimisation</div>
         <div class="muted-copy-tight">Every major social media algorithm is trained to maximise one metric: engagement — defined as likes, comments, shares, and time spent. This sounds benign until you recognise that outrage, anxiety, and moral indignation are among the most engagement-generating emotions. A 2021 internal Facebook study, revealed by whistleblower Frances Haugen, found that the platform's own research showed content that provoked "angry" reactions was distributed 5x as widely as content that provoked "like" reactions. The company had a proposed fix and did not implement it, because it would have reduced overall engagement metrics. This is not a bug; it is a rational response to the optimisation objective.</div>
@@ -510,7 +510,7 @@ const mod = modules.find((m) => m.id === 44)!;
 
     <h2 class="sec" id="social-media-democracy-and-regulation">social media, democracy, and regulation</h2>
 
-    <div class="cgrid cgrid-style">
+    <div class="cgrid cgrid-style cgrid-1up">
       <div class="card">
         <div class="clabel">Democratic possibilities and risks</div>
         <div class="muted-copy-tight">Social media enabled the Arab Spring uprisings of 2010–11: Wael Ghonim's Facebook page coordinating Tahrir Square protests became a template for networked activism. The Belarusian Sviatlana Tsikhanouskaya used Telegram to organise mass protests in 2020. Twitter's real-time information during crises — natural disasters, coup attempts, public emergencies — genuinely serves a democratic function that broadcast media cannot replicate. The risks are equally concrete: 2016 Russian Internet Research Agency operations placed 3,500 Facebook ads reaching 11.4 million Americans in the election period; state-sponsored troll farms in Nigeria, Brazil, the Philippines, and India have been documented by Stanford's Internet Observatory since 2017 in at least 30 countries.</div>
@@ -563,7 +563,7 @@ const mod = modules.find((m) => m.id === 44)!;
 
     <h2 class="sec" id="the-future-of-media-ai-and-synthetic-content">the future of media — AI and synthetic content</h2>
 
-    <div class="cgrid cgrid-style">
+    <div class="cgrid cgrid-style cgrid-1up">
       <div class="card">
         <div class="clabel">AI-generated news</div>
         <div class="muted-copy-tight">By 2024, several major publishers including Associated Press (since 2014) and Axel Springer were using AI systems to generate routine news content: financial earnings summaries, sports score reports, weather updates. The AP publishes approximately 4,000 AI-generated earnings stories per quarter. For structured, low-stakes content, this is arguably an efficiency gain. The risk is the extension of automated content generation to complex, contextual, interpretive journalism where errors are consequential. CNET's 2023 experiment with AI-generated financial articles produced multiple factual errors that went uncorrected until independent review. The problem is not just accuracy but the economics: if AI can generate plausible-seeming journalism at near-zero cost, the incentive for expensive human journalism is further eroded.</div>
@@ -688,7 +688,7 @@ const mod = modules.find((m) => m.id === 44)!;
       const axis = document.createElement('div');
       axis.className = 'pc-axis';
       axis.style.cssText = 'height:18px;position:relative;margin-bottom:6px;';
-      [500,1000,1500,1700,1850,1950,2000,2025].forEach(y => {
+      [500,1000,1500,1800,2025].forEach(y => {
         const m = document.createElement('div');
         m.className = 'pc-axis-mark';
         m.style.left = ((y - minY) / range * 100) + '%';
@@ -705,9 +705,10 @@ const mod = modules.find((m) => m.id === 44)!;
         const trk = document.createElement('div');
         trk.className = 'pc-track';
         const fill = document.createElement('div');
-        fill.className = 'pc-fill';
+        const widthPct = (d.end - d.start) / range * 100;
+        fill.className = 'pc-fill' + (widthPct < 10 ? ' pc-fill-tiny' : '');
         fill.style.left = ((d.start - minY) / range * 100) + '%';
-        fill.style.width = ((d.end - d.start) / range * 100) + '%';
+        fill.style.width = widthPct + '%';
         fill.style.background = d.bg;
         const fl = document.createElement('span');
         fl.className = 'pc-fill-label';

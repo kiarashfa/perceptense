@@ -22,6 +22,7 @@
       padding-right: 10px;
       line-height: 1.3;
     }
+    .tile-grid-6up { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
     .pc-track {
       flex: 1;
       position: relative;
@@ -44,6 +45,14 @@
       padding: 0 5px;
       white-space: nowrap;
       overflow: hidden;
+    }
+    .pc-fill-tiny .pc-fill-label {
+      position: absolute;
+      right: 100%;
+      margin-right: 4px;
+      padding: 0;
+      overflow: visible;
+      color: var(--color-text-secondary);
     }
     .explorer-btn {
       font-size: 12px;

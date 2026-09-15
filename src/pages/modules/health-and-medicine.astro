@@ -341,17 +341,19 @@ const mod = modules.find((m) => m.id === 49)!;
       <label>Sex:</label>
       <select id="msj-sex"><option value="m">Male</option><option value="f">Female</option></select>
     </div>
-    <div class="calc-row">
-      <label>Age (years):</label>
-      <input type="number" id="msj-age" value="35" min="18" max="90">
-    </div>
-    <div class="calc-row">
-      <label>Weight (kg):</label>
-      <input type="number" id="msj-weight" value="70" min="30" max="200">
-    </div>
-    <div class="calc-row">
-      <label>Height (cm):</label>
-      <input type="number" id="msj-height" value="170" min="140" max="220">
+    <div class="msj-row-3up">
+      <div class="calc-row">
+        <label>Age (years):</label>
+        <input type="number" id="msj-age" value="35" min="18" max="90">
+      </div>
+      <div class="calc-row">
+        <label>Weight (kg):</label>
+        <input type="number" id="msj-weight" value="70" min="30" max="200">
+      </div>
+      <div class="calc-row">
+        <label>Height (cm):</label>
+        <input type="number" id="msj-height" value="170" min="140" max="220">
+      </div>
     </div>
     <div class="calc-row">
       <label>Activity level:</label>
@@ -864,11 +866,13 @@ buildBarChart('amr-chart', [
   levels.forEach((lv, i) => {
     const row = document.createElement('div');
     row.className = 'ev-level';
+    const outside = lv.width < 20;
     row.innerHTML = `<div class="ev-bar-label text-secondary">${i === 0 ? 'Strongest' : i === levels.length-1 ? 'Weakest' : ''}</div>
       <div style="flex:1;">
         <div class="fill-bar" style="width:${lv.width}%;background:${i < 2 ? lv.bg : 'var(--color-background-secondary)'};border:0.5px solid var(--color-border-tertiary);">
-          <span style="font-size:11px;font-weight:500;color:${i < 2 ? '#1a1a18' : 'var(--color-text-secondary)'};">${lv.label}</span>
+          ${outside ? '' : `<span style="font-size:11px;font-weight:500;color:${i < 2 ? '#1a1a18' : 'var(--color-text-secondary)'};">${lv.label}</span>`}
         </div>
+        ${outside ? `<div style="font-size:11px;font-weight:500;color:var(--color-text-primary);margin-left:4px;white-space:nowrap;">${lv.label}</div>` : ''}
         <div style="font-size:10px;color:var(--color-text-tertiary);margin-left:4px;">${lv.note}</div>
       </div>`;
     el.appendChild(row);
@@ -929,11 +933,21 @@ buildBarChart('amr-chart', [
   events.forEach((ev, i) => {
     const left = ((ev.start - minY) / (maxY - minY)) * 100;
     const width = Math.max(((ev.end - ev.start) / (maxY - minY)) * 100, 2.5);
+    const tiny = width < 15;
     const bar = document.createElement('div');
-    bar.className = 'tl-bar';
-    bar.style.cssText = `left:${left}%;width:${width}%;background:${ev.bg};color:${ev.col};font-size:9px;top:${4 + rows[i] * 17}px;`;
+    bar.className = 'tl-bar' + (tiny ? ' tl-bar-tiny' : '');
+    bar.style.cssText = `left:${left}%;width:${width}%;background:${ev.bg};top:${4 + rows[i] * 17}px;`;
     bar.title = `${ev.label}: ${ev.dead} deaths`;
-    bar.textContent = ev.label + ' (' + ev.dead + ')';
+    if (tiny) {
+      const span = document.createElement('span');
+      span.className = left > 50 ? 'tl-esc-left' : 'tl-esc-right';
+      span.textContent = ev.label + ' (' + ev.dead + ')';
+      bar.appendChild(span);
+    } else {
+      bar.style.color = ev.col;
+      bar.style.fontSize = '9px';
+      bar.textContent = ev.label + ' (' + ev.dead + ')';
+    }
     track.appendChild(bar);
   });
   el.appendChild(track);
@@ -981,7 +995,7 @@ buildBarChart('amr-chart', [
     { label: 'Opioids', pos: 55, col: '#ef9f27', cls: 'hm-c-amber' },
     { label: 'Corticosteroids', pos: 45, col: '#8b6cc4', cls: 'hm-c-purple' },
     { label: 'Chemotherapy', pos: 80, col: '#f09595', cls: 'hm-c-red' },
-    { label: 'Immunotherapy', pos: 72, col: '#e08020', cls: 'hm-c-orange' },
+    { label: 'Immunotherapy', pos: 67, col: '#e08020', cls: 'hm-c-orange' },
     { label: 'CRISPR therapy', pos: 90, col: '#8b6cc4', cls: 'hm-c-purple' }
   ];
   const wrap = document.createElement('div');
@@ -1013,13 +1027,13 @@ buildBarChart('amr-chart', [
   const el = document.getElementById('cam-scale');
   if (!el) return;
   const items = [
-    { label: 'Acupuncture (pain)', pos: 62, col: 'var(--accent)', cls: 'hm-c-accent' },
-    { label: 'CBT-based mindfulness', pos: 70, col: 'var(--accent)', cls: 'hm-c-accent' },
-    { label: 'Chiropractic (MSK)', pos: 45, col: '#ef9f27', cls: 'hm-c-amber' },
-    { label: 'Herbal medicine (varies)', pos: 35, col: '#ef9f27', cls: 'hm-c-amber' },
-    { label: 'Reiki / energy healing', pos: 8, col: '#f09595', cls: 'hm-c-red' },
-    { label: 'Homeopathy', pos: 3, col: '#f09595', cls: 'hm-c-red' },
-    { label: 'Naturopathy (general)', pos: 18, col: '#e08020', cls: 'hm-c-orange' }
+    { label: 'Acupuncture (pain)', pos: 66, col: 'var(--accent)', cls: 'hm-c-accent' },
+    { label: 'CBT-based mindfulness', pos: 79, col: 'var(--accent)', cls: 'hm-c-accent' },
+    { label: 'Chiropractic (MSK)', pos: 55, col: '#ef9f27', cls: 'hm-c-amber' },
+    { label: 'Herbal medicine (varies)', pos: 42, col: '#ef9f27', cls: 'hm-c-amber' },
+    { label: 'Reiki / energy healing', pos: 15, col: '#f09595', cls: 'hm-c-red' },
+    { label: 'Homeopathy', pos: 5, col: '#f09595', cls: 'hm-c-red' },
+    { label: 'Naturopathy (general)', pos: 28, col: '#e08020', cls: 'hm-c-orange' }
   ];
   const wrap = document.createElement('div');
   wrap.style.position = 'relative';

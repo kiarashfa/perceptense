@@ -9,6 +9,8 @@
     .scale-head span:not(.scale-head-line){min-width:0;overflow-wrap:anywhere}
     .scale-head-line{height:1px;background:var(--color-border-secondary);min-width:24px;flex:1 1 24px}
     .explorer-wrap{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px 16px;margin-bottom:1rem}
+    .med-btns-stacked{flex-direction:column;align-items:stretch}
+    .med-btns-stacked .exp-btn{text-align:left}
     .exp-btn{font-size:12px;padding:5px 13px;border-radius:var(--border-radius-md);border:.5px solid var(--color-border-secondary);background:none;color:var(--color-text-secondary);cursor:pointer}
     .exp-btn:hover{background:var(--color-background-secondary);color:var(--color-text-primary)}
     .exp-btn.active{background:var(--color-background-secondary);border-color:var(--color-border-primary);color:var(--color-text-primary);font-weight:600}
@@ -24,7 +26,7 @@
     .slider-widget{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px 16px;margin-bottom:1rem}
     .slider-widget label{font-size:12px;color:var(--color-text-secondary);display:block;margin-bottom:6px}
     .slider-output{margin-top:10px;padding:10px 14px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);font-size:13px;color:var(--color-text-primary);line-height:1.6}
-    .elem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:10px}
+    .elem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-bottom:10px}
     .elem-card{background:var(--color-background-primary);border:.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:12px;text-align:center;cursor:pointer;transition:border-color .12s,background .12s}
     .elem-card:hover{background:var(--color-background-secondary)}
     .elem-card.active{border-color:var(--color-border-secondary);background:var(--color-background-secondary)}

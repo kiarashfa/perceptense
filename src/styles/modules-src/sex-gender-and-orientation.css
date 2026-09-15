@@ -1,4 +1,7 @@
 
+    /* Card values here are full phrases, not short numbers. */
+    .cval { font-size: 14px; }
+
     /* Kinsey bar: scroll horizontally on narrow screens */
     .kinsey-bar {
       display: flex;

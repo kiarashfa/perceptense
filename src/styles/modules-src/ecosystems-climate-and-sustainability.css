@@ -80,7 +80,7 @@ html[data-theme="dark"] .eco-border-blue { border-left-color:#1C70C2; }
 .calc-result { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:11px 13px; font-size:13px; color:var(--color-text-primary); line-height:1.7; }
 
 /* === species interaction grid === */
-.interact-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:8px; margin-bottom:10px; }
+.interact-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(110px,1fr)); gap:8px; margin-bottom:10px; }
 .interact-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:9px 10px; cursor:pointer; border:1.5px solid transparent; transition:border-color 0.12s; }
 .interact-card:hover { border-color:var(--color-border-secondary); }
 .interact-card.active { border-color:var(--color-text-primary); }

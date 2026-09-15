@@ -52,6 +52,12 @@
     .calc-row input, .calc-row select { max-width: 200px; }
     .calc-output  { margin-top: 10px; font-size: 13px; color: var(--color-text-primary); background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; min-height: 44px; line-height: 1.6; }
 
+    .secularism-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 16px; margin-bottom: 14px; }
+    .secularism-field { display: flex; flex-direction: column; gap: 5px; }
+    .secularism-field .form-label-wide { min-width: 0; font-size: 12px; }
+    .secularism-field input { max-width: none; }
+    @media (max-width: 500px) { .secularism-grid { grid-template-columns: 1fr; } }
+
     /* SVG diagram */
     .svg-wrap  { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px; margin-bottom: 10px; overflow-x: auto; }
     .svg-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-align: center; margin: 0 0 10px; letter-spacing: 0.04em; text-transform: uppercase; }

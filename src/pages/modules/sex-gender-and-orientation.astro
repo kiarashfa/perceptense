@@ -1424,6 +1424,7 @@ const mod = modules.find((m) => m.id === 23)!;
       document.querySelector(`[onclick="showScience('${key}')"]`).classList.add('active');
       document.getElementById('science-display').innerHTML = `<strong style="color:var(--color-text-primary); display:block; margin-bottom:6px;">${s.title}</strong>${s.content}`;
     }
+    showScience('twin');
 
     /* ============================================================
        DOT GRID POPULATION VIZ

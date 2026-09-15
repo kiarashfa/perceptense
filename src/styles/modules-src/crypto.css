@@ -1,4 +1,6 @@
 
+    .chain-grid-3up { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
     .explorer-btn {
       font-size: 12px; padding: 5px 13px;
       border-radius: var(--border-radius-md);
@@ -22,6 +24,14 @@
     .pc-label { font-size: 11px; color: var(--color-text-secondary); width: 110px; flex-shrink: 0; text-align: right; padding-right: 10px; line-height: 1.3; }
     .pc-fill { position: absolute; top: 0; height: 100%; border-radius: 4px; display: flex; align-items: center; }
     .pc-fill-label { font-size: 10px; font-weight: 500; padding: 0 7px; white-space: nowrap; overflow: hidden; }
+    .pc-fill-tiny .pc-fill-label {
+      position: absolute;
+      right: 100%;
+      margin-right: 4px;
+      padding: 0;
+      overflow: visible;
+      color: var(--color-text-secondary) !important;
+    }
     .pc-axis { display: flex; position: relative; margin-left: 110px; margin-top: 4px; height: 18px; }
     .elem-card {
       background: var(--color-background-secondary);

@@ -202,7 +202,7 @@ const mod = modules.find((m) => m.id === 38)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:8px;">Major blockchain platforms — explore and compare</div>
-      <div class="tile-grid-lg" id="chain-grid"></div>
+      <div class="tile-grid-lg chain-grid-3up" id="chain-grid"></div>
       <div class="elem-detail-panel" id="chain-detail"></div>
     </div>
 
@@ -376,7 +376,7 @@ const mod = modules.find((m) => m.id === 38)!;
       <div class="cnote">Market cap figures as of early 2025. Bitcoin dominance has rebounded from 38% at the 2021 alt-coin peak to ~55% in 2025, as retail speculative interest shifted to memecoins and institutional money concentrated in Bitcoin ETFs. "Other" includes thousands of tokens, most of which have negligible real liquidity.</div>
     </div>
 
-    <div class="cgrid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-bottom:1rem;">
+    <div class="cgrid" style="grid-template-columns: 1fr; margin-bottom:1rem;">
       <div class="card" style="background:var(--color-background-success); border-color:var(--color-border-success);">
         <div class="clabel" style="color:var(--color-text-success);">What crypto has genuinely delivered</div>
         <div class="cnote" style="margin-top:4px; color:var(--color-text-success);">A permissionless global settlement layer for value. Remittances at a fraction of Western Union's 8% average fee. A credible alternative to inflation-ravaged local currencies (Argentina, Turkey). Programmable money enabling financial instruments without counterparty credit risk. Ethereum's smart contract model inspired a genuine computer science innovation. A stress-test of monetary theory that forced central banks to think seriously about digital currencies. Stablecoin settlement, Bitcoin custody, and Ethereum smart contracts are not imaginary achievements.</div>
@@ -768,8 +768,10 @@ const mod = modules.find((m) => m.id === 38)!;
     let clHtml = '';
     collapses.forEach(function(p) {
       const l = ((p.start - cMin) / cRange * 100).toFixed(2);
-      const w = Math.max(((p.end - p.start) / cRange * 100).toFixed(2), 2);
-      clHtml += '<div class="period-row-loose"><div class="pc-label">' + p.label + '</div><div class="period-track-tall"><div class="pc-fill" style="left:' + l + '%;width:' + w + '%;background:' + p.col + ';"><span class="pc-fill-label" style="color:' + p.text + ';">' + p.note + '</span></div></div></div>';
+      const wNum = (p.end - p.start) / cRange * 100;
+      const w = Math.max(wNum.toFixed(2), 2);
+      const tiny = wNum < 3 ? ' pc-fill-tiny' : '';
+      clHtml += '<div class="period-row-loose"><div class="pc-label">' + p.label + '</div><div class="period-track-tall"><div class="pc-fill' + tiny + '" style="left:' + l + '%;width:' + w + '%;background:' + p.col + ';"><span class="pc-fill-label" style="color:' + p.text + ';">' + p.note + '</span></div></div></div>';
     });
     clHtml += '<div class="pc-axis">';
     [2015,2017,2019,2021,2023,2025].forEach(function(y) {

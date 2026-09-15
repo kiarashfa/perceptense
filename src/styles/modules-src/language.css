@@ -58,6 +58,7 @@
     .pc-track {
       position: relative;
       flex: 1;
+      min-width: 0;
       height: 20px;
       background: var(--color-background-secondary);
       border-radius: 3px;

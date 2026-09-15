@@ -237,6 +237,11 @@
   gap:8px;
 }
 
+.elements-grid-6up { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+.genres-grid-9up { grid-template-columns: repeat(auto-fit, minmax(78px, 1fr)); }
+.express-grid-2up { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.dev-grid-2up { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
 .fill-bar-data {
   background: var(--data-background);
   width: var(--data-width);

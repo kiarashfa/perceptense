@@ -81,6 +81,8 @@
       gap: 10px;
       margin-bottom: 1rem;
     }
+    .mini-grid-1up { grid-template-columns: 1fr; }
+    .mini-grid-3up { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
     .note-card {
       background: var(--color-background-secondary);
       border: 0.5px solid var(--color-border-tertiary);

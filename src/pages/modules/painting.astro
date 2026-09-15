@@ -132,7 +132,7 @@ const mod = modules.find((m) => m.id === 32)!;
     </div>
     <h2 class="sec" id="the-five-core-media-an-explorer">The five core media — an explorer</h2>
     <div class="explorer-wrap">
-      <div class="button-row-compact" id="medBtns">
+      <div class="button-row-compact med-btns-stacked" id="medBtns">
         <button class="exp-btn active" onclick="showMedium('fresco',this)">Fresco</button>
         <button class="exp-btn" onclick="showMedium('tempera',this)">Egg Tempera</button>
         <button class="exp-btn" onclick="showMedium('oil',this)">Oil</button>
@@ -205,32 +205,26 @@ const mod = modules.find((m) => m.id === 32)!;
       <div class="elem-card" onclick="showFormalElem('line',this)">
         <div class="card-icon elem-card-icon-style">&#8212;</div>
         <div class="label-strong">Line</div>
-        <div class="card-sub">direction and contour</div>
       </div>
       <div class="elem-card" onclick="showFormalElem('colour',this)">
         <div class="card-icon elem-card-icon-colour">&#x25CF;</div>
         <div class="label-strong">Colour</div>
-        <div class="card-sub">hue, value, saturation</div>
       </div>
       <div class="elem-card" onclick="showFormalElem('tone',this)">
         <div class="card-icon elem-card-icon-tone">&#x25D0;</div>
         <div class="label-strong">Tone</div>
-        <div class="card-sub">light and dark</div>
       </div>
       <div class="elem-card" onclick="showFormalElem('texture',this)">
         <div class="card-icon elem-card-icon-texture">&#x2248;</div>
         <div class="label-strong">Texture</div>
-        <div class="card-sub">surface and impasto</div>
       </div>
       <div class="elem-card" onclick="showFormalElem('space',this)">
         <div class="card-icon elem-card-icon-space">&#x2B21;</div>
         <div class="label-strong">Space</div>
-        <div class="card-sub">depth and flatness</div>
       </div>
       <div class="elem-card" onclick="showFormalElem('composition',this)">
         <div class="card-icon elem-card-icon-composition">&#x229E;</div>
         <div class="label-strong">Composition</div>
-        <div class="card-sub">arrangement and rhythm</div>
       </div>
     </div>
     <div class="elem-detail" id="formalDetail">

@@ -24,6 +24,15 @@
     .pc-track { flex: 1; height: 22px; background: var(--color-background-secondary); border-radius: 4px; position: relative; min-width: 200px; }
     .pc-fill { position: absolute; height: 100%; border-radius: 4px; display: flex; align-items: center; overflow: hidden; }
     .pc-fill-label { font-size: 10px; color: #fff; padding: 0 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+    .pc-fill-tiny { overflow: visible; }
+    .pc-fill-tiny .pc-fill-label {
+      position: absolute;
+      right: 100%;
+      margin-right: 4px;
+      padding: 0;
+      overflow: visible;
+      color: var(--color-text-secondary) !important;
+    }
     .pc-axis { display: flex; margin-left: 140px; margin-bottom: 4px; position: relative; }
     .pc-axis-mark { font-size: 10px; color: var(--color-text-tertiary); position: absolute; transform: translateX(-50%); }
     @media (max-width: 500px) { .pc-label { width: 80px; font-size: 10px; } .pc-axis { margin-left: 90px; } }
@@ -89,7 +98,8 @@
     @media (max-width: 500px) { .bl { width: 90px !important; } }
 
     /* ── Platform cards ── */
-    .plat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+    .plat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 1rem; }
+    .jtype-grid-6up { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
     .plat-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; }
     .plat-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 4px; }
     .plat-stat { font-size: 19px; font-weight: 500; color: #BF4927; line-height: 1; margin-bottom: 3px; }
@@ -119,6 +129,8 @@
   gap:10px;
   margin-bottom:1rem;
 }
+.cgrid-1up { grid-template-columns: 1fr; }
+.cgrid-3up { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 
 .explorer-placeholder {
   color:var(--color-text-tertiary);

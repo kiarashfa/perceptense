@@ -1,17 +1,31 @@
 
 /* === Explorer tab active state === */
+#risk-output, #cpr-output { font-size: 13px; line-height: 1.6; }
+
 .exp-tab { font-size:11px; padding:3px 10px; }
 .exp-tab.active { background:var(--color-text-primary); color:var(--color-background-primary); border-color:var(--color-text-primary); }
 
 /* === System cards grid === */
-.sys-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(130px,1fr)); gap:8px; margin-bottom:10px; }
+.sys-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:8px; margin-bottom:10px; }
 .sys-card { background:var(--color-background-secondary); border-radius:var(--border-radius-md); padding:10px 8px; text-align:center; cursor:pointer; border:1.5px solid transparent; transition:border-color 0.12s, background 0.12s; }
 .sys-card:hover { background:var(--color-background-primary); }
 .sys-card.active { border-color:var(--color-text-info); background:var(--color-background-primary); }
 
 /* === Timeline track === */
-.tl-track { position:relative; height:32px; background:var(--color-background-secondary); border-radius:6px; overflow:hidden; margin-bottom:4px; }
+.tl-track { position:relative; height:32px; background:var(--color-background-secondary); border-radius:6px; overflow:visible; margin-bottom:4px; }
 .tl-bar { position:absolute; top:4px; height:24px; border-radius:4px; display:flex; align-items:center; padding:0 8px; font-size:10px; font-weight:500; white-space:nowrap; overflow:hidden; cursor:pointer; transition:filter 0.12s; }
+.tl-bar-tiny { overflow: visible; padding: 0; }
+.tl-esc-left, .tl-esc-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.tl-esc-left { right: 100%; margin-right: 4px; }
+.tl-esc-right { left: 100%; margin-left: 4px; }
 .tl-bar:hover { filter:brightness(1.1); }
 .tl-axis { display:flex; justify-content:space-between; font-size:10px; color:var(--color-text-tertiary); margin-bottom:10px; }
 
@@ -53,7 +67,7 @@ html[data-theme="dark"] .hm-c-orange { color: #e08020; }
 .diagram-wrap svg text { font-family: var(--font-sans); }
 
 /* === Vitals grid === */
-.vitals-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:8px; margin-bottom:1rem; }
+.vitals-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:8px; margin-bottom:1rem; }
 
 /* === Evidence pyramid === */
 .ev-level { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
@@ -63,9 +77,12 @@ html[data-theme="dark"] .hm-c-orange { color: #e08020; }
 .calc-row { display:flex; gap:8px; align-items:center; margin-bottom:8px; flex-wrap:wrap; }
 .calc-row label { font-size:12px; color:var(--color-text-secondary); flex-shrink:0; }
 .calc-row input { width:90px; flex-shrink:0; }
+.msj-row-3up { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px 16px; }
+.msj-row-3up .calc-row { margin-bottom:0; }
+@media (max-width:500px) { .msj-row-3up { grid-template-columns:1fr; } }
 
 /* === ABCDE first aid cards === */
-.abcde-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:8px; margin-bottom:1rem; }
+.abcde-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:8px; margin-bottom:1rem; }
 .abcde-card { border-radius:var(--border-radius-md); padding:10px 12px; }
 .abcde-letter { font-size:28px; font-weight:700; line-height:1; margin-bottom:4px; }
 .abcde-word { font-size:13px; font-weight:500; margin-bottom:4px; }

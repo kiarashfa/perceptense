@@ -46,6 +46,7 @@
 
 /* === 2-col card grid (mobile-safe) === */
 .body-speed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 1rem; }
+.body-speed-grid-2up { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
 /* === Cars 0-100 table === */
 .car-tab-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }

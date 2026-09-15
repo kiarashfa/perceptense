@@ -1,4 +1,6 @@
 
+    .works-grid-5up { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+
     .elem-tab {
       font-size:12px; padding:4px 12px;
       border-radius:var(--border-radius-md);
@@ -172,7 +174,7 @@
 }
 
 .cgrid-style {
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  grid-template-columns: 1fr;
   margin-bottom:1rem;
 }
 

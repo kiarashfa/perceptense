@@ -1604,5 +1604,7 @@ const mod = modules.find((m) => m.id === 26)!;
   ───────────────────────────────────────────── */
   showPlanet('earth');
   updateDist();
+  const firstBh = document.querySelector('[data-bh]');
+  if (firstBh) firstBh.click();
   
 </script>

@@ -534,8 +534,8 @@ const mod = modules.find((m) => m.id === 8)!;
         <text x="263" y="20" font-size="8" fill="var(--color-text-tertiary)" font-family="system-ui,sans-serif">border</text>
         <circle cx="258" cy="150" r="100" fill="none" class="sd-c-indigo-ring" stroke-width="3" opacity="0.85"/>
         <circle cx="258" cy="150" r="104" fill="none" class="sd-c-purple-ring" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
-        <text x="258" y="43" font-size="10" class="sd-c-purple" text-anchor="middle" font-family="system-ui,sans-serif">↻ clockwise</text>
-        <text x="258" y="268" font-size="10" class="sd-c-indigo" text-anchor="middle" font-family="system-ui,sans-serif">↺ counter-clockwise</text>
+        <text x="258" y="95" font-size="10" class="sd-c-purple" text-anchor="middle" font-family="system-ui,sans-serif">↻ clockwise</text>
+        <text x="258" y="205" font-size="10" class="sd-c-indigo" text-anchor="middle" font-family="system-ui,sans-serif">↺ counter-clockwise</text>
         <circle cx="258" cy="50" r="7" class="sd-c-blue2"/>
         <text x="258" y="35" font-size="9" fill="var(--color-text-info)" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="500">ATLAS</text>
         <circle cx="258" cy="250" r="7" class="sd-c-blue2"/>
@@ -574,7 +574,7 @@ const mod = modules.find((m) => m.id === 8)!;
     <div class="u-bg-background-primary bordered u-radius-radius-lg u-p-13px-15px u-mb-lg">
       <div class="u-fs-13px u-fw-500 text-primary u-mb-xs">What 99.9999991% of light speed actually means — relativistic effects</div>
       <div class="u-fs-11px text-secondary u-mb-md">At these speeds, Einstein's special relativity isn't a theory — it's a measurable engineering constraint.</div>
-      <div class="body-speed-grid u-mb-md">
+      <div class="body-speed-grid body-speed-grid-2up u-mb-md">
         <div class="card">
           <p class="clabel">Time dilation (Lorentz factor γ ≈ 7,461)</p>
           <p class="cval u-fs-17px">7,461×</p>
@@ -725,7 +725,7 @@ function textSafeColor(hex) {
     else h = (r - g) / d + 4;
     h /= 6;
   }
-  var targetL = isDark ? Math.max(l, 0.66) : Math.min(l, 0.34);
+  var targetL = isDark ? Math.max(l, 0.72) : Math.min(l, 0.28);
   function hue2rgb(p, q, t) {
     if (t < 0) t += 1;
     if (t > 1) t -= 1;
@@ -746,6 +746,27 @@ function textSafeColor(hex) {
   function toHex(c) { return Math.round(c * 255).toString(16).padStart(2, '0'); }
   return '#' + toHex(r2) + toHex(g2) + toHex(b2);
 }
+
+// textSafeColor() only computes the right shade for the theme active at call
+// time; apply/refresh together so a later theme toggle re-derives every one
+// of these instead of leaving the colour picked for the previous theme.
+function applySafeColor(el, hex, prop) {
+  prop = prop || 'color';
+  el.dataset.rawColor = hex;
+  el.dataset.colorProp = prop;
+  const safe = textSafeColor(hex);
+  if (prop === 'color') el.style.color = safe;
+  else el.setAttribute(prop, safe);
+}
+function refreshSafeColors() {
+  document.querySelectorAll('[data-raw-color]').forEach(el => {
+    const safe = textSafeColor(el.dataset.rawColor);
+    if (el.dataset.colorProp === 'color') el.style.color = safe;
+    else el.setAttribute(el.dataset.colorProp, safe);
+  });
+}
+new MutationObserver(refreshSafeColors).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', refreshSafeColors);
 
 /* ═══════════════════════════════════════════════
    PART C — Travel time calculator
@@ -913,7 +934,7 @@ function showCars(btn, cat) {
       '<div class="car-time">' + timeLabel + '</div>';
     row.querySelector('.car-bar-fill').style.width = pct + '%';
     row.querySelector('.car-bar-fill').style.background = barColor;
-    row.querySelector('.car-time').style.color = textSafeColor(barColor);
+    applySafeColor(row.querySelector('.car-time'), barColor);
 
     // Expand note on click
     row.addEventListener('click', (e) => {
@@ -1000,14 +1021,14 @@ gwrRecords.forEach(r => {
     '<div class="micro-label">' + r.cat + '</div>' +
     '<div class="gwr-record-speed">' + r.speed + '</div>' +
     '<div class="gwr-record-title">' + r.title.split(' (')[0] + '</div>';
-  card.querySelector('.gwr-record-speed').style.color = textSafeColor(r.color);
+  applySafeColor(card.querySelector('.gwr-record-speed'), r.color);
   card.addEventListener('mouseenter', () => { card.style.boxShadow = '0 0 0 1.5px ' + r.color; });
   card.addEventListener('mouseleave', () => { card.style.boxShadow = 'none'; });
   card.addEventListener('click', () => {
     document.getElementById('gwr-detail').style.display = 'block';
     document.getElementById('gwr-detail-cat').textContent = r.cat;
     document.getElementById('gwr-detail-speed').textContent = r.speed;
-    document.getElementById('gwr-detail-speed').style.color = textSafeColor(r.color);
+    applySafeColor(document.getElementById('gwr-detail-speed'), r.color);
     document.getElementById('gwr-detail-title').textContent = r.title;
     document.getElementById('gwr-detail-body').textContent = r.body;
     document.getElementById('gwr-detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1036,13 +1057,13 @@ coasters.forEach((c, i) => {
     '<span class="coaster-rank">#' + c.rank + '</span>' +
     '<div class="flex-body"><div class="item-name">' + c.name + '</div><div class="muted-text-small">' + c.park + ' · ' + c.location + '</div></div>' +
     '<div class="coaster-speed-wrap"><span class="coaster-speed">' + c.speed + '</span><span class="micro-text"> km/h</span></div>';
-  row.querySelector('.coaster-speed').style.color = textSafeColor(c.color);
+  applySafeColor(row.querySelector('.coaster-speed'), c.color);
   row.addEventListener('mouseenter', () => { row.style.background = 'var(--color-background-secondary)'; });
   row.addEventListener('mouseleave', () => { row.style.background = 'none'; });
   row.addEventListener('click', (e) => {
     document.getElementById('rc-detail-box').style.display = 'block';
     document.getElementById('rc-det-name').textContent = c.name;
-    document.getElementById('rc-det-name').style.color = textSafeColor(c.color);
+    applySafeColor(document.getElementById('rc-det-name'), c.color);
     document.getElementById('rc-det-loc').textContent = c.park + ' · ' + c.location;
     document.getElementById('rc-det-speed').textContent = c.speed + ' km/h';
     document.getElementById('rc-det-open').textContent = 'Opened ' + c.opened + ' · ' + c.type;
@@ -1052,9 +1073,9 @@ coasters.forEach((c, i) => {
       .map(([k,v]) => '<span class="u-bg-background-secondary bordered u-radius-radius-md u-p-3px-9px u-fs-11px text-secondary"><strong class="text-primary">' + v + '</strong> ' + k + '</span>').join('');
     const pct = Math.min(c.speed / 280, 1);
     document.getElementById('rc-gauge-arc').setAttribute('stroke-dashoffset', String(251.3 - 251.3 * pct));
-    document.getElementById('rc-gauge-arc').setAttribute('stroke', textSafeColor(c.color));
+    applySafeColor(document.getElementById('rc-gauge-arc'), c.color, 'stroke');
     document.getElementById('rc-gauge-label').textContent = c.speed;
-    document.getElementById('rc-gauge-label').setAttribute('fill', textSafeColor(c.color));
+    applySafeColor(document.getElementById('rc-gauge-label'), c.color, 'fill');
     document.getElementById('rc-gauge-needle').setAttribute('transform', 'rotate(' + (-90 + pct * 180) + ',110,105)');
     if (e.isTrusted) {document.getElementById('rc-detail-box').scrollIntoView({ behavior: 'smooth', block: 'nearest' });}
   });

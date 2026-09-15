@@ -453,10 +453,13 @@ body {
 .u-justify-space-between { justify-content: space-between; }
 .u-overflow-x-auto { overflow-x: auto; }
 .u-white-space-nowrap { white-space: nowrap; }
+.u-gridcols-auto-fit-90px-1fr { grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); }
+.u-gridcols-auto-fit-110px-1fr { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
 .u-gridcols-auto-fit-120px-1fr { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
 .u-gridcols-auto-fit-130px-1fr { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); }
 .u-gridcols-auto-fit-150px-1fr { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 .u-gridcols-auto-fit-200px-1fr { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.u-gridcols-auto-fit-280px-1fr { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
 
 /* === METRIC CARD PARTS === */
