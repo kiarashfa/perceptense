@@ -1,9 +1,15 @@
 
+    .media-accent-text { color: #BF4927; fill: #BF4927; }
+    html[data-theme="dark"] .media-accent-text { color: #DA6C4C; fill: #DA6C4C; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .media-accent-text { color: #DA6C4C; fill: #DA6C4C; } }
+
     /* ── Explorer panel ── */
     .exp-btns { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
     .exp-btn { font-size: 12px; padding: 5px 13px; border-radius: 99px; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
     .exp-btn:hover { border-color: var(--accent-border); color: var(--color-text-primary); }
-    .exp-btn.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); font-weight: 600; }
+    .exp-btn.active { background: var(--accent-bg); border-color: var(--accent-border); color: #BF4927; font-weight: 600; }
+    html[data-theme="dark"] .exp-btn.active { color: #DA6C4C; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .exp-btn.active { color: #DA6C4C; } }
     .exp-panel { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 18px; min-height: 120px; }
     .exp-panel h4 { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 8px; }
     .exp-panel p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin: 0 0 8px; }
@@ -45,7 +51,9 @@
     .slider-wrap { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 16px 18px; margin-bottom: 1rem; }
     .slider-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
     .slider-title { font-size: 13px; font-weight: 600; color: var(--color-text-primary); }
-    .slider-val { font-size: 20px; font-weight: 500; color: var(--accent); }
+    .slider-val { font-size: 20px; font-weight: 500; color: #BF4927; }
+    html[data-theme="dark"] .slider-val { color: #DA6C4C; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .slider-val { color: #DA6C4C; } }
     .slider-poles { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-tertiary); margin-top: 6px; }
     .slider-output { margin-top: 12px; padding: 10px 12px; background: var(--color-background-primary); border-radius: var(--border-radius-md); font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; border: 0.5px solid var(--color-border-tertiary); }
 
@@ -65,7 +73,9 @@
     .nv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 10px; margin-bottom: 1rem; }
     .nv-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; }
     .nv-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 5px; }
-    .nv-eg { font-size: 11px; color: var(--accent); margin-top: 5px; font-style: italic; }
+    .nv-eg { font-size: 11px; color: #BF4927; margin-top: 5px; font-style: italic; }
+    html[data-theme="dark"] .nv-eg { color: #DA6C4C; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .nv-eg { color: #DA6C4C; } }
 
     /* ── Info / warning blocks ── */
     .info-block { background: var(--color-background-info); border: 0.5px solid var(--color-border-info); border-radius: var(--border-radius-lg); padding: 13px 15px; margin-bottom: 10px; font-size: 13px; color: var(--color-text-info); line-height: 1.6; }
@@ -82,7 +92,9 @@
     .plat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin-bottom: 1rem; }
     .plat-card { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 13px 15px; }
     .plat-name { font-size: 13px; font-weight: 600; color: var(--color-text-primary); margin-bottom: 4px; }
-    .plat-stat { font-size: 19px; font-weight: 500; color: var(--accent); line-height: 1; margin-bottom: 3px; }
+    .plat-stat { font-size: 19px; font-weight: 500; color: #BF4927; line-height: 1; margin-bottom: 3px; }
+    html[data-theme="dark"] .plat-stat { color: #DA6C4C; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .plat-stat { color: #DA6C4C; } }
     .plat-stat-label { font-size: 10px; color: var(--color-text-tertiary); margin-bottom: 7px; }
 
     /* ── Media literacy checklist ── */
