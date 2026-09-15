@@ -2,6 +2,12 @@
     :root {
       --accent: #2B7A5E;
     }
+    .fire-accent-text { color: var(--accent); fill: var(--accent); }
+    html[data-theme="dark"] .fire-accent-text { color: #379C78; fill: #379C78; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .fire-accent-text { color: #379C78; fill: #379C78; } }
+    .fire-accent-stroke { stroke: var(--accent); }
+    html[data-theme="dark"] .fire-accent-stroke { stroke: #379C78; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .fire-accent-stroke { stroke: #379C78; } }
 
     .module-header .module-title {
       margin: 0;
@@ -22,6 +28,8 @@
       color: var(--accent);
       margin-bottom: 4px;
     }
+    html[data-theme="dark"] .teaser-kicker { color: #379C78; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .teaser-kicker { color: #379C78; } }
 
     .teaser-title {
       font-size: 14px;
@@ -66,6 +74,8 @@
       border-color: var(--accent-border);
       color: var(--accent);
     }
+    html[data-theme="dark"] .button-row-compact button.active { color: #379C78; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .button-row-compact button.active { color: #379C78; } }
 
     .explorer-display,
     .elem-detail-panel,
@@ -184,6 +194,9 @@
       color: var(--accent);
       font-size: 18px;
       margin-bottom: 3px;
+    }
+    html[data-theme="dark"] .elem-icon { color: #379C78; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .elem-icon { color: #379C78; }
     }
 
     .elem-name {

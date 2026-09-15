@@ -69,7 +69,7 @@ const mod = modules.find((m) => m.id === 48)!;
         <svg viewBox="0 0 760 320" role="img" aria-label="A diagram showing households, banks, insurers, capital markets, real estate, businesses, and government connected by money, risk, and collateral flows">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 0 L 10 5 L 0 10 z" fill="var(--accent)"></path>
+              <path d="M 0 0 L 10 5 L 0 10 z" class="fire-accent-text"></path>
             </marker>
           </defs>
           <rect x="25" y="38" width="135" height="62" rx="10" fill="var(--color-background-secondary)" stroke="var(--accent-border)"></rect>
@@ -96,28 +96,28 @@ const mod = modules.find((m) => m.id === 48)!;
           <text x="657" y="235" text-anchor="middle" fill="var(--color-text-primary)" font-size="14">Real estate</text>
           <text x="657" y="255" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">land, rent, collateral</text>
 
-          <path d="M160 68 C220 38, 250 38, 305 58" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M160 68 C220 38, 250 38, 305 58" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="230" y="35" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">deposits</text>
 
-          <path d="M455 58 C510 38, 540 38, 590 68" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M455 58 C510 38, 540 38, 590 68" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="523" y="35" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">loans</text>
 
-          <path d="M657 100 C655 137, 655 170, 657 205" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M657 100 C655 137, 655 170, 657 205" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="704" y="153" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">leases</text>
 
-          <path d="M590 240 C540 270, 505 270, 455 240" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M590 240 C540 270, 505 270, 455 240" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="525" y="294" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">securities</text>
 
-          <path d="M305 240 C250 270, 220 270, 190 240" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M305 240 C250 270, 220 270, 190 240" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="247" y="294" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">investment income</text>
 
-          <path d="M92 100 C92 135, 103 171, 115 205" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M92 100 C92 135, 103 171, 115 205" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="52" y="154" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">premiums</text>
 
-          <path d="M190 224 C240 188, 262 126, 305 82" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M190 224 C240 188, 262 126, 305 82" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="237" y="151" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">bond portfolios</text>
 
-          <path d="M590 224 C535 190, 503 126, 455 82" fill="none" stroke="var(--accent)" stroke-width="2" marker-end="url(#arrow)"></path>
+          <path d="M590 224 C535 190, 503 126, 455 82" fill="none" class="fire-accent-stroke" stroke-width="2" marker-end="url(#arrow)"></path>
           <text x="535" y="153" text-anchor="middle" fill="var(--color-text-secondary)" font-size="11">mortgage credit</text>
         </svg>
       </div>
@@ -692,11 +692,11 @@ const mod = modules.find((m) => m.id === 48)!;
 
       function buildGdpChart() {
         const rows = [
-          { label: 'FIRE sector', value: 21, color: 'var(--accent)' },
-          { label: 'Government', value: 12, color: 'var(--color-border-info)' },
-          { label: 'Manufacturing', value: 11, color: 'var(--color-border-warning)' },
-          { label: 'Health care', value: 8, color: 'var(--color-border-danger)' },
-          { label: 'Information', value: 7, color: 'var(--color-border-success)' }
+          { label: 'FIRE sector', value: 21, color: 'var(--accent)', fg: '#fff' },
+          { label: 'Government', value: 12, color: 'var(--color-border-info)', fg: '#1a1a18' },
+          { label: 'Manufacturing', value: 11, color: 'var(--color-border-warning)', fg: '#1a1a18' },
+          { label: 'Health care', value: 8, color: 'var(--color-border-danger)', fg: '#1a1a18' },
+          { label: 'Information', value: 7, color: 'var(--color-border-success)', fg: '#1a1a18' }
         ];
         const max = Math.max(...rows.map(row => row.value));
         document.getElementById('gdp-chart').innerHTML = `
@@ -705,7 +705,7 @@ const mod = modules.find((m) => m.id === 48)!;
             <div class="bar-row">
               <div class="bl">${row.label}</div>
               <div class="bb" style="width:${(row.value / max * 100).toFixed(1)}%; background:${row.color};">
-                <span class="bv">${row.value}%</span>
+                <span class="bv" style="color:${row.fg};">${row.value}%</span>
               </div>
             </div>
           `).join('')}
@@ -715,17 +715,17 @@ const mod = modules.find((m) => m.id === 48)!;
 
       function buildWealthDistribution() {
         const rows = [
-          { label: 'Real estate', value: 31, color: 'var(--accent)' },
-          { label: 'Equities and funds', value: 28, color: 'var(--color-border-info)' },
-          { label: 'Pensions', value: 22, color: 'var(--color-border-success)' },
-          { label: 'Deposits and cash', value: 9, color: 'var(--color-border-warning)' },
-          { label: 'Other', value: 10, color: 'var(--color-border-danger)' }
+          { label: 'Real estate', value: 31, color: 'var(--accent)', fg: '#fff' },
+          { label: 'Equities and funds', value: 28, color: 'var(--color-border-info)', fg: '#1a1a18' },
+          { label: 'Pensions', value: 22, color: 'var(--color-border-success)', fg: '#1a1a18' },
+          { label: 'Deposits and cash', value: 9, color: 'var(--color-border-warning)', fg: '#1a1a18' },
+          { label: 'Other', value: 10, color: 'var(--color-border-danger)', fg: '#1a1a18' }
         ];
         document.getElementById('wealth-dist').innerHTML = `
           <div class="panel-title">Simplified household wealth distribution by asset type</div>
           <div class="gap-below">
             <div class="dist-bar">
-              ${rows.map(row => `<div class="dist-seg" style="width:${row.value}%; background:${row.color};">${row.value >= 9 ? row.value + '%' : ''}</div>`).join('')}
+              ${rows.map(row => `<div class="dist-seg" style="width:${row.value}%; background:${row.color}; color:${row.fg};">${row.value >= 9 ? row.value + '%' : ''}</div>`).join('')}
             </div>
             <div class="dist-legend">
               ${rows.map(row => `<div class="legend-item"><span class="legend-dot" style="background:${row.color};"></span>${row.label} ${row.value}%</div>`).join('')}
