@@ -178,9 +178,9 @@ const mod = modules.find((m) => m.id === 32)!;
       <div class="dist-bar">
         <div class="stack-segment stack-segment-data" style="--data-background: #3A6BB0; --data-color: #fff; --data-width: 38%">Synthetic organic</div>
         <div class="stack-segment stack-segment-data" style="--data-background: #8B3A9C; --data-color: #fff; --data-width: 22%">Inorganic mineral</div>
-        <div class="stack-segment stack-segment-data" style="--data-background: #C85C14; --data-color: #fff; --data-width: 18%">Iron oxide</div>
-        <div class="stack-segment stack-segment-data" style="--data-background: #2C8C6A; --data-color: #fff; --data-width: 12%">Carbon black</div>
-        <div class="stack-segment stack-segment-data" style="--data-background: #A09060; --data-color: #fff; --data-width: 10%">Historic</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: #C85C14; --data-color: #000; --data-width: 18%">Iron oxide</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: #2C8C6A; --data-color: #000; --data-width: 12%">Carbon black</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: #A09060; --data-color: #000; --data-width: 10%">Historic</div>
       </div>
       <div class="legend-inline u-mt-sm">
         <div class="legend-item"><div class="key-dot dist-legend-dot dist-legend-dot-style"></div>Synthetic organic — 38%</div>
@@ -366,12 +366,12 @@ const mod = modules.find((m) => m.id === 32)!;
     <div class="widget-panel">
       <div class="intro-text">Approximate contribution to final auction price (art market economists' estimates — non-additive and highly context-dependent):</div>
       <div class="dist-bar">
-        <div class="stack-segment stack-segment-data" style="--data-background: var(--accent); --data-color: #fff; --data-width: 30%">Artist identity</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: var(--accent); --data-color: #000; --data-width: 30%">Artist identity</div>
         <div class="stack-segment stack-segment-data" style="--data-background: #3A6BB0; --data-color: #fff; --data-width: 20%">Provenance</div>
-        <div class="stack-segment stack-segment-data" style="--data-background: #C85C14; --data-color: #fff; --data-width: 18%">Period/quality</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: #C85C14; --data-color: #000; --data-width: 18%">Period/quality</div>
         <div class="stack-segment stack-segment-data" style="--data-background: #8B3A9C; --data-color: #fff; --data-width: 15%">Exhibition hist.</div>
-        <div class="stack-segment stack-segment-data" style="--data-background: #2C8C6A; --data-color: #fff; --data-width: 10%">Market timing</div>
-        <div class="stack-segment stack-segment-data" style="--data-background: #A09060; --data-color: #fff; --data-width: 7%">Size</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: #2C8C6A; --data-color: #000; --data-width: 10%">Market timing</div>
+        <div class="stack-segment stack-segment-data" style="--data-background: #A09060; --data-color: #000; --data-width: 7%">Size</div>
       </div>
       <div class="legend-inline u-mt-sm">
         <div class="legend-item"><div class="key-dot bg-accent"></div>Artist identity — 30%</div>
@@ -836,18 +836,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
   /* AUCTION CHART */
   var auctions = [
-    {l:'Salvator Mundi \u2014 da Vinci (attrib.) \u00b7 2017',v:450.3,col:'var(--accent)'},
-    {l:'Interchange \u2014 de Kooning \u00b7 2015',v:300.0,col:'#3A6BB0'},
-    {l:'The Card Players \u2014 C\u00e9zanne \u00b7 2011',v:259.0,col:'#C85C14'},
-    {l:'Nafea Faa Ipoipo \u2014 Gauguin \u00b7 2015',v:210.0,col:'#2C8C6A'},
-    {l:'No.6 Violet, Green & Red \u2014 Rothko \u00b7 2014',v:186.0,col:'#8B3A9C'},
-    {l:'Nu couch\u00e9 \u2014 Modigliani \u00b7 2015',v:170.4,col:'#C05AA0'},
-    {l:'Portrait of Adele Bloch-Bauer II \u2014 Klimt \u00b7 2006',v:150.0,col:'#6B5B00'},
-    {l:'Gar\u00e7on \u00e0 la pipe \u2014 Picasso \u00b7 2004',v:104.2,col:'#A09060'}
+    {l:'Salvator Mundi \u2014 da Vinci (attrib.) \u00b7 2017',v:450.3,col:'var(--accent)',tcol:'#000'},
+    {l:'Interchange \u2014 de Kooning \u00b7 2015',v:300.0,col:'#3A6BB0',tcol:'#fff'},
+    {l:'The Card Players \u2014 C\u00e9zanne \u00b7 2011',v:259.0,col:'#C85C14',tcol:'#000'},
+    {l:'Nafea Faa Ipoipo \u2014 Gauguin \u00b7 2015',v:210.0,col:'#2C8C6A',tcol:'#000'},
+    {l:'No.6 Violet, Green & Red \u2014 Rothko \u00b7 2014',v:186.0,col:'#8B3A9C',tcol:'#fff'},
+    {l:'Nu couch\u00e9 \u2014 Modigliani \u00b7 2015',v:170.4,col:'#C05AA0',tcol:'#000'},
+    {l:'Portrait of Adele Bloch-Bauer II \u2014 Klimt \u00b7 2006',v:150.0,col:'#6B5B00',tcol:'#fff'},
+    {l:'Gar\u00e7on \u00e0 la pipe \u2014 Picasso \u00b7 2004',v:104.2,col:'#A09060',tcol:'#000'}
   ];
   var maxA = Math.max.apply(null, auctions.map(function(d){return d.v;}));
   document.getElementById('auctionChart').innerHTML = auctions.map(function(d){
-    return '<div class="data-row"><div class="bl">'+d.l+'</div><div class="bb" style="width:'+((d.v/maxA)*68).toFixed(1)+'%;background:'+d.col+';opacity:.85"><span class="bar-value" style="color:#fff">$'+d.v+'m</span></div></div>';
+    return '<div class="data-row"><div class="bl">'+d.l+'</div><div class="bb" style="width:'+((d.v/maxA)*68).toFixed(1)+'%;background:'+d.col+';opacity:.85"><span class="bar-value" style="color:'+d.tcol+'">$'+d.v+'m</span></div></div>';
   }).join('');
 
   /* FORGERY CALCULATOR */
