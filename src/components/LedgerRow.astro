@@ -1,0 +1,31 @@
+---
+import { path } from '../lib/site';
+
+interface Props {
+  module: { id: number; slug: string; name: string; blurb: string; category: string; keywords: string[] };
+  topic: string;
+  /** Extra classes, e.g. `rx-item` inside a rolodex. */
+  class?: string;
+  /** Carry the data the index page sorts and searches on. */
+  searchable?: boolean;
+}
+
+const { module: m, topic, class: extra, searchable = false } = Astro.props;
+---
+<a
+  class:list={['lg-row', extra]}
+  href={path('modules', m.slug)}
+  data-cat={m.category}
+  data-num={searchable ? m.id : undefined}
+  data-name={searchable ? m.name : undefined}
+  data-search={searchable ? `${m.keywords.join(' ')} ${m.name}`.toLowerCase() : undefined}
+>
+  <span class="lg-num">{String(m.id).padStart(2, '0')}</span>
+  <span class="lg-main">
+    <span class="lg-name">{m.name}</span>
+    <span class="lg-blurb">{m.blurb}</span>
+    {searchable && <span class="lg-hit" hidden></span>}
+  </span>
+  <span class="lg-topic"><i class="dot" data-cat={m.category}></i>{topic}</span>
+  <span class="lg-arrow" aria-hidden="true">&rarr;</span>
+</a>

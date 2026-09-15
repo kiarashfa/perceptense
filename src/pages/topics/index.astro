@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { site, path, pageTitle, counts, spelled } from '../../lib/site';
+import SplitMark from '../../components/SplitMark.astro';
+import LedgerRow from '../../components/LedgerRow.astro';
+import { site, path, pageTitle, counts, spelled, roman } from '../../lib/site';
 import modules from '../../data/modules.json';
 import categories from '../../data/categories.json';
+import '../../styles/ledger.css';
 import '../../styles/icons/topics-index.css';
 
 const pathname = path('topics');
@@ -27,20 +30,36 @@ const structuredData = [{
   title={pageTitle('Topics', `the ${spelled(counts.categories)} areas the course covers`)}
   description={`Browse all ${counts.modules} ${site.brand} modules by topic, from numbers and scale to culture, mind and environment.`}
   pathname={pathname}
+  bodyClass="listing"
   structuredData={structuredData}
 >
-  <div class="page-wrap">
-    <h1>Browse by topic</h1>
-    <p class="lede">Every module, grouped into the {spelled(counts.categories)} areas the course covers.</p>
+  <div class="listing-wrap">
+    <div class="hero split-hero">
+      <SplitMark />
+    </div>
 
-    {grouped.map((g) => (
-      <section class="topic-block">
-        <h2><a href={path('topics', g.id)}>{g.label}</a> <span class="topic-count">{g.modules.length}</span></h2>
-        <ul class="topic-list">
-          {g.modules.map((m) => (
-            <li><a href={path('modules', m.slug)}>{m.name}</a> — {m.blurb}</li>
-          ))}
-        </ul>
+    <div class="index-head">
+      <h1 class="index-title">Topics</h1>
+      <span class="index-count">{counts.categories} subjects &middot; {counts.modules} modules</span>
+    </div>
+
+    <ul class="toc">
+      {grouped.map((g, k) => (
+        <li><a href={`#${g.id}`}><span>{roman(k + 1)}</span>{g.label}</a></li>
+      ))}
+    </ul>
+
+    {grouped.map((g, k) => (
+      <section class="chapter" id={g.id}>
+        <header class="ch-head">
+          <span class="ch-no">Chapter {roman(k + 1)}</span>
+          <h2 class="ch-title"><i class="dot" data-cat={g.id}></i><a href={path('topics', g.id)}>{g.label}</a></h2>
+          <p class="ch-desc">{g.description}</p>
+          <span class="ch-count">{g.modules.length} modules</span>
+        </header>
+        <ol class="lg-rows">
+          {g.modules.map((m) => <li><LedgerRow module={m} topic={g.label} /></li>)}
+        </ol>
       </section>
     ))}
   </div>

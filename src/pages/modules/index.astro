@@ -1,11 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SplitMark from '../../components/SplitMark.astro';
+import LedgerRow from '../../components/LedgerRow.astro';
 import { site, path, pageTitle } from '../../lib/site';
 import modules from '../../data/modules.json';
 import categories from '../../data/categories.json';
+import '../../styles/ledger.css';
 import '../../styles/icons/modules-index.css';
 
 const pathname = path('modules');
+const label = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+const countIn = (id: string) => modules.filter((m) => m.category === id).length;
+
 const structuredData = [
   {
     '@context': 'https://schema.org',
@@ -37,6 +43,7 @@ const structuredData = [
   title={pageTitle(`All ${modules.length} modules`)}
   description="Every Perceptense module in order, from weight and mass through to ecosystems, climate and sustainability."
   pathname={pathname}
+  bodyClass="listing"
   structuredData={structuredData}
 >
   <nav class="crumbs" aria-label="Breadcrumb" slot="before-main">
@@ -46,24 +53,248 @@ const structuredData = [
     </ol>
   </nav>
 
-  <div class="page-wrap">
-    <h1>All {modules.length} modules</h1>
-    <p class="lede">The full course in order. Each module stands on its own.</p>
+  <div class="listing-wrap">
+    <div class="hero split-hero">
+      <SplitMark />
+    </div>
 
-    <ol class="module-list">
-      {modules.map((m) => {
-        const cat = categories.find((c) => c.id === m.category)!;
-        return (
-          <li class="module-list-item">
-            <a href={path('modules', m.slug)}>
-              <span class="module-list-num">{String(m.id).padStart(2, '0')}</span>
-              <span class="module-list-name">{m.name}</span>
-              <span class="module-list-blurb">{m.blurb}</span>
-            </a>
-            <a class="module-list-tag" href={path('topics', cat.id)}>{cat.label}</a>
-          </li>
-        );
-      })}
-    </ol>
+    <div class="index-head">
+      <h1 class="index-title">The index</h1>
+      <span class="index-count" id="count" aria-live="polite">{modules.length} modules</span>
+    </div>
+
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4" /></svg>
+        <input id="q" type="search" placeholder={`Search ${modules.length} modules`} aria-label="Search modules" autocomplete="off" />
+        <kbd aria-hidden="true">/</kbd>
+      </label>
+
+      <div class="drawer" id="drawer">
+        <button class="drawer-btn" type="button" aria-expanded="false" aria-controls="drawerPanel">
+          <span class="db-part"><span class="db-k">Subject</span><span class="db-v" id="dbCat"><i class="dot" data-cat="all"></i>All</span></span>
+          <span class="db-part"><span class="db-k">Order</span><span class="db-v" id="dbSort">No. &uarr;</span></span>
+          <svg class="db-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+        <div class="drawer-panel" id="drawerPanel">
+          <div class="dp-col">
+            <div class="dp-h">Subject</div>
+            <div class="dp-grid">
+              <button class="dp-opt on" type="button" data-cat="all"><i class="dot" data-cat="all"></i><span>All subjects</span><b>{modules.length}</b></button>
+              {categories.map((c) => (
+                <button class="dp-opt" type="button" data-cat={c.id}><i class="dot" data-cat={c.id}></i><span>{c.label}</span><b>{countIn(c.id)}</b></button>
+              ))}
+            </div>
+          </div>
+          <div class="dp-col dp-order">
+            <div class="dp-h">Order by</div>
+            <button class="dp-opt" type="button" data-sort="rel" hidden>Relevance</button>
+            <button class="dp-opt on" type="button" data-sort="num">Number</button>
+            <button class="dp-opt" type="button" data-sort="name">Name</button>
+            <button class="dp-opt" type="button" data-sort="cat">Subject</button>
+            <div class="dp-h">Direction</div>
+            <div class="seg">
+              <button class="on" type="button" data-dir="asc">Ascending</button>
+              <button type="button" data-dir="desc">Descending</button>
+            </div>
+            <button class="dp-reset" type="button" id="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ledger">
+      <div class="lg-head">
+        <button type="button" data-sort="num" class="on">No.</button>
+        <button type="button" data-sort="name">Module</button>
+        <button type="button" data-sort="cat">Subject</button>
+        <span></span>
+      </div>
+      <ol class="lg-rows" id="rows">
+        {modules.map((m) => <li><LedgerRow module={m} topic={label[m.category]} searchable /></li>)}
+      </ol>
+      <p class="lg-empty" id="empty" hidden>No module matches that search.</p>
+    </div>
   </div>
 </BaseLayout>
+
+<script>
+  type Hit = { rank: number; excerpt?: string; title?: string; url?: string };
+  type Row = { li: HTMLElement; a: HTMLAnchorElement; href: string; hit: HTMLElement; num: number; name: string; cat: string; search: string };
+  type Pagefind = {
+    options: (o: Record<string, unknown>) => Promise<void>;
+    init: () => void;
+    debouncedSearch: (q: string, o: Record<string, unknown>, ms: number) => Promise<{ results: { data: () => Promise<PagefindData> }[] } | null>;
+  };
+  type PagefindData = { url: string; excerpt: string; sub_results?: { title: string; url: string; excerpt: string }[] };
+
+  const BASE = import.meta.env.BASE_URL;
+  const q = document.getElementById('q') as HTMLInputElement | null;
+  const list = document.getElementById('rows');
+  const drawer = document.getElementById('drawer');
+
+  if (q && list && drawer) {
+    const rows: Row[] = Array.from(list.querySelectorAll<HTMLAnchorElement>('.lg-row')).map((a) => ({
+      li: a.parentElement as HTMLElement,
+      a,
+      href: a.getAttribute('href') ?? '',
+      hit: a.querySelector('.lg-hit') as HTMLElement,
+      num: Number(a.dataset.num),
+      name: a.dataset.name ?? '',
+      cat: a.dataset.cat ?? '',
+      search: a.dataset.search ?? '',
+    }));
+    const byPath = new Map(rows.map((r) => [r.href, r]));
+    const toggle = drawer.querySelector<HTMLButtonElement>('.drawer-btn')!;
+    const countEl = document.getElementById('count')!;
+    const empty = document.getElementById('empty')!;
+    const dbCat = document.getElementById('dbCat')!;
+    const dbSort = document.getElementById('dbSort')!;
+    const relevance = drawer.querySelector<HTMLElement>('[data-sort="rel"]')!;
+    const heads = Array.from(document.querySelectorAll<HTMLButtonElement>('.lg-head button'));
+    const SORT_LABEL: Record<string, string> = { rel: 'Relevance', num: 'No.', name: 'Name', cat: 'Subject' };
+
+    const state = { cat: 'all', key: 'num', asc: true };
+    let ranked: Map<Row, Hit> | null = null;
+    let chosenOrder = false;
+
+    const escape = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+    function apply() {
+      const s = q!.value.trim().toLowerCase();
+      const shown = (r: Row) =>
+        (state.cat === 'all' || r.cat === state.cat) && (!s || Boolean(ranked?.has(r)) || r.search.includes(s));
+      const rank = (r: Row) => ranked?.get(r)?.rank ?? 1e6 + r.num;
+      const order = (a: Row, b: Row) => {
+        if (state.key === 'rel') return rank(a) - rank(b);
+        const d = state.key === 'name' ? a.name.localeCompare(b.name)
+          : state.key === 'cat' ? a.cat.localeCompare(b.cat) || a.num - b.num
+          : a.num - b.num;
+        return state.asc ? d : -d;
+      };
+
+      let visible = 0;
+      [...rows].sort(order).forEach((r) => {
+        const on = shown(r);
+        r.li.hidden = !on;
+        visible += Number(on);
+        list!.appendChild(r.li);
+        const h = s ? ranked?.get(r) : undefined;
+        if (h?.excerpt) {
+          r.hit.innerHTML = (h.title && h.title !== r.name ? `<b>${escape(h.title)}</b> &middot; ` : '') + h.excerpt;
+          r.hit.hidden = false;
+          r.a.href = h.url ?? r.href;
+        } else if (!r.hit.hidden) {
+          r.hit.hidden = true;
+          r.hit.textContent = '';
+          r.a.href = r.href;
+        }
+      });
+
+      countEl.textContent = `${visible} ${visible === 1 ? 'module' : 'modules'}`;
+      empty.hidden = visible > 0;
+      relevance.hidden = !s;
+      drawer!.querySelectorAll<HTMLElement>('[data-cat]').forEach((o) => o.classList.toggle('on', o.dataset.cat === state.cat));
+      drawer!.querySelectorAll<HTMLElement>('[data-sort]').forEach((o) => o.classList.toggle('on', o.dataset.sort === state.key));
+      drawer!.querySelectorAll<HTMLElement>('[data-dir]').forEach((o) => o.classList.toggle('on', (o.dataset.dir === 'asc') === state.asc));
+      heads.forEach((h) => {
+        h.classList.toggle('on', h.dataset.sort === state.key);
+        h.classList.toggle('desc', h.dataset.sort === state.key && !state.asc);
+      });
+      const option = drawer!.querySelector<HTMLElement>(`.dp-grid [data-cat="${state.cat}"]`)!;
+      dbCat.innerHTML = option.querySelector('.dot')!.outerHTML + escape(state.cat === 'all' ? 'All' : option.querySelector('span')!.textContent ?? '');
+      dbSort.textContent = SORT_LABEL[state.key] + (state.key === 'rel' ? '' : state.asc ? ' ↑' : ' ↓');
+    }
+
+    // Full-text search runs on the index Pagefind builds from the module pages.
+    // Until it loads, or where there is no index (the dev server), the keyword
+    // match above stands on its own.
+    let loading: Promise<Pagefind | null> | null = null;
+    const pagefind = () =>
+      (loading ??= import(/* @vite-ignore */ `${BASE}pagefind/pagefind.js`)
+        .then(async (pf: Pagefind) => {
+          await pf.options({ baseUrl: BASE, excerptLength: 18 });
+          pf.init();
+          return pf;
+        })
+        .catch(() => null));
+
+    let latest = 0;
+    async function search() {
+      const s = q!.value.trim();
+      const mine = ++latest;
+      if (!s) {
+        ranked = null;
+        if (state.key === 'rel') Object.assign(state, { key: 'num', asc: true });
+        chosenOrder = false;
+        apply();
+        return;
+      }
+      if (!chosenOrder) state.key = 'rel';
+      apply();
+      const pf = await pagefind();
+      if (!pf || mine !== latest) return;
+      const found = await pf.debouncedSearch(s, {}, 160);
+      if (!found || mine !== latest) return;
+      const pages = await Promise.all(found.results.slice(0, 50).map((r) => r.data()));
+      if (mine !== latest) return;
+      const next = new Map<Row, Hit>();
+      pages.forEach((page, i) => {
+        const row = byPath.get(new URL(page.url, location.href).pathname);
+        if (!row || next.has(row)) return;
+        const sub = page.sub_results?.[0];
+        next.set(row, { rank: i, excerpt: sub?.excerpt ?? page.excerpt, title: sub?.title, url: sub?.url ?? page.url });
+      });
+      ranked = next;
+      apply();
+    }
+
+    const setOpen = (open: boolean) => {
+      drawer.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    };
+    const sortBy = (key: string, asc?: boolean) => {
+      state.asc = asc ?? (key === state.key ? !state.asc : true);
+      state.key = key;
+      chosenOrder = key !== 'rel';
+      apply();
+    };
+
+    q.addEventListener('focus', () => void pagefind(), { once: true });
+    q.addEventListener('input', () => void search());
+    toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('open')));
+    document.addEventListener('click', (e) => {
+      if (!drawer.contains(e.target as Node)) setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
+      const typing = e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement;
+      if (e.key === '/' && !typing) {
+        e.preventDefault();
+        q.focus();
+      }
+    });
+    drawer.querySelectorAll<HTMLElement>('[data-cat]').forEach((o) =>
+      o.addEventListener('click', () => {
+        state.cat = o.dataset.cat ?? 'all';
+        apply();
+      }),
+    );
+    drawer.querySelectorAll<HTMLElement>('[data-sort]').forEach((o) =>
+      o.addEventListener('click', () => sortBy(o.dataset.sort ?? 'num', o.dataset.sort === state.key ? state.asc : true)),
+    );
+    drawer.querySelectorAll<HTMLElement>('[data-dir]').forEach((o) =>
+      o.addEventListener('click', () => sortBy(state.key, o.dataset.dir === 'asc')),
+    );
+    document.getElementById('reset')?.addEventListener('click', () => {
+      Object.assign(state, { cat: 'all', key: 'num', asc: true });
+      q.value = '';
+      ranked = null;
+      chosenOrder = false;
+      apply();
+    });
+    heads.forEach((h) => h.addEventListener('click', () => sortBy(h.dataset.sort ?? 'num')));
+
+    apply();
+  }
+</script>

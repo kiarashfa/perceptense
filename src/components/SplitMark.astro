@@ -1,0 +1,66 @@
+---
+import '../styles/split.css';
+
+interface Props {
+  /** Render the word as the page's h1. */
+  heading?: boolean;
+}
+
+const { heading = false } = Astro.props;
+const Word = heading ? 'h1' : 'div';
+const label = 'Perceptense, blend of perception and sense';
+---
+<div class="etym-host">
+  <div class="etym" data-etym>
+    <Word
+      class="etym-word"
+      aria-label={label}
+      title="Click to split"
+      role={heading ? undefined : 'button'}
+      tabindex={heading ? undefined : '0'}
+    >
+      <span class="etym-piece etym-left">Percept<span class="add">ion</span></span><span class="etym-plus">+</span><span class="etym-piece etym-right"><span class="add">s</span>ense</span>
+    </Word>
+    <div class="etym-note">
+      <b>Perception</b> meets <b>sense</b>.
+    </div>
+  </div>
+  <slot />
+</div>
+
+<script>
+  const SHOW_DELAY = 700;
+  const HOLD_MS = 2400;
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  for (const etym of document.querySelectorAll<HTMLElement>('[data-etym]')) {
+    const word = etym.querySelector<HTMLElement>('.etym-word');
+    if (!word) continue;
+    let touched = false;
+
+    const toggle = () => {
+      touched = true;
+      etym.classList.toggle('open');
+    };
+    word.addEventListener('click', toggle);
+    word.addEventListener('keydown', (e) => {
+      if (word.getAttribute('role') === 'button' && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        toggle();
+      }
+    });
+
+    const autoplay = () => {
+      if (still) return;
+      setTimeout(() => {
+        if (touched) return;
+        etym.classList.add('open');
+        setTimeout(() => {
+          if (!touched) etym.classList.remove('open');
+        }, HOLD_MS);
+      }, SHOW_DELAY);
+    };
+    if (document.readyState === 'complete') autoplay();
+    else window.addEventListener('load', autoplay, { once: true });
+  }
+</script>

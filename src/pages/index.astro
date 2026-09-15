@@ -1,21 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ModuleBrowser from '../components/ModuleBrowser.astro';
-import { site, path } from '../lib/site';
+import SplitMark from '../components/SplitMark.astro';
+import LedgerRow from '../components/LedgerRow.astro';
+import { site, path, counts, spelled, roman } from '../lib/site';
 import modules from '../data/modules.json';
+import categories from '../data/categories.json';
+import '../styles/ledger.css';
 import '../styles/home.css';
 import '../styles/icons/home.css';
 
 const pathname = path();
 const home = new URL(pathname, Astro.site).href;
+const label = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+const countIn = (id: string) => modules.filter((m) => m.category === id).length;
+const pad = (n: number) => String(n).padStart(2, '0');
 
-/** Modules given a thumbnail on the homepage. */
-const FEATURED: Record<number, string> = {
-  8: 'Thumb_Speed.png',
-  10: 'Thumb_History.png',
-  30: 'Thumb_Art.png',
-};
-const featured = modules.filter((m) => m.id in FEATURED);
+/** Spotlight order. Each module's animation is src/assets/featured/<slug>.svg. */
+const SPOTLIGHT = [12, 26, 8, 49, 7, 33, 3, 48, 25];
+const art = import.meta.glob<string>('../assets/featured/*.svg', { query: '?raw', import: 'default', eager: true });
+const spotlight = SPOTLIGHT.map((id) => {
+  const m = modules.find((x) => x.id === id)!;
+  return { ...m, svg: art[`../assets/featured/${m.slug}.svg`] };
+});
+
+const subjects = spelled(counts.categories);
 
 const structuredData = [
   {
@@ -60,67 +68,157 @@ const structuredData = [
   structuredData={structuredData}
 >
   <div class="home-wrap">
-    <div class="hero">
-      <svg class="hero-graphic" viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg">
-      <!-- Connection lines -->
-      <line x1="40" y1="70" x2="100" y2="30" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
-      <line x1="100" y1="30" x2="140" y2="60" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
-      <line x1="140" y1="60" x2="180" y2="25" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
-      <line x1="180" y1="25" x2="240" y2="55" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
-      <line x1="100" y1="30" x2="180" y2="25" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
-      <line x1="40" y1="70" x2="140" y2="60" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
-      <line x1="140" y1="60" x2="240" y2="55" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
-      <line x1="70" y1="95" x2="140" y2="60" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
-      <line x1="140" y1="60" x2="210" y2="90" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
-      <line x1="70" y1="95" x2="40" y2="70" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
-      <line x1="210" y1="90" x2="240" y2="55" stroke="var(--color-border-tertiary)" stroke-width="0.8"/>
-      <!-- Nodes -->
-      <circle cx="40"  cy="70" r="5"   fill="#4E99A3" opacity="0.7"/>
-      <circle cx="100" cy="30" r="6.5" fill="#4E99A3" opacity="0.85"/>
-      <circle cx="140" cy="60" r="8"   fill="#4E99A3" opacity="1"/>
-      <circle cx="180" cy="25" r="5.5" fill="#4E99A3" opacity="0.75"/>
-      <circle cx="240" cy="55" r="6"   fill="#4E99A3" opacity="0.8"/>
-      <circle cx="70"  cy="95" r="4"   fill="#4E99A3" opacity="0.55"/>
-      <circle cx="210" cy="90" r="4.5" fill="#4E99A3" opacity="0.6"/>
-      <!-- Decorative small dots -->
-      <circle cx="60"  cy="45" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
-      <circle cx="120" cy="80" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
-      <circle cx="160" cy="45" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
-      <circle cx="200" cy="70" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
-      <circle cx="260" cy="40" r="1.5" fill="var(--color-text-tertiary)" opacity="0.3"/>
-      <circle cx="20"  cy="50" r="1.2" fill="var(--color-text-tertiary)" opacity="0.2"/>
-      <circle cx="220" cy="40" r="1.2" fill="var(--color-text-tertiary)" opacity="0.2"/>
-      </svg>
-
-      <div class="hero-overtitle">A self-directed course</div>
-      <h1 class="hero-title">Have a Sense<br />About Everything</h1>
-      <p class="hero-sub">Interactive modules covering everything that shapes daily life.</p>
-    </div>
-
-    <div class="feat-section">
-      <div class="feat-label">Featured modules</div>
-      <div class="feat-grid">
-        {featured.map((m) => (
-          <a href={path('modules', m.slug)} class="feat-card">
-            <img
-              src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets/thumbnails/${FEATURED[m.id]}`}
-              alt=""
-              class="feat-img"
-              loading="lazy"
-              decoding="async"
-              width="300"
-              height="300"
-            />
-            <div class="feat-body">
-              <div class="feat-num">Module {m.id}</div>
-              <div class="feat-name">{m.name}</div>
-              <p class="feat-desc">{m.blurb}</p>
-            </div>
-          </a>
-        ))}
+    <section class="stage">
+      <div class="hero">
+        <SplitMark>
+          <h1 class="etym-sub">{site.tagline}</h1>
+        </SplitMark>
       </div>
+
+      <div class="rx-wrap spot" data-rx="spot">
+        <div class="rx rx-spot" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Featured modules">
+          {spotlight.map((m) => (
+            <a class="plate rx-item" href={path('modules', m.slug)}>
+              <div class="plate-art" set:html={m.svg} />
+              <div class="plate-cap">
+                <span class="plate-no">N&ordm; {pad(m.id)} &middot; {label[m.category]}</span>
+                <span class="plate-name">{m.name}</span>
+                <span class="plate-blurb">{m.blurb}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div class="rx-ctrl center">
+          <button type="button" data-step="-1" aria-label="Previous featured module">&larr;</button>
+          <span class="rx-count"><b>01</b> / {pad(spotlight.length)}</span>
+          <button type="button" data-step="1" aria-label="Next featured module">&rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="flow">
+      <section class="door door-left" aria-labelledby="door-index">
+        <div class="door-copy">
+          <span class="big-num" aria-hidden="true">{pad(counts.modules)}</span>
+          <span class="eyebrow">The index</span>
+          <h2 class="door-title" id="door-index">Every module, on one page.</h2>
+          <p class="door-text">
+            Search by keyword, filter by subject, sort by number or name. Every module stands on its own, so
+            start wherever your curiosity is loudest. Inside each one you will find anchor numbers to hold on to,
+            calculators that take your own figures, side by side comparisons, small games, and questions that ask
+            for a guess before they show the answer.
+          </p>
+          <a class="door-link" href={path('modules')}>Open the index <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="door-art">
+          <div class="rx-wrap" data-rx="list">
+            <div class="rx rx-list" tabindex="0" aria-label="All modules">
+              <div class="rx-lens"></div>
+              {modules.map((m) => <LedgerRow module={m} topic={label[m.category]} class="rx-item" />)}
+            </div>
+            <div class="rx-ctrl end">
+              <button type="button" data-step="-1" aria-label="Previous module">&uarr;</button>
+              <span class="rx-count"><b>01</b> / {pad(counts.modules)}</span>
+              <button type="button" data-step="1" aria-label="Next module">&darr;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="door door-right" aria-labelledby="door-topics">
+        <div class="door-art">
+          <div class="rx-wrap" data-rx="list">
+            <div class="rx rx-list" tabindex="0" aria-label="Subjects">
+              <div class="rx-lens"></div>
+              {categories.map((c, k) => (
+                <a class="lg-row rx-item" href={path('topics', c.id)}>
+                  <span class="lg-num">{roman(k + 1)}</span>
+                  <span class="lg-main">
+                    <span class="lg-name"><i class="dot" data-cat={c.id}></i>{c.label}</span>
+                    <span class="lg-blurb">{c.description}</span>
+                  </span>
+                  <span class="lg-count">{countIn(c.id)}</span>
+                </a>
+              ))}
+            </div>
+            <div class="rx-ctrl">
+              <button type="button" data-step="-1" aria-label="Previous subject">&uarr;</button>
+              <span class="rx-count"><b>01</b> / {pad(counts.categories)}</span>
+              <button type="button" data-step="1" aria-label="Next subject">&darr;</button>
+            </div>
+          </div>
+        </div>
+        <div class="door-copy">
+          <span class="big-num" aria-hidden="true">{pad(counts.categories)}</span>
+          <span class="eyebrow">By subject</span>
+          <h2 class="door-title" id="door-topics">{subjects[0].toUpperCase() + subjects.slice(1)} subjects, each its own chapter.</h2>
+          <p class="door-text">
+            From numbers and scale to mind and meaning. Each subject gathers its modules in one place, with a line
+            on what ties them together. Read a whole chapter and the ideas start leaning on each other: money makes
+            more sense beside percentages and probability, sleep beside fitness and health. Or wander across
+            subjects, since every module still works on its own.
+          </p>
+          <a class="door-link" href={path('topics')}>Browse topics <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </section>
     </div>
 
-    <ModuleBrowser />
+    <section class="coda" aria-labelledby="coda-title">
+      <span class="coda-node" aria-hidden="true"></span>
+      <span class="coda-mark" aria-hidden="true">Perception<i>+</i>sense</span>
+      <span class="eyebrow">About</span>
+      <h2 class="door-title" id="coda-title">Built for the numbers we nod along to.</h2>
+      <p class="door-text">
+        Gigatons of CO<sub>2</sub>, light-years, basis points: the internet is good at facts and bad at feel.
+        {site.brand} is a small antidote, short and playful modules you can poke at instead of long articles you
+        skim. Every one is hand built and free, and the story of why it exists is a short read.
+      </p>
+      <a class="door-link" href={path('about')}>Read the story <span aria-hidden="true">&rarr;</span></a>
+    </section>
   </div>
 </BaseLayout>
+
+<script>
+  import { rolodex, spotPlace, listPlace } from '../scripts/rolodex';
+
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const spot = document.querySelector<HTMLElement>('.rx-wrap[data-rx="spot"]');
+
+  if (spot) {
+    const art = Array.from(spot.querySelectorAll<SVGSVGElement>('.plate-art svg'));
+    const n = art.length;
+    let front = 0;
+    let onScreen = true;
+
+    // Only the front card and its two neighbours animate, and only while the
+    // spotlight is on screen.
+    const sync = () => {
+      art.forEach((svg, i) => {
+        const d = Math.abs(i - front);
+        const near = Math.min(d, n - d) <= 1;
+        if (!still && onScreen && near) svg.unpauseAnimations();
+        else svg.pauseAnimations();
+      });
+    };
+    if (still) art.forEach((svg) => svg.setCurrentTime(3));
+
+    rolodex(spot, {
+      place: spotPlace,
+      horizontal: true,
+      dragPx: 140,
+      wheelOnFrontOnly: true,
+      onFront: (k) => {
+        front = k;
+        sync();
+      },
+    });
+    new IntersectionObserver(([entry]) => {
+      onScreen = entry.isIntersecting;
+      sync();
+    }).observe(spot);
+  }
+
+  document.querySelectorAll<HTMLElement>('.rx-wrap[data-rx="list"]').forEach((wrap) => {
+    rolodex(wrap, { place: listPlace(84), horizontal: false, dragPx: 84 });
+  });
+</script>

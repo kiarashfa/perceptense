@@ -12,6 +12,11 @@ const WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'e
 /** A count in words up to twelve, in digits beyond. */
 export const spelled = (n: number): string => WORDS[n] ?? String(n);
 
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+
+/** An ordinal up to twelve as a Roman numeral, in digits beyond. */
+export const roman = (n: number): string => ROMAN[n - 1] ?? String(n);
+
 /**
  * Brand strings, shared with the build tools through src/data/site.json.
  * `{modules}` in the description stands for the module count.

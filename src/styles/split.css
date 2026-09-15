@@ -1,0 +1,134 @@
+/* ============================================================
+   Split-word mark: "Perceptense" opening into perception + sense
+   ============================================================ */
+
+.etym-host {
+  /* The glow bleeds 8% past the word; clipping keeps narrow pages
+     from scrolling sideways, and the gradient is transparent there. */
+  overflow-x: clip;
+}
+
+.etym {
+  position: relative;
+  margin: 0 auto;
+  max-width: 520px;
+  padding: 26px 16px 18px;
+  text-align: center;
+}
+/* Soft teal glow that fades to fully transparent at top & bottom */
+.etym::before {
+  content: '';
+  position: absolute;
+  inset: -10px -8% -10px -8%;
+  background:
+    radial-gradient(60% 60% at 50% 50%, color-mix(in srgb, #4E99A3 11%, transparent) 0%, transparent 75%);
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+  z-index: 0;
+}
+.etym > * { position: relative; z-index: 1; }
+.etym-word {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 7.5vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+.etym-word:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+  border-radius: 6px;
+}
+.etym-piece {
+  display: inline-flex;
+  align-items: baseline;
+  flex-shrink: 0;
+  transition: transform 0.85s cubic-bezier(0.32, 0.72, 0.24, 1),
+              color 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+}
+.etym-piece .add {
+  display: inline-block;
+  color: var(--color-text-tertiary);
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transform: translateY(3px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s,
+              max-width 0.85s cubic-bezier(0.32, 0.72, 0.24, 1) 0.18s,
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  white-space: nowrap;
+}
+.etym-plus {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.55em;
+  color: var(--color-text-tertiary);
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transform: scale(0.4);
+  align-self: center;
+  flex-shrink: 0;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.45s,
+              max-width 0.7s cubic-bezier(0.32, 0.72, 0.24, 1) 0.25s,
+              transform 0.6s cubic-bezier(0.34, 1.4, 0.64, 1) 0.45s;
+}
+/* Open state: pieces drift apart, ink turns teal,
+   inserted letters fade in greyed, + appears */
+.etym.open .etym-left  { transform: translateX(-5px); color: var(--accent-text); }
+.etym.open .etym-right { transform: translateX(5px); color: var(--accent-text); }
+.etym.open .etym-piece .add {
+  color: var(--color-text-tertiary);
+  opacity: 1;
+  max-width: 2em;
+  transform: translateY(0);
+}
+.etym.open .etym-plus {
+  opacity: 1;
+  max-width: 1.5em;
+  transform: scale(1);
+}
+.etym-note {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: 0;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.65s cubic-bezier(0.4, 0, 0.2, 1) 0.4s,
+              opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.55s,
+              margin-top 0.55s cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  text-align: center;
+}
+.etym.open .etym-note { max-height: 60px; opacity: 1; margin-top: 16px; }
+.etym-note b { color: var(--color-text-primary); font-weight: 600; }
+
+/* Line under the mark */
+.etym-sub {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: clamp(16px, 2.2vw, 19px);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0.6rem auto 0;
+  max-width: 520px;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+  text-align: center;
+}
+
+/* Mark on its own, above a listing */
+.split-hero {
+  padding: 1.5rem 0 1rem;
+}

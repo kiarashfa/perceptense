@@ -1,35 +1,25 @@
 ---
 import { site, path, counts } from '../lib/site';
-import categories from '../data/categories.json';
 ---
 <footer class="site-foot">
-  <nav class="foot-topics" aria-label="Topics">
-    <h2 class="foot-heading">Topics</h2>
-    <ul>
-      {categories.map((c) => (
-        <li><a href={path('topics', c.id)}>{c.label}</a></li>
-      ))}
-    </ul>
-  </nav>
-
-  <nav class="foot-links" aria-label="Site">
-    <h2 class="foot-heading">{site.brand}</h2>
-    <ul>
-      <li><a href={path()}>Home</a></li>
-      <li><a href={path('modules')}>All {counts.modules} modules</a></li>
-      <li><a href={path('topics')}>Browse by topic</a></li>
-      <li><a href={path('about')}>About</a></li>
-    </ul>
-  </nav>
-
-  <div class="foot-legal">
+  <div class="foot-bar">
+    <nav class="foot-links" aria-label="Site">
+      <a class="foot-brand" href={path()}>{site.brand}</a>
+      <ul>
+        <li><a href={path()}>Home</a></li>
+        <li><a href={path('modules')}>All {counts.modules} modules</a></li>
+        <li><a href={path('topics')}>Browse by topic</a></li>
+        <li><a href={path('about')}>About</a></li>
+      </ul>
+    </nav>
     <p class="foot-copy">&copy; 2025&ndash;2026 {site.author}.</p>
-    <p class="foot-disclaimer">
-      This content is provided for educational and informational purposes only. It does not
-      constitute professional, medical, legal, political, or psychological advice. The author
-      makes no representations or warranties regarding the accuracy, completeness, or
-      applicability of the information presented. Views on sensitive or debated topics reflect
-      general educational summaries, not personal advocacy.
-    </p>
   </div>
+
+  <p class="foot-disclaimer">
+    This content is provided for educational and informational purposes only. It does not
+    constitute professional, medical, legal, political, or psychological advice. The author
+    makes no representations or warranties regarding the accuracy, completeness, or
+    applicability of the information presented. Views on sensitive or debated topics reflect
+    general educational summaries, not personal advocacy.
+  </p>
 </footer>

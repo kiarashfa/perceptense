@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { site, path, pageTitle } from '../../lib/site';
+import LedgerRow from '../../components/LedgerRow.astro';
+import { site, path, pageTitle, roman } from '../../lib/site';
 import modules from '../../data/modules.json';
 import categories from '../../data/categories.json';
+import '../../styles/ledger.css';
 import '../../styles/icons/[category].css';
 
 export function getStaticPaths() {
@@ -11,6 +13,7 @@ export function getStaticPaths() {
 
 const { category } = Astro.props;
 const list = modules.filter((m) => m.category === category.id);
+const chapter = categories.findIndex((c) => c.id === category.id) + 1;
 const pathname = path('topics', category.id);
 
 const structuredData = [
@@ -45,6 +48,7 @@ const structuredData = [
   title={pageTitle(category.label, `${list.length} modules`)}
   description={`${list.length} Perceptense modules on ${category.label.toLowerCase()}: ${list.map((m) => m.name).join(', ')}.`.slice(0, 165)}
   pathname={pathname}
+  bodyClass="listing"
   structuredData={structuredData}
 >
   <nav class="crumbs" aria-label="Breadcrumb" slot="before-main">
@@ -55,20 +59,33 @@ const structuredData = [
     </ol>
   </nav>
 
-  <div class="page-wrap">
-    <h1>{category.label}</h1>
-    <p class="lede">{list.length} modules in this topic.</p>
-    <ul class="module-list">
-      {list.map((m) => (
-        <li class="module-list-item">
-          <a href={path('modules', m.slug)}>
-            <span class="module-list-num">{String(m.id).padStart(2, '0')}</span>
-            <span class="module-list-name">{m.name}</span>
-            <span class="module-list-blurb">{m.blurb}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-    <p><a href={path('modules')}>See all {modules.length} modules</a></p>
+  <div class="listing-wrap">
+    <section class="chapter chapter-page">
+      <header class="ch-head">
+        <span class="ch-no">Chapter {roman(chapter)}</span>
+        <h1 class="ch-title"><i class="dot" data-cat={category.id}></i>{category.label}</h1>
+        <p class="ch-desc">{category.description}</p>
+        <span class="ch-count">{list.length} modules</span>
+      </header>
+      <ol class="lg-rows">
+        {list.map((m) => <li><LedgerRow module={m} topic={category.label} /></li>)}
+      </ol>
+    </section>
+
+    <nav class="more-subjects" aria-label="Subjects">
+      <div class="index-head">
+        <h2 class="index-title">All subjects</h2>
+        <a class="index-count" href={path('modules')}>All {modules.length} modules &rarr;</a>
+      </div>
+      <ul class="toc">
+        {categories.map((c, k) => (
+          <li>
+            <a href={path('topics', c.id)} aria-current={c.id === category.id ? 'page' : undefined}>
+              <span>{roman(k + 1)}</span>{c.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   </div>
 </BaseLayout>

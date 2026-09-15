@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SplitMark from '../components/SplitMark.astro';
 import { site, path, pageTitle } from '../lib/site';
 import modules from '../data/modules.json';
 import categories from '../data/categories.json';
@@ -56,16 +57,9 @@ const structuredData = [
 
     <!-- ========== HERO ========== -->
     <div class="hero">
-      <!-- Big interactive name + subtitle -->
-      <div class="etym" id="etym">
-        <h1 class="etym-word" aria-label="Perceptense, blend of perception and sense" title="Click to split">
-          <span class="etym-piece etym-left">Percept<span class="add">ion</span></span><span class="etym-plus">+</span><span class="etym-piece etym-right"><span class="add">s</span>ense</span>
-        </h1>
-        <div class="etym-note">
-          <b>Perception</b> meets <b>sense</b>.
-        </div>
-      </div>
-      <p class="hero-sub">A course for building real intuition.</p>
+      <SplitMark heading>
+        <p class="etym-sub">A course for building real intuition.</p>
+      </SplitMark>
     </div>
 
     <!-- ========== SECTION 1: THE IDEA / TRY IT ========== -->
@@ -355,38 +349,6 @@ const structuredData = [
 </BaseLayout>
 
 <script is:inline>
-
-    /* ------- ETYMOLOGY SPLIT ------- */
-    (function () {
-      var etym = document.getElementById('etym');
-      if (!etym) return;
-      var word = etym.querySelector('.etym-word');
-
-      // Autoplay: open shortly after load, hold, then collapse.
-      // After this, the user can click to toggle freely.
-      var SHOW_DELAY = 700;    // wait a beat after page settles
-      var HOLD_MS    = 2400;   // how long to stay split
-
-      var autoplayDone = false;
-      var hasInteracted = false;
-
-      word.addEventListener('click', function () {
-        hasInteracted = true;
-        etym.classList.toggle('open');
-      });
-
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          if (hasInteracted) return;
-          etym.classList.add('open');
-          setTimeout(function () {
-            if (hasInteracted) return;
-            etym.classList.remove('open');
-            autoplayDone = true;
-          }, HOLD_MS);
-        }, SHOW_DELAY);
-      });
-    })();
 
     /* ------- THIS-OR-THAT QUIZ ------- */
     (function () {

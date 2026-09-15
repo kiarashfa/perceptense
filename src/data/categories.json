@@ -1,34 +1,42 @@
 [
   {
     "id": "numbers",
-    "label": "Numbers & Scale"
+    "label": "Numbers & Scale",
+    "description": "Weight, size, time, money and the odds. The quantities everything else gets measured in."
   },
   {
     "id": "physical",
-    "label": "Earth & Space"
+    "label": "Earth & Space",
+    "description": "Distance, speed, heat, weather and the planets. The physical world at human and cosmic scale."
   },
   {
     "id": "science",
-    "label": "Science & Tech"
+    "label": "Science & Tech",
+    "description": "Materials, chemistry, engineering, technology and physics. How things are made and why they work."
   },
   {
     "id": "body",
-    "label": "Body & Health"
+    "label": "Body & Health",
+    "description": "The body, food, sleep, fitness, sport and health. What keeps a person running."
   },
   {
     "id": "society",
-    "label": "Society & Systems"
+    "label": "Society & Systems",
+    "description": "History, politics, diplomacy, law, media and money. The systems people build together."
   },
   {
     "id": "culture",
-    "label": "Culture & Arts"
+    "label": "Culture & Arts",
+    "description": "Food, drink, fashion, art, books, music, film, games and faith. What people make and believe."
   },
   {
     "id": "mind",
-    "label": "Mind & Meaning"
+    "label": "Mind & Meaning",
+    "description": "Psychology, philosophy, language, fear and logic. How we think, and how to think better."
   },
   {
     "id": "life",
-    "label": "Life & Environment"
+    "label": "Life & Environment",
+    "description": "Animals, ecosystems and climate. Life on Earth and what keeps it going."
   }
 ]

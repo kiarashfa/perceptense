@@ -6,7 +6,8 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run data && npm run icons && npm run css && npm run og && astro build && npm run redirects",
+    "build": "npm run data && npm run icons && npm run css && npm run og && astro build && npm run redirects && npm run search",
+    "search": "pagefind --site dist",
     "preview": "astro preview",
     "check": "astro check",
     "data": "python tools/build_data.py",
@@ -30,6 +31,7 @@
     "@fortawesome/fontawesome-free": "^7.3.1",
     "astro": "^7.3.2",
     "fontkit": "2.0.4",
+    "pagefind": "^1.5.2",
     "pixelmatch": "^7.1.0",
     "playwright": "^1.56.1",
     "pngjs": "^7.0.0",

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 210" role="img" aria-label="Six dots cross the same distance, each twice as fast as the one above">
+<defs><linearGradient id="sp-trail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4E99A3" stop-opacity="0"/><stop offset="1" stop-color="#4E99A3" stop-opacity=".8"/></linearGradient><linearGradient id="sp-trail-n" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b929a" stop-opacity="0"/><stop offset="1" stop-color="#8b929a" stop-opacity=".7"/></linearGradient></defs>
+<line x1="46" y1="28" x2="46" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.9"/>
+<line x1="78" y1="28" x2="78" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="110" y1="28" x2="110" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="142" y1="28" x2="142" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="174" y1="28" x2="174" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="206" y1="28" x2="206" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="238" y1="28" x2="238" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="270" y1="28" x2="270" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="302" y1="28" x2="302" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="334" y1="28" x2="334" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.35"/>
+<line x1="366" y1="28" x2="366" y2="188" stroke="#6e7681" stroke-width=".6" opacity="0.9"/>
+<line x1="46" y1="40" x2="366" y2="40" stroke="#6e7681" stroke-width=".8" stroke-dasharray="2 4" opacity=".6"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 0" to="320 0" dur="32s" repeatCount="indefinite"/><rect x="38" y="38.8" width="8" height="2.4" rx="1.2" fill="url(#sp-trail-n)"/><circle cx="46" cy="40" r="2.60" fill="#8b929a"/></g>
+<line x1="46" y1="68" x2="366" y2="68" stroke="#6e7681" stroke-width=".8" stroke-dasharray="2 4" opacity=".6"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 0" to="320 0" dur="16s" repeatCount="indefinite"/><rect x="29" y="66.8" width="17" height="2.4" rx="1.2" fill="url(#sp-trail-n)"/><circle cx="46" cy="68" r="2.95" fill="#8b929a"/></g>
+<line x1="46" y1="96" x2="366" y2="96" stroke="#6e7681" stroke-width=".8" stroke-dasharray="2 4" opacity=".6"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 0" to="320 0" dur="8s" repeatCount="indefinite"/><rect x="20" y="94.8" width="26" height="2.4" rx="1.2" fill="url(#sp-trail-n)"/><circle cx="46" cy="96" r="3.30" fill="#8b929a"/></g>
+<line x1="46" y1="124" x2="366" y2="124" stroke="#6e7681" stroke-width=".8" stroke-dasharray="2 4" opacity=".6"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 0" to="320 0" dur="4s" repeatCount="indefinite"/><rect x="11" y="122.8" width="35" height="2.4" rx="1.2" fill="url(#sp-trail-n)"/><circle cx="46" cy="124" r="3.65" fill="#8b929a"/></g>
+<line x1="46" y1="152" x2="366" y2="152" stroke="#6e7681" stroke-width=".8" stroke-dasharray="2 4" opacity=".6"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 0" to="320 0" dur="2s" repeatCount="indefinite"/><rect x="2" y="150.8" width="44" height="2.4" rx="1.2" fill="url(#sp-trail-n)"/><circle cx="46" cy="152" r="4.00" fill="#8b929a"/></g>
+<line x1="46" y1="180" x2="366" y2="180" stroke="#6e7681" stroke-width=".8" stroke-dasharray="2 4" opacity=".6"/>
+<g><animateTransform attributeName="transform" type="translate" from="0 0" to="320 0" dur="1s" repeatCount="indefinite"/><rect x="-7" y="178.8" width="53" height="2.4" rx="1.2" fill="url(#sp-trail)"/><circle cx="46" cy="180" r="4.35" fill="#4E99A3"/></g>
+</svg>
