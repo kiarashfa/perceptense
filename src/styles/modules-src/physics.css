@@ -6,6 +6,16 @@
       --q-blue-border: #85B7EB;
     }
 
+    .physics-accent-text { color: var(--accent); fill: var(--accent); }
+    html[data-theme="dark"] .physics-accent-text { color: #8A84CE; fill: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .physics-accent-text { color: #8A84CE; fill: #8A84CE; } }
+    .physics-accent-stroke { stroke: var(--accent); }
+    html[data-theme="dark"] .physics-accent-stroke { stroke: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .physics-accent-stroke { stroke: #8A84CE; } }
+    .physics-accent-light-text { color: #6B63C6; fill: #6B63C6; }
+    html[data-theme="dark"] .physics-accent-light-text { color: #8983D1; fill: #8983D1; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .physics-accent-light-text { color: #8983D1; fill: #8983D1; } }
+
     /* ---- QUANTUM SECTION HEADINGS ---- */
     .sec-quantum {
       margin: 2rem 0 0.6rem;
@@ -24,6 +34,8 @@
       color: var(--accent);
       font-weight: 500;
     }
+    html[data-theme="dark"] .button-row-compact button.active { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .button-row-compact button.active { color: #8A84CE; } }
     .explorer-panel {
       background: var(--color-background-secondary);
       border: 0.5px solid var(--color-border-tertiary);
@@ -48,6 +60,8 @@
     .slider-end-label { font-size: 11px; color: var(--color-text-tertiary); flex-shrink: 0; width: 80px; }
     .slider-end-label.right { text-align: right; }
     .slider-output { text-align: center; font-size: 15px; font-weight: 600; color: var(--accent); margin: 6px 0 0; }
+    html[data-theme="dark"] .slider-output { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .slider-output { color: #8A84CE; } }
     .slider-sub { text-align: center; font-size: 12px; color: var(--color-text-secondary); margin: 2px 0 0; }
 
     /* ---- MULTI-CARD EXPLORER (dot grid) ---- */
@@ -110,6 +124,8 @@
     }
     .calc-output.show { display: block; }
     .calc-highlight { font-size: 16px; font-weight: 600; color: var(--accent); }
+    html[data-theme="dark"] .calc-highlight { color: #8A84CE; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .calc-highlight { color: #8A84CE; } }
 
     /* ---- SVG DIAGRAM ---- */
     .diagram-wrap { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; }

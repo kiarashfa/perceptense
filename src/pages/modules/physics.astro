@@ -137,8 +137,8 @@ const mod = modules.find((m) => m.id === 43)!;
       <polygon points="250,160 90,300 410,300" fill="var(--color-background-warning)" opacity="0.5"/>
       
       <!-- Light cone edges -->
-      <line x1="250" y1="160" x2="90" y2="20" stroke="var(--accent)" stroke-width="2"/>
-      <line x1="250" y1="160" x2="410" y2="20" stroke="var(--accent)" stroke-width="2"/>
+      <line x1="250" y1="160" x2="90" y2="20" class="physics-accent-stroke" stroke-width="2"/>
+      <line x1="250" y1="160" x2="410" y2="20" class="physics-accent-stroke" stroke-width="2"/>
       <line x1="250" y1="160" x2="90" y2="300" stroke="var(--color-text-warning)" stroke-width="2"/>
       <line x1="250" y1="160" x2="410" y2="300" stroke="var(--color-text-warning)" stroke-width="2"/>
       
@@ -151,8 +151,8 @@ const mod = modules.find((m) => m.id === 43)!;
       <text x="465" y="152" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="end" font-weight="bold" letter-spacing="1">SPACE</text>
       
       <!-- Future Label -->
-      <text x="250" y="55" font-size="12" fill="var(--accent)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="1">FUTURE</text>
-      <text x="250" y="70" font-size="10" fill="var(--accent)" font-family="system-ui" text-anchor="middle" opacity="0.8">(can be affected)</text>
+      <text x="250" y="55" font-size="12" class="physics-accent-text" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="1">FUTURE</text>
+      <text x="250" y="70" font-size="10" class="physics-accent-text" font-family="system-ui" text-anchor="middle" opacity="0.8">(can be affected)</text>
       
       <!-- Past Label -->
       <text x="250" y="255" font-size="12" fill="var(--color-text-warning)" font-family="system-ui" text-anchor="middle" font-weight="bold" letter-spacing="1">PAST</text>
@@ -166,8 +166,8 @@ const mod = modules.find((m) => m.id === 43)!;
       <text x="375" y="170" font-size="10" fill="var(--color-text-tertiary)" font-family="system-ui" text-anchor="middle">(unreachable)</text>
       
       <!-- Light cone boundary labels -->
-      <text x="170" y="90" dy="-8" font-size="9" fill="var(--accent)" font-family="system-ui" text-anchor="middle" transform="rotate(41.2, 170, 90)" letter-spacing="1" font-weight="bold">LIGHT CONE</text>
-      <text x="330" y="90" dy="-8" font-size="9" fill="var(--accent)" font-family="system-ui" text-anchor="middle" transform="rotate(-41.2, 330, 90)" letter-spacing="1" font-weight="bold">LIGHT CONE</text>
+      <text x="170" y="90" dy="-8" font-size="9" class="physics-accent-text" font-family="system-ui" text-anchor="middle" transform="rotate(41.2, 170, 90)" letter-spacing="1" font-weight="bold">LIGHT CONE</text>
+      <text x="330" y="90" dy="-8" font-size="9" class="physics-accent-text" font-family="system-ui" text-anchor="middle" transform="rotate(-41.2, 330, 90)" letter-spacing="1" font-weight="bold">LIGHT CONE</text>
       
       <!-- Origin Label -->
       <text x="262" y="164" font-size="10" fill="var(--color-text-primary)" font-family="system-ui" font-weight="bold" letter-spacing="0.5">HERE &amp; NOW</text>
@@ -259,14 +259,14 @@ const mod = modules.find((m) => m.id === 43)!;
         <text x="32" y="16" font-size="11" fill="var(--color-text-tertiary)" font-family="system-ui">|ψ|²</text>
         <!-- Gaussian probability density -->
         <path id="wf-path" fill="url(#wf-grad)" opacity="0.5"/>
-        <path id="wf-line" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <path id="wf-line" class="physics-accent-stroke" fill="none" stroke-width="2"/>
         <!-- Oscillating wavefunction Re(ψ) -->
         <path id="wf-real" fill="none" stroke="var(--accent-light)" stroke-width="1.5" stroke-dasharray="4,3"/>
         <!-- Labels -->
         <text x="220" y="185" font-size="10" fill="var(--color-text-secondary)" font-family="system-ui" text-anchor="middle">Most likely position</text>
         <line x1="250" y1="170" x2="250" y2="60" stroke="var(--color-text-secondary)" stroke-width="0.5" stroke-dasharray="3,3"/>
-        <text x="300" y="50" font-size="10" fill="var(--accent)" font-family="system-ui">|ψ|² = probability density</text>
-        <text x="60" y="80" font-size="10" fill="var(--accent-light)" font-family="system-ui">Re(ψ) — wave oscillation</text>
+        <text x="300" y="50" font-size="10" class="physics-accent-text" font-family="system-ui">|ψ|² = probability density</text>
+        <text x="60" y="80" font-size="10" class="physics-accent-light-text" font-family="system-ui">Re(ψ) — wave oscillation</text>
       </svg>
       <div class="diagram-caption">The wavefunction ψ is complex-valued. |ψ|² gives the probability density of finding the particle at each position. The particle doesn't "blur out" — it's genuinely not at a definite location until measured.</div>
     </div>
@@ -714,14 +714,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // PHYSICS TIMELINE
   makeTimeline('phys-axis', 'phys-timeline', [
-    { label: 'Galileo & Mechanics', start: 1590, end: 1700, bg: '#7B74CC', fg: '#fff', text: 'Kinematics' },
+    { label: 'Galileo & Mechanics', start: 1590, end: 1700, bg: '#726BC9', fg: '#fff', text: 'Kinematics' },
     { label: 'Newtonian Physics', start: 1687, end: 1800, bg: '#534AB7', fg: '#fff', text: 'F=ma, Gravity' },
-    { label: 'Thermodynamics', start: 1820, end: 1880, bg: '#ef9f27', fg: '#fff', text: 'Entropy, Laws' },
-    { label: 'Electromagnetism', start: 1830, end: 1880, bg: '#27a060', fg: '#fff', text: 'Maxwell eqs.' },
+    { label: 'Thermodynamics', start: 1820, end: 1880, bg: '#ef9f27', fg: '#1a1a18', text: 'Entropy, Laws' },
+    { label: 'Electromagnetism', start: 1830, end: 1880, bg: '#27a060', fg: '#1a1a18', text: 'Maxwell eqs.' },
     { label: 'Special Relativity', start: 1905, end: 1920, bg: '#0C447C', fg: '#fff', text: 'SR (Einstein)' },
     { label: 'Quantum Mechanics', start: 1900, end: 1930, bg: '#85B7EB', fg: '#0C447C', text: 'QM revolution' },
     { label: 'General Relativity', start: 1915, end: 1930, bg: '#2b6cb0', fg: '#fff', text: 'GR' },
-    { label: 'QFT & Standard Model', start: 1930, end: 2012, bg: '#A9A4E8', fg: '#534AB7', text: 'SM complete' },
+    { label: 'QFT & Standard Model', start: 1930, end: 2012, bg: '#D1CFF3', fg: '#534AB7', text: 'SM complete' },
   ], 1580, 2025);
 
   // EM SPECTRUM MULTI-CARD
@@ -737,10 +737,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // EM BARS (log scale, relative)
   makeBarChart('em-bars', [
-    { label: 'Radio', val: 1, bg: '#7B74CC', fg: '#fff', display: '~10⁻⁶ eV' },
-    { label: 'Microwave', val: 4, bg: '#7B74CC', fg: '#fff', display: '~10⁻⁴ eV' },
-    { label: 'Infrared', val: 20, bg: '#ef9f27', fg: '#fff', display: '~0.1 eV' },
-    { label: 'Visible', val: 35, bg: '#27a060', fg: '#fff', display: '~2 eV' },
+    { label: 'Radio', val: 1, bg: '#726BC9', fg: '#fff', display: '~10⁻⁶ eV' },
+    { label: 'Microwave', val: 4, bg: '#726BC9', fg: '#fff', display: '~10⁻⁴ eV' },
+    { label: 'Infrared', val: 20, bg: '#ef9f27', fg: '#1a1a18', display: '~0.1 eV' },
+    { label: 'Visible', val: 35, bg: '#27a060', fg: '#1a1a18', display: '~2 eV' },
     { label: 'Ultraviolet', val: 55, bg: '#9B59B6', fg: '#fff', display: '~10 eV' },
     { label: 'X-ray', val: 75, bg: '#0C447C', fg: '#fff', display: '~10 keV' },
     { label: 'Gamma ray', val: 100, bg: '#791F1F', fg: '#fff', display: '>100 keV' }
@@ -963,7 +963,7 @@ function buildPattern(mode) {
   // BELL BARS
   makeBarChart('bell-bars', [
     { label: 'Classical limit (LHV)', val: 2.0, bg: '#ccc', fg: '#333', display: 'S = 2.00 (max)' },
-    { label: 'QM prediction', val: 2.83, bg: '#A9A4E8', fg: '#534AB7', display: 'S = 2√2 ≈ 2.83' },
+    { label: 'QM prediction', val: 2.83, bg: '#D1CFF3', fg: '#534AB7', display: 'S = 2√2 ≈ 2.83' },
     { label: 'Aspect et al. 1982', val: 2.70, bg: '#534AB7', fg: '#fff', display: 'S = 2.70 ±0.05' },
     { label: 'Hensen et al. 2015', val: 2.42, bg: '#534AB7', fg: '#fff', display: 'S = 2.42 ±0.20' },
     { label: 'Giustina et al. 2015', val: 2.74, bg: '#534AB7', fg: '#fff', display: 'S = 2.74 ±0.04' }
@@ -1011,7 +1011,7 @@ function buildPattern(mode) {
   // SM DISTBAR
   makeDistbar('sm-distbar', 'sm-legend', [
     { label: 'Quarks (6)', pct: 35, bg: '#534AB7', fg: '#fff' },
-    { label: 'Leptons (6)', pct: 35, bg: '#7B74CC', fg: '#fff' },
+    { label: 'Leptons (6)', pct: 35, bg: '#726BC9', fg: '#fff' },
     { label: 'Gauge Bosons (4)', pct: 24, bg: '#0C447C', fg: '#fff' },
     { label: 'Higgs (1)', pct: 6, bg: '#85B7EB', fg: '#0C447C' }
   ]);
@@ -1046,10 +1046,10 @@ function buildPattern(mode) {
 
   // STELLAR FATE BARS
   makeBarChart('stellar-bars', [
-    { label: '0.5 M☉ (red dwarf)', val: 100, bg: '#ef4444', fg: '#fff', display: 'White dwarf · lifetime: >100 Gyr' },
-    { label: '1 M☉ (Sun)', val: 80, bg: '#f97316', fg: '#fff', display: 'White dwarf · ~10 Gyr' },
-    { label: '5 M☉', val: 45, bg: '#8b5cf6', fg: '#fff', display: 'White dwarf · ~100 Myr' },
-    { label: '10 M☉', val: 25, bg: '#3b82f6', fg: '#fff', display: 'Neutron star / SN · ~30 Myr' },
+    { label: '0.5 M☉ (red dwarf)', val: 100, bg: '#ef4444', fg: '#1a1a18', display: 'White dwarf · lifetime: >100 Gyr' },
+    { label: '1 M☉ (Sun)', val: 80, bg: '#f97316', fg: '#1a1a18', display: 'White dwarf · ~10 Gyr' },
+    { label: '5 M☉', val: 45, bg: '#8654F6', fg: '#fff', display: 'White dwarf · ~100 Myr' },
+    { label: '10 M☉', val: 25, bg: '#3b82f6', fg: '#1a1a18', display: 'Neutron star / SN · ~30 Myr' },
     { label: '25 M☉', val: 12, bg: '#0C447C', fg: '#fff', display: 'Black hole / SN · ~7 Myr' },
     { label: '>40 M☉', val: 5, bg: '#1c1c1a', fg: '#e8e6df', display: 'Black hole (direct) · <3 Myr' }
   ], 100);
@@ -1064,8 +1064,8 @@ function buildPattern(mode) {
   // COSMOS DISTBAR
   makeDistbar('cosmos-distbar', 'cosmos-legend', [
     { label: 'Dark Energy', pct: 68, bg: '#534AB7', fg: '#fff' },
-    { label: 'Dark Matter', pct: 27, bg: '#A9A4E8', fg: '#534AB7' },
-    { label: 'Baryonic Matter', pct: 5, bg: '#ef9f27', fg: '#fff' }
+    { label: 'Dark Matter', pct: 27, bg: '#D1CFF3', fg: '#534AB7' },
+    { label: 'Baryonic Matter', pct: 5, bg: '#ef9f27', fg: '#1a1a18' }
   ]);
 
   // WAVEFUNCTION SVG PATH
