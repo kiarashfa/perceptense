@@ -1,13 +1,8 @@
 
-    :root {
-      --accent: #3B7FCC;
-      --accent-bg: #E6F1FB;
-      --accent-border: #85B7EB;
-    }
     .button-row-compact button.active {
       background: var(--accent-bg);
       border-color: var(--accent-border);
-      color: var(--accent);
+      color: #0C447C;
     }
     .pc-label {
       font-size: 11px;
@@ -202,4 +197,15 @@
       .pc-axis { margin-left: 90px; }
       .cscale-name { width: 110px; }
     }
+
+html[data-theme="dark"] .button-row-compact button.active { color: #85B7EB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .button-row-compact button.active { color: #85B7EB; }
+}
+
+.mgmt-accent-text { color: #0C447C; }
+html[data-theme="dark"] .mgmt-accent-text { color: #85B7EB; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .mgmt-accent-text { color: #85B7EB; }
+}
   

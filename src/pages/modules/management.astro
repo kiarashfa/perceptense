@@ -172,12 +172,12 @@ const mod = modules.find((m) => m.id === 36)!;
           <line x1="60" y1="119" x2="520" y2="119" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
           <!-- Cell 1: Cost Leadership -->
           <rect x="65" y="52" width="220" height="63" rx="5" fill="var(--accent-bg)" stroke="var(--accent-border)" stroke-width="0.5"/>
-          <text x="175" y="74" text-anchor="middle" font-size="12" fill="var(--accent)" font-weight="500">Cost Leadership</text>
+          <text x="175" y="74" text-anchor="middle" font-size="12" class="mgmt-accent-text" fill="currentColor" font-weight="500">Cost Leadership</text>
           <text x="175" y="90" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">Walmart, Ryanair, ALDI</text>
           <text x="175" y="106" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">Lowest delivered cost to broad market</text>
           <!-- Cell 2: Differentiation -->
           <rect x="295" y="52" width="220" height="63" rx="5" fill="var(--accent-bg)" stroke="var(--accent-border)" stroke-width="0.5"/>
-          <text x="405" y="74" text-anchor="middle" font-size="12" fill="var(--accent)" font-weight="500">Differentiation</text>
+          <text x="405" y="74" text-anchor="middle" font-size="12" class="mgmt-accent-text" fill="currentColor" font-weight="500">Differentiation</text>
           <text x="405" y="90" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">Apple, LVMH, McKinsey</text>
           <text x="405" y="106" text-anchor="middle" font-size="10" fill="var(--color-text-secondary)">Unique value justifying premium price</text>
           <!-- Cell 3: Focus (cost) -->
@@ -212,9 +212,9 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- SWOT/PESTLE — horizontal bar showing toolkit frequency of use -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Strategy toolkit — how often each framework is actually used in practice</div>
-      <div class="bar-row"><div class="bl">SWOT analysis</div><div class="bb" style="width:85%; background:#3B7FCC;"><span class="bv" style="color:#fff;">85% of Fortune 500 strategy teams</span></div></div>
-      <div class="bar-row"><div class="bl">Porter's Five Forces</div><div class="bb" style="width:72%; background:#5594D6;"><span class="bv" style="color:#fff;">72%</span></div></div>
-      <div class="bar-row"><div class="bl">PESTLE</div><div class="bb" style="width:64%; background:#6FA8DC;"><span class="bv" style="color:#fff;">64%</span></div></div>
+      <div class="bar-row"><div class="bl">SWOT analysis</div><div class="bb" style="width:85%; background:#3B7FCC;"><span class="bv" style="color:#000;">85% of Fortune 500 strategy teams</span></div></div>
+      <div class="bar-row"><div class="bl">Porter's Five Forces</div><div class="bb" style="width:72%; background:#5594D6;"><span class="bv" style="color:#000;">72%</span></div></div>
+      <div class="bar-row"><div class="bl">PESTLE</div><div class="bb" style="width:64%; background:#6FA8DC;"><span class="bv" style="color:#000;">64%</span></div></div>
       <div class="bar-row"><div class="bl">BCG Matrix</div><div class="bb" style="width:51%; background:#8BBDE3;"><span class="bv" style="color:#fff;">51%</span></div></div>
       <div class="bar-row"><div class="bl">Value Chain</div><div class="bb" style="width:44%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">44%</span></div></div>
       <div class="bar-row"><div class="bl">Balanced Scorecard</div><div class="bb" style="width:38%; background:#C2DCF0;"><span class="bv" style="color:var(--color-text-primary);">38%</span></div></div>
@@ -259,14 +259,14 @@ const mod = modules.find((m) => m.id === 36)!;
         <!-- Income Statement -->
         <rect x="10" y="10" width="175" height="180" rx="8" fill="var(--color-background-primary)" stroke="var(--accent-border)" stroke-width="1"/>
         <rect x="10" y="10" width="175" height="30" rx="8" fill="var(--accent-bg)" stroke="var(--accent-border)" stroke-width="1"/>
-        <text x="97" y="30" text-anchor="middle" font-size="11" fill="var(--accent)" font-weight="500">Income Statement</text>
+        <text x="97" y="30" text-anchor="middle" font-size="11" class="mgmt-accent-text" fill="currentColor" font-weight="500">Income Statement</text>
         <text x="22" y="58" font-size="10" fill="var(--color-text-secondary)">Revenue</text>
         <text x="22" y="75" font-size="10" fill="var(--color-text-secondary)">− Cost of Goods Sold</text>
         <text x="22" y="92" font-size="10" fill="var(--color-text-primary)" font-weight="500">= Gross Profit</text>
         <text x="22" y="109" font-size="10" fill="var(--color-text-secondary)">− Operating Expenses</text>
         <text x="22" y="126" font-size="10" fill="var(--color-text-primary)" font-weight="500">= EBIT</text>
         <text x="22" y="143" font-size="10" fill="var(--color-text-secondary)">− Interest &amp; Tax</text>
-        <text x="22" y="163" font-size="10" fill="var(--accent)" font-weight="500">= Net Income</text>
+        <text x="22" y="163" font-size="10" class="mgmt-accent-text" fill="currentColor" font-weight="500">= Net Income</text>
         <text x="22" y="181" font-size="9" fill="var(--color-text-tertiary)">Period: quarter or year</text>
 
         <!-- Balance Sheet -->
@@ -400,7 +400,7 @@ const mod = modules.find((m) => m.id === 36)!;
       <div class="clabel" style="margin-bottom:10px;">Where a typical SaaS revenue dollar goes — why gross margin is the engine</div>
       <div class="dist-bar">
         <div class="dist-seg" style="width:20%; background:var(--color-border-info); color:var(--color-text-primary);">20%</div>
-        <div class="dist-seg" style="width:35%; background:#3B7FCC; color:#fff;">35%</div>
+        <div class="dist-seg" style="width:35%; background:#3B7FCC; color:#000;">35%</div>
         <div class="dist-seg" style="width:25%; background:var(--color-border-success); color:var(--color-text-primary);">25%</div>
         <div class="dist-seg" style="width:20%; background:var(--color-border-warning); color:var(--color-text-primary);">20%</div>
       </div>
@@ -440,9 +440,9 @@ const mod = modules.find((m) => m.id === 36)!;
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">The STP process — where budget and time actually go</div>
       <div class="dist-bar">
-        <div class="dist-seg" style="width:20%; background:#3B7FCC; color:#fff;">Segment</div>
-        <div class="dist-seg" style="width:20%; background:#5594D6; color:#fff;">Target</div>
-        <div class="dist-seg" style="width:25%; background:#6FA8DC; color:#fff;">Position</div>
+        <div class="dist-seg" style="width:20%; background:#3B7FCC; color:#000;">Segment</div>
+        <div class="dist-seg" style="width:20%; background:#5594D6; color:#000;">Target</div>
+        <div class="dist-seg" style="width:25%; background:#6FA8DC; color:#000;">Position</div>
         <div class="dist-seg" style="width:35%; background:#A8CEE9; color:var(--color-text-primary);">Execute 4 Ps</div>
       </div>
       <div class="legend-roomy">
@@ -467,8 +467,8 @@ const mod = modules.find((m) => m.id === 36)!;
 
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Approximate global advertising revenue share by channel, 2024</div>
-      <div class="bar-row"><div class="bl">Digital</div><div class="bb" style="width:72%; background:#3B7FCC;"><span class="bv" style="color:#fff;">72%</span></div></div>
-      <div class="bar-row"><div class="bl">Television</div><div class="bb" style="width:16%; background:#5594D6;"><span class="bv" style="color:#fff;">16%</span></div></div>
+      <div class="bar-row"><div class="bl">Digital</div><div class="bb" style="width:72%; background:#3B7FCC;"><span class="bv" style="color:#000;">72%</span></div></div>
+      <div class="bar-row"><div class="bl">Television</div><div class="bb" style="width:16%; background:#5594D6;"><span class="bv" style="color:#000;">16%</span></div></div>
       <div class="bar-row"><div class="bl">Out-of-home</div><div class="bb" style="width:4%; background:#6FA8DC;"><span class="bv" style="color:var(--color-text-primary);">4%</span></div></div>
       <div class="bar-row"><div class="bl">Print</div><div class="bb" style="width:4%; background:#8BBDE3;"><span class="bv" style="color:var(--color-text-primary);">4%</span></div></div>
       <div class="bar-row"><div class="bl">Radio and other</div><div class="bb" style="width:4%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">4%</span></div></div>
@@ -646,9 +646,9 @@ const mod = modules.find((m) => m.id === 36)!;
     <!-- Bias prevalence horizontal bar -->
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Share of major corporate strategy failures attributable to each bias type (McKinsey study, ~2,200 decisions)</div>
-      <div class="bar-row"><div class="bl">Overconfidence</div><div class="bb" style="width:62%; background:#3B7FCC;"><span class="bv" style="color:#fff;">62%</span></div></div>
-      <div class="bar-row"><div class="bl">Short-termism</div><div class="bb" style="width:54%; background:#5594D6;"><span class="bv" style="color:#fff;">54%</span></div></div>
-      <div class="bar-row"><div class="bl">Confirmation bias</div><div class="bb" style="width:42%; background:#6FA8DC;"><span class="bv" style="color:#fff;">42%</span></div></div>
+      <div class="bar-row"><div class="bl">Overconfidence</div><div class="bb" style="width:62%; background:#3B7FCC;"><span class="bv" style="color:#000;">62%</span></div></div>
+      <div class="bar-row"><div class="bl">Short-termism</div><div class="bb" style="width:54%; background:#5594D6;"><span class="bv" style="color:#000;">54%</span></div></div>
+      <div class="bar-row"><div class="bl">Confirmation bias</div><div class="bb" style="width:42%; background:#6FA8DC;"><span class="bv" style="color:#000;">42%</span></div></div>
       <div class="bar-row"><div class="bl">Sunk cost fallacy</div><div class="bb" style="width:35%; background:#8BBDE3;"><span class="bv" style="color:var(--color-text-primary);">35%</span></div></div>
       <div class="bar-row"><div class="bl">Anchoring</div><div class="bb" style="width:27%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">27%</span></div></div>
       <p class="muted-copy" style="margin-top:8px;">Percentages do not sum to 100% as multiple biases typically co-occur in the same decision. Source: McKinsey Quarterly research on strategic decisions. The most actionable debiasing technique is the pre-mortem: before committing, ask "assume this project has failed spectacularly — what went wrong?"</p>
@@ -675,9 +675,9 @@ const mod = modules.find((m) => m.id === 36)!;
     <div class="card" style="margin-bottom:1rem;">
       <div class="clabel" style="margin-bottom:10px;">Venture capital funding stages — typical round sizes and dilution</div>
       <div class="track-row"><div class="fund-label">Pre-seed</div><div class="fill-bar-tall" style="width:10%; background:#A8CEE9;"><span class="bv" style="color:var(--color-text-primary);">$100K–$2M / 5–15% dilution</span></div></div>
-      <div class="track-row"><div class="fund-label">Seed</div><div class="fill-bar-tall" style="width:25%; background:#6FA8DC;"><span class="bv" style="color:#fff;">$1M–$5M / 15–25%</span></div></div>
-      <div class="track-row"><div class="fund-label">Series A</div><div class="fill-bar-tall" style="width:45%; background:#5594D6;"><span class="bv" style="color:#fff;">$5M–$25M / 20–30%</span></div></div>
-      <div class="track-row"><div class="fund-label">Series B</div><div class="fill-bar-tall" style="width:65%; background:#3B7FCC;"><span class="bv" style="color:#fff;">$20M–$100M / 15–25%</span></div></div>
+      <div class="track-row"><div class="fund-label">Seed</div><div class="fill-bar-tall" style="width:25%; background:#6FA8DC;"><span class="bv" style="color:#000;">$1M–$5M / 15–25%</span></div></div>
+      <div class="track-row"><div class="fund-label">Series A</div><div class="fill-bar-tall" style="width:45%; background:#5594D6;"><span class="bv" style="color:#000;">$5M–$25M / 20–30%</span></div></div>
+      <div class="track-row"><div class="fund-label">Series B</div><div class="fill-bar-tall" style="width:65%; background:#3B7FCC;"><span class="bv" style="color:#000;">$20M–$100M / 15–25%</span></div></div>
       <div class="track-row"><div class="fund-label">Series C+</div><div class="fill-bar-tall" style="width:85%; background:#2A5FA8;"><span class="bv" style="color:#fff;">$100M+ / 10–20% per round</span></div></div>
       <p class="muted-copy" style="margin-top:8px;">VC economics follow a power law: a single fund-returning investment (a "fund maker") must return the entire fund to be worth the portfolio. A $200M fund needs at least one exit producing $200M+ in proceeds. This explains why VCs push for aggressive growth — the 20 companies that do not break out are write-offs; only the outliers matter.</p>
     </div>
@@ -911,7 +911,7 @@ const mod = modules.find((m) => m.id === 36)!;
         '<div class="pc-label">' + p.label + '</div>' +
         '<div class="pc-track">' +
         '<div class="pc-fill" style="left:' + left + '%;width:' + width + '%;background:' + p.col + ';">' +
-        '<span class="period-label-medium" style="color:#fff;">' + p.start + '–' + (p.end === 2026 ? 'now' : p.end) + '</span>' +
+        '<span class="period-label-medium" style="color:#000;">' + p.start + '–' + (p.end === 2026 ? 'now' : p.end) + '</span>' +
         '</div>' +
         '</div>' +
         '</div>';
