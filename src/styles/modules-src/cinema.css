@@ -1,9 +1,4 @@
 
-    :root {
-      --accent: #5DCAA5;
-      --accent-bg: #e1f5ee;
-      --accent-border: #5DCAA5;
-    }
     .shot-card {
       background:var(--color-background-primary);
       border:0.5px solid var(--color-border-tertiary);
@@ -12,7 +7,7 @@
       transition:border-color 0.12s;
     }
     .shot-card:hover { border-color:var(--color-border-secondary); }
-    .shot-card.active { border-color:var(--accent); }
+    .shot-card.active { border-color:#1C6B4E; }
     .shot-diagram {
       width:100%; aspect-ratio:16/9;
       background:var(--color-background-secondary);
@@ -94,8 +89,8 @@
       display:flex; flex-direction:column; gap:5px;
     }
     .elem-card:hover { border-color:var(--color-border-secondary); }
-    .elem-card.active { border-color:var(--accent); background:var(--accent-bg); }
-    .elem-card-icon { font-size:20px; color:var(--accent); }
+    .elem-card.active { border-color:#1C6B4E; background:var(--accent-bg); }
+    .elem-card-icon { font-size:20px; color:#1C6B4E; }
 /* ── Genre pie segment ── */
     .dist-bar { display:flex; width:100%; height:28px; border-radius:6px; overflow:hidden; margin-bottom:10px; }
     .dist-seg { display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:700; overflow:hidden; cursor:default; }
@@ -122,7 +117,7 @@
       padding:13px 15px; cursor:pointer; transition:border-color 0.12s;
     }
     .dir-card:hover { border-color:var(--color-border-secondary); }
-    .dir-card.active { border-color:var(--accent); }
+    .dir-card.active { border-color:#1C6B4E; }
     .dir-years { font-size:10px; color:var(--color-text-tertiary); margin-bottom:5px; }
     .dir-tag { font-size:10px; background:var(--accent-bg); border-radius:99px; padding:2px 8px; color:var(--color-text-success); display:inline-block; }
     .dir-detail {
@@ -259,5 +254,22 @@
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));
   gap:8px;
+}
+
+html[data-theme="dark"] .elem-card-icon { color: #5DCAA5; }
+html[data-theme="dark"] .shot-card.active,
+html[data-theme="dark"] .elem-card.active,
+html[data-theme="dark"] .dir-card.active { border-color: #5DCAA5; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .elem-card-icon { color: #5DCAA5; }
+  html[data-theme="auto"] .shot-card.active,
+  html[data-theme="auto"] .elem-card.active,
+  html[data-theme="auto"] .dir-card.active { border-color: #5DCAA5; }
+}
+
+.cin-accent-text { color: #1C6B4E; }
+html[data-theme="dark"] .cin-accent-text { color: #5DCAA5; }
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .cin-accent-text { color: #5DCAA5; }
 }
   

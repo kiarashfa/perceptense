@@ -395,9 +395,9 @@ const mod = modules.find((m) => m.id === 34)!;
       <svg class="cinema-media" viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg">
         <rect width="600" height="340" fill="var(--color-background-secondary)" rx="8"/>
         <!-- Central node -->
-        <ellipse cx="300" cy="170" rx="55" ry="28" fill="var(--accent-bg)" stroke="var(--accent)" stroke-width="1.5"/>
-        <text x="300" y="167" text-anchor="middle" font-size="10" font-weight="700" fill="var(--accent)">THE FILM</text>
-        <text x="300" y="180" text-anchor="middle" font-size="9" fill="var(--accent)">any scene</text>
+        <ellipse cx="300" cy="170" rx="55" ry="28" fill="var(--accent-bg)" class="cin-accent-text" stroke="currentColor" stroke-width="1.5"/>
+        <text x="300" y="167" text-anchor="middle" font-size="10" font-weight="700" class="cin-accent-text" fill="currentColor">THE FILM</text>
+        <text x="300" y="180" text-anchor="middle" font-size="9" class="cin-accent-text" fill="currentColor">any scene</text>
 
         <!-- Node 1: What did you feel -->
         <rect x="20" y="20" width="120" height="44" rx="7" fill="var(--color-background-primary)" stroke="var(--color-border-secondary)" stroke-width="1"/>
@@ -948,13 +948,13 @@ const mod = modules.find((m) => m.id === 34)!;
     ════════════════════════════════════ */
     function buildGenreDistBar() {
       const data = [
-        { label:'Action/Adventure', pct:34, col:'#E07B5A' },
-        { label:'Comedy', pct:18, col:'#5DCAA5' },
-        { label:'Drama', pct:12, col:'#8A6DB5' },
-        { label:'Sci-fi/Fantasy', pct:14, col:'#0C447C' },
-        { label:'Horror', pct:8, col:'#791F1F' },
-        { label:'Animation', pct:8, col:'#EF9F27' },
-        { label:'Other', pct:6, col:'#888780' },
+        { label:'Action/Adventure', pct:34, col:'#E07B5A', txt:'#000' },
+        { label:'Comedy', pct:18, col:'#5DCAA5', txt:'#000' },
+        { label:'Drama', pct:12, col:'#8A6DB5', txt:'#000' },
+        { label:'Sci-fi/Fantasy', pct:14, col:'#0C447C', txt:'#fff' },
+        { label:'Horror', pct:8, col:'#791F1F', txt:'#fff' },
+        { label:'Animation', pct:8, col:'#EF9F27', txt:'#000' },
+        { label:'Other', pct:6, col:'#888780', txt:'#000' },
       ];
       const bar = document.getElementById('genreDistBar');
       const legend = document.getElementById('genreDistLegend');
@@ -963,7 +963,7 @@ const mod = modules.find((m) => m.id === 34)!;
         seg.className = 'dist-seg';
         seg.style.width = d.pct + '%';
         seg.style.background = d.col;
-        seg.style.color = '#fff';
+        seg.style.color = d.txt;
         if (d.pct >= 8) seg.textContent = d.pct + '%';
         bar.appendChild(seg);
         const item = document.createElement('div');
@@ -978,14 +978,14 @@ const mod = modules.find((m) => m.id === 34)!;
     ════════════════════════════════════ */
     function buildBoxOfficeChart() {
       const films = [
-        { label:'Gone with the Wind (1939)', val:3.9, col:'#FAEEDA', txt:'#633806' },
-        { label:'Avatar (2009)', val:3.3, col:'#E6F1FB', txt:'#0C447C' },
-        { label:'Titanic (1997)', val:3.1, col:'#E6F1FB', txt:'#0C447C' },
-        { label:'Star Wars (1977)', val:3.0, col:'#EAF3DE', txt:'#27500A' },
-        { label:'Avengers: Endgame (2019)', val:2.8, col:'#EEEDFE', txt:'#533489' },
-        { label:'The Sound of Music (1965)', val:2.6, col:'#FAEEDA', txt:'#633806' },
-        { label:'E.T. (1982)', val:2.5, col:'#EAF3DE', txt:'#27500A' },
-        { label:'The Ten Commandments (1956)', val:2.4, col:'#F1EFE8', txt:'#444' },
+        { label:'Gone with the Wind (1939)', val:3.9, col:'#b97d19', txt:'#633806' },
+        { label:'Avatar (2009)', val:3.3, col:'#348dde', txt:'#0C447C' },
+        { label:'Titanic (1997)', val:3.1, col:'#348dde', txt:'#0C447C' },
+        { label:'Star Wars (1977)', val:3.0, col:'#6d9536', txt:'#27500A' },
+        { label:'Avengers: Endgame (2019)', val:2.8, col:'#8079f8', txt:'#533489' },
+        { label:'The Sound of Music (1965)', val:2.6, col:'#b97d19', txt:'#633806' },
+        { label:'E.T. (1982)', val:2.5, col:'#6d9536', txt:'#27500A' },
+        { label:'The Ten Commandments (1956)', val:2.4, col:'#95885b', txt:'#444' },
       ];
       const maxVal = films[0].val;
       const wrap = document.getElementById('boxOfficeChart');
