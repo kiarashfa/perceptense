@@ -1,5 +1,5 @@
 ---
-import { site, path, counts } from '../lib/site';
+import { site, path } from '../lib/site';
 ---
 <footer class="site-foot">
   <div class="foot-bar">
@@ -7,7 +7,7 @@ import { site, path, counts } from '../lib/site';
       <a class="foot-brand" href={path()}>{site.brand}</a>
       <ul>
         <li><a href={path()}>Home</a></li>
-        <li><a href={path('modules')}>All {counts.modules} modules</a></li>
+        <li><a href={path('modules')}>All modules</a></li>
         <li><a href={path('topics')}>Browse by topic</a></li>
         <li><a href={path('about')}>About</a></li>
       </ul>

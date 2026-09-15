@@ -104,14 +104,15 @@ const structuredData = [
     </div>
 
     <div class="ledger">
-      <div class="lg-head">
+      <div class="lg-head has-icon">
         <button type="button" data-sort="num" class="on">No.</button>
+        <span></span>
         <button type="button" data-sort="name">Module</button>
         <button type="button" data-sort="cat">Subject</button>
         <span></span>
       </div>
       <ol class="lg-rows" id="rows">
-        {modules.map((m) => <li><LedgerRow module={m} topic={label[m.category]} searchable /></li>)}
+        {modules.map((m) => <li><LedgerRow module={m} topic={label[m.category]} icon={m.faIcon} searchable /></li>)}
       </ol>
       <p class="lg-empty" id="empty" hidden>No module matches that search.</p>
     </div>

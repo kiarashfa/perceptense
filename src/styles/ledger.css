@@ -124,6 +124,18 @@ body.listing main {
   font-variant-numeric: lining-nums tabular-nums;
 }
 .lg-row:hover .lg-num { color: var(--accent-text); }
+.lg-head.has-icon,
+.lg-row.has-icon { grid-template-columns: 56px 36px 1fr 170px 24px; }
+.lg-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  color: var(--color-text-tertiary);
+  transition: color 0.2s;
+}
+.lg-row:hover .lg-icon { color: var(--accent-text); }
 .lg-main { display: grid; gap: 2px; min-width: 0; }
 .lg-name { font-family: Georgia, serif; font-size: 18px; color: var(--color-text-primary); }
 .lg-blurb { font-size: 12.5px; line-height: 1.45; color: var(--color-text-secondary); }
@@ -322,6 +334,7 @@ body.listing main {
 .ch-count { grid-column: 2; grid-row: 2 / 4; align-self: end; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-tertiary); }
 .chapter .lg-topic { display: none; }
 .chapter .lg-row { grid-template-columns: 56px 1fr 24px; }
+.chapter .lg-row.has-icon { grid-template-columns: 56px 36px 1fr 24px; }
 .chapter-page { margin-top: 1.5rem; }
 .more-subjects { margin-top: 3.5rem; }
 .more-subjects .index-title { font-size: 24px; }
@@ -339,6 +352,10 @@ body.listing main {
   .lg-topic { grid-column: 2; }
   .lg-arrow { display: none; }
   .chapter .lg-row { grid-template-columns: 40px 1fr; }
+  .lg-row.has-icon,
+  .chapter .lg-row.has-icon { grid-template-columns: 40px 30px 1fr; }
+  .lg-icon { grid-row: 1 / 3; align-self: start; width: 30px; height: 30px; font-size: 15px; }
+  .lg-row.has-icon .lg-topic { grid-column: 3; }
   .toc { grid-template-columns: 1fr 1fr; }
   .ch-head { grid-template-columns: 1fr; }
   .ch-count { grid-column: 1; grid-row: auto; }

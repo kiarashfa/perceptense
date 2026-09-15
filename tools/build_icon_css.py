@@ -7,7 +7,8 @@ modules build icon markup at runtime.
 
 Each page gets only the icons it actually references, in markup or in its own
 scripts. The median module uses two, so this avoids shipping the whole set to
-every page.
+every page. A page that renders module icons from the data (its source
+mentions `faIcon`) also gets every icon named in src/data/modules.json.
 
 Writes:
   src/styles/icons-base.css        sizing rules, folded into the shared sheet
@@ -18,6 +19,7 @@ Writes:
 from __future__ import annotations
 
 import gzip
+import json
 import re
 import sys
 from pathlib import Path
@@ -96,11 +98,18 @@ def main() -> int:
     for stale in OUT_DIR.glob('*.css'):
         stale.unlink()
 
+    modules = json.loads((ROOT / 'src' / 'data' / 'modules.json').read_text(encoding='utf-8'))
+    data_icons = icon_names(' '.join(m.get('faIcon', '') for m in modules))
+
     rows = []
     keys: dict[str, Path] = {}
     unknown: set[str] = set()
     for page in sorted(PAGES.rglob('*.astro')):
-        names = sorted(icon_names(page.read_text(encoding='utf-8')))
+        text = page.read_text(encoding='utf-8')
+        found = icon_names(text)
+        if 'faIcon' in text:
+            found |= data_icons
+        names = sorted(found)
         key = page.stem if page.stem != 'index' else (
             'home' if page.parent == PAGES else f'{page.parent.name}-index')
 

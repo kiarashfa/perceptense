@@ -4,16 +4,18 @@ import { path } from '../lib/site';
 interface Props {
   module: { id: number; slug: string; name: string; blurb: string; category: string; keywords: string[] };
   topic: string;
+  /** The module's icon classes, e.g. `fa-solid fa-weight-hanging`. */
+  icon?: string;
   /** Extra classes, e.g. `rx-item` inside a rolodex. */
   class?: string;
   /** Carry the data the index page sorts and searches on. */
   searchable?: boolean;
 }
 
-const { module: m, topic, class: extra, searchable = false } = Astro.props;
+const { module: m, topic, icon, class: extra, searchable = false } = Astro.props;
 ---
 <a
-  class:list={['lg-row', extra]}
+  class:list={['lg-row', { 'has-icon': icon }, extra]}
   href={path('modules', m.slug)}
   data-cat={m.category}
   data-num={searchable ? m.id : undefined}
@@ -21,6 +23,7 @@ const { module: m, topic, class: extra, searchable = false } = Astro.props;
   data-search={searchable ? `${m.keywords.join(' ')} ${m.name}`.toLowerCase() : undefined}
 >
   <span class="lg-num">{String(m.id).padStart(2, '0')}</span>
+  {icon && <span class="lg-icon"><i class={icon} aria-hidden="true"></i></span>}
   <span class="lg-main">
     <span class="lg-name">{m.name}</span>
     <span class="lg-blurb">{m.blurb}</span>

@@ -58,7 +58,7 @@ const structuredData = [{
           <span class="ch-count">{g.modules.length} modules</span>
         </header>
         <ol class="lg-rows">
-          {g.modules.map((m) => <li><LedgerRow module={m} topic={g.label} /></li>)}
+          {g.modules.map((m) => <li><LedgerRow module={m} topic={g.label} icon={m.faIcon} /></li>)}
         </ol>
       </section>
     ))}

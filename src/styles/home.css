@@ -252,15 +252,6 @@
   text-align: center;
 }
 .coda-node { top: -5px; }
-.coda-mark {
-  display: block;
-  margin-bottom: 18px;
-  font-family: Georgia, serif;
-  font-size: clamp(28px, 4vw, 40px);
-  letter-spacing: -0.02em;
-  color: var(--color-text-tertiary);
-}
-.coda-mark i { margin: 0 0.3em; font-size: 0.55em; vertical-align: 0.25em; }
 .coda .door-title,
 .coda .door-text { max-width: 560px; margin-inline: auto; }
 .coda .door-text { margin-bottom: 24px; }
