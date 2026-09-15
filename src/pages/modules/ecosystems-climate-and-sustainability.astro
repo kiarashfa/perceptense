@@ -797,7 +797,7 @@ showBiome('rainforest', document.querySelector('[onclick="showBiome(\'rainforest
   let html = '';
   data.forEach(d => {
     const w = Math.round(d.val / maxVal * 100);
-    html += '<div class="bar-row u-mb-sm"><div class="bl" style="font-size:11px;width:160px;">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,2)+'%; opacity:0.9;"><span class="bv" style="color:'+d.fg+';">'+d.note+'</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl" style="font-size:11px;width:160px;">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,2)+'%; opacity:0.9; height:auto; min-height:22px; min-width:0;"><span class="bv" style="color:'+d.fg+'; white-space:normal;">'+d.note+'</span></div></div>';
   });
   el.innerHTML = html;
 })();
@@ -1182,7 +1182,7 @@ showOcean('acid', document.querySelector('[onclick="showOcean(\'acid\',this)"]')
   data.forEach(d => {
     const w = Math.min(d.val / maxVal * 100, 100);
     const note = d.val > maxVal ? ' (chart capped — actual: '+d.val+' tCO₂e)' : '';
-    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,3)+'%; opacity:0.9;"><span class="bv" style="color:'+d.fg+';">'+d.val+' tCO₂e/yr'+note+'</span></div></div>';
+    html += '<div class="bar-row u-mb-sm"><div class="bl">'+d.label+'</div><div class="bb" style="background:'+d.color+'; width:'+Math.max(w,3)+'%; opacity:0.9; height:auto; min-height:22px; min-width:0;"><span class="bv" style="color:'+d.fg+'; white-space:normal;">'+d.val+' tCO₂e/yr'+note+'</span></div></div>';
   });
   el.innerHTML = html;
 })();

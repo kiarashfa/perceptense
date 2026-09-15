@@ -67,7 +67,7 @@ html[data-theme="dark"] .eco-border-blue { border-left-color:#1C70C2; }
 
 /* === trophic level diagram === */
 .trophic-wrap { display:flex; flex-direction:column; align-items:center; gap:0; margin:10px 0 14px; }
-.trophic-tier { display:flex; align-items:center; justify-content:center; border-radius:4px; font-size:11px; font-weight:500; color:#fff; margin-bottom:3px; }
+.trophic-tier { display:flex; align-items:center; justify-content:center; border-radius:4px; font-size:11px; font-weight:500; color:#fff; margin-bottom:3px; max-width:100%; }
 .ghg-label { font-size:12px; color:var(--color-text-secondary); width:90px; flex-shrink:0; text-align:right; }
 .ghg-fill { height:20px; border-radius:3px; display:flex; align-items:center; padding:0 7px; font-size:10px; font-weight:600; color:#fff; }
 
