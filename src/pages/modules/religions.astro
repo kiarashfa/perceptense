@@ -571,14 +571,14 @@ const mod = modules.find((m) => m.id === 45)!;
 
     /* Distribution bar */
     var relData = [
-      { label: 'Christian', pct: 31, col: '#5B7FA6' }, { label: 'Muslim', pct: 25, col: '#3d7a5e' },
-      { label: 'Hindu', pct: 15, col: '#C17B3C' }, { label: 'Buddhist', pct: 7, col: '#8B6BBF' },
-      { label: 'Folk/Indigenous', pct: 6, col: '#A67C52' }, { label: 'Other', pct: 1, col: '#7a7a7a' },
-      { label: 'Non-religious', pct: 15, col: '#aaaaaa' }
+      { label: 'Christian', pct: 31, col: '#56789E', fg: '#fff' }, { label: 'Muslim', pct: 25, col: '#3d7a5e', fg: '#fff' },
+      { label: 'Hindu', pct: 15, col: '#C17B3C', fg: '#1a1a18' }, { label: 'Buddhist', pct: 7, col: '#8766BD', fg: '#fff' },
+      { label: 'Folk/Indigenous', pct: 6, col: '#A67C52', fg: '#1a1a18' }, { label: 'Other', pct: 1, col: '#7a7a7a', fg: '#fff' },
+      { label: 'Non-religious', pct: 15, col: '#aaaaaa', fg: '#1a1a18' }
     ];
     var bar = document.getElementById('religion-dist-bar'), leg = document.getElementById('religion-legend');
     relData.forEach(function(r){
-      var seg = document.createElement('div'); seg.className = 'dist-seg'; seg.style.width = r.pct+'%'; seg.style.background = r.col; seg.title = r.label+' '+r.pct+'%'; if(r.pct>=7) seg.textContent = r.pct+'%'; bar.appendChild(seg);
+      var seg = document.createElement('div'); seg.className = 'dist-seg'; seg.style.width = r.pct+'%'; seg.style.background = r.col; seg.style.color = r.fg; seg.title = r.label+' '+r.pct+'%'; if(r.pct>=7) seg.textContent = r.pct+'%'; bar.appendChild(seg);
       var li = document.createElement('div'); li.className = 'dl-item'; li.innerHTML = '<div class="key-swatch" style="background:'+r.col+'"></div>'+r.label+' '+r.pct+'%'; leg.appendChild(li);
     });
 

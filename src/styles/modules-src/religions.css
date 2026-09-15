@@ -1,10 +1,14 @@
 
     .button-row-compact button { font-size: 11px; padding: 3px 11px; }
-    .button-row-compact button.active { background: var(--accent-bg); border-color: var(--accent-border); color: var(--accent); }
+    .button-row-compact button.active { background: var(--accent-bg); border-color: var(--accent-border); color: #836C4B; }
+    html[data-theme="dark"] .button-row-compact button.active { color: #A48860; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .button-row-compact button.active { color: #A48860; } }
     .ep-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 8px; }
     .ep-body  { font-size: 12px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
     .ep-tags  { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
-    .ep-tag   { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--accent-bg); border: 0.5px solid var(--accent-border); color: var(--accent); }
+    .ep-tag   { font-size: 11px; padding: 2px 8px; border-radius: 99px; background: var(--accent-bg); border: 0.5px solid var(--accent-border); color: #836C4B; }
+    html[data-theme="dark"] .ep-tag { color: #A48860; }
+    @media (prefers-color-scheme: dark) { html[data-theme="auto"] .ep-tag { color: #A48860; } }
 
     /* Branch info panel */
     .branch-panel {
