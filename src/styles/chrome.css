@@ -29,6 +29,9 @@
   padding: 14px 1.5rem 0;
 }
 .site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -37,6 +40,7 @@
   margin-right: auto;
 }
 .site-brand:hover { color: var(--accent); }
+.site-mark { display: block; width: 21px; height: 21px; border-radius: 6px; }
 
 .site-nav {
   display: flex;
@@ -212,7 +216,15 @@ html[data-resolved-theme='dark'] .theme-toggle .icon-moon { display: block; }
 .site-foot a:hover { color: var(--accent-text); }
 .site-foot .foot-brand { font-size: 13px; font-weight: 600; letter-spacing: -0.01em; color: var(--color-text-primary); }
 .foot-copy { font-size: 12px; color: var(--color-text-tertiary); margin: 0 0 0 auto; }
-.foot-disclaimer { font-size: 11px; color: var(--color-text-tertiary); line-height: 1.6; margin: 0; }
+.foot-disclaimer {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--color-text-tertiary);
+  /* Justified so the block ends where the row above it does. */
+  text-align: justify;
+  text-align-last: start;
+}
 
 @media (max-width: 560px) {
   .site-head { flex-wrap: wrap; gap: 10px; }

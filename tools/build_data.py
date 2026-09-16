@@ -94,6 +94,9 @@ def main() -> int:
                 qa.append({'q': q.get_text(' ', strip=True), 'a': a.get_text(' ', strip=True)})
         mod['qa'] = qa
 
+        # Controls a reader can actually work; the About page counts these.
+        mod['interactives'] = sum(len(body.find_all(t)) for t in ('button', 'input', 'select', 'canvas', 'textarea'))
+
         # A hand-written summary wins; otherwise the page's own subtitle stands in.
         mod['description'] = mod.get('summary') or mod['subtitle'] or mod.get('blurb', '')
 
@@ -121,6 +124,7 @@ def main() -> int:
     print(f'categories         : {len(categories)}')
     print(f'sections           : {sum(len(m["sections"]) for m in modules)}')
     print(f'Q&A pairs          : {sum(len(m["qa"]) for m in modules)}')
+    print(f'interactives       : {sum(m["interactives"] for m in modules)}')
 
     long_titles = [m['id'] for m in modules if len(f'{m["name"]}: {m["subtitle"]}') > TITLE_MAX]
     short_desc = [m['id'] for m in modules if len(m['description']) < DESC_MIN]

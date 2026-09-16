@@ -8,6 +8,8 @@ import '../styles/about.css';
 import '../styles/icons/about.css';
 
 const pathname = path('about');
+const interactives = modules.reduce((n, m) => n + (m.interactives ?? 0), 0);
+const questions = modules.reduce((n, m) => n + m.qa.length, 0);
 const url = new URL(pathname, Astro.site).href;
 
 const structuredData = [
@@ -273,11 +275,11 @@ const structuredData = [
             <div class="stat-label">Categories: from numbers and scale to mind and meaning.</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num" data-count="150">0</div>
+            <div class="stat-num" data-count={interactives}>0</div>
             <div class="stat-label">Interactive elements: calculators, games, animations, reveals.</div>
           </div>
           <div class="stat-card">
-            <div class="stat-num" data-count="560">0</div>
+            <div class="stat-num" data-count={questions}>0</div>
             <div class="stat-label">Questions designed to provoke estimation, not memorisation.</div>
           </div>
         </div>
@@ -334,8 +336,8 @@ const structuredData = [
       <div class="cta-title">Ready to build some intuition?</div>
       <div class="cta-sub">Pick any module. They're standalone &mdash; no order, no prerequisites, no scoreboard.</div>
       <div class="cta-actions">
-        <a class="cta-primary" href="/perceptense/modules/weight-and-mass/">Start with Module 01 <i class="fa-solid fa-arrow-right"></i></a>
-        <a class="cta-secondary" href="/perceptense/">Browse all {modules.length}</a>
+        <a class="cta-primary" href={path('modules', modules[0].slug)}>Start with Module 01 <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="cta-secondary" href={path('modules')}>Browse all {modules.length}</a>
       </div>
     </div>
 
@@ -587,7 +589,7 @@ const structuredData = [
           // easeOutQuint — strong slow tail near the end
           var e = 1 - Math.pow(1 - p, 5);
           var val = Math.round(target * e);
-          el.textContent = val.toString();
+          el.textContent = val.toLocaleString('en-US');
           if (p < 1) requestAnimationFrame(tick);
         }
         requestAnimationFrame(tick);

@@ -5,7 +5,10 @@ const current = Astro.url.pathname;
 const isCurrent = (href: string) => current === href;
 ---
 <header class="site-head">
-  <a class="site-brand" href={path()} aria-label={`${site.brand} home`}>{site.brand}</a>
+  <a class="site-brand" href={path()} aria-label={`${site.brand} home`}>
+    <img class="site-mark" src={`${base}/assets/favicons/favicon.svg`} width="21" height="21" alt="" />
+    {site.brand}
+  </a>
 
   <nav class="site-nav" aria-label="Main">
     <a href={path('modules')} aria-current={isCurrent(path('modules')) ? 'page' : undefined}>
